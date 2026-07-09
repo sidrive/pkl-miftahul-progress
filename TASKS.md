@@ -10,7 +10,7 @@
 
 ### Minggu 1
 - Instalasi & konfigurasi VS Code + ekstensi dasar (dipecah jadi 3 sub-task di bawah — contoh breakdown lebih detail):
-  - [ ] <!-- id: M1.W1.T1.1 --> Instal VS Code + login sync settings
+  - [✅] <!-- id: M1.W1.T1.1 --> Instal VS Code + login sync settings
   - [ ] <!-- id: M1.W1.T1.2 --> Instal & aktifkan ekstensi ESLint, Prettier, GitLens
   - [ ] <!-- id: M1.W1.T1.3 --> Coba format-on-save & auto-lint di 1 file contoh
 - [ ] <!-- id: M1.W1.T2 --> Pengenalan terminal & command line dasar (cd, ls, mkdir, rm, cat)
