@@ -8,11 +8,6 @@
         "title": null,
         "tasks": [
           {
-            "id": "M1.W1.T1.1",
-            "text": "Instal VS Code + login sync settings",
-            "done": false
-          },
-          {
             "id": "M1.W1.T1.2",
             "text": "Instal & aktifkan ekstensi ESLint, Prettier, GitLens",
             "done": false
