@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-09T07:19:33.055Z",
+  "totalTasks": 62,
+  "doneTasks": 0,
+  "overallPercent": 0,
+  "perMonth": [
+    {
+      "number": 1,
+      "title": "Fondasi Tools (13 Jul – 12 Ags 2026)",
+      "total": 14,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 2,
+      "title": "JavaScript Modern & Node (13 Ags – 12 Sep 2026)",
+      "total": 9,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 3,
+      "title": "Vue 3 Fundamental (13 Sep – 12 Okt 2026)",
+      "total": 8,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 4,
+      "title": "Pinia, Olsera Design System & Code Reading (13 Okt – 12 Nov 2026)",
+      "total": 7,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 5,
+      "title": "Mulai Project Aplikasi Internal (13 Nov – 12 Des 2026)",
+      "total": 8,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 6,
+      "title": "Lanjut Internal + Mulai Project Pribadi (13 Des 2026 – 12 Jan 2027)",
+      "total": 7,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": 7,
+      "title": "Finalisasi (13 Jan – 13 Feb 2027)",
+      "total": 8,
+      "done": 0,
+      "percent": 0
+    },
+    {
+      "number": null,
+      "title": "Backlog / Task Tambahan (Ad-hoc)",
+      "total": 1,
+      "done": 0,
+      "percent": 0
+    }
+  ],
+  "currentStreakDays": 1,
+  "blockedTasks": [],
+  "totalLogEntries": 1,
+  "lastLogDate": "2026-07-13"
+}

@@ -1,0 +1,534 @@
+[
+  {
+    "number": 1,
+    "title": "Fondasi Tools (13 Jul – 12 Ags 2026)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M1.W1.T1.1",
+            "text": "Instal VS Code + login sync settings",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T1.2",
+            "text": "Instal & aktifkan ekstensi ESLint, Prettier, GitLens",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T1.3",
+            "text": "Coba format-on-save & auto-lint di 1 file contoh",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T2",
+            "text": "Pengenalan terminal & command line dasar (cd, ls, mkdir, rm, cat)",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T3",
+            "text": "Instalasi Node.js & npm, verifikasi versi",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M1.W2.T1",
+            "text": "Git dasar: init, add, commit, status, log, .gitignore",
+            "done": false
+          },
+          {
+            "id": "M1.W2.T2",
+            "text": "Membuat akun GitHub, konsep repository & remote",
+            "done": false
+          },
+          {
+            "id": "M1.W2.T3",
+            "text": "Push repo latihan pertama ke GitHub",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M1.W3.T1",
+            "text": "Git branching & merge dasar",
+            "done": false
+          },
+          {
+            "id": "M1.W3.T2",
+            "text": "Alur push/pull, resolve conflict sederhana",
+            "done": false
+          },
+          {
+            "id": "M1.W3.T3",
+            "text": "Membuat Pull Request pertama ke repo latihan + review bareng mentor",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M1.W4.T1",
+            "text": "Review HTML semantik & CSS (flexbox/grid, responsive dasar)",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2",
+            "text": "Revamp 1 project lama (to-do list) dengan HTML/CSS lebih rapi",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T3",
+            "text": "Commit history rapi (per fitur/perbaikan, bukan 1 commit besar)",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "JavaScript Modern & Node (13 Ags – 12 Sep 2026)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M2.W1.T1",
+            "text": "ES6+ syntax: let/const, arrow function, template literal, destructuring",
+            "done": false
+          },
+          {
+            "id": "M2.W1.T2",
+            "text": "Latihan soal kecil ES6+ (5–10 soal)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M2.W2.T1",
+            "text": "Array & Object methods: map, filter, reduce, find",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T2",
+            "text": "DOM manipulation & event handling (tanpa framework)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M2.W3.T1",
+            "text": "Async/await & Promise dasar",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T2",
+            "text": "Konsumsi public API sederhana dengan fetch (tampilkan data ke DOM)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M2.W4.T1",
+            "text": "Intro Node.js & npm (menjalankan script, install package)",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2",
+            "text": "Project mini: to-do list vanilla JS + localStorage",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T3",
+            "text": "Git workflow lengkap untuk project mini (branch per fitur + PR)",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Vue 3 Fundamental (13 Sep – 12 Okt 2026)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M3.W1.T1",
+            "text": "Setup project Vue 3 + Vite dari nol",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2",
+            "text": "Konsep Single File Component (.vue): template/script/style",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M3.W2.T1",
+            "text": "Reactivity: ref & reactive",
+            "done": false
+          },
+          {
+            "id": "M3.W2.T2",
+            "text": "Props & emit events antar komponen",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M3.W3.T1",
+            "text": "Computed & watch",
+            "done": false
+          },
+          {
+            "id": "M3.W3.T2",
+            "text": "Lifecycle hooks (onMounted, dll)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M3.W4.T1",
+            "text": "Latihan v-if / v-for / v-model (counter, form, list dinamis)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2",
+            "text": "Vue Router 4 dasar: routing antar halaman",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Pinia, Olsera Design System & Code Reading (13 Okt – 12 Nov 2026)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M4.W1.T1",
+            "text": "Pinia dasar: state, getters, actions",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T2",
+            "text": "Refactor mini project bulan 3 pakai Pinia",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M4.W2.T1",
+            "text": "Instalasi & pemakaian Olsera Design System (`@olsera/tokens`, `DsButton`, dll)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T2",
+            "text": "Styling dengan design token & dark mode dasar",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M4.W3.T1",
+            "text": "Prototipe UI kecil (halaman list + form) pakai Olsera DS",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M4.W4.T1",
+            "text": "Sesi membaca struktur modul nyata di `frontend-olseraV2`/`frontend-zenwell` (bareng mentor, observasi saja)",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T2",
+            "text": "Tulis catatan observasi: apa yang dipahami, apa yang masih bingung",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Mulai Project Aplikasi Internal (13 Nov – 12 Des 2026)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M5.W1.T1",
+            "text": "Breakdown requirement & wireframe project internal",
+            "done": false
+          },
+          {
+            "id": "M5.W1.T2",
+            "text": "Setup repo project internal (Vue 3 + Vite + Pinia + Olsera DS)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M5.W2.T1",
+            "text": "Struktur folder & skeleton komponen utama",
+            "done": false
+          },
+          {
+            "id": "M5.W2.T2",
+            "text": "Setup routing halaman-halaman utama",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M5.W3.T1",
+            "text": "Implementasi fitur inti #1",
+            "done": false
+          },
+          {
+            "id": "M5.W3.T2",
+            "text": "Implementasi fitur inti #2",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M5.W4.T1",
+            "text": "Implementasi fitur inti #3",
+            "done": false
+          },
+          {
+            "id": "M5.W4.T2",
+            "text": "Integrasi API/dummy data",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Lanjut Internal + Mulai Project Pribadi (13 Des 2026 – 12 Jan 2027)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M6.W1.T1",
+            "text": "Lanjutan fitur project internal (sisa dari bulan 5)",
+            "done": false
+          },
+          {
+            "id": "M6.W1.T2",
+            "text": "Bug fixing ringan project internal",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M6.W2.T1",
+            "text": "Definisikan scope project pribadi (kecil & realistis)",
+            "done": false
+          },
+          {
+            "id": "M6.W2.T2",
+            "text": "Setup repo & skeleton project pribadi",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M6.W3.T1",
+            "text": "Implementasi awal project pribadi (fitur inti #1)",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M6.W4.T1",
+            "text": "Progres paralel kedua project",
+            "done": false
+          },
+          {
+            "id": "M6.W4.T2",
+            "text": "Review gabungan bareng mentor (cek keselarasan target bulan 7)",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Finalisasi (13 Jan – 13 Feb 2027)",
+    "weeks": [
+      {
+        "number": 1,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M7.W1.T1",
+            "text": "Bug fixing & cleanup kode project internal",
+            "done": false
+          },
+          {
+            "id": "M7.W1.T2",
+            "text": "Bug fixing & cleanup kode project pribadi",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M7.W2.T1",
+            "text": "Dokumentasi README project internal",
+            "done": false
+          },
+          {
+            "id": "M7.W2.T2",
+            "text": "Dokumentasi README project pribadi",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M7.W3.T1",
+            "text": "Deployment project internal (Netlify/Vercel/GitHub Pages)",
+            "done": false
+          },
+          {
+            "id": "M7.W3.T2",
+            "text": "Deployment project pribadi",
+            "done": false
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": null,
+        "tasks": [
+          {
+            "id": "M7.W4.T1",
+            "text": "Latihan presentasi",
+            "done": false
+          },
+          {
+            "id": "M7.W4.T2",
+            "text": "Sesi presentasi akhir ke mentor/tim",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": null,
+    "title": "Backlog / Task Tambahan (Ad-hoc)",
+    "weeks": [
+      {
+        "number": null,
+        "title": "Issue & Task Eksternal",
+        "tasks": [
+          {
+            "id": "ADHOC.1",
+            "text": "Contoh: perbaiki bug tampilan yang ditemukan mentor saat review (hapus/ganti dengan task asli)",
+            "done": false
+          }
+        ]
+      }
+    ]
+  }
+]
