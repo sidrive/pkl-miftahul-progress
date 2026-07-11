@@ -9,6 +9,7 @@ Repo ini adalah sistem monitoring harian untuk program pendampingan PKL/magang f
 | `scripts/update_progress.js` | Script Node.js (tanpa dependency eksternal) yang membaca `TASKS.md` + `DAILY_LOG.md`, update checkbox, dan generate data JSON untuk dashboard. |
 | `.github/workflows/update-progress.yml` | GitHub Action yang otomatis jalankan script di atas setiap ada push ke `DAILY_LOG.md`/`TASKS.md`, lalu commit hasilnya balik ke repo. |
 | `docs/index.html` | Dashboard HTML — progress bar per bulan, checklist, timeline capaian/kesulitan harian. Dihosting via GitHub Pages. |
+| `docs/modules/` | Modul pembelajaran (opsional) yang menemani sekelompok task tertentu — berisi penjelasan, langkah praktik, dan latihan. Diberi nama `M<bulan>-W<minggu>-<judul-singkat>.md` dan ditautkan langsung dari `TASKS.md` di baris minggu yang sesuai. |
 
 ---
 
