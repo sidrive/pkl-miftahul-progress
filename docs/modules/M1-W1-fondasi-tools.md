@@ -2,22 +2,50 @@
 
 > Modul ini menemani task `M1.W1.*` di `TASKS.md`. Setiap bagian dipetakan ke satu ID task —
 > setelah selesai mengerjakan satu bagian, langsung isi entry di `DAILY_LOG.md` dengan ID yang
-> sesuai (lihat contoh format di setiap bagian). Kerjakan urut dari atas ke bawah.
+> sesuai (lihat contoh format di setiap bagian). Kerjakan urut dari atas ke bawah — akun GitHub
+> dibuat **duluan** karena dipakai untuk login VS Code di bagian berikutnya, dan environment kerja
+> ke depan memang berbasis GitHub.
 
 ---
 
-## 1. VS Code + Ekstensi Dasar
+## 1. Akun GitHub (`M1.W1.T1`)
 
-### `M1.W1.T1.1` — Instal VS Code + login sync settings
+1. Buka https://github.com/ → **Sign up**.
+2. Isi **username** (disarankan nama yang profesional/konsisten, karena ini akan jadi identitas
+   publik kamu sebagai developer — akan sering dipakai untuk melamar kerja/portofolio nanti).
+3. Isi email aktif, buat password, lalu verifikasi email (cek inbox untuk kode/link konfirmasi).
+4. Setelah akun jadi, lengkapi profil dasar:
+   - Foto profil (avatar)
+   - **Bio** singkat (misal: "Frontend developer in training")
+   - Aktifkan **Two-Factor Authentication (2FA)** di Settings → Password and authentication —
+     ini praktik keamanan standar yang wajib dibiasakan sejak awal.
+5. (Opsional tapi disarankan) Setup **SSH key** atau **Personal Access Token** supaya nanti tidak
+   perlu login manual tiap kali `git push` — tanyakan mentor kalau ingin dibantu setup ini.
+
+**Checklist selesai:** akun aktif, email terverifikasi, 2FA aktif, profil (foto + bio) terisi.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T1
+- **Status:** done
+- **Capaian:** Akun GitHub sudah dibuat, profil lengkap, 2FA aktif.
+- **Kesulitan:** -
+```
+
+---
+
+## 2. VS Code + Ekstensi Dasar
+
+### `M1.W1.T2.1` — Instal VS Code + login sync settings
 
 1. Unduh & instal Visual Studio Code dari situs resminya: https://code.visualstudio.com/
-2. Buka VS Code, lalu login dengan akun GitHub/Microsoft (ikon akun di pojok kiri bawah) supaya
-   settings & ekstensi bisa sinkron antar perangkat.
+2. Buka VS Code, lalu login dengan **akun GitHub yang sudah dibuat di bagian 1** (ikon akun di
+   pojok kiri bawah) supaya settings & ekstensi bisa sinkron antar perangkat.
 3. Coba tutup dan buka lagi VS Code — pastikan tidak ada error saat startup.
 
 **Checklist selesai:** VS Code terbuka normal, status login akun terlihat di pojok kiri bawah.
 
-### `M1.W1.T1.2` — Instal & aktifkan ekstensi ESLint, Prettier, GitLens
+### `M1.W1.T2.2` — Instal & aktifkan ekstensi ESLint, Prettier, GitLens
 
 Buka tab Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`), cari dan instal:
 
@@ -31,7 +59,7 @@ Setelah instal, buka Settings (`Ctrl+,`), cari `default formatter`, set ke **Pre
 
 **Checklist selesai:** ketiga ekstensi muncul aktif (bukan disabled) di tab Extensions.
 
-### `M1.W1.T1.3` — Coba format-on-save & auto-lint di 1 file contoh
+### `M1.W1.T2.3` — Coba format-on-save & auto-lint di 1 file contoh
 
 1. Di Settings, cari `format on save`, centang.
 2. Buat file percobaan `latihan.js`, tulis kode dengan format berantakan, misalnya:
@@ -46,9 +74,9 @@ Setelah instal, buka Settings (`Ctrl+,`), cari `default formatter`, set ke **Pre
 
 **Checklist selesai:** file otomatis rapi setelah save, dan ESLint menampilkan warning/error di editor.
 
-**Contoh entry log setelah bagian 1 selesai:**
+**Contoh entry log setelah bagian 2 selesai:**
 ```markdown
-### Task: M1.W1.T1.2
+### Task: M1.W1.T2.2
 - **Status:** done
 - **Capaian:** ESLint, Prettier, GitLens sudah aktif dan bisa dipakai.
 - **Kesulitan:** -
@@ -56,9 +84,9 @@ Setelah instal, buka Settings (`Ctrl+,`), cari `default formatter`, set ke **Pre
 
 ---
 
-## 2. Terminal & Command Line Dasar
+## 3. Terminal & Command Line Dasar
 
-### `M1.W1.T2.1` — Konsep dasar shell & struktur direktori
+### `M1.W1.T3.1` — Konsep dasar shell & struktur direktori
 
 Baca/pahami dulu konsepnya sebelum praktik:
 
@@ -76,7 +104,7 @@ Baca/pahami dulu konsepnya sebelum praktik:
 
 **Latihan cek paham:** buka terminal, ketik `pwd` — itu path absolut posisi kamu sekarang.
 
-### `M1.W1.T2.2` — Praktik navigasi: pwd, cd, ls
+### `M1.W1.T3.2` — Praktik navigasi: pwd, cd, ls
 
 | Perintah | Fungsi |
 |---|---|
@@ -91,7 +119,7 @@ Baca/pahami dulu konsepnya sebelum praktik:
 **Latihan:** dari home directory, navigasi ke minimal 3 folder berbeda secara berurutan
 (`cd folder-a`, `cd folder-b`, `cd ..`, dst), setiap perpindahan cek dengan `pwd` dan `ls`.
 
-### `M1.W1.T2.3` — Praktik manajemen file/folder
+### `M1.W1.T3.3` — Praktik manajemen file/folder
 
 | Perintah | Fungsi |
 |---|---|
@@ -106,7 +134,7 @@ Baca/pahami dulu konsepnya sebelum praktik:
 satu pakai editor lalu tampilkan isinya dengan `cat`, salin file itu jadi nama lain, lalu hapus
 salah satu file.
 
-### `M1.W1.T2.4` — Latihan mandiri: struktur folder project murni lewat terminal
+### `M1.W1.T3.4` — Latihan mandiri: struktur folder project murni lewat terminal
 
 Tanpa membuka file explorer sama sekali, buat struktur folder berikut **hanya lewat terminal**:
 
@@ -124,7 +152,7 @@ Verifikasi hasilnya dengan `ls -la` di setiap level, atau `ls -R` (lihat rekursi
 
 **Contoh entry log:**
 ```markdown
-### Task: M1.W1.T2.4
+### Task: M1.W1.T3.4
 - **Status:** done
 - **Capaian:** Bisa bikin struktur folder project lewat terminal tanpa file explorer.
 - **Kesulitan:** Sempat salah path pas mkdir nested folder, ternyata harus mkdir -p.
@@ -132,9 +160,9 @@ Verifikasi hasilnya dengan `ls -la` di setiap level, atau `ls -R` (lihat rekursi
 
 ---
 
-## 3. Node.js & npm
+## 4. Node.js & npm
 
-### `M1.W1.T3.1` — Instal Node.js versi LTS
+### `M1.W1.T4.1` — Instal Node.js versi LTS
 
 Disarankan lewat **nvm** (Node Version Manager) supaya gampang ganti versi Node di masa depan,
 daripada instal langsung dari installer situs resmi https://nodejs.org/ (boleh juga, tapi nvm
@@ -144,7 +172,7 @@ lebih fleksibel untuk kerja tim):
 - Windows: gunakan `nvm-windows`, atau instal langsung LTS dari https://nodejs.org/ kalau nvm
   terasa rumit di awal.
 
-### `M1.W1.T3.2` — Verifikasi instalasi
+### `M1.W1.T4.2` — Verifikasi instalasi
 
 Jalankan di terminal:
 ```bash
@@ -155,7 +183,7 @@ npm config list
 Pastikan versi Node yang tampil adalah versi LTS (contoh `v20.x.x`), dan `npm -v` menampilkan
 angka versi tanpa error.
 
-### `M1.W1.T3.3` — File JS pertama + beda `npm init` vs `npm install`
+### `M1.W1.T4.3` — File JS pertama + beda `npm init` vs `npm install`
 
 1. Buat file `hello.js` isi:
    ```js
@@ -175,18 +203,19 @@ dependency ke project yang sudah punya `package.json`).
 
 ---
 
-## 4. Evaluasi Minggu 1 (`M1.W1.T4`)
+## 5. Evaluasi Minggu 1 (`M1.W1.T5`)
 
 Setelah semua bagian di atas selesai, siapkan demo singkat (~10 menit) untuk mentor:
 
-1. Tunjukkan VS Code dengan ESLint/Prettier/GitLens aktif, dan contoh format-on-save bekerja.
-2. Tunjukkan navigasi terminal langsung (bukan screenshot) — buat folder, pindah-pindah, hapus.
-3. Tunjukkan `node -v` dan `npm -v`, lalu jalankan `hello.js`.
-4. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
+1. Tunjukkan profil GitHub kamu (foto, bio, 2FA aktif).
+2. Tunjukkan VS Code dengan ESLint/Prettier/GitLens aktif, dan contoh format-on-save bekerja.
+3. Tunjukkan navigasi terminal langsung (bukan screenshot) — buat folder, pindah-pindah, hapus.
+4. Tunjukkan `node -v` dan `npm -v`, lalu jalankan `hello.js`.
+5. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
 
 Setelah demo, isi entry log terakhir untuk minggu ini:
 ```markdown
-### Task: M1.W1.T4
+### Task: M1.W1.T5
 - **Status:** done
 - **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal.
 - **Kesulitan:** (isi refleksi jujur — ini bukan nilai, ini bahan mentor bantu kamu)
@@ -196,6 +225,7 @@ Setelah demo, isi entry log terakhir untuk minggu ini:
 
 ## Referensi tambahan (opsional, kalau mau baca lebih dalam)
 
+- GitHub docs — membuat akun: https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github
 - VS Code docs: https://code.visualstudio.com/docs
 - Node.js docs: https://nodejs.org/en/docs
 - npm docs: https://docs.npmjs.com/

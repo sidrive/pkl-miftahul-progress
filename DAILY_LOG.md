@@ -12,7 +12,7 @@
 
 ## 2026-07-13
 <!-- ENTRY START -->
-### Task: M1.W1.T1
+### Task: M1.W1.T2.1
 - **Status:** in-progress
 - **Capaian:** Contoh entry — hapus/ganti dengan laporan asli kamu. Sudah install VS Code, masih setup ekstensi.
 - **Kesulitan:** Contoh — bingung bedanya ekstensi ESLint vs Prettier.

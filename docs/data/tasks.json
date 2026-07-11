@@ -8,58 +8,63 @@
         "title": null,
         "tasks": [
           {
-            "id": "M1.W1.T1.1",
-            "text": "Instal VS Code + login sync settings",
-            "done": false
-          },
-          {
-            "id": "M1.W1.T1.2",
-            "text": "Instal & aktifkan ekstensi ESLint, Prettier, GitLens",
-            "done": false
-          },
-          {
-            "id": "M1.W1.T1.3",
-            "text": "Coba format-on-save & auto-lint di 1 file contoh",
+            "id": "M1.W1.T1",
+            "text": "Buat akun GitHub, lengkapi profil dasar (foto, bio), dan aktifkan Two-Factor Authentication (2FA) — dikerjakan duluan karena environment kerja ke depan pakai GitHub",
             "done": false
           },
           {
             "id": "M1.W1.T2.1",
-            "text": "Pahami konsep dasar shell/terminal & struktur direktori (path absolut vs relatif)",
+            "text": "Instal VS Code + login sync settings (pakai akun GitHub dari task sebelumnya)",
             "done": false
           },
           {
             "id": "M1.W1.T2.2",
-            "text": "Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)",
+            "text": "Instal & aktifkan ekstensi ESLint, Prettier, GitLens",
             "done": false
           },
           {
             "id": "M1.W1.T2.3",
-            "text": "Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm",
-            "done": false
-          },
-          {
-            "id": "M1.W1.T2.4",
-            "text": "Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)",
+            "text": "Coba format-on-save & auto-lint di 1 file contoh",
             "done": false
           },
           {
             "id": "M1.W1.T3.1",
-            "text": "Instal Node.js versi LTS (disarankan via nvm)",
+            "text": "Pahami konsep dasar shell/terminal & struktur direktori (path absolut vs relatif)",
             "done": false
           },
           {
             "id": "M1.W1.T3.2",
-            "text": "Verifikasi instalasi: node -v, npm -v, npm config list",
+            "text": "Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)",
             "done": false
           },
           {
             "id": "M1.W1.T3.3",
+            "text": "Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T3.4",
+            "text": "Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T4.1",
+            "text": "Instal Node.js versi LTS (disarankan via nvm)",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T4.2",
+            "text": "Verifikasi instalasi: node -v, npm -v, npm config list",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T4.3",
             "text": "Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install",
             "done": false
           },
           {
-            "id": "M1.W1.T4",
-            "text": "Evaluasi Minggu 1: demo singkat ke mentor (tunjukkan VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + isi refleksi capaian/kesulitan di modul",
+            "id": "M1.W1.T5",
+            "text": "Evaluasi Minggu 1: demo singkat ke mentor (tunjukkan profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
@@ -75,12 +80,17 @@
           },
           {
             "id": "M1.W2.T2",
-            "text": "Membuat akun GitHub, konsep repository & remote",
+            "text": "Konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)",
             "done": false
           },
           {
             "id": "M1.W2.T3",
             "text": "Push repo latihan pertama ke GitHub",
+            "done": false
+          },
+          {
+            "id": "M1.W2.T4",
+            "text": "Evaluasi Minggu 2: demo ke mentor (jalankan git dasar langsung, tunjukkan repo latihan yang sudah ter-push) + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
