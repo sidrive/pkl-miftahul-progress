@@ -11,9 +11,57 @@
 ---
 
 ## 2026-07-13
+
 <!-- ENTRY START -->
+
 ### Task: M1.W1.T2.1
-- **Status:** in-progress
-- **Capaian:** Contoh entry — hapus/ganti dengan laporan asli kamu. Sudah install VS Code, masih setup ekstensi.
-- **Kesulitan:** Contoh — bingung bedanya ekstensi ESLint vs Prettier.
+
+- **Status:** done
+- **Capaian:** Sudah ada VS code dan sync sama github
+- **Kesulitan:** tidak ada kendala yang terlalu berat.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T2.2
+
+- **Status:** done
+- **Capaian:** Sudah Install extensi ekstensi ESLint, Prettier, GitLens.
+- **Kesulitan:** paling internet yang lelet.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T2.3
+
+- **Status:** done
+- **Capaian:** Saat pencet CTRL+S kode langsung rapi.
+- **Kesulitan:** Agak bingung awal awal, sekarang juga bingung.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.1
+
+- **Status:** Dome
+- **Capaian:** Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet
+- **Kesulitan:** Kurang paham apa yang di lakukan.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.2
+
+- **Status:** Done
+- **Capaian:** Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami.
+- **Kesulitan:** Fungsi belum tau, kemungkinan untuk pindah folder atau sejenis nya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.3
+
+- **Status:** Done
+- **Capaian:** Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.
+- **Kesulitan:** Agak susah dipahami karna pakai terminal, dibantu AI juga.
 <!-- ENTRY END -->
