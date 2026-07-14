@@ -87,3 +87,30 @@
 - **Capaian:** bisa membuat & merapikan struktur folder walau dibantu.
 - **Kesulitan:** So far aman lah untuk ini, paling butuh penjelasan lebih detail aja.
 <!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T4.1
+
+- **Status:** done
+- **Capaian:** sudah install nvm lts versi 24.18.0.
+- **Kesulitan:** sejauh ini install nya aman aja
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T4.2
+
+- **Status:** done
+- Berhasil melakukan verifikasi instalasi Node.js dan npm menggunakan perintah `node -v` dan `npm -v` setelah merestart terminal VS Code.
+- **Kesulitan:** Sempat terkena eror command not recognized karena terminal VS Code lama belum membaca PATH baru, tetapi aman setelah VS Code dibuka ulang.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T4.3
+
+- **Status:** done
+- **Capaian:** Berhasil membuat dan menjalankan file `hello.js` menggunakan perintah node, menginisialisasi `package.json` melalui `npm init -y`, serta sukses memasang package eksternal via `npm install chalk`.
+- **Kesulitan:** Sempat terhambat script execution policy Windows saat running npm init, namun sukses diatasi dengan mengubah policy via terminal.
+<!-- ENTRY END -->

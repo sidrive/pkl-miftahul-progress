@@ -23,9 +23,9 @@
   - [ ] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
   - [x] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
 - Instalasi Node.js & npm, verifikasi versi (dipecah jadi 3 sub-task):
-  - [ ] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
-  - [ ] <!-- id: M1.W1.T4.2 --> Verifikasi instalasi: node -v, npm -v, npm config list
-  - [ ] <!-- id: M1.W1.T4.3 --> Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install
+  - [x] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
+  - [x] <!-- id: M1.W1.T4.2 --> Verifikasi instalasi: node -v, npm -v, npm config list
+  - [x] <!-- id: M1.W1.T4.3 --> Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install
 - [ ] <!-- id: M1.W1.T5 --> Evaluasi Minggu 1: demo singkat ke mentor (tunjukkan profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
