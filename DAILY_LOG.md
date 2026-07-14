@@ -74,3 +74,16 @@
 - **Capaian:** Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.
 - **Kesulitan:** Agak susah dipahami karna pakai terminal, dibantu AI juga.
 <!-- ENTRY END -->
+
+---
+
+## 2026-07-14
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.4
+
+- **Status:** done
+- **Capaian:** bisa membuat & merapikan struktur folder walau dibantu.
+- **Kesulitan:** So far aman lah untuk ini, paling butuh penjelasan lebih detail aja.
+<!-- ENTRY END -->

@@ -21,7 +21,7 @@
   - [x] <!-- id: M1.W1.T3.1 --> Pahami konsep dasar shell/terminal & struktur direktori (path absolut vs relatif)
   - [ ] <!-- id: M1.W1.T3.2 --> Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)
   - [ ] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
-  - [ ] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
+  - [x] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
 - Instalasi Node.js & npm, verifikasi versi (dipecah jadi 3 sub-task):
   - [ ] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
   - [ ] <!-- id: M1.W1.T4.2 --> Verifikasi instalasi: node -v, npm -v, npm config list
