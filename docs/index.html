@@ -24,72 +24,131 @@
     color: var(--text);
     padding: 24px;
   }
-  .container { max-width: 960px; margin: 0 auto; }
+  .container { max-width: 960px; margin: 0 auto; position: relative; }
   header { margin-bottom: 24px; }
   header h1 { font-size: 22px; margin: 0 0 4px; }
   header p { color: var(--muted); margin: 0; font-size: 14px; }
-  .stats-grid {
+
+  section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  /* Section 1 — stats */
+  .stats-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  .ring-wrap { position: relative; width: 100px; height: 100px; flex-shrink: 0; }
+  .ring-wrap svg { width: 100px; height: 100px; transform: rotate(-90deg); transform-origin: 50% 50%; }
+  .ring-bg { fill: none; stroke: #1e293b; stroke-width: 10; }
+  .ring-progress {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.1s cubic-bezier(.4,0,.2,1);
+  }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-center .big { font-size: 22px; font-weight: 700; line-height: 1; }
+  .ring-center .small { font-size: 9px; color: var(--muted); letter-spacing: 0.05em; margin-top: 3px; }
+
+  .stat-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
-    margin-bottom: 24px;
   }
   .stat-card {
     background: var(--card);
     border: 1px solid var(--card-border);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 14px 16px;
   }
-  .stat-card .value { font-size: 26px; font-weight: 700; }
-  .stat-card .label { color: var(--muted); font-size: 12px; margin-top: 2px; }
-  .progress-bar-outer {
-    background: #0b1220;
-    border-radius: 6px;
-    height: 10px;
-    overflow: hidden;
-    margin-top: 6px;
-  }
-  .progress-bar-inner {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent));
-    transition: width 0.4s ease;
-  }
-  section { margin-bottom: 28px; }
-  section > h2 {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-  .month-card {
+  .stat-card .value { font-size: 24px; font-weight: 700; }
+  .stat-card .label { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+  /* Section 2 — monthly chart */
+  .chart-card {
     background: var(--card);
     border: 1px solid var(--card-border);
-    border-radius: 10px;
-    margin-bottom: 10px;
-    overflow: hidden;
+    border-radius: 12px;
+    padding: 16px;
   }
-  .month-header {
+  .chart-row { display: flex; gap: 8px; height: 70px; }
+  .chart-col {
+    flex: 1;
+    min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .chart-bar {
+    width: 60%;
+    min-width: 14px;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.6s ease;
+  }
+  .chart-col.selected .chart-bar { outline: 2px solid #e2e8f0; outline-offset: 1px; }
+  .chart-label { font-size: 10px; color: var(--muted); white-space: nowrap; }
+  .chart-col.selected .chart-label { color: var(--text); font-weight: 600; }
+
+  /* Section 3 — month task panel */
+  .month-panel {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 14px 16px;
+  }
+  .month-panel-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
-    cursor: pointer;
+    margin-bottom: 8px;
   }
-  .month-header .title { font-weight: 600; font-size: 14px; }
-  .month-header .pct { font-size: 13px; color: var(--muted); white-space: nowrap; margin-left: 12px; }
-  .month-body { padding: 0 16px 14px; display: none; }
-  .month-card.open .month-body { display: block; }
-  .week-block { margin-top: 10px; }
-  .week-block h4 { font-size: 12px; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
-  .task-row {
+  .month-panel-header .title { font-weight: 600; font-size: 14px; }
+  .month-panel-header button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+  .month-task-list { max-height: 260px; overflow-y: auto; }
+  .month-task-row {
     display: flex;
     align-items: flex-start;
     gap: 8px;
     font-size: 13px;
-    padding: 4px 0;
+    padding: 6px 2px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.4);
   }
-  .task-row .box {
+  .month-task-row:last-child { border-bottom: none; }
+  .month-task-row .box {
     width: 14px;
     height: 14px;
     border-radius: 3px;
@@ -97,38 +156,131 @@
     flex-shrink: 0;
     margin-top: 2px;
   }
-  .task-row.done .box { background: var(--accent); border-color: var(--accent); }
-  .task-row.done span.txt { color: var(--muted); text-decoration: line-through; }
-  .task-row .id { color: var(--accent-blue); font-family: monospace; font-size: 11px; margin-right: 4px; }
-  .badge {
-    display: inline-block;
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-left: 6px;
-  }
-  .badge.blocked { background: rgba(239,68,68,0.15); color: var(--danger); }
-  .timeline-item {
+  .month-task-row.done .box { background: var(--accent); border-color: var(--accent); }
+  .month-task-row.blocked .box { border-color: var(--danger); }
+  .month-task-row.in-progress .box { border-color: var(--accent-blue); }
+  .month-task-row .id { color: var(--accent-blue); font-family: monospace; font-size: 11px; margin-right: 4px; }
+  .month-task-row.done .txt { color: var(--muted); text-decoration: line-through; }
+
+  /* Section 4 — daily log list */
+  .log-date-group { margin-top: 14px; }
+  .log-date-group h4 { font-size: 12px; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+  .log-entry {
     background: var(--card);
     border: 1px solid var(--card-border);
     border-left: 3px solid var(--accent-blue);
     border-radius: 8px;
     padding: 12px 14px;
     margin-bottom: 10px;
+    cursor: pointer;
   }
-  .timeline-item.blocked { border-left-color: var(--danger); }
-  .timeline-item.done { border-left-color: var(--accent); }
-  .timeline-item .meta {
+  .log-entry.blocked { border-left-color: var(--danger); }
+  .log-entry.done { border-left-color: var(--accent); }
+  .log-entry .top-row {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    color: var(--muted);
+    align-items: center;
     margin-bottom: 6px;
+    gap: 8px;
   }
-  .timeline-item .field { font-size: 13px; margin-top: 4px; }
-  .timeline-item .field b { color: var(--muted); font-weight: 600; }
+  .log-entry .id { color: var(--accent-blue); font-family: monospace; font-size: 12px; }
+  .status-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .status-badge.done { background: rgba(34, 197, 94, 0.15); color: var(--accent); }
+  .status-badge.in-progress { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); }
+  .status-badge.blocked { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+  .log-entry .title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .log-entry .title.done { color: var(--muted); text-decoration: line-through; font-weight: 600; }
+  .log-entry .field { font-size: 13px; margin-top: 4px; }
+  .log-entry .field b { color: var(--muted); font-weight: 600; }
+
   .empty-state { color: var(--muted); font-size: 13px; padding: 16px; text-align: center; }
   footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 20px; }
+
+  /* Section 5 — task detail drawer */
+  .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 18, 32, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 50;
+  }
+  .drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+  .drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 82%;
+    max-width: 560px;
+    height: 100%;
+    background: var(--bg);
+    border-left: 1px solid var(--card-border);
+    padding: 22px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    z-index: 51;
+  }
+  .drawer-panel.open { transform: translateX(0); }
+  .drawer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .drawer-top .id { color: var(--accent-blue); font-family: monospace; font-size: 13px; }
+  .drawer-top button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+  .drawer-text { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 20px; }
+  .drawer-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .drawer-log-entry {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+  .drawer-log-entry .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .drawer-log-entry .field { font-size: 13px; margin-top: 4px; }
+  .drawer-log-entry .field b { color: var(--muted); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .stats-row { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .chart-row { overflow-x: auto; padding-bottom: 4px; }
+    .chart-col { min-width: 56px; }
+    .drawer-panel { width: 92%; }
+  }
 </style>
 </head>
 <body>
@@ -139,104 +291,287 @@
   </header>
 
   <section>
-    <div class="stats-grid" id="stats-grid"></div>
+    <div class="stats-row">
+      <div class="ring-wrap">
+        <svg viewBox="0 0 100 100">
+          <circle class="ring-bg" cx="50" cy="50" r="42"></circle>
+          <circle class="ring-progress" id="ring-progress" cx="50" cy="50" r="42"></circle>
+        </svg>
+        <div class="ring-center">
+          <div class="big" id="ring-value">0%</div>
+          <div class="small">TOTAL</div>
+        </div>
+      </div>
+      <div class="stat-cards-grid" id="stat-cards"></div>
+    </div>
   </section>
 
   <section>
-    <h2>Checklist per Bulan</h2>
-    <div id="months"></div>
+    <div class="section-title">Tren Progress per Bulan</div>
+    <div class="chart-card">
+      <div class="chart-row" id="chart-row"></div>
+    </div>
+    <div id="month-panel"></div>
   </section>
 
   <section>
-    <h2>Log Harian Terbaru</h2>
-    <div id="timeline"></div>
+    <div class="section-header-row">
+      <div class="section-title">Daftar Task (dari Log Harian)</div>
+      <div class="section-title" id="log-count"></div>
+    </div>
+    <div id="log-list"></div>
   </section>
 
   <footer id="footer"></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+  <div class="drawer-panel" id="drawer-panel">
+    <div class="drawer-top">
+      <span class="id" id="drawer-task-id"></span>
+      <button onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-text" id="drawer-task-text"></div>
+    <div class="drawer-subtitle">Semua log terkait</div>
+    <div id="drawer-log-list"></div>
+  </div>
 </div>
 
 <script>
+const MONTH_PALETTE = ["#38bdf8", "#22c55e", "#a78bfa", "#f59e0b", "#f472b6", "#2dd4bf", "#fb923c", "#94a3b8"];
+const MONTH_MAP = { jan: 0, feb: 1, mar: 2, apr: 3, mei: 4, jun: 5, jul: 6, ags: 7, agu: 7, agt: 7, sep: 8, okt: 9, nov: 10, des: 11 };
+
+const state = {
+  tasksData: [],
+  progress: null,
+  log: [],
+  selectedIdx: null,
+  taskIndex: new Map(),
+};
+
+function escapeHtml(str) {
+  return String(str == null ? "" : str).replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[ch]));
+}
+
 async function loadJson(path) {
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error("Gagal memuat " + path);
   return res.json();
 }
 
-function pct(n) { return (n || 0) + "%"; }
+function buildTaskIndex(tasksData) {
+  const map = new Map();
+  for (const month of tasksData) {
+    for (const week of month.weeks) {
+      for (const t of week.tasks) map.set(t.id, t);
+    }
+  }
+  return map;
+}
 
-function renderStats(progress) {
-  const grid = document.getElementById("stats-grid");
+function taskStatus(taskId) {
+  const task = state.taskIndex.get(taskId);
+  if (task && task.done) return "done";
+  const entries = state.log
+    .filter((e) => e.task === taskId)
+    .slice()
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+  if (!entries.length) return "pending";
+  return entries[0].status === "blocked" ? "blocked" : "in-progress";
+}
+
+function parseMonthRange(title) {
+  const m = (title || "").match(/\((\d{1,2})\s+([A-Za-z]+)\s*[–-]\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})\)/);
+  if (!m) return null;
+  const mi1 = MONTH_MAP[m[2].toLowerCase()];
+  const mi2 = MONTH_MAP[m[4].toLowerCase()];
+  if (mi1 === undefined || mi2 === undefined) return null;
+  const y2 = parseInt(m[5], 10);
+  const y1 = mi1 > mi2 ? y2 - 1 : y2;
+  return {
+    start: new Date(y1, mi1, parseInt(m[1], 10)),
+    end: new Date(y2, mi2, parseInt(m[3], 10), 23, 59, 59),
+  };
+}
+
+function computeDefaultMonthIndex() {
+  const today = new Date();
+  for (let i = 0; i < state.tasksData.length; i++) {
+    const range = parseMonthRange(state.tasksData[i].title);
+    if (range && today >= range.start && today <= range.end) return i;
+  }
+  const perMonth = state.progress.perMonth || [];
+  for (let i = 0; i < perMonth.length; i++) {
+    if ((perMonth[i].percent || 0) < 100) return i;
+  }
+  return 0;
+}
+
+function monthLabel(month) {
+  return month.number != null ? `Bulan ${month.number} — ${month.title}` : month.title;
+}
+
+function renderRing() {
+  const percent = state.progress.overallPercent || 0;
+  const r = 42;
+  const circumference = 2 * Math.PI * r;
+  const circle = document.getElementById("ring-progress");
+  circle.style.strokeDasharray = `${circumference}`;
+  circle.style.strokeDashoffset = `${circumference}`;
+  document.getElementById("ring-value").textContent = percent + "%";
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      circle.style.strokeDashoffset = `${circumference * (1 - percent / 100)}`;
+    });
+  });
+}
+
+function renderStatCards() {
+  const p = state.progress;
   const items = [
-    { label: "Progress Keseluruhan", value: pct(progress.overallPercent), bar: progress.overallPercent },
-    { label: "Task Selesai", value: `${progress.doneTasks} / ${progress.totalTasks}` },
-    { label: "Streak Lapor Harian", value: `${progress.currentStreakDays} hari` },
-    { label: "Task Terhambat (blocked)", value: progress.blockedTasks.length, danger: progress.blockedTasks.length > 0 },
+    { value: `${p.doneTasks} / ${p.totalTasks}`, label: "Task Selesai" },
+    { value: `${p.currentStreakDays} hari`, label: "Streak Lapor" },
+    { value: p.blockedTasks.length, label: "Blocked", danger: p.blockedTasks.length > 0 },
   ];
-  grid.innerHTML = items.map(it => `
+  document.getElementById("stat-cards").innerHTML = items.map((it) => `
     <div class="stat-card">
-      <div class="value" style="${it.danger ? 'color:var(--danger)' : ''}">${it.value}</div>
+      <div class="value" style="color:${it.danger ? "var(--danger)" : "var(--text)"}">${it.value}</div>
       <div class="label">${it.label}</div>
-      ${it.bar !== undefined ? `<div class="progress-bar-outer"><div class="progress-bar-inner" style="width:${it.bar}%"></div></div>` : ""}
     </div>
   `).join("");
 }
 
-function renderMonths(tasksData, progress) {
-  const container = document.getElementById("months");
-  // Cocokkan berdasarkan urutan (index), bukan "number" — supaya section ad-hoc
-  // (number: null) tidak saling bertabrakan.
-  const perMonth = progress.perMonth || [];
-
-  container.innerHTML = tasksData.map((month, idx) => {
-    const stat = perMonth[idx] || { done: 0, total: 0, percent: 0 };
-    const groupLabel = month.number != null ? `Bulan ${month.number} — ${month.title}` : month.title;
-    const weeksHtml = month.weeks.map(week => {
-      const weekLabel = week.number != null ? `Minggu ${week.number}` : (week.title || "");
-      return `
-      <div class="week-block">
-        ${weekLabel ? `<h4>${weekLabel}</h4>` : ""}
-        ${week.tasks.map(t => `
-          <div class="task-row ${t.done ? 'done' : ''}">
-            <div class="box"></div>
-            <div>
-              <span class="id">${t.id}</span>
-              <span class="txt">${t.text}</span>
-            </div>
-          </div>
-        `).join("")}
-      </div>
-    `;
-    }).join("");
-
+function renderChart() {
+  const perMonth = state.progress.perMonth || [];
+  document.getElementById("chart-row").innerHTML = perMonth.map((m, idx) => {
+    const color = MONTH_PALETTE[idx % MONTH_PALETTE.length];
+    const height = Math.max(4, Math.round(((m.percent || 0) / 100) * 56));
+    const label = m.number != null ? `B${m.number}` : "Adhoc";
+    const selected = state.selectedIdx === idx;
     return `
-      <div class="month-card ${idx === 0 ? 'open' : ''}" data-idx="${idx}">
-        <div class="month-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="title">${groupLabel}</div>
-          <div class="pct">${stat.done}/${stat.total} (${stat.percent}%)</div>
-        </div>
-        <div class="month-body">${weeksHtml}</div>
+      <div class="chart-col ${selected ? "selected" : ""}" onclick="selectMonth(${idx})">
+        <div class="chart-bar" style="height:${height}px;background:${color}"></div>
+        <div class="chart-label">${escapeHtml(label)}</div>
       </div>
     `;
   }).join("");
 }
 
-function renderTimeline(logEntries) {
-  const container = document.getElementById("timeline");
-  if (!logEntries.length) {
-    container.innerHTML = `<div class="empty-state">Belum ada log harian.</div>`;
+function renderMonthPanel() {
+  const container = document.getElementById("month-panel");
+  if (state.selectedIdx == null) {
+    container.innerHTML = "";
     return;
   }
-  const latest = logEntries.slice(0, 15);
-  container.innerHTML = latest.map(e => `
-    <div class="timeline-item ${e.status}">
-      <div class="meta">
-        <span>${e.date} · <span class="id">${e.task}</span></span>
-        <span class="badge ${e.status === 'blocked' ? 'blocked' : ''}">${e.status}</span>
+  const month = state.tasksData[state.selectedIdx];
+  if (!month) {
+    container.innerHTML = "";
+    return;
+  }
+  const tasks = month.weeks.flatMap((w) => w.tasks);
+  const rows = tasks.length
+    ? tasks.map((t) => {
+        const status = t.done ? "done" : taskStatus(t.id);
+        return `
+          <div class="month-task-row ${status}" onclick="openDrawer('${t.id}')">
+            <div class="box"></div>
+            <div class="txt-wrap">
+              <span class="id">${escapeHtml(t.id)}</span>
+              <span class="txt">${escapeHtml(t.text)}</span>
+            </div>
+          </div>
+        `;
+      }).join("")
+    : `<div class="empty-state">Belum ada task di grup ini.</div>`;
+
+  container.innerHTML = `
+    <div class="month-panel">
+      <div class="month-panel-header">
+        <div class="title">${escapeHtml(monthLabel(month))}</div>
+        <button onclick="selectMonth(${state.selectedIdx})">✕</button>
       </div>
-      ${e.capaian ? `<div class="field"><b>Capaian:</b> ${e.capaian}</div>` : ""}
-      ${e.kesulitan ? `<div class="field"><b>Kesulitan:</b> ${e.kesulitan}</div>` : ""}
+      <div class="month-task-list">${rows}</div>
     </div>
-  `).join("");
+  `;
+}
+
+function groupLogByDate(log) {
+  const map = new Map();
+  for (const e of log) {
+    if (!map.has(e.date)) map.set(e.date, []);
+    map.get(e.date).push(e);
+  }
+  return map;
+}
+
+function renderLogList() {
+  document.getElementById("log-count").textContent = `${state.log.length} entry`;
+  const listEl = document.getElementById("log-list");
+  if (!state.log.length) {
+    listEl.innerHTML = `<div class="empty-state">Belum ada log harian.</div>`;
+    return;
+  }
+  const groups = groupLogByDate(state.log);
+  let html = "";
+  for (const [date, entries] of groups) {
+    html += `<div class="log-date-group"><h4>${escapeHtml(date)} (${entries.length})</h4>`;
+    html += entries.map((e) => {
+      const task = state.taskIndex.get(e.task);
+      const title = task ? task.text : e.task;
+      const done = !!(task && task.done);
+      return `
+        <div class="log-entry ${e.status}" onclick="openDrawer('${e.task}')">
+          <div class="top-row">
+            <span class="id">${escapeHtml(e.task)}</span>
+            <span class="status-badge ${e.status}">${escapeHtml(e.status)}</span>
+          </div>
+          <div class="title ${done ? "done" : ""}">${escapeHtml(title)}</div>
+          ${e.capaian ? `<div class="field"><b>Capaian:</b> ${escapeHtml(e.capaian)}</div>` : ""}
+          ${e.kesulitan ? `<div class="field"><b>Kesulitan:</b> ${escapeHtml(e.kesulitan)}</div>` : ""}
+        </div>
+      `;
+    }).join("");
+    html += `</div>`;
+  }
+  listEl.innerHTML = html;
+}
+
+function selectMonth(idx) {
+  state.selectedIdx = state.selectedIdx === idx ? null : idx;
+  renderChart();
+  renderMonthPanel();
+}
+
+function openDrawer(taskId) {
+  const task = state.taskIndex.get(taskId);
+  const entries = state.log
+    .filter((e) => e.task === taskId)
+    .slice()
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+
+  document.getElementById("drawer-task-id").textContent = taskId;
+  document.getElementById("drawer-task-text").textContent = task ? task.text : "(task tidak ditemukan)";
+  document.getElementById("drawer-log-list").innerHTML = entries.length
+    ? entries.map((e) => `
+        <div class="drawer-log-entry">
+          <div class="top-row">
+            <span>${escapeHtml(e.date)}</span>
+            <span class="status-badge ${e.status}">${escapeHtml(e.status)}</span>
+          </div>
+          ${e.capaian ? `<div class="field"><b>Capaian:</b> ${escapeHtml(e.capaian)}</div>` : ""}
+          ${e.kesulitan ? `<div class="field"><b>Kesulitan:</b> ${escapeHtml(e.kesulitan)}</div>` : ""}
+        </div>
+      `).join("")
+    : `<div class="empty-state">Belum ada log untuk task ini.</div>`;
+
+  document.getElementById("drawer-backdrop").classList.add("open");
+  document.getElementById("drawer-panel").classList.add("open");
+}
+
+function closeDrawer() {
+  document.getElementById("drawer-backdrop").classList.remove("open");
+  document.getElementById("drawer-panel").classList.remove("open");
 }
 
 async function init() {
@@ -246,9 +581,18 @@ async function init() {
       loadJson("./data/tasks.json"),
       loadJson("./data/log.json"),
     ]);
-    renderStats(progress);
-    renderMonths(tasks, progress);
-    renderTimeline(log);
+    state.progress = progress;
+    state.tasksData = tasks;
+    state.log = log;
+    state.taskIndex = buildTaskIndex(tasks);
+    state.selectedIdx = computeDefaultMonthIndex();
+
+    renderRing();
+    renderStatCards();
+    renderChart();
+    renderMonthPanel();
+    renderLogList();
+
     document.getElementById("footer").textContent =
       "Terakhir digenerate: " + new Date(progress.generatedAt).toLocaleString("id-ID");
   } catch (err) {
