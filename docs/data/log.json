@@ -1,9 +1,79 @@
 [
   {
+    "date": "2026-07-14",
+    "task": "M1.W1.T4.3",
+    "status": "done",
+    "capaian": "Berhasil membuat dan menjalankan file `hello.js` menggunakan perintah node, menginisialisasi `package.json` melalui `npm init -y`, serta sukses memasang package eksternal via `npm install chalk`.",
+    "kesulitan": "Sempat terhambat script execution policy Windows saat running npm init, namun sukses diatasi dengan mengubah policy via terminal."
+  },
+  {
+    "date": "2026-07-14",
+    "task": "M1.W1.T4.2",
+    "status": "done",
+    "capaian": "",
+    "kesulitan": "Sempat terkena eror command not recognized karena terminal VS Code lama belum membaca PATH baru, tetapi aman setelah VS Code dibuka ulang."
+  },
+  {
+    "date": "2026-07-14",
+    "task": "M1.W1.T4.1",
+    "status": "done",
+    "capaian": "sudah install nvm lts versi 24.18.0.",
+    "kesulitan": "sejauh ini install nya aman aja"
+  },
+  {
+    "date": "2026-07-14",
+    "task": "M1.W1.T3.4",
+    "status": "done",
+    "capaian": "bisa membuat & merapikan struktur folder walau dibantu.",
+    "kesulitan": "So far aman lah untuk ini, paling butuh penjelasan lebih detail aja."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T3.3",
+    "status": "done",
+    "capaian": "Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.",
+    "kesulitan": "Agak susah dipahami karna pakai terminal, dibantu AI juga."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T3.2",
+    "status": "done",
+    "capaian": "Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami.",
+    "kesulitan": "Fungsi belum tau, kemungkinan untuk pindah folder atau sejenis nya."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T3.1",
+    "status": "done",
+    "capaian": "Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet",
+    "kesulitan": "Kurang paham apa yang di lakukan."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T2.3",
+    "status": "done",
+    "capaian": "Saat pencet CTRL+S kode langsung rapi.",
+    "kesulitan": "Agak bingung awal awal, sekarang juga bingung."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T2.2",
+    "status": "done",
+    "capaian": "Sudah Install extensi ekstensi ESLint, Prettier, GitLens.",
+    "kesulitan": "paling internet yang lelet."
+  },
+  {
     "date": "2026-07-13",
     "task": "M1.W1.T2.1",
-    "status": "in-progress",
-    "capaian": "Contoh entry — hapus/ganti dengan laporan asli kamu. Sudah install VS Code, masih setup ekstensi.",
-    "kesulitan": "Contoh — bingung bedanya ekstensi ESLint vs Prettier."
+    "status": "done",
+    "capaian": "Sudah ada VS code dan sync sama github",
+    "kesulitan": "tidak ada kendala yang terlalu berat."
+  },
+  {
+    "date": "2026-07-13",
+    "task": "M1.W1.T1",
+    "status": "done",
+    "capaian": "Udah buat akun github dan aktifin fitur Two-Factor autentifcation (2FA).",
+    "kesulitan": "Tidak ada opsi nomor indonesia di GitHub, tapi pakai aplikasi dari google jadi nya bisa."
   }
 ]

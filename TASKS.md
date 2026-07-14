@@ -14,13 +14,13 @@
 
 - [x] <!-- id: M1.W1.T1 --> Buat akun GitHub, lengkapi profil dasar (foto, bio), dan aktifkan Two-Factor Authentication (2FA) — dikerjakan duluan karena environment kerja ke depan pakai GitHub
 - Instalasi & konfigurasi VS Code + ekstensi dasar (dipecah jadi 3 sub-task di bawah — contoh breakdown lebih detail):
-  - [ ] <!-- id: M1.W1.T2.1 --> Instal VS Code + login sync settings (pakai akun GitHub dari task sebelumnya)
-  - [ ] <!-- id: M1.W1.T2.2 --> Instal & aktifkan ekstensi ESLint, Prettier, GitLens
-  - [ ] <!-- id: M1.W1.T2.3 --> Coba format-on-save & auto-lint di 1 file contoh
+  - [x] <!-- id: M1.W1.T2.1 --> Instal VS Code + login sync settings (pakai akun GitHub dari task sebelumnya)
+  - [x] <!-- id: M1.W1.T2.2 --> Instal & aktifkan ekstensi ESLint, Prettier, GitLens
+  - [x] <!-- id: M1.W1.T2.3 --> Coba format-on-save & auto-lint di 1 file contoh
 - Pengenalan terminal & command line dasar (dipecah jadi 4 sub-task):
   - [x] <!-- id: M1.W1.T3.1 --> Pahami konsep dasar shell/terminal & struktur direktori (path absolut vs relatif)
-  - [ ] <!-- id: M1.W1.T3.2 --> Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)
-  - [ ] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
+  - [x] <!-- id: M1.W1.T3.2 --> Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)
+  - [x] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
   - [x] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
 - Instalasi Node.js & npm, verifikasi versi (dipecah jadi 3 sub-task):
   - [x] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
