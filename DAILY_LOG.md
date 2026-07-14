@@ -14,6 +14,15 @@
 
 <!-- ENTRY START -->
 
+### Task: M1.W1.T1
+
+- **Status:** done
+- **Capaian:** Udah buat akun github dan aktifin fitur Two-Factor autentifcation (2FA).
+- **Kesulitan:** Tidak ada opsi nomor indonesia di GitHub, tapi pakai aplikasi dari google jadi nya bisa.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
 ### Task: M1.W1.T2.1
 
 - **Status:** done
@@ -43,7 +52,7 @@
 
 ### Task: M1.W1.T3.1
 
-- **Status:** Dome
+- **Status:** Done
 - **Capaian:** Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet
 - **Kesulitan:** Kurang paham apa yang di lakukan.
 <!-- ENTRY END -->
