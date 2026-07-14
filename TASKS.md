@@ -11,22 +11,28 @@
 ### Minggu 1
 
 > 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W1-fondasi-tools.md`](../docs/modules/M1-W1-fondasi-tools.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — aturan pakai AI & apa arti "done" untuk task bertanda **[Wajib Refleksi]** di bawah.
 
 - [x] <!-- id: M1.W1.T1 --> Buat akun GitHub, lengkapi profil dasar (foto, bio), dan aktifkan Two-Factor Authentication (2FA) — dikerjakan duluan karena environment kerja ke depan pakai GitHub
-- Instalasi & konfigurasi VS Code + ekstensi dasar (dipecah jadi 3 sub-task di bawah — contoh breakdown lebih detail):
+- Instalasi & konfigurasi VS Code + ekstensi dasar (dipecah jadi 4 sub-task di bawah — contoh breakdown lebih detail):
   - [x] <!-- id: M1.W1.T2.1 --> Instal VS Code + login sync settings (pakai akun GitHub dari task sebelumnya)
   - [x] <!-- id: M1.W1.T2.2 --> Instal & aktifkan ekstensi ESLint, Prettier, GitLens
   - [x] <!-- id: M1.W1.T2.3 --> Coba format-on-save & auto-lint di 1 file contoh
-- Pengenalan terminal & command line dasar (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M1.W1.T2.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: beda fungsi ESLint vs Prettier, masing-masing kasih 1 contoh konkret masalah yang mereka tangani (bukan definisi umum)
+- Pengenalan terminal & command line dasar (dipecah jadi 7 sub-task — bagian paling banyak latihan penguatan, karena ini area yang kemarin masih rancu):
   - [x] <!-- id: M1.W1.T3.1 --> Pahami konsep dasar shell/terminal & struktur direktori (path absolut vs relatif)
   - [x] <!-- id: M1.W1.T3.2 --> Praktik navigasi: pwd, cd, ls (termasuk opsi -l -a)
   - [x] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
   - [x] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
-- Instalasi Node.js & npm, verifikasi versi (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M1.W1.T3.5 --> [Wajib Refleksi] Prediksi-sebelum-eksekusi: untuk 5 command berbeda, tulis dulu prediksi hasil/efeknya SEBELUM dijalankan, baru jalankan & bandingkan (lihat daftar command di modul)
+  - [ ] <!-- id: M1.W1.T3.6 --> [Wajib Refleksi] Kuis pemahaman mandiri — jawab pertanyaan konsep di modul TANPA buka modul/AI/catatan, baru cek jawabannya setelahnya
+  - [ ] <!-- id: M1.W1.T3.7 --> [Wajib Refleksi] Teach-back ke mentor: jelaskan lisan (tanpa membaca catatan) beda path absolut vs relatif + fungsi tiap command dasar, pakai contoh bikinan sendiri
+- Instalasi Node.js & npm, verifikasi versi (dipecah jadi 4 sub-task):
   - [x] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
   - [x] <!-- id: M1.W1.T4.2 --> Verifikasi instalasi: node -v, npm -v, npm config list
   - [x] <!-- id: M1.W1.T4.3 --> Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install
-- [ ] <!-- id: M1.W1.T5 --> Evaluasi Minggu 1: demo singkat ke mentor (tunjukkan profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + isi refleksi capaian/kesulitan di modul
+  - [ ] <!-- id: M1.W1.T4.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu `package.json`, dan kenapa `node_modules/` tidak boleh ikut di-commit ke Git (kaitkan ke pengalaman file `node_modules` yang sempat kebawa commit minggu ini)
+- [ ] <!-- id: M1.W1.T5 --> Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian "Untuk mentor") + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 

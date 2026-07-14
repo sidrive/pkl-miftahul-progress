@@ -5,6 +5,11 @@
 > sesuai (lihat contoh format di setiap bagian). Kerjakan urut dari atas ke bawah — akun GitHub
 > dibuat **duluan** karena dipakai untuk login VS Code di bagian berikutnya, dan environment kerja
 > ke depan memang berbasis GitHub.
+>
+> **Baca dulu** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../PANDUAN_BELAJAR_DAN_AI.md) sebelum mulai —
+> task bertanda **[Wajib Refleksi]** di bawah baru dianggap `done` kalau kamu bisa jelaskan
+> pemahamannya pakai kata sendiri, bukan cuma perintahnya berhasil jalan. AI boleh dipakai untuk
+> bantu paham/debug, tapi jawaban akhir harus kamu tulis ulang sendiri.
 
 ---
 
@@ -79,6 +84,37 @@ Setelah instal, buka Settings (`Ctrl+,`), cari `default formatter`, set ke **Pre
 ### Task: M1.W1.T2.2
 - **Status:** done
 - **Capaian:** ESLint, Prettier, GitLens sudah aktif dan bisa dipakai.
+- **Kesulitan:** -
+```
+
+### `M1.W1.T2.4` — [Wajib Refleksi] Beda ESLint vs Prettier
+
+Sebelum tanya AI, coba jawab dulu sendiri: **ESLint dan Prettier sama-sama "beresin" kode kamu,
+tapi beresin hal yang beda.** Supaya kebayang bedanya, coba percobaan ini:
+
+1. Tulis kode dengan **bug logika sederhana** (bukan cuma berantakan formatnya), misalnya:
+   ```js
+   let hasil = 5
+   if (hasil = 10) {
+     console.log("iya")
+   }
+   ```
+   (`=` di dalam `if` itu assignment, bukan perbandingan `===` — ini bug klasik.) Perhatikan:
+   Prettier akan merapikan **formatnya** (spasi, indentasi) tapi **tidak** akan menyadari itu bug.
+   ESLint yang biasanya menandai ini sebagai warning/error.
+2. Sekarang tulis kode yang **benar secara logika tapi berantakan formatnya** (seperti contoh di
+   `T2.3`) — kali ini ESLint diam saja (tidak ada bug), tapi Prettier tetap merapikan formatnya.
+
+**Setelah 2 percobaan di atas**, isi log dengan menjawab (dengan kata sendiri, contoh konkretmu
+sendiri boleh beda dari di atas):
+- ESLint itu ngecek apa? Prettier itu ngecek apa? Kenapa keduanya tetap dipakai bareng-bareng
+  (tidak cukup salah satu saja)?
+
+**Contoh entry log (isi bagian Capaian dengan jawabanmu sendiri, bukan contoh ini):**
+```markdown
+### Task: M1.W1.T2.4
+- **Status:** done
+- **Capaian:** [tulis jawabanmu sendiri di sini berdasarkan percobaan di atas]
 - **Kesulitan:** -
 ```
 
@@ -158,6 +194,81 @@ Verifikasi hasilnya dengan `ls -la` di setiap level, atau `ls -R` (lihat rekursi
 - **Kesulitan:** Sempat salah path pas mkdir nested folder, ternyata harus mkdir -p.
 ```
 
+### `M1.W1.T3.5` — [Wajib Refleksi] Prediksi-sebelum-eksekusi
+
+Sebelum bagian ini, kamu sudah pernah jalankan semua command dasar (bagian `T3.2`/`T3.3`). Sekarang
+baliknya: **jangan langsung eksekusi**. Untuk 5 skenario di bawah, tulis dulu di catatanmu **apa
+yang menurutmu akan terjadi**, baru jalankan beneran dan bandingkan.
+
+1. Kamu di `~/project-a`. Jalankan `cd ../project-b`. Kamu akan ada di folder mana? (tulis path
+   lengkapnya)
+2. Kamu jalankan `mkdir latihan && cd latihan && mkdir sub && cd sub`. Kalau habis itu kamu
+   `cd ../..`, kamu ada di folder mana?
+3. Kamu jalankan `rm nama-file-yang-belum-ada.txt`. Menurutmu apa yang terjadi? (jangan langsung
+   coba, tebak dulu)
+4. Kamu jalankan `cp file.txt folder-yang-belum-ada/`. Berhasil atau error? Kenapa?
+5. Kamu jalankan `ls` di folder kosong. Apa yang muncul di layar?
+
+**Setelah menjawab semua**, baru coba jalankan satu-satu di terminal beneran. Kalau ada yang
+prediksimu meleset, itu justru bagian paling penting — tulis di log **kenapa** kamu awalnya salah
+duga dan apa yang ternyata benar terjadi.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T3.5
+- **Status:** done
+- **Capaian:** [tulis prediksi vs hasil aslinya, terutama yang meleset & kenapa]
+- **Kesulitan:** -
+```
+
+### `M1.W1.T3.6` — [Wajib Refleksi] Kuis pemahaman mandiri (tanpa modul/AI)
+
+**Tutup dulu modul ini dan jangan tanya AI.** Jawab pertanyaan di bawah semampunya. Setelah selesai
+menjawab semua, baru boleh buka lagi modul untuk cek jawabanmu.
+
+1. Apa beda path absolut dan path relatif? Kasih 1 contoh masing-masing (bukan dari modul).
+2. Command apa yang kamu pakai untuk tahu posisi folder kamu sekarang?
+3. Apa beda `rm nama-file` dengan `rm -r nama-folder`? Kenapa perlu `-r` untuk folder?
+4. Kalau kamu salah hapus file pakai `rm` di terminal, bisa dikembalikan lagi tidak (seperti buka
+   Recycle Bin)? Kenapa itu penting diingat?
+5. Apa fungsi `ls -la` yang tidak ada di `ls` biasa?
+
+Setelah menjawab, buka lagi bagian-bagian sebelumnya untuk cek — kalau ada yang salah/meleset,
+catat di log yang mana dan pemahaman yang benar seperti apa (jangan cuma tulis "sudah benar semua"
+kalau kenyataannya ada yang perlu dikoreksi).
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T3.6
+- **Status:** done
+- **Capaian:** [tulis jawaban kamu + koreksi kalau ada yang salah setelah dicek ulang]
+- **Kesulitan:** -
+```
+
+### `M1.W1.T3.7` — [Wajib Refleksi] Teach-back ke mentor
+
+Ini pengecekan terakhir untuk bagian terminal, dan yang paling penting: **jelaskan lisan ke mentor**
+(atau kalau mentor belum sempat, rekam video/voice note singkat ke mentor) — TANPA membaca dari
+catatan/modul:
+
+1. Apa itu path absolut vs relatif — pakai analogi/contohmu sendiri (bukan contoh dari modul).
+2. Peragakan langsung di terminal (layar dibagikan/direkam): navigasi ke 2-3 folder, buat folder
+   baru, buat file, hapus file — sambil dijelaskan tiap langkahnya ngapain.
+3. Kalau mentor tanya variasi kecil di luar yang biasa kamu praktikkan (misal folder dengan nama
+   beda atau urutan berbeda), coba jawab dengan bernalar dari konsep, bukan menghafal langkah.
+
+Task ini baru `done` kalau teach-back-nya **sudah benar-benar dilakukan** (bukan direncanakan) dan
+mentor menganggap penjelasannya cukup jelas — kalau belum sempat, tandai `in-progress` dan jadwalkan
+ulang, jangan ditandai selesai duluan.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T3.7
+- **Status:** done
+- **Capaian:** Sudah teach-back ke mentor [tanggal], mentor konfirmasi paham bagian X, Y, Z.
+- **Kesulitan:** Sempat kepeleset pas ditanya soal path relatif dari folder yang beda dari contoh.
+```
+
 ---
 
 ## 4. Node.js & npm
@@ -201,23 +312,54 @@ angka versi tanpa error.
 **Checklist selesai:** paham kapan pakai `npm init` (project baru) vs `npm install` (nambah
 dependency ke project yang sudah punya `package.json`).
 
+### `M1.W1.T4.4` — [Wajib Refleksi] `package.json` & kenapa `node_modules/` tidak boleh di-commit
+
+Konteks: pas mengerjakan `T4.3` minggu ini, file `node_modules/` (beserta `package.json` &
+`package-lock.json`) sempat ikut ter-commit ke repo tracker ini — sudah dibersihkan mentor, tapi
+ini kesempatan bagus untuk benar-benar paham kenapa itu masalah, supaya tidak keulang di project
+selanjutnya (termasuk project internal nanti).
+
+Coba jawab (boleh cari tahu dulu, tapi tulis ulang pakai kata sendiri):
+1. Apa isi `package.json`? Kenapa file ini **wajib** ikut di-commit ke Git?
+2. Apa isi `node_modules/`? Dari mana asal isinya (ditulis manual atau di-generate)?
+3. Kalau `node_modules/` di-commit ke Git, lalu ada orang lain clone repo-mu — apa masalah yang
+   bisa muncul? (petunjuk: ukuran repo, dan apakah isi `node_modules/` selalu sama persis di semua
+   OS/environment)
+4. Perintah apa yang dipakai supaya orang lain bisa "membangun ulang" `node_modules/` sendiri
+   tanpa perlu kamu commit isinya? (sudah kamu pakai waktu `T4.3`)
+5. Lihat file `.gitignore` di root repo ini — baris mana yang mencegah `node_modules/` ke-commit
+   lagi di masa depan?
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T4.4
+- **Status:** done
+- **Capaian:** [jawaban kamu soal package.json vs node_modules, dan kenapa yang satu di-commit yang satu tidak]
+- **Kesulitan:** -
+```
+
 ---
 
 ## 5. Evaluasi Minggu 1 (`M1.W1.T5`)
 
-Setelah semua bagian di atas selesai, siapkan demo singkat (~10 menit) untuk mentor:
+Setelah semua bagian di atas selesai (termasuk semua task **[Wajib Refleksi]**), siapkan demo
+singkat (~10-15 menit) untuk mentor:
 
 1. Tunjukkan profil GitHub kamu (foto, bio, 2FA aktif).
 2. Tunjukkan VS Code dengan ESLint/Prettier/GitLens aktif, dan contoh format-on-save bekerja.
 3. Tunjukkan navigasi terminal langsung (bukan screenshot) — buat folder, pindah-pindah, hapus.
 4. Tunjukkan `node -v` dan `npm -v`, lalu jalankan `hello.js`.
-5. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
+5. **Mentor akan tanya 2-3 variasi pertanyaan** yang sedikit beda dari contoh di modul (bukan
+   sekadar mengulang langkah yang sama) — ini untuk memastikan pemahamannya beneran nempel, bukan
+   hafalan langkah. Kalau ada yang belum lancar, tidak apa — itu justru bahan follow-up, bukan
+   kegagalan.
+6. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
 
 Setelah demo, isi entry log terakhir untuk minggu ini:
 ```markdown
 ### Task: M1.W1.T5
 - **Status:** done
-- **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal.
+- **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** (isi refleksi jujur — ini bukan nilai, ini bahan mentor bantu kamu)
 ```
 
