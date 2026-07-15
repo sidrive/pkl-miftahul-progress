@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-07-15",
+    "task": "M1.W1.T3.6",
+    "status": "done",
+    "capaian": "1. bedanya gini kalo path absolut itu harus Panjang dia alamat nya (contoh cd C:\\Users\\spotg\\Desktop\\latihan*kuis\\foto) jadi kalo kita berada di folder mana aja gampang pindah nya. nah sedangkan path relative itu pendek/singkat jadi kalo kita di folder latihan_kuis kita tinggal ketik \"cd foto\" untuk melihat isi folder latian_kuis. 2. CD [Koreksi setelah cek modul: Di Windows PowerShell bisa pakai `Get-Location` atau command universal `pwd` (print working directory)]\\*. 3. \"rm nama-file\" itu arti kode \"rm\" itu remove atau menghapus jadi menghapus 1 file, nah sedangkan \"rm -r nama-folder\" fungsi nya itu menghapus folder serta isi isi nya, jadi kalo hapus folder tanpa \"-r\" windows akan nanya (praktek dikit tadi). 4. menurut saya kayanya ga bisa di kembalikan, setau saya ya system Recycle Bin itu dia ganti alamat nya sementara baru benar benar di hapus 5. kalo \"ls\" melihat isi folder tanpa harus masuk ke foldernya, nah kalo \"ls -la\" kurang tau. [Koreksi setelah tanya AI: ls biasa cuma nampilin nama file standar. Kalau `ls -la` itu buat ngebongkar file rahasia/gaib yang tersembunyi pakai tanda titik (seperti `.gitignore`) lengkap beserta tabel detail ukuran file dan tanggal modifikasinya]*.",
+    "kesulitan": "Bingung dikit untuk soal no 5 tadi, cuma setelah di koreksi jadi paham"
+  },
+  {
+    "date": "2026-07-15",
+    "task": "M1.W1.T3.5",
+    "status": "done",
+    "capaian": "saya udah mempraktikkan langsung tadi skenario terminal dari modul di folder submissions/M1-W1/tugas_T3.5 sesuai dengan modul, saya membuat folder_a, folder_b, dan folder_c. dan ini hasil nya:",
+    "kesulitan": "awalnya bingung sama maksud ramalan dan prediksi di modul, baru saya tanya AI maksud nya apa baru saya langsung bikin folder_a, \\_b, \\_c baru kelihatan jelas logikanya pas berpindah-pindah jalur."
+  },
+  {
+    "date": "2026-07-15",
+    "task": "M1.W1.T2.4",
+    "status": "done",
+    "capaian": "Yang saya lihat dan pahami ya, yang jelas Prettier itu biar kodingan jadi rapi yak contoh nya kalo huruf nya space terlalu jauh di rapikan, baris kode nya di rapihin biar ga mencong2. nah kalo ESLint yang saya tengok kayanya cari eror gitu, jadi kalo ada eror atau bug di logika kode lah, dia perbaiki/nyari, ya contoh nya nanti dia kek ngasih tau kalo ada cacat logika missal saya salah nulis rumus tanda `=` cuma satu di dalam baris `if` yang harusnya ditulis `===`.",
+    "kesulitan": "Pertama nyoba bikin file baru baru minta la AI buatin kode, baru saya klik lah CTRL + S nah kode yang awalnya berantakan jadi rapi, nah untuk ESLint ini kurang keliatan ya tampilan nya, sedikit kurang paham juga cuma yang jelas ngasih tau cacat logika."
+  },
+  {
+    "date": "2026-07-15",
+    "task": "M1.W1.T4.4",
+    "status": "done",
+    "capaian": "hmm saya sedikit udah paham konsepnya pake analogi Lego. file `package.json` kita anggap kertas instruksi atau urutan balok lego yang kita pakai, jadi wajib di-push ke Git biar orang lain tahu cara rakitnya. kalo folder `node_modules` itu harusnya kardus berisi balok plastik aslinya, jadi haram di-push biar gak bikin penuh repo yang saya pahamin. orang lain kalo mau rakit tinggal ketik `npm install`, nanti komputer otomatis ngambil balok sendiri dari internet sesuai kertas instruksi `package.json` tadi itu. folder berat ini keknya udah otomatis dikunci sama file `.gitignore` biar gak ikut ter-push.",
+    "kesulitan": "ada eror sama kena mental dikit karna gak paham istilah robot codingan di awal, tapi setelah dijelaskan pakai analogi balok Lego baru paham dikit dikit maksudnya."
+  },
+  {
+    "date": "2026-07-15",
+    "task": "M1.W1.T4.3",
+    "status": "done",
+    "capaian": "Udah coba dan bisa jalanin ulang `npm init -y` untuk konfigurasi awal project. habis itu saya udah pasang package `chalk` via `npm install chalk` langsung dalam folder tujuan (`submissions/M1-W1/T4.3-node-npm/`).",
+    "kesulitan": "Sempat terhambat kendala hak akses Script Execution Policy Windows di terminal baru, tapi dah berhasil selesaiin dengan mengubah policy via command scope process, jadi ada eror dikit tadi, cuma udah done."
+  },
+  {
     "date": "2026-07-14",
     "task": "M1.W1.T4.3",
     "status": "done",
@@ -32,28 +67,28 @@
     "task": "M1.W1.T3.3",
     "status": "done",
     "capaian": "Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.",
-    "kesulitan": "Agak susah dipahami karna pakai terminal, dibantu AI juga."
+    "kesulitan": "Agak susah dipahami karna pakai terminal, dibantu AI juga, tapi paham juga apa fungsi."
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T3.2",
     "status": "done",
-    "capaian": "Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami.",
-    "kesulitan": "Fungsi belum tau, kemungkinan untuk pindah folder atau sejenis nya."
+    "capaian": "Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami, tapi saya tau maksudnya untuk melihat sedang di folder apa, isi folder dan sebagainya.",
+    "kesulitan": "awal awal bingung ini apa, setelah saya pahamin saya jadi ngerti"
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T3.1",
     "status": "done",
     "capaian": "Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet",
-    "kesulitan": "Kurang paham apa yang di lakukan."
+    "kesulitan": "awal awal bingung, sekarang udah paham apa maksud dari path absolut dan relatif."
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T2.3",
     "status": "done",
     "capaian": "Saat pencet CTRL+S kode langsung rapi.",
-    "kesulitan": "Agak bingung awal awal, sekarang juga bingung."
+    "kesulitan": "Agak bingung awal awal, cuma mencoba memahamin dan lumayan paham, jadi sekarang saat klik CTRL+S kode langsung rapi."
   },
   {
     "date": "2026-07-13",
