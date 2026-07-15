@@ -340,7 +340,7 @@ Coba jawab (boleh cari tahu dulu, tapi tulis ulang pakai kata sendiri):
 
 ---
 
-## 5. Proyek Pamungkas Minggu 1 (`M1.W1.T5`)
+## 5. Proyek Pengembangan Skill Mandiri Minggu 1 (`M1.W1.T5`)
 
 Semua task sebelumnya melatih **satu skill terpisah** (terminal saja, Node saja, dst). Task ini
 beda: kamu menggabungkan **semuanya** jadi satu proyek kecil yang benar-benar jalan. Ini juga
@@ -394,7 +394,7 @@ scope-nya cukup dalam untuk benar-benar melatih kombinasi terminal + Node + npm 
 ### Submit
 
 Taruh seluruh folder project (kode + `README.md`, **tanpa** `node_modules/` — sudah otomatis
-di-`.gitignore`) di `submissions/M1-W1/T5-proyek-pamungkas/`. Tambahkan juga screenshot VS Code
+di-`.gitignore`) di `submissions/M1-W1/T5-proyek-mandiri/`. Tambahkan juga screenshot VS Code
 yang menunjukkan kode bersih dari warning ESLint.
 
 **Contoh entry log:**
@@ -409,7 +409,7 @@ yang menunjukkan kode bersih dari warning ESLint.
 
 ## 6. Evaluasi Minggu 1 (`M1.W1.T6`)
 
-Setelah semua bagian di atas selesai (termasuk semua task **[Wajib Refleksi]** dan proyek pamungkas
+Setelah semua bagian di atas selesai (termasuk semua task **[Wajib Refleksi]** dan proyek pengembangan mandiri
 `T5`), siapkan demo singkat (~15-20 menit) untuk mentor:
 
 1. Tunjukkan profil GitHub kamu (foto, bio, 2FA aktif).
