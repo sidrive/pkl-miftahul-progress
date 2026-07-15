@@ -145,3 +145,15 @@
 - **Capaian:** Yang saya lihat dan pahami ya, yang jelas Prettier itu biar kodingan jadi rapi yak contoh nya kalo huruf nya space terlalu jauh di rapikan, baris kode nya di rapihin biar ga mencong2. nah kalo ESLint yang saya tengok kayanya cari eror gitu, jadi kalo ada eror atau bug di logika kode lah, dia perbaiki/nyari, ya contoh nya nanti dia kek ngasih tau kalo ada cacat logika missal saya salah nulis rumus tanda `=` cuma satu di dalam baris `if` yang harusnya ditulis `===`.
 - **Kesulitan:** Pertama nyoba bikin file baru baru minta la AI buatin kode, baru saya klik lah CTRL + S nah kode yang awalnya berantakan jadi rapi, nah untuk ESLint ini kurang keliatan ya tampilan nya, sedikit kurang paham juga cuma yang jelas ngasih tau cacat logika.
 <!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.5
+
+- **Status:** done
+- **Capaian:** saya udah mempraktikkan langsung tadi skenario terminal dari modul di folder submissions/M1-W1/tugas_T3.5 sesuai dengan modul, saya membuat folder_a, folder_b, dan folder_c. dan ini hasil nya:
+  1. pas posisi di folder_c saya ketik command cd ../.. dan hasilnya terbukti jalur terminal saya langsung mundur dua tingkat keluar terlempar ke folder_a. sesuai prediksi saya.
+  2. pas posisi di folder_b saya ketik command "ls", alamat yang ada di terminal itu folder_c karna cuma folder itu yang ada di dalam folder_b.
+  3. tadi ada eror dikit pas awal karna typo ngetik cd folder a pakai spasi harusnya sesuai yang saya buat pakai tanda underscore "\_", tapi langsung paham jalurnya harus ditulis sesuai nama folder_a.
+- **Kesulitan:** awalnya bingung sama maksud ramalan dan prediksi di modul, baru saya tanya AI maksud nya apa baru saya langsung bikin folder_a, \_b, \_c baru kelihatan jelas logikanya pas berpindah-pindah jalur.
+<!-- ENTRY END -->
