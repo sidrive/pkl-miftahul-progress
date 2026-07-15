@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-07-15",
+    "task": "M1.W1.T3.6",
+    "status": "done",
+    "capaian": "1. bedanya gini kalo path absolut itu harus Panjang dia alamat nya (contoh cd C:\\Users\\spotg\\Desktop\\latihan*kuis\\foto) jadi kalo kita berada di folder mana aja gampang pindah nya. nah sedangkan path relative itu pendek/singkat jadi kalo kita di folder latihan_kuis kita tinggal ketik \"cd foto\" untuk melihat isi folder latian_kuis. 2. CD [Koreksi setelah cek modul: Di Windows PowerShell bisa pakai `Get-Location` atau command universal `pwd` (print working directory)]\\*. 3. \"rm nama-file\" itu arti kode \"rm\" itu remove atau menghapus jadi menghapus 1 file, nah sedangkan \"rm -r nama-folder\" fungsi nya itu menghapus folder serta isi isi nya, jadi kalo hapus folder tanpa \"-r\" windows akan nanya (praktek dikit tadi). 4. menurut saya kayanya ga bisa di kembalikan, setau saya ya system Recycle Bin itu dia ganti alamat nya sementara baru benar benar di hapus 5. kalo \"ls\" melihat isi folder tanpa harus masuk ke foldernya, nah kalo \"ls -la\" kurang tau. [Koreksi setelah tanya AI: ls biasa cuma nampilin nama file standar. Kalau `ls -la` itu buat ngebongkar file rahasia/gaib yang tersembunyi pakai tanda titik (seperti `.gitignore`) lengkap beserta tabel detail ukuran file dan tanggal modifikasinya]*.",
+    "kesulitan": "Bingung dikit untuk soal no 5 tadi, cuma setelah di koreksi jadi paham"
+  },
+  {
+    "date": "2026-07-15",
     "task": "M1.W1.T3.5",
     "status": "done",
     "capaian": "saya udah mempraktikkan langsung tadi skenario terminal dari modul di folder submissions/M1-W1/tugas_T3.5 sesuai dengan modul, saya membuat folder_a, folder_b, dan folder_c. dan ini hasil nya:",
@@ -60,28 +67,28 @@
     "task": "M1.W1.T3.3",
     "status": "done",
     "capaian": "Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.",
-    "kesulitan": "Agak susah dipahami karna pakai terminal, dibantu AI juga."
+    "kesulitan": "Agak susah dipahami karna pakai terminal, dibantu AI juga, tapi paham juga apa fungsi."
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T3.2",
     "status": "done",
-    "capaian": "Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami.",
-    "kesulitan": "Fungsi belum tau, kemungkinan untuk pindah folder atau sejenis nya."
+    "capaian": "Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami, tapi saya tau maksudnya untuk melihat sedang di folder apa, isi folder dan sebagainya.",
+    "kesulitan": "awal awal bingung ini apa, setelah saya pahamin saya jadi ngerti"
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T3.1",
     "status": "done",
     "capaian": "Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet",
-    "kesulitan": "Kurang paham apa yang di lakukan."
+    "kesulitan": "awal awal bingung, sekarang udah paham apa maksud dari path absolut dan relatif."
   },
   {
     "date": "2026-07-13",
     "task": "M1.W1.T2.3",
     "status": "done",
     "capaian": "Saat pencet CTRL+S kode langsung rapi.",
-    "kesulitan": "Agak bingung awal awal, sekarang juga bingung."
+    "kesulitan": "Agak bingung awal awal, cuma mencoba memahamin dan lumayan paham, jadi sekarang saat klik CTRL+S kode langsung rapi."
   },
   {
     "date": "2026-07-13",

@@ -45,7 +45,7 @@
 
 - **Status:** done
 - **Capaian:** Saat pencet CTRL+S kode langsung rapi.
-- **Kesulitan:** Agak bingung awal awal, sekarang juga bingung.
+- **Kesulitan:** Agak bingung awal awal, cuma mencoba memahamin dan lumayan paham, jadi sekarang saat klik CTRL+S kode langsung rapi.
 <!-- ENTRY END -->
 
 <!-- ENTRY START -->
@@ -54,7 +54,7 @@
 
 - **Status:** Done
 - **Capaian:** Sudah saya coba kerjain, kelihatan nya gampang, mungkin perlu latihan terus walau agak ribet
-- **Kesulitan:** Kurang paham apa yang di lakukan.
+- **Kesulitan:** awal awal bingung, sekarang udah paham apa maksud dari path absolut dan relatif.
 <!-- ENTRY END -->
 
 <!-- ENTRY START -->
@@ -62,8 +62,8 @@
 ### Task: M1.W1.T3.2
 
 - **Status:** Done
-- **Capaian:** Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami.
-- **Kesulitan:** Fungsi belum tau, kemungkinan untuk pindah folder atau sejenis nya.
+- **Capaian:** Beberapa gampang dilakukan, cuma konsep dasar agak susah di pahami, tapi saya tau maksudnya untuk melihat sedang di folder apa, isi folder dan sebagainya.
+- **Kesulitan:** awal awal bingung ini apa, setelah saya pahamin saya jadi ngerti
 <!-- ENTRY END -->
 
 <!-- ENTRY START -->
@@ -72,7 +72,7 @@
 
 - **Status:** Done
 - **Capaian:** Saya berhasil saya lakukan, ada sediki eror tapi bisa dilakukan walau di bantu AI.
-- **Kesulitan:** Agak susah dipahami karna pakai terminal, dibantu AI juga.
+- **Kesulitan:** Agak susah dipahami karna pakai terminal, dibantu AI juga, tapi paham juga apa fungsi.
 <!-- ENTRY END -->
 
 ---
@@ -156,4 +156,13 @@
   2. pas posisi di folder_b saya ketik command "ls", alamat yang ada di terminal itu folder_c karna cuma folder itu yang ada di dalam folder_b.
   3. tadi ada eror dikit pas awal karna typo ngetik cd folder a pakai spasi harusnya sesuai yang saya buat pakai tanda underscore "\_", tapi langsung paham jalurnya harus ditulis sesuai nama folder_a.
 - **Kesulitan:** awalnya bingung sama maksud ramalan dan prediksi di modul, baru saya tanya AI maksud nya apa baru saya langsung bikin folder_a, \_b, \_c baru kelihatan jelas logikanya pas berpindah-pindah jalur.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T3.6
+
+- **Status:** done
+- **Capaian:** 1. bedanya gini kalo path absolut itu harus Panjang dia alamat nya (contoh cd C:\Users\spotg\Desktop\latihan*kuis\foto) jadi kalo kita berada di folder mana aja gampang pindah nya. nah sedangkan path relative itu pendek/singkat jadi kalo kita di folder latihan_kuis kita tinggal ketik "cd foto" untuk melihat isi folder latian_kuis. 2. CD [Koreksi setelah cek modul: Di Windows PowerShell bisa pakai `Get-Location` atau command universal `pwd` (print working directory)]\*. 3. "rm nama-file" itu arti kode "rm" itu remove atau menghapus jadi menghapus 1 file, nah sedangkan "rm -r nama-folder" fungsi nya itu menghapus folder serta isi isi nya, jadi kalo hapus folder tanpa "-r" windows akan nanya (praktek dikit tadi). 4. menurut saya kayanya ga bisa di kembalikan, setau saya ya system Recycle Bin itu dia ganti alamat nya sementara baru benar benar di hapus 5. kalo "ls" melihat isi folder tanpa harus masuk ke foldernya, nah kalo "ls -la" kurang tau. [Koreksi setelah tanya AI: ls biasa cuma nampilin nama file standar. Kalau `ls -la` itu buat ngebongkar file rahasia/gaib yang tersembunyi pakai tanda titik (seperti `.gitignore`) lengkap beserta tabel detail ukuran file dan tanggal modifikasinya]*.
+- **Kesulitan:** Bingung dikit untuk soal no 5 tadi, cuma setelah di koreksi jadi paham
 <!-- ENTRY END -->

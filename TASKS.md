@@ -25,7 +25,7 @@
   - [x] <!-- id: M1.W1.T3.3 --> Praktik manajemen file/folder: mkdir, touch, cat, cp, mv, rm
   - [x] <!-- id: M1.W1.T3.4 --> Latihan mandiri: buat & rapikan struktur folder project murni lewat terminal (tanpa file explorer)
   - [x] <!-- id: M1.W1.T3.5 --> [Wajib Refleksi] Prediksi-sebelum-eksekusi: untuk 5 command berbeda, tulis dulu prediksi hasil/efeknya SEBELUM dijalankan, baru jalankan & bandingkan (lihat daftar command di modul)
-  - [ ] <!-- id: M1.W1.T3.6 --> [Wajib Refleksi] Kuis pemahaman mandiri — jawab pertanyaan konsep di modul TANPA buka modul/AI/catatan, baru cek jawabannya setelahnya
+  - [x] <!-- id: M1.W1.T3.6 --> [Wajib Refleksi] Kuis pemahaman mandiri — jawab pertanyaan konsep di modul TANPA buka modul/AI/catatan, baru cek jawabannya setelahnya
   - [ ] <!-- id: M1.W1.T3.7 --> [Wajib Refleksi] Teach-back ke mentor: jelaskan lisan (tanpa membaca catatan) beda path absolut vs relatif + fungsi tiap command dasar, pakai contoh bikinan sendiri
 - Instalasi Node.js & npm, verifikasi versi (dipecah jadi 4 sub-task):
   - [x] <!-- id: M1.W1.T4.1 --> Instal Node.js versi LTS (disarankan via nvm)
