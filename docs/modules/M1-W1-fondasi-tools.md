@@ -340,26 +340,95 @@ Coba jawab (boleh cari tahu dulu, tapi tulis ulang pakai kata sendiri):
 
 ---
 
-## 5. Evaluasi Minggu 1 (`M1.W1.T5`)
+## 5. Proyek Pamungkas Minggu 1 (`M1.W1.T5`)
 
-Setelah semua bagian di atas selesai (termasuk semua task **[Wajib Refleksi]**), siapkan demo
-singkat (~10-15 menit) untuk mentor:
+Semua task sebelumnya melatih **satu skill terpisah** (terminal saja, Node saja, dst). Task ini
+beda: kamu menggabungkan **semuanya** jadi satu proyek kecil yang benar-benar jalan. Ini juga
+latihan pola kerja nyata — di project sungguhan nanti, jarang ada task se-simpel "install X terus
+selesai"; biasanya berupa gabungan banyak skill kecil untuk membangun sesuatu yang punya fungsi.
+
+**Estimasi waktu:** minimal setengah hari kerja (±4 jam), **termasuk kalau kamu dibantu AI.** Kalau
+kamu selesai jauh lebih cepat dari itu, kemungkinan besar scope-nya kurang dalam — tambah 1-2 fitur
+kecil lagi sebelum menandai `done` (lihat bagian "Kalau kerasa kependekan" di bawah).
+
+### Apa yang harus dibangun
+
+Sebuah **CLI tool kecil tapi fungsional** — bebas topiknya, tapi wajib penuhi semua requirement di
+bawah. Contoh ide kalau butuh inspirasi (boleh pakai salah satu, boleh juga bikin ide sendiri):
+- **"Ringkasan Progress PKL"** — baca file JSON progress bikinanmu sendiri (bukan harus akses repo
+  tracker asli, cukup contoh data serupa), tampilkan ringkasan rapi & berwarna di terminal.
+- **Pengingat/checklist harian sederhana** — simpan daftar task ke file lokal, bisa tambah/tandai
+  selesai lewat argumen terminal.
+- **Generator sesuatu yang random** (kutipan motivasi, nama variabel lucu, dll) dari daftar data
+  lokal, ditampilkan dengan format/warna menarik.
+
+### Requirement wajib (semua harus dipenuhi)
+
+1. **Struktur folder dibuat 100% lewat terminal** (`mkdir`, `touch`, dst) — bukan klik kanan file
+   explorer, sesuai yang sudah dilatih di `T3`.
+2. **`npm init` diisi manual** (bukan `npm init -y`) — `name`, `description`, `author` diisi
+   sungguhan, bukan default kosong.
+3. **Minimal 2 dependency eksternal dari npm**, dan **minimal 1 di antaranya package yang belum
+   pernah kamu pakai** (boleh pakai `chalk` lagi buat salah satunya, tapi cari & pasang minimal 1
+   yang baru — riset sendiri/tanya AI package apa yang cocok untuk fungsi tool-mu, misalnya untuk
+   bikin tabel di terminal, bikin banner teks besar, atau baca input dari user).
+4. **Kode dipecah minimal 2 file** — ada file utama (misal `index.js`) yang `require(...)` file lain
+   (misal `data.js` atau `utils.js`). Tidak boleh semua logic di 1 file.
+5. **Program beneran menghasilkan sesuatu yang berguna** saat dijalankan (`node index.js` atau lewat
+   script npm) — bukan cuma `console.log("Hello, World!")` sekali doang.
+6. **Bersih dari warning/error ESLint** saat selesai (buka VS Code, pastikan tidak ada garis
+   bawah kuning/merah tersisa) — kalau ada dan sengaja dibiarkan, jelaskan kenapa di refleksi.
+7. **`README.md` di dalam folder project** menjelaskan: fungsinya apa, cara menjalankannya, package
+   apa saja yang dipakai dan untuk apa masing-masing.
+8. **Ikuti aturan pakai AI** di `docs/PANDUAN_BELAJAR_DAN_AI.md` — kalau nemu package baru lewat AI,
+   tulis di refleksi **apa fungsi package itu dengan kata sendiri**, bukan cuma nama package-nya.
+
+### Kalau kerasa kependekan
+
+Kalau requirement di atas selesai dalam waktu singkat (jauh di bawah target ±4 jam), tambah salah
+satu: validasi input dari user (misal kalau argumen kosong, tampilkan pesan error yang jelas,
+bukan crash), atau fitur kedua yang saling terhubung dengan fitur pertama, atau baca/tulis ke file
+(bukan cuma data hardcoded di kode). Tujuannya bukan menghabiskan waktu asal lama, tapi memastikan
+scope-nya cukup dalam untuk benar-benar melatih kombinasi terminal + Node + npm + debugging.
+
+### Submit
+
+Taruh seluruh folder project (kode + `README.md`, **tanpa** `node_modules/` — sudah otomatis
+di-`.gitignore`) di `submissions/M1-W1/T5-proyek-pamungkas/`. Tambahkan juga screenshot VS Code
+yang menunjukkan kode bersih dari warning ESLint.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W1.T5
+- **Status:** done
+- **Capaian:** [ceritakan CLI tool-mu ngapain, package apa yang dipakai & fungsinya, bagian mana yang kamu bangun sendiri vs dibantu AI]
+- **Kesulitan:** [jujur aja — misal debugging apa yang paling lama, konsep baru apa yang masih belum 100% jelas]
+```
+
+---
+
+## 6. Evaluasi Minggu 1 (`M1.W1.T6`)
+
+Setelah semua bagian di atas selesai (termasuk semua task **[Wajib Refleksi]** dan proyek pamungkas
+`T5`), siapkan demo singkat (~15-20 menit) untuk mentor:
 
 1. Tunjukkan profil GitHub kamu (foto, bio, 2FA aktif).
 2. Tunjukkan VS Code dengan ESLint/Prettier/GitLens aktif, dan contoh format-on-save bekerja.
 3. Tunjukkan navigasi terminal langsung (bukan screenshot) — buat folder, pindah-pindah, hapus.
 4. Tunjukkan `node -v` dan `npm -v`, lalu jalankan `hello.js`.
-5. **Mentor akan tanya 2-3 variasi pertanyaan** yang sedikit beda dari contoh di modul (bukan
+5. **Demo langsung CLI tool dari `T5`** — jalankan di depan mentor, jelaskan alur kodenya (bukan
+   cuma hasil akhirnya), dan kenapa kamu pilih package yang kamu pakai.
+6. **Mentor akan tanya 2-3 variasi pertanyaan** yang sedikit beda dari contoh di modul (bukan
    sekadar mengulang langkah yang sama) — ini untuk memastikan pemahamannya beneran nempel, bukan
    hafalan langkah. Kalau ada yang belum lancar, tidak apa — itu justru bahan follow-up, bukan
    kegagalan.
-6. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
+7. Ceritakan singkat: bagian mana yang paling gampang, bagian mana yang paling bikin bingung.
 
 Setelah demo, isi entry log terakhir untuk minggu ini:
 ```markdown
-### Task: M1.W1.T5
+### Task: M1.W1.T6
 - **Status:** done
-- **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal, pertanyaan variasi mentor terjawab.
+- **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal, CLI tool berhasil didemo, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** (isi refleksi jujur — ini bukan nilai, ini bahan mentor bantu kamu)
 ```
 

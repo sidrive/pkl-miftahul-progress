@@ -89,7 +89,12 @@
           },
           {
             "id": "M1.W1.T5",
-            "text": "Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian \"Untuk mentor\") + isi refleksi capaian/kesulitan di modul",
+            "text": "**[Proyek Pamungkas, target ±0,5 hari kerja]** Bangun 1 CLI tool kecil yang fungsional (bukan hello-world) — menggabungkan semua skill minggu ini (terminal, VS Code+lint, Node/npm+package eksternal baru). Lihat detail requirement & acceptance criteria di modul.",
+            "done": false
+          },
+          {
+            "id": "M1.W1.T6",
+            "text": "Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`, DAN demo langsung proyek pamungkas `T5`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian \"Untuk mentor\") + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
