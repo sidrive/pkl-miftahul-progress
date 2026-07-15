@@ -30,7 +30,7 @@
           {
             "id": "M1.W1.T2.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: beda fungsi ESLint vs Prettier, masing-masing kasih 1 contoh konkret masalah yang mereka tangani (bukan definisi umum)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W1.T3.1",
@@ -55,7 +55,7 @@
           {
             "id": "M1.W1.T3.5",
             "text": "[Wajib Refleksi] Prediksi-sebelum-eksekusi: untuk 5 command berbeda, tulis dulu prediksi hasil/efeknya SEBELUM dijalankan, baru jalankan & bandingkan (lihat daftar command di modul)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W1.T3.6",
@@ -85,7 +85,7 @@
           {
             "id": "M1.W1.T4.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu `package.json`, dan kenapa `node_modules/` tidak boleh ikut di-commit ke Git (kaitkan ke pengalaman file `node_modules` yang sempat kebawa commit minggu ini)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W1.T5",
