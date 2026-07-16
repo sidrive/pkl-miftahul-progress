@@ -15,13 +15,13 @@ menimpa pekerjaan orang lain.
 
 | Perintah | Fungsi |
 |---|---|
-| `git init` | Menjadikan folder saat ini sebagai repository Git baru |
-| `git status` | Lihat file mana yang berubah/belum di-track |
-| `git add <file>` | Menandai perubahan file untuk masuk ke commit berikutnya (staging) |
-| `git add .` | Staging semua perubahan di folder saat ini |
+| `git init`         | Menjadikan folder saat ini sebagai repository Git baru |
+| `git status`       | Lihat file mana yang berubah/belum di-track |
+| `git add <file>`   | Menandai perubahan file untuk masuk ke commit berikutnya (staging) |
+| `git add .`        | Staging semua perubahan di folder saat ini |
 | `git commit -m "pesan"` | Simpan perubahan yang sudah di-staging sebagai satu titik histori |
-| `git log` | Lihat histori commit |
-| `.gitignore` | File khusus berisi daftar file/folder yang **sengaja tidak** ikut di-track Git (contoh: `node_modules/`, file `.env`) |
+| `git log`          | Lihat histori commit |
+| `.gitignore`       | File khusus berisi daftar file/folder yang **sengaja tidak** ikut di-track Git (contoh: `node_modules/`, file `.env`) |
 
 **Latihan:**
 1. Buat folder baru `latihan-git`, jalankan `git init` di dalamnya.
