@@ -90,7 +90,7 @@
           {
             "id": "M1.W1.T5",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 CLI tool kecil yang fungsional (bukan hello-world) — menggabungkan semua skill minggu ini (terminal, VS Code+lint, Node/npm+package eksternal baru). Lihat detail requirement & acceptance criteria di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W1.T6",
