@@ -166,3 +166,12 @@
 - **Capaian:** 1. bedanya gini kalo path absolut itu harus Panjang dia alamat nya (contoh cd C:\Users\spotg\Desktop\latihan*kuis\foto) jadi kalo kita berada di folder mana aja gampang pindah nya. nah sedangkan path relative itu pendek/singkat jadi kalo kita di folder latihan_kuis kita tinggal ketik "cd foto" untuk melihat isi folder latian_kuis. 2. CD [Koreksi setelah cek modul: Di Windows PowerShell bisa pakai `Get-Location` atau command universal `pwd` (print working directory)]\*. 3. "rm nama-file" itu arti kode "rm" itu remove atau menghapus jadi menghapus 1 file, nah sedangkan "rm -r nama-folder" fungsi nya itu menghapus folder serta isi isi nya, jadi kalo hapus folder tanpa "-r" windows akan nanya (praktek dikit tadi). 4. menurut saya kayanya ga bisa di kembalikan, setau saya ya system Recycle Bin itu dia ganti alamat nya sementara baru benar benar di hapus 5. kalo "ls" melihat isi folder tanpa harus masuk ke foldernya, nah kalo "ls -la" kurang tau. [Koreksi setelah tanya AI: ls biasa cuma nampilin nama file standar. Kalau `ls -la` itu buat ngebongkar file rahasia/gaib yang tersembunyi pakai tanda titik (seperti `.gitignore`) lengkap beserta tabel detail ukuran file dan tanggal modifikasinya]*.
 - **Kesulitan:** Bingung dikit untuk soal no 5 tadi, cuma setelah di koreksi jadi paham
 <!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### `M1.W1.T3.7`
+
+- **Status:** - - -
+- **Capaian:** sudah mengirim video dan voice note ke wa mas ikhun.
+- **Kesulitan:** tidak ada kesulitan menjelaskan dan membuat video, paling agak slow resp mas ikhun nya.
+<!-- ENTRY END -->
