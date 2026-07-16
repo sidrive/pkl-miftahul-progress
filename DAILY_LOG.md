@@ -171,7 +171,7 @@
 
 ### Task: M1.W1.T3.7
 
-- **Status:** in-progress
+- **Status:** done
 - **Capaian:** sudah mengirim video dan voice note teach-back ke mentor (WA).
 - **Kesulitan:** tidak ada kesulitan menjelaskan dan membuat video, paling agak slow resp mentor-nya — nunggu konfirmasi/feedback mentor dulu sebelum ditandai done.
 <!-- ENTRY END -->
