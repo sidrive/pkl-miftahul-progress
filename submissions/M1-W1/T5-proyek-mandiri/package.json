@@ -1,0 +1,16 @@
+{
+  "name": "t5-proyek-mandiri",
+  "version": "1.0.0",
+  "description": "Aplikasi CLI pengingat tugas PKL Frontend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miftahul Al Gazi Hermansyah",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.5"
+  }
+}
