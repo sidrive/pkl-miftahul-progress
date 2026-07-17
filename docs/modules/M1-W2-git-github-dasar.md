@@ -114,9 +114,163 @@ bukan semuanya sekaligus? Kasih contoh situasi nyata kapan ini berguna.
 
 ---
 
-## 2. Konsep Repository, Remote, Origin
+## 2. Eksplorasi Command Git Harian
 
-### `M1.W2.T2.1` — Pahami konsepnya
+Bagian ini fokus ke command yang **sering banget dipakai sehari-hari** tapi belum sempat dilatih —
+belum masuk branching/merge (itu porsinya Minggu 3), ini lebih ke "cara manipulasi perubahan
+sebelum/sesudah commit" yang bakal langsung kepakai begitu kamu mulai kerja beneran.
+
+### `M1.W2.T2.1` — `git diff`
+
+| Perintah | Fungsi |
+|---|---|
+| `git diff` | Lihat detail baris yang berubah, untuk file yang **belum** di-`add` |
+| `git diff --staged` | Lihat detail baris yang berubah, untuk file yang **sudah** di-`add` tapi belum commit |
+
+**Latihan:** edit sebuah file di `latihan-git`, jalankan `git diff` (perhatikan baris yang ditandai
+`-` untuk versi lama dan `+` untuk versi baru). Lalu `git add` file itu, jalankan `git diff` lagi
+(harusnya kosong — karena sudah staged), lalu `git diff --staged` (nah ini yang nampilin
+perubahannya).
+
+**Checklist selesai:** paham kenapa `git diff` "kosong" setelah `git add`, dan kenapa harus pakai
+`--staged` untuk lihatnya.
+
+### `M1.W2.T2.2` — `git restore` / `git checkout -- <file>`
+
+Kalau kamu edit file dan ternyata **menyesal**, mau balik ke versi terakhir yang sudah di-commit
+(belum sempat `git add`):
+```bash
+git restore <nama-file>
+# atau versi lama: git checkout -- <nama-file>
+```
+
+**Latihan:** edit sebuah file sampai berantakan, lalu jalankan `git restore` ke file itu — pastikan
+isinya balik seperti commit terakhir (perubahanmu hilang, ini memang tujuannya).
+
+**Checklist selesai:** paham `git restore` cuma bisa mengembalikan perubahan yang **belum**
+di-`add` — kalau sudah ter-`add`, perlu `git restore --staged <file>` dulu baru `git restore` lagi.
+
+### `M1.W2.T2.3` — `git reset` (unstage vs batalkan commit)
+
+| Perintah | Fungsi |
+|---|---|
+| `git reset HEAD <file>` (atau `git restore --staged <file>`) | Batalkan `add` (unstage) — perubahan file tetap ada, cuma tidak lagi "siap commit" |
+| `git reset --soft HEAD~1` | Batalkan commit **terakhir**, tapi semua perubahannya tetap ada (jadi staged lagi) |
+
+**Latihan:** `add` sebuah file, lalu `git reset HEAD <file>` — cek `git status`, filenya balik jadi
+"belum staged" tapi perubahannya tidak hilang. Lalu coba `git commit`, lalu `git reset --soft
+HEAD~1` — cek `git log` (commit terakhir hilang dari histori) dan `git status` (tapi perubahannya
+masih ada, siap di-commit ulang).
+
+**Penting:** jangan pernah coba `git reset --hard` di folder ini dulu tanpa ngerti — itu **beneran
+menghapus** perubahan yang belum di-commit, tidak bisa dikembalikan. Cukup tahu dulu bahwa opsi itu
+ada dan berbahaya; kalau nanti butuh, tanya mentor dulu.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W2.T2.3
+- **Status:** done
+- **Capaian:** Sudah coba git reset HEAD (unstage) dan git reset --soft (batalkan commit terakhir), paham bedanya.
+- **Kesulitan:** -
+```
+
+### `M1.W2.T2.4` — `git commit --amend`
+
+Kalau kamu baru saja `commit` tapi sadar ada typo di pesannya, atau lupa nambah 1 file kecil, dan
+**belum sempat `push`**, kamu bisa revisi commit terakhir itu (bukan bikin commit baru):
+```bash
+git commit --amend -m "pesan commit yang sudah diperbaiki"
+```
+
+**Latihan:** bikin 1 commit dengan pesan sengaja typo, lalu perbaiki pakai `--amend`. Cek `git log`
+— harusnya cuma ada 1 commit di titik itu (bukan 2), dengan pesan yang sudah benar.
+
+**Catatan penting:** `--amend` **hanya aman** dipakai untuk commit yang **belum di-push**. Kalau
+commit itu sudah ter-push dan orang lain sudah "narik" (pull) versi lama, meng-amend lalu push lagi
+bakal butuh `--force` — dan itu sama bahayanya seperti kasus force-push yang sudah dibahas di `T4.4`.
+
+**Checklist selesai:** paham `--amend` itu untuk "membenarkan commit terakhir sebelum dikirim",
+bukan untuk commit yang sudah di-push.
+
+### `M1.W2.T2.5` — `git stash`
+
+Kalau kamu lagi di tengah-tengah ngerjain sesuatu (belum siap commit), tapi tiba-tiba perlu pindah
+konteks (misal mau `git pull` dulu, atau pindah branch), `git stash` "menyimpan sementara"
+perubahanmu tanpa perlu commit:
+
+| Perintah | Fungsi |
+|---|---|
+| `git stash` | Simpan semua perubahan yang belum commit, balikin folder ke kondisi bersih |
+| `git stash list` | Lihat daftar stash yang tersimpan |
+| `git stash pop` | Ambil kembali perubahan yang terakhir di-stash (dan hapus dari daftar stash) |
+
+**Latihan:** edit sebuah file (jangan commit), jalankan `git stash` — cek `git status` (bersih,
+seolah perubahan hilang). Jalankan `git stash list` (perubahanmu masih "disimpan" di situ). Baru
+`git stash pop` — perubahanmu balik lagi.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W2.T2.5
+- **Status:** done
+- **Capaian:** Sudah coba stash - stash list - stash pop, paham gunanya buat nyimpen kerjaan sementara.
+- **Kesulitan:** -
+```
+
+### `M1.W2.T2.6` — `git log` lanjutan
+
+| Perintah | Fungsi |
+|---|---|
+| `git log --oneline` | Histori ringkas, 1 baris per commit |
+| `git log --graph --oneline` | Sama, plus visualisasi cabang (berguna banget mulai Minggu 3) |
+| `git log --stat` | Histori + ringkasan file apa saja yang berubah per commit |
+| `git show <hash-commit>` | Lihat detail lengkap 1 commit tertentu (pesan + perubahan baris) |
+
+**Latihan:** coba keempatnya di folder `latihan-git`, bandingkan bedanya. Ambil salah satu hash
+commit dari `git log --oneline`, coba `git show <hash>` itu.
+
+**Checklist selesai:** bisa baca histori commit dengan cepat pakai `--oneline`, dan bisa cek detail
+1 commit spesifik pakai `git show`.
+
+### `M1.W2.T2.7` — [Wajib Refleksi] `git revert` vs `git reset --hard` + force push
+
+Ini yang paling penting dari seluruh bagian eksplorasi ini, karena **langsung berkaitan** dengan
+insiden force-push yang terjadi minggu ini di repo tracker PKL kamu.
+
+- **`git revert <hash-commit>`**: bikin commit **baru** yang isinya "membalikkan" efek dari commit
+  tertentu — histori lama **tetap ada** (tidak dihapus), cuma ditambah commit baru yang
+  menetralkannya. Ini **aman** dipakai untuk commit yang **sudah di-push** dan sudah dilihat/di-pull
+  orang lain.
+- **`git reset --hard` + `git push --force`**: **menghapus** commit dari histori dan memaksa remote
+  ikut menghapusnya juga. Kalau ada orang lain yang sudah `pull` versi lama, mereka bisa kehilangan
+  pekerjaan tanpa sadar — persis yang terjadi minggu ini.
+
+**Latihan:** di folder `latihan-git`, bikin 1 commit baru berisi perubahan yang sengaja "salah"
+(misal isi file jadi ngaco), lalu jalankan:
+```bash
+git revert HEAD
+```
+Ikuti instruksi (biasanya tinggal simpan pesan default). Cek `git log` — commit yang "salah" tadi
+**masih ada** di histori, tapi ada commit baru setelahnya yang membalikkan isinya ke kondisi benar.
+
+**Isi log dengan menjawab (kata sendiri):**
+1. Kalau kamu commit sesuatu yang salah dan **sudah** di-push, kenapa `git revert` lebih aman
+   dibanding `git reset --hard` + `git push --force`?
+2. Kapan (kalau ada) situasi di mana revert **tidak cukup** dan orang benar-benar perlu
+   pertimbangkan opsi lain? (Boleh tanya AI untuk bagian ini, tapi tulis ulang pakai kata sendiri)
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W2.T2.7
+- **Status:** done
+- **Capaian:** [jawaban kamu soal revert vs reset --hard + force push]
+- **Kesulitan:** -
+```
+
+---
+
+## 3. Konsep Repository, Remote, Origin
+
+### `M1.W2.T3.1` — Pahami konsepnya
 
 - **Repository (repo)**: folder project yang di-track oleh Git — bisa berupa **repo lokal** (di
   komputer kamu, hasil `git init`) atau **repo remote** (disimpan di server, misal di GitHub).
@@ -129,7 +283,7 @@ bukan semuanya sekaligus? Kasih contoh situasi nyata kapan ini berguna.
 
 **Checklist selesai:** paham bedanya "commit" (nyimpen histori lokal) vs "push" (kirim ke remote).
 
-### `M1.W2.T2.2` — [Wajib Refleksi] Kapan perubahan "beneran sampai" ke GitHub?
+### `M1.W2.T3.2` — [Wajib Refleksi] Kapan perubahan "beneran sampai" ke GitHub?
 
 **Coba jawab dulu sendiri sebelum tanya AI:** kalau kamu `git commit` di laptop tapi belum
 `git push`, apakah perubahan itu sudah ada/kelihatan di GitHub? Kalau laptop kamu tiba-tiba rusak
@@ -141,7 +295,7 @@ kenapa itu bisa terjadi.
 
 **Contoh entry log:**
 ```markdown
-### Task: M1.W2.T2.2
+### Task: M1.W2.T3.2
 - **Status:** done
 - **Capaian:** [jawaban kamu soal commit vs push]
 - **Kesulitan:** -
@@ -149,9 +303,9 @@ kenapa itu bisa terjadi.
 
 ---
 
-## 3. Push Repo Latihan Pertama
+## 4. Push Repo Latihan Pertama
 
-### `M1.W2.T3.1` — Buat repo GitHub + hubungkan remote
+### `M1.W2.T4.1` — Buat repo GitHub + hubungkan remote
 
 1. Di GitHub, klik **New repository** → beri nama (misal `latihan-git-pertama`) → **jangan**
    centang "Add a README" dulu (biar bisa praktik push dari repo lokal yang sudah ada isinya).
@@ -164,7 +318,7 @@ kenapa itu bisa terjadi.
 
 **Checklist selesai:** `git remote -v` menampilkan `origin` mengarah ke repo GitHub kamu.
 
-### `M1.W2.T3.2` — Push pertama
+### `M1.W2.T4.2` — Push pertama
 
 ```bash
 git branch -M main
@@ -176,7 +330,7 @@ muncul di sana.
 
 **Checklist selesai:** repo di GitHub menampilkan file & histori commit yang sama seperti lokal.
 
-### `M1.W2.T3.3` — Edit, commit, push lagi
+### `M1.W2.T4.3` — Edit, commit, push lagi
 
 Coba edit satu file lagi secara lokal, commit, lalu `git push` lagi (tanpa `-u`, karena `-u` cuma
 perlu sekali di awal untuk set default remote/branch). Ulangi sekali lagi supaya minimal ada 2
@@ -184,13 +338,13 @@ siklus edit → commit → push yang lengkap.
 
 **Contoh entry log:**
 ```markdown
-### Task: M1.W2.T3.3
+### Task: M1.W2.T4.3
 - **Status:** done
 - **Capaian:** Repo latihan sudah ter-push, minimal 2x siklus edit-commit-push berhasil.
 - **Kesulitan:** -
 ```
 
-### `M1.W2.T3.4` — [Wajib Refleksi — PENTING] Simulasi push ditolak, dan cara benar menyelesaikannya
+### `M1.W2.T4.4` — [Wajib Refleksi — PENTING] Simulasi push ditolak, dan cara benar menyelesaikannya
 
 **Konteks kenapa task ini ada:** minggu lalu, `main` di repo tracker PKL ini sempat **ke-force-push**
 beberapa kali — artinya sebagian history commit sempat tertimpa/hilang. Ini biasanya terjadi karena
@@ -236,7 +390,7 @@ error "rejected".
 
 **Contoh entry log:**
 ```markdown
-### Task: M1.W2.T3.4
+### Task: M1.W2.T4.4
 - **Status:** done
 - **Capaian:** [ceritakan pengalaman simulasi reject-push kamu + jawaban 3 pertanyaan di atas]
 - **Kesulitan:** -
@@ -244,7 +398,7 @@ error "rejected".
 
 ---
 
-## 4. Proyek Pengembangan Skill Mandiri Minggu 2 (`M1.W2.T4`)
+## 5. Proyek Pengembangan Skill Mandiri Minggu 2 (`M1.W2.T5`)
 
 **Estimasi waktu:** minimal setengah hari kerja (±4 jam), termasuk kalau dibantu AI.
 
@@ -271,9 +425,13 @@ pengerjaannya — bukan 1 commit besar berisi semua kode sekaligus.
    (Urutan bebas sesuai proses kamu — intinya jangan 1 commit isinya "semua fitur sekaligus".)
 4. **Buat repo baru di GitHub** khusus untuk project ini (nama bebas, misal
    `pkl-cli-monitoring-tugas`), hubungkan (`git remote add origin ...`), lalu push semua commit.
-5. **Alami skenario push ditolak minimal sekali** dengan sengaja (sama seperti `T3.4`, edit dari
+5. **Alami skenario push ditolak minimal sekali** dengan sengaja (sama seperti `T4.4`, edit dari
    GitHub web dulu) dan selesaikan dengan `git pull` — **bukan** `--force`.
-6. Cantumkan **link repo GitHub** ini di README project & di entry log.
+6. **Pakai minimal 1 command dari bagian 2 (eksplorasi)** di proses pengerjaannya — misal
+   `git stash` waktu pindah konteks, `git commit --amend` buat benerin pesan commit sebelum push,
+   atau `git revert` kalau sempat commit sesuatu yang salah. Ceritakan yang mana yang kepakai di
+   refleksi log.
+7. Cantumkan **link repo GitHub** ini di README project & di entry log.
 
 ### Submit
 
@@ -282,7 +440,7 @@ pastikan link repo-nya bisa diakses publik dan dicantumkan di log.
 
 **Contoh entry log:**
 ```markdown
-### Task: M1.W2.T4
+### Task: M1.W2.T5
 - **Status:** done
 - **Capaian:** Project CLI Minggu 1 sekarang jadi repo tersendiri: [link repo GitHub]. Ada 6 commit terpisah (setup, fitur A, fitur B, README, bug fix, dst). Sempat alami push ditolak, selesai pakai git pull.
 - **Kesulitan:** [jujur aja — misal bagian mana yang masih bikin ragu soal Git]
@@ -290,7 +448,7 @@ pastikan link repo-nya bisa diakses publik dan dicantumkan di log.
 
 ---
 
-## 5. Evaluasi Minggu 2 (`M1.W2.T5`)
+## 6. Evaluasi Minggu 2 (`M1.W2.T6`)
 
 Siapkan demo singkat (~15 menit) untuk mentor:
 
@@ -307,7 +465,7 @@ Siapkan demo singkat (~15 menit) untuk mentor:
 
 Setelah demo, isi entry log terakhir untuk minggu ini:
 ```markdown
-### Task: M1.W2.T5
+### Task: M1.W2.T6
 - **Status:** done
 - **Capaian:** Demo ke mentor selesai, Git dasar dikuasai, repo latihan & repo T4 sudah ter-push, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** (isi refleksi jujur)

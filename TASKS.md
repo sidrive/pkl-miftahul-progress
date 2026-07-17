@@ -46,16 +46,24 @@
   - [ ] <!-- id: M1.W2.T1.3 --> Praktik `.gitignore`: pastikan file/folder tertentu (misal `node_modules/`) tidak ikut ter-track
   - [ ] <!-- id: M1.W2.T1.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu "staging area", dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan)
   - [ ] <!-- id: M1.W2.T1.5 --> [Wajib Refleksi] Kuis mandiri TANPA buka modul/AI/catatan: beda `git status`, `git add`, `git commit`, `git log` — baru cek jawabannya setelahnya
+- Eksplorasi command Git harian yang sering dipakai (dipecah jadi 7 sub-task — belum termasuk branching/merge, itu di Minggu 3):
+  - [ ] <!-- id: M1.W2.T2.1 --> `git diff` — lihat detail perubahan yang belum di-stage, dan `git diff --staged` untuk yang sudah di-stage tapi belum commit
+  - [ ] <!-- id: M1.W2.T2.2 --> `git restore <file>` (atau `git checkout -- <file>`) — batalkan perubahan file yang belum di-stage, balik ke versi commit terakhir
+  - [ ] <!-- id: M1.W2.T2.3 --> `git reset HEAD <file>` (unstage) vs `git reset --soft HEAD~1` (batalkan commit terakhir, perubahan tetap ada) — praktik beda-bedanya
+  - [ ] <!-- id: M1.W2.T2.4 --> `git commit --amend` — revisi pesan/isi commit TERAKHIR (catatan: cuma aman dipakai SEBELUM push)
+  - [ ] <!-- id: M1.W2.T2.5 --> `git stash` — simpan sementara perubahan yang belum siap commit (`stash`, `stash list`, `stash pop`)
+  - [ ] <!-- id: M1.W2.T2.6 --> `git log` lanjutan: `--oneline`, `--graph`, `--stat`, dan `git show <hash>` untuk lihat detail 1 commit
+  - [ ] <!-- id: M1.W2.T2.7 --> **[Wajib Refleksi]** `git revert` vs `git reset --hard` + force push — cara AMAN membatalkan commit yang SUDAH di-push, dikaitkan langsung ke insiden force-push minggu ini
 - Konsep repository, remote, origin (dipecah jadi 2 sub-task):
-  - [ ] <!-- id: M1.W2.T2.1 --> Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
-  - [ ] <!-- id: M1.W2.T2.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal "beneran sampai" ke GitHub (bukan pas commit, tapi pas apa?)
+  - [ ] <!-- id: M1.W2.T3.1 --> Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
+  - [ ] <!-- id: M1.W2.T3.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal "beneran sampai" ke GitHub (bukan pas commit, tapi pas apa?)
 - Push repo latihan pertama ke GitHub (dipecah jadi 4 sub-task):
-  - [ ] <!-- id: M1.W2.T3.1 --> Buat repo baru di GitHub + hubungkan repo lokal (`git remote add origin ...`)
-  - [ ] <!-- id: M1.W2.T3.2 --> Push pertama (`git branch -M main`, `git push -u origin main`) + verifikasi file & commit muncul di GitHub
-  - [ ] <!-- id: M1.W2.T3.3 --> Edit file lokal, commit, push lagi (siklus edit → commit → push lengkap, minimal 2x)
-  - [ ] <!-- id: M1.W2.T3.4 --> **[Wajib Refleksi — PENTING]** Simulasi "push ditolak" & cara menyelesaikannya dengan BENAR: edit file repo latihan langsung dari GitHub web (supaya remote punya perubahan yang lokal tidak punya), lalu coba `git push` dari lokal (harus muncul error "rejected"), selesaikan dengan `git pull` (BUKAN `git push --force`), baru push lagi sampai berhasil. Lihat detail lengkap & kaitan ke kejadian nyata di modul.
-- [ ] <!-- id: M1.W2.T4 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Naikkan project CLI dari Minggu 1 (`T5`) jadi repo GitHub tersendiri dengan histori commit yang rapi (bukan cuma disalin ke folder `submissions/`) — lihat requirement lengkap di modul.
-- [ ] <!-- id: M1.W2.T5 --> Evaluasi Minggu 2: demo ke mentor (jalankan git dasar langsung, tunjukkan repo latihan yang sudah ter-push, DAN tunjukkan repo hasil `T4` + histori commit-nya) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak) + isi refleksi capaian/kesulitan di modul
+  - [ ] <!-- id: M1.W2.T4.1 --> Buat repo baru di GitHub + hubungkan repo lokal (`git remote add origin ...`)
+  - [ ] <!-- id: M1.W2.T4.2 --> Push pertama (`git branch -M main`, `git push -u origin main`) + verifikasi file & commit muncul di GitHub
+  - [ ] <!-- id: M1.W2.T4.3 --> Edit file lokal, commit, push lagi (siklus edit → commit → push lengkap, minimal 2x)
+  - [ ] <!-- id: M1.W2.T4.4 --> **[Wajib Refleksi — PENTING]** Simulasi "push ditolak" & cara menyelesaikannya dengan BENAR: edit file repo latihan langsung dari GitHub web (supaya remote punya perubahan yang lokal tidak punya), lalu coba `git push` dari lokal (harus muncul error "rejected"), selesaikan dengan `git pull` (BUKAN `git push --force`), baru push lagi sampai berhasil. Lihat detail lengkap & kaitan ke kejadian nyata di modul.
+- [ ] <!-- id: M1.W2.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Naikkan project CLI dari Minggu 1 (`T5`) jadi repo GitHub tersendiri dengan histori commit yang rapi (bukan cuma disalin ke folder `submissions/`), dan pakai minimal 1 dari command eksplorasi (`stash`/`amend`/`revert`) di prosesnya — lihat requirement lengkap di modul.
+- [ ] <!-- id: M1.W2.T6 --> Evaluasi Minggu 2: demo ke mentor (jalankan git dasar + command eksplorasi langsung, tunjukkan repo latihan yang sudah ter-push, DAN tunjukkan repo hasil `T5` + histori commit-nya) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak & kapan pakai revert) + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 3
 
