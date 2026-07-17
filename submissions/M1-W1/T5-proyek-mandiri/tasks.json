@@ -1,0 +1,32 @@
+[
+  {
+    "id": "M1.W1.T1",
+    "name": "Buat Akun GitHub & 2FA",
+    "status": "done"
+  },
+  {
+    "id": "M1.W1.T2.4",
+    "name": "Refleksi ESLint vs Prettier",
+    "status": "done"
+  },
+  {
+    "id": "M1.W1.T4.4",
+    "name": "Refleksi Larangan Commit node_modules",
+    "status": "done"
+  },
+  {
+    "id": "M1.W1.T5",
+    "name": "Project CLI Tool Mandiri",
+    "status": "done"
+  },
+  {
+    "id": "Hiu tes tes",
+    "name": "Tas Tes Tos",
+    "status": "done"
+  },
+  {
+    "id": "1234",
+    "name": "tes1",
+    "status": "done"
+  }
+]

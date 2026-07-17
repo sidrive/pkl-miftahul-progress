@@ -1,1 +1,1 @@
-console.log("Hello, World! dari Node.js");
+console.log("Hello, World! dari Node.js. gimana kabar ngabs? sokin?");

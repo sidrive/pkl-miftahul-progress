@@ -188,3 +188,16 @@
 - **Capaian:** saya menyelesaikan dan mengembangkan aplikasi CLI "Monitoring Tugas PKL" menjadi lebih interaktif. kode berhasil dipecah menjadi 2 file (index.js dan data.js) dengan folder submissions yang dibuat murni lewat terminal VS Code. di sini saya mengimplementasikan 2 package npm: "chalk" untuk pewarnaan teks terminal dan "cli-table3" untuk pencetakan tabel otomatis. selain itu, saya berinisiatif menambahkan fitur navigasi perintah di bagian paling atas tabel, fitur tambah data langsung dari argumen terminal (`node index.js tambah "Nama Tugas"`), serta fitur update status tugas (`node index.js status [ID] done/progress`). file README.md juga sudah diperbarui lengkap dengan instruksi menu baru tersebut.
 - **Kesulitan:** awal awal saya tidak mengerti ya, baca modul kaya berbelit belit gitu, nah baru saya minta bantu AI untuk pengerjaan nya dan masih belum paham, baru setelah itu saya istirahat bentar dengerin music, buka youtube cari hiburan baru siap itu saya coba pahamin dan apa? yup belum paham juga wkwkwk, nah habis itu saya coba la kerjain di folder lain gitu, saya minta bantu AI juga ya kan, AI juga yang ngasih kode nya, saya kerjan lewat terminal di VS Code nya dan mengisi kode nya di VS Code nya juga, nah habis itu saya ikutin step step dari ai, mulai dari bikin folder baru siap itu pakai folder itu di terminal, habis itu buat beberapa file yang di perluka (index.js, data.js, package.json), nah setelah itu saya copy kodingan dari AI baru paste ke masing masing file sesuai kodingan. habis itu kan kalo install "npm" bakal ke blok, baru saya pakai "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass" baru intall npm chalk nya, baru isi file nya, baru di terminal ketik "node index.js" udah deh bos. ya jujur aja walau di bantu AI cuma sekarang udah paham lah maksudnya apa dan gimana gimana nya.
 <!-- ENTRY END -->
+
+---
+
+### 2026-07-17
+
+<!-- ENTRY START -->
+
+### Task: M1.W1.T6
+
+- **Status:** done
+- **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal, CLI tool berhasil didemo, pertanyaan variasi mentor terjawab.
+- **Kesulitan:** sebelum meeting / evaluasi dengan mentor saya sudah persiapan, memahami apa yang saya kerjakan, mencoba beberapa perintah 'node.js", paham navigasi command line di terminal, tetapi waktu meeting semuanya agak lupa karna grogi, sedikit paham dengan kode yang di kerjakan tapi beneran lupa waktu meeting, mungkin masih tegang waktu meeting jadi semua nya blank, bagian yang berhubungan dengan java script saya kurang paham karna belum coba java script dan belum mempelajari, mungkin segini aja dulu.
+<!-- ENTRY END -->
