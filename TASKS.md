@@ -38,11 +38,24 @@
 ### Minggu 2
 
 > 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W2-git-github-dasar.md`](../docs/modules/M1-W2-git-github-dasar.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti Minggu 1, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
-- [ ] <!-- id: M1.W2.T1 --> Git dasar: init, add, commit, status, log, .gitignore
-- [ ] <!-- id: M1.W2.T2 --> Konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
-- [ ] <!-- id: M1.W2.T3 --> Push repo latihan pertama ke GitHub
-- [ ] <!-- id: M1.W2.T4 --> Evaluasi Minggu 2: demo ke mentor (jalankan git dasar langsung, tunjukkan repo latihan yang sudah ter-push) + isi refleksi capaian/kesulitan di modul
+- Git dasar: init, add, commit, status, log (dipecah jadi 5 sub-task):
+  - [ ] <!-- id: M1.W2.T1.1 --> Verifikasi Git terpasang (`git --version`) & konfigurasi identitas (`git config --global user.name`/`user.email`) — supaya commit tercatat sebagai kamu sendiri
+  - [ ] <!-- id: M1.W2.T1.2 --> Praktik siklus dasar: `git init`, `git status`, `git add`, `git commit` (bikin minimal 3 commit terpisah, bukan 1 commit besar)
+  - [ ] <!-- id: M1.W2.T1.3 --> Praktik `.gitignore`: pastikan file/folder tertentu (misal `node_modules/`) tidak ikut ter-track
+  - [ ] <!-- id: M1.W2.T1.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu "staging area", dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan)
+  - [ ] <!-- id: M1.W2.T1.5 --> [Wajib Refleksi] Kuis mandiri TANPA buka modul/AI/catatan: beda `git status`, `git add`, `git commit`, `git log` — baru cek jawabannya setelahnya
+- Konsep repository, remote, origin (dipecah jadi 2 sub-task):
+  - [ ] <!-- id: M1.W2.T2.1 --> Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
+  - [ ] <!-- id: M1.W2.T2.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal "beneran sampai" ke GitHub (bukan pas commit, tapi pas apa?)
+- Push repo latihan pertama ke GitHub (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M1.W2.T3.1 --> Buat repo baru di GitHub + hubungkan repo lokal (`git remote add origin ...`)
+  - [ ] <!-- id: M1.W2.T3.2 --> Push pertama (`git branch -M main`, `git push -u origin main`) + verifikasi file & commit muncul di GitHub
+  - [ ] <!-- id: M1.W2.T3.3 --> Edit file lokal, commit, push lagi (siklus edit → commit → push lengkap, minimal 2x)
+  - [ ] <!-- id: M1.W2.T3.4 --> **[Wajib Refleksi — PENTING]** Simulasi "push ditolak" & cara menyelesaikannya dengan BENAR: edit file repo latihan langsung dari GitHub web (supaya remote punya perubahan yang lokal tidak punya), lalu coba `git push` dari lokal (harus muncul error "rejected"), selesaikan dengan `git pull` (BUKAN `git push --force`), baru push lagi sampai berhasil. Lihat detail lengkap & kaitan ke kejadian nyata di modul.
+- [ ] <!-- id: M1.W2.T4 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Naikkan project CLI dari Minggu 1 (`T5`) jadi repo GitHub tersendiri dengan histori commit yang rapi (bukan cuma disalin ke folder `submissions/`) — lihat requirement lengkap di modul.
+- [ ] <!-- id: M1.W2.T5 --> Evaluasi Minggu 2: demo ke mentor (jalankan git dasar langsung, tunjukkan repo latihan yang sudah ter-push, DAN tunjukkan repo hasil `T4` + histori commit-nya) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak) + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 3
 

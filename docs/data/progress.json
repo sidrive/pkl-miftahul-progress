@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-16T07:38:54.298Z",
-  "totalTasks": 76,
+  "generatedAt": "2026-07-17T00:58:33.423Z",
+  "totalTasks": 85,
   "doneTasks": 17,
-  "overallPercent": 22,
+  "overallPercent": 20,
   "perMonth": [
     {
       "number": 1,
       "title": "Fondasi Tools (13 Jul – 12 Ags 2026)",
-      "total": 28,
+      "total": 37,
       "done": 17,
-      "percent": 61
+      "percent": 46
     },
     {
       "number": 2,
