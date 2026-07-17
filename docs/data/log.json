@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-07-16",
+    "task": "M1.W1.T6",
+    "status": "done",
+    "capaian": "Demo ke mentor sudah selesai, semua tools jalan normal, CLI tool berhasil didemo, pertanyaan variasi mentor terjawab.",
+    "kesulitan": "sebelum meeting / evaluasi dengan mentor saya sudah persiapan, memahami apa yang saya kerjakan, mencoba beberapa perintah 'node.js\", paham navigasi command line di terminal, tetapi waktu meeting semuanya agak lupa karna grogi, sedikit paham dengan kode yang di kerjakan tapi beneran lupa waktu meeting, mungkin masih tegang waktu meeting jadi semua nya blank, bagian yang berhubungan dengan java script saya kurang paham karna belum coba java script dan belum mempelajari, mungkin segini aja dulu."
+  },
+  {
+    "date": "2026-07-16",
     "task": "M1.W1.T5",
     "status": "done",
     "capaian": "saya menyelesaikan dan mengembangkan aplikasi CLI \"Monitoring Tugas PKL\" menjadi lebih interaktif. kode berhasil dipecah menjadi 2 file (index.js dan data.js) dengan folder submissions yang dibuat murni lewat terminal VS Code. di sini saya mengimplementasikan 2 package npm: \"chalk\" untuk pewarnaan teks terminal dan \"cli-table3\" untuk pencetakan tabel otomatis. selain itu, saya berinisiatif menambahkan fitur navigasi perintah di bagian paling atas tabel, fitur tambah data langsung dari argumen terminal (`node index.js tambah \"Nama Tugas\"`), serta fitur update status tugas (`node index.js status [ID] done/progress`). file README.md juga sudah diperbarui lengkap dengan instruksi menu baru tersebut.",

@@ -33,7 +33,7 @@
   - [x] <!-- id: M1.W1.T4.3 --> Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install
   - [x] <!-- id: M1.W1.T4.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu `package.json`, dan kenapa `node_modules/` tidak boleh ikut di-commit ke Git (kaitkan ke pengalaman file `node_modules` yang sempat kebawa commit minggu ini)
 - [x] <!-- id: M1.W1.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 CLI tool kecil yang fungsional (bukan hello-world) — menggabungkan semua skill minggu ini (terminal, VS Code+lint, Node/npm+package eksternal baru). Lihat detail requirement & acceptance criteria di modul.
-- [ ] <!-- id: M1.W1.T6 --> Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`, DAN demo langsung proyek pengembangan mandiri `T5`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian "Untuk mentor") + isi refleksi capaian/kesulitan di modul
+- [x] <!-- id: M1.W1.T6 --> Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`, DAN demo langsung proyek pengembangan mandiri `T5`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian "Untuk mentor") + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 
