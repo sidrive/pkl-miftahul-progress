@@ -201,3 +201,107 @@
 - **Capaian:** Demo ke mentor sudah selesai, semua tools jalan normal, CLI tool berhasil didemo, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** sebelum meeting / evaluasi dengan mentor saya sudah persiapan, memahami apa yang saya kerjakan, mencoba beberapa perintah 'node.js", paham navigasi command line di terminal, tetapi waktu meeting semuanya agak lupa karna grogi, sedikit paham dengan kode yang di kerjakan tapi beneran lupa waktu meeting, mungkin masih tegang waktu meeting jadi semua nya blank, bagian yang berhubungan dengan java script saya kurang paham karna belum coba java script dan belum mempelajari, mungkin segini aja dulu.
 <!-- ENTRY END -->
+
+---
+
+### 2026-07-20 // minggu 2
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T1.1
+
+- **Status:** done
+- **Capaian:** Berhasil memverifikasi pemasangan Git lewat terminal dan cek versi (`git --version`). Sudah konfigurasi identitas global untuk `user.name` dan `user.email`. Sekarang setiap commit sudah resmi tercatat atas nama saya sendiri serta sukses melakukan konfigurasi identitas global untuk user.name menjadi "M-AL-GAZI-H" dan user.email agar histori commit tercatat akurat.
+- **Kesulitan:** Tidak ada.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T1.2
+
+- **Status:** done
+- **Capaian:** Berhasil membuat folder latihan `bulan1-minggu2`, menginisialisasi repository Git baru (`git init`), dan mempraktikkan / mencoba siklus dasar Git. Sukses membuat 3 commit terpisah dengan riwayat pesan yang jelas dan memverifikasinya melalui `git log`.
+- **Kesulitan:** Sempat ada kendala perizinan Windows (`Access Denied`) awalnya, saat mencoba me-rename folder via terminal karena folder sedang dikunci oleh VS Code, namun berhasil diselesaikan dengan menutup VS Code terlebih dahulu dan mengubah namanya secara manual lewat File Explorer.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T1.3
+
+- **Status:** done
+- **Capaian:** Berhasil mempraktikkan konfigurasi `.gitignore` untuk menyembunyikan file `test.log` dan folder `data-rahasia/` agar tidak ikut ter-track oleh Git. File aturan `.gitignore` juga sudah berhasil di-commit dengan aman.
+- **Kesulitan:** Sempat mengalami masalah di mana `.gitignore` tidak bekerja (file rahasia tetap muncul warna merah saat `git status`). Setelah dianalisis dan di perbaiki, ternyata perintah `echo` di Windows PowerShell otomatis membuat file dengan format encoding `UTF-16 LE` sehingga tidak terbaca oleh Git. Masalah selesai setelah format encoding diubah manual lewat VS Code menjadi `UTF-8`.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T1.4
+
+- **Status:** done
+- **Capaian:** Stagging area itu layak nya keranjang belanja atau meja tugas gitu, kita memilih file yang mau kita simpan atau tidak, staging area itu berguna supaya kita bisa memilih file mana yang udah siap disimpan. misalnya saya mengubah a.txt dan b.txt, tapi b.txt masih belum selesai. jadi saya cukup "git add a.txt" lalu git commit, sehingga yang tersimpan hanya a.txt. Menurut saya ini berguna supaya commit tidak berantakan dan file yang belum selesai tidak ikut masuk. dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan), menurut saya, Git memakai add sebelum commit supaya kita bisa memilih perubahan mana yang sudah siap disimpan. Jadi tidak semua perubahan langsung ikut ke commit. Kalau ada file yang masih belum selesai atau masih ada kesalahan, file itu bisa dibiarkan dulu dan baru di-commit nanti kalau sudah selesai.
+- **Kesulitan:** --
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T1.5
+
+- **Status:** done
+- **Capaian:**
+
+1. Apa fungsi `git status`?
+   = fungsi git status itu seperti melihat daftar tugas atau mengecek isi keranjang belanja sebelum bayar.
+
+2. Apa beda `git add <file>` dengan `git add .`?
+   = kalo "git add <file>" itu cuma menambahkan file yang kita pilih aja (1 file aja / yang dipilih), sedangkan "git add ." itu menambahkan semua jenis file yang ada di folder.
+
+3. Setelah `git commit`, apakah perubahan itu otomatis sudah ada di GitHub? Kenapa?
+   = belum soalnya kalo "git commit" itu baru ke save di file local (pada pc kita doank), kalo mau ada di GitHub harus di git push dulu biar dia ke update/upload ke GitHub nya
+
+4. Apa fungsi `git log`?
+   = fungsi nya adalah melihat semua commit yang sudah kita buat, kita bisa mengetahui kapan commit dibuat, siapa yang membuatnya, dan pesan commit yang ditulis.
+
+5. Kalau kamu lupa isi `.gitignore` dan sebuah file besar/sensitif terlanjur ter-commit, apa akibatnya (ingat pengalaman `node_modules` Minggu 1)?
+   = kurang tau, tapi menurut pendapat saya akibat nya mungkin fatal kali ya, bisa bikin file jadi berat.
+   (koreksi = Akibatnya fatal banget, repo lu bakal bengkak dan data rahasia lu bisa bocor.
+   Bikin Berat & Lemot: File sampah yang gede (kayak folder node_modules waktu di Minggu 1) bakal ikut kefoto masuk ke Git. Efeknya, pas lu mau upload (git push) atau download (git pull) kodingan ke GitHub, prosesnya bakal lama banget dan ngabisin kuota internet karena filenya kegedean.
+   Bahaya Diintip Orang: Kalau file rahasia (kayak password database atau token API) terlanjur masuk commit dan lu push ke GitHub publik, data itu bisa dilihat dan disalahgunakan sama orang lain di internet.)
+
+- **Kesulitan:** --
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.1
+
+- **Status:** done
+- **Capaian:** jadi git diff itu perintah untuk melihat perubahan pada file yang belum di-git add. misalnya saya punya file catatan.txt, lalu saya menambahkan tulisan di dalamnya. setelah itu saya menjalankan git diff, maka Git akan menampilkan perubahan apa saja yang sudah saya buat tetapi belum masuk ke staging area (git add). Nah, kalau file tersebut sudah saya git add, maka perubahan itu tidak akan muncul lagi saat menjalankan git diff. Untuk melihat perubahan yang sudah di-git add tetapi belum di-commit, kita harus menggunakan perintah git diff --staged.
+- **Kesulitan:** harus rubah encoding ke UTF-8
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.2
+
+- **Status:** done
+- **Capaian:** jadi perintah git restore (nama file) itu perintah untuk membatalkan gitu, jadi missal kita ada sebua file, misalnya catatan.txt, saya ga sengaja menghapus beberapa paragraph di dalam file nya, maka saya pakai perintah git restore biar dia Kembali lagi
+- **Kesulitan:** Gak ada, lancar jaya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.3
+
+- **Status:** done
+- **Capaian:** Jadi git reset HEAD itu dipakai kalau kita sudah git add sebuah file, tapi ternyata tidak jadi memasukkan file itu ke staging area. Jadi perintah ini membatalkan git add, bukan menghapus isi file. Sedangkan git reset --soft HEAD~1 dipakai kalau kita sudah git commit (sudah membuat histori/riwayat commit), tapi ternyata commit itu tidak jadi atau masih ada yang ingin diperbaiki. Jadi commit terakhir dibatalkan, tapi semua perubahan di file tetap ada sehingga bisa diperbaiki lalu di-commit lagi.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.4
+
+- **Status:** done
+- **Capaian:** jadi perinta commit -amend itu untuk mengubah/membenar kan perintah commit yang salah, misalnya saya commit "ikan makan nasi" tapi terketik "ian makan nasi", jadi saya pakai perintah commit amend ini untuk membenar kan, jadi ga perlu menghapus commit nya. tinggal ubah aja, jadi ga perlu juga untuk membuat commit baru. dan misalnya saya lupa memasukkan file, contoh saya commit file index.html tapi lupa masukin file style.css, jadi tinggal gunakan perinta ini aja.
+- **Kesulitan:** awalnya ga paham gimana cara pakai commit --amend ini, rupanya untuk menmabah / mengubah commit yang salah.
+<!-- ENTRY END -->
