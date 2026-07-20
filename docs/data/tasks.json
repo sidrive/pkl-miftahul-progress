@@ -106,47 +106,47 @@
           {
             "id": "M1.W2.T1.1",
             "text": "Verifikasi Git terpasang (`git --version`) & konfigurasi identitas (`git config --global user.name`/`user.email`) — supaya commit tercatat sebagai kamu sendiri",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T1.2",
             "text": "Praktik siklus dasar: `git init`, `git status`, `git add`, `git commit` (bikin minimal 3 commit terpisah, bukan 1 commit besar)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T1.3",
             "text": "Praktik `.gitignore`: pastikan file/folder tertentu (misal `node_modules/`) tidak ikut ter-track",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T1.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu \"staging area\", dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T1.5",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA buka modul/AI/catatan: beda `git status`, `git add`, `git commit`, `git log` — baru cek jawabannya setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.1",
             "text": "`git diff` — lihat detail perubahan yang belum di-stage, dan `git diff --staged` untuk yang sudah di-stage tapi belum commit",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.2",
             "text": "`git restore <file>` (atau `git checkout -- <file>`) — batalkan perubahan file yang belum di-stage, balik ke versi commit terakhir",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.3",
             "text": "`git reset HEAD <file>` (unstage) vs `git reset --soft HEAD~1` (batalkan commit terakhir, perubahan tetap ada) — praktik beda-bedanya",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.4",
             "text": "`git commit --amend` — revisi pesan/isi commit TERAKHIR (catatan: cuma aman dipakai SEBELUM push)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.5",

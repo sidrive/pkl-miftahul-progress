@@ -33,7 +33,7 @@
   - [x] <!-- id: M1.W1.T4.3 --> Jalankan file JavaScript pertama dengan node & pahami beda npm init vs npm install
   - [x] <!-- id: M1.W1.T4.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu `package.json`, dan kenapa `node_modules/` tidak boleh ikut di-commit ke Git (kaitkan ke pengalaman file `node_modules` yang sempat kebawa commit minggu ini)
 - [x] <!-- id: M1.W1.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 CLI tool kecil yang fungsional (bukan hello-world) — menggabungkan semua skill minggu ini (terminal, VS Code+lint, Node/npm+package eksternal baru). Lihat detail requirement & acceptance criteria di modul.
-- [ ] <!-- id: M1.W1.T6 --> Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`, DAN demo langsung proyek pengembangan mandiri `T5`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian "Untuk mentor") + isi refleksi capaian/kesulitan di modul
+- [x] <!-- id: M1.W1.T6 --> Evaluasi Minggu 1: demo singkat ke mentor (profil GitHub, VS Code + ekstensi aktif, navigasi terminal, `node -v`/`npm -v`, DAN demo langsung proyek pengembangan mandiri `T5`) + mentor tanya 2-3 variasi pertanyaan di luar contoh modul (lihat `docs/PANDUAN_BELAJAR_DAN_AI.md` bagian "Untuk mentor") + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 
@@ -41,16 +41,16 @@
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti Minggu 1, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - Git dasar: init, add, commit, status, log (dipecah jadi 5 sub-task):
-  - [ ] <!-- id: M1.W2.T1.1 --> Verifikasi Git terpasang (`git --version`) & konfigurasi identitas (`git config --global user.name`/`user.email`) — supaya commit tercatat sebagai kamu sendiri
-  - [ ] <!-- id: M1.W2.T1.2 --> Praktik siklus dasar: `git init`, `git status`, `git add`, `git commit` (bikin minimal 3 commit terpisah, bukan 1 commit besar)
-  - [ ] <!-- id: M1.W2.T1.3 --> Praktik `.gitignore`: pastikan file/folder tertentu (misal `node_modules/`) tidak ikut ter-track
-  - [ ] <!-- id: M1.W2.T1.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu "staging area", dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan)
-  - [ ] <!-- id: M1.W2.T1.5 --> [Wajib Refleksi] Kuis mandiri TANPA buka modul/AI/catatan: beda `git status`, `git add`, `git commit`, `git log` — baru cek jawabannya setelahnya
+  - [x] <!-- id: M1.W2.T1.1 --> Verifikasi Git terpasang (`git --version`) & konfigurasi identitas (`git config --global user.name`/`user.email`) — supaya commit tercatat sebagai kamu sendiri
+  - [x] <!-- id: M1.W2.T1.2 --> Praktik siklus dasar: `git init`, `git status`, `git add`, `git commit` (bikin minimal 3 commit terpisah, bukan 1 commit besar)
+  - [x] <!-- id: M1.W2.T1.3 --> Praktik `.gitignore`: pastikan file/folder tertentu (misal `node_modules/`) tidak ikut ter-track
+  - [x] <!-- id: M1.W2.T1.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa itu "staging area", dan kenapa Git punya tahap `add` sebelum `commit` (bukan langsung commit semua perubahan)
+  - [x] <!-- id: M1.W2.T1.5 --> [Wajib Refleksi] Kuis mandiri TANPA buka modul/AI/catatan: beda `git status`, `git add`, `git commit`, `git log` — baru cek jawabannya setelahnya
 - Eksplorasi command Git harian yang sering dipakai (dipecah jadi 7 sub-task — belum termasuk branching/merge, itu di Minggu 3):
-  - [ ] <!-- id: M1.W2.T2.1 --> `git diff` — lihat detail perubahan yang belum di-stage, dan `git diff --staged` untuk yang sudah di-stage tapi belum commit
-  - [ ] <!-- id: M1.W2.T2.2 --> `git restore <file>` (atau `git checkout -- <file>`) — batalkan perubahan file yang belum di-stage, balik ke versi commit terakhir
-  - [ ] <!-- id: M1.W2.T2.3 --> `git reset HEAD <file>` (unstage) vs `git reset --soft HEAD~1` (batalkan commit terakhir, perubahan tetap ada) — praktik beda-bedanya
-  - [ ] <!-- id: M1.W2.T2.4 --> `git commit --amend` — revisi pesan/isi commit TERAKHIR (catatan: cuma aman dipakai SEBELUM push)
+  - [x] <!-- id: M1.W2.T2.1 --> `git diff` — lihat detail perubahan yang belum di-stage, dan `git diff --staged` untuk yang sudah di-stage tapi belum commit
+  - [x] <!-- id: M1.W2.T2.2 --> `git restore <file>` (atau `git checkout -- <file>`) — batalkan perubahan file yang belum di-stage, balik ke versi commit terakhir
+  - [x] <!-- id: M1.W2.T2.3 --> `git reset HEAD <file>` (unstage) vs `git reset --soft HEAD~1` (batalkan commit terakhir, perubahan tetap ada) — praktik beda-bedanya
+  - [x] <!-- id: M1.W2.T2.4 --> `git commit --amend` — revisi pesan/isi commit TERAKHIR (catatan: cuma aman dipakai SEBELUM push)
   - [ ] <!-- id: M1.W2.T2.5 --> `git stash` — simpan sementara perubahan yang belum siap commit (`stash`, `stash list`, `stash pop`)
   - [ ] <!-- id: M1.W2.T2.6 --> `git log` lanjutan: `--oneline`, `--graph`, `--stat`, dan `git show <hash>` untuk lihat detail 1 commit
   - [ ] <!-- id: M1.W2.T2.7 --> **[Wajib Refleksi]** `git revert` vs `git reset --hard` + force push — cara AMAN membatalkan commit yang SUDAH di-push, dikaitkan langsung ke insiden force-push minggu ini
