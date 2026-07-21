@@ -151,27 +151,27 @@
           {
             "id": "M1.W2.T2.5",
             "text": "`git stash` — simpan sementara perubahan yang belum siap commit (`stash`, `stash list`, `stash pop`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.6",
             "text": "`git log` lanjutan: `--oneline`, `--graph`, `--stat`, dan `git show <hash>` untuk lihat detail 1 commit",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T2.7",
             "text": "**[Wajib Refleksi]** `git revert` vs `git reset --hard` + force push — cara AMAN membatalkan commit yang SUDAH di-push, dikaitkan langsung ke insiden force-push minggu ini",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T3.1",
             "text": "Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T3.2",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal \"beneran sampai\" ke GitHub (bukan pas commit, tapi pas apa?)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T4.1",

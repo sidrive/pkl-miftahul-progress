@@ -51,12 +51,12 @@
   - [x] <!-- id: M1.W2.T2.2 --> `git restore <file>` (atau `git checkout -- <file>`) — batalkan perubahan file yang belum di-stage, balik ke versi commit terakhir
   - [x] <!-- id: M1.W2.T2.3 --> `git reset HEAD <file>` (unstage) vs `git reset --soft HEAD~1` (batalkan commit terakhir, perubahan tetap ada) — praktik beda-bedanya
   - [x] <!-- id: M1.W2.T2.4 --> `git commit --amend` — revisi pesan/isi commit TERAKHIR (catatan: cuma aman dipakai SEBELUM push)
-  - [ ] <!-- id: M1.W2.T2.5 --> `git stash` — simpan sementara perubahan yang belum siap commit (`stash`, `stash list`, `stash pop`)
-  - [ ] <!-- id: M1.W2.T2.6 --> `git log` lanjutan: `--oneline`, `--graph`, `--stat`, dan `git show <hash>` untuk lihat detail 1 commit
-  - [ ] <!-- id: M1.W2.T2.7 --> **[Wajib Refleksi]** `git revert` vs `git reset --hard` + force push — cara AMAN membatalkan commit yang SUDAH di-push, dikaitkan langsung ke insiden force-push minggu ini
+  - [x] <!-- id: M1.W2.T2.5 --> `git stash` — simpan sementara perubahan yang belum siap commit (`stash`, `stash list`, `stash pop`)
+  - [x] <!-- id: M1.W2.T2.6 --> `git log` lanjutan: `--oneline`, `--graph`, `--stat`, dan `git show <hash>` untuk lihat detail 1 commit
+  - [x] <!-- id: M1.W2.T2.7 --> **[Wajib Refleksi]** `git revert` vs `git reset --hard` + force push — cara AMAN membatalkan commit yang SUDAH di-push, dikaitkan langsung ke insiden force-push minggu ini
 - Konsep repository, remote, origin (dipecah jadi 2 sub-task):
-  - [ ] <!-- id: M1.W2.T3.1 --> Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
-  - [ ] <!-- id: M1.W2.T3.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal "beneran sampai" ke GitHub (bukan pas commit, tapi pas apa?)
+  - [x] <!-- id: M1.W2.T3.1 --> Pahami konsep repository, remote, origin, dan beda repo lokal vs remote (akun GitHub sudah dibuat di Minggu 1)
+  - [x] <!-- id: M1.W2.T3.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan tepatnya perubahan lokal "beneran sampai" ke GitHub (bukan pas commit, tapi pas apa?)
 - Push repo latihan pertama ke GitHub (dipecah jadi 4 sub-task):
   - [ ] <!-- id: M1.W2.T4.1 --> Buat repo baru di GitHub + hubungkan repo lokal (`git remote add origin ...`)
   - [ ] <!-- id: M1.W2.T4.2 --> Push pertama (`git branch -M main`, `git push -u origin main`) + verifikasi file & commit muncul di GitHub
