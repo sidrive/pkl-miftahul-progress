@@ -200,7 +200,12 @@
           },
           {
             "id": "M1.W2.T6",
-            "text": "Evaluasi Minggu 2: demo ke mentor (jalankan git dasar + command eksplorasi langsung, tunjukkan repo latihan yang sudah ter-push, DAN tunjukkan repo hasil `T5` + histori commit-nya) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak & kapan pakai revert) + isi refleksi capaian/kesulitan di modul",
+            "text": "**[Uji Ulang Pemahaman Mandiri — case BARU, beda dari `M1.W1.T5`]** Bangun 1 mini-project kecil dengan topik yang sama sekali berbeda dari CLI monitoring tugas Minggu 1 (bukan lanjutan/variasi dari itu), menggabungkan semua skill Minggu 1+2 (terminal, Node/npm, Git dengan histori commit rapi) — dirancang supaya kamu benar-benar bisa jelaskan logikanya sendiri di sesi presentasi, bukan mengulang jawaban yang sudah dihafal dari project sebelumnya. Lihat requirement & aturan sesi presentasinya di modul.",
+            "done": false
+          },
+          {
+            "id": "M1.W2.T7",
+            "text": "Evaluasi Minggu 2: demo ke mentor (jalankan git dasar + command eksplorasi langsung, tunjukkan repo latihan yang sudah ter-push, tunjukkan repo hasil `T5`, DAN presentasi mini-project `T6`) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak & kapan pakai revert) + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]

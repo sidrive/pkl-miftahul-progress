@@ -448,14 +448,70 @@ pastikan link repo-nya bisa diakses publik dan dicantumkan di log.
 
 ---
 
-## 6. Evaluasi Minggu 2 (`M1.W2.T6`)
+## 6. Uji Ulang Pemahaman Mandiri — Case Baru (`M1.W2.T6`)
+
+**Kenapa task ini ada:** evaluasi Minggu 1 (`M1.W1.T6`) kemarin diakui sendiri agak "blank" pas
+sesi — grogi, banyak yang lupa, dan proses ngerjain `T5` (CLI monitoring tugas) banyak dibantu AI
+dari nol. Itu bukan masalah besar (wajar untuk minggu pertama), tapi task ini dibuat supaya ada
+kesempatan **buktiin ulang** pemahaman itu beneran nempel — pakai project **yang berbeda**, bukan
+project yang sama yang jawabannya bisa dihafal.
+
+**Estimasi waktu:** menyesuaikan, tapi jangan buru-buru — lebih baik pelan tapi paham, daripada
+cepat tapi blank lagi pas ditanya.
+
+### Requirement
+
+1. **Pilih topik project yang BEDA dari CLI monitoring tugas** (bukan variasi/lanjutan dari itu).
+   Contoh ide (pilih 1, atau bikin ide sendiri): konverter satuan (suhu/panjang/berat), kalkulator
+   sederhana dengan riwayat perhitungan, generator password acak, atau quiz/kuis interaktif via
+   input terminal.
+2. **Struktur folder dibuat lewat terminal**, kode boleh 1 atau 2 file (tidak wajib serumit `T5`
+   Minggu 1) — fokus task ini bukan fitur sebanyak-banyaknya, tapi **kejelasan pemahaman**.
+3. **Coba dulu sendiri sebelum tanya AI** — tulis dulu draft logika kasar (boleh di kertas/komentar
+   kode, boleh salah), baru kalau stuck tanya AI. Kalau AI kasih kode, jangan langsung copy-paste
+   semua — ambil sepotong, pahami, baru lanjut (bukan seperti proses `T5` kemarin).
+4. **Git dari awal**: `git init`, histori commit rapi (minimal 4 commit terpisah per langkah), push
+   ke repo GitHub baru.
+5. **Tidak ada data placeholder/lelucon** ikut ter-submit (`Hiu tes tes` dkk — cek ulang sebelum
+   push).
+6. Kalau pakai dependency eksternal, pastikan **semua yang di-`package.json` benar-benar dipakai**
+   di kode (tidak ada dependency nganggur seperti yang terjadi di `T5` Minggu 1).
+
+### Sesi presentasi (beda formatnya dari `T6` Minggu 1)
+
+Supaya groginya lebih terkendali, sesi ini dibikin **2 tahap**, bukan tanya-jawab dadakan:
+
+1. **Tahap persiapan (dikasih waktu, tidak dadakan):** sebelum sesi, siapkan penjelasan singkat
+   (boleh ditulis dulu sebagai catatan pribadi, tapi saat presentasi **tidak boleh dibaca kata per
+   kata** — poin-poin saja): apa yang dibangun, kenapa pilih topik itu, bagian mana yang paling
+   menantang, dan alur logika program secara garis besar.
+2. **Tahap presentasi (~10-15 menit):** jalankan program live, jelaskan alur kodenya baris demi
+   baris (boleh buka kode di layar, tapi jelaskan pakai kata sendiri, bukan baca komentar kode).
+   Mentor akan tanya 2-3 variasi kecil di luar yang sudah disiapkan — ini untuk cek reaksi spontan,
+   bukan jebakan.
+
+**Isi log dengan jujur** — kalau masih ada bagian yang groginya kambuh atau ada yang lupa saat
+presentasi, tulis itu apa adanya. Task ini baru `done` kalau presentasinya **benar-benar terlaksana
+dan mentor menilai penjelasannya cukup jelas** — sama seperti aturan teach-back di Minggu 1.
+
+**Contoh entry log:**
+```markdown
+### Task: M1.W2.T6
+- **Status:** done
+- **Capaian:** [ceritakan project barunya apa, kenapa pilih topik itu, dan bagaimana sesi presentasinya berjalan]
+- **Kesulitan:** [jujur — termasuk kalau masih grogi/ada yang lupa, itu bahan follow-up bukan kegagalan]
+```
+
+---
+
+## 7. Evaluasi Minggu 2 (`M1.W2.T7`)
 
 Siapkan demo singkat (~15 menit) untuk mentor:
 
 1. Jalankan langsung di terminal: `git init`, `git add`, `git commit`, `git log` di sebuah folder
    contoh.
-2. Tunjukkan repo latihan (`T3`) yang sudah ter-push di GitHub, beserta histori commit-nya.
-3. **Tunjukkan repo hasil `T4`** — histori commit-nya, dan ceritakan proses waktu push ditolak +
+2. Tunjukkan repo latihan (`T4`) yang sudah ter-push di GitHub, beserta histori commit-nya.
+3. **Tunjukkan repo hasil `T5`** — histori commit-nya, dan ceritakan proses waktu push ditolak +
    cara kamu menyelesaikannya.
 4. **Mentor akan tanya 2-3 variasi pertanyaan** di luar contoh modul — termasuk kemungkinan
    skenario "kalau push ditolak, apa yang kamu lakukan?" untuk cek betul-betul paham, bukan
@@ -465,9 +521,9 @@ Siapkan demo singkat (~15 menit) untuk mentor:
 
 Setelah demo, isi entry log terakhir untuk minggu ini:
 ```markdown
-### Task: M1.W2.T6
+### Task: M1.W2.T7
 - **Status:** done
-- **Capaian:** Demo ke mentor selesai, Git dasar dikuasai, repo latihan & repo T4 sudah ter-push, pertanyaan variasi mentor terjawab.
+- **Capaian:** Demo ke mentor selesai, Git dasar dikuasai, repo latihan & repo T5 sudah ter-push, presentasi mini-project T6 lancar, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** (isi refleksi jujur)
 ```
 
