@@ -305,3 +305,59 @@
 - **Capaian:** jadi perinta commit -amend itu untuk mengubah/membenar kan perintah commit yang salah, misalnya saya commit "ikan makan nasi" tapi terketik "ian makan nasi", jadi saya pakai perintah commit amend ini untuk membenar kan, jadi ga perlu menghapus commit nya. tinggal ubah aja, jadi ga perlu juga untuk membuat commit baru. dan misalnya saya lupa memasukkan file, contoh saya commit file index.html tapi lupa masukin file style.css, jadi tinggal gunakan perinta ini aja.
 - **Kesulitan:** awalnya ga paham gimana cara pakai commit --amend ini, rupanya untuk menmabah / mengubah commit yang salah.
 <!-- ENTRY END -->
+
+---
+
+### 2026-07-21
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.5
+
+- **Status:** done
+- **Capaian:** praktek dulu awal awal, setelah itu saya pahamin apa maksud dari git stash dkk, nah menurut saya git stash ini anggapan nya adalah perintah untuk menyimpan perubahan / menampung file sementara, jadi kita lagi buat suatu program, dan tiba tiba ada hal lain yang mendadak, jadi kita pakai git stash ini untuk menyimpan sementara program yang kita buat barusan. nah git stash list ini perintah untuk melihat file apa yang sedang kita stash, jadi disitu nanti muncul file apa yang kita stash, git stash pop itu perintah untuk mengeluarkan file yang di stash tadi, jadi dia un-stash, jadi muncul lagi file nya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.6
+
+- **Status:** done
+- **Capaian:**
+
+1. git log : menampilkan histori lengkap seperti author, tanggal, pesan commit, kode hash commit. jadi git log itu melihat semua histori ngapain aja,
+2. git log --oneline : melihat histori commit dengan isi / pesan dari commit itu, jadi isinya singkat aja
+   git log --graph --oneline : di bagian histori nya ada tambahan ( _ ) [koreksi= sama seperti git log --oneline, tetapi ditambah grafik sederhana menggunakan tanda _, |, dan \ untuk menunjukkan hubungan antar commit atau branch. Kalau repository masih memiliki satu branch, grafiknya akan terlihat lurus. Jika sudah memiliki beberapa branch, grafiknya akan bercabang.].
+3. git log --stat : perintah ini menampilkan histori commit beserta ringkasan perubahan pada setiap commit, seperti file apa saja yang diubah, ditambah, atau dihapus, serta jumlah baris yang bertambah (+) atau berkurang (-).
+4. git show <hash commit> : berfungsi untuk melihat detail lengkap dari satu commit tertentu berdasarkan hash commit. Informasi yang ditampilkan meliputi author, tanggal, pesan commit, serta perubahan isi file pada commit tersebut.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T2.7
+
+- **Status:** done
+- **Capaian:** 1. menurut saya, git revert lebih aman karena tidak menghapus histori commit yang sudah di-push ke GitHub. tapi dia cuma buat commit baru untuk membatalkan perubahan dari commit yang salah. jadi, teman saya yang sudah git pull tinggal melakukan git pull lagi agar mendapatkan commit hasil git revert, sehingga project kembali normal dan histori tetap sinkron. sedangkan kalau memakai git reset --hard + git push --force, commit yang salah akan dihapus seolah-olah tidak pernah ada. akibatnya histori di laptop teman saya berbeda dengan histori di GitHub, sehingga bisa terjadi konflik atau pekerjaan teman saya ikut bermasalah. 2. git revert itu gak cukup kalau commit yang sudah di push berisi data yang benar benar gak boleh ada, misalnya password, API key, token, atau data rahasia perusahaan. walaupun sudah di git revert, data tersebut masih ada di histori Git. jadi dalam kondisi seperti itu biasanya perlu pakai cara lain yang bisa menghapus histori commit itu, tapi harus dilakukan dengan sangat hati hati kaena bisa mempemengaruhi orang lain yang pakai / gunakan repository yang sama.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T3.1
+
+- **Status:** done
+- **Capaian:** repo lokal > berada didalam komputer. repo remote > berada di server GitHub.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T3.2
+
+- **Status:** done
+- **Capaian:** kalau git commit di laptop perubahan belum ada di GitHub karna belum di push, dan misalnya laptop saya rusak dan belum sempat push maka perubahan/file itu akan rusak/hilang total karna belum masuk ke server gihub. kejadian beda hasil push/pull itu terjadi karna perbedaan repo local dan remote, commit itu tersimpan di local dan belum tersimpan di server GitHub, jadi harus di push dulu baru masuk server sehingga kawan tim gak bisa lihat sebelum di `git push`, dan kita gak bisa update terbaru sebelum di `git pull`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
