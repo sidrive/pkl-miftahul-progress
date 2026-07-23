@@ -361,3 +361,56 @@
 - **Capaian:** kalau git commit di laptop perubahan belum ada di GitHub karna belum di push, dan misalnya laptop saya rusak dan belum sempat push maka perubahan/file itu akan rusak/hilang total karna belum masuk ke server gihub. kejadian beda hasil push/pull itu terjadi karna perbedaan repo local dan remote, commit itu tersimpan di local dan belum tersimpan di server GitHub, jadi harus di push dulu baru masuk server sehingga kawan tim gak bisa lihat sebelum di `git push`, dan kita gak bisa update terbaru sebelum di `git pull`.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+### 2026-07-21
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T4.1
+
+- **Status:** done
+- **Capaian:** udah buat repo baru di git dengan nama "Task-T4" dan sudah cek versi dan berhasil dan menampilkan "origin"
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T4.2
+
+- **Status:** done
+- **Capaian:** sudah push 3 commit ke repo GitHub, histori di lokal dan Github sesuai.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T4.3
+
+- **Status:** done
+- **Capaian:** sudah melakukan edit dilokal dan di git push tanpa -u 2 kali dan berhasil. note "-u" pada saat git push pertama kali berfungsi supaya Git mengingat kalau branch lokal kita terhubung dengan branch yang ada di GitHub. Jadi setelah hubungan itu tersimpan, kita tidak perlu lagi mengetik git push origin main, cukup git push saja karena Git sudah tahu branch lokal tersebut harus dikirim ke branch mana di GitHub.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T4.4
+
+- **Status:** done
+- **Capaian:** saya sudah melakukan simulasi eror, jadi saya edit file yang ada di repo github baru saya sace commit. habis itu saya edit file yang ada di lokal baru saya push, ada pesan eror di terminal, lalu itu tanda nya saya menimpa file yang ada di github, jadi saya harus ambil dulu file yang ada di github atau di pull, nanti akan muncul file merge gitu, di close aja. setelah itu lakukan push, jadi file di github dan lokal itu sama. hasil refleksi = 1. push saya di tolak karena di repo GitHub ada commit/perubahan baru yang belum ada di repositori lokal laptop saya. git nolak push untuk mencegah perubahan file yang tertimpa.
+
+2. kalo di git pull dulu dia akan menarik commit/file dari repo GitHub lalu menggabungkannya atau merge secara aman dengan commit lokal. jadi file di GitHub dan local sama persis sehingga tidak ada bentrok. sedangkan jika pakai git push --force, file yang ada di local memaksa / menimpa GitHub untuk ambil file versi lokal dan menimpa/menghapus riwayat commit yang ada di GitHub. ini bahaya karna bisa menghilangkan kodingan lama atau pekerjaan orang lain.
+3. jika terjadi eror saya akan git pull dulu, jadi menarik data yang ada di GitHub dulu biar sama / sinkron yang ada di local dan GitHub, baru saya push, dan saya tidak akan melakukan --force biar tidak ada bentrok.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T5
+
+- **Status:** done
+- **Capaian:** saya udah buar repo github untuk task T5 minggu 2 ini (https://github.com/GaziSyah/T5-minggu2), sesuai sama modul saya udah ikutin langkah langkah dan beberapa commit yang diminta (setup awal, data & struktur, logika CLI, README). mencoba juga pakai perintah `git commit --amend` untuk memperbaiki pesan commit. sempat mengalami skenario push ditolak & merge conflict pada README.md, lalu berhasil diselesaikan menggunakan `git pull origin main --no-rebase` tanpa `--force`.
+- **Kesulitan:** awalnya saya hanya buat repo di github karna itu yang paling gampang, lalu saya copy folder proyek minggu 1 lalu saya ganti nama dengan "T5-minggu2". setelah itu saya ikutin langkah langkah atau tugas yang ada di modul, sejauh itu masih paham, nah baru tadi kan ada eror waktu simulasi ditolak, nah eror nya itu kan data nya nabrak yang dari lokal dan github. data yang ada berbeda karna tadi saya edit di lokal dan di github, nah baru kan konflik merge gitu, baru saya cari tau harus klik "Accept Both Change", bagian sini si sebenarnya yang sedikit membingungkan.
+<!-- ENTRY END -->
