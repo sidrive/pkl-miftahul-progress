@@ -411,6 +411,32 @@
 ### Task: M1.W2.T5
 
 - **Status:** done
-- **Capaian:** saya udah buar repo github untuk task T5 minggu 2 ini (https://github.com/GaziSyah/T5-minggu2), sesuai sama modul saya udah ikutin langkah langkah dan beberapa commit yang diminta (setup awal, data & struktur, logika CLI, README). mencoba juga pakai perintah `git commit --amend` untuk memperbaiki pesan commit. sempat mengalami skenario push ditolak & merge conflict pada README.md, lalu berhasil diselesaikan menggunakan `git pull origin main --no-rebase` tanpa `--force`.
+- **Capaian:** saya udah buar repo github untuk task T5 minggu 2 ini (https://github.com/GaziSyah/T5-minggu2), sesuai sama modul saya udah ikutin langkah langkah dan beberapa commit yang diminta (setup awal, data & struktur, logika CLI, README). saya juga coba pakai perintah `git commit --amend` untuk memperbaiki pesan commit. sempat kena skenario push ditolak & merge conflict pada README.md, lalu berhasil diselesaikan menggunakan `git pull origin main --no-rebase` tanpa `--force`.
 - **Kesulitan:** awalnya saya hanya buat repo di github karna itu yang paling gampang, lalu saya copy folder proyek minggu 1 lalu saya ganti nama dengan "T5-minggu2". setelah itu saya ikutin langkah langkah atau tugas yang ada di modul, sejauh itu masih paham, nah baru tadi kan ada eror waktu simulasi ditolak, nah eror nya itu kan data nya nabrak yang dari lokal dan github. data yang ada berbeda karna tadi saya edit di lokal dan di github, nah baru kan konflik merge gitu, baru saya cari tau harus klik "Accept Both Change", bagian sini si sebenarnya yang sedikit membingungkan.
+<!-- ENTRY END -->
+
+---
+
+## 2026-07-23
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T6
+
+- **Status:** done
+- **Capaian:** saya memilih project untuk membuat sebuah kalkulator CLI, saya buat struktur nya lewat terminal dengan nama "T6-TaskM2-kalkulator-cli" yang nanti nya akan di masukkan ke repo GitHub.
+- **Kesulitan:** --
+<!-- ENTRY END -->
+
+---
+
+## 2026-07-24
+
+<!-- ENTRY START -->
+
+### Task: M1.W2.T7
+
+- **Status:** --
+- **Capaian:** --
+- **Kesulitan:** --
 <!-- ENTRY END -->
