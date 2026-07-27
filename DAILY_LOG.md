@@ -430,13 +430,13 @@
 
 ---
 
-## 2026-07-24
+## 2026-07-27 // minggu 3
 
 <!-- ENTRY START -->
 
 ### Task: M1.W2.T7
 
 - **Status:** --
-- **Capaian:** --
+- **Capaian:** --d
 - **Kesulitan:** --
 <!-- ENTRY END -->
