@@ -176,32 +176,32 @@
           {
             "id": "M1.W2.T4.1",
             "text": "Buat repo baru di GitHub + hubungkan repo lokal (`git remote add origin ...`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T4.2",
             "text": "Push pertama (`git branch -M main`, `git push -u origin main`) + verifikasi file & commit muncul di GitHub",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T4.3",
             "text": "Edit file lokal, commit, push lagi (siklus edit → commit → push lengkap, minimal 2x)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T4.4",
             "text": "**[Wajib Refleksi — PENTING]** Simulasi \"push ditolak\" & cara menyelesaikannya dengan BENAR: edit file repo latihan langsung dari GitHub web (supaya remote punya perubahan yang lokal tidak punya), lalu coba `git push` dari lokal (harus muncul error \"rejected\"), selesaikan dengan `git pull` (BUKAN `git push --force`), baru push lagi sampai berhasil. Lihat detail lengkap & kaitan ke kejadian nyata di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T5",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Naikkan project CLI dari Minggu 1 (`T5`) jadi repo GitHub tersendiri dengan histori commit yang rapi (bukan cuma disalin ke folder `submissions/`), dan pakai minimal 1 dari command eksplorasi (`stash`/`amend`/`revert`) di prosesnya — lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T6",
             "text": "**[Uji Ulang Pemahaman Mandiri — case BARU, beda dari `M1.W1.T5`]** Bangun 1 mini-project kecil dengan topik yang sama sekali berbeda dari CLI monitoring tugas Minggu 1 (bukan lanjutan/variasi dari itu), menggabungkan semua skill Minggu 1+2 (terminal, Node/npm, Git dengan histori commit rapi) — dirancang supaya kamu benar-benar bisa jelaskan logikanya sendiri di sesi presentasi, bukan mengulang jawaban yang sudah dihafal dari project sebelumnya. Lihat requirement & aturan sesi presentasinya di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W2.T7",
