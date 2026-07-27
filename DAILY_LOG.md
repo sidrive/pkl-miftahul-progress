@@ -415,28 +415,22 @@
 - **Kesulitan:** awalnya saya hanya buat repo di github karna itu yang paling gampang, lalu saya copy folder proyek minggu 1 lalu saya ganti nama dengan "T5-minggu2". setelah itu saya ikutin langkah langkah atau tugas yang ada di modul, sejauh itu masih paham, nah baru tadi kan ada eror waktu simulasi ditolak, nah eror nya itu kan data nya nabrak yang dari lokal dan github. data yang ada berbeda karna tadi saya edit di lokal dan di github, nah baru kan konflik merge gitu, baru saya cari tau harus klik "Accept Both Change", bagian sini si sebenarnya yang sedikit membingungkan.
 <!-- ENTRY END -->
 
----
+## <!-- ENTRY START -->
 
-## 2026-07-23
-
-<!-- ENTRY START -->
+## 2026-07-27 // minggu 3
 
 ### Task: M1.W2.T6
 
 - **Status:** done
 - **Capaian:** saya memilih project untuk membuat sebuah kalkulator CLI, saya buat struktur nya lewat terminal dengan nama "T6-TaskM2-kalkulator-cli" yang nanti nya akan di masukkan ke repo GitHub.
-- **Kesulitan:** --
+- **Kesulitan:** Awal bingung dengan kode dan cara kerja kalkulator nya, kemudian saya pahamin dan pelajari apa aja isi dari kode index.js nya. tapi sejauh ini aman untuk kalkulator cli nya.
 <!-- ENTRY END -->
-
----
-
-## 2026-07-27 // minggu 3
 
 <!-- ENTRY START -->
 
 ### Task: M1.W2.T7
 
-- **Status:** --
-- **Capaian:** --d
-- **Kesulitan:** --
+- **Status:** done
+- **Capaian:** Sudah melakukan evaluasi dengan mentor, sebagian Git dasar dikuasai, repo latihan & repo T5 sudah ter-push, sudah presentasi mini-project T6, pertanyaan variasi mentor sudah di jawab.
+- **Kesulitan:** Waktu evaluasi ada beberapa peintah git yang kurang dipahami, percobaan untuk .gitignore ada masalah sehingga tidak berjalan dengan baik. ada blank juga waktu evaluasi.
 <!-- ENTRY END -->
