@@ -68,9 +68,30 @@
 
 ### Minggu 3
 
-- [ ] <!-- id: M1.W3.T1 --> Git branching & merge dasar
-- [ ] <!-- id: M1.W3.T2 --> Alur push/pull, resolve conflict sederhana
-- [ ] <!-- id: M1.W3.T3 --> Membuat Pull Request pertama ke repo latihan + review bareng mentor
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W3-branching-pr.md`](../docs/modules/M1-W3-branching-pr.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+
+- Branching dasar (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M1.W3.T1.1 --> Pahami konsep branch: kenapa kerja paralel (fitur A & fitur B bersamaan) butuh branch, bukan langsung di `main`
+  - [ ] <!-- id: M1.W3.T1.2 --> Praktik: `git branch` (lihat daftar), `git switch -c <nama>` (atau `git checkout -b <nama>`) buat & pindah branch baru, `git switch main` balik ke main
+  - [ ] <!-- id: M1.W3.T1.3 --> Praktik: `git branch -d <nama>` hapus branch yang sudah tidak dipakai (dan `-D` untuk paksa hapus yang belum di-merge — pakai hati-hati)
+  - [ ] <!-- id: M1.W3.T1.4 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: apa beda `git branch <nama>` dengan `git switch -c <nama>`? Kenapa perubahan di 1 branch tidak muncul di branch lain sebelum di-merge?
+- Merge dasar (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M1.W3.T2.1 --> Pahami beda **fast-forward merge** (branch tidak punya commit baru di `main` sejak dipisah) vs **3-way merge** (`main` juga punya commit baru sendiri)
+  - [ ] <!-- id: M1.W3.T2.2 --> Praktik fast-forward merge: buat branch, commit 1-2x, `git switch main`, `git merge <nama-branch>` — cek `git log --graph` sebelum & sesudah
+  - [ ] <!-- id: M1.W3.T2.3 --> [Wajib Refleksi] Praktik 3-way merge: bikin commit baru juga di `main` (file lain) sebelum merge branch — jalankan `git merge`, perhatikan muncul "merge commit" baru, jelaskan bedanya dengan fast-forward tadi pakai `git log --graph`
+- Resolve conflict (dipecah jadi 3 sub-task — ini yang paling sering bikin panik kalau belum pernah ngalamin):
+  - [ ] <!-- id: M1.W3.T3.1 --> Simulasi conflict nyata: di 2 branch berbeda, edit **baris yang sama** di file yang sama, lalu coba `git merge` — biarkan conflict-nya muncul, jangan panik
+  - [ ] <!-- id: M1.W3.T3.2 --> Praktik resolve manual: buka file yang conflict, pahami penanda `<<<<<<<`/`=======`/`>>>>>>>`, putuskan versi mana yang dipakai (atau gabungan keduanya), hapus semua penanda, `git add`, `git commit` untuk menyelesaikan merge
+  - [ ] <!-- id: M1.W3.T3.3 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa Git tidak bisa auto-merge di kasus itu (apa yang bikin Git "bingung"), dan kaitkan ke pengalaman nyata kalau kamu pernah lihat conflict sebelumnya
+- Push branch & Pull Request pertama (dipecah jadi 5 sub-task):
+  - [ ] <!-- id: M1.W3.T4.1 --> Push branch baru (bukan `main`) ke GitHub: `git push -u origin <nama-branch>`
+  - [ ] <!-- id: M1.W3.T4.2 --> Buat Pull Request pertama di GitHub: dari branch tadi ke `main`, isi judul & deskripsi yang jelas (apa isi perubahannya, bukan cuma "update")
+  - [ ] <!-- id: M1.W3.T4.3 --> Review PR bareng mentor: minta mentor kasih komentar/review di PR-nya (lewat GitHub, bukan chat biasa), coba respons/perbaiki kalau ada masukan
+  - [ ] <!-- id: M1.W3.T4.4 --> Merge PR lewat GitHub (setelah disetujui), lalu di lokal: `git switch main`, `git pull`, dan hapus branch yang sudah di-merge (`git branch -d`)
+  - [ ] <!-- id: M1.W3.T4.5 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa alur branch → PR → review → merge ini lebih aman dibanding langsung `push` ke `main` (kaitkan ke insiden force-push di repo tracker ini — PR/review itu semacam "lapis pengaman" tambahan)
+- [ ] <!-- id: M1.W3.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Tambah 1 fitur baru ke salah satu project kamu (CLI Minggu 1 atau mini-project Minggu 2) **lewat alur branch → PR → merge yang benar** (bukan push langsung ke `main`), dan sengaja alami minimal 1 conflict asli di prosesnya. Lihat requirement lengkap di modul.
+- [ ] <!-- id: M1.W3.T6 --> Evaluasi Minggu 3: demo ke mentor — praktik branching & merge langsung, tunjukkan PR yang sudah dibuat & di-merge di `T5`, ceritakan proses resolve conflict yang dialami + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 4
 
