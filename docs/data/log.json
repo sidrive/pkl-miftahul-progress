@@ -1,17 +1,17 @@
 [
   {
-    "date": "2026-07-24",
+    "date": "2026-07-27",
     "task": "M1.W2.T7",
-    "status": "--",
-    "capaian": "--",
-    "kesulitan": "--"
+    "status": "done",
+    "capaian": "Sudah melakukan evaluasi dengan mentor, sebagian Git dasar dikuasai, repo latihan & repo T5 sudah ter-push, sudah presentasi mini-project T6, pertanyaan variasi mentor sudah di jawab.",
+    "kesulitan": "Waktu evaluasi ada beberapa peintah git yang kurang dipahami, percobaan untuk .gitignore ada masalah sehingga tidak berjalan dengan baik. ada blank juga waktu evaluasi."
   },
   {
-    "date": "2026-07-23",
+    "date": "2026-07-27",
     "task": "M1.W2.T6",
     "status": "done",
     "capaian": "saya memilih project untuk membuat sebuah kalkulator CLI, saya buat struktur nya lewat terminal dengan nama \"T6-TaskM2-kalkulator-cli\" yang nanti nya akan di masukkan ke repo GitHub.",
-    "kesulitan": "--"
+    "kesulitan": "Awal bingung dengan kode dan cara kerja kalkulator nya, kemudian saya pahamin dan pelajari apa aja isi dari kode index.js nya. tapi sejauh ini aman untuk kalkulator cli nya."
   },
   {
     "date": "2026-07-22",

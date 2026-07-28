@@ -206,7 +206,7 @@
           {
             "id": "M1.W2.T7",
             "text": "Evaluasi Minggu 2: demo ke mentor (jalankan git dasar + command eksplorasi langsung, tunjukkan repo latihan yang sudah ter-push, tunjukkan repo hasil `T5`, DAN presentasi mini-project `T6`) + mentor tanya 2-3 variasi pertanyaan (termasuk soal skenario push ditolak & kapan pakai revert) + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
