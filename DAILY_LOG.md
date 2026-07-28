@@ -10,7 +10,7 @@
 
 ---
 
-## 2026-07-13
+## 2026-07-13 // minggu 1
 
 <!-- ENTRY START -->
 
@@ -415,7 +415,7 @@
 - **Kesulitan:** awalnya saya hanya buat repo di github karna itu yang paling gampang, lalu saya copy folder proyek minggu 1 lalu saya ganti nama dengan "T5-minggu2". setelah itu saya ikutin langkah langkah atau tugas yang ada di modul, sejauh itu masih paham, nah baru tadi kan ada eror waktu simulasi ditolak, nah eror nya itu kan data nya nabrak yang dari lokal dan github. data yang ada berbeda karna tadi saya edit di lokal dan di github, nah baru kan konflik merge gitu, baru saya cari tau harus klik "Accept Both Change", bagian sini si sebenarnya yang sedikit membingungkan.
 <!-- ENTRY END -->
 
-## <!-- ENTRY START -->
+---
 
 ## 2026-07-27 // minggu 3
 
@@ -433,4 +433,88 @@
 - **Status:** done
 - **Capaian:** Sudah melakukan evaluasi dengan mentor, sebagian Git dasar dikuasai, repo latihan & repo T5 sudah ter-push, sudah presentasi mini-project T6, pertanyaan variasi mentor sudah di jawab.
 - **Kesulitan:** Waktu evaluasi ada beberapa peintah git yang kurang dipahami, percobaan untuk .gitignore ada masalah sehingga tidak berjalan dengan baik. ada blank juga waktu evaluasi.
+<!-- ENTRY END -->
+
+---
+
+## 2026-07-28
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T1.1
+
+- **Status:** done
+- **Capaian:** Pahami konsep dasar branch, kenapa butuh jalur terpisah buat kerja paralel (misal bikin fitur baru tanpa ngerusak kodingan stabil di main).
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T1.2 & M1.W3.T1.3
+
+- **Status:** done
+- **Capaian:** Sudah melakukan praktek git switch (main / branch lain). bikin branch `coba-tukar` pakai `git switch -c`, commit file `catatan.txt`, dan membuktikan filenya otomatis sembunyi/hilang saat switch balik ke `main`. dan berhasil praktik hapus branch aman pakai `git branch -d` untuk branch kosong, serta membuktikan `git branch -d` menolak menghapus branch berisikan commit yang belum di-merge sebelum akhirnya dipaksa hapus dengan `git branch -D`.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T1.4
+
+- **Status:** done
+- **Capaian:** Berhasil menjawab kuis refleksi mandiri konsep branching tanpa nanya AI.
+
+1. kalo git switch -c <nama> membuat sebuah branch dan langsung menukar branch ke branch yang baru, kalo git branch (nama) di ketik di terminal dia eror [koreksi = git branch <nama> --> Cuma membuat branch baru, tapi posisi kamu masih tetap di branch lama (belum pindah).]
+2. menurut saya biar perubahan itu tidak mempengaruhin/membuat eror branch yang lain
+3. karena branch masih ada isinya dan tidak kosong
+
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T2.2
+
+- **Status:** done
+- **Capaian:** Berhasil praktik Fast-Forward Merge dari branch `fast-merge` ke `main`. Terbukti pesan Git menampilkan "Fast-forward" dan `git log --graph` menunjukkan histori commit yang lurus sempurna.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T2.3
+
+- **Status:** done
+- **Capaian:** saya udah praktik dan berhasil melakukan 3-Way Merge dengan buat commit di main dan di branch lainnya (saya beri nama gitar-3jalan pelesetan fitur-3way) sebelum di merge, Git membuat auto-merge commit dan menampilkan jalur bercabang dua di terminal lalu menyatu.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T3.1
+
+- **Status:** done
+- **Capaian:** Saya praktek dan berhasil memahami konsep dan sengaja memicu Merge Conflict di file. Terbukti Git menghentikan proses auto-merge dan menampilkan peringatan CONFLICT (content).
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T3.2
+
+- **Status:** done
+- **Capaian:** Berhasil resolve conflict manual, pilih versi main, commit selesai tanpa penanda tersisa.
+- **Kesulitan:** File sempat terdeteksi binary karena encoding PowerShell (UTF-16 LE), diatasi pakai Set-Content UTF-8
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T3.3
+
+- **Status:** done
+- **Capaian:** 1. Git ga bisa gabungin otomatis karna ada nya perubahan yang ada pada branch yang berbeda tapi sama sama mengubah isi file di baris yang sama dan dalam file yang sama, karna isinya beda, git ga bisa langsung me-merge, jadi git menyerahkan ke kita keputusan akhir nya.
+
+2. sebelumnya belum tau apa itu merge conflict, dengar kata conflict kaya sesuatu yang fatal eror nya dan membingungkan juga. setelah saya pelajari dan memahami apa itu, saya jadi tau apa itu merge-conflict, itu rupanya bukan eror yang fatal, tapi mekanisme / kemananan dari git.
+
+- **Kesulitan:** ---
 <!-- ENTRY END -->
