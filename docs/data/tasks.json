@@ -217,52 +217,52 @@
           {
             "id": "M1.W3.T1.1",
             "text": "Pahami konsep branch: kenapa kerja paralel (fitur A & fitur B bersamaan) butuh branch, bukan langsung di `main`",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T1.2",
             "text": "Praktik: `git branch` (lihat daftar), `git switch -c <nama>` (atau `git checkout -b <nama>`) buat & pindah branch baru, `git switch main` balik ke main",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T1.3",
             "text": "Praktik: `git branch -d <nama>` hapus branch yang sudah tidak dipakai (dan `-D` untuk paksa hapus yang belum di-merge — pakai hati-hati)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T1.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: apa beda `git branch <nama>` dengan `git switch -c <nama>`? Kenapa perubahan di 1 branch tidak muncul di branch lain sebelum di-merge?",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T2.1",
             "text": "Pahami beda **fast-forward merge** (branch tidak punya commit baru di `main` sejak dipisah) vs **3-way merge** (`main` juga punya commit baru sendiri)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T2.2",
             "text": "Praktik fast-forward merge: buat branch, commit 1-2x, `git switch main`, `git merge <nama-branch>` — cek `git log --graph` sebelum & sesudah",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T2.3",
             "text": "[Wajib Refleksi] Praktik 3-way merge: bikin commit baru juga di `main` (file lain) sebelum merge branch — jalankan `git merge`, perhatikan muncul \"merge commit\" baru, jelaskan bedanya dengan fast-forward tadi pakai `git log --graph`",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T3.1",
             "text": "Simulasi conflict nyata: di 2 branch berbeda, edit **baris yang sama** di file yang sama, lalu coba `git merge` — biarkan conflict-nya muncul, jangan panik",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T3.2",
             "text": "Praktik resolve manual: buka file yang conflict, pahami penanda `<<<<<<<`/`=======`/`>>>>>>>`, putuskan versi mana yang dipakai (atau gabungan keduanya), hapus semua penanda, `git add`, `git commit` untuk menyelesaikan merge",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T3.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa Git tidak bisa auto-merge di kasus itu (apa yang bikin Git \"bingung\"), dan kaitkan ke pengalaman nyata kalau kamu pernah lihat conflict sebelumnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T4.1",

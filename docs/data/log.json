@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-07-28",
+    "task": "M1.W3.T3.3",
+    "status": "done",
+    "capaian": "1. Git ga bisa gabungin otomatis karna ada nya perubahan yang ada pada branch yang berbeda tapi sama sama mengubah isi file di baris yang sama dan dalam file yang sama, karna isinya beda, git ga bisa langsung me-merge, jadi git menyerahkan ke kita keputusan akhir nya.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T3.2",
+    "status": "done",
+    "capaian": "Berhasil resolve conflict manual, pilih versi main, commit selesai tanpa penanda tersisa.",
+    "kesulitan": "File sempat terdeteksi binary karena encoding PowerShell (UTF-16 LE), diatasi pakai Set-Content UTF-8"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T3.1",
+    "status": "done",
+    "capaian": "Saya praktek dan berhasil memahami konsep dan sengaja memicu Merge Conflict di file. Terbukti Git menghentikan proses auto-merge dan menampilkan peringatan CONFLICT (content).",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T2.3",
+    "status": "done",
+    "capaian": "saya udah praktik dan berhasil melakukan 3-Way Merge dengan buat commit di main dan di branch lainnya (saya beri nama gitar-3jalan pelesetan fitur-3way) sebelum di merge, Git membuat auto-merge commit dan menampilkan jalur bercabang dua di terminal lalu menyatu.",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T2.2",
+    "status": "done",
+    "capaian": "Berhasil praktik Fast-Forward Merge dari branch `fast-merge` ke `main`. Terbukti pesan Git menampilkan \"Fast-forward\" dan `git log --graph` menunjukkan histori commit yang lurus sempurna.",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T1.4",
+    "status": "done",
+    "capaian": "Berhasil menjawab kuis refleksi mandiri konsep branching tanpa nanya AI.",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T1.2",
+    "status": "done",
+    "capaian": "Sudah melakukan praktek git switch (main / branch lain). bikin branch `coba-tukar` pakai `git switch -c`, commit file `catatan.txt`, dan membuktikan filenya otomatis sembunyi/hilang saat switch balik ke `main`. dan berhasil praktik hapus branch aman pakai `git branch -d` untuk branch kosong, serta membuktikan `git branch -d` menolak menghapus branch berisikan commit yang belum di-merge sebelum akhirnya dipaksa hapus dengan `git branch -D`.",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-07-28",
+    "task": "M1.W3.T1.1",
+    "status": "done",
+    "capaian": "Pahami konsep dasar branch, kenapa butuh jalur terpisah buat kerja paralel (misal bikin fitur baru tanpa ngerusak kodingan stabil di main).",
+    "kesulitan": "-"
+  },
+  {
     "date": "2026-07-27",
     "task": "M1.W2.T7",
     "status": "done",
@@ -8,10 +64,10 @@
   },
   {
     "date": "2026-07-27",
-    "task": "M1.W2.T6",
+    "task": "M1.W2.T5",
     "status": "done",
-    "capaian": "saya memilih project untuk membuat sebuah kalkulator CLI, saya buat struktur nya lewat terminal dengan nama \"T6-TaskM2-kalkulator-cli\" yang nanti nya akan di masukkan ke repo GitHub.",
-    "kesulitan": "Awal bingung dengan kode dan cara kerja kalkulator nya, kemudian saya pahamin dan pelajari apa aja isi dari kode index.js nya. tapi sejauh ini aman untuk kalkulator cli nya."
+    "capaian": "saya udah buar repo github untuk task T5 minggu 2 ini (https://github.com/GaziSyah/T5-minggu2), sesuai sama modul saya udah ikutin langkah langkah dan beberapa commit yang diminta (setup awal, data & struktur, logika CLI, README). saya juga coba pakai perintah `git commit --amend` untuk memperbaiki pesan commit. sempat kena skenario push ditolak & merge conflict pada README.md, lalu berhasil diselesaikan menggunakan `git pull origin main --no-rebase` tanpa `--force`.",
+    "kesulitan": "awalnya saya hanya buat repo di github karna itu yang paling gampang, lalu saya copy folder proyek minggu 1 lalu saya ganti nama dengan \"T5-minggu2\". setelah itu saya ikutin langkah langkah atau tugas yang ada di modul, sejauh itu masih paham, nah baru tadi kan ada eror waktu simulasi ditolak, nah eror nya itu kan data nya nabrak yang dari lokal dan github. data yang ada berbeda karna tadi saya edit di lokal dan di github, nah baru kan konflik merge gitu, baru saya cari tau harus klik \"Accept Both Change\", bagian sini si sebenarnya yang sedikit membingungkan."
   },
   {
     "date": "2026-07-22",
