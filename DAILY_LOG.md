@@ -518,3 +518,28 @@
 
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-07-29
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T4.1, M1.W3.T4.2
+
+- **Status:** done
+- **Capaian:** berhasil push branch bukan di main, berhasil buat pull request (PR) pertama.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T4.5
+
+- **Status:** done
+- **Capaian:** 1. Bug atau kodingan error, typo, file sampah, dan file rahasia yang gak sengaja ke-commit bisa ketahuan duluan sebelum ngerusak atau mengotori branch main.
+
+2. Bisa banget, karena branch main bakal dikunci dari push langsung. Semua perubahan wajib lewat PR secara transparan, jadi riwayat kodingan aman dan gak bakal tertimpa.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
