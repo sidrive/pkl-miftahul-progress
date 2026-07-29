@@ -267,12 +267,12 @@
           {
             "id": "M1.W3.T4.1",
             "text": "Push branch baru (bukan `main`) ke GitHub: `git push -u origin <nama-branch>`",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T4.2",
             "text": "Buat Pull Request pertama di GitHub: dari branch tadi ke `main`, isi judul & deskripsi yang jelas (apa isi perubahannya, bukan cuma \"update\")",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T4.3",
@@ -282,12 +282,12 @@
           {
             "id": "M1.W3.T4.4",
             "text": "Merge PR lewat GitHub (setelah disetujui), lalu di lokal: `git switch main`, `git pull`, dan hapus branch yang sudah di-merge (`git branch -d`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T4.5",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa alur branch → PR → review → merge ini lebih aman dibanding langsung `push` ke `main` (kaitkan ke insiden force-push di repo tracker ini — PR/review itu semacam \"lapis pengaman\" tambahan)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T5",

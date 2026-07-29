@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-28T09:29:18.415Z",
+  "generatedAt": "2026-07-29T09:16:05.088Z",
   "totalTasks": 107,
-  "doneTasks": 49,
-  "overallPercent": 46,
+  "doneTasks": 53,
+  "overallPercent": 50,
   "perMonth": [
     {
       "number": 1,
       "title": "Fondasi Tools (13 Jul – 12 Ags 2026)",
       "total": 59,
-      "done": 49,
-      "percent": 83
+      "done": 53,
+      "percent": 90
     },
     {
       "number": 2,
@@ -61,8 +61,8 @@
       "percent": 0
     }
   ],
-  "currentStreakDays": 2,
+  "currentStreakDays": 3,
   "blockedTasks": [],
-  "totalLogEntries": 48,
-  "lastLogDate": "2026-07-28"
+  "totalLogEntries": 50,
+  "lastLogDate": "2026-07-29"
 }
