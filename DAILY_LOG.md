@@ -534,6 +534,15 @@
 
 <!-- ENTRY START -->
 
+### Task: M1.W3.T4.3
+
+- **Status:** ---
+- **Capaian:** ---
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
 ### Task: M1.W3.T4.5
 
 - **Status:** done
@@ -542,4 +551,18 @@
 2. Bisa banget, karena branch main bakal dikunci dari push langsung. Semua perubahan wajib lewat PR secara transparan, jadi riwayat kodingan aman dan gak bakal tertimpa.
 
 - **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-07-30
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T5
+
+- **Status:** done
+- **Capaian:** Menambahkan fitur pangkat pada kalkulator cli T6 minggu 2. fitur operator pangkat (^) ditambahkan lewat branch+PR:( https://github.com/GaziSyah/T6-minggu2-kalkulator-cli/pull/1 ). Sempat conflict asli di index.js pada bagian petunjuk console.log, berhasil resolve manual dengan memilih perbaikan dari branch fitur-pangkat. PR sudah dibuat dan siap direview.
+- **Kesulitan:** pertama saya menbuat branch baru untuk ngerjain M3.T5 ini, setelah itu saya git add dan git commit juga, saya kan juga bertanya pada ai ngapain, saya git merge di branch lain bukan di main, nah kebuka file baru dan ada conflict gitu, nah kan saya bandingkan baru saya klik aja resolve merge conflict,
+sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge otomatis dan bingung pas tampilan VS Code muncul tanda coretan merah/hijau pas resolve conflict, tapi akhirnya paham cara beresinnya dengan di bantu dikit dikit.
 <!-- ENTRY END -->

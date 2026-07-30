@@ -90,7 +90,7 @@
   - [ ] <!-- id: M1.W3.T4.3 --> Review PR bareng mentor: minta mentor kasih komentar/review di PR-nya (lewat GitHub, bukan chat biasa), coba respons/perbaiki kalau ada masukan
   - [x] <!-- id: M1.W3.T4.4 --> Merge PR lewat GitHub (setelah disetujui), lalu di lokal: `git switch main`, `git pull`, dan hapus branch yang sudah di-merge (`git branch -d`)
   - [x] <!-- id: M1.W3.T4.5 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa alur branch → PR → review → merge ini lebih aman dibanding langsung `push` ke `main` (kaitkan ke insiden force-push di repo tracker ini — PR/review itu semacam "lapis pengaman" tambahan)
-- [ ] <!-- id: M1.W3.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Tambah 1 fitur baru ke salah satu project kamu (CLI Minggu 1 atau mini-project Minggu 2) **lewat alur branch → PR → merge yang benar** (bukan push langsung ke `main`), dan sengaja alami minimal 1 conflict asli di prosesnya. Lihat requirement lengkap di modul.
+- [x] <!-- id: M1.W3.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Tambah 1 fitur baru ke salah satu project kamu (CLI Minggu 1 atau mini-project Minggu 2) **lewat alur branch → PR → merge yang benar** (bukan push langsung ke `main`), dan sengaja alami minimal 1 conflict asli di prosesnya. Lihat requirement lengkap di modul.
 - [ ] <!-- id: M1.W3.T6 --> Evaluasi Minggu 3: demo ke mentor — praktik branching & merge langsung, tunjukkan PR yang sudah dibuat & di-merge di `T5`, ceritakan proses resolve conflict yang dialami + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 4
