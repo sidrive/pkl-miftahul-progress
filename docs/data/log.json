@@ -1,9 +1,23 @@
 [
   {
+    "date": "2026-07-30",
+    "task": "M1.W3.T5",
+    "status": "done",
+    "capaian": "Menambahkan fitur pangkat pada kalkulator cli T6 minggu 2. fitur operator pangkat (^) ditambahkan lewat branch+PR:( https://github.com/GaziSyah/T6-minggu2-kalkulator-cli/pull/1 ). Sempat conflict asli di index.js pada bagian petunjuk console.log, berhasil resolve manual dengan memilih perbaikan dari branch fitur-pangkat. PR sudah dibuat dan siap direview.",
+    "kesulitan": "pertama saya menbuat branch baru untuk ngerjain M3.T5 ini, setelah itu saya git add dan git commit juga, saya kan juga bertanya pada ai ngapain, saya git merge di branch lain bukan di main, nah kebuka file baru dan ada conflict gitu, nah kan saya bandingkan baru saya klik aja resolve merge conflict,"
+  },
+  {
     "date": "2026-07-29",
     "task": "M1.W3.T4.5",
     "status": "done",
     "capaian": "1. Bug atau kodingan error, typo, file sampah, dan file rahasia yang gak sengaja ke-commit bisa ketahuan duluan sebelum ngerusak atau mengotori branch main.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-07-29",
+    "task": "M1.W3.T4.3",
+    "status": "---",
+    "capaian": "---",
     "kesulitan": "---"
   },
   {

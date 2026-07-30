@@ -292,7 +292,7 @@
           {
             "id": "M1.W3.T5",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Tambah 1 fitur baru ke salah satu project kamu (CLI Minggu 1 atau mini-project Minggu 2) **lewat alur branch → PR → merge yang benar** (bukan push langsung ke `main`), dan sengaja alami minimal 1 conflict asli di prosesnya. Lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T6",
