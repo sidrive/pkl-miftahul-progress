@@ -536,9 +536,9 @@
 
 ### Task: M1.W3.T4.3
 
-- **Status:** ---
-- **Capaian:** ---
-- **Kesulitan:** ---
+- **Status:** done
+- **Capaian:** Berhasil mengeksekusi alur Merge Pull Request (PR) di GitHub secara mandiri. Memastikan seluruh checks aman, menyelesaikan alur merge ke branch `main` remote, lalu melakukan `git pull origin main` di lokal agar file tetap ter-sync.
+- **Kesulitan:** belum coba untuk merge pull-request mini project nya.
 <!-- ENTRY END -->
 
 <!-- ENTRY START -->
@@ -565,4 +565,17 @@
 - **Capaian:** Menambahkan fitur pangkat pada kalkulator cli T6 minggu 2. fitur operator pangkat (^) ditambahkan lewat branch+PR:( https://github.com/GaziSyah/T6-minggu2-kalkulator-cli/pull/1 ). Sempat conflict asli di index.js pada bagian petunjuk console.log, berhasil resolve manual dengan memilih perbaikan dari branch fitur-pangkat. PR sudah dibuat dan siap direview.
 - **Kesulitan:** pertama saya menbuat branch baru untuk ngerjain M3.T5 ini, setelah itu saya git add dan git commit juga, saya kan juga bertanya pada ai ngapain, saya git merge di branch lain bukan di main, nah kebuka file baru dan ada conflict gitu, nah kan saya bandingkan baru saya klik aja resolve merge conflict,
 sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge otomatis dan bingung pas tampilan VS Code muncul tanda coretan merah/hijau pas resolve conflict, tapi akhirnya paham cara beresinnya dengan di bantu dikit dikit.
+<!-- ENTRY END -->
+
+---
+
+## 2026-07-31
+
+<!-- ENTRY START -->
+
+### Task: M1.W3.T6
+
+- **Status:** done
+- **Capaian:** sudah melakukan evaluasi untuk taks T6.
+- **Kesulitan:** evaluasi berjalan dengan lancar, semua pertanyan berhasil dijawab dan di jelaskan dengan cukup baik.
 <!-- ENTRY END -->
