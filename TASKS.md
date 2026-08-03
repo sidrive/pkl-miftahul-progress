@@ -99,16 +99,16 @@
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - **Git Recall Drill** (dipecah jadi 4 sub-task — **ditambahkan karena evaluasi Minggu 2/3 menunjukkan sebagian command Git masih belum lancar, kadang perlu buka dokumentasi/AI lagi**; ini bukan materi baru, murni latihan mengingat ulang tanpa bantuan):
-  - [ ] <!-- id: M1.W4.T1.1 --> **TANPA modul/AI/catatan**, lakukan 1 siklus penuh dari nol: `git init`, buat 2 file, `add`+`commit` minimal 3x terpisah, buat branch baru & pindah, commit lagi di branch itu, `merge` balik ke `main`, `push` ke GitHub. Catat jujur command mana yang lancar dari ingatan, mana yang sempat harus buka catatan/AI
-  - [ ] <!-- id: M1.W4.T1.2 --> [Wajib Refleksi] Buat "cheat sheet pribadi": daftar command yang tadi sempat lupa/ragu di `T1.1`, tulis command + fungsinya pakai bahasamu sendiri (bukan disalin persis dari modul) — ini jadi rujukan cepat pribadi ke depan, bukan pengganti ingatan
-  - [ ] <!-- id: M1.W4.T1.3 --> Ulangi simulasi "push ditolak" (seperti Minggu 2 `T4.4`) dari nol — kali ini coba selesaikan dulu dari ingatan, TANPA buka modul asli; kalau benar-benar lupa baru boleh cek cheat sheet pribadi dari `T1.2` (bukan langsung ke modul/AI)
+  - [x] <!-- id: M1.W4.T1.1 --> **TANPA modul/AI/catatan**, lakukan 1 siklus penuh dari nol: `git init`, buat 2 file, `add`+`commit` minimal 3x terpisah, buat branch baru & pindah, commit lagi di branch itu, `merge` balik ke `main`, `push` ke GitHub. Catat jujur command mana yang lancar dari ingatan, mana yang sempat harus buka catatan/AI
+  - [x] <!-- id: M1.W4.T1.2 --> [Wajib Refleksi] Buat "cheat sheet pribadi": daftar command yang tadi sempat lupa/ragu di `T1.1`, tulis command + fungsinya pakai bahasamu sendiri (bukan disalin persis dari modul) — ini jadi rujukan cepat pribadi ke depan, bukan pengganti ingatan
+  - [x] <!-- id: M1.W4.T1.3 --> Ulangi simulasi "push ditolak" (seperti Minggu 2 `T4.4`) dari nol — kali ini coba selesaikan dulu dari ingatan, TANPA buka modul asli; kalau benar-benar lupa baru boleh cek cheat sheet pribadi dari `T1.2` (bukan langsung ke modul/AI)
   - [ ] <!-- id: M1.W4.T1.4 --> Teach-back singkat ke mentor: jelaskan lisan garis besar alur kerja Git harian (branch → commit → push/pull → PR → merge) **tanpa membaca catatan sama sekali**
 - HTML Semantik (dipecah jadi 3 sub-task):
-  - [ ] <!-- id: M1.W4.T2.1 --> Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing
-  - [ ] <!-- id: M1.W4.T2.2 --> Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T4`), ganti `<div>` yang polos jadi elemen semantik yang sesuai
-  - [ ] <!-- id: M1.W4.T2.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma "biar rapi keliatannya"
+  - [x] <!-- id: M1.W4.T2.1 --> Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing
+  - [x] <!-- id: M1.W4.T2.2 --> Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T4`), ganti `<div>` yang polos jadi elemen semantik yang sesuai
+  - [x] <!-- id: M1.W4.T2.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma "biar rapi keliatannya"
 - CSS Flexbox & Grid (dipecah jadi 5 sub-task):
-  - [ ] <!-- id: M1.W4.T3.1 --> Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`
+  - [x] <!-- id: M1.W4.T3.1 --> Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`
   - [ ] <!-- id: M1.W4.T3.2 --> Grid dasar: `display: grid`, `grid-template-columns`, `gap`
   - [ ] <!-- id: M1.W4.T3.3 --> Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)
   - [ ] <!-- id: M1.W4.T3.4 --> Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi

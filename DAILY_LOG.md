@@ -579,3 +579,47 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Capaian:** sudah melakukan evaluasi untuk taks T6.
 - **Kesulitan:** evaluasi berjalan dengan lancar, semua pertanyan berhasil dijawab dan di jelaskan dengan cukup baik.
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-03 //minggu 4
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T1.1
+
+- **Status:** done
+- **Capaian:** Siklus penuh berhasil dari ingatan. Yang lancar: init/add/commit/branch. Yang sempat ragu: urutan merge balik ke main.
+- **Kesulitan:** Saat saya mencoba masih ingat semua perintah git seperti bikin branch baru, git merge, git commit dan dipush ke github dll tanpa kesusahan. yang masih ragu paling posisi di branch mana, jadi saya sering pakai "git branch"
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T1.2
+
+- **Status:** done
+- **Capaian:** : `git branch` = Saya pakai perintah ini sebelum melakukan git merge agar tidak salah posisi branch.
+  `git merge <nama-branch>` = Saya pakai perintah ini untuk menggabungkan file yang ada di branch lain ke branch posisi saya sekarang.
+- **Kesulitan:** Terkadang masih lupa posisi branch sebelum melakukan merge. jadi saya biasanya pakai perintah git branch dahulu.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T2.2
+
+- **Status:** done
+- **Capaian:** Berhasil praktik mengubah kode index.html yang banyak menggunakan div bisa menjadi div generik jadi header/main/footer menggunakan HTML semantik.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T2.3
+
+- **Status:** done
+- **Capaian:** 1. Kalau <div> itu kaya kotak kosong, jadi screen reader tidak bisa mengetahui nya. akibatnya, screen reader hanya membacakan isi halaman tanpa mengetahui mana navigasi, mana konten utama, atau mana footer nya. dengan elemen semantik seperti nav, main, header, dan footer, screen reader dapat melihat struktur pada halaman, jadi pengguna lebih mudah berpindah ke bagian yang diinginkan dan memahami isi halaman.
+
+2. setelah saya pahami dan cari tau apa itu SEO, jadi elemen pada semnatik html seperti article dan section membantu SEO karna memberikan struktur pada isi halaman, jadi search engine lebih mudah memahami bagian bagian penting dari website dibanding jika semuanya hanya menggunakan div, yang tidak menjelaskan fungsi kontennya (karena div kotak kosong).
+
+- **Kesulitan:** Awalnya saya belum memahami hubungan antara HTML semantik dengan SEO, tetapi setelah mempelajari materi dan mencari referensi, saya mulai memahami bahwa elemen semantik tidak hanya membantu screen reader, tetapi juga membantu search engine memahami struktur halaman website.
+<!-- ENTRY END -->
