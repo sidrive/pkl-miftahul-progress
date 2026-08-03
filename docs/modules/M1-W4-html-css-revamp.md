@@ -10,10 +10,11 @@
 > **[Wajib Refleksi]** baru dianggap `done` kalau kamu bisa jelaskan pemahamannya pakai kata
 > sendiri, bukan cuma tampilannya jadi bagus.
 >
-> **Catatan penting soal `T5.3`:** minggu lalu, task "merge PR" sempat ditandai `done` padahal
-> proses review-nya sendiri belum pernah benar-benar terjadi. Minggu ini, jangan ulangi itu —
-> kalau mentor belum sempat review PR-mu, biarkan statusnya `in-progress` dan jujur tulis kenapa,
-> itu jauh lebih baik daripada menandai selesai duluan.
+> **Catatan soal review PR:** minggu lalu, task "merge PR" sempat ditandai `done` padahal proses
+> review-nya sendiri belum pernah benar-benar terjadi — jadi minggu ini, review PR **tidak lagi
+> jadi gerbang terpisah yang bikin task nge-gantung**. Kamu boleh langsung merge sendiri setelah
+> yakin (`T5.3`), tapi **jangan hapus/cleanup branch-nya** — PR itu akan dibahas & direview bareng
+> mentor sekalian saat sesi evaluasi (`T7`), jadi biarkan tetap ada sampai evaluasi selesai.
 >
 > **Kenapa ada bagian Git Recall Drill:** dari evaluasi Minggu 2 & 3, beberapa command Git masih
 > belum lancar diingat tanpa buka dokumentasi/AI. Bagian 1 bukan materi baru — murni latihan
@@ -317,30 +318,19 @@ Minimal 5 commit terpisah, masing-masing 1 langkah jelas, contoh:
 **Checklist selesai:** `git log --oneline` menunjukkan histori yang bisa dibaca sebagai cerita
 perkembangan, bukan 1 commit besar "revamp selesai".
 
-### `M1.W4.T5.3` — [Wajib — jangan ditandai `done` sebelum benar-benar terjadi] PR + review nyata
+### `M1.W4.T5.3` — Buat PR dan merge sendiri (review digabung ke sesi evaluasi)
 
 1. Push branch, buat PR seperti di Minggu 3.
-2. **Tunggu mentor benar-benar memberi komentar/review di PR-nya lewat GitHub** — bukan cuma bilang
-   "oke" di chat.
-3. **Kalau sampai waktunya isi log dan mentor belum sempat review**, tulis status `in-progress` dan
-   jelaskan di Kesulitan bahwa PR masih menunggu review — **ini bukan kegagalan**, ini justru
-   pelaporan yang jujur. Jangan tandai `done` duluan.
-4. Setelah benar-benar direview (dan diperbaiki kalau ada masukan), baru merge, dan **saat itu**
-   tandai `done`.
+2. **Merge sendiri setelah kamu yakin** — tidak perlu menunggu mentor review dulu secara terpisah
+   kayak yang sempat bikin bingung Minggu 3 kemarin.
+3. **Jangan hapus branch-nya dulu** — PR ini akan dibahas & direview bareng mentor sekalian pas
+   sesi evaluasi (`T7`). Baru boleh dibersihkan (`git branch -d`) setelah evaluasi selesai.
 
-**Contoh entry log (kalau masih menunggu review):**
-```markdown
-### Task: M1.W4.T5.3
-- **Status:** in-progress
-- **Capaian:** PR sudah dibuat: [link]. Masih menunggu review dari mentor.
-- **Kesulitan:** -
-```
-
-**Contoh entry log (setelah benar-benar direview & di-merge):**
+**Contoh entry log:**
 ```markdown
 ### Task: M1.W4.T5.3
 - **Status:** done
-- **Capaian:** PR [link] sudah direview mentor (ada masukan soal [x], sudah diperbaiki), dan sudah di-merge.
+- **Capaian:** PR [link] sudah dibuat & di-merge. Branch belum dihapus, nunggu dibahas bareng mentor pas evaluasi T7.
 - **Kesulitan:** -
 ```
 
@@ -376,8 +366,9 @@ halaman profil, dll) yang menerapkan semua skill minggu ini sekaligus.
 2. **Minimal 1 bagian pakai Flexbox, 1 bagian pakai Grid** — dan kamu bisa jelaskan kenapa masing-
    masing dipilih untuk bagian itu.
 3. **Responsive** — minimal 1 breakpoint, dicoba resize beneran (bukan cuma diasumsikan jalan).
-4. **Alur kerja benar**: branch → commit rapi (minimal 5 commit) → PR → **direview mentor secara
-   nyata** → merge (sama seperti `T5.3` — jangan tandai `done` sebelum review beneran terjadi).
+4. **Alur kerja benar**: branch → commit rapi (minimal 5 commit) → PR → merge sendiri (sama seperti
+   `T5.3`) — **jangan hapus branch/PR-nya**, karena akan dibahas & direview bareng mentor sekalian
+   pas evaluasi `T7`.
 5. **Bersih dari sisa-sisa iseng**: tidak ada CSS class yang di-declare tapi tidak dipakai, tidak
    ada komentar placeholder ("lorem ipsum", "TODO: nanti diisi") yang ketinggalan pas submit —
    cek ulang sebelum push, seperti pelajaran dari data lelucon yang sempat ketinggalan di project
@@ -391,7 +382,7 @@ Cukup pastikan repo/PR-nya bisa diakses, cantumkan link di entry log.
 ```markdown
 ### Task: M1.W4.T6
 - **Status:** done
-- **Capaian:** [ceritakan halaman apa yang dibuat, bagian mana pakai Flexbox/Grid & kenapa, link PR yang sudah direview & di-merge]
+- **Capaian:** [ceritakan halaman apa yang dibuat, bagian mana pakai Flexbox/Grid & kenapa, link PR yang sudah di-merge (branch belum dihapus, nunggu dibahas pas evaluasi)]
 - **Kesulitan:** [jujur aja]
 ```
 
@@ -403,8 +394,9 @@ Siapkan demo singkat (~15-20 menit) untuk mentor:
 
 1. **Tunjukkan project revamp (`T4`) dan proyek mandiri (`T6`) langsung di browser** — termasuk
    resize jendela browser live untuk membuktikan responsive-nya beneran jalan.
-2. Buka `git log` kedua project — tunjukkan histori commit yang rapi, dan buka PR yang sudah
-   **benar-benar direview** (bukan cuma di-merge tanpa proses).
+2. Buka `git log` kedua project — tunjukkan histori commit yang rapi, dan **buka PR-nya di GitHub
+   untuk dibahas & direview bareng mentor sekalian di sesi ini** (bukan direview terpisah
+   sebelumnya — ini titik review-nya).
 3. **Jelaskan pilihan Flexbox vs Grid** di tiap bagian layout — kenapa bagian itu Flexbox, kenapa
    bagian lain Grid.
 4. **Demo command Git secara acak dari ingatan** (mentor pilih beberapa command bebas, bukan cuma
