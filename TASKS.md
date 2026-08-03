@@ -95,9 +95,31 @@
 
 ### Minggu 4
 
-- [ ] <!-- id: M1.W4.T1 --> Review HTML semantik & CSS (flexbox/grid, responsive dasar)
-- [ ] <!-- id: M1.W4.T2 --> Revamp 1 project lama (to-do list) dengan HTML/CSS lebih rapi
-- [ ] <!-- id: M1.W4.T3 --> Commit history rapi (per fitur/perbaikan, bukan 1 commit besar)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W4-html-css-revamp.md`](../docs/modules/M1-W4-html-css-revamp.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+
+- HTML Semantik (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M1.W4.T1.1 --> Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing
+  - [ ] <!-- id: M1.W4.T1.2 --> Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T3`), ganti `<div>` yang polos jadi elemen semantik yang sesuai
+  - [ ] <!-- id: M1.W4.T1.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma "biar rapi keliatannya"
+- CSS Flexbox & Grid (dipecah jadi 5 sub-task):
+  - [ ] <!-- id: M1.W4.T2.1 --> Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`
+  - [ ] <!-- id: M1.W4.T2.2 --> Grid dasar: `display: grid`, `grid-template-columns`, `gap`
+  - [ ] <!-- id: M1.W4.T2.3 --> Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)
+  - [ ] <!-- id: M1.W4.T2.4 --> Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi
+  - [ ] <!-- id: M1.W4.T2.5 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)
+- Revamp project to-do list lama (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M1.W4.T3.1 --> Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang ("before") — struktur `<div>` generik semua, tidak responsive, dll
+  - [ ] <!-- id: M1.W4.T3.2 --> Refactor HTML jadi semantik (pakai hasil belajar bagian 1)
+  - [ ] <!-- id: M1.W4.T3.3 --> Refactor CSS pakai Flexbox/Grid + responsive (pakai hasil belajar bagian 2)
+  - [ ] <!-- id: M1.W4.T3.4 --> [Wajib Refleksi] Bandingkan before vs after (screenshot keduanya) — jelaskan perubahan spesifik apa saja dan alasannya, bukan cuma "jadi lebih rapi"
+- Commit history rapi & alur kerja yang benar (dipecah jadi 4 sub-task — **ini menegakkan lagi pelajaran dari insiden `T4.3`/`T4.4` Minggu 3**, di mana PR sempat ditandai ter-merge padahal belum pernah direview):
+  - [ ] <!-- id: M1.W4.T4.1 --> Kerjakan seluruh revamp ini di **branch terpisah** (bukan langsung di `main`) — kebiasaan dari Minggu 3
+  - [ ] <!-- id: M1.W4.T4.2 --> Commit per langkah kecil bermakna (minimal 5 commit terpisah: HTML semantik, layout Flexbox, layout Grid, responsive, cleanup — bukan 1 commit besar "revamp selesai")
+  - [ ] <!-- id: M1.W4.T4.3 --> **[Wajib — jangan ditandai `done` sebelum benar-benar terjadi]** Buat PR, dan **tunggu mentor benar-benar memberi review nyata di GitHub** sebelum merge — kalau mentor belum sempat review, task ini `in-progress`, BUKAN `done`
+  - [ ] <!-- id: M1.W4.T4.4 --> [Wajib Refleksi] Buka `git log` project ini — apakah histori commit-nya bisa "dibaca sebagai cerita" perkembangan (jelas urutan & isinya), atau malah berantakan/campur aduk? Evaluasi jujur pesan commit kamu sendiri
+- [ ] <!-- id: M1.W4.T5 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bikin 1 halaman statis baru dari nol (boleh landing page sederhana, portofolio mini, dll — bebas topik) yang menerapkan semua skill minggu ini: HTML semantik, Flexbox+Grid, responsive, lewat alur branch→PR→review nyata→merge, commit history rapi, **tanpa** CSS class nganggur/komentar placeholder tersisa. Lihat requirement lengkap di modul.
+- [ ] <!-- id: M1.W4.T6 --> Evaluasi Minggu 4: demo ke mentor — tunjukkan project revamp & proyek mandiri `T5` langsung di browser (termasuk resize responsive live), buka `git log` & PR yang sudah di-review nyata, jelaskan pilihan Flexbox vs Grid di tiap bagian + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 
 ---
 

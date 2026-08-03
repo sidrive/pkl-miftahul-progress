@@ -306,18 +306,93 @@
         "title": null,
         "tasks": [
           {
-            "id": "M1.W4.T1",
-            "text": "Review HTML semantik & CSS (flexbox/grid, responsive dasar)",
+            "id": "M1.W4.T1.1",
+            "text": "Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing",
             "done": false
           },
           {
-            "id": "M1.W4.T2",
-            "text": "Revamp 1 project lama (to-do list) dengan HTML/CSS lebih rapi",
+            "id": "M1.W4.T1.2",
+            "text": "Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T3`), ganti `<div>` yang polos jadi elemen semantik yang sesuai",
             "done": false
           },
           {
-            "id": "M1.W4.T3",
-            "text": "Commit history rapi (per fitur/perbaikan, bukan 1 commit besar)",
+            "id": "M1.W4.T1.3",
+            "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma \"biar rapi keliatannya\"",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2.1",
+            "text": "Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2.2",
+            "text": "Grid dasar: `display: grid`, `grid-template-columns`, `gap`",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2.3",
+            "text": "Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2.4",
+            "text": "Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T2.5",
+            "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T3.1",
+            "text": "Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang (\"before\") — struktur `<div>` generik semua, tidak responsive, dll",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T3.2",
+            "text": "Refactor HTML jadi semantik (pakai hasil belajar bagian 1)",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T3.3",
+            "text": "Refactor CSS pakai Flexbox/Grid + responsive (pakai hasil belajar bagian 2)",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T3.4",
+            "text": "[Wajib Refleksi] Bandingkan before vs after (screenshot keduanya) — jelaskan perubahan spesifik apa saja dan alasannya, bukan cuma \"jadi lebih rapi\"",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T4.1",
+            "text": "Kerjakan seluruh revamp ini di **branch terpisah** (bukan langsung di `main`) — kebiasaan dari Minggu 3",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T4.2",
+            "text": "Commit per langkah kecil bermakna (minimal 5 commit terpisah: HTML semantik, layout Flexbox, layout Grid, responsive, cleanup — bukan 1 commit besar \"revamp selesai\")",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T4.3",
+            "text": "**[Wajib — jangan ditandai `done` sebelum benar-benar terjadi]** Buat PR, dan **tunggu mentor benar-benar memberi review nyata di GitHub** sebelum merge — kalau mentor belum sempat review, task ini `in-progress`, BUKAN `done`",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T4.4",
+            "text": "[Wajib Refleksi] Buka `git log` project ini — apakah histori commit-nya bisa \"dibaca sebagai cerita\" perkembangan (jelas urutan & isinya), atau malah berantakan/campur aduk? Evaluasi jujur pesan commit kamu sendiri",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T5",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bikin 1 halaman statis baru dari nol (boleh landing page sederhana, portofolio mini, dll — bebas topik) yang menerapkan semua skill minggu ini: HTML semantik, Flexbox+Grid, responsive, lewat alur branch→PR→review nyata→merge, commit history rapi, **tanpa** CSS class nganggur/komentar placeholder tersisa. Lihat requirement lengkap di modul.",
+            "done": false
+          },
+          {
+            "id": "M1.W4.T6",
+            "text": "Evaluasi Minggu 4: demo ke mentor — tunjukkan project revamp & proyek mandiri `T5` langsung di browser (termasuk resize responsive live), buka `git log` & PR yang sudah di-review nyata, jelaskan pilihan Flexbox vs Grid di tiap bagian + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
