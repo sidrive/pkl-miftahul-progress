@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-31",
+    "task": "M1.W3.T6",
+    "status": "done",
+    "capaian": "sudah melakukan evaluasi untuk taks T6.",
+    "kesulitan": "evaluasi berjalan dengan lancar, semua pertanyan berhasil dijawab dan di jelaskan dengan cukup baik."
+  },
+  {
     "date": "2026-07-30",
     "task": "M1.W3.T5",
     "status": "done",
@@ -16,9 +23,9 @@
   {
     "date": "2026-07-29",
     "task": "M1.W3.T4.3",
-    "status": "---",
-    "capaian": "---",
-    "kesulitan": "---"
+    "status": "done",
+    "capaian": "Berhasil mengeksekusi alur Merge Pull Request (PR) di GitHub secara mandiri. Memastikan seluruh checks aman, menyelesaikan alur merge ke branch `main` remote, lalu melakukan `git pull origin main` di lokal agar file tetap ter-sync.",
+    "kesulitan": "belum coba untuk merge pull-request mini project nya."
   },
   {
     "date": "2026-07-29",

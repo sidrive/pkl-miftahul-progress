@@ -277,7 +277,7 @@
           {
             "id": "M1.W3.T4.3",
             "text": "Review PR bareng mentor: minta mentor kasih komentar/review di PR-nya (lewat GitHub, bukan chat biasa), coba respons/perbaiki kalau ada masukan",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W3.T4.4",
@@ -297,7 +297,7 @@
           {
             "id": "M1.W3.T6",
             "text": "Evaluasi Minggu 3: demo ke mentor — praktik branching & merge langsung, tunjukkan PR yang sudah dibuat & di-merge di `T5`, ceritakan proses resolve conflict yang dialami + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
