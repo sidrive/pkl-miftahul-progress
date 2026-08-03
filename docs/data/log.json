@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-08-03",
+    "task": "M1.W4.T2.3",
+    "status": "done",
+    "capaian": "1. Kalau <div> itu kaya kotak kosong, jadi screen reader tidak bisa mengetahui nya. akibatnya, screen reader hanya membacakan isi halaman tanpa mengetahui mana navigasi, mana konten utama, atau mana footer nya. dengan elemen semantik seperti nav, main, header, dan footer, screen reader dapat melihat struktur pada halaman, jadi pengguna lebih mudah berpindah ke bagian yang diinginkan dan memahami isi halaman.",
+    "kesulitan": "Awalnya saya belum memahami hubungan antara HTML semantik dengan SEO, tetapi setelah mempelajari materi dan mencari referensi, saya mulai memahami bahwa elemen semantik tidak hanya membantu screen reader, tetapi juga membantu search engine memahami struktur halaman website."
+  },
+  {
+    "date": "2026-08-03",
+    "task": "M1.W4.T2.2",
+    "status": "done",
+    "capaian": "Berhasil praktik mengubah kode index.html yang banyak menggunakan div bisa menjadi div generik jadi header/main/footer menggunakan HTML semantik.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-03",
+    "task": "M1.W4.T1.2",
+    "status": "done",
+    "capaian": "`git branch` = Saya pakai perintah ini sebelum melakukan git merge agar tidak salah posisi branch.",
+    "kesulitan": "Terkadang masih lupa posisi branch sebelum melakukan merge. jadi saya biasanya pakai perintah git branch dahulu."
+  },
+  {
+    "date": "2026-08-03",
+    "task": "M1.W4.T1.1",
+    "status": "done",
+    "capaian": "Siklus penuh berhasil dari ingatan. Yang lancar: init/add/commit/branch. Yang sempat ragu: urutan merge balik ke main.",
+    "kesulitan": "Saat saya mencoba masih ingat semua perintah git seperti bikin branch baru, git merge, git commit dan dipush ke github dll tanpa kesusahan. yang masih ragu paling posisi di branch mana, jadi saya sering pakai \"git branch\""
+  },
+  {
     "date": "2026-07-31",
     "task": "M1.W3.T6",
     "status": "done",

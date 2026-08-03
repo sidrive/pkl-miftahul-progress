@@ -308,17 +308,17 @@
           {
             "id": "M1.W4.T1.1",
             "text": "**TANPA modul/AI/catatan**, lakukan 1 siklus penuh dari nol: `git init`, buat 2 file, `add`+`commit` minimal 3x terpisah, buat branch baru & pindah, commit lagi di branch itu, `merge` balik ke `main`, `push` ke GitHub. Catat jujur command mana yang lancar dari ingatan, mana yang sempat harus buka catatan/AI",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T1.2",
             "text": "[Wajib Refleksi] Buat \"cheat sheet pribadi\": daftar command yang tadi sempat lupa/ragu di `T1.1`, tulis command + fungsinya pakai bahasamu sendiri (bukan disalin persis dari modul) — ini jadi rujukan cepat pribadi ke depan, bukan pengganti ingatan",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T1.3",
             "text": "Ulangi simulasi \"push ditolak\" (seperti Minggu 2 `T4.4`) dari nol — kali ini coba selesaikan dulu dari ingatan, TANPA buka modul asli; kalau benar-benar lupa baru boleh cek cheat sheet pribadi dari `T1.2` (bukan langsung ke modul/AI)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T1.4",
@@ -328,22 +328,22 @@
           {
             "id": "M1.W4.T2.1",
             "text": "Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T2.2",
             "text": "Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T4`), ganti `<div>` yang polos jadi elemen semantik yang sesuai",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T2.3",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma \"biar rapi keliatannya\"",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T3.1",
             "text": "Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T3.2",
