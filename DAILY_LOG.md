@@ -623,3 +623,34 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 - **Kesulitan:** Awalnya saya belum memahami hubungan antara HTML semantik dengan SEO, tetapi setelah mempelajari materi dan mencari referensi, saya mulai memahami bahwa elemen semantik tidak hanya membantu screen reader, tetapi juga membantu search engine memahami struktur halaman website.
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-04
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T3.2
+
+- **Status:** done
+- **Capaian:** Berhasil bikin layout grid 3 kolom pakai grid-template-columns dan mencoba mengubah tampilan dan paham fungsi <fr>.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T3.4
+
+- **Status:** done
+- **Capaian:** Media query berhasil, galeri berubah dari 3 kolom jadi 1 kolom di bawah 600px (sudah dicoba resize langsung).
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T3.5
+
+- **Status:** done
+- **Capaian:** kita pakai flexbox saat ingin membuat sebuah navbar pada suatu website, nah navbar ini kan biasanya lurus aja 1 dimensi/garis lurus, jadi cocok menggunakan flexbox. contoh nyata saat ingin membuat sebuah navbar yang berisi tombol dan logo seperti pada T3.3. dan kita pake grid saat ingin membuat sebuah layout dengan banyak item/kolom. seperti kita membuat sebuah web produk, nah untuk pilihan produknya kita pakai grid biar rapi susunan nya. contoh nyata bikin galeri/pilihan produk pada web.
+- **Kesulitan:** pada grid ada kode yang bertuliskan "grid-template-columns: repeat(3, 1fr);", nah disini saya bingung "fr" ini untuk apa, saya cari tau rupanya mirip dengan "vh".
+<!-- ENTRY END -->

@@ -109,10 +109,10 @@
   - [x] <!-- id: M1.W4.T2.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa HTML semantik penting untuk aksesibilitas (screen reader) dan SEO — bukan cuma "biar rapi keliatannya"
 - CSS Flexbox & Grid (dipecah jadi 5 sub-task):
   - [x] <!-- id: M1.W4.T3.1 --> Flexbox dasar: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`
-  - [ ] <!-- id: M1.W4.T3.2 --> Grid dasar: `display: grid`, `grid-template-columns`, `gap`
-  - [ ] <!-- id: M1.W4.T3.3 --> Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)
-  - [ ] <!-- id: M1.W4.T3.4 --> Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi
-  - [ ] <!-- id: M1.W4.T3.5 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)
+  - [x] <!-- id: M1.W4.T3.2 --> Grid dasar: `display: grid`, `grid-template-columns`, `gap`
+  - [x] <!-- id: M1.W4.T3.3 --> Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)
+  - [x] <!-- id: M1.W4.T3.4 --> Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi
+  - [x] <!-- id: M1.W4.T3.5 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)
 - Revamp project to-do list lama (dipecah jadi 4 sub-task):
   - [ ] <!-- id: M1.W4.T4.1 --> Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang ("before") — struktur `<div>` generik semua, tidak responsive, dll
   - [ ] <!-- id: M1.W4.T4.2 --> Refactor HTML jadi semantik (pakai hasil belajar bagian 2)
