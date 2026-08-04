@@ -348,22 +348,22 @@
           {
             "id": "M1.W4.T3.2",
             "text": "Grid dasar: `display: grid`, `grid-template-columns`, `gap`",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T3.3",
             "text": "Praktik: bikin 1 layout kecil pakai Flexbox (misal navbar horizontal) DAN 1 layout kecil pakai Grid (misal galeri kartu 3 kolom)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T3.4",
             "text": "Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T3.5",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T4.1",

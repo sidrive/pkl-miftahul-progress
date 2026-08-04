@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-08-04",
+    "task": "M1.W4.T3.5",
+    "status": "done",
+    "capaian": "kita pakai flexbox saat ingin membuat sebuah navbar pada suatu website, nah navbar ini kan biasanya lurus aja 1 dimensi/garis lurus, jadi cocok menggunakan flexbox. contoh nyata saat ingin membuat sebuah navbar yang berisi tombol dan logo seperti pada T3.3. dan kita pake grid saat ingin membuat sebuah layout dengan banyak item/kolom. seperti kita membuat sebuah web produk, nah untuk pilihan produknya kita pakai grid biar rapi susunan nya. contoh nyata bikin galeri/pilihan produk pada web.",
+    "kesulitan": "pada grid ada kode yang bertuliskan \"grid-template-columns: repeat(3, 1fr);\", nah disini saya bingung \"fr\" ini untuk apa, saya cari tau rupanya mirip dengan \"vh\"."
+  },
+  {
+    "date": "2026-08-04",
+    "task": "M1.W4.T3.4",
+    "status": "done",
+    "capaian": "Media query berhasil, galeri berubah dari 3 kolom jadi 1 kolom di bawah 600px (sudah dicoba resize langsung).",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-04",
+    "task": "M1.W4.T3.2",
+    "status": "done",
+    "capaian": "Berhasil bikin layout grid 3 kolom pakai grid-template-columns dan mencoba mengubah tampilan dan paham fungsi <fr>.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-03",
     "task": "M1.W4.T2.3",
     "status": "done",
