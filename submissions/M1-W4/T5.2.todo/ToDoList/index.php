@@ -73,7 +73,7 @@ mysqli_query(
         }
 
         button {
-            background: #0284c7;
+            background: #36a13fff;
             color: white;
             font-weight: bold;
             border: none;
@@ -144,7 +144,7 @@ mysqli_query(
             </div>
 
             <div class="form-group">
-                <label for="label">Label</label>
+                <label for="label">Label :</label>
                 <select id="label" name="label">
                     <option value="KK">KK</option>
                     <option value="MTK">MTK</option>
