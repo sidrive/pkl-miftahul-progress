@@ -398,12 +398,12 @@
           {
             "id": "M1.W4.T5.3",
             "text": "Buat PR dan merge sendiri setelah yakin (tidak perlu menunggu review async terpisah) — **PR ini akan dibahas & direview bareng mentor sekalian saat sesi evaluasi `T7`**, jadi jangan dihapus/di-cleanup dulu sebelum evaluasi berlangsung",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T5.4",
             "text": "[Wajib Refleksi] Buka `git log` project ini — apakah histori commit-nya bisa \"dibaca sebagai cerita\" perkembangan (jelas urutan & isinya), atau malah berantakan/campur aduk? Evaluasi jujur pesan commit kamu sendiri",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T6",
