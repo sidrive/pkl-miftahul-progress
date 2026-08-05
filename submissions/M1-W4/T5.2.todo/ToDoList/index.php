@@ -32,6 +32,9 @@ mysqli_query(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List DATETIME</title>
     <style>
+        header {
+            margin-bottom: 15px;            
+        }
         /* Reset & Tampilan Utama */
         * {
             box-sizing: border-box;
