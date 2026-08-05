@@ -139,7 +139,7 @@ mysqli_query(
     <section class="sec-form">
         <form method="post">
             <div class="form-group">
-                <label for="nama">Nama Tugas</label>
+                <label for="nama">Nama Tugas :</label>
                 <input type="text" id="nama" name="nama" required>
             </div>
 
@@ -160,12 +160,12 @@ mysqli_query(
             </div>
 
             <div class="form-group">
-                <label for="deskripsi">Deskripsi</label>
+                <label for="deskripsi">Deskripsi :</label>
                 <textarea id="deskripsi" name="deskripsi"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="deadline">Deadline</label>
+                <label for="deadline">Deadline :</label>
                 <input type="datetime-local" id="deadline" name="deadline" required>
             </div>
 
