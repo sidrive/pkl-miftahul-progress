@@ -702,3 +702,24 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Capaian:** saya membuat folder baru di (...\submissions\M1-W4\T5.2.todo>). saya membuat folder T5.2.todo yang isinya adalah project To Do List, saya juga udah buat branch baru dengan nama "revamp-todo-list".
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.3
+
+- **Status:** done
+- **Capaian:** PR [https://github.com/sidrive/pkl-miftahul-progress/pull/1] sudah dibuat & di-merge. Branch revamp-todo-list belum dihapus, nunggu dibahas bareng mentor pas evaluasi T7. udah di push juga dari branch lain
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.4
+
+- **Status:** done
+- **Capaian:** 1. orang lain dapat baca dan paham histori commit untuk project To Do List. semua perubahan di commit 1 per satu, jadi tiap perubahan ada catatan atau histori nya.
+
+2. menurut saya ada beberapa pesan commit yang tidak jelas (contoh: 177beaf chekpoint tanggal 5 agustus, mau melakukan PR.harusnya: 5-agustus-2026 update daily log dan tasks M1.W4.T5). seharus nya commit yang jelas itu commit yang orang lain (bukan pembuat commit) bisa baca dan paham alur perubahan dari commit.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
