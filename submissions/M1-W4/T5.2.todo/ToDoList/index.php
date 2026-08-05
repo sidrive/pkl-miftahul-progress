@@ -132,7 +132,7 @@ mysqli_query(
         <h2>Tambah Tugas</h2>
     </header>
 
-    <!-- SECTION 1: FORM INPUT -->
+    <!-- FORM INPUT -->
     <section class="sec-form">
         <form method="post">
             <div class="form-group">
