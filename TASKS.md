@@ -114,13 +114,13 @@
   - [x] <!-- id: M1.W4.T3.4 --> Responsive dasar: `@media` query, minimal 1 breakpoint (misal layout berubah di bawah 600px) — coba resize browser langsung, jangan cuma asumsi
   - [x] <!-- id: M1.W4.T3.5 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kapan pilih Flexbox, kapan pilih Grid — kasih 1 contoh kasus nyata masing-masing (bukan definisi umum dari dokumentasi)
 - Revamp project to-do list lama (dipecah jadi 4 sub-task):
-  - [ ] <!-- id: M1.W4.T4.1 --> Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang ("before") — struktur `<div>` generik semua, tidak responsive, dll
-  - [ ] <!-- id: M1.W4.T4.2 --> Refactor HTML jadi semantik (pakai hasil belajar bagian 2)
-  - [ ] <!-- id: M1.W4.T4.3 --> Refactor CSS pakai Flexbox/Grid + responsive (pakai hasil belajar bagian 3)
-  - [ ] <!-- id: M1.W4.T4.4 --> [Wajib Refleksi] Bandingkan before vs after (screenshot keduanya) — jelaskan perubahan spesifik apa saja dan alasannya, bukan cuma "jadi lebih rapi"
+  - [x] <!-- id: M1.W4.T4.1 --> Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang ("before") — struktur `<div>` generik semua, tidak responsive, dll
+  - [x] <!-- id: M1.W4.T4.2 --> Refactor HTML jadi semantik (pakai hasil belajar bagian 2)
+  - [x] <!-- id: M1.W4.T4.3 --> Refactor CSS pakai Flexbox/Grid + responsive (pakai hasil belajar bagian 3)
+  - [x] <!-- id: M1.W4.T4.4 --> [Wajib Refleksi] Bandingkan before vs after (screenshot keduanya) — jelaskan perubahan spesifik apa saja dan alasannya, bukan cuma "jadi lebih rapi"
 - Commit history rapi & alur kerja yang benar (dipecah jadi 4 sub-task — **ini menegakkan lagi pelajaran dari insiden `T4.3`/`T4.4` Minggu 3**, di mana PR sempat ditandai ter-merge padahal belum pernah direview):
-  - [ ] <!-- id: M1.W4.T5.1 --> Kerjakan seluruh revamp ini di **branch terpisah** (bukan langsung di `main`) — kebiasaan dari Minggu 3
-  - [ ] <!-- id: M1.W4.T5.2 --> Commit per langkah kecil bermakna (minimal 5 commit terpisah: HTML semantik, layout Flexbox, layout Grid, responsive, cleanup — bukan 1 commit besar "revamp selesai")
+  - [x] <!-- id: M1.W4.T5.1 --> Kerjakan seluruh revamp ini di **branch terpisah** (bukan langsung di `main`) — kebiasaan dari Minggu 3
+  - [x] <!-- id: M1.W4.T5.2 --> Commit per langkah kecil bermakna (minimal 5 commit terpisah: HTML semantik, layout Flexbox, layout Grid, responsive, cleanup — bukan 1 commit besar "revamp selesai")
   - [ ] <!-- id: M1.W4.T5.3 --> Buat PR dan merge sendiri setelah yakin (tidak perlu menunggu review async terpisah) — **PR ini akan dibahas & direview bareng mentor sekalian saat sesi evaluasi `T7`**, jadi jangan dihapus/di-cleanup dulu sebelum evaluasi berlangsung
   - [ ] <!-- id: M1.W4.T5.4 --> [Wajib Refleksi] Buka `git log` project ini — apakah histori commit-nya bisa "dibaca sebagai cerita" perkembangan (jelas urutan & isinya), atau malah berantakan/campur aduk? Evaluasi jujur pesan commit kamu sendiri
 - [ ] <!-- id: M1.W4.T6 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bikin 1 halaman statis baru dari nol (boleh landing page sederhana, portofolio mini, dll — bebas topik) yang menerapkan semua skill minggu ini: HTML semantik, Flexbox+Grid, responsive, lewat alur branch→PR→merge, commit history rapi, **tanpa** CSS class nganggur/komentar placeholder tersisa (PR-nya dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah dulu). Lihat requirement lengkap di modul.
