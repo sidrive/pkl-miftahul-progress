@@ -702,3 +702,12 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Capaian:** saya membuat folder baru di (...\submissions\M1-W4\T5.2.todo>). saya membuat folder T5.2.todo yang isinya adalah project To Do List, saya juga udah buat branch baru dengan nama "revamp-todo-list".
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.3
+
+- **Status:** done
+- **Capaian:** PR [https://github.com/sidrive/pkl-miftahul-progress/pull/1] sudah dibuat & di-merge. Branch belum dihapus, nunggu dibahas bareng mentor pas evaluasi T7. sudah saya push juga untuk di PR.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
