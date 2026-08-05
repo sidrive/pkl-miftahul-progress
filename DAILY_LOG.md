@@ -654,3 +654,51 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Capaian:** kita pakai flexbox saat ingin membuat sebuah navbar pada suatu website, nah navbar ini kan biasanya lurus aja 1 dimensi/garis lurus, jadi cocok menggunakan flexbox. contoh nyata saat ingin membuat sebuah navbar yang berisi tombol dan logo seperti pada T3.3. dan kita pake grid saat ingin membuat sebuah layout dengan banyak item/kolom. seperti kita membuat sebuah web produk, nah untuk pilihan produknya kita pakai grid biar rapi susunan nya. contoh nyata bikin galeri/pilihan produk pada web.
 - **Kesulitan:** pada grid ada kode yang bertuliskan "grid-template-columns: repeat(3, 1fr);", nah disini saya bingung "fr" ini untuk apa, saya cari tau rupanya mirip dengan "vh".
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-05
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T4.1
+
+- **Status:** done
+- **Capaian:** saya sudah melihat dan mengaudit project To-Do List lama berbasis PHP/MySQL dan mencatat masalah :
+  1. Index belum semantik: masih banyak pakai `<div>` tanpa semantik, dan pakai `<br>` untuk mengatur jarak form.
+  2. tabel tidak responsive: tampilan tugas menggunakan `<table>` dengan 7 kolom dan lebar container dikunci di `800px`, menyebabkan layar jebol/overflow saat dibuka di HP / tampilan saat diperkecil.
+  3. tidak ada Flexbox/Grid untuk layouting biar rapi dan belum ada `@media` query untuk tampilam fleksibel.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T4.3
+
+- **Status:** done
+- **Capaian:** udah rapihin tampilan CSS pake Flexbox di bagian form input dan filter status biar posisinya pas dan gak perlu pake tag `<br>` manual lagi, nambahin juga pembungkus tabel biar bisa di-scroll ke samping dan pake media query biar pas dibuka di layar HP tampilannya gak jebol atau berantakan.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T4.4
+
+- **Status:** done
+- **Capaian:** saya udah bandingin dan :
+
+1. Before: Index masih banyak pakai `<div>` biasa dan banyak `<br>` berulang. tampilan jadi jebol/overflow pas dibuka di layar HP / persempit tampilan.
+
+2. After: sekarang Index udah rapi dan semantik. tampilan pake Flexbox jadi rapi otomatis, dan udah responsive pakenya `@media` query buat layar kecil. tapi setelah pakai itu tampilannya sedikit mirip jika pakai bootstrap.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.2
+
+- **Status:** done
+- **Capaian:** saya membuat folder baru di (...\submissions\M1-W4\T5.2.todo>). saya membuat folder T5.2.todo yang isinya adalah project To Do List, saya juga udah buat branch baru dengan nama "revamp-todo-list".
+- **Kesulitan:** ---
+<!-- ENTRY END -->
