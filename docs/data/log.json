@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-08-05",
+    "task": "M1.W4.T5.2",
+    "status": "done",
+    "capaian": "saya membuat folder baru di (...\\submissions\\M1-W4\\T5.2.todo>). saya membuat folder T5.2.todo yang isinya adalah project To Do List, saya juga udah buat branch baru dengan nama \"revamp-todo-list\".",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-05",
+    "task": "M1.W4.T4.4",
+    "status": "done",
+    "capaian": "saya udah bandingin dan :",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-05",
+    "task": "M1.W4.T4.3",
+    "status": "done",
+    "capaian": "udah rapihin tampilan CSS pake Flexbox di bagian form input dan filter status biar posisinya pas dan gak perlu pake tag `<br>` manual lagi, nambahin juga pembungkus tabel biar bisa di-scroll ke samping dan pake media query biar pas dibuka di layar HP tampilannya gak jebol atau berantakan.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-05",
+    "task": "M1.W4.T4.1",
+    "status": "done",
+    "capaian": "saya sudah melihat dan mengaudit project To-Do List lama berbasis PHP/MySQL dan mencatat masalah :",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-04",
     "task": "M1.W4.T3.5",
     "status": "done",

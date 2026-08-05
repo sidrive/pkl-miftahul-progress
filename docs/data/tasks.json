@@ -368,32 +368,32 @@
           {
             "id": "M1.W4.T4.1",
             "text": "Audit project lama: screenshot/catat masalah HTML/CSS yang ada sekarang (\"before\") — struktur `<div>` generik semua, tidak responsive, dll",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T4.2",
             "text": "Refactor HTML jadi semantik (pakai hasil belajar bagian 2)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T4.3",
             "text": "Refactor CSS pakai Flexbox/Grid + responsive (pakai hasil belajar bagian 3)",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T4.4",
             "text": "[Wajib Refleksi] Bandingkan before vs after (screenshot keduanya) — jelaskan perubahan spesifik apa saja dan alasannya, bukan cuma \"jadi lebih rapi\"",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T5.1",
             "text": "Kerjakan seluruh revamp ini di **branch terpisah** (bukan langsung di `main`) — kebiasaan dari Minggu 3",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T5.2",
             "text": "Commit per langkah kecil bermakna (minimal 5 commit terpisah: HTML semantik, layout Flexbox, layout Grid, responsive, cleanup — bukan 1 commit besar \"revamp selesai\")",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T5.3",
