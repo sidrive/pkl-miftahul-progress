@@ -173,7 +173,7 @@ mysqli_query(
         </form>
     </section>
 
-    <hr style="margin: 30px 0;">
+    <hr style="margin: 30px 0;" color="red;">
 
     <!-- SECTION 2: DAFTAR TUGAS -->
     <section class="sec-list">
