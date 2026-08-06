@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHOTO EXHIBITION</title>
+    <style>
+      /* Reset standar & font dasar */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Times New Roman", serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2nXouPN-EkUJei4PCXPHcIN3YPUf8M161LcCiANYRzp3znpW0ARwXfQU9&s=10");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5eb86d;
+        color: #fff;
+        padding: 1rem;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.8rem;
+      }
+      nav a:hover {
+        text-decoration: underline;
+        color: #ffcc00;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      main section {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        color: #ffffff;
+        padding: 3rem 2rem;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 600px;
+      }
+      main h2 {
+        margin-bottom: 0.8rem;
+        letter-spacing: 2px;
+      }
+      footer {
+        background-color: #5eb86d;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          gap: 0.8rem;
+          text-align: center;
+        }
+
+        nav a {
+          margin: 0 0.4rem;
+        }
+
+        .gallery-container {
+          padding: 0.5rem;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>GALLERY G</h1>
+      <nav>
+        <a href="index.html">Home</a> | <a href="galeri.html">Gallery</a> |
+        <a href="kontak.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div>
+          <h2>WELCOME TO GALLERY G</h2>
+          <p><em>-where abandoned places turn into memories-</em></p>
+          <br />
+          <p>
+            Click <strong>Gallery</strong> on navbar to explore our collection!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 GALLERY G by Gazi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

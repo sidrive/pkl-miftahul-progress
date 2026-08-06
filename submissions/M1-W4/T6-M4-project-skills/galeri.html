@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHOTO EXHIBITION - GALLERY G</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Times New Roman", serif;
+        background-color: #cecaca;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5eb86d;
+        color: #fff;
+        padding: 1rem 2rem;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.8rem;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+        color: #ffcc00;
+      }
+
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      .gallery-title {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .gallery-title h2 {
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card h3 {
+        padding: 0.8rem 1rem 0.3rem 1rem;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        padding: 0 1rem 1rem 1rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        background-color: #5eb86d;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          gap: 0.8rem;
+          text-align: center;
+        }
+
+        nav a {
+          margin: 0 0.4rem;
+        }
+
+        .gallery-container {
+          padding: 0.5rem;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>GALLERY G</h1>
+      <nav>
+        <a href="index.html">Home</a> | <a href="galeri.html">Gallery</a> |
+        <a href="kontak.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-title">
+        <h2>PHOTO EXHIBITION GALLERY</h2>
+        <p>Explore a curated collection of stunning photographs.</p>
+      </section>
+
+      <section class="gallery-container">
+        <article class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyvvgRnQzlQHH-lx1ZS2afVTS3TwunEhs71AkZWvmcTwbsDgQtXAzbdrU&s=10"
+            alt="Taman Air"
+          />
+          <h3>Taman Air</h3>
+          <p>Suasanya yang sepi, membuat kenyamanan.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi1nndzIVe6u13xOFrt4TSd0vJbXTlrJrUtN9d70fWFVcMW0ukFg5zg6U&s=10"
+            alt="Taman Hiburan"
+          />
+          <h3>Taman Hiburan</h3>
+          <p>
+            Taman Hiburan yang sepi untuk sebagian orang itu seram, tapi
+            sebenarnya itu menenangkan.
+          </p>
+        </article>
+        <article class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_r2TpQ3X1ap-n_8KF5N-Xknd6tXeO2dYvHV9RcGwPAA&s=10"
+            alt="Ayunan Karat"
+          />
+          <h3>Ayunan Karat</h3>
+          <p>Ada seni estetika dalam gerakan ayunan yang berkarat.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlNTzmif75b3YuyBG8LePwbMXKtF-1FUFozKe57z5eOA&s=10"
+            alt="Mainan Taman"
+          />
+          <h3>Mainan Taman</h3>
+          <p>Tamain main yang terbengkalai.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 GALLERY G by Gazi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
