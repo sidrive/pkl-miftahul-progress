@@ -408,7 +408,7 @@
           {
             "id": "M1.W4.T6",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bikin 1 halaman statis baru dari nol (boleh landing page sederhana, portofolio mini, dll — bebas topik) yang menerapkan semua skill minggu ini: HTML semantik, Flexbox+Grid, responsive, lewat alur branch→PR→merge, commit history rapi, **tanpa** CSS class nganggur/komentar placeholder tersisa (PR-nya dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah dulu). Lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T7",
