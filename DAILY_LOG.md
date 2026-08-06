@@ -723,3 +723,16 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-06
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T6
+
+- **Status:** done
+- **Capaian:** saya membuat sebuah halaman galeri foto "Gallery G" yang berisi 3 halaman (index.html, galeri.html, kontak.html). saya menaruh folder tugasnya di ../submissions/M1-W4/T6-M4-project-skilss. pengerjaannya saya mulai dengan menyusun struktur HTML semantik pada tiga halaman utama, yaitu index.html, galeri.html, dan kontak.html. saya menggunakan flexbox pada bagian header agar memunahdan untuk membuat navbar dan tulisan logo dari web. saya pakai grid pada bagian tampilan foto, saya pakai biar tampilang foto jadi rapi dan tertata dengan bagus. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/2].
+- **Kesulitan:** awalnya bagian footer ga menempel di paling bawah layar, untuk grid awalnya berantakan kali soalnya banyak eror juga ya dan penggunaan kode yang cukup asing bagi saya untuk beberapa bagian, nah untuk tampilan responsive saya jujur masih agak bingung cara pemakaian dan penyesuaian nya. sebelumnya saya kan buat web banyak pakai <div> dan saat pakai HTML semantik ini jujur awalnya agak kaget dan membingungkan, saya pelajari dan tanya ai katanya sebenarnya perubahan nya tidak terlalu banyak. seperti harus ada main, section dll nya, kurangin penggunaan <div>. boleh ada div tapi tidak sebanyak saat awal awal saya buat web. untuk halaman awal saya buat itu index.html, yang lalu saya copy dan ubah nama menjadi galeri.html dan kontak.html, dan saya ubah kode yang ada didalam nya, ga terlalu banyak berubah, cuma tampilan nya agak sedikit berbeda lah, ya mungkin segitu lah dulu.
+<!-- ENTRY END -->
