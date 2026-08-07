@@ -323,7 +323,7 @@
           {
             "id": "M1.W4.T1.4",
             "text": "Teach-back singkat ke mentor: jelaskan lisan garis besar alur kerja Git harian (branch → commit → push/pull → PR → merge) **tanpa membaca catatan sama sekali**",
-            "done": false
+            "done": true
           },
           {
             "id": "M1.W4.T2.1",
@@ -413,7 +413,7 @@
           {
             "id": "M1.W4.T7",
             "text": "Evaluasi Minggu 4: demo ke mentor — tunjukkan project revamp & proyek mandiri `T6` langsung di browser (termasuk resize responsive live), **review bareng PR dari `T5`/`T6` sekalian di sesi ini**, buka `git log`, jelaskan pilihan Flexbox vs Grid di tiap bagian, DAN demo command Git secara acak dari ingatan (cek hasil `T1`) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       }
