@@ -132,8 +132,28 @@
 
 ### Minggu 1
 
-- [ ] <!-- id: M2.W1.T1 --> ES6+ syntax: let/const, arrow function, template literal, destructuring
-- [ ] <!-- id: M2.W1.T2 --> Latihan soal kecil ES6+ (5–10 soal)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M2-W1-es6-modern-js.md`](../docs/modules/M2-W1-es6-modern-js.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+
+- `let`/`const` vs `var` (dipecah jadi 2 sub-task):
+  - [ ] <!-- id: M2.W1.T1.1 --> Praktik: buktikan langsung beda scope `var` (function-scope, "bocor" keluar blok `if`/`for`) vs `let`/`const` (block-scope, terkunci di dalam blok)
+  - [ ] <!-- id: M2.W1.T1.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `var` dianggap "berbahaya" di kode modern, dan kapan (kalau ada) masih masuk akal dipakai
+- Arrow function (dipecah jadi 3 sub-task — **ini yang paling sering disalahpahami**, mirip kejadian `fr` vs `vh` minggu lalu, arrow function BUKAN cuma "versi singkat" dari function biasa):
+  - [ ] <!-- id: M2.W1.T2.1 --> Sintaks dasar arrow function, bandingkan dengan `function` biasa untuk kasus sederhana (tanpa `this`)
+  - [ ] <!-- id: M2.W1.T2.2 --> Praktik: buktikan langsung beda `this` antara arrow function dan `function` biasa di dalam sebuah method objek (bikin 1 objek dengan method versi `function` dan versi arrow, bandingkan `this` di dalamnya)
+  - [ ] <!-- id: M2.W1.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: arrow function itu BUKAN cuma "versi singkat" dari `function` — apa beda fundamentalnya (soal `this`), dan kasih 1 contoh situasi nyata di mana salah pilih salah satu bisa bikin bug
+- Template literal (dipecah jadi 2 sub-task):
+  - [ ] <!-- id: M2.W1.T3.1 --> Praktik: `${...}` interpolation dan string multi-baris, bandingkan dengan concatenation `+` biasa
+  - [ ] <!-- id: M2.W1.T3.2 --> [Wajib Refleksi] Kapan pakai template literal, kapan concatenation `+` masih masuk akal — kasih 1 contoh kasus nyata
+- Destructuring (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M2.W1.T4.1 --> Destructuring array dasar (`const [a, b] = [1, 2]`)
+  - [ ] <!-- id: M2.W1.T4.2 --> Destructuring object + default value + rename (`const {nama: n = "?"} = obj`)
+  - [ ] <!-- id: M2.W1.T4.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa destructuring lebih enak dibanding akses manual (`obj.properti` berkali-kali), kasih 1 contoh kode sebelum/sesudah
+- Kuis & Latihan Soal (dipecah jadi 2 sub-task):
+  - [ ] <!-- id: M2.W1.T5.1 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: minimal 8 soal campuran (let/const, `this` arrow vs function, template literal, destructuring) — baru cek jawabannya setelahnya
+  - [ ] <!-- id: M2.W1.T5.2 --> Latihan soal kecil ES6+ (5-10 soal coding kecil, boleh dicari/dibuat sendiri) — kerjakan dulu semampunya SEBELUM tanya AI
+- [ ] <!-- id: M2.W1.T6 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Refactor 1 script/bagian kode lama (boleh bagian JS dari project to-do list Minggu 4, boleh script baru) supaya pakai ES6+ penuh (`let`/`const`, arrow function DI TEMPAT YANG TEPAT — bukan asal ganti semua `function`, template literal, destructuring), sengaja sertakan minimal 1 kasus nyata di mana pilihan arrow vs `function` biasa penting (bukan cuma soal gaya penulisan). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.
+- [ ] <!-- id: M2.W1.T7 --> Evaluasi Minggu ini: demo ke mentor — tunjukkan hasil refactor `T6` di browser/terminal, jelaskan tiap keputusan (kapan arrow vs function biasa, kapan destructuring dipakai), review PR bareng, DAN jawab soal live yang menyasar kesalahpahaman umum (`this` arrow function) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 
