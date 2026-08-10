@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-10",
+    "task": "M1.W4.T2.3",
+    "status": "done",
+    "capaian": "1. menurut saya beda nya ada di 'this', jadi kalo pakai function, 'this' bisa menunjukkan ke object yang panggil function itu, nah kalau pakai arrow, dia ngga punya 'this' sendiri, jadi dia ambil dari tempat lain.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-10",
+    "task": "M1.W4.T1.2",
+    "status": "done",
+    "capaian": "menurut saya kenapa var bisa berbahaya karena dia bisa dipakai diluar tanda '{ }', jadi dia bisa keluar kebagian yang lain. yang bocor itu bisa menjadi bug karena misal kita membuat sebuah variabel 'status', nah kita kira variabel itu cuma dipakai di bagian tersebut, padahal kalo di program yang lebih besar pasti lebih banyak variabel yang mirip, makanya bisa terjadi bug.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-07",
     "task": "M1.W4.T7",
     "status": "done",
