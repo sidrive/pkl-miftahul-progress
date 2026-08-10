@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-07",
+    "task": "M1.W4.T7",
+    "status": "done",
+    "capaian": "Demo ke mentor selesai, HTML semantik/Flexbox/Grid/responsive dikuasai, git log & PR review ditunjukkan, command Git dari ingatan lancar, pertanyaan variasi mentor terjawab.",
+    "kesulitan": "aman saat melakukan demo dan evaluasi dengan mentor, sejauh ini masih aman dan paling terkendala soal git branch yang sudah di bahas tadi."
+  },
+  {
+    "date": "2026-08-07",
+    "task": "M1.W4.T1.4",
+    "status": "done",
+    "capaian": "Sudah teach-back ke mentor, alur branch-commit-push-PR-merge dijelaskan lancar.",
+    "kesulitan": "sejauh ini masih aman, paling soal posisi git lagi dimana."
+  },
+  {
     "date": "2026-08-06",
     "task": "M1.W4.T6",
     "status": "done",

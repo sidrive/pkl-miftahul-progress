@@ -102,7 +102,7 @@
   - [x] <!-- id: M1.W4.T1.1 --> **TANPA modul/AI/catatan**, lakukan 1 siklus penuh dari nol: `git init`, buat 2 file, `add`+`commit` minimal 3x terpisah, buat branch baru & pindah, commit lagi di branch itu, `merge` balik ke `main`, `push` ke GitHub. Catat jujur command mana yang lancar dari ingatan, mana yang sempat harus buka catatan/AI
   - [x] <!-- id: M1.W4.T1.2 --> [Wajib Refleksi] Buat "cheat sheet pribadi": daftar command yang tadi sempat lupa/ragu di `T1.1`, tulis command + fungsinya pakai bahasamu sendiri (bukan disalin persis dari modul) — ini jadi rujukan cepat pribadi ke depan, bukan pengganti ingatan
   - [x] <!-- id: M1.W4.T1.3 --> Ulangi simulasi "push ditolak" (seperti Minggu 2 `T4.4`) dari nol — kali ini coba selesaikan dulu dari ingatan, TANPA buka modul asli; kalau benar-benar lupa baru boleh cek cheat sheet pribadi dari `T1.2` (bukan langsung ke modul/AI)
-  - [ ] <!-- id: M1.W4.T1.4 --> Teach-back singkat ke mentor: jelaskan lisan garis besar alur kerja Git harian (branch → commit → push/pull → PR → merge) **tanpa membaca catatan sama sekali**
+  - [x] <!-- id: M1.W4.T1.4 --> Teach-back singkat ke mentor: jelaskan lisan garis besar alur kerja Git harian (branch → commit → push/pull → PR → merge) **tanpa membaca catatan sama sekali**
 - HTML Semantik (dipecah jadi 3 sub-task):
   - [x] <!-- id: M1.W4.T2.1 --> Pelajari elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) vs `<div>` generik — apa gunanya masing-masing
   - [x] <!-- id: M1.W4.T2.2 --> Praktik: ambil 1 halaman HTML lama (boleh project to-do list di `T4`), ganti `<div>` yang polos jadi elemen semantik yang sesuai
@@ -124,7 +124,7 @@
   - [x] <!-- id: M1.W4.T5.3 --> Buat PR dan merge sendiri setelah yakin (tidak perlu menunggu review async terpisah) — **PR ini akan dibahas & direview bareng mentor sekalian saat sesi evaluasi `T7`**, jadi jangan dihapus/di-cleanup dulu sebelum evaluasi berlangsung
   - [x] <!-- id: M1.W4.T5.4 --> [Wajib Refleksi] Buka `git log` project ini — apakah histori commit-nya bisa "dibaca sebagai cerita" perkembangan (jelas urutan & isinya), atau malah berantakan/campur aduk? Evaluasi jujur pesan commit kamu sendiri
 - [x] <!-- id: M1.W4.T6 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bikin 1 halaman statis baru dari nol (boleh landing page sederhana, portofolio mini, dll — bebas topik) yang menerapkan semua skill minggu ini: HTML semantik, Flexbox+Grid, responsive, lewat alur branch→PR→merge, commit history rapi, **tanpa** CSS class nganggur/komentar placeholder tersisa (PR-nya dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah dulu). Lihat requirement lengkap di modul.
-- [ ] <!-- id: M1.W4.T7 --> Evaluasi Minggu 4: demo ke mentor — tunjukkan project revamp & proyek mandiri `T6` langsung di browser (termasuk resize responsive live), **review bareng PR dari `T5`/`T6` sekalian di sesi ini**, buka `git log`, jelaskan pilihan Flexbox vs Grid di tiap bagian, DAN demo command Git secara acak dari ingatan (cek hasil `T1`) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
+- [x] <!-- id: M1.W4.T7 --> Evaluasi Minggu 4: demo ke mentor — tunjukkan project revamp & proyek mandiri `T6` langsung di browser (termasuk resize responsive live), **review bareng PR dari `T5`/`T6` sekalian di sesi ini**, buka `git log`, jelaskan pilihan Flexbox vs Grid di tiap bagian, DAN demo command Git secara acak dari ingatan (cek hasil `T1`) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 
 ---
 
