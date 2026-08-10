@@ -136,12 +136,12 @@
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - `let`/`const` vs `var` (dipecah jadi 2 sub-task):
-  - [ ] <!-- id: M2.W1.T1.1 --> Praktik: buktikan langsung beda scope `var` (function-scope, "bocor" keluar blok `if`/`for`) vs `let`/`const` (block-scope, terkunci di dalam blok)
-  - [ ] <!-- id: M2.W1.T1.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `var` dianggap "berbahaya" di kode modern, dan kapan (kalau ada) masih masuk akal dipakai
+  - [x] <!-- id: M2.W1.T1.1 --> Praktik: buktikan langsung beda scope `var` (function-scope, "bocor" keluar blok `if`/`for`) vs `let`/`const` (block-scope, terkunci di dalam blok)
+  - [x] <!-- id: M2.W1.T1.2 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `var` dianggap "berbahaya" di kode modern, dan kapan (kalau ada) masih masuk akal dipakai
 - Arrow function (dipecah jadi 3 sub-task — **ini yang paling sering disalahpahami**, mirip kejadian `fr` vs `vh` minggu lalu, arrow function BUKAN cuma "versi singkat" dari function biasa):
-  - [ ] <!-- id: M2.W1.T2.1 --> Sintaks dasar arrow function, bandingkan dengan `function` biasa untuk kasus sederhana (tanpa `this`)
-  - [ ] <!-- id: M2.W1.T2.2 --> Praktik: buktikan langsung beda `this` antara arrow function dan `function` biasa di dalam sebuah method objek (bikin 1 objek dengan method versi `function` dan versi arrow, bandingkan `this` di dalamnya)
-  - [ ] <!-- id: M2.W1.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: arrow function itu BUKAN cuma "versi singkat" dari `function` — apa beda fundamentalnya (soal `this`), dan kasih 1 contoh situasi nyata di mana salah pilih salah satu bisa bikin bug
+  - [x] <!-- id: M2.W1.T2.1 --> Sintaks dasar arrow function, bandingkan dengan `function` biasa untuk kasus sederhana (tanpa `this`)
+  - [x] <!-- id: M2.W1.T2.2 --> Praktik: buktikan langsung beda `this` antara arrow function dan `function` biasa di dalam sebuah method objek (bikin 1 objek dengan method versi `function` dan versi arrow, bandingkan `this` di dalamnya)
+  - [x] <!-- id: M2.W1.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: arrow function itu BUKAN cuma "versi singkat" dari `function` — apa beda fundamentalnya (soal `this`), dan kasih 1 contoh situasi nyata di mana salah pilih salah satu bisa bikin bug
 - Template literal (dipecah jadi 2 sub-task):
   - [ ] <!-- id: M2.W1.T3.1 --> Praktik: `${...}` interpolation dan string multi-baris, bandingkan dengan concatenation `+` biasa
   - [ ] <!-- id: M2.W1.T3.2 --> [Wajib Refleksi] Kapan pakai template literal, kapan concatenation `+` masih masuk akal — kasih 1 contoh kasus nyata

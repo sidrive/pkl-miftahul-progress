@@ -10,7 +10,7 @@
 
 ---
 
-## 2026-07-13 // minggu 1
+## 2026-07-13 // bulan 1 - minggu 1
 
 <!-- ENTRY START -->
 
@@ -757,4 +757,29 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Status:** done
 - **Capaian:** Demo ke mentor selesai, HTML semantik/Flexbox/Grid/responsive dikuasai, git log & PR review ditunjukkan, command Git dari ingatan lancar, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** aman saat melakukan demo dan evaluasi dengan mentor, sejauh ini masih aman dan paling terkendala soal git branch yang sudah di bahas tadi.
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-10 //bulan 2 - minggu 1
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T1.2
+
+- **Status:** done
+- **Capaian:** menurut saya kenapa var bisa berbahaya karena dia bisa dipakai diluar tanda '{ }', jadi dia bisa keluar kebagian yang lain. yang bocor itu bisa menjadi bug karena misal kita membuat sebuah variabel 'status', nah kita kira variabel itu cuma dipakai di bagian tersebut, padahal kalo di program yang lebih besar pasti lebih banyak variabel yang mirip, makanya bisa terjadi bug.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T2.3
+
+- **Status:** done
+- **Capaian:** 1. menurut saya beda nya ada di 'this', jadi kalo pakai function, 'this' bisa menunjukkan ke object yang panggil function itu, nah kalau pakai arrow, dia ngga punya 'this' sendiri, jadi dia ambil dari tempat lain.
+
+2. contohnya kalau saya buat object kucing yang punya nama dan method sapa, kalau method itu pakai arrow function, this.nama bisa ga mendapatkan nama dari object kucing, jadi hasilnya bisa eror dan program nggak berjalan.
+
+- **Kesulitan:** ---
 <!-- ENTRY END -->
