@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-08-11",
+    "task": "M1.W4.T4.3",
+    "status": "done",
+    "capaian": "udah saya lihat dan bandingkan, kalau pakai destructuring kode untuk variabel jadi rapi dan gak berulang jika kita memanggil nya. nah, sebelum destructuring kita harus mengetik `contoh.nama`, `contoh.jurusan`, `contoh.umur` satu satu atau berulang. setelah pakai destructuring kita bisa langsung buat variabel misal `nama`, `jurusan`, `umur` dari object itu, menurut saya lebih enak dan rapi karna kodenya lebih singkat dan lebih gampang dibaca.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-11",
+    "task": "M1.W4.T4.2",
+    "status": "done",
+    "capaian": "Sudah mencoba destructuring object. Saya belajar mengambil property biasa, rename nama variabel, dan memakai default value kalau property-nya tidak ada.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-11",
+    "task": "M1.W4.T3.2",
+    "status": "done",
+    "capaian": "menurut saya `+` masih bisa dipakai kalau cuma pakai teks dan variable yang dikit dan sederhana, contohnya `\"halo \" + nama`, karna masih gampang dibaca dan dipahami, nah kalau teksnya Panjang dan variable nya banyak, mending pakai template literal.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-11",
+    "task": "M1.W4.T3.1",
+    "status": "done",
+    "capaian": "Berhasil ubah 3 baris kode dari concatenation jadi template literal di T3.1-M2-W1, di path [...\\pkl-miftahul-progress-feature-mentor\\submissions\\M2.Taks].",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-10",
     "task": "M1.W4.T2.3",
     "status": "done",
