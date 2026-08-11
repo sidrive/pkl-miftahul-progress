@@ -143,12 +143,12 @@
   - [x] <!-- id: M2.W1.T2.2 --> Praktik: buktikan langsung beda `this` antara arrow function dan `function` biasa di dalam sebuah method objek (bikin 1 objek dengan method versi `function` dan versi arrow, bandingkan `this` di dalamnya)
   - [x] <!-- id: M2.W1.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: arrow function itu BUKAN cuma "versi singkat" dari `function` — apa beda fundamentalnya (soal `this`), dan kasih 1 contoh situasi nyata di mana salah pilih salah satu bisa bikin bug
 - Template literal (dipecah jadi 2 sub-task):
-  - [ ] <!-- id: M2.W1.T3.1 --> Praktik: `${...}` interpolation dan string multi-baris, bandingkan dengan concatenation `+` biasa
-  - [ ] <!-- id: M2.W1.T3.2 --> [Wajib Refleksi] Kapan pakai template literal, kapan concatenation `+` masih masuk akal — kasih 1 contoh kasus nyata
+  - [x] <!-- id: M2.W1.T3.1 --> Praktik: `${...}` interpolation dan string multi-baris, bandingkan dengan concatenation `+` biasa
+  - [x] <!-- id: M2.W1.T3.2 --> [Wajib Refleksi] Kapan pakai template literal, kapan concatenation `+` masih masuk akal — kasih 1 contoh kasus nyata
 - Destructuring (dipecah jadi 3 sub-task):
-  - [ ] <!-- id: M2.W1.T4.1 --> Destructuring array dasar (`const [a, b] = [1, 2]`)
-  - [ ] <!-- id: M2.W1.T4.2 --> Destructuring object + default value + rename (`const {nama: n = "?"} = obj`)
-  - [ ] <!-- id: M2.W1.T4.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa destructuring lebih enak dibanding akses manual (`obj.properti` berkali-kali), kasih 1 contoh kode sebelum/sesudah
+  - [x] <!-- id: M2.W1.T4.1 --> Destructuring array dasar (`const [a, b] = [1, 2]`)
+  - [x] <!-- id: M2.W1.T4.2 --> Destructuring object + default value + rename (`const {nama: n = "?"} = obj`)
+  - [x] <!-- id: M2.W1.T4.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa destructuring lebih enak dibanding akses manual (`obj.properti` berkali-kali), kasih 1 contoh kode sebelum/sesudah
 - Kuis & Latihan Soal (dipecah jadi 2 sub-task):
   - [ ] <!-- id: M2.W1.T5.1 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: minimal 8 soal campuran (let/const, `this` arrow vs function, template literal, destructuring) — baru cek jawabannya setelahnya
   - [ ] <!-- id: M2.W1.T5.2 --> Latihan soal kecil ES6+ (5-10 soal coding kecil, boleh dicari/dibuat sendiri) — kerjakan dulu semampunya SEBELUM tanya AI

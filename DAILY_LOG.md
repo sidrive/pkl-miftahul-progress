@@ -761,7 +761,7 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 ---
 
-## 2026-08-10 //bulan 2 - minggu 1
+## 2026-08-10 // bulan 2 - minggu 1
 
 <!-- ENTRY START -->
 
@@ -781,5 +781,45 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 2. contohnya kalau saya buat object kucing yang punya nama dan method sapa, kalau method itu pakai arrow function, this.nama bisa ga mendapatkan nama dari object kucing, jadi hasilnya bisa eror dan program nggak berjalan.
 
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-11
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T3.1
+
+- **Status:** done
+- **Capaian:** Berhasil ubah 3 baris kode dari concatenation jadi template literal di T3.1-M2-W1, di path [...\pkl-miftahul-progress-feature-mentor\submissions\M2.Taks].
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T3.2
+
+- **Status:** done
+- **Capaian:** menurut saya `+` masih bisa dipakai kalau cuma pakai teks dan variable yang dikit dan sederhana, contohnya `"halo " + nama`, karna masih gampang dibaca dan dipahami, nah kalau teksnya Panjang dan variable nya banyak, mending pakai template literal.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T4.2
+
+- **Status:** done
+- **Capaian:** Sudah mencoba destructuring object. Saya belajar mengambil property biasa, rename nama variabel, dan memakai default value kalau property-nya tidak ada.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T4.3
+
+- **Status:** done
+- **Capaian:** udah saya lihat dan bandingkan, kalau pakai destructuring kode untuk variabel jadi rapi dan gak berulang jika kita memanggil nya. nah, sebelum destructuring kita harus mengetik `contoh.nama`, `contoh.jurusan`, `contoh.umur` satu satu atau berulang. setelah pakai destructuring kita bisa langsung buat variabel misal `nama`, `jurusan`, `umur` dari object itu, menurut saya lebih enak dan rapi karna kodenya lebih singkat dan lebih gampang dibaca.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
