@@ -150,8 +150,8 @@
   - [x] <!-- id: M2.W1.T4.2 --> Destructuring object + default value + rename (`const {nama: n = "?"} = obj`)
   - [x] <!-- id: M2.W1.T4.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa destructuring lebih enak dibanding akses manual (`obj.properti` berkali-kali), kasih 1 contoh kode sebelum/sesudah
 - Kuis & Latihan Soal (dipecah jadi 2 sub-task):
-  - [ ] <!-- id: M2.W1.T5.1 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: minimal 8 soal campuran (let/const, `this` arrow vs function, template literal, destructuring) — baru cek jawabannya setelahnya
-  - [ ] <!-- id: M2.W1.T5.2 --> Latihan soal kecil ES6+ (5-10 soal coding kecil, boleh dicari/dibuat sendiri) — kerjakan dulu semampunya SEBELUM tanya AI
+  - [x] <!-- id: M2.W1.T5.1 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: minimal 8 soal campuran (let/const, `this` arrow vs function, template literal, destructuring) — baru cek jawabannya setelahnya
+  - [x] <!-- id: M2.W1.T5.2 --> Latihan soal kecil ES6+ (5-10 soal coding kecil, boleh dicari/dibuat sendiri) — kerjakan dulu semampunya SEBELUM tanya AI
 - [ ] <!-- id: M2.W1.T6 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Refactor 1 script/bagian kode lama (boleh bagian JS dari project to-do list Minggu 4, boleh script baru) supaya pakai ES6+ penuh (`let`/`const`, arrow function DI TEMPAT YANG TEPAT — bukan asal ganti semua `function`, template literal, destructuring), sengaja sertakan minimal 1 kasus nyata di mana pilihan arrow vs `function` biasa penting (bukan cuma soal gaya penulisan). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.
 - [ ] <!-- id: M2.W1.T7 --> Evaluasi Minggu ini: demo ke mentor — tunjukkan hasil refactor `T6` di browser/terminal, jelaskan tiap keputusan (kapan arrow vs function biasa, kapan destructuring dipakai), review PR bareng, DAN jawab soal live yang menyasar kesalahpahaman umum (`this` arrow function) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul
 

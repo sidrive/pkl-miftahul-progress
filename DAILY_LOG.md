@@ -823,3 +823,75 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 - **Capaian:** udah saya lihat dan bandingkan, kalau pakai destructuring kode untuk variabel jadi rapi dan gak berulang jika kita memanggil nya. nah, sebelum destructuring kita harus mengetik `contoh.nama`, `contoh.jurusan`, `contoh.umur` satu satu atau berulang. setelah pakai destructuring kita bisa langsung buat variabel misal `nama`, `jurusan`, `umur` dari object itu, menurut saya lebih enak dan rapi karna kodenya lebih singkat dan lebih gampang dibaca.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-12
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.1
+
+- **Status:** done
+- **Capaian:** jawaban :
+
+1. `var` dan `let` itu bedanya, kalo `let` dia itu block scope, jadi cuma didalam kurung kurawal. nah sedangkan kalo `var` itu dia function scope, bisa aja bocor / keluar data / variable nya.
+
+2. menurut saya boleh, soalnya const itu yang ngga boleh diganti variabelnya, bukan isi dari arraynya.
+
+3. bedanya itu ada di this. kalua function biasa dia mengarah ke object yang di panggil. sedangkan arrow function ngga punya this sendiri dan mengambil this dari tempat dia dibuat. [Koreksi : Hampir benar. Yang lebih tepat, function biasa itu this mengarah ke object yang memanggil function tersebut, bukan object yang dipanggil.]
+
+4. menurut saya pakai function biasa aja, biar this bisa langsung mengarah ke object.
+
+5. const nama = "Gazi"
+   const umur = 20
+   console.log(`Halo, nama saya ${nama}, umur saya ${umur} tahun.`)
+
+6. yang a isinya 1, b isinya 2, dan yang c kayanya ga ngikut/terambil karna di const cuma ambil a sama b.
+
+7. kita pakai " = " (sama dengan), contoh : const { kota = "Batam" } = siswa. kalau kota ga ada, berarti isinya itu batam.
+
+8. menurut saya kalau teks nya pendek dan variabel nya dikit, bisa pakai '+' karna gampang di baca.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T5.2
+
+- **Status:** done
+- **Capaian:** sudah mengerjakan dan menyelesaikan 6 soal latihan e6+. untuk soalnya saya taro di folder [../submissions/M2.Taks]. Jawaban:
+
+1.  [x] bedanya `let` dan `const`. itu kalo `let` dia itu block scope, jadi cuma didalam kurung kurawal. nah sedangkan kalo `const` itu untuk membuat sebuah variable block scope yang nilainya ga bisa diganti lagi.
+
+2.  [x] (a,b) => a + b;
+
+3.  [x] const nama = "Gazi";
+        const umur = 20;
+
+const isi = `Halo, nama saya ${nama}, umur saya ${umur} tahun.`;
+console.log(isi);
+
+4.  [x] biar jadi merah hijau output nya:
+        const warna = ["merah", "hijau"];
+        const [merah, hijau] = warna;
+
+console.log(merah);
+console.log(hijau);
+
+5.  [x] const siswa = {
+        nama: "Gazi",
+        jurusan: "RPL",
+        };
+
+const { nama, jurusan } = siswa;
+
+console.log(nama);
+console.log(jurusan);
+
+6. [y]
+   karna pakai default value, jadi kalau property kota gak ada di object, JavaScript akan otomatis memakai nilai default yang kita kasih, yaitu "Batam". makanya outputnya jadi "Batam".
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
