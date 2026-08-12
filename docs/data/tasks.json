@@ -480,12 +480,12 @@
           {
             "id": "M2.W1.T5.1",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: minimal 8 soal campuran (let/const, `this` arrow vs function, template literal, destructuring) — baru cek jawabannya setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W1.T5.2",
             "text": "Latihan soal kecil ES6+ (5-10 soal coding kecil, boleh dicari/dibuat sendiri) — kerjakan dulu semampunya SEBELUM tanya AI",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W1.T6",
