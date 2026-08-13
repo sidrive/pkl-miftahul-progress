@@ -490,7 +490,7 @@
           {
             "id": "M2.W1.T6",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Refactor 1 script/bagian kode lama (boleh bagian JS dari project to-do list Minggu 4, boleh script baru) supaya pakai ES6+ penuh (`let`/`const`, arrow function DI TEMPAT YANG TEPAT — bukan asal ganti semua `function`, template literal, destructuring), sengaja sertakan minimal 1 kasus nyata di mana pilihan arrow vs `function` biasa penting (bukan cuma soal gaya penulisan). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W1.T7",
