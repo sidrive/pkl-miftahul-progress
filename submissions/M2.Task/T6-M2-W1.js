@@ -14,3 +14,5 @@ getSummary: function() {
     return `Halo, nama saya ${this.nama}, saya seorang ${this.peran}. Saat ini saya telah menyelesaikan ${this.tugasSelesai} tugas. Saya tinggal di ${this.alamat} dan bekerja di divisi ${this.divisi}.`;
 }
 };
+
+const {nama, peran, tugasSelesai, alamat, divisi} = profilSiswa;
