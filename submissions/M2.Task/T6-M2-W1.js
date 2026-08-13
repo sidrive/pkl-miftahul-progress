@@ -16,3 +16,10 @@ getSummary: function() {
 };
 
 const {nama, peran, tugasSelesai, alamat, divisi} = profilSiswa;
+
+//arrow
+const hitungSisaTugas = (totalTugas, selesai) => totalTugas - selesai;
+console.log(profilSiswa.getSummary());
+
+const statusPKL = `Siswa bernama ${nama} saat ini berada di divisi ${divisi} dan tinggal di ${alamat}.`;
+console.log(statusPKL);
