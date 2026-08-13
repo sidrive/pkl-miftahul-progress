@@ -26,3 +26,15 @@ console.log(statusPKL);
 
 const sisa = hitungSisaTugas(10, tugasSelesai);
 console.log(`Sisa tugas minggu ini: ${sisa} task.`);
+
+//multibaris
+const profilMultiBaris = `
+=========================
+       PROFIL SAYA
+=========================
+Nama    : ${nama}
+Peran   : ${peran}
+Status  : PKL di Olsera (${divisi})
+Selesai : ${tugasSelesai} task
+`;
+console.log(profilMultiBaris);
