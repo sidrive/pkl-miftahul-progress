@@ -23,3 +23,6 @@ console.log(profilSiswa.getSummary());
 
 const statusPKL = `Siswa bernama ${nama} saat ini berada di divisi ${divisi} dan tinggal di ${alamat}.`;
 console.log(statusPKL);
+
+const sisa = hitungSisaTugas(10, tugasSelesai);
+console.log(`Sisa tugas minggu ini: ${sisa} task.`);
