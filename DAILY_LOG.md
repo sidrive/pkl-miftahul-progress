@@ -861,7 +861,7 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 ### Task: M1.W4.T5.2
 
 - **Status:** done
-- **Capaian:** sudah mengerjakan dan menyelesaikan 6 soal latihan e6+. untuk soalnya saya taro di folder [../submissions/M2.Taks]. Jawaban:
+- **Capaian:** sudah mengerjakan dan menyelesaikan 6 soal latihan e6+. untuk soalnya saya taro di folder [../submissions/M2.Task]. Jawaban:
 
 1.  [x] bedanya `let` dan `const`. itu kalo `let` dia itu block scope, jadi cuma didalam kurung kurawal. nah sedangkan kalo `const` itu untuk membuat sebuah variable block scope yang nilainya ga bisa diganti lagi.
 
@@ -893,5 +893,18 @@ console.log(jurusan);
 6. [y]
    karna pakai default value, jadi kalau property kota gak ada di object, JavaScript akan otomatis memakai nilai default yang kita kasih, yaitu "Batam". makanya outputnya jadi "Batam".
 
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-13
+
+<!-- ENTRY START -->
+
+### Task: M1.W4.T6
+
+- **Status:** ---
+- **Capaian:** ---
 - **Kesulitan:** ---
 <!-- ENTRY END -->
