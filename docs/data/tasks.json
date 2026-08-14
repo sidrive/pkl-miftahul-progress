@@ -495,7 +495,7 @@
           {
             "id": "M2.W1.T7",
             "text": "Evaluasi Minggu ini: demo ke mentor — tunjukkan hasil refactor `T6` di browser/terminal, jelaskan tiap keputusan (kapan arrow vs function biasa, kapan destructuring dipakai), review PR bareng, DAN jawab soal live yang menyasar kesalahpahaman umum (`this` arrow function) + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
