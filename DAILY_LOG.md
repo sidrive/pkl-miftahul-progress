@@ -908,3 +908,16 @@ console.log(jurusan);
 - **Capaian:** saya sudah merefactor pada script profil diri pada (Task T3.1) jadi fitur ES6+ yang saya taro di path ../submissions/M2.Task. saya mengubah variabel ke `const`/`let` sesuai dengan task, terus saya juga menerapkan object destructuring, template literal (single & multi-line), dan arrow function di fungsi hitungSisaTugas. tapi untuk method getSummary() di dalam object profilSiswa, saya sengaja pakai function biasa karna method itu butuh this buat ngambil data dari object seperti this.nama, this.peran, dan lainnya. kalau pakai arrow function, this nya jadi gak bisa ngarah ke object tersebut jadi hasilnya bisa undefined. untuk pengerjaan saya lakukan di branch T6-refactor-es6 dan sudah 5 commit bertahap, lalu udah saya merge link github: [https://github.com/sidrive/pkl-miftahul-progress/pull/3]
 - **Kesulitan:** waktu saya kerjain task T6 ini sempat ada kesalahan alur Git, file pengerjaan masuk ke branch `main` yang harusnya di kerjain di branch lain dan commit rename folder, jadi harus reset commit dan membersihan staging biar commit pengerjaan Task 6 bisa rapi. pada saat ngerjain masih dibantu untuk kodenya, tapi tidak semuanya, sebelum minta bantuin saya buat dulu semampu dan seingat saya, kalo buntu baru minta bantuin.
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-14
+
+!-- ENTRY START -->
+
+### Task: M1.W4.T7
+
+- **Status:** done
+- **Capaian:** Demo ke mentor selesai, ES6+ dikuasai (termasuk beda this arrow vs function), PR dibahas, pertanyaan variasi mentor terjawab.
+- **Kesulitan:** ada sedikit melihat modul untuk mengerjakan soal live dari mentor, masih lama untuk menjawab / menemukan bug atau eror pada program.
+<!-- ENTRY END -->
