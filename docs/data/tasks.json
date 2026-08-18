@@ -520,12 +520,12 @@
           },
           {
             "id": "M2.W2.T2.1",
-            "text": "Praktik `find`: cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id), bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen)",
+            "text": "Praktik `find` — **2 putaran, data berbeda tiap putaran**: putaran 1 cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id) di data siswa, bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen); putaran 2 ulangi konsep yang sama tapi pakai **1 topik data baru pilihanmu sendiri** (misal array produk toko, array transaksi, dsb — bebas asal beda dari data siswa)",
             "done": false
           },
           {
             "id": "M2.W2.T2.2",
-            "text": "Praktik `reduce`: minimal 3 kasus berbeda — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori)",
+            "text": "Praktik `reduce` — **2 putaran, data berbeda tiap putaran**: putaran 1 kerjakan minimal 3 kasus berbeda di data siswa/angka — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori); putaran 2 ulangi ketiga kasus itu lagi tapi dengan **data baru yang berbeda topik** dari putaran 1 (boleh lanjutkan topik data baru dari `T2.1`)",
             "done": false
           },
           {
@@ -535,12 +535,12 @@
           },
           {
             "id": "M2.W2.T2.4",
-            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.1`/`T2.2` atau modul, ulangi dari nol praktik `find` + ketiga variasi `reduce` (sum, max/min, rekap object), tapi pakai **1 topik data baru** yang kamu pilih sendiri (beda dari data `map`/`filter` hari Selasa — misal array produk toko dengan harga & stok, array transaksi, dsb; boleh dipakai lagi untuk task DOM/event di hari-hari berikutnya minggu ini). Catat jujur bagian mana yang sempat lupa",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.1`/`T2.2` atau modul, ulangi dari nol praktik `find` + ketiga variasi `reduce` (sum, max/min, rekap object) untuk **ke-3 kalinya**, pakai **1 topik data baru lagi** yang belum pernah dipakai di `T2.1`/`T2.2` (boleh dipakai lagi untuk task DOM/event di hari-hari berikutnya minggu ini). Catat jujur bagian mana yang sempat lupa",
             "done": false
           },
           {
             "id": "M2.W2.T2.5",
-            "text": "[Wajib Refleksi] Teach-back ke mentor (lisan, TANPA membaca catatan): tambahkan `console.log(accumulator, elemenSekarang)` di dalam salah satu `reduce` kamu, jalankan, lalu jelaskan ke mentor apa yang terjadi di **setiap langkah/iterasi** — buktikan kamu paham prosesnya bertahap, bukan cuma tahu hasil akhirnya",
+            "text": "[Wajib Refleksi] Teach-back mandiri (lisan ke diri sendiri/rekam sendiri, TANPA membaca catatan, TIDAK perlu sesi bareng mentor): tambahkan `console.log(accumulator, elemenSekarang)` di dalam salah satu `reduce` kamu, jalankan, lalu jelaskan sendiri (tulis di log atau rekam) apa yang terjadi di **setiap langkah/iterasi** — buktikan ke diri sendiri kamu paham prosesnya bertahap, bukan cuma tahu hasil akhirnya. Hasil teach-back ini yang akan dibahas mentor nanti pas evaluasi `T7`, bukan sesi terpisah",
             "done": false
           },
           {
@@ -550,17 +550,17 @@
           },
           {
             "id": "M2.W2.T3.1",
-            "text": "Ambil elemen dari HTML: `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama",
+            "text": "Ambil elemen dari HTML — **2 putaran, data/HTML berbeda tiap putaran**: putaran 1 `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama; putaran 2 ulangi dengan struktur HTML/selector yang berbeda dari putaran 1",
             "done": false
           },
           {
             "id": "M2.W2.T3.2",
-            "text": "Bikin & sisipkan elemen baru secara dinamis: `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`)",
+            "text": "Bikin & sisipkan elemen baru secara dinamis — **2 putaran, data berbeda tiap putaran**: putaran 1 pakai `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`) untuk render data siswa; putaran 2 ulangi untuk render **data lain** (boleh dari `T2.1`/`T2.4`)",
             "done": false
           },
           {
             "id": "M2.W2.T3.3",
-            "text": "Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama",
+            "text": "Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama, **ulangi dengan 2 string percobaan berbeda** (salah satunya sengaja berisi tag HTML) supaya kelihatan jelas bedanya",
             "done": false
           },
           {
@@ -570,7 +570,7 @@
           },
           {
             "id": "M2.W2.T3.5",
-            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T3.2`/`T3.3` atau modul, render **data baru dari `T2.4`** (produk/transaksi, dsb — bukan data siswa) ke DOM dari nol — bikin elemen lewat `createElement`, pakai `textContent` untuk isinya. Catat jujur bagian mana yang sempat lupa command-nya",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T3.2`/`T3.3` atau modul, render **1 topik data baru lagi** (beda dari yang sudah dipakai di `T3.1`/`T3.2`) ke DOM dari nol — bikin elemen lewat `createElement`, pakai `textContent` untuk isinya. Catat jujur bagian mana yang sempat lupa command-nya",
             "done": false
           },
           {
@@ -580,17 +580,17 @@
           },
           {
             "id": "M2.W2.T4.1",
-            "text": "Praktik `addEventListener` dasar: klik tombol, submit form (`event.preventDefault()` supaya form tidak reload halaman), input berubah",
+            "text": "Praktik `addEventListener` dasar — **2 putaran, kasus berbeda tiap putaran**: putaran 1 klik tombol + submit form (`event.preventDefault()` supaya form tidak reload halaman); putaran 2 ulangi di form/tombol dengan skenario input yang berbeda (misal input angka + validasi sederhana)",
             "done": false
           },
           {
             "id": "M2.W2.T4.2",
-            "text": "Pahami & pakai **event object**: `event.target`, `event.currentTarget`, ambil value dari elemen yang memicu event",
+            "text": "Pahami & pakai **event object**: `event.target`, `event.currentTarget`, ambil value dari elemen yang memicu event — praktik di list siswa (`T3.2` putaran 1) DAN di list data lain (`T3.2` putaran 2) supaya terbukti bukan hafalan 1 kasus",
             "done": false
           },
           {
             "id": "M2.W2.T4.3",
-            "text": "Praktik **event delegation**: pasang 1 listener di elemen parent (misal `<ul>`) untuk menangani klik semua `<li>` di dalamnya (termasuk yang ditambahkan belakangan lewat `createElement`), bandingkan dengan pasang listener manual di setiap elemen anak satu-satu",
+            "text": "Praktik **event delegation** — **2 putaran, data berbeda tiap putaran**: putaran 1 pasang 1 listener di elemen parent (misal `<ul>`) untuk menangani klik semua `<li>` di dalamnya (termasuk yang ditambahkan belakangan lewat `createElement`), bandingkan dengan pasang listener manual di setiap elemen anak satu-satu; putaran 2 ulangi di list data yang berbeda dari putaran 1",
             "done": false
           },
           {
@@ -600,7 +600,7 @@
           },
           {
             "id": "M2.W2.T4.5",
-            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T4.3` atau modul, ulangi event delegation dari nol di data dari `T3.5` — kali ini tambahkan **fitur baru** yang belum pernah dicoba sebelumnya: tombol \"hapus\" di tiap item yang juga ditangani lewat event delegation (bukan listener per-item). Catat jujur bagian mana yang sempat lupa/ragu",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T4.3` atau modul, ulangi event delegation dari nol untuk **ke-3 kalinya**, pakai **1 topik data baru lagi** — kali ini tambahkan **fitur baru** yang belum pernah dicoba sebelumnya: tombol \"hapus\" di tiap item yang juga ditangani lewat event delegation (bukan listener per-item). Catat jujur bagian mana yang sempat lupa/ragu",
             "done": false
           },
           {
@@ -610,7 +610,7 @@
           },
           {
             "id": "M2.W2.T5",
-            "text": "**[Uji Ulang Pemahaman Mandiri — LIVE, kasus dadakan]** Sesi terpisah SEBELUM mengerjakan proyek mandiri `T6`: mentor kasih 1 kasus kombinasi baru secara dadakan (gabungan minimal 2 dari `map`/`filter`/`reduce`/`find` + render ke DOM + event delegation) yang **belum pernah kamu kerjakan di task manapun minggu ini** — dikerjakan LANGSUNG di depan mentor (atau direkam layar kalau async), **TANPA membuka modul/AI/catatan/kode task sebelumnya**. Ini bukan untuk dinilai benar/salah sempurna, tapi untuk memverifikasi jujur pemahamannya sudah nempel atau masih hafalan/contek dari task-task sebelumnya — kalau macet total di suatu bagian, itu sinyal bagian itu perlu diulang lagi sebelum lanjut ke `T6`.",
+            "text": "**[Uji Ulang Pemahaman Mandiri — kasus pilihan sendiri]** Sebelum mengerjakan proyek mandiri `T6`, sendirian (TIDAK perlu sesi/kehadiran mentor): pilih/karang sendiri 1 kasus kombinasi baru (gabungan minimal 2 dari `map`/`filter`/`reduce`/`find` + render ke DOM + event delegation) dengan topik data yang **belum pernah kamu pakai di task manapun minggu ini** — kerjakan **TANPA membuka modul/AI/catatan/kode task sebelumnya**. Ini bukan untuk dinilai benar/salah sempurna, tapi untuk memverifikasi jujur ke diri sendiri apakah pemahamannya sudah nempel atau masih hafalan/contek dari task-task sebelumnya — kalau macet total di suatu bagian, catat jujur di log dan ulangi bagian itu lagi sebelum lanjut ke `T6`. Hasil sesi ini diceritakan ke mentor nanti pas evaluasi `T7`, bukan sesi terpisah.",
             "done": false
           },
           {
@@ -620,7 +620,7 @@
           },
           {
             "id": "M2.W2.T7",
-            "text": "Evaluasi Minggu ini: demo ke mentor — jalankan mini-app `T6` langsung di browser, jelaskan tiap keputusan (kapan pakai `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event delegation) berdasarkan komentar kode yang ditulis di `T6`, review PR bareng, ceritakan hasil sesi `T5` (bagian mana yang sempat macet), jawab soal live yang menyasar kesalahpahaman umum (`reduce` dikira \"cuma for-loop ribet\") **DAN mentor akan minta modifikasi kecil dadakan langsung di kode `T6`** (misal tambah 1 fitur filter baru) di tempat, tanpa buka modul, untuk memastikan pemahamannya bukan hafalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo ke mentor — jalankan mini-app `T6` langsung di browser, jelaskan tiap keputusan (kapan pakai `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event delegation) berdasarkan komentar kode yang ditulis di `T6`, review PR bareng, ceritakan hasil teach-back mandiri `T2.5` dan sesi uji ulang mandiri `T5` (bagian mana yang sempat macet), jawab soal live yang menyasar kesalahpahaman umum (`reduce` dikira \"cuma for-loop ribet\") **DAN mentor akan minta modifikasi kecil dadakan langsung di kode `T6`** (misal tambah 1 fitur filter baru) di tempat, tanpa buka modul, untuk memastikan pemahamannya bukan hafalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]

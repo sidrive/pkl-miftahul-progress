@@ -18,20 +18,24 @@
 > Akibatnya beberapa fungsi yang **kamu tulis sendiri** minggu itu, waktu ditanya lagi, tidak bisa
 > dijelaskan ulang, dan sempat coba-coba/intip modul lagi untuk jawab.
 >
-> Mulai dari kelompok `reduce`/`find` (Rabu 19 Agustus) di bawah, setiap kelompok konsep punya
-> **task tambahan bertanda `[Ulangi Tanpa Contek]`** — task ini WAJIB, bukan opsional, dan baru
-> `done` kalau kamu benar-benar:
-> 1. **Tutup/tidak buka** kode task sebelumnya, modul ini, dan AI, saat mengerjakannya.
-> 2. Pakai **data/kasus yang beda** dari ronde pertama (bukan sekadar copy-paste ganti nama
->    variabel) — supaya kamu tidak bisa "mengingat urutan ketikan", tapi benar-benar mengingat
->    **konsepnya**.
+> Mulai dari kelompok `reduce`/`find` (Rabu 19 Agustus) di bawah, task praktik intinya sendiri
+> **sudah berisi minimal 2 putaran dengan data/kasus berbeda** (bukan cuma 1x jalan lalu selesai),
+> ditambah 1 task tambahan bertanda **`[Ulangi Tanpa Contek]`** sebagai putaran ke-3 dari nol. Task
+> ini WAJIB, bukan opsional, dan baru `done` kalau kamu benar-benar:
+> 1. **Tutup/tidak buka** kode task sebelumnya, modul ini, dan AI, saat mengerjakan putaran
+>    berikutnya.
+> 2. Pakai **data/kasus yang beda** tiap putaran (bukan sekadar copy-paste ganti nama variabel) —
+>    supaya kamu tidak bisa "mengingat urutan ketikan", tapi benar-benar mengingat **konsepnya**.
 > 3. **Catat jujur** di log kalau ada bagian yang sempat lupa/macet — itu bukan tanda gagal, itu
 >    justru informasi penting buat saya (mentor) soal bagian mana yang perlu diulang lagi.
 >
-> Ada juga 1 task baru, `M2.W2.T5`, **sesi live dadakan** sebelum proyek mandiri — mentor kasih
-> kasus baru yang belum pernah kamu kerjakan, dan kamu kerjakan di tempat tanpa bantuan apapun.
-> Ini bukan ujian untuk dinilai sempurna — ini cara paling jujur untuk tahu apakah pemahamannya
-> sudah benar-benar nempel atau masih hafalan dari urutan task sebelumnya.
+> **Semua task minggu ini dikerjakan mandiri, sendirian — tidak ada sesi bareng mentor kecuali
+> evaluasi akhir `T7`.** Task `M2.W2.T2.5` (teach-back) dan `M2.W2.T5` (uji ulang pemahaman) yang
+> di minggu-minggu lain biasanya melibatkan sesi langsung dengan mentor, minggu ini dikerjakan
+> **sendiri** (jelaskan/rekam sendiri, pilih sendiri kasus barunya) — hasilnya baru diceritakan ke
+> mentor nanti sekalian pas evaluasi `T7`, bukan sesi terpisah. Ini bukan ujian untuk dinilai
+> sempurna — ini cara paling jujur untuk tahu ke diri sendiri apakah pemahamannya sudah benar-benar
+> nempel atau masih hafalan dari urutan task sebelumnya.
 >
 > **Catatan pola berulang:** minggu-minggu lalu ada kesalahan konsep karena "kelihatan mirip =
 > dikira sama" (`fr` dikira mirip `vh`, arrow function dikira cuma "versi singkat" `function`).
@@ -111,11 +115,12 @@ di bawah 75 saja.
 
 ## 2. `reduce` & `find` — Rabu 19 Agustus (**bukan cuma "`for` loop yang lebih ribet"**)
 
-### `M2.W2.T2.1` — Praktik `find`
+### `M2.W2.T2.1` — Praktik `find` (2 putaran, data berbeda)
 
 `find()` mencari **1 elemen pertama** yang cocok kondisi, hasilnya 1 elemen (atau `undefined`
 kalau tidak ketemu) — **bukan array**.
 
+**Putaran 1 (data siswa):**
 ```js
 const cariBudi = siswa.find((s) => s.nama === "Budi")
 console.log(cariBudi) // {nama: "Budi", nilai: 65}
@@ -128,10 +133,24 @@ console.log(cariGagal) // undefined
 hasilnya **array berisi 1 elemen** (`[{...}]`), bukan elemen itu langsung. Kalau kamu cuma butuh
 1 elemen, `find` lebih tepat dan lebih jelas maksudnya buat pembaca kode.
 
-**Checklist selesai:** kamu coba `cariGagal` di atas dan lihat sendiri hasilnya `undefined`
+**Checklist putaran 1:** kamu coba `cariGagal` di atas dan lihat sendiri hasilnya `undefined`
 (bukan error).
 
-### `M2.W2.T2.2` — Praktik `reduce`
+**Putaran 2 (data baru pilihanmu sendiri):** ulangi persis konsep yang sama — 1 pencarian yang
+ketemu, 1 pencarian yang sengaja tidak ketemu (`undefined`) — tapi pakai **topik data lain** yang
+kamu pilih sendiri (misal array produk toko, array transaksi, dsb — bebas asal beda dari data
+siswa). Boleh lihat contoh putaran 1 kalau lupa syntax, tapi kasusnya harus benar-benar baru,
+bukan angka/nama yang sama diganti label.
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W2.T2.1
+- **Status:** done
+- **Capaian:** Putaran 1 (siswa): find berhasil, cariGagal = undefined. Putaran 2 (produk toko): ulangi find + kasus tidak ketemu, hasilnya sama-sama sesuai ekspektasi.
+- **Kesulitan:** -
+```
+
+### `M2.W2.T2.2` — Praktik `reduce` (2 putaran, data berbeda)
 
 `reduce()` "mengakumulasi" seluruh elemen array jadi **1 nilai akhir** (bisa angka, string, object,
 apa saja) — nilai itu dibawa terus dari elemen ke elemen.
@@ -160,15 +179,19 @@ const rekapPerKategori = transaksi.reduce((rekap, t) => {
 console.log(rekapPerKategori) // {makanan: 50000, transport: 15000}
 ```
 
-**Latihan:** kerjakan sendiri ketiga variasi di atas dengan data buatanmu sendiri (jangan copy
+**Putaran 1:** kerjakan sendiri ketiga variasi di atas dengan data buatanmu sendiri (jangan copy
 persis) — perhatikan baik-baik peran **nilai awal** (parameter kedua `reduce`, contoh: `0` di
 kasus (a), `{}` di kasus (c)).
+
+**Putaran 2 (data berbeda):** ulangi ketiga variasi itu lagi (total, max/min, rekap object) tapi
+pakai **topik data yang berbeda** dari putaran 1 (boleh lanjutkan data baru dari `T2.1` putaran 2).
+Tujuannya membuktikan kamu paham polanya, bukan cuma hafal 1 contoh angka.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T2.2
 - **Status:** done
-- **Capaian:** Berhasil praktik find, dan reduce untuk 3 kasus (total, max, rekap object) dengan data sendiri.
+- **Capaian:** Putaran 1 (data sendiri): 3 kasus reduce (total/max/rekap) berhasil. Putaran 2 (data produk toko dari T2.1): ulangi 3 kasus dengan data berbeda, semua berhasil.
 - **Kesulitan:** -
 ```
 
@@ -193,12 +216,12 @@ sendiri berdasarkan percobaan `T2.2`, baru cek/koreksi kalau perlu):**
 - **Kesulitan:** -
 ```
 
-### `M2.W2.T2.4` — **[Ulangi Tanpa Contek]** Case baru, dari nol
+### `M2.W2.T2.4` — **[Ulangi Tanpa Contek]** Putaran ke-3, case baru lagi, dari nol
 
-**Tutup dulu kode `T2.1`/`T2.2` dan modul ini.** Pilih 1 topik data yang **beda dari data `map`/
-`filter` hari Selasa** (misal: array produk toko dengan harga & stok, array transaksi, array film,
-dsb — bebas asal beda, dan boleh dipakai lagi untuk task DOM/event di hari-hari berikutnya minggu
-ini). Dari nol, tulis ulang (dari ingatan):
+**Tutup dulu kode `T2.1`/`T2.2` dan modul ini.** Ini putaran ke-3 (setelah 2 putaran di `T2.1`/
+`T2.2`) — pilih **1 topik data baru lagi** yang belum pernah dipakai (beda dari data `map`/`filter`
+hari Selasa DAN beda dari kedua putaran `T2.1`/`T2.2`; boleh dipakai lagi untuk task DOM/event di
+hari-hari berikutnya minggu ini). Dari nol, tulis ulang (dari ingatan):
 
 1. 1 penggunaan `find` (misal cari 1 produk berdasarkan nama).
 2. Minimal 2 dari 3 variasi `reduce` (misal: total stok semua produk, cari produk termahal, atau
@@ -215,10 +238,11 @@ callback-nya) — catat jujur di log, cek balik bagian itu saja, lanjutkan dari 
 - **Kesulitan:** (jujur, bagian mana yang sempat macet)
 ```
 
-### `M2.W2.T2.5` — [Wajib Refleksi] Teach-back: telusuri `reduce` langkah demi langkah
+### `M2.W2.T2.5` — [Wajib Refleksi] Teach-back mandiri: telusuri `reduce` langkah demi langkah
 
-**Ini bagian paling penting untuk `reduce`.** Ambil salah satu `reduce` yang kamu buat (boleh dari
-`T2.2` atau `T2.4`), tambahkan `console.log` di dalam callback-nya:
+**Ini bagian paling penting untuk `reduce`, dan dikerjakan sendiri — tidak perlu sesi bareng
+mentor.** Ambil salah satu `reduce` yang kamu buat (boleh dari `T2.2` atau `T2.4`), tambahkan
+`console.log` di dalam callback-nya:
 
 ```js
 const total = data.reduce((akumulator, sekarang) => {
@@ -227,17 +251,18 @@ const total = data.reduce((akumulator, sekarang) => {
 }, 0)
 ```
 
-Jalankan, lihat output tiap baris `console.log`-nya (satu baris per iterasi). **Lalu jelaskan ke
-mentor secara lisan, TANPA membaca catatan**, apa yang terjadi di **setiap langkah**: nilai
-`akumulator` di awal itu dari mana, kenapa nilainya berubah tiap iterasi, dan bagaimana nilai
-terakhir jadi hasil akhir `reduce`. Tujuannya membuktikan kamu paham prosesnya bertahap — bukan
-cuma tahu "oh hasilnya benar".
+Jalankan, lihat output tiap baris `console.log`-nya (satu baris per iterasi). **Lalu jelaskan
+sendiri** (tulis di log, atau rekam suara ke diri sendiri kalau lebih membantu), **TANPA membaca
+catatan**, apa yang terjadi di **setiap langkah**: nilai `akumulator` di awal itu dari mana, kenapa
+nilainya berubah tiap iterasi, dan bagaimana nilai terakhir jadi hasil akhir `reduce`. Tujuannya
+membuktikan ke diri sendiri kamu paham prosesnya bertahap — bukan cuma tahu "oh hasilnya benar".
+Hasil teach-back ini akan dibahas mentor nanti sekalian pas evaluasi `T7`.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T2.5
 - **Status:** done
-- **Capaian:** Tambah console.log di dalam reduce, lihat tiap iterasi, teach-back lisan ke mentor tentang alur accumulator step-by-step berhasil dijelaskan tanpa catatan.
+- **Capaian:** Tambah console.log di dalam reduce, lihat tiap iterasi, teach-back mandiri (ditulis di log) tentang alur accumulator step-by-step berhasil dijelaskan tanpa catatan.
 - **Kesulitan:** -
 ```
 
@@ -271,8 +296,9 @@ cuma tahu "oh hasilnya benar".
 
 ## 3. DOM Manipulation Dasar — Kamis 20 Agustus
 
-### `M2.W2.T3.1` — Ambil elemen dari HTML
+### `M2.W2.T3.1` — Ambil elemen dari HTML (2 putaran, HTML berbeda)
 
+**Putaran 1:**
 ```js
 const tombol = document.querySelector("#tombol-submit") // 1 elemen pertama yang cocok
 const semuaItem = document.querySelectorAll(".item-list") // NodeList berisi SEMUA yang cocok
@@ -282,14 +308,28 @@ const elemenById = document.getElementById("tombol-submit")
 const elemenByClass = document.getElementsByClassName("item-list")
 ```
 
-**Latihan:** buat 1 file HTML sederhana dengan beberapa elemen (`id`, `class`), lalu ambil masing-
-masing pakai `querySelector`/`querySelectorAll` dan cara lama, bandingkan hasilnya.
+**Latihan putaran 1:** buat 1 file HTML sederhana dengan beberapa elemen (`id`, `class`), lalu
+ambil masing-masing pakai `querySelector`/`querySelectorAll` dan cara lama, bandingkan hasilnya.
 
-**Checklist selesai:** kamu paham `querySelectorAll` mengembalikan **NodeList** (kumpulan elemen),
-bukan 1 elemen — kalau mau iterasi, perlu `forEach` atau diubah ke array dulu.
+**Checklist putaran 1:** kamu paham `querySelectorAll` mengembalikan **NodeList** (kumpulan
+elemen), bukan 1 elemen — kalau mau iterasi, perlu `forEach` atau diubah ke array dulu.
 
-### `M2.W2.T3.2` — Bikin & sisipkan elemen baru
+**Putaran 2 (struktur HTML berbeda):** buat 1 file HTML baru dengan struktur elemen yang **berbeda**
+dari putaran 1 (misal jumlah elemen beda, susunan `id`/`class` beda), ulangi lagi pengambilan
+elemen pakai `querySelector`/`querySelectorAll` dan bandingkan dengan cara lama — dari ingatan,
+tanpa lihat kode putaran 1 kalau memungkinkan.
 
+**Contoh entry log:**
+```markdown
+### Task: M2.W2.T3.1
+- **Status:** done
+- **Capaian:** Putaran 1 & 2 (HTML berbeda) berhasil ambil elemen pakai querySelector/querySelectorAll dan cara lama, paham NodeList vs 1 elemen.
+- **Kesulitan:** -
+```
+
+### `M2.W2.T3.2` — Bikin & sisipkan elemen baru (2 putaran, data berbeda)
+
+**Putaran 1:**
 ```js
 const listContainer = document.querySelector("#daftar")
 
@@ -302,18 +342,21 @@ listContainer.appendChild(itemBaru)
 // atau versi lebih baru: listContainer.append(itemBaru)
 ```
 
-**Latihan:** dari array `siswa` di bagian 1, bikin elemen `<li>` untuk **setiap** siswa (gabungkan
-dengan `map`/`forEach`) dan tampilkan semuanya ke dalam 1 `<ul>` di halaman.
+**Latihan putaran 1:** dari array `siswa` di bagian 1, bikin elemen `<li>` untuk **setiap** siswa
+(gabungkan dengan `map`/`forEach`) dan tampilkan semuanya ke dalam 1 `<ul>` di halaman.
+
+**Putaran 2 (data berbeda):** ulangi render dinamis ini lagi, tapi pakai **data lain** (boleh data
+baru dari `T2.1`/`T2.4` — produk/transaksi/dsb, bukan siswa lagi).
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T3.2
 - **Status:** done
-- **Capaian:** Berhasil render list siswa ke DOM secara dinamis pakai createElement + appendChild.
+- **Capaian:** Putaran 1 (siswa) & putaran 2 (produk toko dari T2.1) berhasil render list ke DOM secara dinamis pakai createElement + appendChild.
 - **Kesulitan:** -
 ```
 
-### `M2.W2.T3.3` — `textContent` vs `innerHTML`
+### `M2.W2.T3.3` — `textContent` vs `innerHTML` (2 percobaan berbeda)
 
 ```js
 const target = document.querySelector("#output")
@@ -323,10 +366,14 @@ target.textContent = namaUser // aman: apapun isinya, ditampilkan sebagai teks p
 target.innerHTML = namaUser // berisiko kalau namaUser bisa berisi tag HTML/script
 ```
 
-**Latihan:** coba set `innerHTML` dengan string yang **sengaja** berisi tag HTML (misal
+**Percobaan 1:** coba set `innerHTML` dengan string yang **sengaja** berisi tag HTML (misal
 `"<b>Tebal</b>"`) dan bandingkan hasil tampilannya dengan `textContent` yang isinya sama persis —
 perhatikan `innerHTML` benar-benar merender tag-nya, `textContent` menampilkannya sebagai teks
 mentah.
+
+**Percobaan 2 (string berbeda):** ulangi lagi dengan string HTML lain yang belum dicoba (misal
+`"<i>Miring</i>"` atau tag lain), supaya kelihatan jelas ini pola yang konsisten — bukan kebetulan
+1 kasus.
 
 ### `M2.W2.T3.4` — [Wajib Refleksi] Kenapa `innerHTML` berisiko?
 
@@ -346,10 +393,11 @@ mentah.
 - **Kesulitan:** -
 ```
 
-### `M2.W2.T3.5` — **[Ulangi Tanpa Contek]** Case baru, dari nol
+### `M2.W2.T3.5` — **[Ulangi Tanpa Contek]** Putaran ke-3, case baru lagi, dari nol
 
-**Tutup dulu kode `T3.2`/`T3.3` dan modul ini.** Pakai data baru dari `T2.4` (produk/transaksi/dsb,
-bukan data siswa lagi) — dari nol, render ke DOM:
+**Tutup dulu kode `T3.2`/`T3.3` dan modul ini.** Ini putaran ke-3 — pakai **1 topik data baru lagi**
+yang belum dipakai di `T3.1`/`T3.2` (boleh lanjutkan dari `T2.4`, bukan data siswa lagi) — dari
+nol, render ke DOM:
 
 1. Ambil container-nya dengan `querySelector`.
 2. Untuk **setiap** item data, bikin elemen baru lewat `createElement`, isi dengan `textContent`
@@ -396,7 +444,7 @@ bukan data siswa lagi) — dari nol, render ke DOM:
 
 ## 4. Event Handling — Jumat 21 Agustus
 
-### `M2.W2.T4.1` — `addEventListener` dasar
+### `M2.W2.T4.1` — `addEventListener` dasar (2 putaran, kasus berbeda)
 
 ```js
 const tombol = document.querySelector("#tombol-submit")
@@ -411,12 +459,24 @@ form.addEventListener("submit", (event) => {
 })
 ```
 
-**Latihan:** buat 1 form kecil (misal input nama + tombol submit), tangkap event `submit`, cegah
+**Putaran 1:** buat 1 form kecil (misal input nama + tombol submit), tangkap event `submit`, cegah
 reload halaman dengan `preventDefault()`, tampilkan isi input ke halaman (gabungkan dengan DOM
 manipulation bagian 3).
 
-**Checklist selesai:** kamu coba **tanpa** `preventDefault()` dulu dan lihat sendiri halaman
+**Checklist putaran 1:** kamu coba **tanpa** `preventDefault()` dulu dan lihat sendiri halaman
 reload — baru tambahkan `preventDefault()` dan lihat bedanya.
+
+**Putaran 2 (kasus berbeda):** ulangi lagi dengan skenario input yang berbeda dari putaran 1 —
+misal form dengan input angka + validasi sederhana sebelum ditampilkan (tolak kalau bukan angka),
+atau tombol dengan aksi berbeda (bukan submit form). Tetap wajib `preventDefault()` kalau form.
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W2.T4.1
+- **Status:** done
+- **Capaian:** Putaran 1 (form nama) & putaran 2 (form angka + validasi) berhasil, preventDefault dipraktikkan dengan-dan-tanpa untuk lihat bedanya.
+- **Kesulitan:** -
+```
 
 ### `M2.W2.T4.2` — Event object: `target` vs `currentTarget`
 
@@ -427,18 +487,20 @@ document.querySelector("#daftar").addEventListener("click", (event) => {
 })
 ```
 
-**Latihan:** dari list siswa yang kamu render di `T3.2`, tangkap klik pada `<ul>` induknya, ambil
-`event.target` untuk tahu `<li>` mana yang diklik, lalu tampilkan nama siswa yang diklik itu.
+**Latihan:** praktikkan ini di **2 list berbeda** — list siswa yang kamu render di `T3.2` putaran 1
+DAN list data lain dari `T3.2` putaran 2 — tangkap klik pada `<ul>` induknya, ambil `event.target`
+untuk tahu `<li>` mana yang diklik, lalu tampilkan isi item yang diklik itu. Mengerjakan di 2 list
+berbeda membuktikan kamu paham konsepnya, bukan cuma hafal 1 kasus.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T4.2
 - **Status:** done
-- **Capaian:** Berhasil bedakan event.target vs currentTarget, praktik tangkap klik li tertentu dari ul.
+- **Capaian:** Berhasil bedakan event.target vs currentTarget, praktik tangkap klik item tertentu di 2 list berbeda (siswa & produk toko).
 - **Kesulitan:** -
 ```
 
-### `M2.W2.T4.3` — Event delegation
+### `M2.W2.T4.3` — Event delegation (2 putaran, data berbeda)
 
 **Masalah:** kalau kamu pasang `addEventListener` **satu-satu** ke setiap `<li>` yang ada saat
 halaman dimuat, lalu ada `<li>` **baru** yang dibuat belakangan lewat `createElement` (seperti di
@@ -461,15 +523,18 @@ listContainer.addEventListener("click", (event) => {
 // karena listener-nya ada di parent (#daftar), bukan di masing-masing <li>.
 ```
 
-**Latihan:** buktikan sendiri — render list siswa (`T3.2`), pasang event delegation di parent-nya,
-lalu **tambahkan 1 `<li>` baru secara dinamis lewat kode** (misal lewat tombol "tambah siswa") dan
-klik `<li>` baru itu — pastikan listener tetap berfungsi tanpa perlu dipasang ulang.
+**Putaran 1:** buktikan sendiri — render list siswa (`T3.2` putaran 1), pasang event delegation di
+parent-nya, lalu **tambahkan 1 `<li>` baru secara dinamis lewat kode** (misal lewat tombol "tambah
+siswa") dan klik `<li>` baru itu — pastikan listener tetap berfungsi tanpa perlu dipasang ulang.
+
+**Putaran 2 (data berbeda):** ulangi persis konsep yang sama di list data lain (`T3.2` putaran 2) —
+pasang event delegation dari nol, tambah 1 item baru dinamis, klik, buktikan listener tetap jalan.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T4.3
 - **Status:** done
-- **Capaian:** Berhasil praktik event delegation, buktikan li baru yang ditambah dinamis tetap kena listener.
+- **Capaian:** Putaran 1 (list siswa) & putaran 2 (list produk toko) berhasil praktik event delegation, buktikan item baru yang ditambah dinamis tetap kena listener di kedua list.
 - **Kesulitan:** -
 ```
 
@@ -489,9 +554,10 @@ banyak).
 - **Kesulitan:** -
 ```
 
-### `M2.W2.T4.5` — **[Ulangi Tanpa Contek]** Case baru + fitur baru, dari nol
+### `M2.W2.T4.5` — **[Ulangi Tanpa Contek]** Putaran ke-3 + fitur baru, dari nol
 
-**Tutup dulu kode `T4.3` dan modul ini.** Pakai list data dari `T3.5` — dari nol, pasang
+**Tutup dulu kode `T4.3` dan modul ini.** Ini putaran ke-3 — pakai **1 topik data baru lagi** yang
+belum dipakai di `T4.3` (boleh lanjutkan dari `T3.5`) — dari nol, pasang
 event delegation di container-nya. Kali ini **tambahkan fitur baru yang belum pernah kamu coba**:
 tombol "hapus" di setiap item, yang juga ditangani lewat **event delegation yang sama** (bukan
 listener terpisah per item, dan bukan listener baru per tombol hapus).
@@ -539,30 +605,32 @@ aksinya beda-beda.
 
 ---
 
-## 5. Uji Ulang Pemahaman Mandiri (`M2.W2.T5`) — sesi live, SEBELUM proyek mandiri
+## 5. Uji Ulang Pemahaman Mandiri (`M2.W2.T5`) — sendiri, SEBELUM proyek mandiri
 
-**Ini bukan proyek mandiri, dan bukan evaluasi akhir minggu — ini sesi terpisah, lebih pendek,
-yang WAJIB dilewati dulu sebelum mulai `T6`.**
+**Ini bukan proyek mandiri, dan bukan evaluasi akhir minggu — ini sesi mandiri, lebih pendek,
+yang WAJIB dilewati dulu sebelum mulai `T6`. Tidak perlu kehadiran/sesi bareng mentor sama sekali.**
 
-Mentor akan memberi 1 kasus kombinasi baru **secara dadakan** — kombinasi minimal 2 dari
-`map`/`filter`/`reduce`/`find`, ditambah render ke DOM dan event handling (boleh + delegation) —
-dengan topik data yang **belum pernah dipakai** di task manapun minggu ini (bukan siswa, bukan
-produk/film dari task-task `[Ulangi Tanpa Contek]`).
+Sendirian, **kamu sendiri** yang memilih atau mengarang 1 kasus kombinasi baru — kombinasi minimal
+2 dari `map`/`filter`/`reduce`/`find`, ditambah render ke DOM dan event handling (boleh +
+delegation) — dengan topik data yang **belum pernah kamu pakai** di task manapun minggu ini (bukan
+siswa, bukan data-data yang sudah dipakai di task-task `[Ulangi Tanpa Contek]`).
 
 **Aturan sesi ini:**
-1. Dikerjakan **langsung di depan mentor** (atau direkam layar kalau sesinya async).
+1. Dikerjakan **sendirian**, kapan saja kamu mau — tidak perlu janjian atau ditonton mentor.
 2. **TIDAK BOLEH** membuka modul ini, AI, catatan pribadi, atau kode task-task sebelumnya.
 3. Boleh macet, boleh salah, boleh butuh waktu lebih lama dari biasanya — **itu justru informasi
-   yang dicari**, bukan kegagalan. Tujuannya memverifikasi jujur: pemahaman minggu ini sudah
-   nempel, atau masih mengandalkan hafalan urutan/hasil task sebelumnya.
+   yang dicari**, bukan kegagalan. Tujuannya memverifikasi jujur ke diri sendiri: pemahaman minggu
+   ini sudah nempel, atau masih mengandalkan hafalan urutan/hasil task sebelumnya.
 4. Kalau ada bagian yang macet total, **itu sinyal bagian itu perlu diulang lagi** sebelum lanjut
    ke proyek mandiri `T6` — bukan berarti langsung lanjut saja supaya cepat selesai.
+5. Catat jujur di log kasus apa yang kamu pilih, bagian mana yang lancar, bagian mana yang macet —
+   ini akan diceritakan ke mentor nanti sekalian pas evaluasi `T7`, bukan sesi terpisah.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W2.T5
 - **Status:** done
-- **Capaian:** Sesi live dengan mentor selesai, kasus dadakan: [ceritakan kasusnya]. Bagian yang lancar: [...]. Bagian yang sempat macet: [...] (jujur).
+- **Capaian:** Kasus pilihan sendiri: [ceritakan kasusnya]. Bagian yang lancar: [...]. Bagian yang sempat macet: [...] (jujur).
 - **Kesulitan:** (jujur, termasuk kalau ada bagian yang benar-benar tidak bisa dikerjakan tanpa bantuan)
 ```
 
@@ -615,17 +683,19 @@ Cukup pastikan repo/PR-nya bisa diakses, cantumkan link di entry log.
 
 ---
 
-## 7. Evaluasi (`M2.W2.T7`)
+## 7. Evaluasi (`M2.W2.T7`) — satu-satunya sesi bareng mentor minggu ini
 
-Siapkan demo singkat (~20-25 menit, lebih panjang dari biasanya karena ada komponen live coding)
-untuk mentor:
+Semua task lain minggu ini dikerjakan mandiri, sendirian. Sesi ini adalah **satu-satunya** momen
+kamu duduk bareng mentor untuk membahas semuanya sekaligus. Siapkan demo singkat (~20-25 menit,
+lebih panjang dari biasanya karena ada komponen live coding):
 
 1. **Tunjukkan mini-app `T6`** langsung jalan di browser — jelaskan tiap keputusan (kapan pakai
    `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event
    delegation) **berdasarkan komentar kode yang kamu tulis**, bukan mengarang penjelasan baru saat
    ditanya.
-2. **Ceritakan hasil sesi `T5`** (uji ulang pemahaman mandiri) — bagian mana yang lancar, bagian
-   mana yang sempat macet, dan apakah sudah lebih lancar sekarang.
+2. **Ceritakan hasil teach-back mandiri `T2.5`** (alur accumulator `reduce` step-by-step) dan
+   **hasil sesi uji ulang mandiri `T5`** — kasus apa yang kamu pilih sendiri, bagian mana yang
+   lancar, bagian mana yang sempat macet, dan apakah sudah lebih lancar sekarang.
 3. **Buka PR-nya bareng mentor** untuk dibahas (review digabung di sesi ini, sama seperti
    minggu-minggu sebelumnya).
 4. **Mentor akan kasih soal live** yang menyasar kesalahpahaman umum `reduce` (dikira "cuma
