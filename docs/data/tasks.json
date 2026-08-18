@@ -534,6 +534,21 @@
             "done": false
           },
           {
+            "id": "M2.W2.T2.4",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.1`/`T2.2` atau modul, ulangi dari nol praktik `find` + ketiga variasi `reduce` (sum, max/min, rekap object), tapi pakai **1 topik data baru** yang kamu pilih sendiri (beda dari data `map`/`filter` hari Selasa — misal array produk toko dengan harga & stok, array transaksi, dsb; boleh dipakai lagi untuk task DOM/event di hari-hari berikutnya minggu ini). Catat jujur bagian mana yang sempat lupa",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T2.5",
+            "text": "[Wajib Refleksi] Teach-back ke mentor (lisan, TANPA membaca catatan): tambahkan `console.log(accumulator, elemenSekarang)` di dalam salah satu `reduce` kamu, jalankan, lalu jelaskan ke mentor apa yang terjadi di **setiap langkah/iterasi** — buktikan kamu paham prosesnya bertahap, bukan cuma tahu hasil akhirnya",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T2.6",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal `reduce`/`find`, minimal 1 soal berupa potongan kode `reduce` yang harus kamu telusuri manual nilai accumulator-nya baris per baris sebelum menjawab hasil akhirnya) — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
             "id": "M2.W2.T3.1",
             "text": "Ambil elemen dari HTML: `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama",
             "done": false
@@ -551,6 +566,16 @@
           {
             "id": "M2.W2.T3.4",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa `innerHTML` berisiko (XSS) kalau isinya berasal dari input user/data luar yang tidak dipercaya, dan kapan `textContent` adalah pilihan yang lebih aman — kasih 1 contoh skenario nyata (misal render nama user dari form ke halaman)",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T3.5",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T3.2`/`T3.3` atau modul, render **data baru dari `T2.4`** (produk/transaksi, dsb — bukan data siswa) ke DOM dari nol — bikin elemen lewat `createElement`, pakai `textContent` untuk isinya. Catat jujur bagian mana yang sempat lupa command-nya",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T3.6",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal DOM, minimal 1 soal berupa potongan kode `createElement`+`appendChild` yang harus kamu bayangkan/gambarkan tampilan HTML hasilnya SEBELUM dijalankan di browser)",
             "done": false
           },
           {
@@ -574,13 +599,28 @@
             "done": false
           },
           {
+            "id": "M2.W2.T4.5",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T4.3` atau modul, ulangi event delegation dari nol di data dari `T3.5` — kali ini tambahkan **fitur baru** yang belum pernah dicoba sebelumnya: tombol \"hapus\" di tiap item yang juga ditangani lewat event delegation (bukan listener per-item). Catat jujur bagian mana yang sempat lupa/ragu",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T4.6",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal event handling, minimal 1 soal skenario debug: diberi potongan kode yang listener-nya TIDAK jalan untuk elemen baru — kamu harus temukan & jelaskan kenapa, tanpa mencoba-coba run kode dulu, baru verifikasi jawabanmu dengan menjalankannya)",
+            "done": false
+          },
+          {
             "id": "M2.W2.T5",
-            "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 mini-app interaktif tanpa framework (murni HTML+CSS+JS) yang menggabungkan semua skill minggu ini: minimal 1 pemakaian nyata `map`/`filter`/`reduce`/`find` untuk mengolah data (boleh array of object statis di dalam kode), render hasilnya ke DOM lewat `createElement`, dan tangani interaksi user lewat event handling **termasuk event delegation** untuk elemen yang dibuat dinamis. Contoh topik: daftar belanja dengan filter kategori & total harga (`reduce`), atau daftar tugas dengan filter status & pencarian (`filter`/`find`). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T6`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.",
+            "text": "**[Uji Ulang Pemahaman Mandiri — LIVE, kasus dadakan]** Sesi terpisah SEBELUM mengerjakan proyek mandiri `T6`: mentor kasih 1 kasus kombinasi baru secara dadakan (gabungan minimal 2 dari `map`/`filter`/`reduce`/`find` + render ke DOM + event delegation) yang **belum pernah kamu kerjakan di task manapun minggu ini** — dikerjakan LANGSUNG di depan mentor (atau direkam layar kalau async), **TANPA membuka modul/AI/catatan/kode task sebelumnya**. Ini bukan untuk dinilai benar/salah sempurna, tapi untuk memverifikasi jujur pemahamannya sudah nempel atau masih hafalan/contek dari task-task sebelumnya — kalau macet total di suatu bagian, itu sinyal bagian itu perlu diulang lagi sebelum lanjut ke `T6`.",
             "done": false
           },
           {
             "id": "M2.W2.T6",
-            "text": "Evaluasi Minggu ini: demo ke mentor — jalankan mini-app `T5` langsung di browser, jelaskan tiap keputusan (kapan pakai `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event delegation), review PR bareng, DAN jawab soal live yang menyasar kesalahpahaman umum (`reduce` dikira \"cuma for-loop ribet\") + mentor tanya 2-3 variasi pertanyaan + isi refleksi capaian/kesulitan di modul",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 mini-app interaktif tanpa framework (murni HTML+CSS+JS) yang menggabungkan semua skill minggu ini: minimal 1 pemakaian nyata `map`/`filter`/`reduce`/`find` untuk mengolah data (boleh array of object statis di dalam kode), render hasilnya ke DOM lewat `createElement`, dan tangani interaksi user lewat event handling **termasuk event delegation** untuk elemen yang dibuat dinamis. Contoh topik: daftar belanja dengan filter kategori & total harga (`reduce`), atau daftar tugas dengan filter status & pencarian (`filter`/`find`). **Wajib tambahkan komentar singkat di kode untuk tiap fungsi array (`map`/`filter`/`reduce`/`find`) yang menjelaskan KENAPA fungsi itu yang dipilih** (bukan cuma kode-nya jalan) — ini jadi bukti tertulis pemahaman, bukan cuma hasil coba-coba. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.",
+            "done": false
+          },
+          {
+            "id": "M2.W2.T7",
+            "text": "Evaluasi Minggu ini: demo ke mentor — jalankan mini-app `T6` langsung di browser, jelaskan tiap keputusan (kapan pakai `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event delegation) berdasarkan komentar kode yang ditulis di `T6`, review PR bareng, ceritakan hasil sesi `T5` (bagian mana yang sempat macet), jawab soal live yang menyasar kesalahpahaman umum (`reduce` dikira \"cuma for-loop ribet\") **DAN mentor akan minta modifikasi kecil dadakan langsung di kode `T6`** (misal tambah 1 fitur filter baru) di tempat, tanpa buka modul, untuk memastikan pemahamannya bukan hafalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
