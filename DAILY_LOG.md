@@ -10,6 +10,8 @@
 
 ---
 
+# Bulan 1
+
 ## 2026-07-13 // bulan 1 - minggu 1
 
 <!-- ENTRY START -->
@@ -582,7 +584,7 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 ---
 
-## 2026-08-03 //minggu 4
+## 2026-08-03 // minggu 4
 
 <!-- ENTRY START -->
 
@@ -761,6 +763,8 @@ sempat bingung juga pas proses pemicuan conflict karena Git sempat auto-merge ot
 
 ---
 
+# Bulan 2
+
 ## 2026-08-10 // bulan 2 - minggu 1
 
 <!-- ENTRY START -->
@@ -913,11 +917,82 @@ console.log(jurusan);
 
 ## 2026-08-14
 
-!-- ENTRY START -->
+<!-- ENTRY START -->
 
 ### Task: M1.W4.T7
 
 - **Status:** done
 - **Capaian:** Demo ke mentor selesai, ES6+ dikuasai (termasuk beda this arrow vs function), PR dibahas, pertanyaan variasi mentor terjawab.
 - **Kesulitan:** ada sedikit melihat modul untuk mengerjakan soal live dari mentor, masih lama untuk menjawab / menemukan bug atau eror pada program.
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-18 // minggu 2
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T1.2
+
+- **Status:** done
+- **Capaian:** Berhasil praktik map & filter, termasuk kombinasi keduanya untuk ambil nama siswa nilai <75.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T1.3
+
+- **Status:** done
+- **Capaian:** =
+
+1. karna dia pakai prinsip _immutability_ (data gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) agar gak rusak/terubah saat diolah di bagian kode lain. map dan filter dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
+
+2. perbandingan kode (`for` loop vs `map`/`filter`):
+   - versi for loop manual (untuk filter siswa lulus):
+     const siswaLulus = [];
+     for (let i = 0; i < siswa.length; i++) {
+     if (siswa[i].nilai >= 75) {
+     siswaLulus.push(siswa[i]);
+     }
+     }
+     =====================
+   - versi filter modern:
+     const siswaLulus = siswa.filter((s) => s.nilai >= 75);
+     =====================
+     untuk `filter` dia lebih mudah dibaca dan dipahami karna kodenya deklaratif (langsung menyatakan _apa_ yang ingin dicapai, bukan _bagaimana_ alur perulangannya diatur). jadi selain itu kita gak perlu buat array penampung kosong (`[]`) secara manual.
+
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.2
+
+- **Status:** done
+- **Capaian:** Berhasil praktik find, dan reduce untuk 3 kasus (total, max, rekap object) dengan data sendiri.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.3
+
+- **Status:** done
+- **Capaian:** =
+
+1. bedanya antara for dan reduce adalah kalo for loop itu alat kontrol perulangan tingkat rendah (imperative). jadi kita harus menyiapkan variabel penampung di luar perulangan (misal let total = 0), mengatur indeks (let i = 0), mengelola mutasi nilai penampung manual (total += ...), dan menjaga alur perulangannya sendiri. sedangkan untuk reduce itu pola pengerjaan berkonsep accumulator (deklaratif). reduce dia secara otomatis mengoper nilai akumulasi (accumulator) dari satu elemen ke elemen berikutnya dalam satu alur tertutup, tanpa perlu variabel penampung luar atau pengelolaan indeks.
+
+2. kita pakai reduce lebih pas kalo pakai map + filter, array diproses 2 kali perulangan (di-filter dulu bikin array baru, lalu di-map lagi bikin array baru). contoh: dari array transaksi belanja, kita cuma mau hitung total pengeluaran untuk kategori "makanan". kalua kita pakai `filter` lalu dihitung, JavaScript harus iterasi 2 kali (bikin array baru hasil filter dulu, baru dihitung). nah kalau pakai `reduce()`, cukup 1 kali iterasi: di dalam `reduce`, jika `item.kategori === "makanan"`, langsung tambahkan ke `acc`.
+
+- **Kesulitan:** masih bingung dikit ya beberapa kode yang ada didalam nya, cuma saya pelajari dan pahamin lagi.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T3.2
+
+- **Status:** done
+- **Capaian:** Berhasil render list siswa ke DOM secara dinamis pakai createElement + appendChild.
+- **Kesulitan:** ---
 <!-- ENTRY END -->

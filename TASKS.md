@@ -162,16 +162,16 @@
 > 🗓️ **Minggu kerja pendek:** Senin 17 Ags 2026 libur — task minggu ini dirancang untuk **4 hari kerja** (Selasa 18 – Jumat 21 Ags 2026), bukan 5 hari seperti biasanya.
 
 - `map` & `filter` (dipecah jadi 3 sub-task):
-  - [ ] <!-- id: M2.W2.T1.1 --> Praktik `map`: transformasi tiap elemen array jadi array baru (misal array object siswa → array nama saja, atau array angka → array hasil kali 2)
-  - [ ] <!-- id: M2.W2.T1.2 --> Praktik `filter`: seleksi elemen array berdasarkan kondisi jadi array baru yang lebih pendek (misal filter siswa dengan nilai ≥ 75)
-  - [ ] <!-- id: M2.W2.T1.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `map`/`filter` **selalu** menghasilkan array baru (tidak mengubah array asli) — bandingkan dengan `for` loop biasa yang biasa dipakai untuk hal yang sama, kasih 1 contoh kode sebelum/sesudah
+  - [x] <!-- id: M2.W2.T1.1 --> Praktik `map`: transformasi tiap elemen array jadi array baru (misal array object siswa → array nama saja, atau array angka → array hasil kali 2)
+  - [x] <!-- id: M2.W2.T1.2 --> Praktik `filter`: seleksi elemen array berdasarkan kondisi jadi array baru yang lebih pendek (misal filter siswa dengan nilai ≥ 75)
+  - [x] <!-- id: M2.W2.T1.3 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `map`/`filter` **selalu** menghasilkan array baru (tidak mengubah array asli) — bandingkan dengan `for` loop biasa yang biasa dipakai untuk hal yang sama, kasih 1 contoh kode sebelum/sesudah
 - `reduce` & `find` (dipecah jadi 3 sub-task — **ini yang paling sering disalahpahami**, mirip kejadian `fr`/`vh` dan `this` arrow function di minggu-minggu lalu: `reduce` BUKAN cuma "for-loop yang lebih ribet ditulis", tapi cara berpikir akumulasi):
-  - [ ] <!-- id: M2.W2.T2.1 --> Praktik `find`: cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id), bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen)
-  - [ ] <!-- id: M2.W2.T2.2 --> Praktik `reduce`: minimal 3 kasus berbeda — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori)
-  - [ ] <!-- id: M2.W2.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: `reduce` itu BUKAN cuma "`for` loop yang ditulis lebih ribet" — apa beda fundamentalnya (konsep accumulator yang jalan terus dari elemen ke elemen), dan kasih 1 contoh kasus nyata di mana `reduce` lebih pas dipakai dibanding `map`+`filter` digabung manual
+  - [x] <!-- id: M2.W2.T2.1 --> Praktik `find`: cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id), bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen)
+  - [x] <!-- id: M2.W2.T2.2 --> Praktik `reduce`: minimal 3 kasus berbeda — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori)
+  - [x] <!-- id: M2.W2.T2.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: `reduce` itu BUKAN cuma "`for` loop yang ditulis lebih ribet" — apa beda fundamentalnya (konsep accumulator yang jalan terus dari elemen ke elemen), dan kasih 1 contoh kasus nyata di mana `reduce` lebih pas dipakai dibanding `map`+`filter` digabung manual
 - DOM manipulation dasar (dipecah jadi 4 sub-task):
-  - [ ] <!-- id: M2.W2.T3.1 --> Ambil elemen dari HTML: `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama
-  - [ ] <!-- id: M2.W2.T3.2 --> Bikin & sisipkan elemen baru secara dinamis: `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`)
+  - [x] <!-- id: M2.W2.T3.1 --> Ambil elemen dari HTML: `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama
+  - [x] <!-- id: M2.W2.T3.2 --> Bikin & sisipkan elemen baru secara dinamis: `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`)
   - [ ] <!-- id: M2.W2.T3.3 --> Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama
   - [ ] <!-- id: M2.W2.T3.4 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa `innerHTML` berisiko (XSS) kalau isinya berasal dari input user/data luar yang tidak dipercaya, dan kapan `textContent` adalah pilihan yang lebih aman — kasih 1 contoh skenario nyata (misal render nama user dari form ke halaman)
 - Event handling (dipecah jadi 4 sub-task):
