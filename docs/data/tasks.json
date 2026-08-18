@@ -506,61 +506,46 @@
           {
             "id": "M2.W2.T1.1",
             "text": "Praktik `map`: transformasi tiap elemen array jadi array baru (misal array object siswa → array nama saja, atau array angka → array hasil kali 2)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T1.2",
             "text": "Praktik `filter`: seleksi elemen array berdasarkan kondisi jadi array baru yang lebih pendek (misal filter siswa dengan nilai ≥ 75)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T1.3",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: kenapa `map`/`filter` **selalu** menghasilkan array baru (tidak mengubah array asli) — bandingkan dengan `for` loop biasa yang biasa dipakai untuk hal yang sama, kasih 1 contoh kode sebelum/sesudah",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T2.1",
-            "text": "Praktik `find` — **2 putaran, data berbeda tiap putaran**: putaran 1 cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id) di data siswa, bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen); putaran 2 ulangi konsep yang sama tapi pakai **1 topik data baru pilihanmu sendiri** (misal array produk toko, array transaksi, dsb — bebas asal beda dari data siswa)",
-            "done": false
+            "text": "Praktik `find`: cari 1 elemen pertama yang cocok kondisi (misal cari 1 siswa berdasarkan id), bandingkan dengan `filter` (yang hasilnya array, bukan 1 elemen)",
+            "done": true
           },
           {
             "id": "M2.W2.T2.2",
-            "text": "Praktik `reduce` — **2 putaran, data berbeda tiap putaran**: putaran 1 kerjakan minimal 3 kasus berbeda di data siswa/angka — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori); putaran 2 ulangi ketiga kasus itu lagi tapi dengan **data baru yang berbeda topik** dari putaran 1 (boleh lanjutkan topik data baru dari `T2.1`)",
-            "done": false
+            "text": "Praktik `reduce`: minimal 3 kasus berbeda — (a) total/sum dari array angka, (b) cari nilai max/min, (c) ubah array jadi 1 object (misal array transaksi → object rekap per kategori)",
+            "done": true
           },
           {
             "id": "M2.W2.T2.3",
             "text": "**[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: `reduce` itu BUKAN cuma \"`for` loop yang ditulis lebih ribet\" — apa beda fundamentalnya (konsep accumulator yang jalan terus dari elemen ke elemen), dan kasih 1 contoh kasus nyata di mana `reduce` lebih pas dipakai dibanding `map`+`filter` digabung manual",
-            "done": false
-          },
-          {
-            "id": "M2.W2.T2.4",
-            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.1`/`T2.2` atau modul, ulangi dari nol praktik `find` + ketiga variasi `reduce` (sum, max/min, rekap object) untuk **ke-3 kalinya**, pakai **1 topik data baru lagi** yang belum pernah dipakai di `T2.1`/`T2.2` (boleh dipakai lagi untuk task DOM/event di hari-hari berikutnya minggu ini). Catat jujur bagian mana yang sempat lupa",
-            "done": false
-          },
-          {
-            "id": "M2.W2.T2.5",
-            "text": "[Wajib Refleksi] Teach-back mandiri (lisan ke diri sendiri/rekam sendiri, TANPA membaca catatan, TIDAK perlu sesi bareng mentor): tambahkan `console.log(accumulator, elemenSekarang)` di dalam salah satu `reduce` kamu, jalankan, lalu jelaskan sendiri (tulis di log atau rekam) apa yang terjadi di **setiap langkah/iterasi** — buktikan ke diri sendiri kamu paham prosesnya bertahap, bukan cuma tahu hasil akhirnya. Hasil teach-back ini yang akan dibahas mentor nanti pas evaluasi `T7`, bukan sesi terpisah",
-            "done": false
-          },
-          {
-            "id": "M2.W2.T2.6",
-            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal `reduce`/`find`, minimal 1 soal berupa potongan kode `reduce` yang harus kamu telusuri manual nilai accumulator-nya baris per baris sebelum menjawab hasil akhirnya) — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T3.1",
-            "text": "Ambil elemen dari HTML — **2 putaran, data/HTML berbeda tiap putaran**: putaran 1 `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama; putaran 2 ulangi dengan struktur HTML/selector yang berbeda dari putaran 1",
-            "done": false
+            "text": "Ambil elemen dari HTML: `document.querySelector`/`querySelectorAll`, bandingkan dengan `getElementById`/`getElementsByClassName` yang lebih lama",
+            "done": true
           },
           {
             "id": "M2.W2.T3.2",
-            "text": "Bikin & sisipkan elemen baru secara dinamis — **2 putaran, data berbeda tiap putaran**: putaran 1 pakai `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`) untuk render data siswa; putaran 2 ulangi untuk render **data lain** (boleh dari `T2.1`/`T2.4`)",
-            "done": false
+            "text": "Bikin & sisipkan elemen baru secara dinamis: `document.createElement`, `appendChild`/`append`, set atribut (`setAttribute`, `classList.add`)",
+            "done": true
           },
           {
             "id": "M2.W2.T3.3",
-            "text": "Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama, **ulangi dengan 2 string percobaan berbeda** (salah satunya sengaja berisi tag HTML) supaya kelihatan jelas bedanya",
+            "text": "Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama",
             "done": false
           },
           {
