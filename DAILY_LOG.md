@@ -996,3 +996,90 @@ console.log(jurusan);
 - **Capaian:** Berhasil render list siswa ke DOM secara dinamis pakai createElement + appendChild.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-19
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T3.4
+
+- **Status:** done
+- **Capaian:** =
+
+1. menurut saya `innerHTML` bisa bahaya kalau isinya dari input user atau data dari luar, karna browser menganggap itu sebagai HTML dan langsung menjalankannya. jadi kalau ada orang yang iseng masukin kode HTML atau script, itu bisa ikut jalan. makanya kalau datanya dari user, lebih aman pakai `textContent` karena cuma ditampilkan sebagai teks biasa.
+2. textContent pilihan yang lebih aman kalau kita cuma mau nampilkan teks murni (missal nya: nama user, komentar, isi obrolan chat, angka nilai). contohnya kalau kita buat form untuk nama pengguna, terus nama yang diinput mau ditampilin lagi di halaman. menurut saya lebih aman pakai `textContent`, karna kalau ada orang yang iseng masukin tag HTML atau script, itu cuma bakal tampil jadi tulisan dan gak dijalankan sama browser.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T3.5
+
+- **Status:** done
+- **Capaian:** Ulangi render DOM dari nol pakai data produk toko (bukan data siswa). udah buat dan jalan kan juga pakai kode yang simpel aja.
+- **Kesulitan:** saya udah buat untuk task T3.5, ada beberapa bagaian yang terkendala, seperti memanggil variabel yang salah / salah ketik variabel nya. sempat salah kode juga untuk membuat perulangan. masih macet macet juga.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T3.6
+
+- **Status:** done
+- **Capaian:** =
+
+1. bedanya antara querySelector dan queryselectorAll itu, kalo querySelector itu cuma ngambil 1 element pertama yang cocok sama selector. nah kalau querySelectorAll ngambil semua element yang cocok, jadi hasilnya bisa lebih dari satu.
+
+2. menurut saya awalnya di HTML cuma ada <ul id="daftar"></ul>. terus setelah kode dijalankan, JavaScript bikin element <li>, yang isi tulisan "Halo", lalu dimasukin ke dalam <ul>. nah jadi hasil akhirnya itu:
+//=========
+<ul id="daftar">
+  <li>Halo</li>
+</ul>
+//=========
+
+3. kalau dimasukin ke textContent, yang tampil cuma tulisan <script>alert(1)</script> dan gak dijalankan. tapi kalau dimasukin ke innerHTML, browser nganggap itu HTML, jadi script atau tag HTML bisa ikut dijalan.
+
+4. setAttribute dipakai buat nambah atau ngubah attribute HTML, misalnya id, href, src, atau title. nah sedangkan classList.add dipakai khusus buat nambah class ke element. jadi kalau mau ngasih class pakai classList.add, kalau mau ngubah attribute lain pakai setAttribute.
+
+5. menurut saya lebih enak itu isi textContent dulu, baru di appendChild, jadi pas element masuk ke halaman isinya udah lengkap. tapi sebenarnya urutannya gak terlalu masalah lah. jadi kalau appendChild dulu baru isi textContent, hasilnya tetap sama, cuma biasanya lebih rapi kalau diisi dulu baru dimasukin ke HTML.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.1
+
+- **Status:** done
+- **Capaian:** udah saya buat untuk task T4.1, putaran 1 (form nama) & putaran 2 (form angka + validasi) berhasil, preventDefault dipraktikkan dengan-dan-tanpa untuk lihat bedanya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.2
+
+- **Status:** done
+- **Capaian:** Berhasil bedakan event.target vs currentTarget, praktik tangkap klik item tertentu di 2 list berbeda (siswa & produk toko).
+- **Kesulitan:** agak susah emang untuk memahami kode untuk task ini, butuh analogi yang jelas untuk membuat program nya, saya kesusahan sedikit sih.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.3
+
+- **Status:** done
+- **Capaian:** Putaran 1 (list siswa) & putaran 2 (list barang) berhasil praktik event delegation, buktikan item baru yang ditambah dinamis tetap kena listener di kedua list.
+- **Kesulitan:** ada kesalahan ketik dan kode untuk pengerjaan putaran 2 (daftar barang).
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.4
+
+- **Status:** done
+- **Capaian:** menurut saya keuntungan menggunakan event delegation kalau kita pasang listener satu-satu di <li>, elemen baru yang ditambah belakangan pakai createElement gak bakal jalan pas diklik karena pas listener dibuat elemen itu belum ada. tapi kalau kita pakai event delegation (listener dipasang di parent <ul>), elemen <li> baru kaya pas nambah siswa/barang di T4.3 otomatis langsung bisa diklik tanpa perlu bikin listener lagi. keuntungan lain nya yaitu lebih hemat memori browser. dari pada kita buat banyak listener terpisah buat tiap elemen anak / lainnya, kita cuma butuh 1 listener aja di elemen nya
+- **Kesulitan:** ---
+<!-- ENTRY END -->
