@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-08-19",
+    "task": "M2.W2.T4.4",
+    "status": "done",
+    "capaian": "menurut saya keuntungan menggunakan event delegation kalau kita pasang listener satu-satu di <li>, elemen baru yang ditambah belakangan pakai createElement gak bakal jalan pas diklik karena pas listener dibuat elemen itu belum ada. tapi kalau kita pakai event delegation (listener dipasang di parent <ul>), elemen <li> baru kaya pas nambah siswa/barang di T4.3 otomatis langsung bisa diklik tanpa perlu bikin listener lagi. keuntungan lain nya yaitu lebih hemat memori browser. dari pada kita buat banyak listener terpisah buat tiap elemen anak / lainnya, kita cuma butuh 1 listener aja di elemen nya",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T4.3",
+    "status": "done",
+    "capaian": "Putaran 1 (list siswa) & putaran 2 (list barang) berhasil praktik event delegation, buktikan item baru yang ditambah dinamis tetap kena listener di kedua list.",
+    "kesulitan": "ada kesalahan ketik dan kode untuk pengerjaan putaran 2 (daftar barang)."
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T4.2",
+    "status": "done",
+    "capaian": "Berhasil bedakan event.target vs currentTarget, praktik tangkap klik item tertentu di 2 list berbeda (siswa & produk toko).",
+    "kesulitan": "agak susah emang untuk memahami kode untuk task ini, butuh analogi yang jelas untuk membuat program nya, saya kesusahan sedikit sih."
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T4.1",
+    "status": "done",
+    "capaian": "udah saya buat untuk task T4.1, putaran 1 (form nama) & putaran 2 (form angka + validasi) berhasil, preventDefault dipraktikkan dengan-dan-tanpa untuk lihat bedanya.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T3.6",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T3.5",
+    "status": "done",
+    "capaian": "Ulangi render DOM dari nol pakai data produk toko (bukan data siswa). udah buat dan jalan kan juga pakai kode yang simpel aja.",
+    "kesulitan": "saya udah buat untuk task T3.5, ada beberapa bagaian yang terkendala, seperti memanggil variabel yang salah / salah ketik variabel nya. sempat salah kode juga untuk membuat perulangan. masih macet macet juga."
+  },
+  {
+    "date": "2026-08-19",
+    "task": "M2.W2.T3.4",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-18",
     "task": "M2.W2.T3.2",
     "status": "done",

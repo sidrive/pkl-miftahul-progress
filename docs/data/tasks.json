@@ -546,42 +546,42 @@
           {
             "id": "M2.W2.T3.3",
             "text": "Ubah isi elemen: `textContent` vs `innerHTML` — praktik keduanya untuk menampilkan data yang sama",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T3.4",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa `innerHTML` berisiko (XSS) kalau isinya berasal dari input user/data luar yang tidak dipercaya, dan kapan `textContent` adalah pilihan yang lebih aman — kasih 1 contoh skenario nyata (misal render nama user dari form ke halaman)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T3.5",
             "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T3.2`/`T3.3` atau modul, render **1 topik data baru lagi** (beda dari yang sudah dipakai di `T3.1`/`T3.2`) ke DOM dari nol — bikin elemen lewat `createElement`, pakai `textContent` untuk isinya. Catat jujur bagian mana yang sempat lupa command-nya",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T3.6",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal DOM, minimal 1 soal berupa potongan kode `createElement`+`appendChild` yang harus kamu bayangkan/gambarkan tampilan HTML hasilnya SEBELUM dijalankan di browser)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.1",
             "text": "Praktik `addEventListener` dasar — **2 putaran, kasus berbeda tiap putaran**: putaran 1 klik tombol + submit form (`event.preventDefault()` supaya form tidak reload halaman); putaran 2 ulangi di form/tombol dengan skenario input yang berbeda (misal input angka + validasi sederhana)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.2",
             "text": "Pahami & pakai **event object**: `event.target`, `event.currentTarget`, ambil value dari elemen yang memicu event — praktik di list siswa (`T3.2` putaran 1) DAN di list data lain (`T3.2` putaran 2) supaya terbukti bukan hafalan 1 kasus",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.3",
             "text": "Praktik **event delegation** — **2 putaran, data berbeda tiap putaran**: putaran 1 pasang 1 listener di elemen parent (misal `<ul>`) untuk menangani klik semua `<li>` di dalamnya (termasuk yang ditambahkan belakangan lewat `createElement`), bandingkan dengan pasang listener manual di setiap elemen anak satu-satu; putaran 2 ulangi di list data yang berbeda dari putaran 1",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: keuntungan event delegation dibanding pasang listener di setiap elemen anak satu-satu — kaitkan langsung ke elemen yang dibuat dinamis lewat `createElement` di `T3.2` (kalau listener dipasang manual per elemen, elemen baru yang dibuat belakangan tidak otomatis punya listener)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.5",
