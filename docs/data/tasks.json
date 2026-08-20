@@ -586,7 +586,7 @@
           {
             "id": "M2.W2.T4.5",
             "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T4.3` atau modul, ulangi event delegation dari nol untuk **ke-3 kalinya**, pakai **1 topik data baru lagi** — kali ini tambahkan **fitur baru** yang belum pernah dicoba sebelumnya: tombol \"hapus\" di tiap item yang juga ditangani lewat event delegation (bukan listener per-item). Catat jujur bagian mana yang sempat lupa/ragu",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T4.6",

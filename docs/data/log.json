@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-08-20",
+    "task": "M2.W2.T4.5",
+    "status": "done",
+    "capaian": "saya coba dan berhasil mengulangi event delegation dari nol pakai topik daftar game random, dan ada fitur tombol hapus yang dikontrol penuh oleh 1 listener pada elemen parent (`<ul>`).",
+    "kesulitan": "ada kesalahan dalam mengetik dan menggunakan kode, salah pasang variabel"
+  },
+  {
+    "date": "2026-08-20",
+    "task": "M2.W2.T2.6",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-20",
+    "task": "M2.W2.T2.5",
+    "status": "done",
+    "capaian": "saya sudah coba `console.log` di tiap iterasi `reduce`, jadi kalau `acc` awalnya dari nilai `0`, lalu tiap putaran ditambah sama `stok` data yang lagi diproses. milai hasil nya di `return` dan dipakai lagi di putaran berikutnya sampai total akhir `27`.",
+    "kesulitan": "awalnya masih bingung alur `acc`, tapi setelah lihat hasil `console.log` tiap putaran jadi sedikit lebih paham, jadi tiap putaran nambah nilainya."
+  },
+  {
+    "date": "2026-08-20",
+    "task": "M2.W2.T2.4",
+    "status": "done",
+    "capaian": "Berhasil menulis ulang find() dan 2 variasi reduce() (total stok & cari barang termahal).",
+    "kesulitan": "kurang paham dan kesalahan dalam penggunaan 'acc', curr, max."
+  },
+  {
+    "date": "2026-08-20",
+    "task": "M2.W2.T2.1",
+    "status": "done",
+    "capaian": "Putaran 1 (siswa): find berhasil, cariGagal = undefined. Putaran 2 (produk barang): ulangi find + kasus tidak ketemu, hasilnya sama-sama sesuai ekspektasi. bedanya pakai filter dan find itu output filter pakai [], sedangkan find {}.",
+    "kesulitan": "-"
+  },
+  {
     "date": "2026-08-19",
     "task": "M2.W2.T4.4",
     "status": "done",
