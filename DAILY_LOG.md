@@ -946,9 +946,9 @@ console.log(jurusan);
 - **Status:** done
 - **Capaian:** =
 
-1. karna dia pakai prinsip _immutability_ (data gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) agar gak rusak/terubah saat diolah di bagian kode lain. map dan filter dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
+1. karna dia pakai prinsip _immutability_ (datanya gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) biar gak rusak/terubah waktu diolah di bagian kode lain. map dan filter ini dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
 
-2. perbandingan kode (`for` loop vs `map`/`filter`):
+2. perbandingan kode `for` loop vs `map`/`filter`:
    - versi for loop manual (untuk filter siswa lulus):
      const siswaLulus = [];
      for (let i = 0; i < siswa.length; i++) {
@@ -960,7 +960,7 @@ console.log(jurusan);
    - versi filter modern:
      const siswaLulus = siswa.filter((s) => s.nilai >= 75);
      =====================
-     untuk `filter` dia lebih mudah dibaca dan dipahami karna kodenya deklaratif (langsung menyatakan _apa_ yang ingin dicapai, bukan _bagaimana_ alur perulangannya diatur). jadi selain itu kita gak perlu buat array penampung kosong (`[]`) secara manual.
+     untuk `filter` dia lebih mudah dibaca dan dipahami karna kodenya deklaratif (langsung menyatakan _apa_ yang ingin dicapai, bukan _bagaimana_ alur perulangannya diatur). jadi kita gak perlu buat array penampung yang kosong `[]` secara manual.
 
 - **Kesulitan:** -
 <!-- ENTRY END -->
@@ -981,7 +981,7 @@ console.log(jurusan);
 - **Status:** done
 - **Capaian:** =
 
-1. bedanya antara for dan reduce adalah kalo for loop itu alat kontrol perulangan tingkat rendah (imperative). jadi kita harus menyiapkan variabel penampung di luar perulangan (misal let total = 0), mengatur indeks (let i = 0), mengelola mutasi nilai penampung manual (total += ...), dan menjaga alur perulangannya sendiri. sedangkan untuk reduce itu pola pengerjaan berkonsep accumulator (deklaratif). reduce dia secara otomatis mengoper nilai akumulasi (accumulator) dari satu elemen ke elemen berikutnya dalam satu alur tertutup, tanpa perlu variabel penampung luar atau pengelolaan indeks.
+1. bedanya antara for dan reduce itu kalo for loop itu alat kontrol perulangan tingkat rendah (imperative). jadi kita harus menyiapkan variabel penampung di luar perulangan (misal let total = 0), mengatur indeks (let i = 0), mengelola mutasi nilai penampung manual (total += ...), dan menjaga alur perulangannya sendiri. sedangkan untuk reduce itu pola pengerjaan berkonsep accumulator (deklaratif). reduce dia secara otomatis mengoper nilai akumulasi (accumulator) dari satu elemen ke elemen berikutnya dalam satu alur tertutup, tanpa perlu variabel penampung luar atau pengelolaan indeks.
 
 2. kita pakai reduce lebih pas kalo pakai map + filter, array diproses 2 kali perulangan (di-filter dulu bikin array baru, lalu di-map lagi bikin array baru). contoh: dari array transaksi belanja, kita cuma mau hitung total pengeluaran untuk kategori "makanan". kalua kita pakai `filter` lalu dihitung, JavaScript harus iterasi 2 kali (bikin array baru hasil filter dulu, baru dihitung). nah kalau pakai `reduce()`, cukup 1 kali iterasi: di dalam `reduce`, jika `item.kategori === "makanan"`, langsung tambahkan ke `acc`.
 
@@ -1082,4 +1082,69 @@ console.log(jurusan);
 - **Status:** done
 - **Capaian:** menurut saya keuntungan menggunakan event delegation kalau kita pasang listener satu-satu di <li>, elemen baru yang ditambah belakangan pakai createElement gak bakal jalan pas diklik karena pas listener dibuat elemen itu belum ada. tapi kalau kita pakai event delegation (listener dipasang di parent <ul>), elemen <li> baru kaya pas nambah siswa/barang di T4.3 otomatis langsung bisa diklik tanpa perlu bikin listener lagi. keuntungan lain nya yaitu lebih hemat memori browser. dari pada kita buat banyak listener terpisah buat tiap elemen anak / lainnya, kita cuma butuh 1 listener aja di elemen nya
 - **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-20
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.1
+
+- **Status:** done
+- **Capaian:** Putaran 1 (siswa): find berhasil, cariGagal = undefined. Putaran 2 (produk barang): ulangi find + kasus tidak ketemu, hasilnya sama-sama sesuai ekspektasi. bedanya pakai filter dan find itu output filter pakai [], sedangkan find {}.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.4
+
+- **Status:** done
+- **Capaian:** Berhasil menulis ulang find() dan 2 variasi reduce() (total stok & cari barang termahal).
+- **Kesulitan:** kurang paham dan kesalahan dalam penggunaan 'acc', curr, max.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.5
+
+- **Status:** done
+- **Capaian:** saya sudah coba `console.log` di tiap iterasi `reduce`, jadi kalau `acc` awalnya dari nilai `0`, lalu tiap putaran ditambah sama `stok` data yang lagi diproses. milai hasil nya di `return` dan dipakai lagi di putaran berikutnya sampai total akhir `27`.
+- **Kesulitan:** awalnya masih bingung alur `acc`, tapi setelah lihat hasil `console.log` tiap putaran jadi sedikit lebih paham, jadi tiap putaran nambah nilainya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T2.6
+
+- **Status:** done
+- **Capaian:** =
+
+1. menurut saya find itu buat cari 1 data pertama yang cocok sama kondisi, jadi hasilnya langsung object atau nilainya, kalau filter bakal ngembaliin array, walaupun yang cocok cuma 1 data. [Koreksi: Tambahin sedikit kalau find akan berhenti saat ketemu data pertama yang cocok, sedangkan filter tetap mengecek semua data sampai selesai.]
+
+2. menurut saya nilai awal di reduce itu sebagai nilai pertama untuk acc. misalnya 0 kalau mau jumlahin angka, kalau nilai awal dihilangkan JavaScript bakal pakai elemen pertama sebagai acc, tapi kalau array kosong, bakal error 'TypeError: Reduce of empty array with no initial value' karna gak ada data yang bisa dijadikan nilai awal nya.
+
+3. hasil akhirnya adalah 48 [
+   acc awal = 1
+   1 × 2 = 2
+   2 × 4 = 8
+   8 × 6 = 48
+   Jadi hasil akhirnya 48.]
+
+4. karna map cuma ngubah isi array dan hasilnya tetap array, jadi filter juga cuma menyaring data, kalau mau ngumpulin semua data jadi 1 object atau 1 hasil akhir, lebih cocok pakai reduce aja.
+
+5. reduce itu susah di baca kalau isinya terlalu banyak logika dalam satu function, jadi supaya lebih gampang dibaca, kita harus kasih nama variabel yang jelas, pisahin prosesnya kalau butuh, habis itu tambahin komentar kalau ada bagian yang penting.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.5
+
+- **Status:** done
+- **Capaian:** saya coba dan berhasil mengulangi event delegation dari nol pakai topik daftar game random, dan ada fitur tombol hapus yang dikontrol penuh oleh 1 listener pada elemen parent (`<ul>`).
+- **Kesulitan:** ada kesalahan dalam mengetik dan menggunakan kode, salah pasang variabel
 <!-- ENTRY END -->
