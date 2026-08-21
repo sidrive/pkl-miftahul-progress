@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-08-21",
+    "task": "M2.W2.T7",
+    "status": "half",
+    "capaian": "Demo ke mentor selesai, array methods (map/filter/reduce/find) dll beberapa dikuasai, beberapa live request dari mentor dapat di kerjakan dengan cukup baik, untuk T5 dan T6 belum selesai, PR juga belum selesai.",
+    "kesulitan": "evaluasi berjalan cukup baik, namun beberapa task belum selesai, jadi evaluasi dengan mentor memberikan live soal req."
+  },
+  {
+    "date": "2026-08-21",
+    "task": "M2.W2.T5",
+    "status": "done",
+    "capaian": "saya buat alat manajemen barang bengkel (sparepart), bagian yang lancar dan paling gampang yaitu membuat variabel `const` dan file html dan isinya.",
+    "kesulitan": "agak lama untuk membuat kode js nya, karna minggu ini jujur materi yang menurut saya cukup berat dari minggu minggu sebelum nya karna kurang nya pengalaman saya menggunakan javascript. saya belum kelar dengan ini, walau pun keliatan sudah siap cuma masih saya pahamin fungsi dan cara ngetik kode nya."
+  },
+  {
+    "date": "2026-08-21",
+    "task": "M2.W2.T4.6",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-20",
     "task": "M2.W2.T4.5",
     "status": "done",
