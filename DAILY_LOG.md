@@ -1148,3 +1148,45 @@ console.log(jurusan);
 - **Capaian:** saya coba dan berhasil mengulangi event delegation dari nol pakai topik daftar game random, dan ada fitur tombol hapus yang dikontrol penuh oleh 1 listener pada elemen parent (`<ul>`).
 - **Kesulitan:** ada kesalahan dalam mengetik dan menggunakan kode, salah pasang variabel
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-21
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T4.6
+
+- **Status:** done
+- **Capaian:** =
+
+1. bedanya itu kalau event.target: elemen yang di klik langsung dari kursor user (misalnya: tombol "hapus" yang ada di dalam elemen <li>). nah sedangkan event.currentTarget: elemen penampung yang dipasangin event listener (misalnya: elemen <ul> parent nya).
+
+2. even.preventDefault() dibutuhkan untuk mencegah aksi/fitur bawaan browser yang otomatis reload/refresh halaman saat form di submit/kirim, jadi data input dari user bisa ditangkap dan diolah dulu menggunakan JavaScript tanpa kehilangan state halamannya.
+
+3. menurut saya listener cuma dipasang ke <li> yang udah ada waktu kodenya dijalankan, yaitu ani dan budi, nah jadi citra dibuat belakangan, jadi dia gak punya listener, makanya waktu dia diklik, gak terjadi apa apa. [koreksi: Lebih tepatnya Citra tetap bisa diklik secara fisik, tapi tidak menjalankan kode listener karena listener memang tidak pernah dipasang ke Citra.]
+
+4. event delegation bisa lebih baik karna jauhh lebih hemat RAM. browser cuma perlu nampung 1 listener doang di parent (<ul>), bukan bikin 1000 listener terpisah yang bikin berat memori, kalau ada item baru yang ditambahin belakangan, item itu langsung otomatis bisa diklik tanpa perlu kita pasang listener ulang satu-satu.
+
+5. caranya kita pasang 1 event listener di <ul> induknya, habis itu cek e.target. kalau yang diklik punya class btn-hapus, berarti yang diklik tombol hapus, jadi <li> nya dihapus, kalau bukan tombol hapus, berarti yang diklik nama game, jadi kita tampilkan nama gamenya.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T5
+
+- **Status:** done
+- **Capaian:** saya buat alat manajemen barang bengkel (sparepart), bagian yang lancar dan paling gampang yaitu membuat variabel `const` dan file html dan isinya.
+- **Kesulitan:** agak lama untuk membuat kode js nya, karna minggu ini jujur materi yang menurut saya cukup berat dari minggu minggu sebelum nya karna kurang nya pengalaman saya menggunakan javascript. saya belum kelar dengan ini, walau pun keliatan sudah siap cuma masih saya pahamin fungsi dan cara ngetik kode nya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T7
+
+- **Status:** half done
+- **Capaian:** Demo ke mentor selesai, array methods (map/filter/reduce/find) dll beberapa dikuasai, beberapa live request dari mentor dapat di kerjakan dengan cukup baik, untuk T5 dan T6 belum selesai, PR juga belum selesai.
+- **Kesulitan:** evaluasi berjalan cukup baik, namun beberapa task belum selesai, jadi evaluasi dengan mentor memberikan live soal req.
+<!-- ENTRY END -->
