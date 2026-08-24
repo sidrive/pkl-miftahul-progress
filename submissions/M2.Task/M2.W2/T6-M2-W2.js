@@ -95,3 +95,19 @@ document.getElementById("btnCari").addEventListener("click", () => {
     elHasil.textContent = "Item tidak ditemukan!";
   }
 });
+
+//EVENT DELEGATION
+tabelBody.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-hapus")) {
+    const idHapus = Number(e.target.getAttribute("data-id"));
+    
+    const index = dataKomponen.findIndex((item) => item.id === idHapus);
+    
+    if (index !== -1) {
+      dataKomponen.splice(index, 1);
+      
+      renderTabel(dataKomponen);
+      updateRingkasan(dataKomponen);
+    }
+  }
+});
