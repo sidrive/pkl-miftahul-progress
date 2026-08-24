@@ -8,6 +8,13 @@
 > **[Wajib Refleksi]** baru dianggap `done` kalau kamu bisa jelaskan pemahamannya pakai kata
 > sendiri, bukan cuma kode-nya jalan.
 >
+> ⚠️ **Aturan baru mulai minggu ini:** contoh kode di modul ini **TIDAK lagi mencantumkan hasil
+> `console.log` di komentar** (misal `// ["Ani", "Budi", "Citra"]`) seperti modul-modul
+> sebelumnya. Kamu **wajib menjalankan sendiri** tiap contoh kode, melihat hasil aslinya di
+> console/browser, lalu **menuliskan hasil yang benar-benar kamu lihat** di entry `DAILY_LOG.md`
+> — bukan menyalin dari modul (karena memang tidak ada lagi jawabannya di sini), dan bukan
+> menebak tanpa menjalankan. Ini supaya kamu benar-benar terbiasa memverifikasi hasil sendiri.
+>
 > **🗓️ Selasa 25 Agustus 2026 libur** — minggu ini cuma **4 hari kerja** (Senin 24, lompat ke
 > Rabu 26 – Jumat 28 Agustus 2026), bukan 5 hari seperti biasanya.
 >
@@ -246,26 +253,30 @@ mengubah cara kamu *menulis* kode yang berinteraksi dengannya.
 async function contoh(sukses) {
   try {
     const hasil = await cekKoneksi(sukses);
-    console.log(hasil); // kalau sukses, baris ini JALAN
+    console.log(hasil);
   } catch (error) {
-    console.log("Ketangkep di catch:", error); // kalau gagal, baris ini yang jalan
+    console.log("Ketangkep di catch:", error);
   }
 }
 contoh(true);  // kasus 1: resolve
 contoh(false); // kasus 2: reject
 ```
 
-**Latihan — WAJIB 2 kasus, jangan cuma salah satu:**
-1. Panggil dengan argumen yang membuat Promise **resolve** — pastikan `console.log` di dalam
-   `try` jalan normal.
-2. Panggil dengan argumen yang membuat Promise **reject** — pastikan `catch` beneran menangkapnya,
-   dan baris di `try` SETELAH `await` yang reject **tidak pernah jalan**.
+**Latihan — WAJIB 2 kasus, jangan cuma salah satu, dan JALANKAN sendiri untuk lihat hasilnya
+(jangan cuma dibaca kodenya):**
+1. Panggil dengan argumen yang membuat Promise **resolve** — perhatikan baris `console.log` mana
+   yang benar-benar tampil di console.
+2. Panggil dengan argumen yang membuat Promise **reject** — perhatikan baris mana yang tampil kali
+   ini, dan baris mana (kalau ada) yang **tidak** tampil dibanding kasus pertama.
+3. **Tulis di log apa yang benar-benar muncul di console untuk masing-masing kasus**, dan
+   simpulkan sendiri: kode setelah `await` yang reject itu jalan atau tidak? Kesimpulan ini harus
+   berdasarkan hasil yang kamu lihat sendiri, bukan tebakan sebelum dicoba.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W3.T4.2
 - **Status:** done
-- **Capaian:** Berhasil praktik try/catch di async function untuk 2 kasus (resolve & reject), buktikan baris setelah await yang reject tidak pernah jalan.
+- **Capaian:** Jalankan contoh(true) -> output console: [tulis apa yang benar2 muncul]. Jalankan contoh(false) -> output console: [tulis apa yang benar2 muncul]. Simpulan: [jelaskan baris mana yang jalan/tidak, berdasarkan hasil di atas].
 - **Kesulitan:** -
 ```
 

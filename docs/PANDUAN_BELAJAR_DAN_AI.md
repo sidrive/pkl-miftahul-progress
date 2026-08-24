@@ -33,6 +33,30 @@ bukan cuma "sudah jalan".
 5. **Sebisa mungkin hindari:** minta AI langsung generate seluruh jawaban/kode tanpa kamu coba
    pahami dulu prosesnya — nanti pas ditanya mentor secara langsung (tanpa AI), jawabannya kosong.
 
+## Contoh kode di modul: tidak ada kunci jawaban (mulai Bulan 2 Minggu 3)
+
+Modul-modul sebelumnya sering menulis hasil `console.log` langsung di komentar kode, misal:
+```js
+const daftarNama = siswa.map((s) => s.nama)
+console.log(daftarNama) // ["Ani", "Budi", "Citra"]
+```
+Ini membuat Gazi bisa tahu jawabannya tanpa perlu benar-benar menjalankan kodenya. **Mulai
+modul Bulan 2 Minggu 3 dan seterusnya, kunci jawaban seperti ini dihapus** dari contoh kode.
+
+Konsekuensinya:
+1. **Gazi wajib menjalankan sendiri** tiap contoh kode di modul, lihat hasil aslinya di
+   console/browser — bukan menyimpulkan dari membaca kode saja.
+2. **Hasil yang benar-benar dilihat itu yang ditulis** di kolom `Capaian` `DAILY_LOG.md` (bukan
+   ditebak, bukan disalin dari modul karena memang tidak ada lagi jawabannya di sana).
+3. Kalau prediksinya beda dari hasil asli, itu justru bagus dicatat jujur — jadi bahan refleksi
+   dan bahan tanya ke mentor, bukan sesuatu yang perlu ditutup-tutupi.
+
+**Untuk mentor (aturan menulis modul ke depan):** jangan lagi menaruh nilai hasil `console.log`
+di komentar contoh kode pada modul manapun mulai sekarang. Boleh tetap menjelaskan *konsep*/*alur*
+di teks di luar blok kode (misal "perhatikan array aslinya tidak berubah"), tapi jangan
+mencantumkan nilai/isi hasil eksekusi yang seharusnya Gazi temukan sendiri dengan menjalankan
+kodenya.
+
 ## Definisi "Done" yang baru (mulai Minggu 1 breakdown lanjutan)
 
 Untuk task yang punya tanda **[Wajib Refleksi]** di `TASKS.md`, status `done` di `DAILY_LOG.md`
