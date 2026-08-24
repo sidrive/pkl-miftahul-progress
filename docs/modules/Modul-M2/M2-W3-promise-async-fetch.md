@@ -1,52 +1,27 @@
 # Modul Bulan 2 Minggu 3 — Promise, async/await, & fetch API
 
-> Modul ini menemani task `M2.W3.*` di `TASKS.md`. Setiap bagian dipetakan ke satu ID task —
-> setelah selesai satu bagian, langsung isi entry di `DAILY_LOG.md` dengan ID yang sesuai.
-> Kerjakan urut dari atas ke bawah.
+> Menemani task `M2.W3.*` di `TASKS.md`, satu bagian per ID — isi `DAILY_LOG.md` setiap satu
+> bagian selesai. Kerjakan urut dari atas ke bawah.
 >
-> **Baca dulu** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../PANDUAN_BELAJAR_DAN_AI.md) — task bertanda
-> **[Wajib Refleksi]** baru dianggap `done` kalau kamu bisa jelaskan pemahamannya pakai kata
-> sendiri, bukan cuma kode-nya jalan.
+> Baca [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../PANDUAN_BELAJAR_DAN_AI.md) untuk definisi "done" pada
+> task `[Wajib Refleksi]`, dan untuk aturan penulisan kode di modul ini: contoh kode tidak lagi
+> menyertakan hasil `console.log` — jalankan sendiri, catat hasil aslinya di log.
 >
-> ⚠️ **Aturan baru mulai minggu ini:** contoh kode di modul ini **TIDAK lagi mencantumkan hasil
-> `console.log` di komentar** (misal `// ["Ani", "Budi", "Citra"]`) seperti modul-modul
-> sebelumnya. Kamu **wajib menjalankan sendiri** tiap contoh kode, melihat hasil aslinya di
-> console/browser, lalu **menuliskan hasil yang benar-benar kamu lihat** di entry `DAILY_LOG.md`
-> — bukan menyalin dari modul (karena memang tidak ada lagi jawabannya di sini), dan bukan
-> menebak tanpa menjalankan. Ini supaya kamu benar-benar terbiasa memverifikasi hasil sendiri.
+> **🗓️ Selasa 25 Agustus libur — 4 hari kerja** (Senin 24, lalu Rabu 26 – Jumat 28 Agustus).
 >
-> **🗓️ Selasa 25 Agustus 2026 libur** — minggu ini cuma **4 hari kerja** (Senin 24, lompat ke
-> Rabu 26 – Jumat 28 Agustus 2026), bukan 5 hari seperti biasanya.
+> ## Struktur minggu ini
 >
-> ## Kenapa minggu ini dibagi 2 bagian
+> Dibagi 2 bagian. **Bagian A** (Senin, ±25% waktu) menuntaskan capstone & PR Minggu 2 yang
+> tersisa, plus 1 latihan fluency array methods — boleh sedikit meluber ke awal Rabu bila perlu.
+> **Bagian B** (Rabu–Jumat, ±75% waktu) materi baru: Promise, `async`/`await`, `fetch()`, yang di
+> `T6` digabung dengan array methods Minggu 2.
 >
-> Dari evaluasi `M2.W2.T7` (21 Agustus): array methods (`map`/`filter`/`reduce`) sebenarnya sudah
-> cukup lancar dieksekusi live saat mentor minta langsung, dan pelajaran soal `innerHTML`/XSS
-> **sudah kelihatan diterapkan dengan benar** di `T5-M2-W2.js` (pakai `createElement` untuk tombol,
-> bukan suntik string ke `innerHTML` lagi) — ini kemajuan nyata dibanding insiden `T4.5`. Tapi
-> proyek mandiri `T6` dan PR-nya belum selesai, dan kamu sendiri bilang materi Minggu 2 "cukup
-> berat, kurang pengalaman JS." Jadi:
+> Setiap task praktik inti punya minimal 2 putaran dengan skenario/data berbeda; `async`/`await`
+> dan `fetch()` masing-masing punya 1 ronde tambahan `[Ulangi Tanpa Contek]` sebagai putaran
+> ketiga.
 >
-> - **Bagian A (Senin 24 Agustus saja, ±25% waktu minggu ini — dipadatkan karena Selasa libur):**
->   tuntaskan dulu utang Minggu 2 + 1 latihan fluency (bukan konsep baru — cuma membangun
->   kecepatan & rasa percaya diri). Kalau belum kelar akhir hari Senin, boleh lanjut sedikit di
->   awal Rabu sebelum mulai Bagian B — jangan dipaksa buru-buru asal selesai.
-> - **Bagian B (Rabu 26 – Jumat 28 Agustus, ±75% waktu minggu ini):** materi baru — Promise,
->   `async`/`await`, `fetch()` — yang di bagian akhir (`T6`) **digabung** dengan skill Minggu 2
->   (array methods), bukan topik lepas berdiri sendiri.
->
-> **Pola pengulangan Minggu 2 tetap dipakai di sini juga:** setiap task praktik inti di Bagian B
-> punya **minimal 2 putaran dengan skenario/data berbeda**, dan bagian `async`/`await` +
-> `fetch()` (dua konsep paling baru & paling rawan salah paham minggu ini) masing-masing dapat 1
-> task tambahan **`[Ulangi Tanpa Contek]`** sebagai putaran ke-3 dari nol — supaya bukan cuma
-> "kode kebetulan jalan sekali", tapi benar-benar diulang dengan kasus berbeda sampai lancar.
->
-> **Catatan pola berulang (baca ini dulu sebelum bagian B):** minggu-minggu lalu ada beberapa
-> kesalahan konsep karena "kelihatan mirip = dikira sama" — unit CSS `fr` dikira mirip `vh`, arrow
-> function dikira cuma "versi singkat" `function`, `reduce()` dikira cuma "`for` loop yang ditulis
-> lebih ribet". Minggu ini jebakannya ada di `async`/`await`: **banyak orang mengira kode di dalam
-> `async function` jadi berjalan sinkron/blocking** karena penulisannya kelihatan berurutan seperti
-> kode biasa. Itu salah — lihat bagian 3 di bawah.
+> **Poin perhatian:** `async`/`await` sering disalahpahami membuat kode berjalan sinkron —
+> keliru, lihat bagian 2.
 
 ---
 

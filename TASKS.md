@@ -199,7 +199,7 @@
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 > 🗓️ **Selasa 25 Ags 2026 libur** — minggu ini cuma **4 hari kerja** (Senin 24, lalu lompat ke Rabu 26 – Jumat 28 Ags 2026), bukan 5 hari.
 >
-> ⚠️ **Dari evaluasi `M2.W2.T7` (21 Agustus, status "half done"):** array methods (`map`/`filter`/`reduce`) sebenarnya sudah cukup lancar dieksekusi live saat diminta mentor langsung, dan pelajaran soal `innerHTML`/XSS **sudah kelihatan diterapkan dengan benar** di `T5` (pakai `createElement` untuk tombol, bukan suntik string ke `innerHTML` lagi — ini kemajuan nyata dari insiden `T4.5`). Tapi proyek mandiri `T6` dan PR-nya **belum selesai**, dan Gazi sendiri bilang materi minggu itu "cukup berat, kurang pengalaman JS." Karena itu, **Bagian A (Senin, 1 hari — dipadatkan karena Selasa libur) dikhususkan untuk menuntaskan & memperkuat lagi Minggu 2** sebelum lanjut ke materi baru di Bagian B (Rabu–Jumat) — bukan lompat ke topik baru sambil ninggalin utang yang belum selesai. Kalau Bagian A belum kelar akhir hari Senin, boleh lanjutkan sedikit di awal Rabu sebelum mulai Bagian B — jangan dipaksa buru-buru asal selesai.
+> Minggu ini dibagi 2 bagian: **Bagian A** (Senin, ±25% waktu — dipadatkan karena Selasa libur, boleh sedikit lanjut ke awal Rabu) menuntaskan capstone & PR Minggu 2 yang tersisa, plus 1 latihan fluency array methods. **Bagian B** (Rabu–Jumat, ±75% waktu) materi baru: Promise, `async`/`await`, `fetch()`.
 
 **Bagian A — Tuntaskan & Perkuat Lagi Minggu 2 (target: Senin 24 Agustus, ±25% waktu minggu ini — boleh sedikit lanjut ke awal Rabu kalau perlu)**
 
