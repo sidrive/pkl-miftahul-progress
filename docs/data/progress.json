@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-24T06:54:33.855Z",
+  "generatedAt": "2026-08-24T09:15:27.369Z",
   "totalTasks": 176,
-  "doneTasks": 114,
+  "doneTasks": 115,
   "overallPercent": 65,
   "perMonth": [
     {
@@ -15,8 +15,8 @@
       "number": 2,
       "title": "JavaScript Modern & Node (13 Ags – 12 Sep 2026)",
       "total": 59,
-      "done": 36,
-      "percent": 61
+      "done": 37,
+      "percent": 63
     },
     {
       "number": 3,
@@ -61,8 +61,8 @@
       "percent": 0
     }
   ],
-  "currentStreakDays": 4,
+  "currentStreakDays": 1,
   "blockedTasks": [],
-  "totalLogEntries": 99,
-  "lastLogDate": "2026-08-21"
+  "totalLogEntries": 100,
+  "lastLogDate": "2026-08-24"
 }

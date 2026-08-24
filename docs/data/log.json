@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-24",
+    "task": "M2.W2.T6",
+    "status": "done",
+    "capaian": "saya buat mini app komponen robotic dengan file HTML dan JS aja.",
+    "kesulitan": "masih sedikit kesulitan untuk mengetik kode js nya, ada banyak eror pada saat awal awal membuat program nya. salah ngetik kode yang dibutuhkan, terkadang harus melihat kode apa yang dibutuhkan/sesuai dengan program, susunan kode yang salah juga tadi waktu buat kodenya."
+  },
+  {
     "date": "2026-08-21",
     "task": "M2.W2.T7",
     "status": "half",

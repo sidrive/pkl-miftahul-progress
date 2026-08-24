@@ -616,7 +616,7 @@
           {
             "id": "M2.W2.T6",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5 hari kerja]** Bangun 1 mini-app interaktif tanpa framework (murni HTML+CSS+JS) yang menggabungkan semua skill minggu ini: minimal 1 pemakaian nyata `map`/`filter`/`reduce`/`find` untuk mengolah data (boleh array of object statis di dalam kode), render hasilnya ke DOM lewat `createElement`, dan tangani interaksi user lewat event handling **termasuk event delegation** untuk elemen yang dibuat dinamis. Contoh topik: daftar belanja dengan filter kategori & total harga (`reduce`), atau daftar tugas dengan filter status & pencarian (`filter`/`find`). **Wajib tambahkan komentar singkat di kode untuk tiap fungsi array (`map`/`filter`/`reduce`/`find`) yang menjelaskan KENAPA fungsi itu yang dipilih** (bukan cuma kode-nya jalan) — ini jadi bukti tertulis pemahaman, bukan cuma hasil coba-coba. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`, tidak perlu direview terpisah). Lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T7",
