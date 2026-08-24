@@ -606,12 +606,12 @@
           {
             "id": "M2.W2.T4.6",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal event handling, minimal 1 soal skenario debug: diberi potongan kode yang listener-nya TIDAK jalan untuk elemen baru — kamu harus temukan & jelaskan kenapa, tanpa mencoba-coba run kode dulu, baru verifikasi jawabanmu dengan menjalankannya)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T5",
             "text": "**[Uji Ulang Pemahaman Mandiri — kasus pilihan sendiri]** Sebelum mengerjakan proyek mandiri `T6`, sendirian (TIDAK perlu sesi/kehadiran mentor): pilih/karang sendiri 1 kasus kombinasi baru (gabungan minimal 2 dari `map`/`filter`/`reduce`/`find` + render ke DOM + event delegation) dengan topik data yang **belum pernah kamu pakai di task manapun minggu ini** — kerjakan **TANPA membuka modul/AI/catatan/kode task sebelumnya**. Ini bukan untuk dinilai benar/salah sempurna, tapi untuk memverifikasi jujur ke diri sendiri apakah pemahamannya sudah nempel atau masih hafalan/contek dari task-task sebelumnya — kalau macet total di suatu bagian, catat jujur di log dan ulangi bagian itu lagi sebelum lanjut ke `T6`. Hasil sesi ini diceritakan ke mentor nanti pas evaluasi `T7`, bukan sesi terpisah.",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W2.T6",
