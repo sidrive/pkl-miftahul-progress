@@ -1190,3 +1190,22 @@ console.log(jurusan);
 - **Capaian:** Demo ke mentor selesai, array methods (map/filter/reduce/find) dll beberapa dikuasai, beberapa live request dari mentor dapat di kerjakan dengan cukup baik, untuk T5 dan T6 belum selesai, PR juga belum selesai.
 - **Kesulitan:** evaluasi berjalan cukup baik, namun beberapa task belum selesai, jadi evaluasi dengan mentor memberikan live soal req.
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-24 // Minggu 3
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T6
+
+- **Status:** done
+- **Capaian:** saya buat mini app komponen robotic dengan file HTML dan JS aja.
+1. `reduce`: saya tempatkan di `updateRingkasan` untuk menghitung total biaya inventaris karna butuh 1 angka hasil akumulasi dari seluruh harga komponen.
+2. `map`: ditempatkan di `updateRingkasan` untuk ngambil daftar ringkas nama komponen karna butuh mengubah array object jadi array string.
+3. `filter`: di di event listener `filterKategori` untuk nyaring data berdasarkan kategori (Microcontroller, Sensor, Actuator) karna menghasilkan array baru yang isinya lebih dikit.
+4. `find`: tempatkan di fitur pencarian detail untuk ambil 1 objek komponen pertama yang namanya cocok dengan input user.
+5. Event delegation dibutuhkan di parent `<tbody>` biat tombol hapus tetap berfungsi pada baris tabel baru yang dibuat secara dinamis tanpa harus memasang listener satu per satu per elemen.
+link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/4].
+- **Kesulitan:** masih sedikit kesulitan untuk mengetik kode js nya, ada banyak eror pada saat awal awal membuat program nya. salah ngetik kode yang dibutuhkan, terkadang harus melihat kode apa yang dibutuhkan/sesuai dengan program, susunan kode yang salah juga tadi waktu buat kodenya.
+<!-- ENTRY END -->
