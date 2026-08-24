@@ -630,13 +630,83 @@
         "title": null,
         "tasks": [
           {
-            "id": "M2.W3.T1",
-            "text": "Async/await & Promise dasar",
+            "id": "M2.W3.T1.1",
+            "text": "**Lanjutkan & selesaikan `M2.W2.T6`** (proyek mandiri array methods+DOM+event yang belum selesai) — boleh lanjutkan dari `T5-M2-W2.js` (alat manajemen sparepart) kalau memang itu yang dimaksud jadi capstone, atau mulai ulang kalau mau topik lain, yang penting: **selesai fungsional**, dan **setiap fungsi array (`map`/`filter`/`reduce`/`find`) ada komentar alasan kenapa dipilih** (requirement asli `T6` yang belum terpenuhi)",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T1.2",
+            "text": "Push `T1.1` lewat **branch → commit rapi → PR** (utang dari Minggu 2 yang belum dibuat) — merge sendiri setelah yakin, PR dibahas bareng mentor saat evaluasi `T7` minggu ini",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T1.3",
+            "text": "**[Wajib Refleksi]** Bandingkan langsung kode `T4.5-M2-W2.js` (pakai `innerHTML` + `input.value`, berisiko) dengan `T5-M2-W2.js` (pakai `createElement` untuk tombol hapus, aman) — jelaskan dengan kata sendiri **apa tepatnya yang berubah** di antara keduanya, dan kenapa versi `T5` lebih aman. Ini mengunci tertulis pelajaran yang kemarin baru kelihatan dari kode, belum pernah ditulis eksplisit",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T1.4",
+            "text": "Lengkapi entry `DAILY_LOG.md` yang masih kosong untuk `M2.W2.T1.1`, `M2.W2.T3.1`, dan `M2.W2.T3.3` (ada kode & sudah `done` di checklist, tapi belum pernah dicatat kesulitan/capaiannya) — housekeeping sebelum lanjut minggu baru",
             "done": false
           },
           {
             "id": "M2.W3.T2",
-            "text": "Konsumsi public API sederhana dengan fetch (tampilkan data ke DOM)",
+            "text": "**[Ulangi Tanpa Contek — Fluency Drill, dibatasi waktu ±30 menit]** TANPA modul/AI/catatan/kode lama: buat 1 mini-app baru dari nol (topik bebas, beda dari siswa/sparepart/robot yang sudah dipakai) yang pakai **minimal 3 dari 4** (`map`/`filter`/`reduce`/`find`) + render DOM + event delegation, **dikerjakan dengan target waktu** (bukan soal paham konsepnya lagi — itu sudah terbukti lumayan lancar saat live eval — tapi soal kecepatan & rasa percaya diri, karena kamu sendiri bilang minggu lalu \"berat, kurang pengalaman JS\"). Catat jujur di log: berapa lama actual selesai, dan bagian mana yang masih bikin ragu meski sudah paham konsepnya.",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T3.1",
+            "text": "Pahami 3 state Promise (`pending`/`fulfilled`/`rejected`), praktik `.then()`/`.catch()` pakai simulasi `setTimeout` (misal Promise yang resolve/reject setelah 1 detik)",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T3.2",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: jelaskan kapan Promise pindah dari `pending` ke `fulfilled` vs ke `rejected`, dan apa yang terjadi kalau `.catch()` tidak ditulis sama sekali saat Promise di-reject",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T4.1",
+            "text": "Ubah 1 contoh `.then()`/`.catch()` dari `T3.1` jadi versi `async`/`await` (fungsi `async function`, pakai `await` di depan Promise) — bandingkan keterbacaan kode kedua versi",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T4.2",
+            "text": "Praktik error handling `try`/`catch` di dalam fungsi `async` (setara `.catch()` di versi Promise chain) — sengaja buat 1 kasus yang di-reject untuk lihat `catch` beneran menangkap errornya",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T4.3",
+            "text": "**[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa `async`/`await` BUKAN membuat kode berjalan sinkron (bukan seperti `for` loop yang tiap baris tunggu baris sebelumnya selesai secara \"blocking\") — `await` cuma bikin kode *kelihatan* berurutan tapi tetap asynchronous di baliknya. Kasih 1 contoh situasi nyata di mana salah paham ini bisa bikin bug (misal mengira 2 `await` yang harusnya bisa jalan paralel malah ditulis berurutan tanpa alasan)",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T5.1",
+            "text": "`fetch()` dasar: GET request ke 1 public API sederhana (misal JSONPlaceholder `https://jsonplaceholder.typicode.com/users` atau API publik lain), tampilkan hasil mentah di `console.log` dulu (belum ke DOM) — pakai `.then()`/`.catch()`",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T5.2",
+            "text": "Ulangi `T5.1` pakai `async`/`await` + `try`/`catch` (request sama, gaya penulisan beda) — bandingkan lagi mana yang lebih gampang dibaca untuk kasus nyata (bukan cuma 1 Promise sederhana seperti di `T4.1`)",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T5.3",
+            "text": "Render hasil `fetch` ke DOM: **wajib pakai `createElement`+`textContent`** (bukan `innerHTML`, sesuai pelajaran `T3.4`/`T1.3` Minggu 2 — data dari API itu tetap \"data dari luar\" yang tidak sepenuhnya dipercaya), plus tampilkan teks \"Loading...\" sebelum data datang dan pesan error yang jelas kalau `fetch` gagal (coba sengaja pakai URL salah untuk lihat pesan errornya)",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T5.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal campuran Promise/`async`-`await`/`fetch`, minimal 1 soal skenario: \"kalau lupa taruh `await` di depan `fetch(...)`, apa isi variabelnya?\")",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T6",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5–1 hari kerja]** Bangun 1 mini-app yang **fetch data dari public API**, lalu **olah hasilnya pakai array methods Minggu 2** (`filter`/`map`/`find` — misal filter user berdasarkan kriteria, tampilkan nama+email terformat), render ke DOM (`createElement`+`textContent`, ada loading/error state), dan tangani interaksi user lewat event (misal tombol refresh data, filter dropdown). Ini sengaja menggabungkan skill baru minggu ini dengan skill Minggu 2 — bukan topik lepas-lepas. **Wajib komentar kode** untuk alasan tiap fungsi array dipilih (lanjutan requirement dari `T6` Minggu 2). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`).",
+            "done": false
+          },
+          {
+            "id": "M2.W3.T7",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo `T6` langsung di browser (termasuk coba matikan koneksi/salah URL untuk tunjukkan error state beneran jalan), review PR `T1.1`+`T6` bareng (menutup utang PR Minggu 2 sekaligus PR minggu ini), jawab soal live yang menyasar kesalahpahaman umum `async`/`await` dianggap sinkron, **mentor minta modifikasi dadakan** di kode `T6` (misal ubah `filter` jadi kriteria lain, atau tambah `.catch`/`try-catch` di bagian yang belum ada), ceritakan hasil fluency drill `T2` (berapa lama, bagian mana masih ragu) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]

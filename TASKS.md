@@ -10,7 +10,7 @@
 
 ### Minggu 1
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W1-fondasi-tools.md`](../docs/modules/M1-W1-fondasi-tools.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M1.W1-4/M1-W1-fondasi-tools.md`](../docs/modules/Modul-M1.W1-4/M1-W1-fondasi-tools.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — aturan pakai AI & apa arti "done" untuk task bertanda **[Wajib Refleksi]** di bawah.
 
 - [x] <!-- id: M1.W1.T1 --> Buat akun GitHub, lengkapi profil dasar (foto, bio), dan aktifkan Two-Factor Authentication (2FA) — dikerjakan duluan karena environment kerja ke depan pakai GitHub
@@ -37,7 +37,7 @@
 
 ### Minggu 2
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W2-git-github-dasar.md`](../docs/modules/M1-W2-git-github-dasar.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M1.W1-4/M1-W2-git-github-dasar.md`](../docs/modules/Modul-M1.W1-4/M1-W2-git-github-dasar.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti Minggu 1, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - Git dasar: init, add, commit, status, log (dipecah jadi 5 sub-task):
@@ -68,7 +68,7 @@
 
 ### Minggu 3
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W3-branching-pr.md`](../docs/modules/M1-W3-branching-pr.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M1.W1-4/M1-W3-branching-pr.md`](../docs/modules/Modul-M1.W1-4/M1-W3-branching-pr.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - Branching dasar (dipecah jadi 4 sub-task):
@@ -95,7 +95,7 @@
 
 ### Minggu 4
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M1-W4-html-css-revamp.md`](../docs/modules/M1-W4-html-css-revamp.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M1.W1-4/M1-W4-html-css-revamp.md`](../docs/modules/Modul-M1.W1-4/M1-W4-html-css-revamp.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - **Git Recall Drill** (dipecah jadi 4 sub-task — **ditambahkan karena evaluasi Minggu 2/3 menunjukkan sebagian command Git masih belum lancar, kadang perlu buka dokumentasi/AI lagi**; ini bukan materi baru, murni latihan mengingat ulang tanpa bantuan):
@@ -132,7 +132,7 @@
 
 ### Minggu 1
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M2-W1-es6-modern-js.md`](../docs/modules/M2-W1-es6-modern-js.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M2/M2-W1-es6-modern-js.md`](../docs/modules/Modul-M2/M2-W1-es6-modern-js.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 
 - `let`/`const` vs `var` (dipecah jadi 2 sub-task):
@@ -157,7 +157,7 @@
 
 ### Minggu 2
 
-> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/M2-W2-array-methods-dom-events.md`](../docs/modules/M2-W2-array-methods-dom-events.md)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M2/M2-W2-array-methods-dom-events.md`](../docs/modules/Modul-M2/M2-W2-array-methods-dom-events.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
 > 🗓️ **Minggu kerja pendek:** Senin 17 Ags 2026 libur — task minggu ini dirancang untuk **4 hari kerja** (Selasa 18 – Jumat 21 Ags 2026), bukan 5 hari seperti biasanya.
 >
@@ -195,8 +195,36 @@
 
 ### Minggu 3
 
-- [ ] <!-- id: M2.W3.T1 --> Async/await & Promise dasar
-- [ ] <!-- id: M2.W3.T2 --> Konsumsi public API sederhana dengan fetch (tampilkan data ke DOM)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M2/M2-W3-promise-async-fetch.md`](../docs/modules/Modul-M2/M2-W3-promise-async-fetch.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+> 🗓️ **5 hari kerja penuh** (Senin 24 – Jumat 28 Ags 2026, tidak ada hari libur minggu ini).
+>
+> ⚠️ **Dari evaluasi `M2.W2.T7` (21 Agustus, status "half done"):** array methods (`map`/`filter`/`reduce`) sebenarnya sudah cukup lancar dieksekusi live saat diminta mentor langsung, dan pelajaran soal `innerHTML`/XSS **sudah kelihatan diterapkan dengan benar** di `T5` (pakai `createElement` untuk tombol, bukan suntik string ke `innerHTML` lagi — ini kemajuan nyata dari insiden `T4.5`). Tapi proyek mandiri `T6` dan PR-nya **belum selesai**, dan Gazi sendiri bilang materi minggu itu "cukup berat, kurang pengalaman JS." Karena itu, **separuh awal minggu ini (Senin–Selasa) dikhususkan untuk menuntaskan & memperkuat lagi Minggu 2** sebelum lanjut ke materi baru (Rabu–Jumat) — bukan lompat ke topik baru sambil ninggalin utang yang belum selesai.
+
+**Bagian A — Tuntaskan & Perkuat Lagi Minggu 2 (target: Senin–Selasa, ±40% waktu minggu ini)**
+
+- [ ] <!-- id: M2.W3.T1.1 --> **Lanjutkan & selesaikan `M2.W2.T6`** (proyek mandiri array methods+DOM+event yang belum selesai) — boleh lanjutkan dari `T5-M2-W2.js` (alat manajemen sparepart) kalau memang itu yang dimaksud jadi capstone, atau mulai ulang kalau mau topik lain, yang penting: **selesai fungsional**, dan **setiap fungsi array (`map`/`filter`/`reduce`/`find`) ada komentar alasan kenapa dipilih** (requirement asli `T6` yang belum terpenuhi)
+- [ ] <!-- id: M2.W3.T1.2 --> Push `T1.1` lewat **branch → commit rapi → PR** (utang dari Minggu 2 yang belum dibuat) — merge sendiri setelah yakin, PR dibahas bareng mentor saat evaluasi `T7` minggu ini
+- [ ] <!-- id: M2.W3.T1.3 --> **[Wajib Refleksi]** Bandingkan langsung kode `T4.5-M2-W2.js` (pakai `innerHTML` + `input.value`, berisiko) dengan `T5-M2-W2.js` (pakai `createElement` untuk tombol hapus, aman) — jelaskan dengan kata sendiri **apa tepatnya yang berubah** di antara keduanya, dan kenapa versi `T5` lebih aman. Ini mengunci tertulis pelajaran yang kemarin baru kelihatan dari kode, belum pernah ditulis eksplisit
+- [ ] <!-- id: M2.W3.T1.4 --> Lengkapi entry `DAILY_LOG.md` yang masih kosong untuk `M2.W2.T1.1`, `M2.W2.T3.1`, dan `M2.W2.T3.3` (ada kode & sudah `done` di checklist, tapi belum pernah dicatat kesulitan/capaiannya) — housekeeping sebelum lanjut minggu baru
+- [ ] <!-- id: M2.W3.T2 --> **[Ulangi Tanpa Contek — Fluency Drill, dibatasi waktu ±30 menit]** TANPA modul/AI/catatan/kode lama: buat 1 mini-app baru dari nol (topik bebas, beda dari siswa/sparepart/robot yang sudah dipakai) yang pakai **minimal 3 dari 4** (`map`/`filter`/`reduce`/`find`) + render DOM + event delegation, **dikerjakan dengan target waktu** (bukan soal paham konsepnya lagi — itu sudah terbukti lumayan lancar saat live eval — tapi soal kecepatan & rasa percaya diri, karena kamu sendiri bilang minggu lalu "berat, kurang pengalaman JS"). Catat jujur di log: berapa lama actual selesai, dan bagian mana yang masih bikin ragu meski sudah paham konsepnya.
+
+**Bagian B — Materi Baru: Promise, `async`/`await`, `fetch` (target: Rabu–Jumat, ±60% waktu minggu ini)**
+
+- Promise dasar (dipecah jadi 2 sub-task):
+  - [ ] <!-- id: M2.W3.T3.1 --> Pahami 3 state Promise (`pending`/`fulfilled`/`rejected`), praktik `.then()`/`.catch()` pakai simulasi `setTimeout` (misal Promise yang resolve/reject setelah 1 detik)
+  - [ ] <!-- id: M2.W3.T3.2 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: jelaskan kapan Promise pindah dari `pending` ke `fulfilled` vs ke `rejected`, dan apa yang terjadi kalau `.catch()` tidak ditulis sama sekali saat Promise di-reject
+- `async`/`await` (dipecah jadi 3 sub-task — **jebakan pemahaman baru minggu ini, pola yang sama dengan `fr`/`vh`, `this` arrow function, dan `reduce`**: `async`/`await` BUKAN berarti kode jadi sinkron/blocking seperti `for` loop biasa — dia tetap asynchronous, cuma *cara nulisnya* kelihatan seperti sinkron):
+  - [ ] <!-- id: M2.W3.T4.1 --> Ubah 1 contoh `.then()`/`.catch()` dari `T3.1` jadi versi `async`/`await` (fungsi `async function`, pakai `await` di depan Promise) — bandingkan keterbacaan kode kedua versi
+  - [ ] <!-- id: M2.W3.T4.2 --> Praktik error handling `try`/`catch` di dalam fungsi `async` (setara `.catch()` di versi Promise chain) — sengaja buat 1 kasus yang di-reject untuk lihat `catch` beneran menangkap errornya
+  - [ ] <!-- id: M2.W3.T4.3 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa `async`/`await` BUKAN membuat kode berjalan sinkron (bukan seperti `for` loop yang tiap baris tunggu baris sebelumnya selesai secara "blocking") — `await` cuma bikin kode *kelihatan* berurutan tapi tetap asynchronous di baliknya. Kasih 1 contoh situasi nyata di mana salah paham ini bisa bikin bug (misal mengira 2 `await` yang harusnya bisa jalan paralel malah ditulis berurutan tanpa alasan)
+- `fetch()` & render ke DOM (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M2.W3.T5.1 --> `fetch()` dasar: GET request ke 1 public API sederhana (misal JSONPlaceholder `https://jsonplaceholder.typicode.com/users` atau API publik lain), tampilkan hasil mentah di `console.log` dulu (belum ke DOM) — pakai `.then()`/`.catch()`
+  - [ ] <!-- id: M2.W3.T5.2 --> Ulangi `T5.1` pakai `async`/`await` + `try`/`catch` (request sama, gaya penulisan beda) — bandingkan lagi mana yang lebih gampang dibaca untuk kasus nyata (bukan cuma 1 Promise sederhana seperti di `T4.1`)
+  - [ ] <!-- id: M2.W3.T5.3 --> Render hasil `fetch` ke DOM: **wajib pakai `createElement`+`textContent`** (bukan `innerHTML`, sesuai pelajaran `T3.4`/`T1.3` Minggu 2 — data dari API itu tetap "data dari luar" yang tidak sepenuhnya dipercaya), plus tampilkan teks "Loading..." sebelum data datang dan pesan error yang jelas kalau `fetch` gagal (coba sengaja pakai URL salah untuk lihat pesan errornya)
+  - [ ] <!-- id: M2.W3.T5.4 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal campuran Promise/`async`-`await`/`fetch`, minimal 1 soal skenario: "kalau lupa taruh `await` di depan `fetch(...)`, apa isi variabelnya?")
+- [ ] <!-- id: M2.W3.T6 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5–1 hari kerja]** Bangun 1 mini-app yang **fetch data dari public API**, lalu **olah hasilnya pakai array methods Minggu 2** (`filter`/`map`/`find` — misal filter user berdasarkan kriteria, tampilkan nama+email terformat), render ke DOM (`createElement`+`textContent`, ada loading/error state), dan tangani interaksi user lewat event (misal tombol refresh data, filter dropdown). Ini sengaja menggabungkan skill baru minggu ini dengan skill Minggu 2 — bukan topik lepas-lepas. **Wajib komentar kode** untuk alasan tiap fungsi array dipilih (lanjutan requirement dari `T6` Minggu 2). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`).
+- [ ] <!-- id: M2.W3.T7 --> **Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo `T6` langsung di browser (termasuk coba matikan koneksi/salah URL untuk tunjukkan error state beneran jalan), review PR `T1.1`+`T6` bareng (menutup utang PR Minggu 2 sekaligus PR minggu ini), jawab soal live yang menyasar kesalahpahaman umum `async`/`await` dianggap sinkron, **mentor minta modifikasi dadakan** di kode `T6` (misal ubah `filter` jadi kriteria lain, atau tambah `.catch`/`try-catch` di bagian yang belum ada), ceritakan hasil fluency drill `T2` (berapa lama, bagian mana masih ragu) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 4
 
