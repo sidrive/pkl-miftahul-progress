@@ -197,11 +197,11 @@
 
 > 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M2/M2-W3-promise-async-fetch.md`](../docs/modules/Modul-M2/M2-W3-promise-async-fetch.md)
 > 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
-> 🗓️ **5 hari kerja penuh** (Senin 24 – Jumat 28 Ags 2026, tidak ada hari libur minggu ini).
+> 🗓️ **Selasa 25 Ags 2026 libur** — minggu ini cuma **4 hari kerja** (Senin 24, lalu lompat ke Rabu 26 – Jumat 28 Ags 2026), bukan 5 hari.
 >
-> ⚠️ **Dari evaluasi `M2.W2.T7` (21 Agustus, status "half done"):** array methods (`map`/`filter`/`reduce`) sebenarnya sudah cukup lancar dieksekusi live saat diminta mentor langsung, dan pelajaran soal `innerHTML`/XSS **sudah kelihatan diterapkan dengan benar** di `T5` (pakai `createElement` untuk tombol, bukan suntik string ke `innerHTML` lagi — ini kemajuan nyata dari insiden `T4.5`). Tapi proyek mandiri `T6` dan PR-nya **belum selesai**, dan Gazi sendiri bilang materi minggu itu "cukup berat, kurang pengalaman JS." Karena itu, **separuh awal minggu ini (Senin–Selasa) dikhususkan untuk menuntaskan & memperkuat lagi Minggu 2** sebelum lanjut ke materi baru (Rabu–Jumat) — bukan lompat ke topik baru sambil ninggalin utang yang belum selesai.
+> ⚠️ **Dari evaluasi `M2.W2.T7` (21 Agustus, status "half done"):** array methods (`map`/`filter`/`reduce`) sebenarnya sudah cukup lancar dieksekusi live saat diminta mentor langsung, dan pelajaran soal `innerHTML`/XSS **sudah kelihatan diterapkan dengan benar** di `T5` (pakai `createElement` untuk tombol, bukan suntik string ke `innerHTML` lagi — ini kemajuan nyata dari insiden `T4.5`). Tapi proyek mandiri `T6` dan PR-nya **belum selesai**, dan Gazi sendiri bilang materi minggu itu "cukup berat, kurang pengalaman JS." Karena itu, **Bagian A (Senin, 1 hari — dipadatkan karena Selasa libur) dikhususkan untuk menuntaskan & memperkuat lagi Minggu 2** sebelum lanjut ke materi baru di Bagian B (Rabu–Jumat) — bukan lompat ke topik baru sambil ninggalin utang yang belum selesai. Kalau Bagian A belum kelar akhir hari Senin, boleh lanjutkan sedikit di awal Rabu sebelum mulai Bagian B — jangan dipaksa buru-buru asal selesai.
 
-**Bagian A — Tuntaskan & Perkuat Lagi Minggu 2 (target: Senin–Selasa, ±40% waktu minggu ini)**
+**Bagian A — Tuntaskan & Perkuat Lagi Minggu 2 (target: Senin 24 Agustus, ±25% waktu minggu ini — boleh sedikit lanjut ke awal Rabu kalau perlu)**
 
 - [ ] <!-- id: M2.W3.T1.1 --> **Lanjutkan & selesaikan `M2.W2.T6`** (proyek mandiri array methods+DOM+event yang belum selesai) — boleh lanjutkan dari `T5-M2-W2.js` (alat manajemen sparepart) kalau memang itu yang dimaksud jadi capstone, atau mulai ulang kalau mau topik lain, yang penting: **selesai fungsional**, dan **setiap fungsi array (`map`/`filter`/`reduce`/`find`) ada komentar alasan kenapa dipilih** (requirement asli `T6` yang belum terpenuhi)
 - [ ] <!-- id: M2.W3.T1.2 --> Push `T1.1` lewat **branch → commit rapi → PR** (utang dari Minggu 2 yang belum dibuat) — merge sendiri setelah yakin, PR dibahas bareng mentor saat evaluasi `T7` minggu ini
@@ -209,7 +209,7 @@
 - [ ] <!-- id: M2.W3.T1.4 --> Lengkapi entry `DAILY_LOG.md` yang masih kosong untuk `M2.W2.T1.1`, `M2.W2.T3.1`, dan `M2.W2.T3.3` (ada kode & sudah `done` di checklist, tapi belum pernah dicatat kesulitan/capaiannya) — housekeeping sebelum lanjut minggu baru
 - [ ] <!-- id: M2.W3.T2 --> **[Ulangi Tanpa Contek — Fluency Drill, dibatasi waktu ±30 menit]** TANPA modul/AI/catatan/kode lama: buat 1 mini-app baru dari nol (topik bebas, beda dari siswa/sparepart/robot yang sudah dipakai) yang pakai **minimal 3 dari 4** (`map`/`filter`/`reduce`/`find`) + render DOM + event delegation, **dikerjakan dengan target waktu** (bukan soal paham konsepnya lagi — itu sudah terbukti lumayan lancar saat live eval — tapi soal kecepatan & rasa percaya diri, karena kamu sendiri bilang minggu lalu "berat, kurang pengalaman JS"). Catat jujur di log: berapa lama actual selesai, dan bagian mana yang masih bikin ragu meski sudah paham konsepnya.
 
-**Bagian B — Materi Baru: Promise, `async`/`await`, `fetch` (target: Rabu–Jumat, ±60% waktu minggu ini)**
+**Bagian B — Materi Baru: Promise, `async`/`await`, `fetch` (target: Rabu 26 – Jumat 28 Agustus, ±75% waktu minggu ini)**
 
 - Promise dasar (dipecah jadi 2 sub-task):
   - [ ] <!-- id: M2.W3.T3.1 --> Pahami 3 state Promise (`pending`/`fulfilled`/`rejected`), praktik `.then()`/`.catch()` pakai simulasi `setTimeout` (misal Promise yang resolve/reject setelah 1 detik)

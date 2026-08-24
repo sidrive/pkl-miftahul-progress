@@ -8,7 +8,8 @@
 > **[Wajib Refleksi]** baru dianggap `done` kalau kamu bisa jelaskan pemahamannya pakai kata
 > sendiri, bukan cuma kode-nya jalan.
 >
-> **🗓️ 5 hari kerja penuh** (Senin 24 – Jumat 28 Agustus 2026, tidak ada libur minggu ini).
+> **🗓️ Selasa 25 Agustus 2026 libur** — minggu ini cuma **4 hari kerja** (Senin 24, lompat ke
+> Rabu 26 – Jumat 28 Agustus 2026), bukan 5 hari seperti biasanya.
 >
 > ## Kenapa minggu ini dibagi 2 bagian
 >
@@ -19,11 +20,13 @@
 > proyek mandiri `T6` dan PR-nya belum selesai, dan kamu sendiri bilang materi Minggu 2 "cukup
 > berat, kurang pengalaman JS." Jadi:
 >
-> - **Bagian A (Senin–Selasa, ±40% waktu minggu ini):** tuntaskan dulu utang Minggu 2 + 1 latihan
->   fluency (bukan konsep baru — cuma membangun kecepatan & rasa percaya diri).
-> - **Bagian B (Rabu–Jumat, ±60% waktu minggu ini):** materi baru — Promise, `async`/`await`,
->   `fetch()` — yang di bagian akhir (`T6`) **digabung** dengan skill Minggu 2 (array methods),
->   bukan topik lepas berdiri sendiri.
+> - **Bagian A (Senin 24 Agustus saja, ±25% waktu minggu ini — dipadatkan karena Selasa libur):**
+>   tuntaskan dulu utang Minggu 2 + 1 latihan fluency (bukan konsep baru — cuma membangun
+>   kecepatan & rasa percaya diri). Kalau belum kelar akhir hari Senin, boleh lanjut sedikit di
+>   awal Rabu sebelum mulai Bagian B — jangan dipaksa buru-buru asal selesai.
+> - **Bagian B (Rabu 26 – Jumat 28 Agustus, ±75% waktu minggu ini):** materi baru — Promise,
+>   `async`/`await`, `fetch()` — yang di bagian akhir (`T6`) **digabung** dengan skill Minggu 2
+>   (array methods), bukan topik lepas berdiri sendiri.
 >
 > **Catatan pola berulang (baca ini dulu sebelum bagian B):** minggu-minggu lalu ada beberapa
 > kesalahan konsep karena "kelihatan mirip = dikira sama" — unit CSS `fr` dikira mirip `vh`, arrow
