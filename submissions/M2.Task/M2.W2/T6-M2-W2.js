@@ -42,3 +42,56 @@ function renderTabel(arr) {
 }
 
 renderTabel(dataKomponen);
+
+function updateRingkasan(arr) {
+  // reduce
+  const total = arr.reduce((acc, item) => acc + item.harga, 0);
+  document.getElementById("totalBiaya").textContent = `Total Biaya: Rp${total.toLocaleString()}`;
+
+  // map: map karna butuh mengubah array of object jadi array string berisi nama nama komponen aja
+  const namaList = arr.map((item) => item.nama);
+  document.getElementById("daftarRingkas").textContent = `Daftar Ringkas: ${namaList.join(", ")}`;
+}
+
+updateRingkasan(dataKomponen);
+
+document.getElementById("btnTambah").addEventListener("click", () => {
+  const nama = document.getElementById("inputNama").value.trim();
+  const kategori = document.getElementById("inputKategori").value;
+  const harga = Number(document.getElementById("inputHarga").value);
+
+  if (!nama || !harga) return;
+
+  dataKomponen.push({ id: Date.now(), nama, kategori, harga });
+  renderTabel(dataKomponen);
+  updateRingkasan(dataKomponen);
+
+  document.getElementById("inputNama").value = "";
+  document.getElementById("inputHarga").value = "";
+});
+
+// FILTER: Pilih filter karena butuh menyaring array awal menjadi array baru berdasarkan pilihan kategori
+document.getElementById("filterKategori").addEventListener("change", (e) => {
+  const kat = e.target.value;
+  if (kat === "Semua") {
+    renderTabel(dataKomponen);
+    updateRingkasan(dataKomponen);
+  } else {
+    const hasilFilter = dataKomponen.filter((item) => item.kategori === kat);
+    renderTabel(hasilFilter);
+    updateRingkasan(hasilFilter);
+  }
+});
+
+// 6. FIND: karna hanya butuh mengambil 1 objek pertama yang namanya cocok untuk menampilkan detailnya
+document.getElementById("btnCari").addEventListener("click", () => {
+  const kataKunci = document.getElementById("inputCari").value.toLowerCase().trim();
+  const hasilFind = dataKomponen.find((item) => item.nama.toLowerCase().includes(kataKunci));
+
+  const elHasil = document.getElementById("hasilCari");
+  if (hasilFind) {
+    elHasil.textContent = `Ditemukan: ${hasilFind.nama} (${hasilFind.kategori}) - Rp${hasilFind.harga.toLocaleString()}`;
+  } else {
+    elHasil.textContent = "Item tidak ditemukan!";
+  }
+});
