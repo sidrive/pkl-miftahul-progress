@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T6 - Inventaris Komponen Robot</title>
+</head>
+<body>
+  <h2>Manajemen Komponen Robot</h2>
+
+  <div>
+    <input type="text" id="inputNama" placeholder="Nama Komponen">
+    <select id="inputKategori">
+      <option value="Microcontroller">Microcontroller</option>
+      <option value="Sensor">Sensor</option>
+      <option value="Actuator">Actuator</option>
+    </select>
+    <input type="number" id="inputHarga" placeholder="Harga (Rp)">
+    <button id="btnTambah">Tambah Item</button>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Filter Kategori:</label>
+    <select id="filterKategori">
+      <option value="Semua">Semua</option>
+      <option value="Microcontroller">Microcontroller</option>
+      <option value="Sensor">Sensor</option>
+      <option value="Actuator">Actuator</option>
+    </select>
+
+    <input type="text" id="inputCari" placeholder="Cari nama komponen...">
+    <button id="btnCari">Cari Detail</button>
+  </div>
+
+  <br>
+
+  <table border="1" cellpadding="8" style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Kategori</th>
+        <th>Harga</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="tabelBody">
+
+    </tbody>
+  </table>
+
+  <div style="margin-top: 15px;">
+    <p id="totalBiaya">Total Biaya: Rp0</p>
+    <p id="daftarRingkas">Daftar Ringkas: -</p>
+    <p id="hasilCari" style="font-weight: bold; color: blue;"></p>
+  </div>
+
+  <script src="T6-M2-W2.js"></script>
+</body>
+</html>
