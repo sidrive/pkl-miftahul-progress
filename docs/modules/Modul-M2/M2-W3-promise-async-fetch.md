@@ -28,6 +28,12 @@
 >   `async`/`await`, `fetch()` — yang di bagian akhir (`T6`) **digabung** dengan skill Minggu 2
 >   (array methods), bukan topik lepas berdiri sendiri.
 >
+> **Pola pengulangan Minggu 2 tetap dipakai di sini juga:** setiap task praktik inti di Bagian B
+> punya **minimal 2 putaran dengan skenario/data berbeda**, dan bagian `async`/`await` +
+> `fetch()` (dua konsep paling baru & paling rawan salah paham minggu ini) masing-masing dapat 1
+> task tambahan **`[Ulangi Tanpa Contek]`** sebagai putaran ke-3 dari nol — supaya bukan cuma
+> "kode kebetulan jalan sekali", tapi benar-benar diulang dengan kasus berbeda sampai lancar.
+>
 > **Catatan pola berulang (baca ini dulu sebelum bagian B):** minggu-minggu lalu ada beberapa
 > kesalahan konsep karena "kelihatan mirip = dikira sama" — unit CSS `fr` dikira mirip `vh`, arrow
 > function dikira cuma "versi singkat" `function`, `reduce()` dikira cuma "`for` loop yang ditulis
@@ -137,38 +143,52 @@ karena kamu sendiri bilang minggu lalu materinya "berat, kurang pengalaman JS."
 
 ## 1. Promise Dasar
 
-### `M2.W3.T3.1` — 3 state Promise + `.then()`/`.catch()`
+### `M2.W3.T3.1` — 3 state Promise + `.then()`/`.catch()` (2 putaran, skenario berbeda)
 
 Promise punya 3 kemungkinan state: **pending** (masih menunggu), **fulfilled** (berhasil, ada
 hasilnya), **rejected** (gagal, ada alasan gagalnya).
 
+**Putaran 1 — simulasi cek koneksi:**
 ```js
-function tungguSebentar(sukses) {
+function cekKoneksi(sukses) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (sukses) {
-        resolve("Berhasil setelah nunggu 1 detik!");
+        resolve("Koneksi berhasil setelah nunggu 1 detik!");
       } else {
-        reject("Gagal, ada masalah!");
+        reject("Koneksi gagal, ada masalah!");
       }
     }, 1000);
   });
 }
 
-tungguSebentar(true)
+cekKoneksi(true)
   .then((hasil) => console.log("Then:", hasil))
   .catch((error) => console.log("Catch:", error));
 
-tungguSebentar(false)
+cekKoneksi(false)
   .then((hasil) => console.log("Then:", hasil))
   .catch((error) => console.log("Catch:", error));
 ```
 
-**Latihan:** jalankan kedua kasus di atas (sukses `true` dan `false`), lihat sendiri `.then()`
-jalan untuk yang sukses, `.catch()` jalan untuk yang gagal.
+**Latihan putaran 1:** jalankan kedua kasus di atas (sukses `true` dan `false`), lihat sendiri
+`.then()` jalan untuk yang sukses, `.catch()` jalan untuk yang gagal.
 
-**Checklist selesai:** kamu paham Promise itu **placeholder untuk nilai yang belum ada sekarang,
+**Checklist putaran 1:** kamu paham Promise itu **placeholder untuk nilai yang belum ada sekarang,
 tapi akan ada nanti** (baik berhasil maupun gagal).
+
+**Putaran 2 (skenario baru, dari nol):** bikin lagi 1 fungsi yang mengembalikan Promise, tapi
+dengan **skenario yang benar-benar beda** dari "cek koneksi" — misalnya simulasi "cek stok barang
+tersedia atau tidak" (`resolve` kalau stok ada, `reject` kalau stok habis). Jangan cuma
+copy-paste `cekKoneksi` dan ganti nama variabel — tulis ulang logikanya dari pemahamanmu sendiri.
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W3.T3.1
+- **Status:** done
+- **Capaian:** Putaran 1 (cek koneksi) & putaran 2 (cek stok barang) berhasil, .then/.catch jalan sesuai state Promise-nya.
+- **Kesulitan:** -
+```
 
 ### `M2.W3.T3.2` — [Wajib Refleksi] Kuis mandiri (tanpa modul/AI)
 
@@ -189,12 +209,12 @@ tapi akan ada nanti** (baik berhasil maupun gagal).
 
 ## 2. `async`/`await` — **bukan bikin kode jadi sinkron**
 
-### `M2.W3.T4.1` — Ubah `.then()` jadi `async`/`await`
+### `M2.W3.T4.1` — Ubah `.then()` jadi `async`/`await` (untuk KEDUA putaran `T3.1`)
 
 ```js
 // versi Promise chain
 function ambilData() {
-  tungguSebentar(true)
+  cekKoneksi(true)
     .then((hasil) => console.log("Hasil:", hasil))
     .catch((error) => console.log("Error:", error));
 }
@@ -202,7 +222,7 @@ function ambilData() {
 // versi async/await — SAMA PERSIS perilakunya, cuma gaya nulis beda
 async function ambilDataAsync() {
   try {
-    const hasil = await tungguSebentar(true);
+    const hasil = await cekKoneksi(true);
     console.log("Hasil:", hasil);
   } catch (error) {
     console.log("Error:", error);
@@ -210,38 +230,42 @@ async function ambilDataAsync() {
 }
 ```
 
-**Latihan:** ubah Promise `tungguSebentar` dari `T3.1` jadi dipanggil pakai `async`/`await`
-(seperti contoh di atas), untuk kasus sukses dan gagal.
+**Latihan:** ubah **kedua** Promise dari `T3.1` (putaran 1 "cek koneksi" DAN putaran 2 "cek stok
+barang") jadi dipanggil pakai `async`/`await` seperti contoh di atas, untuk kasus sukses dan
+gagal di masing-masing skenario.
 
-**Checklist selesai:** bandingkan kedua versi kodenya — perhatikan `async`/`await` **tidak
-mengubah cara kerja Promise-nya**, cuma mengubah cara kamu *menulis* kode yang berinteraksi
-dengannya.
+**Checklist selesai:** bandingkan kedua versi kodenya (Promise chain vs `async`/`await`) untuk
+kedua skenario — perhatikan `async`/`await` **tidak mengubah cara kerja Promise-nya**, cuma
+mengubah cara kamu *menulis* kode yang berinteraksi dengannya.
 
-### `M2.W3.T4.2` — Error handling `try`/`catch`
+### `M2.W3.T4.2` — Error handling `try`/`catch` (2 kasus wajib: resolve & reject)
 
 `try`/`catch` di dalam fungsi `async` adalah pengganti `.catch()` di versi Promise chain.
 
 ```js
-async function contoh() {
+async function contoh(sukses) {
   try {
-    const hasil = await tungguSebentar(false); // ini akan reject
-    console.log(hasil); // baris ini TIDAK akan pernah jalan
+    const hasil = await cekKoneksi(sukses);
+    console.log(hasil); // kalau sukses, baris ini JALAN
   } catch (error) {
-    console.log("Ketangkep di catch:", error);
+    console.log("Ketangkep di catch:", error); // kalau gagal, baris ini yang jalan
   }
 }
-contoh();
+contoh(true);  // kasus 1: resolve
+contoh(false); // kasus 2: reject
 ```
 
-**Latihan:** sengaja buat 1 kasus yang reject, pastikan `catch` beneran menangkapnya (taruh
-`console.log` di dalam `try` SETELAH `await` untuk buktikan baris itu tidak pernah jalan kalau
-reject).
+**Latihan — WAJIB 2 kasus, jangan cuma salah satu:**
+1. Panggil dengan argumen yang membuat Promise **resolve** — pastikan `console.log` di dalam
+   `try` jalan normal.
+2. Panggil dengan argumen yang membuat Promise **reject** — pastikan `catch` beneran menangkapnya,
+   dan baris di `try` SETELAH `await` yang reject **tidak pernah jalan**.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W3.T4.2
 - **Status:** done
-- **Capaian:** Berhasil praktik try/catch di async function, buktikan baris setelah await yang reject tidak pernah jalan.
+- **Capaian:** Berhasil praktik try/catch di async function untuk 2 kasus (resolve & reject), buktikan baris setelah await yang reject tidak pernah jalan.
 - **Kesulitan:** -
 ```
 
@@ -270,12 +294,37 @@ tetap async di baliknya (event loop tidak diblokir, bagian lain program tetap bi
 - **Kesulitan:** -
 ```
 
+### `M2.W3.T4.4` — **[Ulangi Tanpa Contek]** Skenario ke-3, dari nol
+
+**Tutup dulu kode `T3.1`/`T4.1`/`T4.2` dan modul ini.** Ini ronde ke-3 untuk `async`/`await` —
+karena ini jebakan pemahaman paling penting minggu ini, dapat porsi pengulangan paling banyak
+(sama seperti `reduce` di Minggu 2).
+
+Dari nol (dari ingatan, bukan disalin), bikin 1 fungsi `async` baru dengan **skenario ke-3** yang
+belum pernah dipakai (beda dari "cek koneksi" `T3.1` putaran 1 dan "cek stok barang" `T3.1`
+putaran 2) — lengkap dengan:
+1. Fungsi yang mengembalikan Promise (resolve/reject via `setTimeout`).
+2. Dipanggil pakai `async`/`await`.
+3. `try`/`catch` untuk KEDUA kasus (sukses maupun gagal).
+
+**Kalau ada yang lupa di tengah jalan** — catat jujur di log bagian mana yang sempat macet, cek
+balik bagian itu saja, lanjutkan dari ingatan.
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W3.T4.4
+- **Status:** done
+- **Capaian:** Ulangi Promise+async/await+try/catch dari nol pakai skenario baru: [ceritakan skenarionya]. Sempat lupa [bagian mana], sisanya lancar dari ingatan.
+- **Kesulitan:** (jujur, bagian mana yang sempat macet)
+```
+
 ---
 
 ## 3. `fetch()` & Render ke DOM
 
-### `M2.W3.T5.1` — `fetch()` dasar dengan `.then()`
+### `M2.W3.T5.1` — `fetch()` dasar dengan `.then()` (2 putaran, endpoint berbeda)
 
+**Putaran 1:**
 ```js
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json()) // ubah response jadi JSON
@@ -283,14 +332,27 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .catch((error) => console.log("Gagal fetch:", error));
 ```
 
-**Latihan:** jalankan ini, lihat isi datanya di console dulu (belum ke DOM) — perhatikan
-`fetch()` juga sebuah Promise, jadi bisa dipakai `.then()`/`.catch()` seperti `T3.1`.
+**Latihan putaran 1:** jalankan ini, lihat isi datanya di console dulu (belum ke DOM) —
+perhatikan `fetch()` juga sebuah Promise, jadi bisa dipakai `.then()`/`.catch()` seperti `T3.1`.
 
-**Checklist selesai:** kamu paham kenapa ada **2 `.then()`** — yang pertama untuk mengubah
+**Checklist putaran 1:** kamu paham kenapa ada **2 `.then()`** — yang pertama untuk mengubah
 response mentah jadi JSON (`response.json()` itu sendiri juga Promise), yang kedua untuk data
 JSON yang sudah siap dipakai.
 
-### `M2.W3.T5.2` — Ulangi pakai `async`/`await`
+**Putaran 2 (endpoint berbeda):** ulangi `fetch()` yang sama strukturnya, tapi ke **endpoint
+lain** di JSONPlaceholder (misal `https://jsonplaceholder.typicode.com/posts` atau `.../todos`) —
+atau API publik lain kalau mau. `console.log` datanya, perhatikan bentuk data JSON-nya beda dari
+`/users` (field-nya berbeda).
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W3.T5.1
+- **Status:** done
+- **Capaian:** Putaran 1 (/users) & putaran 2 (/posts) berhasil fetch pakai .then, paham kenapa perlu 2 .then (response.json() lalu data).
+- **Kesulitan:** -
+```
+
+### `M2.W3.T5.2` — Ulangi KEDUA putaran pakai `async`/`await`
 
 ```js
 async function ambilUser() {
@@ -305,19 +367,19 @@ async function ambilUser() {
 ambilUser();
 ```
 
-**Latihan:** request yang sama seperti `T5.1`, tapi gaya `async`/`await`. Bandingkan: mana yang
-lebih gampang dibaca untuk kasus yang agak kompleks (2 tahap: fetch lalu `.json()`) dibanding
-Promise sederhana 1 tahap di `T4.1`?
+**Latihan:** request yang **sama seperti `T5.1`** (kedua endpoint, putaran 1 & 2), tapi gaya
+`async`/`await`. Bandingkan: mana yang lebih gampang dibaca untuk kasus yang agak kompleks (2
+tahap: fetch lalu `.json()`) dibanding Promise sederhana 1 tahap di `T4.1`?
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W3.T5.2
 - **Status:** done
-- **Capaian:** Berhasil ulangi fetch pakai async/await, request sama dengan T5.1. Menurut saya versi [pilih] lebih gampang dibaca karena [alasan].
+- **Capaian:** Berhasil ulangi fetch untuk kedua endpoint (users & posts) pakai async/await. Menurut saya versi [pilih] lebih gampang dibaca karena [alasan].
 - **Kesulitan:** -
 ```
 
-### `M2.W3.T5.3` — Render ke DOM + loading & error state
+### `M2.W3.T5.3` — Render ke DOM + loading & error state (untuk kedua putaran)
 
 ```js
 const daftarUser = document.querySelector("#daftar-user");
@@ -347,14 +409,17 @@ data dari API itu tetap "data dari luar" yang tidak sepenuhnya dipercaya (bisa s
 diretas, atau datanya mengandung karakter yang tidak terduga). Kebiasaan pakai `textContent`
 sebagai default aman harus dijaga konsisten, bukan cuma pas ingat.
 
-**Latihan:** coba sengaja pakai URL yang salah (misal ketik typo di domain-nya), lihat pesan error
-yang muncul di UI — pastikan pesannya jelas untuk user, bukan cuma error teknis mentah.
+**Latihan — untuk KEDUA putaran (data `/users` dan data endpoint lain dari `T5.1`):**
+1. Render masing-masing ke DOM dengan struktur di atas (boleh 2 container terpisah).
+2. Coba sengaja pakai URL yang salah (misal ketik typo di domain-nya) untuk salah satu, lihat
+   pesan error yang muncul di UI — pastikan pesannya jelas untuk user, bukan cuma error teknis
+   mentah.
 
 **Contoh entry log:**
 ```markdown
 ### Task: M2.W3.T5.3
 - **Status:** done
-- **Capaian:** Berhasil render data user ke DOM pakai createElement+textContent, ada loading state, dan coba URL salah untuk buktikan error state jalan.
+- **Capaian:** Berhasil render data users & posts ke DOM pakai createElement+textContent, ada loading state, dan coba URL salah untuk buktikan error state jalan.
 - **Kesulitan:** -
 ```
 
@@ -379,6 +444,28 @@ yang muncul di UI — pastikan pesannya jelas untuk user, bukan cuma error tekni
 - **Status:** done
 - **Capaian:** 5 jawaban kuis Promise/async-await/fetch + koreksi kalau ada yang salah.
 - **Kesulitan:** -
+```
+
+### `M2.W3.T5.5` — **[Ulangi Tanpa Contek]** API/endpoint ke-3, dari nol
+
+**Tutup dulu kode `T5.1`–`T5.3` dan modul ini.** Ini ronde ke-3 untuk `fetch()` — pilih 1
+**API/endpoint yang belum pernah dipakai** (beda dari `/users` dan endpoint pilihanmu di `T5.1`
+putaran 2). Dari nol (dari ingatan), kerjakan lengkap:
+
+1. `fetch()` pakai `async`/`await` + `try`/`catch`.
+2. Render ke DOM lewat `createElement`+`textContent` (bukan `innerHTML`).
+3. Tampilkan "Loading..." sebelum data datang, dan pesan error yang jelas kalau gagal (coba
+   sengaja salahkan URL-nya lagi untuk buktikan).
+
+**Kalau ada yang lupa** — catat jujur di log bagian mana yang sempat macet, cek balik bagian itu
+saja, lanjutkan dari ingatan.
+
+**Contoh entry log:**
+```markdown
+### Task: M2.W3.T5.5
+- **Status:** done
+- **Capaian:** Ulangi fetch+async/await+render DOM+loading/error dari nol pakai endpoint [nama endpoint]. Sempat lupa [bagian mana], sisanya lancar dari ingatan.
+- **Kesulitan:** (jujur, bagian mana yang sempat macet)
 ```
 
 ---

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-24T06:15:49.202Z",
-  "totalTasks": 174,
+  "generatedAt": "2026-08-24T06:24:40.751Z",
+  "totalTasks": 176,
   "doneTasks": 114,
-  "overallPercent": 66,
+  "overallPercent": 65,
   "perMonth": [
     {
       "number": 1,
@@ -14,9 +14,9 @@
     {
       "number": 2,
       "title": "JavaScript Modern & Node (13 Ags – 12 Sep 2026)",
-      "total": 57,
+      "total": 59,
       "done": 36,
-      "percent": 63
+      "percent": 61
     },
     {
       "number": 3,
