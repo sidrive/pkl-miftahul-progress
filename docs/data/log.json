@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-08-26",
+    "task": "M2.W3.4.1",
+    "status": "done",
+    "capaian": "saya coba praktek untuk ngubah Promise `.then()` dan `.catch()` menjadi `async`/`await` pada 2 skenario, yaitu cek koneksi dan cek stok barang. udah coba kondisi berhasil (`resolve`) dan gagal (`reject`). menurut saya cara kerja Promise nya tetap sama, yang berubah cuma cara nulis kodenya jadi lebih rapi dan gampang dibaca.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T3.2",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T3.1",
+    "status": "done",
+    "capaian": "saua berhasil praktekkan Promise dasar dalam 2 putaran skenario berbeda (cek koneksi & cek stok barang). paham 3 state Promise (pending, fulfilled, rejected) serta penggunaan .then() untuk menangani resolve dan .catch() untuk menangani reject.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T2",
+    "status": "done",
+    "capaian": "Selesai dalam `48 menit 39 detik 24 milidetik` [48.39.24] menit (target 30 menit). Topik: [saya udah buat sebuah miniapp daftar buku, buat mini app ini dari nol. di dalamnya saya pakai `map` untuk nampilkan daftar judul, `filter` untuk menyaring buku berdasarkan kategori, `reduce` untuk menghitung total harga buku, `find` (`findIndex`) untuk mencari data yang akan dihapus, render ke DOM, dan event delegation untuk tombol hapus.]. pakai map+filter+reduce, render DOM, event delegation.",
+    "kesulitan": "saya udah tau gambaran kira kira gimana dari mini app nya, tapi pada saat ngetik kode JS nya masih ada beberapa kesalahan ketik dan kesalahan fungsi dari kode nya, penempatan kode yang salah juga."
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T1.4",
+    "status": "done",
+    "capaian": "untuk pengisian log yang masih kosong, saya akan isi berdasaran tanggal / minggu / urutan task itu berasal agar rapi untuk log nya. task: M2.W2.T1.1, M2.W2.T3.1, dan M2.W2.T3.3.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T1.3",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T1.2",
+    "status": "done",
+    "capaian": "pada hari senin tanggal 24 agustus 2026 saya udah push ke repo github dan udah buat PR nya.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-26",
+    "task": "M2.W3.T1.1",
+    "status": "done",
+    "capaian": "saya menyelesaikan proyek komponen robot di task T6 minggu 2, dan udah nambahin komentar alasan pemilihan kode / fungsi nya.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-24",
     "task": "M2.W2.T6",
     "status": "done",
@@ -113,9 +169,23 @@
   },
   {
     "date": "2026-08-18",
+    "task": "M2.W2.T3.3",
+    "status": "done",
+    "capaian": "coba praktek perbedaan `textContent` dan `innerHTML` pakai string `\"Siswa Lulus: <b>Laila</b> (Nilai: 85)\"`. pada `textContent`, tag `<b>` ditampilkan polos jadi teks biasa. sedangkan pada `innerHTML`, tag `<b>` langsung dieksekusi browser sehingga kata \"Laila\" dicetak tebal. untuk awal awal memahami kode nya emang agak rumit ya karna pertama kali ngetik kode JS.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-18",
     "task": "M2.W2.T3.2",
     "status": "done",
     "capaian": "Berhasil render list siswa ke DOM secara dinamis pakai createElement + appendChild.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-18",
+    "task": "M2.W2.T3.1",
+    "status": "done",
+    "capaian": "ambil elemen dari HTML menggunakan querySelector dan querySelectorAll, dan membandingkannya dengan getElementById. pengambilan elemen DOM menggunakan cara modern (`querySelector`, `querySelectorAll`) dan cara lama (`getElementById`, `getElementsByClassName`). memahami kalo `querySelector(\".deskripsi\")` hanya ambil 1 elemen pertama, sedangkan `querySelectorAll(\".deskripsi\")` mengembalikan kumpulan elemen berbentuk `NodeList`.",
     "kesulitan": "---"
   },
   {
@@ -136,7 +206,7 @@
     "date": "2026-08-18",
     "task": "M2.W2.T1.3",
     "status": "done",
-    "capaian": "=",
+    "capaian": "1. karna dia pakai prinsip _immutability_ (datanya gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) biar gak rusak/terubah waktu diolah di bagian kode lain. map dan filter ini dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.",
     "kesulitan": "-"
   },
   {
@@ -144,6 +214,13 @@
     "task": "M2.W2.T1.2",
     "status": "done",
     "capaian": "Berhasil praktik map & filter, termasuk kombinasi keduanya untuk ambil nama siswa nilai <75.",
+    "kesulitan": "-"
+  },
+  {
+    "date": "2026-08-18",
+    "task": "M2.W2.T1.1",
+    "status": "done",
+    "capaian": "praktek penggunaan map untuk mentransformasi array of object (data siswa) menjadi array string berisi nama aja, serta perhitungan nya.",
     "kesulitan": "-"
   },
   {

@@ -632,42 +632,42 @@
           {
             "id": "M2.W3.T1.1",
             "text": "**Lanjutkan & selesaikan `M2.W2.T6`** (proyek mandiri array methods+DOM+event yang belum selesai) — boleh lanjutkan dari `T5-M2-W2.js` (alat manajemen sparepart) kalau memang itu yang dimaksud jadi capstone, atau mulai ulang kalau mau topik lain, yang penting: **selesai fungsional**, dan **setiap fungsi array (`map`/`filter`/`reduce`/`find`) ada komentar alasan kenapa dipilih** (requirement asli `T6` yang belum terpenuhi)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T1.2",
             "text": "Push `T1.1` lewat **branch → commit rapi → PR** (utang dari Minggu 2 yang belum dibuat) — merge sendiri setelah yakin, PR dibahas bareng mentor saat evaluasi `T7` minggu ini",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T1.3",
             "text": "**[Wajib Refleksi]** Bandingkan langsung kode `T4.5-M2-W2.js` (pakai `innerHTML` + `input.value`, berisiko) dengan `T5-M2-W2.js` (pakai `createElement` untuk tombol hapus, aman) — jelaskan dengan kata sendiri **apa tepatnya yang berubah** di antara keduanya, dan kenapa versi `T5` lebih aman. Ini mengunci tertulis pelajaran yang kemarin baru kelihatan dari kode, belum pernah ditulis eksplisit",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T1.4",
             "text": "Lengkapi entry `DAILY_LOG.md` yang masih kosong untuk `M2.W2.T1.1`, `M2.W2.T3.1`, dan `M2.W2.T3.3` (ada kode & sudah `done` di checklist, tapi belum pernah dicatat kesulitan/capaiannya) — housekeeping sebelum lanjut minggu baru",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T2",
             "text": "**[Ulangi Tanpa Contek — Fluency Drill, dibatasi waktu ±30 menit]** TANPA modul/AI/catatan/kode lama: buat 1 mini-app baru dari nol (topik bebas, beda dari siswa/sparepart/robot yang sudah dipakai) yang pakai **minimal 3 dari 4** (`map`/`filter`/`reduce`/`find`) + render DOM + event delegation, **dikerjakan dengan target waktu** (bukan soal paham konsepnya lagi — itu sudah terbukti lumayan lancar saat live eval — tapi soal kecepatan & rasa percaya diri, karena kamu sendiri bilang minggu lalu \"berat, kurang pengalaman JS\"). Catat jujur di log: berapa lama actual selesai, dan bagian mana yang masih bikin ragu meski sudah paham konsepnya.",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T3.1",
             "text": "Pahami 3 state Promise (`pending`/`fulfilled`/`rejected`) — **putaran 1**: praktik `.then()`/`.catch()` pakai simulasi `setTimeout` (misal Promise \"cek koneksi\" yang resolve/reject setelah 1 detik); **putaran 2**: ulangi bikin Promise+`.then()`/`.catch()` baru dari nol dengan **skenario yang beda** (misal simulasi \"cek stok barang tersedia atau tidak\", bukan sekadar copy-paste ganti nama)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T3.2",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: jelaskan kapan Promise pindah dari `pending` ke `fulfilled` vs ke `rejected`, dan apa yang terjadi kalau `.catch()` tidak ditulis sama sekali saat Promise di-reject",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T4.1",
             "text": "Ubah KEDUA Promise dari `T3.1` (putaran 1 & 2) jadi versi `async`/`await` (fungsi `async function`, pakai `await` di depan Promise) — bandingkan keterbacaan kode kedua versi untuk masing-masing skenario",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T4.2",
