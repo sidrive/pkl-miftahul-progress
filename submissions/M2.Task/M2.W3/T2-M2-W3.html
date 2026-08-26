@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task T2-M2-W3</title>
+</head>
+<body>
+    <h1>Daftar Buku</h1>
+    
+    <div>
+        <input type="text" id="inputJudul" placeholder="Judul Buku">
+        <select id="inputKategori">
+            <option value="Komputer">Komputer</option>
+            <option value="Art">Art</option>
+            <option value="Novel">Novel</option>
+        </select>
+        <input type="number" id="inputHarga" placeholder="Harga (Rp)">
+        <button id="btnTambah">Tambah Boekoe</button>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Filter Kategori</label>
+        <select id="filterKategori">
+            <option value="Semua">Semua</option>
+            <option value="Komputer">Komputer</option>
+            <option value="Art">Art</option>
+            <option value="Novel">Novel</option>
+        </select>
+    </div>
+
+    <br>
+
+    <table border="1" cellpadding="8" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tabelBody"></tbody>
+    </table>
+
+    <div style="margin-top: 15px;">
+        <p id="totalHarga">Total Harga Buku: </p>
+        <p id="daftarJudul">Daftar Judul Ringkas: -</p>
+    </div>
+
+    <script src="T2-M2-W3.js"></script>
+</body>
+</html>

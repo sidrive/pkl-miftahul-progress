@@ -44,11 +44,11 @@ function renderTabel(arr) {
 renderTabel(dataKomponen);
 
 function updateRingkasan(arr) {
-  // reduce
+  // reduce: karna butuh hitung 1 angka total biaya akumulasi dari seluruh item di array
   const total = arr.reduce((acc, item) => acc + item.harga, 0);
   document.getElementById("totalBiaya").textContent = `Total Biaya: Rp${total.toLocaleString()}`;
 
-  // map: map karna butuh mengubah array of object jadi array string berisi nama nama komponen aja
+  // map: karna butuh mengubah array of object jadi array string berisi nama nama komponen aja
   const namaList = arr.map((item) => item.nama);
   document.getElementById("daftarRingkas").textContent = `Daftar Ringkas: ${namaList.join(", ")}`;
 }

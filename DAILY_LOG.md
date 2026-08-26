@@ -932,6 +932,15 @@ console.log(jurusan);
 
 <!-- ENTRY START -->
 
+### Task: M2.W2.T1.1
+
+- **Status:** done
+- **Capaian:** praktek penggunaan map untuk mentransformasi array of object (data siswa) menjadi array string berisi nama aja, serta perhitungan nya.
+- **Kesulitan:** -
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
 ### Task: M2.W2.T1.2
 
 - **Status:** done
@@ -944,23 +953,23 @@ console.log(jurusan);
 ### Task: M2.W2.T1.3
 
 - **Status:** done
-- **Capaian:** =
+- **Capaian:** :
+  1. karna dia pakai prinsip _immutability_ (datanya gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) biar gak rusak/terubah waktu diolah di bagian kode lain. map dan filter ini dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
+  2. perbandingan kode `for` loop vs `map`/`filter`=
+  ```js
+  versi for loop manual (untuk filter siswa lulus):
+  const siswaLulus = [];
+  for (let i = 0; i < siswa.length; i++) {
+  if (siswa[i].nilai >= 75) {
+  siswaLulus.push(siswa[i]);
+  }
+  }
 
-1. karna dia pakai prinsip _immutability_ (datanya gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) biar gak rusak/terubah waktu diolah di bagian kode lain. map dan filter ini dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
+  versi filter modern:
+  const siswaLulus = siswa.filter((s) => s.nilai >= 75);
+  ```
 
-2. perbandingan kode `for` loop vs `map`/`filter`:
-   - versi for loop manual (untuk filter siswa lulus):
-     const siswaLulus = [];
-     for (let i = 0; i < siswa.length; i++) {
-     if (siswa[i].nilai >= 75) {
-     siswaLulus.push(siswa[i]);
-     }
-     }
-     =====================
-   - versi filter modern:
-     const siswaLulus = siswa.filter((s) => s.nilai >= 75);
-     =====================
-     untuk `filter` dia lebih mudah dibaca dan dipahami karna kodenya deklaratif (langsung menyatakan _apa_ yang ingin dicapai, bukan _bagaimana_ alur perulangannya diatur). jadi kita gak perlu buat array penampung yang kosong `[]` secara manual.
+  untuk `filter` dia lebih mudah dibaca dan dipahami karna kodenya deklaratif (langsung menyatakan _apa_ yang ingin dicapai, bukan _bagaimana_ alur perulangannya diatur). jadi kita gak perlu buat array penampung yang kosong `[]` secara manual.
 
 - **Kesulitan:** -
 <!-- ENTRY END -->
@@ -990,10 +999,28 @@ console.log(jurusan);
 
 <!-- ENTRY START -->
 
+### Task: M2.W2.T3.1
+
+- **Status:** done
+- **Capaian:** ambil elemen dari HTML menggunakan querySelector dan querySelectorAll, dan membandingkannya dengan getElementById. pengambilan elemen DOM menggunakan cara modern (`querySelector`, `querySelectorAll`) dan cara lama (`getElementById`, `getElementsByClassName`). memahami kalo `querySelector(".deskripsi")` hanya ambil 1 elemen pertama, sedangkan `querySelectorAll(".deskripsi")` mengembalikan kumpulan elemen berbentuk `NodeList`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
 ### Task: M2.W2.T3.2
 
 - **Status:** done
 - **Capaian:** Berhasil render list siswa ke DOM secara dinamis pakai createElement + appendChild.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W2.T3.3
+
+- **Status:** done
+- **Capaian:** coba praktek perbedaan `textContent` dan `innerHTML` pakai string `"Siswa Lulus: <b>Laila</b> (Nilai: 85)"`. pada `textContent`, tag `<b>` ditampilkan polos jadi teks biasa. sedangkan pada `innerHTML`, tag `<b>` langsung dieksekusi browser sehingga kata "Laila" dicetak tebal. untuk awal awal memahami kode nya emang agak rumit ya karna pertama kali ngetik kode JS.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
 
@@ -1201,11 +1228,98 @@ console.log(jurusan);
 
 - **Status:** done
 - **Capaian:** saya buat mini app komponen robotic dengan file HTML dan JS aja.
+
 1. `reduce`: saya tempatkan di `updateRingkasan` untuk menghitung total biaya inventaris karna butuh 1 angka hasil akumulasi dari seluruh harga komponen.
 2. `map`: ditempatkan di `updateRingkasan` untuk ngambil daftar ringkas nama komponen karna butuh mengubah array object jadi array string.
 3. `filter`: di di event listener `filterKategori` untuk nyaring data berdasarkan kategori (Microcontroller, Sensor, Actuator) karna menghasilkan array baru yang isinya lebih dikit.
 4. `find`: tempatkan di fitur pencarian detail untuk ambil 1 objek komponen pertama yang namanya cocok dengan input user.
-5. Event delegation dibutuhkan di parent `<tbody>` biat tombol hapus tetap berfungsi pada baris tabel baru yang dibuat secara dinamis tanpa harus memasang listener satu per satu per elemen.
-link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/4].
+5. Event delegation dibutuhkan di parent `<tbody>` biat tombol hapus tetap berfungsi pada baris tabel baru yang dibuat secara dinamis tanpa harus memasang listener satu per satu per elemen. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/4].
+
 - **Kesulitan:** masih sedikit kesulitan untuk mengetik kode js nya, ada banyak eror pada saat awal awal membuat program nya. salah ngetik kode yang dibutuhkan, terkadang harus melihat kode apa yang dibutuhkan/sesuai dengan program, susunan kode yang salah juga tadi waktu buat kodenya.
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-26
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T1.1
+
+- **Status:** done
+- **Capaian:** saya menyelesaikan proyek komponen robot di task T6 minggu 2, dan udah nambahin komentar alasan pemilihan kode / fungsi nya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T1.2
+
+- **Status:** done
+- **Capaian:** pada hari senin tanggal 24 agustus 2026 saya udah push ke repo github dan udah buat PR nya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T1.3
+
+- **Status:** done
+- **Capaian:** =
+
+1. perubahan yang ada pada kedua kode ini yaitu yang berubah itu cara bikin tombol hapus. di T4.5 saya pakai innerHTML, jadi langsung bikin isi <li> sekaligus tombol Hapus dalam satu baris. nah T5 saya bikin tombolnya satu satu pakai createElement(), kasih tulisan, kasih class, baru dimasukin ke dalam <li>.
+
+2. alasan kenapa T5 itu lebih aman karna gak pakai innerHTML buat masukin input dari user. di T4.5, isi input user langsung dimasukin ke innerHTML, jadi kalau ada orang yang iseng masukin tag HTML atau script, bisa bahaya. kalo di T5 saya pakai textContent, jadi apapun itu yang diketik user cuma dianggap sebagai teks biasa dan gak bisa dijalankan sama browser. ini sama kaya yang saya pahamin dan pelajarin di T3.4 tentang risiko innerHTML.
+
+3. awal awal waktu ketik T5 saya belum terlalu tau kalau cara itu lebih aman. saya cuma ngikutin materi dan contoh yang saya pelajari. baru pas membandingkan T4.5 sama T5 sekarang, saya jadi paham dan tau kenapa di T5 pakai createElement() dan textContent, ternyata emang lebih aman dari pada langsung pakai innerHTML.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T1.4
+
+- **Status:** done
+- **Capaian:** untuk pengisian log yang masih kosong, saya akan isi berdasaran tanggal / minggu / urutan task itu berasal agar rapi untuk log nya. task: M2.W2.T1.1, M2.W2.T3.1, dan M2.W2.T3.3.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T2
+
+- **Status:** done
+- **Capaian:** Selesai dalam `48 menit 39 detik 24 milidetik` [48.39.24] menit (target 30 menit). Topik: [saya udah buat sebuah miniapp daftar buku, buat mini app ini dari nol. di dalamnya saya pakai `map` untuk nampilkan daftar judul, `filter` untuk menyaring buku berdasarkan kategori, `reduce` untuk menghitung total harga buku, `find` (`findIndex`) untuk mencari data yang akan dihapus, render ke DOM, dan event delegation untuk tombol hapus.]. pakai map+filter+reduce, render DOM, event delegation.
+- **Kesulitan:** saya udah tau gambaran kira kira gimana dari mini app nya, tapi pada saat ngetik kode JS nya masih ada beberapa kesalahan ketik dan kesalahan fungsi dari kode nya, penempatan kode yang salah juga.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T3.1
+
+- **Status:** done
+- **Capaian:** saua berhasil praktekkan Promise dasar dalam 2 putaran skenario berbeda (cek koneksi & cek stok barang). paham 3 state Promise (pending, fulfilled, rejected) serta penggunaan .then() untuk menangani resolve dan .catch() untuk menangani reject.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T3.2
+
+- **Status:** done
+- **Capaian:** =
+
+1. Promise awalnya ada di state pending (masih nunggu). kalau prosesnya berhasil, Promise pindah ke fulfilled saat resolve() dipanggil. nah kalau prosesnya gagal, Promise dia pindah ke rejected saat reject() dipanggil.
+2. kalau kita ga nulis `.catch()` pada saat dia panggil dia akan muncul eror `UnhandledPromiseRejection`. soalnya Promise yang gagal itu gak ada yang urusin, jadi Node.js ngasih tahu kalau ada error yang belum ditangkap. makanya kalau pakai Promise, bagusnya kita tambahin `.catch()` biar error bisa ditangani dengan benar.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.4.1
+- **Status:** done
+- **Capaian:** saya coba praktek untuk ngubah Promise `.then()` dan `.catch()` menjadi `async`/`await` pada 2 skenario, yaitu cek koneksi dan cek stok barang. udah coba kondisi berhasil (`resolve`) dan gagal (`reject`). menurut saya cara kerja Promise nya tetap sama, yang berubah cuma cara nulis kodenya jadi lebih rapi dan gampang dibaca.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
