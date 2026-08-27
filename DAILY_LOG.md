@@ -956,6 +956,7 @@ console.log(jurusan);
 - **Capaian:** :
   1. karna dia pakai prinsip _immutability_ (datanya gak diubah secara langsung). jadi tujuannya untuk menjaga keutuhan data asli (sumber data utama) biar gak rusak/terubah waktu diolah di bagian kode lain. map dan filter ini dia otomatis mengalokasikan memori/wadah baru untuk menampung hasil olahan.
   2. perbandingan kode `for` loop vs `map`/`filter`=
+
   ```js
   versi for loop manual (untuk filter siswa lulus):
   const siswaLulus = [];
@@ -1318,8 +1319,71 @@ console.log(jurusan);
 
 <!-- ENTRY START -->
 
-### Task: M2.W3.4.1
+### Task: M2.W3.T4.1
+
 - **Status:** done
 - **Capaian:** saya coba praktek untuk ngubah Promise `.then()` dan `.catch()` menjadi `async`/`await` pada 2 skenario, yaitu cek koneksi dan cek stok barang. udah coba kondisi berhasil (`resolve`) dan gagal (`reject`). menurut saya cara kerja Promise nya tetap sama, yang berubah cuma cara nulis kodenya jadi lebih rapi dan gampang dibaca.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-08-27
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T4.2
+
+- **Status:** done
+- **Capaian:** Jalankan contoh(true) -> output console: `"LOG di TRY (Berhasil): eskrim sampai dengan selamat di tujuan"`. Jalankan contoh(false) -> output console: `"LOG di CATCH (Gagal): es krim tidak selamat bos"`. Simpulan: jadi kalau Promise berhasil (`resolve`), kodenya setelah `await` di dalam `try` tetap jalan. tapi kalau Promise gagal (`reject`), kode setelah `await` di `try` langsung berhenti dan program pindah ke blok `catch`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T4.3
+
+- **Status:** done
+- **Capaian:** =
+
+1. awal awal emang keliatan mirip ini 2 fungsi tapi menurut saya `async`/`await` itu bukan berarti JavaScript dia jadi sinkron, `await` cuma bikin bagian kode itu nunggu Promise selesai dulu, tapi JavaScript masih bisa ngerjain proses lain di belakang. beda sama `for` loop biasa yang memang jalan satu satu dan harus nunggu putaran sebelumnya selesai dulu sebelum lanjut ke putaran berikutnya. yang saya pelajari kaya gitu si.
+2. contohnya misal saya mau ambil data user sama data produk. dua data itu sebenarnya gak saling butuh hasil, jadi bisa jalan bareng. tapi kalau saya pakai `await` satu satu, program jadi nunggu yang pertama selesai dulu baru jalan yang kedua, akhirnya lebih lambat padahal bisa aja dikerjain bersamaan.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T4.4
+
+- **Status:** done
+- **Capaian:** Ulangi Promise+async/await+try/catch dari nol pakai skenario baru: [`saya buat skenario download game yang berhasil / download game gagal karna sinyal jelek, skenario download file (downloadFile). menangani dua kasus (sinyal bagus/resolve dan sinyal jelek/reject).`].
+- **Kesulitan:** bagian yang lancar itu bagian membuat function dan bagian buat console.log("--- pengujian 1: Sinyal bagus Bos (Resolve) ---"); sampai `setTimeout` dibawah nya pada path file [..\M2.M3\T4.4-M2-W3.js]. bagian yang macet waktu saya mau buat async function nya, sempat salah penggunaan kode nya dan salah penyebutan variabel nya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T5.1
+
+- **Status:** done
+- **Capaian:** putaran 1 (/users/octocat) dan putaran 2 (/repos) berhasil fetch pakai .then, kenapa perlu 2 `.then()`. `.then()` jadi pertama untuk ngubah response mentah jadi JSON (`response.json()`), nah sedangkan `.then()` kedua untuk mengambil dan pakai data JSON yang sudah siap.
+- **Kesulitan:** jadi wifi / jaringan yang ada di kantor batam itu punya filtering wifi jadi,Endpoint jsonplaceholder diblokir jaringan kantor olsera, jadi saya ggunakan GitHub API sebagai pengganti agar tetap bisa mencoba `fetch()` ini.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T5.2
+
+- **Status:** done
+- **Capaian:** Berhasil ulangi fetch untuk kedua endpoint (users & repo github) pakai async/await. Menurut saya versi [yang lama T5.1 .then() ] lebih gampang dibaca karena kodenya lebih pendek dan lebih enak juga untuk di pahamin, apa lagi seperti saya yang baru pakai JS, tapi emang lebih banyak pakai .then nya juga. nah untuk yang T5.2 ini kan dia sama seperti materi T4 kalo ga salah, jadi juga enak si, tapi kalo untuk bikin function saya pilih pakai yang Y5.2 / versi async/await lebih gampang dibaca karena alur kodenya dari atas ke bawah. ya plus minus lah.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T5.3
+
+- **Status:** done
+- **Capaian:** Berhasil render data users & posts ke DOM pakai createElement+textContent, ada loading state, dan coba URL salah untuk buktikan error state jalan. menampilkan loading state sebelum data muncul. saya juga sengaja pakai URL yang salah untuk putaran kedua dan dia menampilkan pesan error ke user, jadi halaman gak kosong waktu fetch gagal.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
