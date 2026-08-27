@@ -672,32 +672,32 @@
           {
             "id": "M2.W3.T4.2",
             "text": "Praktik error handling `try`/`catch` di dalam fungsi `async` (setara `.catch()` di versi Promise chain) — **2 kasus wajib**: 1 kasus yang resolve (jalan normal) DAN 1 kasus yang reject (lihat `catch` beneran menangkap errornya), bukan cuma salah satu",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T4.3",
             "text": "**[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa `async`/`await` BUKAN membuat kode berjalan sinkron (bukan seperti `for` loop yang tiap baris tunggu baris sebelumnya selesai secara \"blocking\") — `await` cuma bikin kode *kelihatan* berurutan tapi tetap asynchronous di baliknya. Kasih 1 contoh situasi nyata di mana salah paham ini bisa bikin bug (misal mengira 2 `await` yang harusnya bisa jalan paralel malah ditulis berurutan tanpa alasan)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T4.4",
             "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T3.1`/`T4.1`/`T4.2` atau modul, bikin dari nol 1 fungsi `async` baru dengan **skenario ke-3 yang belum pernah dipakai** (beda dari \"cek koneksi\" dan \"cek stok\"), lengkap dengan `try`/`catch` untuk kasus resolve maupun reject. Catat jujur bagian mana yang sempat lupa",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T5.1",
             "text": "`fetch()` dasar — **putaran 1**: GET request ke 1 public API (misal JSONPlaceholder `https://jsonplaceholder.typicode.com/users`), tampilkan hasil mentah di `console.log` dulu (belum ke DOM) pakai `.then()`/`.catch()`; **putaran 2**: ulangi ke **endpoint/API lain yang beda** (misal `.../posts` atau `.../todos` di JSONPlaceholder, atau API publik lain) — bukan endpoint yang sama diulang",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T5.2",
             "text": "Ulangi KEDUA putaran `T5.1` pakai `async`/`await` + `try`/`catch` (request sama, gaya penulisan beda) — bandingkan lagi mana yang lebih gampang dibaca untuk kasus nyata (bukan cuma 1 Promise sederhana seperti di `T4.1`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T5.3",
             "text": "Render hasil `fetch` ke DOM untuk **kedua putaran** (data user & data endpoint lain): **wajib pakai `createElement`+`textContent`** (bukan `innerHTML`, sesuai pelajaran `T3.4`/`T1.3` Minggu 2 — data dari API itu tetap \"data dari luar\" yang tidak sepenuhnya dipercaya), plus tampilkan teks \"Loading...\" sebelum data datang dan pesan error yang jelas kalau `fetch` gagal (coba sengaja pakai URL salah untuk lihat pesan errornya)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T5.4",

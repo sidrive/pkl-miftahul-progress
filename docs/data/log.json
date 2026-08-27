@@ -1,7 +1,49 @@
 [
   {
+    "date": "2026-08-27",
+    "task": "M2.W3.T5.3",
+    "status": "done",
+    "capaian": "Berhasil render data users & posts ke DOM pakai createElement+textContent, ada loading state, dan coba URL salah untuk buktikan error state jalan. menampilkan loading state sebelum data muncul. saya juga sengaja pakai URL yang salah untuk putaran kedua dan dia menampilkan pesan error ke user, jadi halaman gak kosong waktu fetch gagal.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-27",
+    "task": "M2.W3.T5.2",
+    "status": "done",
+    "capaian": "Berhasil ulangi fetch untuk kedua endpoint (users & repo github) pakai async/await. Menurut saya versi [yang lama T5.1 .then() ] lebih gampang dibaca karena kodenya lebih pendek dan lebih enak juga untuk di pahamin, apa lagi seperti saya yang baru pakai JS, tapi emang lebih banyak pakai .then nya juga. nah untuk yang T5.2 ini kan dia sama seperti materi T4 kalo ga salah, jadi juga enak si, tapi kalo untuk bikin function saya pilih pakai yang Y5.2 / versi async/await lebih gampang dibaca karena alur kodenya dari atas ke bawah. ya plus minus lah.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-27",
+    "task": "M2.W3.T5.1",
+    "status": "done",
+    "capaian": "putaran 1 (/users/octocat) dan putaran 2 (/repos) berhasil fetch pakai .then, kenapa perlu 2 `.then()`. `.then()` jadi pertama untuk ngubah response mentah jadi JSON (`response.json()`), nah sedangkan `.then()` kedua untuk mengambil dan pakai data JSON yang sudah siap.",
+    "kesulitan": "jadi wifi / jaringan yang ada di kantor batam itu punya filtering wifi jadi,Endpoint jsonplaceholder diblokir jaringan kantor olsera, jadi saya ggunakan GitHub API sebagai pengganti agar tetap bisa mencoba `fetch()` ini."
+  },
+  {
+    "date": "2026-08-27",
+    "task": "M2.W3.T4.4",
+    "status": "done",
+    "capaian": "Ulangi Promise+async/await+try/catch dari nol pakai skenario baru: [`saya buat skenario download game yang berhasil / download game gagal karna sinyal jelek, skenario download file (downloadFile). menangani dua kasus (sinyal bagus/resolve dan sinyal jelek/reject).`].",
+    "kesulitan": "bagian yang lancar itu bagian membuat function dan bagian buat console.log(\"--- pengujian 1: Sinyal bagus Bos (Resolve) ---\"); sampai `setTimeout` dibawah nya pada path file [..\\M2.M3\\T4.4-M2-W3.js]. bagian yang macet waktu saya mau buat async function nya, sempat salah penggunaan kode nya dan salah penyebutan variabel nya."
+  },
+  {
+    "date": "2026-08-27",
+    "task": "M2.W3.T4.3",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-27",
+    "task": "M2.W3.T4.2",
+    "status": "done",
+    "capaian": "Jalankan contoh(true) -> output console: `\"LOG di TRY (Berhasil): eskrim sampai dengan selamat di tujuan\"`. Jalankan contoh(false) -> output console: `\"LOG di CATCH (Gagal): es krim tidak selamat bos\"`. Simpulan: jadi kalau Promise berhasil (`resolve`), kodenya setelah `await` di dalam `try` tetap jalan. tapi kalau Promise gagal (`reject`), kode setelah `await` di `try` langsung berhenti dan program pindah ke blok `catch`.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-26",
-    "task": "M2.W3.4.1",
+    "task": "M2.W3.T4.1",
     "status": "done",
     "capaian": "saya coba praktek untuk ngubah Promise `.then()` dan `.catch()` menjadi `async`/`await` pada 2 skenario, yaitu cek koneksi dan cek stok barang. udah coba kondisi berhasil (`resolve`) dan gagal (`reject`). menurut saya cara kerja Promise nya tetap sama, yang berubah cuma cara nulis kodenya jadi lebih rapi dan gampang dibaca.",
     "kesulitan": "---"
