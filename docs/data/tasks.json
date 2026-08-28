@@ -621,7 +621,7 @@
           {
             "id": "M2.W2.T7",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo ke mentor — jalankan mini-app `T6` langsung di browser, jelaskan tiap keputusan (kapan pakai `map` vs `filter` vs `reduce` vs `find`, kapan `textContent` vs `innerHTML`, kenapa perlu event delegation) berdasarkan komentar kode yang ditulis di `T6`, review PR bareng, ceritakan hasil teach-back mandiri `T2.5` dan sesi uji ulang mandiri `T5` (bagian mana yang sempat macet), jawab soal live yang menyasar kesalahpahaman umum (`reduce` dikira \"cuma for-loop ribet\") **DAN mentor akan minta modifikasi kecil dadakan langsung di kode `T6`** (misal tambah 1 fitur filter baru) di tempat, tanpa buka modul, untuk memastikan pemahamannya bukan hafalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
@@ -702,17 +702,17 @@
           {
             "id": "M2.W3.T5.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan (5 soal campuran Promise/`async`-`await`/`fetch`, minimal 1 soal skenario: \"kalau lupa taruh `await` di depan `fetch(...)`, apa isi variabelnya?\")",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T5.5",
             "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T5.1`–`T5.3` atau modul, dari nol: `fetch` ke **API/endpoint ke-3 yang belum pernah dipakai**, pakai `async`/`await`+`try`/`catch`, render ke DOM (`createElement`+`textContent`) dengan loading & error state — semuanya diulang dari ingatan, bukan disalin dari task sebelumnya. Catat jujur bagian mana yang sempat lupa",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T6",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5–1 hari kerja]** Bangun 1 mini-app yang **fetch data dari public API**, lalu **olah hasilnya pakai array methods Minggu 2** (`filter`/`map`/`find` — misal filter user berdasarkan kriteria, tampilkan nama+email terformat), render ke DOM (`createElement`+`textContent`, ada loading/error state), dan tangani interaksi user lewat event (misal tombol refresh data, filter dropdown). Ini sengaja menggabungkan skill baru minggu ini dengan skill Minggu 2 — bukan topik lepas-lepas. **Wajib komentar kode** untuk alasan tiap fungsi array dipilih (lanjutan requirement dari `T6` Minggu 2). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T7`).",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W3.T7",
