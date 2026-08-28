@@ -16,9 +16,11 @@
   skeleton HTML, tanpa logic JS).
 - [`data-contoh.js`](./data-contoh.js) — data barang yang didiktekan/ditempel saat sesi (biar dia
   tidak buang waktu mengetik data, fokus ke logic).
-- [`referensi-jawaban.js`](./referensi-jawaban.js) — **kunci jawaban mentor**, tingkat dasar +
-  lanjutan. Bukan untuk ditunjukkan, cuma pembanding kalau Gazi stuck dan Anda perlu tahu arah
-  yang benar dengan cepat.
+- [`referensi-jawaban.js`](./referensi-jawaban.js) + [`referensi-jawaban.html`](./referensi-jawaban.html) —
+  **kunci jawaban mentor**, tingkat dasar (berjalan penuh) + lanjutan (dikomentari sebagai
+  alternatif). Buka `referensi-jawaban.html` di browser untuk lihat langsung hasilnya jalan. Bukan
+  untuk ditunjukkan, cuma pembanding kalau Gazi stuck dan Anda perlu tahu arah yang benar dengan
+  cepat.
 
 ## Alur singkat sesi
 
