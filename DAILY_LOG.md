@@ -1435,3 +1435,77 @@ console.log(jurusan);
 - **Capaian:** review PR untuk T6 minggu 2 udah selesai, mentor memberikan soa live dan dapat di kerjakan walat agak lama. sudah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.
 - **Kesulitan:** pada saat mentor memberikan soal live dapat di kerjakan cuma masih ada salah beberapa dan salah ketikan.
 <!-- ENTRY END -->
+
+---
+
+## 2026-08-31 // minggu 4
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T1.1
+
+- **Status:** done
+- **Capaian:** saya udah npm init -y dan udah ada package.json.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T1.2
+
+- **Status:** done
+- **Capaian:** saya udah coba live-server, dan hasil nya muncul saat dijalankan
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T1.3
+
+- **Status:** done
+- **Capaian:** saya udah menginstall paket `live-server` sebagai dev-dependency (`--save-dev`) dan mengonfigurasi custom script `npm run start` pada file `package.json`. Berhasil menjalankan local web server di `http://127.0.0.1:8080` (localhost) untuk menyajikan aplikasi To-Do List, serta memahami perbedaannya dengan membuka file HTML secara langsung via protokol `file://`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T1.4
+
+- **Status:** done
+- **Capaian:** =
+
+1. menurut saya bedanya ada di kegunaannya, jadi `dependencies` itu berisi library yang emang dibutuhkan supaya aplikasi bisa berjalan saat dipakai oleh pengguna. sedangkan `devDependencies` berisi library yang cuma dipakai selama proses ngoding atau mengembangkan aplikasi, jadi gak dibutuhkan lagi kalau project sudah jadi.
+
+2. karna `live-server` cuma dipakai waktu proses membuat dan nyoba project di komputer sendiri. jadi fungsinya supaya tiap ada perubahan kode, browser bisa langsung refresh otomatis. kalau project udah di upload ke hosting atau server, `live-server` udah gak dipakai lagi, jadi lebih cocok masuk ke `devDependencies`.
+
+3. karna `localhost` itu menjalankan project lewat server, jadi cara kerjanya lebih mirip kaya website yang udah online. beberapa fitur browser, seperti `fetch` atau request ke file lain, bisa jalan normal. nah kalau dibuka lewat `file://`, ada beberapa fitur yang bisa dibatasi atau hasilnya beda.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.1
+
+- **Status:** done
+- **Capaian:** saya udah buat T2.1 render list, udah saya commit juga dan udah push juga ke github. link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/6]
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.2
+
+- **Status:** done
+- **Capaian:** Fitur tambah task berhasil, branch fitur/tambah-task, PR dibuat. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/7].
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.3
+
+- **Status:** done
+- **Capaian:** toggle selesai udah saya tambahin, cara pakai nya dengan di klik task mana yang sekira nya udah selesai. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/8]
+- **Kesulitan:** ---
+<!-- ENTRY END -->
