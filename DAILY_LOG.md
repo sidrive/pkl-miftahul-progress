@@ -1214,9 +1214,9 @@ console.log(jurusan);
 
 ### Task: M2.W2.T7
 
-- **Status:** half done
+- **Status:** done
 - **Capaian:** Demo ke mentor selesai, array methods (map/filter/reduce/find) dll beberapa dikuasai, beberapa live request dari mentor dapat di kerjakan dengan cukup baik, untuk T5 dan T6 belum selesai, PR juga belum selesai.
-- **Kesulitan:** evaluasi berjalan cukup baik, namun beberapa task belum selesai, jadi evaluasi dengan mentor memberikan live soal req.
+- **Kesulitan:** evaluasi berjalan cukup baik, jadi evaluasi dengan mentor memberikan live soal req.
 <!-- ENTRY END -->
 
 ---
@@ -1386,4 +1386,52 @@ console.log(jurusan);
 - **Status:** done
 - **Capaian:** Berhasil render data users & posts ke DOM pakai createElement+textContent, ada loading state, dan coba URL salah untuk buktikan error state jalan. menampilkan loading state sebelum data muncul. saya juga sengaja pakai URL yang salah untuk putaran kedua dan dia menampilkan pesan error ke user, jadi halaman gak kosong waktu fetch gagal.
 - **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T5.4
+
+- **Status:** done
+- **Capaian:** =
+
+1. menurut saya gak ada bedanya kalo dari tulisan doank, tapi kalo secara fungsi dia berbeda, dua duanya tetap ngambil data yang sama dari API. yang beda cuma cara nulis kodenya, kalau .then() kita pakai rantai .then(), kalau async/await ditulis lebih berurutan dari atas ke bawah. [`koreksi:` tidak ada bedanya dari segi hasil atau fungsi. Dua-duanya tetap mengambil data yang sama dari API. Yang berbeda hanya cara penulisan kodenya. .then() menggunakan rantai .then(), sedangkan async/await ditulis lebih berurutan dari atas ke bawah.]
+
+2. setelah saya coba lagi dan liat lagi kalau kita lupa pakai await, isi variabelnya bukan data dari API, tapi masih Promise yang belum selesai.
+
+3. karna fetch() cuma ngambil response mentah dari server, belum langsung jadi JSON. habis itu baru response.json() ngubah response itu jadi data JSON yang bisa di pakai JavaScript.
+
+4. biar user langsung tau kalau data yang mau diambil. kalau ditaruh setelah await fetch(), tulisan Loading baru muncul setelah data selesai diambil, jadi gak ada gunanya. [`koreksi:` Biar user langsung tahu kalau data sedang diambil. Kalau ditaruh setelah await fetch(), tulisan "Loading..." baru muncul setelah proses fetch selesai, jadi tidak ada gunanya karena datanya sudah selesai diambil.]
+
+5. kalau dia gagal kode yang di ambil itu kode setelah await fetch(...) di dalam try gak dijalankan lagi. program nya langsung masuk ke catch, lalu catch nerima informasi tentang error tersebut.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T5.5
+
+- **Status:** done
+- **Capaian:** saya udah ulangi fetch + async/await + render DOM + loading + error state dari nol pakai endpoint `/quotes`. sempat lupa beberapa penulisan kode dan ada salah ketik, misalnya harusnya pakai kode A malah kepakai kode B, tapi waktu dicek lagi akhirnya bisa jalan. semalam waktu dicoba pakai WiFi di rumah hasil sukses dan error state nya berjalan sesuai. tapi pas saya coba lagi di kantor, dua duanya masuk ke error state karna WiFi di kantor pakai filtering, jadi request ke API nya gak bisa diakses.
+- **Kesulitan:** masih suka ketuker penulisan beberapa kode waktu bikin dari nol, wifi yang punya filtering jadi ga bisa akses API / buat API sendiri, kec pakai yang bebas dari filtering misalnya github.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T6
+
+- **Status:** done
+- **Capaian:** saya membuat mini-app "Cari Pengguna GitHub" menggunakan API dari github `https://api.github.com/users`. data diambil pakai `fetch()` dengan `async/await` dan `try/catch`, habis diolah menggunakan `map` dan `filter`. data dirender ke DOM pakai `createElement` dan `textContent`, selain udah nerapkan loading state dan error state. saya juga buat alur Git mulai dari buat branch, commit bertahap, membuat Pull Request, sampai merge ke branch `main`. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/5].
+- **Kesulitan:** tadi waktu ngerjain sempat salah ngatur path/folder karna seharusnya dilakukan di branch `main`, tapi malah dikerjakan di branch `T6-M2-W3`. selain itu sempat ada beberapa file lain juga yang ikut ter commit di branch T6-M2-W3 sebelum akhirnya dirapikan. saat pengujian di kantor juga API GitHub gak bisa diakses karena WiFi kantor pakai filtering.
+
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W3.T7
+
+- **Status:** ---
+- **Capaian:** review PR untuk T6 minggu 2 udah selesai, mentor memberikan soa live dan dapat di kerjakan walat agak lama. sudah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.
+- **Kesulitan:** pada saat mentor memberikan soal live dapat di kerjakan cuma masih ada salah beberapa dan salah ketikan.
 <!-- ENTRY END -->
