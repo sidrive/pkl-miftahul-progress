@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List M2.W4</title>
+    <style>
+        .selesai {
+            text-decoration: line-through;
+            color: #888;
+            cursor: pointer;
+        }
+        li {
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 <body>
     <h1>Project To-Do List M2.W4</h1>
+    
     <form id="form-todo">
-        <input type="text" id="input-todo" placeholder="Ketik task baru..." required>
+        <input type="text" id="input-todo" placeholder="Ketik task baru..." required />
         <button type="submit">Tambah</button>
     </form>
 
