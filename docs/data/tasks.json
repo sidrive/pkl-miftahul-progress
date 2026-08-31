@@ -726,18 +726,78 @@
         "title": null,
         "tasks": [
           {
-            "id": "M2.W4.T1",
-            "text": "Intro Node.js & npm (menjalankan script, install package)",
+            "id": "M2.W4.T1.1",
+            "text": "Recap `node file.js` menjalankan script, `npm init` bikin `package.json`, pahami field-field utamanya (`name`, `version`, `scripts`, `dependencies`)",
             "done": false
           },
           {
-            "id": "M2.W4.T2",
-            "text": "Project mini: to-do list vanilla JS + localStorage",
+            "id": "M2.W4.T1.2",
+            "text": "Tambahkan custom script di `package.json` (`\"scripts\": { \"start\": \"...\" }`), jalankan lewat `npm run start` (atau nama script lain) — bandingkan dengan menjalankan command-nya langsung tanpa lewat npm",
             "done": false
           },
           {
-            "id": "M2.W4.T3",
-            "text": "Git workflow lengkap untuk project mini (branch per fitur + PR)",
+            "id": "M2.W4.T1.3",
+            "text": "Install 1 dev-dependency praktis: `live-server` (`npm install --save-dev live-server` atau global, bebas), pakai buat serve project to-do list minggu ini lewat `http://localhost` — bandingkan dengan buka file HTML langsung lewat `file://`",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T1.4",
+            "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: apa beda `dependencies` vs `devDependencies` di `package.json`, dan kenapa `live-server` masuk kategori dev-dependency (bukan dependency biasa) — kasih 1 alasan kenapa serve lewat `localhost` kadang lebih aman/lebih mirip kondisi nyata dibanding buka file langsung",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.1",
+            "text": "Render list awal dari array data (boleh 3-5 task contoh) ke DOM — pakai `createElement`+`textContent` (bukan `innerHTML`), sesuai kebiasaan minggu-minggu lalu",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.2",
+            "text": "Fitur tambah task baru: form input + event `submit`/`click`, push ke array, render ulang — branch fitur sendiri (misal `fitur/tambah-task`), commit rapi, PR",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.3",
+            "text": "Fitur tandai selesai/belum: klik pada task (event delegation di parent list, bukan listener per-item — sesuai pelajaran `T4.4` Minggu 2) untuk toggle status, tampilkan beda secara visual (misal class `selesai` dengan coret teks) — branch fitur sendiri, commit rapi, PR",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.4",
+            "text": "Fitur hapus task: tombol hapus per item (event delegation lagi), buang dari array (`filter`/`splice`), render ulang — branch fitur sendiri, commit rapi, PR",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.5",
+            "text": "Simpan array to-do ke `localStorage` setiap ada perubahan (`localStorage.setItem(\"todos\", JSON.stringify(array))`), dan muat lagi saat halaman dibuka (`JSON.parse(localStorage.getItem(\"todos\"))`) — branch fitur sendiri (`fitur/persist-localstorage`), commit rapi, PR",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.6",
+            "text": "**[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa harus `JSON.stringify` sebelum `setItem` dan `JSON.parse` setelah `getItem` — coba dulu tanpa keduanya (langsung `setItem(\"todos\", array)`) dan lihat sendiri apa yang tersimpan (hint: bakal jadi string `\"[object Object]\"` atau mirip itu, bukan data aslinya). Kasih 1 alasan kenapa ini jebakan yang gampang kelewat kalau baru pertama kali pakai `localStorage`",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.7",
+            "text": "Tangani 2 edge case: (a) `localStorage` masih kosong saat pertama kali dibuka (belum pernah ada data tersimpan — jangan sampai error), (b) data di `localStorage` rusak/bukan JSON valid (`JSON.parse` dibungkus `try`/`catch`, kalau gagal anggap kosong)",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T2.8",
+            "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.5`/`T2.6` atau modul, dari nol: simpan & muat 1 data BEDA ke `localStorage` (misal daftar catatan singkat, bukan to-do) — lengkap dengan `JSON.stringify`/`JSON.parse` dan penanganan data kosong/rusak. Catat jujur bagian mana yang sempat lupa",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T3.1",
+            "text": "**[Wajib Refleksi]** Buka `git log --graph` untuk seluruh branch fitur yang sudah di-merge minggu ini — jelaskan dengan kata sendiri kenapa branch-per-fitur (bukan 1 branch besar untuk semua fitur sekaligus) lebih aman, kaitkan langsung ke insiden `T6-M2-W3` minggu lalu (ada file tidak terkait yang sempat ikut ter-commit ke branch fitur sebelum dirapikan) — bagaimana branch-per-fitur yang lebih kecil bisa mengurangi risiko itu terulang",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T4",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5-1 hari kerja]** Tambahkan 1 fitur ORIGINAL ke to-do list yang belum diminta di atas (bebas pilih, misal: edit teks task yang sudah ada, filter tampilan \"semua/selesai/belum\", urutkan berdasarkan yang terbaru, atau lainnya) — lewat branch fitur sendiri + PR terpisah lagi (menegakkan kebiasaan `T3.1`), **wajib komentar kode** untuk bagian yang menyentuh `localStorage` menjelaskan alurnya. Lihat requirement lengkap di modul.",
+            "done": false
+          },
+          {
+            "id": "M2.W4.T5",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo to-do list lengkap di browser (tambah/toggle/hapus/refresh halaman untuk buktikan data tetap ada dari `localStorage`), **juga review PR `#5` (`T6-M2-W3`) yang belum sempat dibahas tuntas minggu lalu**, jelaskan tiap branch/PR fitur yang dibuat minggu ini, jawab soal live yang menyasar kesalahpahaman umum `localStorage` (lupa `JSON.stringify`/`parse`), **mentor minta modifikasi dadakan** di fitur `T4` (misal ubah kriteria filter atau tambah 1 validasi), coba matikan/rusak data `localStorage` lewat DevTools untuk tunjukkan edge case `T2.7` beneran jalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]

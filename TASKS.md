@@ -230,9 +230,30 @@
 
 ### Minggu 4
 
-- [ ] <!-- id: M2.W4.T1 --> Intro Node.js & npm (menjalankan script, install package)
-- [ ] <!-- id: M2.W4.T2 --> Project mini: to-do list vanilla JS + localStorage
-- [ ] <!-- id: M2.W4.T3 --> Git workflow lengkap untuk project mini (branch per fitur + PR)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M2/M2-W4-node-todolist-git.md`](../docs/modules/Modul-M2/M2-W4-node-todolist-git.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+> 🗓️ **5 hari kerja penuh** (Senin 31 Agustus – Jumat 4 September 2026), tidak ada libur.
+>
+> Minggu ini project-based: 1 aplikasi to-do list dari nol (vanilla JS + `localStorage`), dibangun bertahap **1 branch per fitur + PR terpisah** — bukan 1 branch besar di akhir. Node/npm jadi sesi tooling singkat di awal minggu; `localStorage` (konsep paling rawan salah paham minggu ini — data yang disimpan sebenarnya cuma string, bukan object/array langsung) dapat 1 ronde `[Ulangi Tanpa Contek]` tambahan.
+
+- Node.js & npm — sesi tooling singkat sebelum mulai project (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M2.W4.T1.1 --> Recap `node file.js` menjalankan script, `npm init` bikin `package.json`, pahami field-field utamanya (`name`, `version`, `scripts`, `dependencies`)
+  - [ ] <!-- id: M2.W4.T1.2 --> Tambahkan custom script di `package.json` (`"scripts": { "start": "..." }`), jalankan lewat `npm run start` (atau nama script lain) — bandingkan dengan menjalankan command-nya langsung tanpa lewat npm
+  - [ ] <!-- id: M2.W4.T1.3 --> Install 1 dev-dependency praktis: `live-server` (`npm install --save-dev live-server` atau global, bebas), pakai buat serve project to-do list minggu ini lewat `http://localhost` — bandingkan dengan buka file HTML langsung lewat `file://`
+  - [ ] <!-- id: M2.W4.T1.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: apa beda `dependencies` vs `devDependencies` di `package.json`, dan kenapa `live-server` masuk kategori dev-dependency (bukan dependency biasa) — kasih 1 alasan kenapa serve lewat `localhost` kadang lebih aman/lebih mirip kondisi nyata dibanding buka file langsung
+- To-do list — bangun fitur inti, **1 branch per fitur + PR terpisah** untuk tiap sub-task di bawah (bukan 1 branch besar di akhir minggu):
+  - [ ] <!-- id: M2.W4.T2.1 --> Render list awal dari array data (boleh 3-5 task contoh) ke DOM — pakai `createElement`+`textContent` (bukan `innerHTML`), sesuai kebiasaan minggu-minggu lalu
+  - [ ] <!-- id: M2.W4.T2.2 --> Fitur tambah task baru: form input + event `submit`/`click`, push ke array, render ulang — branch fitur sendiri (misal `fitur/tambah-task`), commit rapi, PR
+  - [ ] <!-- id: M2.W4.T2.3 --> Fitur tandai selesai/belum: klik pada task (event delegation di parent list, bukan listener per-item — sesuai pelajaran `T4.4` Minggu 2) untuk toggle status, tampilkan beda secara visual (misal class `selesai` dengan coret teks) — branch fitur sendiri, commit rapi, PR
+  - [ ] <!-- id: M2.W4.T2.4 --> Fitur hapus task: tombol hapus per item (event delegation lagi), buang dari array (`filter`/`splice`), render ulang — branch fitur sendiri, commit rapi, PR
+- `localStorage` — simpan & muat data (dipecah jadi 4 sub-task, **jebakan pemahaman minggu ini**: `localStorage` cuma bisa menyimpan STRING, bukan array/object langsung — lupa `JSON.stringify`/`JSON.parse` = bug klasik `"[object Object]"`):
+  - [ ] <!-- id: M2.W4.T2.5 --> Simpan array to-do ke `localStorage` setiap ada perubahan (`localStorage.setItem("todos", JSON.stringify(array))`), dan muat lagi saat halaman dibuka (`JSON.parse(localStorage.getItem("todos"))`) — branch fitur sendiri (`fitur/persist-localstorage`), commit rapi, PR
+  - [ ] <!-- id: M2.W4.T2.6 --> **[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa harus `JSON.stringify` sebelum `setItem` dan `JSON.parse` setelah `getItem` — coba dulu tanpa keduanya (langsung `setItem("todos", array)`) dan lihat sendiri apa yang tersimpan (hint: bakal jadi string `"[object Object]"` atau mirip itu, bukan data aslinya). Kasih 1 alasan kenapa ini jebakan yang gampang kelewat kalau baru pertama kali pakai `localStorage`
+  - [ ] <!-- id: M2.W4.T2.7 --> Tangani 2 edge case: (a) `localStorage` masih kosong saat pertama kali dibuka (belum pernah ada data tersimpan — jangan sampai error), (b) data di `localStorage` rusak/bukan JSON valid (`JSON.parse` dibungkus `try`/`catch`, kalau gagal anggap kosong)
+  - [ ] <!-- id: M2.W4.T2.8 --> **[Ulangi Tanpa Contek]** TANPA membuka kode `T2.5`/`T2.6` atau modul, dari nol: simpan & muat 1 data BEDA ke `localStorage` (misal daftar catatan singkat, bukan to-do) — lengkap dengan `JSON.stringify`/`JSON.parse` dan penanganan data kosong/rusak. Catat jujur bagian mana yang sempat lupa
+- [ ] <!-- id: M2.W4.T3.1 --> **[Wajib Refleksi]** Buka `git log --graph` untuk seluruh branch fitur yang sudah di-merge minggu ini — jelaskan dengan kata sendiri kenapa branch-per-fitur (bukan 1 branch besar untuk semua fitur sekaligus) lebih aman, kaitkan langsung ke insiden `T6-M2-W3` minggu lalu (ada file tidak terkait yang sempat ikut ter-commit ke branch fitur sebelum dirapikan) — bagaimana branch-per-fitur yang lebih kecil bisa mengurangi risiko itu terulang
+- [ ] <!-- id: M2.W4.T4 --> **[Proyek Pengembangan Skill Mandiri, target ±0,5-1 hari kerja]** Tambahkan 1 fitur ORIGINAL ke to-do list yang belum diminta di atas (bebas pilih, misal: edit teks task yang sudah ada, filter tampilan "semua/selesai/belum", urutkan berdasarkan yang terbaru, atau lainnya) — lewat branch fitur sendiri + PR terpisah lagi (menegakkan kebiasaan `T3.1`), **wajib komentar kode** untuk bagian yang menyentuh `localStorage` menjelaskan alurnya. Lihat requirement lengkap di modul.
+- [ ] <!-- id: M2.W4.T5 --> **Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo to-do list lengkap di browser (tambah/toggle/hapus/refresh halaman untuk buktikan data tetap ada dari `localStorage`), **juga review PR `#5` (`T6-M2-W3`) yang belum sempat dibahas tuntas minggu lalu**, jelaskan tiap branch/PR fitur yang dibuat minggu ini, jawab soal live yang menyasar kesalahpahaman umum `localStorage` (lupa `JSON.stringify`/`parse`), **mentor minta modifikasi dadakan** di fitur `T4` (misal ubah kriteria filter atau tambah 1 validasi), coba matikan/rusak data `localStorage` lewat DevTools untuk tunjukkan edge case `T2.7` beneran jalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul
 
 ---
 
