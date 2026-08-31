@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-08-31",
+    "task": "M2.W4.T2.3",
+    "status": "done",
+    "capaian": "toggle selesai udah saya tambahin, cara pakai nya dengan di klik task mana yang sekira nya udah selesai. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/8]",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T2.2",
+    "status": "done",
+    "capaian": "Fitur tambah task berhasil, branch fitur/tambah-task, PR dibuat. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/7].",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T2.1",
+    "status": "done",
+    "capaian": "saya udah buat T2.1 render list, udah saya commit juga dan udah push juga ke github. link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/6]",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T1.4",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T1.3",
+    "status": "done",
+    "capaian": "saya udah menginstall paket `live-server` sebagai dev-dependency (`--save-dev`) dan mengonfigurasi custom script `npm run start` pada file `package.json`. Berhasil menjalankan local web server di `http://127.0.0.1:8080` (localhost) untuk menyajikan aplikasi To-Do List, serta memahami perbedaannya dengan membuka file HTML secara langsung via protokol `file://`.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T1.2",
+    "status": "done",
+    "capaian": "saya udah coba live-server, dan hasil nya muncul saat dijalankan",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-08-31",
+    "task": "M2.W4.T1.1",
+    "status": "done",
+    "capaian": "saya udah npm init -y dan udah ada package.json.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-27",
     "task": "M2.W3.T7",
     "status": "---",

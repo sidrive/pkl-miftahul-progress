@@ -728,37 +728,37 @@
           {
             "id": "M2.W4.T1.1",
             "text": "Recap `node file.js` menjalankan script, `npm init` bikin `package.json`, pahami field-field utamanya (`name`, `version`, `scripts`, `dependencies`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T1.2",
             "text": "Tambahkan custom script di `package.json` (`\"scripts\": { \"start\": \"...\" }`), jalankan lewat `npm run start` (atau nama script lain) — bandingkan dengan menjalankan command-nya langsung tanpa lewat npm",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T1.3",
             "text": "Install 1 dev-dependency praktis: `live-server` (`npm install --save-dev live-server` atau global, bebas), pakai buat serve project to-do list minggu ini lewat `http://localhost` — bandingkan dengan buka file HTML langsung lewat `file://`",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T1.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: apa beda `dependencies` vs `devDependencies` di `package.json`, dan kenapa `live-server` masuk kategori dev-dependency (bukan dependency biasa) — kasih 1 alasan kenapa serve lewat `localhost` kadang lebih aman/lebih mirip kondisi nyata dibanding buka file langsung",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.1",
             "text": "Render list awal dari array data (boleh 3-5 task contoh) ke DOM — pakai `createElement`+`textContent` (bukan `innerHTML`), sesuai kebiasaan minggu-minggu lalu",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.2",
             "text": "Fitur tambah task baru: form input + event `submit`/`click`, push ke array, render ulang — branch fitur sendiri (misal `fitur/tambah-task`), commit rapi, PR",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.3",
             "text": "Fitur tandai selesai/belum: klik pada task (event delegation di parent list, bukan listener per-item — sesuai pelajaran `T4.4` Minggu 2) untuk toggle status, tampilkan beda secara visual (misal class `selesai` dengan coret teks) — branch fitur sendiri, commit rapi, PR",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.4",
