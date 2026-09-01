@@ -1,4 +1,4 @@
-const daftarTodo = [
+let daftarTodo = [
   { id: 1, teks: "Belajar Node.js & npm", selesai: false },
   { id: 2, teks: "Bikin tampilan awal To-Do List", selesai: false },
   { id: 3, teks: "Pahami konsep DOM & Event", selesai: false },
@@ -13,24 +13,41 @@ function render(data) {
   listEl.textContent = "";
   data.forEach((todo) => {
     const li = document.createElement("li");
-    li.textContent = todo.teks;
-    
     li.dataset.id = todo.id;
 
+    const spanTeks = document.createElement("span");
+    spanTeks.textContent = todo.teks;
     if (todo.selesai) {
-      li.classList.add("selesai");
+      spanTeks.classList.add("selesai");
     }
 
+    // tombol hapus per item
+    const btnHapus = document.createElement("button");
+    btnHapus.textContent = "Hapus";
+    btnHapus.classList.add("btn-hapus");
+
+    li.appendChild(spanTeks);
+    li.appendChild(btnHapus);
     listEl.appendChild(li);
   });
 }
 
+// Event Delegation
 listEl.addEventListener("click", (event) => {
-  if (event.target.tagName === "LI") {
-    const id = Number(event.target.dataset.id);
-    
+  const target = event.target;
+  const li = target.closest("li");
+  if (!li) return;
+
+  const id = Number(li.dataset.id);
+
+  if (target.classList.contains("btn-hapus")) {
+    daftarTodo = daftarTodo.filter((todo) => todo.id !== id);
+    render(daftarTodo);
+    return;
+  }
+
+  if (target.tagName === "SPAN") {
     const todo = daftarTodo.find((t) => t.id === id);
-    
     if (todo) {
       todo.selesai = !todo.selesai;
       render(daftarTodo);
@@ -38,7 +55,7 @@ listEl.addEventListener("click", (event) => {
   }
 });
 
-// Event listener untuk form tambah task
+// Event listener form tambah task
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
