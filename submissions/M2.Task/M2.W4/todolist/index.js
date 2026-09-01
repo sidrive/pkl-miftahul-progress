@@ -1,12 +1,19 @@
-// fungsi nyimpan data ke localStorage (dikonversi ke String JSON)
+// nyimpan data ke localStorage
 function simpan(data) {
   localStorage.setItem("todos", JSON.stringify(data));
 }
 
-// fungsin memuat data dari localStorage (diubah balik ke Object/Array)
 function muat() {
   const mentah = localStorage.getItem("todos");
-  return mentah ? JSON.parse(mentah) : [];
+
+  if (!mentah) return [];
+
+  try {
+    return JSON.parse(mentah);
+  } catch (error) {
+    console.warn("Data di localStorage rusak/invalid JSON. Mengembalikan array kosong.", error);
+    return [];
+  }
 }
 
 const dataAwal = muat();

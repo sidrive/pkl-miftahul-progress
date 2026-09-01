@@ -1509,3 +1509,50 @@ console.log(jurusan);
 - **Capaian:** toggle selesai udah saya tambahin, cara pakai nya dengan di klik task mana yang sekira nya udah selesai. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/8]
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-01
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.4
+
+- **Status:** done
+- **Capaian:** saya udah nambahan tombol hapus tiap tiap task, jadi task udah bisa di hapus, udah saya PR juga ke GitHub. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/9]
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.5
+
+- **Status:** done
+- **Capaian:** saya udah tambahin fitur persistensi data berhasil diimplementasikan pakai localStorage (JSON.stringify dan JSON.parse), branch fitur/persist-localstorage, PR udah di merge. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/10]
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.6
+
+- **Status:** done
+- **Capaian:** =
+
+1. kalo gak pakai JSON.stringify, nilai yang tersimpan jadi "[object Object],[object Object]" karna JS otomatis manggil .toString() pada array/object.
+
+2. karna localStorage emang dirancang cuma buat nyimpan data dalam bentuk string, jadi kalau mau nyimpan array atau object harus diubah dulu pakai JSON.stringify().
+
+3. karna waktu kita nyimpan array atau object ke localStorage, kelihatannya seperti berhasil dan gak ada muncul error. padahal data yang tersimpan bukan isi aslinya, tapi cuma "[object Object]", jadi baru ketahuan ada masalah saat data itu dibaca lagi.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.7
+
+- **Status:** done
+- **Capaian:** Berhasil tangani localStorage kosong & data rusak (try/catch), sudah dicoba manual lewat DevTools. saya coba dan menangani dua edge case localStorage: saat data null (kembali ke default/array kosong) dan saat data corrupt/invalid JSON menggunakan blok try...catch. Sudah diuji manual lewat DevTools.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
