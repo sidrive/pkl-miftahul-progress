@@ -763,22 +763,22 @@
           {
             "id": "M2.W4.T2.4",
             "text": "Fitur hapus task: tombol hapus per item (event delegation lagi), buang dari array (`filter`/`splice`), render ulang — branch fitur sendiri, commit rapi, PR",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.5",
             "text": "Simpan array to-do ke `localStorage` setiap ada perubahan (`localStorage.setItem(\"todos\", JSON.stringify(array))`), dan muat lagi saat halaman dibuka (`JSON.parse(localStorage.getItem(\"todos\"))`) — branch fitur sendiri (`fitur/persist-localstorage`), commit rapi, PR",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.6",
             "text": "**[Wajib Refleksi — PENTING]** Jelaskan dengan kata sendiri: kenapa harus `JSON.stringify` sebelum `setItem` dan `JSON.parse` setelah `getItem` — coba dulu tanpa keduanya (langsung `setItem(\"todos\", array)`) dan lihat sendiri apa yang tersimpan (hint: bakal jadi string `\"[object Object]\"` atau mirip itu, bukan data aslinya). Kasih 1 alasan kenapa ini jebakan yang gampang kelewat kalau baru pertama kali pakai `localStorage`",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.7",
             "text": "Tangani 2 edge case: (a) `localStorage` masih kosong saat pertama kali dibuka (belum pernah ada data tersimpan — jangan sampai error), (b) data di `localStorage` rusak/bukan JSON valid (`JSON.parse` dibungkus `try`/`catch`, kalau gagal anggap kosong)",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T2.8",

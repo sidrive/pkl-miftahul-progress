@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-09-01",
+    "task": "M2.W4.T2.7",
+    "status": "done",
+    "capaian": "Berhasil tangani localStorage kosong & data rusak (try/catch), sudah dicoba manual lewat DevTools. saya coba dan menangani dua edge case localStorage: saat data null (kembali ke default/array kosong) dan saat data corrupt/invalid JSON menggunakan blok try...catch. Sudah diuji manual lewat DevTools.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-01",
+    "task": "M2.W4.T2.6",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-01",
+    "task": "M2.W4.T2.5",
+    "status": "done",
+    "capaian": "saya udah tambahin fitur persistensi data berhasil diimplementasikan pakai localStorage (JSON.stringify dan JSON.parse), branch fitur/persist-localstorage, PR udah di merge. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/10]",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-01",
+    "task": "M2.W4.T2.4",
+    "status": "done",
+    "capaian": "saya udah nambahan tombol hapus tiap tiap task, jadi task udah bisa di hapus, udah saya PR juga ke GitHub. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/9]",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-08-31",
     "task": "M2.W4.T2.3",
     "status": "done",
