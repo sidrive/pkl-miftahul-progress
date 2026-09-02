@@ -1,0 +1,42 @@
+// tugas T2.8 M4
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List M2.W4</title>
+    <style>
+        body {
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 8px;
+        }
+        .btn-hapus {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project To-Do List M2.W4</h1>
+    
+    <form id="form-catatan">
+        <input type="text" id="input-catatan" placeholder="Ketik catatan baru..." required />
+        <button type="submit">Tambah</button>
+    </form>
+
+    <ul id="daftar-catatan"></ul>
+
+    <script src="index.js"></script>
+</body>
+</html>

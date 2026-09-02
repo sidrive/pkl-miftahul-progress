@@ -1556,3 +1556,34 @@ console.log(jurusan);
 - **Capaian:** Berhasil tangani localStorage kosong & data rusak (try/catch), sudah dicoba manual lewat DevTools. saya coba dan menangani dua edge case localStorage: saat data null (kembali ke default/array kosong) dan saat data corrupt/invalid JSON menggunakan blok try...catch. Sudah diuji manual lewat DevTools.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-02
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T2.8
+
+- **Status:** done
+- **Capaian:** saya bikin ulang project dari nol dengan topik catatan, bukan todo list. catatan ini udah bisa simpan data dan tetap ada walaupun halaman kita refresh, dan tambah pengecekan biar kalau datanya kosong atau rusak, dia tetap bisa jalan. saya tambahin sedikit style biar tampilan nya enak kalo di liat.
+- **Kesulitan:** sempat ada beberapa salah ketik waktu ngoding. awalnya juga kepikiran mau bikin fitur catatan selesai kaya to-do, tapi kayanya gak butuh karna cuma catatan. yang agak bikin macet pas bikin bagian buat nampilin data ke halaman sama bagian waktu tombol hapus ditekan.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T3.1
+
+- **Status:** done
+- **Capaian:** karna kalau kita bikin 1 branch untuk 1 fitur itu menurut saya bisa bikin kita mengurangi kesalahan kode dan commit di stage, kerja jadi lebih fokus dan rapi, jadi kita bisa kerjain satu fitur di branch itu, jadi lebih gampang untuk ngecek file apa aja yang emang berhubungan sama fitur, dengan adanya branch yang berbeda beda, kemungkinan ada file atau kode yang gak berhubungan ikut ke commit jadi lebih kecil. selain itu, riwayat commit atau log juga jadi lebih rapi dan gampang dipahami.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T4
+
+- **Status:** done
+- **Capaian:** udah saya tambahkan fitur pencarian task (search bar) secara pada To-Do List. udah tambahin juga komentar penjelas alur pada kode index.js. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/11]
+- **Kesulitan:** seperti biasanya, ya kadang ada salah ketik, salah manggil variabel, waktu mau buat komentar juga salah memberikan komentar cuma udah dibenerin juga. agak macet dikit lah waktu mau nambahin fungsi cari task nya.
+<!-- ENTRY END -->
