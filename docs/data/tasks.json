@@ -783,17 +783,17 @@
           {
             "id": "M2.W4.T2.8",
             "text": "**[Ulangi Tanpa Contek]** TANPA membuka kode `T2.5`/`T2.6` atau modul, dari nol: simpan & muat 1 data BEDA ke `localStorage` (misal daftar catatan singkat, bukan to-do) — lengkap dengan `JSON.stringify`/`JSON.parse` dan penanganan data kosong/rusak. Catat jujur bagian mana yang sempat lupa",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T3.1",
             "text": "**[Wajib Refleksi]** Buka `git log --graph` untuk seluruh branch fitur yang sudah di-merge minggu ini — jelaskan dengan kata sendiri kenapa branch-per-fitur (bukan 1 branch besar untuk semua fitur sekaligus) lebih aman, kaitkan langsung ke insiden `T6-M2-W3` minggu lalu (ada file tidak terkait yang sempat ikut ter-commit ke branch fitur sebelum dirapikan) — bagaimana branch-per-fitur yang lebih kecil bisa mengurangi risiko itu terulang",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T4",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±0,5-1 hari kerja]** Tambahkan 1 fitur ORIGINAL ke to-do list yang belum diminta di atas (bebas pilih, misal: edit teks task yang sudah ada, filter tampilan \"semua/selesai/belum\", urutkan berdasarkan yang terbaru, atau lainnya) — lewat branch fitur sendiri + PR terpisah lagi (menegakkan kebiasaan `T3.1`), **wajib komentar kode** untuk bagian yang menyentuh `localStorage` menjelaskan alurnya. Lihat requirement lengkap di modul.",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W4.T5",
