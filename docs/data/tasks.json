@@ -717,7 +717,7 @@
           {
             "id": "M2.W3.T7",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo `T6` langsung di browser (termasuk coba matikan koneksi/salah URL untuk tunjukkan error state beneran jalan), review PR `T1.1`+`T6` bareng (menutup utang PR Minggu 2 sekaligus PR minggu ini), jawab soal live yang menyasar kesalahpahaman umum `async`/`await` dianggap sinkron, **mentor minta modifikasi dadakan** di kode `T6` (misal ubah `filter` jadi kriteria lain, atau tambah `.catch`/`try-catch` di bagian yang belum ada), ceritakan hasil fluency drill `T2` (berapa lama, bagian mana masih ragu) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
@@ -798,7 +798,7 @@
           {
             "id": "M2.W4.T5",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo to-do list lengkap di browser (tambah/toggle/hapus/refresh halaman untuk buktikan data tetap ada dari `localStorage`), **juga review PR `#5` (`T6-M2-W3`) yang belum sempat dibahas tuntas minggu lalu**, jelaskan tiap branch/PR fitur yang dibuat minggu ini, jawab soal live yang menyasar kesalahpahaman umum `localStorage` (lupa `JSON.stringify`/`parse`), **mentor minta modifikasi dadakan** di fitur `T4` (misal ubah kriteria filter atau tambah 1 validasi), coba matikan/rusak data `localStorage` lewat DevTools untuk tunjukkan edge case `T2.7` beneran jalan + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       }

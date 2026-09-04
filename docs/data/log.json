@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-04",
+    "task": "M2.W4.T5",
+    "status": "done",
+    "capaian": "Demo to-do list selesai (localStorage terverifikasi), PR #5 minggu lalu & PR minggu ini dibahas, soal localStorage terjawab, modifikasi dadakan berhasil dikerjakan.",
+    "kesulitan": "pada waktu mengerjakan tugas dadakan dari mentor udah selesai cuma masih eror, setelah di cari ketemu sebab nya karena pada bagian `function renderBelanja(data) {` saya kurang menambahkan `data` didalam kurung nya sehingga daftar barang tidak nampil."
+  },
+  {
     "date": "2026-09-02",
     "task": "M2.W4.T4",
     "status": "done",
@@ -100,8 +107,8 @@
   {
     "date": "2026-08-27",
     "task": "M2.W3.T7",
-    "status": "---",
-    "capaian": "review PR untuk T6 minggu 2 udah selesai, mentor memberikan soa live dan dapat di kerjakan walat agak lama. sudah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.",
+    "status": "done",
+    "capaian": "review PR untuk T6 minggu 2 udah selesai, mentor memberikan soal live dan dapat di kerjakan walau agak lama. udah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.",
     "kesulitan": "pada saat mentor memberikan soal live dapat di kerjakan cuma masih ada salah beberapa dan salah ketikan."
   },
   {
