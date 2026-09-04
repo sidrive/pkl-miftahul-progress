@@ -1,0 +1,42 @@
+// ini adalah tugas T2 (tidak termasuk T2.8 karena beda file)
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List M2.W4</title>
+    <style>
+        .selesai {
+            text-decoration: line-through;
+            color: #888;
+            cursor: pointer;
+        }
+        li {
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 4px;
+        }
+        #input-cari {
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>Tugas T2 kecuali T2.8</p>
+    <h1>Project To-Do List M2.W4</h1>
+    <br>
+    
+    <input type="text" id="input-cari" placeholder="Cari task..." />
+
+    <form id="form-todo">
+        <input type="text" id="input-todo" placeholder="Ketik task baru..." required />
+        <button type="submit">Tambah</button>
+    </form>
+
+    <ul id="daftar-todo"></ul>
+
+    <script src="index.js"></script>
+</body>
+</html>

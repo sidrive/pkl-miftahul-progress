@@ -1,39 +1,29 @@
+// ini adalah tugas evaluasi minggu 4 dari mentor -  daftar belanjaan
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List M2.W4</title>
-    <style>
-        .selesai {
-            text-decoration: line-through;
-            color: #888;
-            cursor: pointer;
-        }
-        li {
-            cursor: pointer;
-            user-select: none;
-            margin-bottom: 4px;
-        }
-        #input-cari {
-            margin-bottom: 10px;
-            display: block;
-        }
-    </style>
+    <title>Pervobaan T5 minggu 4</title>
 </head>
 <body>
-    <p>Tugas T2 kecuali T2.8</p>
-    <h1>Project To-Do List M2.W4</h1>
-    <br>
-    
-    <input type="text" id="input-cari" placeholder="Cari task..." />
+    <h1>Input barang kasir</h1>
 
-    <form id="form-todo">
-        <input type="text" id="input-todo" placeholder="Ketik task baru..." required />
+    <input type="text" id="input-cari-barang" placeholder="Cari barang" required>
+    <br><br>
+
+    <form id="form-belanja">
+        <input type="text" id="input-nama-barang" placeholder="Nama barang" required>
+        <input type="number" id="input-harga-barang" placeholder="Harga (Rp)...." required min="1" />
         <button type="submit">Tambah</button>
     </form>
 
-    <ul id="daftar-todo"></ul>
+    <ul id="daftar-belanja"></ul>
+
+    <div>
+        <h3>total: Rp<span id="total-harga">0</span></h3>
+    </div>
 
     <script src="index.js"></script>
 </body>

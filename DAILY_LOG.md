@@ -1431,8 +1431,8 @@ console.log(jurusan);
 
 ### Task: M2.W3.T7
 
-- **Status:** ---
-- **Capaian:** review PR untuk T6 minggu 2 udah selesai, mentor memberikan soa live dan dapat di kerjakan walat agak lama. sudah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.
+- **Status:** done
+- **Capaian:** review PR untuk T6 minggu 2 udah selesai, mentor memberikan soal live dan dapat di kerjakan walau agak lama. udah menunjukkan daily log yang kosong untuk minggu 2. review T6 untuk minggu ini belum karena saya belum siap mengerjakan nya, pada saat tadi evaluasi mentor memberikan soal live dan saya bisa menjawab / mengerjakan nya walau sedikit lama mencari bug nya.
 - **Kesulitan:** pada saat mentor memberikan soal live dapat di kerjakan cuma masih ada salah beberapa dan salah ketikan.
 <!-- ENTRY END -->
 
@@ -1586,4 +1586,16 @@ console.log(jurusan);
 - **Status:** done
 - **Capaian:** udah saya tambahkan fitur pencarian task (search bar) secara pada To-Do List. udah tambahin juga komentar penjelas alur pada kode index.js. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/11]
 - **Kesulitan:** seperti biasanya, ya kadang ada salah ketik, salah manggil variabel, waktu mau buat komentar juga salah memberikan komentar cuma udah dibenerin juga. agak macet dikit lah waktu mau nambahin fungsi cari task nya.
+<!-- ENTRY END -->
+
+---
+
+## 2026-09-04
+
+<!-- ENTRY START -->
+
+### Task: M2.W4.T5
+- **Status:** done
+- **Capaian:** Demo to-do list selesai (localStorage terverifikasi), PR #5 minggu lalu & PR minggu ini dibahas, soal localStorage terjawab, modifikasi dadakan berhasil dikerjakan.
+- **Kesulitan:** pada waktu mengerjakan tugas dadakan dari mentor udah selesai cuma masih eror, setelah di cari ketemu sebab nya karena pada bagian `function renderBelanja(data) {` saya kurang menambahkan `data` didalam kurung nya sehingga daftar barang tidak nampil.
 <!-- ENTRY END -->
