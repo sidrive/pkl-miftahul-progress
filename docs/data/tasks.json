@@ -809,22 +809,22 @@
           {
             "id": "M2.W5.T1.1",
             "text": "Baca & artikan minimal 5 jenis error message browser yang paling sering muncul (`TypeError: Cannot read properties of undefined`, `ReferenceError: x is not defined`, `TypeError: x is not a function`, `SyntaxError`, `Uncaught (in promise)`) — untuk tiap jenis, jelaskan apa yang errornya bilang dan kemungkinan penyebab paling umum. Lihat daftar & contoh di modul",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T1.2",
             "text": "Praktik `debugger;`/breakpoint di DevTools (Sources tab) DAN strategi **bisection** (taruh `console.log` di TENGAH kode dulu untuk mempersempit lokasi bug, bukan baca ulang semua baris dari awal) — praktikkan keduanya di 1 fungsi dari project to-do list Minggu 4",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T1.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa breakpoint/bisection lebih cepat menemukan bug dibanding baca ulang semua kode dari awal — kaitkan ke pengalaman nyata minggu-minggu sebelumnya waktu kamu butuh waktu lama cari bug",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T2.1",
             "text": "**[Wajib Refleksi]** Kuis review bagian 1 (ES6+ & array methods — `let`/`const`, arrow function, template literal, destructuring, `map`/`filter`/`reduce`/`find`, 5 soal) — sebelum jawab, ada 1 potongan kode kecil (5-8 baris, pakai `reduce`/`filter`) yang ada 1 bug tersembunyi, temukan & perbaiki dulu (lihat di modul), baru jawab soal kuisnya. Catat juga berapa lama nemuin bug potongan kode itu",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T2.2",
