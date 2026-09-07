@@ -1595,7 +1595,56 @@ console.log(jurusan);
 <!-- ENTRY START -->
 
 ### Task: M2.W4.T5
+
 - **Status:** done
 - **Capaian:** Demo to-do list selesai (localStorage terverifikasi), PR #5 minggu lalu & PR minggu ini dibahas, soal localStorage terjawab, modifikasi dadakan berhasil dikerjakan.
 - **Kesulitan:** pada waktu mengerjakan tugas dadakan dari mentor udah selesai cuma masih eror, setelah di cari ketemu sebab nya karena pada bagian `function renderBelanja(data) {` saya kurang menambahkan `data` didalam kurung nya sehingga daftar barang tidak nampil.
+<!-- ENTRY END -->
+
+---
+
+## 2026-09-07 - Minggu 5
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.1
+
+- **Status:** done
+- **Capaian:** saya udah coba bebrapa contoh error yang ada di modul `Cannot read properties of undefined`, `ReferenceError`, `TypeError`, `SyntaxError`, dan `UnhandledPromiseRejection`. saya sengaja bikin error satu satu, terus saya jalanin di terminal buat lihat pesan errornya dan baris mana yang ditunjuk. jadi sekarang saya lebih paham arti dari masing masing error dan penyebabnya apa
+- **Kesulitan:** awalnya masih agak bingung bedanya `undefined` sama `not defined`, tapi setelah dicoba langsung, jadi lebih ngerti kalau `undefined` itu variabelnya ada tapi belum ada nilainya, sedangkan `not defined` itu variabelnya memang belum pernah dibuat.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.2
+
+- **Status:** done
+- **Capaian:** saya udah coba dua teknik debugging pada fungsi `submit` dan `click` (hapus) project To-Do List di folder `T1.2`:
+  1. **Breakpoint (`debugger;`)**: saya coba pasang `debugger;` di dalam kode, terus buka DevTools bagian **Sources**, pas program jalan dan kena baris yang ada `debugger;`, program langsung pause. sari situ saya bisa lihat isi variabel yang lagi dipakai lewat panel **Scope**, jadi lebih gampang buat cek apakah nilainya udah benar atau belum.
+  2. **Bisection (`console.log`)**: saya pasang satu `console.log()` di tengah fungsi hapus buat lihat nilai `id` yang mau dihapus sama jumlah task sebelum dihapus. nah saya tau kalau teknik bisection dipakai buat mempersempit area pencarian bug, jadi gak perlu baca semua kode dari atas sampai bawah.
+- **Kesulitan:** awalnya saya bingung kenapa `debugger;` di tombol hapus gak jalan. ternyata karena tombol hapus pakai **event delegation**, jadi `debugger;` harus ditaruh di dalam `if (target.classList.contains("btn-hapus"))`. setelah dipindah ke situ baru program mau pause pas tombol hapus diklik.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.3
+
+- **Status:** done
+- **Capaian:** menurut saya breakpoint sama bisection bisa lebih cepat buat nyari bug dari pada baca ulang semua kode dari awal. soalnya breakpoint bisa langsung berhenti di baris yang kita mau, jadi kita bisa lihat isi variabelnya. nah kalau bisection tinggal taruh satu `console.log()` di tengah fungsi buat ngecek hasilnya, jadi gak perlu nebak nebak bug ada di mana.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T2.1
+
+- **Status:** ---
+- **Capaian:** Bug ditemukan dalam [`37 menit`]: [gejalanya program tetap jalan tapi hasil totalnya salah, salahnya harusnya output nya itu 50000 tapi yang keluar itu 65000 -> cara saya melacak nya dengan mengotak atik kodenya, mencoba merubah kode, cari variabel dll nya tapi masih jalan, dan saya lihat kode kode yang lain dan salahnya ada di tanda `=` yang cuma 1 -> saya perbaiki dengan menambahkan `===` dan output dari kodenya sudah benar menjadi 50000]. Jawaban 5 soal:
+
+1. let dengan const itu sama-sama buat nyimpan data di variabel. bedanya kalau let nilainya masih bisa diubah lagi setelah dibuat, sedangkan const nilainya gak bisa diganti lagi. jadi kalau datanya memang dari awal sampai akhir gak berubah, saya lebih pilih pakai const, tapi kalau memang nanti nilainya bakal berubah saya pakai let.
+2. menurut saya bedanya paling penting itu ada di this. kalau function biasa, nilai this tergantung siapa yang manggil fungsi itu. nah kalau arrow function, dia gak punya this sendiri, jadi dia ngikut this dari tempat dia dibuat. jadi gak semua kondisi bisa pakai arrow function
+3. kita pakai map kalau mau mengubah semua isi array jadi bentuk baru. kalau filter kita pakai waktu mau nyaring data sesuai kondisi tertentu. nah kalau find saya pakai waktu cuma butuh mencari satu data pertama yang cocok
+4. karna reduce bukan cuma for loop yang ditulis lebih ribet, karna tujuan utamanya buat gabungin banyak data jadi satu hasil. misalnya menjumlahkan semua angka, menghitung total harga, atau bikin object baru. semua itu emang bisa pakai for, tapi reduce udah memang dibuat khusus buat seperti itu jadi lebih jelas tujuannya
+5. contohnya kalau saya punya object user yang isinya nama, umur, sama email. dari pada nulis user.nama, user.umur, user.email berkali kali, lebih enak pakai destructuring. jadi cukup ambil data yang dibutuhin sekali aja, habis itu tinggal pakai nama variabelnya langsung. menurut saya jadi lebih rapi dan lebih gampang dibaca.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
