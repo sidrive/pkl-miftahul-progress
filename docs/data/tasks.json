@@ -829,7 +829,7 @@
           {
             "id": "M2.W5.T2.2",
             "text": "**[Wajib Refleksi]** Kuis review bagian 2 (DOM/event/Promise-`async`-`await`/`fetch`/`localStorage`, 5 soal) — sebelum jawab, ada 1 potongan kode kecil lain (event delegation atau `localStorage`) yang ada 1 bug tersembunyi, temukan & perbaiki dulu, baru jawab soal kuisnya. Catat waktu juga, bandingkan dengan `T2.1`",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T3",
