@@ -834,7 +834,7 @@
           {
             "id": "M2.W5.T3",
             "text": "Lanjutan project & persiapan ringan Bulan 3 — pilih salah satu: (a) tambahkan 1 fitur lagi ke to-do list Minggu 4 (bebas, lewat branch+PR seperti biasa), ATAU (b) mulai orientasi ringan Vue 3: install Vite+Vue (`npm create vite@latest`), jalankan project default-nya, amati struktur foldernya — belum perlu paham konsepnya dulu, ini cuma pemanasan lingkungan kerja sebelum Bulan 3 resmi mulai. Ceritakan di log yang mana yang dipilih dan kenapa",
-            "done": false
+            "done": true
           },
           {
             "id": "M2.W5.T4",

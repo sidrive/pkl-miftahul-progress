@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-09",
+    "task": "M2.W5.T3",
+    "status": "done",
+    "capaian": "Pilih opsi [a]: [saya menambahkan fitur baru ke project To-Do List. saya nambah fitur Edit Task, jadi task yang udah dibuat sekarang bisa diubah tanpa harus dihapus dulu. pengerjaannya saya buat di branch baru (fitur/edit-task), commit sesuai progres, terus buat Pull Request, dan udah di merge ke branch `main`.] [https://github.com/sidrive/pkl-miftahul-progress/pull/12]. untuk opsi [b] iseng saya cobain di folder lain, dan sedikit memahami isi setelah instal vue nya, ga terlalu banyak paham tapi udah ada gambaran untuk vue nya, dan iseng juga coba coba buat tampilan web sederhana aja.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-09-08",
     "task": "M2.W5.T2.2",
     "status": "done",
