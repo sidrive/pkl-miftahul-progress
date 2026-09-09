@@ -1646,6 +1646,7 @@ console.log(jurusan);
 3. kita pakai map kalau mau mengubah semua isi array jadi bentuk baru. kalau filter kita pakai waktu mau nyaring data sesuai kondisi tertentu. nah kalau find saya pakai waktu cuma butuh mencari satu data pertama yang cocok
 4. karna reduce bukan cuma for loop yang ditulis lebih ribet, karna tujuan utamanya buat gabungin banyak data jadi satu hasil. misalnya menjumlahkan semua angka, menghitung total harga, atau bikin object baru. semua itu emang bisa pakai for, tapi reduce udah memang dibuat khusus buat seperti itu jadi lebih jelas tujuannya
 5. contohnya kalau saya punya object user yang isinya nama, umur, sama email. dari pada nulis user.nama, user.umur, user.email berkali kali, lebih enak pakai destructuring. jadi cukup ambil data yang dibutuhin sekali aja, habis itu tinggal pakai nama variabelnya langsung. menurut saya jadi lebih rapi dan lebih gampang dibaca.
+
 - **Kesulitan:** ---
 <!-- ENTRY END -->
 
@@ -1659,6 +1660,7 @@ console.log(jurusan);
 
 - **Status:** done
 - **Capaian:** Bug ditemukan dalam [`32 menit`]: [ gejala: gejalanya data yang diambil dari `localStorage` yang masih string jadi belum bisa langsung dipakai jadi object/array. -> cara melacak: awalnya saya coba jalankan kode dan tidak ada hasil nya, saya cari dengan coba isi `localStorage`, habis itu cek hasil yang dikembalikan fungsi `muat()`, ternyata tipenya masih string -> perbaikan, untuk kedua bug: cara perbaikinya saya tambahkan `JSON.parse()`. bug kedua ada di event delegation, gejalanya saat klik `<li>` event gak masuk ke dalam `if`. saya cari pakai `console.log(event.target.tagName)` hasilnya `LI`, bukan `li`. perbaikannya saya ganti pengecek jadi `"LI"` (atau bisa pakai `.toLowerCase()` supaya lebih fleksibel).]. jawaban 5 soal:
+
 1. keuntungan nya adalah event delegation lebih enak karna kita cukup pasang satu event listener di parent aja, jadi gak perlu pasang listener di setiap elemen satu satu. kalau nanti ada elemen baru yang dibuat secara dinamis, event nya tetap bisa jalan tanpa harus nambah listener lagi
 
 2. karna async dan await itu cuma bikin kodenya lebih rapi dan gampang dibaca. walaupun kelihatannya jalan satu satu, sebenarnya JavaScript tetap bisa ngerjain proses lain. yang nunggu cuma baris yang pakai await, bukan semua program berhenti
@@ -1668,5 +1670,19 @@ console.log(jurusan);
 4. karna localStorage cuma bisa nyimpan data dalam yang bentuk string. jadi sebelum disimpan, object / array harus diubah dulu jadi string pakai JSON.stringify(). nah pas diambil lagi, string itu harus diubah balik jadi object atau array pakai JSON.parse() supaya bisa dipakai lagi di JavaScript. istilahnya kaya di convert lah
 
 5. textContent lebih aman karna dia cuma nampilin isi teks apa adanya. kalau pakai innerHTML, data dari user atau API dia bisa dianggap sebagai kode HTML dan dijalankan, jadi lebih berisiko kalau ada data yang gak aman masuk
+
 - **Kesulitan:** untuk T2.2 ini sedikit lebih lama di bandingkan dengan T2.1, lama karna ini kan 2 kode juga, nah untuk di T2.1 kan bug atau kesalahan nya itu ada di tanda `=`, karna itu dia kayanya perbandingan jadi kita pakai `===`, nah untuk T2.2 ini harus ngubah data string menjadi array/object
+<!-- ENTRY END -->
+
+---
+
+## 2026-09-09
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T3
+
+- **Status:** done
+- **Capaian:** Pilih opsi [a]: [saya menambahkan fitur baru ke project To-Do List. saya nambah fitur Edit Task, jadi task yang udah dibuat sekarang bisa diubah tanpa harus dihapus dulu. pengerjaannya saya buat di branch baru (fitur/edit-task), commit sesuai progres, terus buat Pull Request, dan udah di merge ke branch `main`.] [https://github.com/sidrive/pkl-miftahul-progress/pull/12]. untuk opsi [b] iseng saya cobain di folder lain, dan sedikit memahami isi setelah instal vue nya, ga terlalu banyak paham tapi udah ada gambaran untuk vue nya, dan iseng juga coba coba buat tampilan web sederhana aja.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
