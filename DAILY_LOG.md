@@ -1686,3 +1686,16 @@ console.log(jurusan);
 - **Capaian:** Pilih opsi [a]: [saya menambahkan fitur baru ke project To-Do List. saya nambah fitur Edit Task, jadi task yang udah dibuat sekarang bisa diubah tanpa harus dihapus dulu. pengerjaannya saya buat di branch baru (fitur/edit-task), commit sesuai progres, terus buat Pull Request, dan udah di merge ke branch `main`.] [https://github.com/sidrive/pkl-miftahul-progress/pull/12]. untuk opsi [b] iseng saya cobain di folder lain, dan sedikit memahami isi setelah instal vue nya, ga terlalu banyak paham tapi udah ada gambaran untuk vue nya, dan iseng juga coba coba buat tampilan web sederhana aja.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-10
+
+<!-- ENTRY START -->
+
+### Task: ---
+
+- **Status:** done
+- **Capaian:** saya belajar memahami dan mengeksplor apa aja yang ada di vue, coba bikin web simpel dll nya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
