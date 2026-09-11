@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manajemen Stok Gudang</title>
+  <style>
+    body { font-family: sans-serif; max-width: 480px; margin: 2rem auto; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid #ddd; }
+    li span.nama { flex: 1; }
+    button { cursor: pointer; }
+    #total-stok { font-weight: bold; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h2>Manajemen Stok Gudang</h2>
+
+  <label>Filter kategori:
+    <select id="filter-kategori">
+      <option value="semua">Semua</option>
+      <option value="Elektronik">Elektronik</option>
+      <option value="Alat Tulis">Alat Tulis</option>
+    </select>
+  </label>
+
+  <ul id="daftar-barang"></ul>
+
+  <p id="total-stok"></p>
+
+  <script src="stock-gudang.js"></script>
+</body>
+</html>

@@ -1699,3 +1699,16 @@ console.log(jurusan);
 - **Capaian:** saya belajar memahami dan mengeksplor apa aja yang ada di vue, coba bikin web simpel dll nya.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-11
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T4
+
+- **Status:** done
+- **Capaian:** Bug suntikan mentor ditemukan, bug pertama di temukan dalam [`-+ 5 menit`] dan bug kedua di temukan dalam waktu [`-+ 9 menit`]. Soal review terjawab. Refleksi Bulan 2 & T3 diceritakan. menunjukkan hasil nya juga
+- **Kesulitan:** semua tugas minggu ini udah saya kerjain dan pelajarin, bug suntikan dari mentor udah di cari dan di selesaikan dengan baik.
+<!-- ENTRY END -->

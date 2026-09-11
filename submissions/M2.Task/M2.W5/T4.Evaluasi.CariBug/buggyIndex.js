@@ -1,5 +1,3 @@
-// ini adalah tugas T2 (tidak termasuk T2.8 karena beda file)
-
 // fungsi buat nyimpan semua data todo ke localStorage. karna localStorage cuma bisa simpan string,
 // jadi datanya harus diubah dulu pakai JSON.stringify().
 function simpan(data) {
@@ -17,14 +15,14 @@ function muat() {
     // ubah lagi data string JSON jadi array/object supaya bisa dipakai lagi di JavaScript.
     return JSON.parse(mentah);
   } catch (error) {
-    // kalau isi localStorage rusak atau bukan JSON yang benar, jangan sampai aplikasi error. 
+    // kalau isi localStorage rusak atau bukan JSON yang benar, jangan sampai aplikasi error.
     // balikin aja array kosong.
     console.warn("Data localStorage rusak.", error);
     return [];
   }
 }
 
-// pas halaman dibuka, langsung ambil data dari localStorage.k alau sebelumnya udah pernah nyimpan todo,
+// pas halaman dibuka, langsung ambil data dari localStorage. kalau sebelumnya udah pernah nyimpan todo,
 // nanti data itu jadi otomatis muncul lagi.
 const dataAwal = muat();
 
@@ -54,17 +52,22 @@ function render(data) {
       spanTeks.classList.add("selesai");
     }
 
+    const btnEdit = document.createElement("button");
+    btnEdit.textContent = "Edit";
+    btnEdit.classList.add("btn-edit");
+
     const btnHapus = document.createElement("button");
     btnHapus.textContent = "Hapus";
     btnHapus.classList.add("btn-hapus");
 
     li.appendChild(spanTeks);
+    li.appendChild(btnEdit);
     li.appendChild(btnHapus);
     listEl.appendChild(li);
   });
 }
 
-// fitur tambahan: cari task secara langsung saat kita ngetik. (T4)
+// fitur tambahan: cari task secara langsung saat kita ngetik.
 inputCariEl.addEventListener("input", (event) => {
   const kataKunci = event.target.value.toLowerCase();
 
@@ -85,7 +88,6 @@ listEl.addEventListener("click", (event) => {
 
   // kalau tombol hapus ditekan.
   if (target.classList.contains("btn-hapus")) {
-    
     daftarTodo = daftarTodo.filter((todo) => todo.id !== id);
 
     // simpan perubahan ke localStorage.
@@ -93,6 +95,21 @@ listEl.addEventListener("click", (event) => {
 
     // tampilin lagi data yang sudah diperbarui.
     render(daftarTodo);
+    return;
+  }
+
+  // tombol edit
+  if (target.classList.contains("btn-edit")) {
+    const todo = daftarTodo.find((t) => t.id === id);
+    if (!todo) return;
+
+    const teksEdit = prompt("Edit task:", todo.teks);
+
+    if (teksEdit !== null && teksEdit.trim() !== "") {
+      todo.teks = teksEdit.trim();
+      simpan(daftarTodo);
+      render(daftarTodo);
+    }
     return;
   }
 
