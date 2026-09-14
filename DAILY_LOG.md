@@ -1712,3 +1712,59 @@ console.log(jurusan);
 - **Capaian:** Bug suntikan mentor ditemukan, bug pertama di temukan dalam [`-+ 5 menit`] dan bug kedua di temukan dalam waktu [`-+ 9 menit`]. Soal review terjawab. Refleksi Bulan 2 & T3 diceritakan. menunjukkan hasil nya juga
 - **Kesulitan:** semua tugas minggu ini udah saya kerjain dan pelajarin, bug suntikan dari mentor udah di cari dan di selesaikan dengan baik.
 <!-- ENTRY END -->
+
+---
+
+# Bulan 3
+
+## 2026-09-14 // Bulan 3 - Minggu 1
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.1
+
+- **Status:** done
+- **Capaian:** saya buat folder baru / install ulang di folder [submissions/M3.Task/M3.W1/CobaVue-M3], saya install ulang biar sejalan dan tetap sesuai sama bulan dan minggu ini, jadi gak perlu lihat folder minggu lalu. percobaan pada minggu sebelum nya juga udah saya pindahkan ke Vude minggu ini. dan saya cek lagi fungsi dari `main.js`, `App.vue`, `vite.config.js`, dan `package.json`. `main.js` buat mulai jalankan Vue, `App.vue` itu komponen utama, `vite.config.js` buat pengaturan Vite, dan `package.json` buat informasi project, script, sama package yang dipakai. saya juga tau bedanya `dependencies` sama `devDependencies`, dimana `vue` masuk dependencies karna dibutuhkan waktu aplikasi jalan, sedangkan `vite` masuk devDependencies karena dipakai saat development.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.2
+
+- **Status:** done
+- **Capaian:** saya cek struktur App.vue dan Tentang.vue, masing masing punya 3 bagian yaitu `<template>` buat tampilan, `<script setup>` buat JavaScript/logic, dan `<style scoped>` buat CSS komponen. saya juga udah coba tambah `h2 { color: blue; }` di Tentang.vue, hasilnya cuma h2 di Tentang yang berubah dan App.vue gak ikut berubah. jadi fungsi scoped itu buat batasin CSS biar gak mengaruhi komponen lain.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T1.3
+
+- **Status:** done
+- **Capaian:** =
+
+1. Vue itu menggabungkan HTML, JS, dan CSS dalam satu file `.vue` biar bagian dari satu komponen lebih gampang diatur dan gak perlu bolak balik buka 3 file seperti. jadi semua yang berhubungan dengan satu komponen bisa ada di satu tempat.
+2. untungnya jadi lebih rapi dan gampang nyari kode yang berhubungan sama komponen tertentu. apalagi kalau project udah banyak komponen. ruginya kalau komponennya terlalu besar, file `.vue` juga bisa jadi panjang dan agak susah dibaca.
+3. kalau di CSS biasa, kita harus lebih hati hati bikin nama class supaya gak bentrok sama elemen lain, atau bisa pakai selector yang lebih spesifik. kalau pakai Vue dan `scoped`, lebih gampang karena CSS nya langsung dibatasi ke komponen itu saja, jadi gak perlu terlalu takut CSS nya memengaruhi komponen lain.
+
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M2.W5.T2.1
+
+- **Status:** done
+- **Capaian:** saya coba lagi `ref()` yang sebelumnya udah dipakai di `halamanAktif`, lalu saya tambah `jumlahKlik` untuk buat counter. waktu tombol diklik, jumlah klik bisa bertambah otomatis tanpa perlu `render()` manual. setelah itu saya coba `ref()` dengan tipe data array menggunakan `daftarNama`, lalu nampilkannya pakai `v-for`. dari percobaan ini saya tau kalau `ref()` bisa dipakai untuk berbagai tipe data seperti string, number, dan array. dan `<script>` harus pakai `.value` saat mengakses atau ngubah isi `ref`, sedangkan di `<template>` gak perlu `.value` karna Vue otomatis membacanya
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T2.2
+
+- **Status:** done
+- **Capaian:** Tambah halaman ke-3 (kontak), sekarang ada v-if/v-else-if/v-else lengkap.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
