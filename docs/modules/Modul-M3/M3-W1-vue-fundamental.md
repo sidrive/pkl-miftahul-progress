@@ -192,9 +192,7 @@ ringkas — kamu cukup deklaratif ("render 1 `<li>` untuk tiap siswa"), tanpa pe
 **Isi log dengan menjawab (kata sendiri):**
 1. Apa yang kamu amati bedanya antara tanpa `:key` vs dengan `:key` saat list berubah?
 2. Kenapa `:key` bukan cuma formalitas yang boleh dilewatkan — apa sebenarnya fungsi `key` buat
-   Vue di balik layar? (hint: Vue pakai `key` untuk melacak identitas tiap elemen — mana yang
-   sama, mana yang baru, mana yang cuma pindah posisi — supaya update DOM tepat sasaran, bukan
-   asal render ulang semua dari awal)
+   Vue di balik layar?
 3. Kenapa `:key="index"` (pakai posisi urutan sebagai key) sering dianggap "kurang aman"
    dibanding `:key="item.id"` (pakai id unik dari data)? Kasih 1 skenario di mana pakai `index`
    sebagai key bisa menyebabkan masalah yang mirip dengan yang kamu amati di percobaan tanpa
