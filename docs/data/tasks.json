@@ -856,27 +856,27 @@
           {
             "id": "M3.W1.T1.1",
             "text": "Recap project Vite+Vue yang sudah dibuat minggu lalu (`cobaVue`) — buka lagi, jelaskan fungsi tiap file/folder utama: `main.js` (titik masuk aplikasi), `App.vue` (komponen akar), `vite.config.js`, `package.json` (`scripts.dev`, `dependencies` vs `devDependencies` — kaitkan ke pelajaran `T1.4` Minggu 4 Bulan 2)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T1.2",
             "text": "Pahami anatomi **Single File Component** (`.vue`): 3 blok `<template>` (struktur mirip HTML), `<script setup>` (logic JavaScript, versi modern Composition API), `<style scoped>` (CSS yang otomatis cuma berlaku di komponen itu sendiri, tidak bocor ke komponen lain)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T1.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa Vue menggabungkan HTML+JS+CSS dalam 1 file `.vue` (SFC), dibanding pisah 3 file terpisah seperti project vanilla JS sebelumnya (`index.html`/`.js`/`.css`) — apa untung-ruginya, dan kaitkan ke `<style scoped>` yang tidak ada padanan langsungnya di CSS biasa",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T2.1",
             "text": "`ref()` dasar — **3 putaran, data berbeda**: putaran 1 ulangi variabel reaktif yang sudah dipakai minggu lalu (`halamanAktif`), tampilkan di template pakai `{{ }}`; putaran 2 bikin `ref()` BARU untuk kasus beda (misal counter angka yang bertambah tiap tombol diklik), amati UI update otomatis tanpa `render()` manual seperti vanilla JS dulu; putaran 3 bikin `ref()` lagi untuk 1 kasus ketiga yang beda tipe data (misal `ref()` berisi string yang diketik user lewat input, bukan angka/status halaman lagi)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T2.2",
             "text": "`v-if`/`v-else-if`/`v-else` — ulangi pola switch halaman minggu lalu, tambah minimal 1 kondisi baru (halaman ke-3) supaya ada `v-else` beneran terpakai (bukan cuma `v-if`/`v-else-if` doang)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T2.3",

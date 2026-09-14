@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-09-14",
+    "task": "M3.W1.T2.2",
+    "status": "done",
+    "capaian": "Tambah halaman ke-3 (kontak), sekarang ada v-if/v-else-if/v-else lengkap.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-14",
+    "task": "M2.W5.T2.1",
+    "status": "done",
+    "capaian": "saya coba lagi `ref()` yang sebelumnya udah dipakai di `halamanAktif`, lalu saya tambah `jumlahKlik` untuk buat counter. waktu tombol diklik, jumlah klik bisa bertambah otomatis tanpa perlu `render()` manual. setelah itu saya coba `ref()` dengan tipe data array menggunakan `daftarNama`, lalu nampilkannya pakai `v-for`. dari percobaan ini saya tau kalau `ref()` bisa dipakai untuk berbagai tipe data seperti string, number, dan array. dan `<script>` harus pakai `.value` saat mengakses atau ngubah isi `ref`, sedangkan di `<template>` gak perlu `.value` karna Vue otomatis membacanya",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-14",
+    "task": "M2.W5.T1.3",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-14",
+    "task": "M2.W5.T1.2",
+    "status": "done",
+    "capaian": "saya cek struktur App.vue dan Tentang.vue, masing masing punya 3 bagian yaitu `<template>` buat tampilan, `<script setup>` buat JavaScript/logic, dan `<style scoped>` buat CSS komponen. saya juga udah coba tambah `h2 { color: blue; }` di Tentang.vue, hasilnya cuma h2 di Tentang yang berubah dan App.vue gak ikut berubah. jadi fungsi scoped itu buat batasin CSS biar gak mengaruhi komponen lain.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-14",
+    "task": "M2.W5.T1.1",
+    "status": "done",
+    "capaian": "saya buat folder baru / install ulang di folder [submissions/M3.Task/M3.W1/CobaVue-M3], saya install ulang biar sejalan dan tetap sesuai sama bulan dan minggu ini, jadi gak perlu lihat folder minggu lalu. percobaan pada minggu sebelum nya juga udah saya pindahkan ke Vude minggu ini. dan saya cek lagi fungsi dari `main.js`, `App.vue`, `vite.config.js`, dan `package.json`. `main.js` buat mulai jalankan Vue, `App.vue` itu komponen utama, `vite.config.js` buat pengaturan Vite, dan `package.json` buat informasi project, script, sama package yang dipakai. saya juga tau bedanya `dependencies` sama `devDependencies`, dimana `vue` masuk dependencies karna dibutuhkan waktu aplikasi jalan, sedangkan `vite` masuk devDependencies karena dipakai saat development.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-09-11",
     "task": "M2.W5.T4",
     "status": "done",
