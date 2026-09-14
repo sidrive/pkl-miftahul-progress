@@ -93,7 +93,7 @@ dengan CSS biasa yang berlaku global ke seluruh halaman.
 
 ## 2. Reactivity & Template Syntax
 
-### `M3.W1.T2.1` — `ref()` dasar (2 putaran, data berbeda)
+### `M3.W1.T2.1` — `ref()` dasar (3 putaran, data berbeda)
 
 ```vue
 <script setup>
@@ -122,6 +122,11 @@ paham cara kerjanya.
 lain bebas), amati **UI update otomatis** begitu nilai `.value` berubah — tanpa perlu `render()`
 manual seperti di vanilla JS dulu.
 
+**Putaran 3 (tipe data lain):** bikin `ref()` lagi untuk kasus ketiga yang **beda tipe data** dari
+putaran 1 dan 2 (misal `ref()` berisi string dari input yang diketik user, atau `ref()` berisi
+array kecil) — buktikan `ref()` bisa dipakai untuk berbagai tipe data, bukan cuma dihafal untuk 1
+bentuk saja.
+
 **Checklist selesai:** kamu paham `.value` WAJIB dipakai saat mengakses/mengubah `ref()` di dalam
 `<script>`, tapi TIDAK perlu `.value` saat dipakai di `<template>` (Vue otomatis "membuka"-nya).
 
@@ -147,7 +152,7 @@ terpakai (bukan cuma `v-if`/`v-else-if` doang):
 - **Kesulitan:** -
 ```
 
-### `M3.W1.T2.3` — `v-for` (BARU, 2 putaran data berbeda)
+### `M3.W1.T2.3` — `v-for` (BARU, 3 putaran data berbeda)
 
 ```vue
 <script setup>
@@ -179,6 +184,11 @@ ringkas — kamu cukup deklaratif ("render 1 `<li>` untuk tiap siswa"), tanpa pe
 **Putaran 2 (data lain, topik beda dari putaran 1):** ulangi dari nol dengan 1 data yang **beda
 topik** dari putaran 1 (misal kalau putaran 1 pakai data siswa, putaran 2 pakai data
 buku/film/apa saja) — jangan cuma copy-paste ganti nama variabel, tulis ulang strukturnya sendiri.
+
+**Putaran 3 — `[Ulangi Tanpa Contek]`:** tutup dulu kode putaran 1 dan 2. Dari nol, pakai 1 data
+topik ketiga, **kombinasikan `v-for` dengan `v-if`** — misal tampilkan pesan "Belum ada data"
+kalau array-nya kosong (`v-if="daftar.length === 0"`), atau tampilkan list-nya kalau ada isi
+(`v-else`). Catat jujur bagian mana yang sempat lupa.
 
 
 ### `M3.W1.T2.4` — [Wajib Refleksi — PENTING] Kenapa `:key` bukan formalitas
@@ -235,7 +245,7 @@ buku/film/apa saja) — jangan cuma copy-paste ganti nama variabel, tulis ulang 
 
 ## 3. Event Handling, Binding, & Komposisi Komponen
 
-### `M3.W1.T3.1` — `@click`/`v-on` (2 putaran, kasus berbeda)
+### `M3.W1.T3.1` — `@click`/`v-on` (3 putaran, kasus berbeda)
 
 **Putaran 1:** minggu lalu kamu sudah pakai `@click.prevent`. Ulangi lagi konsepnya di komponen
 mana saja untuk mastikan masih lancar.
@@ -248,15 +258,19 @@ sebuah form — bukan sekadar variasi kecil dari `@click`, tapi kasus yang benar
 <input type="text" @input="handleInput" />
 ```
 
+**Putaran 3 (event lain lagi):** pakai 1 event modifier lain yang belum dicoba, misal
+`@keyup.enter` (submit form cukup tekan Enter, tanpa klik tombol) atau `@dblclick` — di kasus
+ketiga yang beda dari putaran 1 dan 2.
+
 **Contoh entry log:**
 ```markdown
 ### Task: M3.W1.T3.1
 - **Status:** done
-- **Capaian:** Putaran 1 (ulangi @click.prevent) & putaran 2 (@input di form baru) berhasil.
+- **Capaian:** Putaran 1 (ulangi @click.prevent), putaran 2 (@input di form baru), putaran 3 (@keyup.enter) berhasil.
 - **Kesulitan:** -
 ```
 
-### `M3.W1.T3.2` — `:class` dinamis (2 putaran, kasus berbeda)
+### `M3.W1.T3.2` — `:class` dinamis (3 putaran, kasus berbeda)
 
 **Putaran 1:**
 
@@ -290,15 +304,20 @@ dulu kamu tulis sendiri di vanilla JS.
 di putaran 1 (misal `:class` berdasarkan kategori/status yang beda, bukan sekadar
 "selesai"/"belum" lagi) — tulis ulang strukturnya sendiri, jangan copy-paste ganti nama.
 
+**Putaran 3 — `[Ulangi Tanpa Contek]`:** tutup dulu kode putaran 1 dan 2. Dari nol, pakai kondisi
+ketiga, kali ini **kombinasikan lebih dari 1 class kondisional sekaligus** dalam 1 elemen (misal
+`:class="{ selesai: ..., prioritas: ... }"` — 2 kelas berbeda, aktif tidaknya independen satu
+sama lain).
+
 **Contoh entry log:**
 ```markdown
 ### Task: M3.W1.T3.2
 - **Status:** done
-- **Capaian:** Putaran 1 (toggle selesai) & putaran 2 (kondisi lain) berhasil praktik :class dinamis, mengingat classList.toggle manual di vanilla JS.
+- **Capaian:** Putaran 1 (toggle selesai), putaran 2 (kondisi lain), putaran 3 (2 class kondisional sekaligus) berhasil.
 - **Kesulitan:** -
 ```
 
-### `M3.W1.T3.3` — Komposisi komponen dengan `props` (BARU, 2 putaran)
+### `M3.W1.T3.3` — Komposisi komponen dengan `props` (BARU, 3 putaran)
 
 `Tentang.vue` minggu lalu isinya statis (tidak menerima data dari luar). Sekarang bikin child
 component yang menerima data lewat `props`.
@@ -340,11 +359,16 @@ di `daftarSiswa`, masing-masing dapat data (`nama`, `nilai`) berbeda lewat `prop
 atau tipe datanya beda — array/object, bukan cuma string/angka lagi). Ini membuktikan kamu paham
 pola `defineProps` secara umum, bukan hafal 1 komponen contoh.
 
+**Putaran 3 (komponen KETIGA, kompleksitas naik):** bikin child component lagi yang menerima
+**lebih dari 2 `props` sekaligus**, salah satunya bertipe array/object (misal komponen kartu
+produk yang menerima `nama`, `harga`, DAN `daftarUlasan` berupa array) — buktikan kamu bisa
+mengelola beberapa `props` dengan tipe campuran dalam 1 komponen, bukan cuma 1-2 prop sederhana.
+
 **Contoh entry log:**
 ```markdown
 ### Task: M3.W1.T3.3
 - **Status:** done
-- **Capaian:** Putaran 1 (KartuSiswa + v-for) & putaran 2 (komponen baru, props berbeda) berhasil.
+- **Capaian:** Putaran 1 (KartuSiswa + v-for), putaran 2 (komponen baru, props berbeda), putaran 3 (komponen dengan 3+ props campuran tipe) berhasil.
 - **Kesulitan:** -
 ```
 
