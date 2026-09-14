@@ -279,8 +279,29 @@
 
 ### Minggu 1
 
-- [ ] <!-- id: M3.W1.T1 --> Setup project Vue 3 + Vite dari nol
-- [ ] <!-- id: M3.W1.T2 --> Konsep Single File Component (.vue): template/script/style
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M3/M3-W1-vue-fundamental.md`](../docs/modules/Modul-M3/M3-W1-vue-fundamental.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — sama seperti minggu-minggu sebelumnya, task **[Wajib Refleksi]** baru `done` kalau bisa dijelaskan pakai kata sendiri.
+> 🗓️ **5 hari kerja penuh** (Senin 14 – Jumat 18 September 2026) — minggu pertama Bulan 3, mulai Vue 3.
+>
+> Minggu lalu (`M2.W5.T3`) kamu sudah iseng eksplor Vue 3 sendiri (install Vite+Vue, bikin `Tentang.vue`, pakai `ref`, `v-if`/`v-else-if`, `@click.prevent`) — bagus, itu jadi modal awal. Minggu ini memformalkan yang sudah sempat dicoba (biar dasarnya kokoh, bukan cuma "pernah lihat jalan") sekaligus menambah yang belum: `v-for`, komposisi komponen dengan data mengalir dari parent ke child, dan migrasi to-do list Minggu 4 Bulan 2 ke Vue asli sebagai proyek mandiri.
+
+- Setup & Anatomi SFC (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M3.W1.T1.1 --> Recap project Vite+Vue yang sudah dibuat minggu lalu (`cobaVue`) — buka lagi, jelaskan fungsi tiap file/folder utama: `main.js` (titik masuk aplikasi), `App.vue` (komponen akar), `vite.config.js`, `package.json` (`scripts.dev`, `dependencies` vs `devDependencies` — kaitkan ke pelajaran `T1.4` Minggu 4 Bulan 2)
+  - [ ] <!-- id: M3.W1.T1.2 --> Pahami anatomi **Single File Component** (`.vue`): 3 blok `<template>` (struktur mirip HTML), `<script setup>` (logic JavaScript, versi modern Composition API), `<style scoped>` (CSS yang otomatis cuma berlaku di komponen itu sendiri, tidak bocor ke komponen lain)
+  - [ ] <!-- id: M3.W1.T1.3 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa Vue menggabungkan HTML+JS+CSS dalam 1 file `.vue` (SFC), dibanding pisah 3 file terpisah seperti project vanilla JS sebelumnya (`index.html`/`.js`/`.css`) — apa untung-ruginya, dan kaitkan ke `<style scoped>` yang tidak ada padanan langsungnya di CSS biasa
+- Reactivity & Template Syntax (dipecah jadi 5 sub-task — **`v-for`+`:key` adalah jebakan pemahaman minggu ini**, pola yang sama dengan `fr`/`vh`, `this` arrow function, `reduce`, `async`/`await`, `localStorage` minggu-minggu lalu):
+  - [ ] <!-- id: M3.W1.T2.1 --> `ref()` dasar — **2 putaran, data berbeda**: putaran 1 ulangi variabel reaktif yang sudah dipakai minggu lalu (`halamanAktif`), tampilkan di template pakai `{{ }}`; putaran 2 bikin `ref()` BARU untuk kasus beda (misal counter angka yang bertambah tiap tombol diklik), amati UI update otomatis tanpa `render()` manual seperti vanilla JS dulu
+  - [ ] <!-- id: M3.W1.T2.2 --> `v-if`/`v-else-if`/`v-else` — ulangi pola switch halaman minggu lalu, tambah minimal 1 kondisi baru (halaman ke-3) supaya ada `v-else` beneran terpakai (bukan cuma `v-if`/`v-else-if` doang)
+  - [ ] <!-- id: M3.W1.T2.3 --> `v-for` — **BARU minggu ini**: render list dari array data (boleh reuse data siswa/produk dari Bulan 2) pakai `v-for="item in daftar" :key="item.id"`, bandingkan seberapa lebih ringkas dibanding `createElement`+`appendChild`+`forEach` manual di vanilla JS
+  - [ ] <!-- id: M3.W1.T2.4 --> **[Wajib Refleksi — PENTING]** Coba dulu HAPUS `:key="item.id"` dari `v-for` (sengaja bikin salah), tambah/hapus/urutkan ulang item di list, amati apakah ada perilaku aneh (misal state internal elemen tertukar antar baris). Jelaskan dengan kata sendiri: kenapa `:key` bukan cuma formalitas yang boleh dilewatkan — Vue pakai `key` buat melacak elemen mana yang sama, mana yang baru, mana yang dipindah, supaya update DOM efisien dan tidak keliru
+  - [ ] <!-- id: M3.W1.T2.5 --> [Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `ref`/`v-if`/`v-for`/`:key` — baru cek jawaban setelahnya
+- Event Handling, Binding, & Komposisi Komponen (dipecah jadi 4 sub-task):
+  - [ ] <!-- id: M3.W1.T3.1 --> `@click`/`v-on` — ulangi pola minggu lalu (`@click.prevent`), tambah 1 event baru (misal `@input` di form)
+  - [ ] <!-- id: M3.W1.T3.2 --> `:class`/`v-bind` dinamis — pakai buat kasus nyata (misal `:class="{ selesai: item.selesai }"` untuk styling kondisional, mengingatkan ke `classList.add`/`toggle` manual di vanilla JS dulu)
+  - [ ] <!-- id: M3.W1.T3.3 --> Komposisi komponen — **BARU**: bikin 1 child component lagi (beda dari `Tentang.vue` minggu lalu), **kirim data dari parent ke child lewat `props`** (`defineProps`) — ini beda dari `Tentang.vue` kemarin yang isinya statis, sekarang datanya harus mengalir dari `App.vue`
+  - [ ] <!-- id: M3.W1.T3.4 --> [Wajib Refleksi] Jelaskan dengan kata sendiri: gimana caranya data "mengalir" dari komponen parent ke child lewat `props` — kasih 1 contoh konkret dari komponen yang baru dibuat di `T3.3`
+- [ ] <!-- id: M3.W1.T4 --> **[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Migrasi to-do list vanilla JS (Minggu 4 Bulan 2) ke Vue 3: render list pakai `v-for`+`:key`, state `daftarTodo` pakai `ref()`, toggle selesai pakai `:class` kondisional, tambah/hapus lewat `@click`/`@submit`. Boleh split minimal 1 bagian jadi child component (misal 1 item task jadi komponennya sendiri, terima data lewat `props`). **Tidak perlu `localStorage` dulu** (belum dibahas gimana gabungnya sama reactivity Vue — itu topik minggu depan), fokus ke migrasi logic & state-nya dulu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`).
+- [ ] <!-- id: M3.W1.T5 --> **Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo migrasi to-do list Vue (`T4`) langsung jalan, jelaskan kenapa pakai `ref` untuk state, kenapa `:key` dibutuhkan di `v-for`-nya, review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 komponen kecil baru atau ubah 1 bagian jadi conditional rendering baru), jawab soal live yang menyasar kesalahpahaman umum `:key` (dianggap formalitas kosong) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 

@@ -854,13 +854,73 @@
         "title": null,
         "tasks": [
           {
-            "id": "M3.W1.T1",
-            "text": "Setup project Vue 3 + Vite dari nol",
+            "id": "M3.W1.T1.1",
+            "text": "Recap project Vite+Vue yang sudah dibuat minggu lalu (`cobaVue`) — buka lagi, jelaskan fungsi tiap file/folder utama: `main.js` (titik masuk aplikasi), `App.vue` (komponen akar), `vite.config.js`, `package.json` (`scripts.dev`, `dependencies` vs `devDependencies` — kaitkan ke pelajaran `T1.4` Minggu 4 Bulan 2)",
             "done": false
           },
           {
-            "id": "M3.W1.T2",
-            "text": "Konsep Single File Component (.vue): template/script/style",
+            "id": "M3.W1.T1.2",
+            "text": "Pahami anatomi **Single File Component** (`.vue`): 3 blok `<template>` (struktur mirip HTML), `<script setup>` (logic JavaScript, versi modern Composition API), `<style scoped>` (CSS yang otomatis cuma berlaku di komponen itu sendiri, tidak bocor ke komponen lain)",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T1.3",
+            "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa Vue menggabungkan HTML+JS+CSS dalam 1 file `.vue` (SFC), dibanding pisah 3 file terpisah seperti project vanilla JS sebelumnya (`index.html`/`.js`/`.css`) — apa untung-ruginya, dan kaitkan ke `<style scoped>` yang tidak ada padanan langsungnya di CSS biasa",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2.1",
+            "text": "`ref()` dasar — **2 putaran, data berbeda**: putaran 1 ulangi variabel reaktif yang sudah dipakai minggu lalu (`halamanAktif`), tampilkan di template pakai `{{ }}`; putaran 2 bikin `ref()` BARU untuk kasus beda (misal counter angka yang bertambah tiap tombol diklik), amati UI update otomatis tanpa `render()` manual seperti vanilla JS dulu",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2.2",
+            "text": "`v-if`/`v-else-if`/`v-else` — ulangi pola switch halaman minggu lalu, tambah minimal 1 kondisi baru (halaman ke-3) supaya ada `v-else` beneran terpakai (bukan cuma `v-if`/`v-else-if` doang)",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2.3",
+            "text": "`v-for` — **BARU minggu ini**: render list dari array data (boleh reuse data siswa/produk dari Bulan 2) pakai `v-for=\"item in daftar\" :key=\"item.id\"`, bandingkan seberapa lebih ringkas dibanding `createElement`+`appendChild`+`forEach` manual di vanilla JS",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2.4",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu HAPUS `:key=\"item.id\"` dari `v-for` (sengaja bikin salah), tambah/hapus/urutkan ulang item di list, amati apakah ada perilaku aneh (misal state internal elemen tertukar antar baris). Jelaskan dengan kata sendiri: kenapa `:key` bukan cuma formalitas yang boleh dilewatkan — Vue pakai `key` buat melacak elemen mana yang sama, mana yang baru, mana yang dipindah, supaya update DOM efisien dan tidak keliru",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T2.5",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `ref`/`v-if`/`v-for`/`:key` — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T3.1",
+            "text": "`@click`/`v-on` — ulangi pola minggu lalu (`@click.prevent`), tambah 1 event baru (misal `@input` di form)",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T3.2",
+            "text": "`:class`/`v-bind` dinamis — pakai buat kasus nyata (misal `:class=\"{ selesai: item.selesai }\"` untuk styling kondisional, mengingatkan ke `classList.add`/`toggle` manual di vanilla JS dulu)",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T3.3",
+            "text": "Komposisi komponen — **BARU**: bikin 1 child component lagi (beda dari `Tentang.vue` minggu lalu), **kirim data dari parent ke child lewat `props`** (`defineProps`) — ini beda dari `Tentang.vue` kemarin yang isinya statis, sekarang datanya harus mengalir dari `App.vue`",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T3.4",
+            "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: gimana caranya data \"mengalir\" dari komponen parent ke child lewat `props` — kasih 1 contoh konkret dari komponen yang baru dibuat di `T3.3`",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T4",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Migrasi to-do list vanilla JS (Minggu 4 Bulan 2) ke Vue 3: render list pakai `v-for`+`:key`, state `daftarTodo` pakai `ref()`, toggle selesai pakai `:class` kondisional, tambah/hapus lewat `@click`/`@submit`. Boleh split minimal 1 bagian jadi child component (misal 1 item task jadi komponennya sendiri, terima data lewat `props`). **Tidak perlu `localStorage` dulu** (belum dibahas gimana gabungnya sama reactivity Vue — itu topik minggu depan), fokus ke migrasi logic & state-nya dulu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`).",
+            "done": false
+          },
+          {
+            "id": "M3.W1.T5",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo migrasi to-do list Vue (`T4`) langsung jalan, jelaskan kenapa pakai `ref` untuk state, kenapa `:key` dibutuhkan di `v-for`-nya, review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 komponen kecil baru atau ubah 1 bagian jadi conditional rendering baru), jawab soal live yang menyasar kesalahpahaman umum `:key` (dianggap formalitas kosong) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
