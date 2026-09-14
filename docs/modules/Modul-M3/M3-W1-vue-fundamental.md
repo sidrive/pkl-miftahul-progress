@@ -147,7 +147,7 @@ terpakai (bukan cuma `v-if`/`v-else-if` doang):
 - **Kesulitan:** -
 ```
 
-### `M3.W1.T2.3` — `v-for` (BARU)
+### `M3.W1.T2.3` — `v-for` (BARU, 2 putaran data berbeda)
 
 ```vue
 <script setup>
@@ -173,8 +173,13 @@ document.createElement("li"); ... listEl.appendChild(li) })`. Perhatikan `v-for`
 ringkas — kamu cukup deklaratif ("render 1 `<li>` untuk tiap siswa"), tanpa perlu manual
 `createElement`/`appendChild`.
 
-**Latihan:** render 1 list data (boleh reuse data siswa/produk dari Bulan 2) pakai
+**Putaran 1:** render 1 list data (boleh reuse data siswa/produk dari Bulan 2) pakai
 `v-for="item in daftar" :key="item.id"`.
+
+**Putaran 2 (data lain, topik beda dari putaran 1):** ulangi dari nol dengan 1 data yang **beda
+topik** dari putaran 1 (misal kalau putaran 1 pakai data siswa, putaran 2 pakai data
+buku/film/apa saja) — jangan cuma copy-paste ganti nama variabel, tulis ulang strukturnya sendiri.
+
 
 ### `M3.W1.T2.4` — [Wajib Refleksi — PENTING] Kenapa `:key` bukan formalitas
 
@@ -230,16 +235,30 @@ ringkas — kamu cukup deklaratif ("render 1 `<li>` untuk tiap siswa"), tanpa pe
 
 ## 3. Event Handling, Binding, & Komposisi Komponen
 
-### `M3.W1.T3.1` — `@click`/`v-on`
+### `M3.W1.T3.1` — `@click`/`v-on` (2 putaran, kasus berbeda)
 
-Minggu lalu kamu sudah pakai `@click.prevent`. Tambahkan **1 event baru** yang belum dicoba,
-misal `@input` di sebuah form:
+**Putaran 1:** minggu lalu kamu sudah pakai `@click.prevent`. Ulangi lagi konsepnya di komponen
+mana saja untuk mastikan masih lancar.
+
+**Putaran 2 (event BARU, kasus beda):** pakai event yang belum pernah dicoba, misal `@input` di
+sebuah form — bukan sekadar variasi kecil dari `@click`, tapi kasus yang benar-benar beda
+(`@input` terpicu tiap kali isi input berubah, bukan cuma saat elemen diklik):
 
 ```vue
 <input type="text" @input="handleInput" />
 ```
 
-### `M3.W1.T3.2` — `:class` dinamis
+**Contoh entry log:**
+```markdown
+### Task: M3.W1.T3.1
+- **Status:** done
+- **Capaian:** Putaran 1 (ulangi @click.prevent) & putaran 2 (@input di form baru) berhasil.
+- **Kesulitan:** -
+```
+
+### `M3.W1.T3.2` — `:class` dinamis (2 putaran, kasus berbeda)
+
+**Putaran 1:**
 
 ```vue
 <script setup>
@@ -267,18 +286,24 @@ function toggleSelesai() {
 `item.selesai` bernilai `true`. Ini pengganti `classList.add`/`classList.toggle` manual yang
 dulu kamu tulis sendiri di vanilla JS.
 
+**Putaran 2 (kondisi/data lain):** ulangi dari nol dengan **1 kondisi atau data yang belum dipakai**
+di putaran 1 (misal `:class` berdasarkan kategori/status yang beda, bukan sekadar
+"selesai"/"belum" lagi) — tulis ulang strukturnya sendiri, jangan copy-paste ganti nama.
+
 **Contoh entry log:**
 ```markdown
 ### Task: M3.W1.T3.2
 - **Status:** done
-- **Capaian:** Berhasil praktik :class dinamis untuk styling kondisional, mengingat classList.toggle manual di vanilla JS.
+- **Capaian:** Putaran 1 (toggle selesai) & putaran 2 (kondisi lain) berhasil praktik :class dinamis, mengingat classList.toggle manual di vanilla JS.
 - **Kesulitan:** -
 ```
 
-### `M3.W1.T3.3` — Komposisi komponen dengan `props` (BARU)
+### `M3.W1.T3.3` — Komposisi komponen dengan `props` (BARU, 2 putaran)
 
-`Tentang.vue` minggu lalu isinya statis (tidak menerima data dari luar). Sekarang bikin 1 child
-component **BARU** yang menerima data lewat `props`:
+`Tentang.vue` minggu lalu isinya statis (tidak menerima data dari luar). Sekarang bikin child
+component yang menerima data lewat `props`.
+
+**Putaran 1:**
 
 ```vue
 <!-- KartuSiswa.vue -->
@@ -307,8 +332,21 @@ import KartuSiswa from './components/KartuSiswa.vue'
 Perhatikan `nama="Ani"` (tanpa `:`) mengirim string literal, sedangkan `:nilai="80"` (dengan `:`)
 mengirim nilai sebagai JavaScript (angka, bukan string `"80"`).
 
-**Latihan:** kombinasikan dengan `v-for` dari `T2.3` — render 1 `KartuSiswa` untuk **setiap**
-siswa di `daftarSiswa`, masing-masing dapat data (`nama`, `nilai`) berbeda lewat `props`.
+Kombinasikan dengan `v-for` dari `T2.3` putaran 1 — render 1 `KartuSiswa` untuk **setiap** siswa
+di `daftarSiswa`, masing-masing dapat data (`nama`, `nilai`) berbeda lewat `props`.
+
+**Putaran 2 (komponen KEDUA, `props` berbeda):** bikin child component lain lagi — bukan reuse
+`KartuSiswa`, tapi komponen baru dengan bentuk `props` yang beda (misal jumlah prop-nya beda,
+atau tipe datanya beda — array/object, bukan cuma string/angka lagi). Ini membuktikan kamu paham
+pola `defineProps` secara umum, bukan hafal 1 komponen contoh.
+
+**Contoh entry log:**
+```markdown
+### Task: M3.W1.T3.3
+- **Status:** done
+- **Capaian:** Putaran 1 (KartuSiswa + v-for) & putaran 2 (komponen baru, props berbeda) berhasil.
+- **Kesulitan:** -
+```
 
 ### `M3.W1.T3.4` — [Wajib Refleksi] Bagaimana data mengalir lewat `props`
 

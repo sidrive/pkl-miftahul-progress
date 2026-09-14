@@ -880,7 +880,7 @@
           },
           {
             "id": "M3.W1.T2.3",
-            "text": "`v-for` — **BARU minggu ini**: render list dari array data (boleh reuse data siswa/produk dari Bulan 2) pakai `v-for=\"item in daftar\" :key=\"item.id\"`, bandingkan seberapa lebih ringkas dibanding `createElement`+`appendChild`+`forEach` manual di vanilla JS",
+            "text": "`v-for` — **BARU minggu ini, 2 putaran data berbeda**: putaran 1 render list dari 1 data (boleh reuse data siswa/produk dari Bulan 2) pakai `v-for=\"item in daftar\" :key=\"item.id\"`, bandingkan seberapa lebih ringkas dibanding `createElement`+`appendChild`+`forEach` manual di vanilla JS; putaran 2 ulangi dengan **1 data lain yang beda topik** dari putaran 1",
             "done": false
           },
           {
@@ -895,17 +895,17 @@
           },
           {
             "id": "M3.W1.T3.1",
-            "text": "`@click`/`v-on` — ulangi pola minggu lalu (`@click.prevent`), tambah 1 event baru (misal `@input` di form)",
+            "text": "`@click`/`v-on` — **2 putaran, kasus berbeda**: putaran 1 ulangi pola minggu lalu (`@click.prevent`); putaran 2 pakai event BARU (misal `@input` di form) untuk kasus yang beda (bukan sekadar ganti nama event di kasus yang sama)",
             "done": false
           },
           {
             "id": "M3.W1.T3.2",
-            "text": "`:class`/`v-bind` dinamis — pakai buat kasus nyata (misal `:class=\"{ selesai: item.selesai }\"` untuk styling kondisional, mengingatkan ke `classList.add`/`toggle` manual di vanilla JS dulu)",
+            "text": "`:class`/`v-bind` dinamis — **2 putaran, kasus berbeda**: putaran 1 pakai `:class=\"{ selesai: item.selesai }\"` untuk styling kondisional (mengingatkan ke `classList.add`/`toggle` manual di vanilla JS dulu); putaran 2 ulangi dari nol dengan **1 kondisi/data lain** yang belum dipakai di putaran 1",
             "done": false
           },
           {
             "id": "M3.W1.T3.3",
-            "text": "Komposisi komponen — **BARU**: bikin 1 child component lagi (beda dari `Tentang.vue` minggu lalu), **kirim data dari parent ke child lewat `props`** (`defineProps`) — ini beda dari `Tentang.vue` kemarin yang isinya statis, sekarang datanya harus mengalir dari `App.vue`",
+            "text": "Komposisi komponen — **BARU, 2 putaran**: putaran 1 bikin 1 child component (beda dari `Tentang.vue` minggu lalu) yang **kirim data dari parent ke child lewat `props`** (`defineProps`) — beda dari `Tentang.vue` kemarin yang isinya statis, sekarang datanya harus mengalir dari `App.vue`; putaran 2 bikin child component KEDUA dengan `props` berbeda (bukan reuse komponen yang sama, biar terbukti paham polanya, bukan hafal 1 komponen)",
             "done": false
           },
           {
