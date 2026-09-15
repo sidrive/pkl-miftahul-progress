@@ -881,22 +881,22 @@
           {
             "id": "M3.W1.T2.3",
             "text": "`v-for` — **BARU minggu ini, 3 putaran data berbeda**: putaran 1 render list dari 1 data (boleh reuse data siswa/produk dari Bulan 2) pakai `v-for=\"item in daftar\" :key=\"item.id\"`, bandingkan seberapa lebih ringkas dibanding `createElement`+`appendChild`+`forEach` manual di vanilla JS; putaran 2 ulangi dengan **1 data lain yang beda topik** dari putaran 1; putaran 3 **[Ulangi Tanpa Contek]** — tanpa lihat kode putaran 1/2, dari nol pakai data topik ketiga, sekalian gabungkan dengan `v-if` (misal tampilkan pesan \"list kosong\" kalau data-nya `[]`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T2.4",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu HAPUS `:key=\"item.id\"` dari `v-for` (sengaja bikin salah), tambah/hapus/urutkan ulang item di list, amati apakah ada perilaku aneh (misal state internal elemen tertukar antar baris). Jelaskan dengan kata sendiri: kenapa `:key` bukan cuma formalitas yang boleh dilewatkan — Vue pakai `key` buat melacak elemen mana yang sama, mana yang baru, mana yang dipindah, supaya update DOM efisien dan tidak keliru",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T2.5",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `ref`/`v-if`/`v-for`/`:key` — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T3.1",
             "text": "`@click`/`v-on` — **3 putaran, kasus berbeda**: putaran 1 ulangi pola minggu lalu (`@click.prevent`); putaran 2 pakai event BARU (misal `@input` di form) untuk kasus yang beda (bukan sekadar ganti nama event di kasus yang sama); putaran 3 pakai event lain lagi yang belum dicoba (misal `@keyup.enter` untuk submit tanpa tombol, atau `@dblclick`) di kasus ketiga",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T3.2",

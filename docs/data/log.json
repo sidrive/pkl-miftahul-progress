@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-09-15",
+    "task": "M3.W1.T3.1",
+    "status": "done",
+    "capaian": "saya udah buat dan coba, hasil nya putaran 1 (ulangi @click.prevent), putaran 2 (@input di form baru), putaran 3 (@keyup.enter) berhasil. sedikit note:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-15",
+    "task": "M3.W1.T2.5",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-15",
+    "task": "M3.W1.T2.4",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-15",
+    "task": "M3.W1.T2.3",
+    "status": "done",
+    "capaian": "saya udah buat `v-for` 3 putaran dengan data game, film, dan HP. di putaran ketiga saya gabungkan `v-for` dengan `v-if` dan `v-else` untuk nampilkan data atau tulisan kalau data kosong.",
+    "kesulitan": "sempat salah menaruh `v-for` di dalam `v-if` yang mengecek data kosong, jadi saat data masih ada malah gak muncul. Setelah diperbaiki saya paham cara kerja kondisinya. pada putaran ke 3 sempat salah juga tadi penggunaan kode nya juga"
+  },
+  {
     "date": "2026-09-14",
     "task": "M3.W1.T2.2",
     "status": "done",
