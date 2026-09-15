@@ -1768,3 +1768,58 @@ console.log(jurusan);
 - **Capaian:** Tambah halaman ke-3 (kontak), sekarang ada v-if/v-else-if/v-else lengkap.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-15
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T2.3
+
+- **Status:** done
+- **Capaian:** saya udah buat `v-for` 3 putaran dengan data game, film, dan HP. di putaran ketiga saya gabungkan `v-for` dengan `v-if` dan `v-else` untuk nampilkan data atau tulisan kalau data kosong.
+- **Kesulitan:** sempat salah menaruh `v-for` di dalam `v-if` yang mengecek data kosong, jadi saat data masih ada malah gak muncul. Setelah diperbaiki saya paham cara kerja kondisinya. pada putaran ke 3 sempat salah juga tadi penggunaan kode nya juga
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T2.4
+
+- **Status:** done
+- **Capaian:** =
+1. kalau tanpa `:key`, awalnya list masih normal. tapi pas waktu list berubah, misalnya tambah game di depan, isi input yang udah kita ubah bisa gak ngikutin game yang benar, kalua kita pakai `:key`, input tetap ngikutin game yang sesuai walaupun posisi gamenya berubah.
+2. karna `:key` dipakai Vue buat mengenali setiap item di list. jadi Vue tau mana item yang sama, mana yang baru, dan mana yang berubah. makanya waktu list berubah, Vue bisa ngatur elemennya dengan benar.
+3. karna `index` cuma menunjukkin posisi, bukan identitas data. misalnya GTA awalnya di posisi 0, lalu kita tambah game baru di paling depan, posisi GTA berubah jadi 1. kalau pakai `index`, Vue bisa anggap posisi itu masih item yang sama dan bisa buat masalah kaya input yang salah ngikutin data. makanya lebih aman pakai `id` yang tetap.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T2.5
+
+- **Status:** done
+- **Capaian:** =
+1. karna kalau kita pakai ref(), data yang dibuat sebernarnya di simpan di dalam .value, jadi kalau di `<script>` mau ambil atau ngubah isi ref, kita harus pakai .value. sedangkan di `<template>`, Vue udah otomatis membaca isi .value, jadi kita cukup tulis nama variabelnya aja.
+
+2. v-if itu dipakai untuk mengecek kondisi pertama, nah kalau kondisi v-if ternyata gak terpenuhi, baru Vue bisa lanjut mengecek v-else-if. jadi v-else-if biasanya dipakai buat kondisi berikutnya kalau kita punya lebih dari satu kemungkinan.
+
+3. kalau kita pakai `v-for` tanpa `:key` awalnya mungkin kaya keliatan normal aja, tapi waktu data berubah atau urutannya berubah, Vue bisa salah mencocokkan elemen sama datanya. contohnya input yang ada di tiap list bisa tetap di posisi lama atau ketukar dengan data lain.
+
+4. karna kalau kita pakai `:key="item.id"` ini dia nyimpan didalam id item, id itu dia unik dan sifatnya permanen nempel di data tersebut. kalau pakai index dia cuma penanda urutan posisi array yang bisa berubah ubah pas ada data ditambah di depan atau dihapus.
+
+5. kita bisa pakai v-if untuk kondisi pertama, habis itu v-else-if untuk kondisi kedua, dan v-else sebagai kondisi terakhir kalau dua kondisi sebelumnya gak terpenuhi.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T3.1
+
+- **Status:** done
+- **Capaian:** saya udah buat dan coba, hasil nya putaran 1 (ulangi @click.prevent), putaran 2 (@input di form baru), putaran 3 (@keyup.enter) berhasil. sedikit note:
+1. Putaran 1 (`@click.prevent`): berhasil mencegah aksi default link dan menjalankan fungsi alert.
+2. Putaran 2 (`@input`): berhasil mendeteksi perubahan isi kolom input secara real-time via console.
+3. Putaran 3 (`@keyup.enter`): berhasil memicu event khusus hanya saat tombol Enter ditekan.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

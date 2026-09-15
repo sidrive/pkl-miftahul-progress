@@ -2,7 +2,7 @@
   <div class="layout">
     <!-- 1. Navbar -->
     <nav class="navbar">
-      <div class="logo">Websiteku</div>
+      <div class="logo">M3-VueJs</div>
       <div class="menu">
       <!-- @click.prevent="halamanAktif = 'beranda'" ini lagi buat pas diklik, 
       nilai halamanAktif berubah jadi "beranda" -->
@@ -20,10 +20,12 @@
         <h1>Selamat Datang di Vue 3!</h1>
         <p>Ini adalah halaman web sederhana pertama yang dibuat pakai Vue + Vite.</p>
 
+        <br>
         <!-- Tambah tombol klik dan jumlah klik (Putaran kedua) -->
         <button @click="tambahKlik">Klik saya</button>
         <p>Sudah diklik {{ jumlahKlik }} kali</p>
 
+        <br>
         <!-- Putaran ke tiga -->
         <p>Daftar nama:</p>
         <ul>
@@ -31,13 +33,25 @@
             {{ nama }}
           </li>
         </ul>
+
+      <p>Klik untuk ke tugasT2.3-W1</p>
+      <a href="#" @click.prevent="halamanAktif = 'vfor'">T2.3 V-For</a>
+      <br>
+
+      <br>
+      <p>Klik untuk ke tugas T3.1-W1</p>
+      <a href="#" @click.prevent="halamanAktif = 't31'">T3.1 Event Handling</a>
       </div>
 
       <!-- Tampil pas halamanAktif 'tentang' -->
       <Tentang v-else-if="halamanAktif === 'tentang'" /> <!-- // Tentang v-else-if="halamanAktif === 'tentang'" 
       ini buat ngecek nilai halamanAktif, kalo nilainya 'tentang', maka komponen Tentang ditampilkan. -->
 
-      <Kontak v-else />
+      <Kontak v-else-if="halamanAktif === 'kontak'"/>
+
+      <T2_3_W1 v-else-if="halamanAktif === 'vfor'" />
+
+      <T3_1_W1 v-else />
     </main>
 
     <!-- 3. Footer -->
@@ -53,6 +67,8 @@ import { ref } from 'vue'
 // kita ambil Tentang.vue dari folder components
 import Tentang from './components/Tentang.vue'
 import Kontak from './components/Kontak.vue'
+import T2_3_W1 from './components/T2.3-W1.vue'
+import T3_1_W1 from './components/T3.1-W1.vue'
 
 // Putaran ke-2 bikin variabel reaktif halamanAktif, jumlahKlik, dan daftarNama
 const halamanAktif = ref('beranda')
@@ -63,7 +79,7 @@ function tambahKlik() {
 }
 
 //Putaran ke-3 bikin variabel reaktif daftarNama
-const daftarNama = ref(['Gazi', 'Budi', 'Andi'])
+const daftarNama = ref(['Jeki', 'Marko', 'Andi'])
 </script>
 
 <style scoped>

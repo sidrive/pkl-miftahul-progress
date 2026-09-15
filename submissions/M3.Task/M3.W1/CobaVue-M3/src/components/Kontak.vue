@@ -3,7 +3,7 @@
     <h2>Halaman Kontak Us</h2>
     <p>Hubungi kami via email: <strong>kontak@websiteku.com</strong></p>
     <br>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gazi@example.com&su=Tanya%20Website&body=Saya%20Mau%20protes%21" target="_blank">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=complain@example.com&su=Tanya%20Website&body=Saya%20Mau%20protes%21" target="_blank">
       Kirim Pesan via Gmail
     </a>
     <br>
