@@ -1823,3 +1823,33 @@ console.log(jurusan);
 3. Putaran 3 (`@keyup.enter`): berhasil memicu event khusus hanya saat tombol Enter ditekan.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-16
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T3.2
+- **Status:** done
+- **Capaian:** Putaran 1 (toggle selesai), putaran 2 (kondisi lain) dengan tambahan jika di klik maka akan bewarna, putaran 3 (2 class kondisional sekaligus) berhasil.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T3.3
+- **Status:** done
+- **Capaian:** Putaran 1 (KartuSiswa + v-for), putaran 2 (komponen baru, props berbeda), putaran 3 (komponen dengan 3+ props campuran tipe) berhasil. file nya saya taro dalam folder ../components/T3.3-W1/ biar rapi untuk isi susunan file nya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T3.4
+- **Status:** done
+- **Capaian:** =
+1. data di Vue itu ngalir satu arah dari parent ke child. jadi App.vue yang jadi parent yang megang data daftarSiswa, habis itu dia lempar data nama dan nilainya ke komponen anak KartuSiswa.vue lewat atribut :nama dan :nilai. di sisi KartuSiswa.vue, data itu ditangkap pakai `defineProps (['nama', 'nilai'])` cuma buat ditampilkan di templatenya pakai {{ nama }} dan {{ nilai }}.
+2. yang bakal terjadi kalau tanpa titik dua (nama="Ani"), Vue ngebaca isinya sebagai string biasa atau teks mentah. tapi kalau kita pakai titik dua (:nilai="80"), Vue ngebaca isinya jadi JavaScript asli, makanya 80 dibaca sebagai tipe data Number. kalau kita tulis nilai="80" tanpa titik dua, angkanya berubah jadi String "80", yang bikin operasi matematika di child bakal berantakan, misalnya kalau nilai + 10, bukannya jadi 90 tapi malah gabungin teks jadi "8010".
+- **Kesulitan:** ---
+<!-- ENTRY END -->
