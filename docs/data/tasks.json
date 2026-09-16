@@ -901,17 +901,17 @@
           {
             "id": "M3.W1.T3.2",
             "text": "`:class`/`v-bind` dinamis — **3 putaran, kasus berbeda**: putaran 1 pakai `:class=\"{ selesai: item.selesai }\"` untuk styling kondisional (mengingatkan ke `classList.add`/`toggle` manual di vanilla JS dulu); putaran 2 ulangi dari nol dengan **1 kondisi/data lain** yang belum dipakai di putaran 1; putaran 3 **[Ulangi Tanpa Contek]** — tanpa lihat kode putaran 1/2, kondisi/data ketiga dari nol, kali ini kombinasikan **lebih dari 1 class kondisional sekaligus** dalam 1 elemen (misal `:class=\"{ selesai: ..., prioritas: ... }\"`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T3.3",
             "text": "Komposisi komponen — **BARU, 3 putaran**: putaran 1 bikin 1 child component (beda dari `Tentang.vue` minggu lalu) yang **kirim data dari parent ke child lewat `props`** (`defineProps`) — beda dari `Tentang.vue` kemarin yang isinya statis, sekarang datanya harus mengalir dari `App.vue`; putaran 2 bikin child component KEDUA dengan `props` berbeda (bukan reuse komponen yang sama, biar terbukti paham polanya, bukan hafal 1 komponen); putaran 3 bikin child component KETIGA yang menerima **lebih dari 2 props sekaligus**, salah satunya bertipe array/object (bukan cuma string/angka lagi)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T3.4",
             "text": "[Wajib Refleksi] Jelaskan dengan kata sendiri: gimana caranya data \"mengalir\" dari komponen parent ke child lewat `props` — kasih 1 contoh konkret dari komponen yang baru dibuat di `T3.3`",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T4",

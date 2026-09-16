@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-09-16",
+    "task": "M3.W1.T3.4",
+    "status": "done",
+    "capaian": "=",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-16",
+    "task": "M3.W1.T3.3",
+    "status": "done",
+    "capaian": "Putaran 1 (KartuSiswa + v-for), putaran 2 (komponen baru, props berbeda), putaran 3 (komponen dengan 3+ props campuran tipe) berhasil. file nya saya taro dalam folder ../components/T3.3-W1/ biar rapi untuk isi susunan file nya.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-16",
+    "task": "M3.W1.T3.2",
+    "status": "done",
+    "capaian": "Putaran 1 (toggle selesai), putaran 2 (kondisi lain) dengan tambahan jika di klik maka akan bewarna, putaran 3 (2 class kondisional sekaligus) berhasil.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-09-15",
     "task": "M3.W1.T3.1",
     "status": "done",
