@@ -27,14 +27,15 @@
 
     <!-- List Todo yang dirender dari hasil filter pencarian -->
     <ul class="daftar-todo">
-      <TodoList
-        v-for="todo in todoTersaring"
+    <TodoList
+        v-for="todo in daftarTodo"
+        v-show="todo.teks.toLowerCase().includes(kataKunci.toLowerCase())"
         :key="todo.id"
         :todo="todo"
         @toggle="toggleSelesai"
         @edit="editTodo"
         @hapus="hapusTodo"
-      />
+    />
     </ul>
 
     <!-- Pesan jika todo kosong atau tidak ditemukan -->
