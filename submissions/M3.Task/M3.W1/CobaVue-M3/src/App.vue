@@ -24,6 +24,7 @@
         <!-- Tambah tombol klik dan jumlah klik (Putaran kedua) -->
         <button @click="tambahKlik">Klik saya</button>
         <p>Sudah diklik {{ jumlahKlik }} kali</p>
+        <hr>
 
         <br>
         <!-- Putaran ke tiga -->
@@ -33,22 +34,34 @@
             {{ nama }}
           </li>
         </ul>
+        <hr>
 
-      <p>Klik untuk ke tugasT2.3-W1</p>
-      <a href="#" @click.prevent="halamanAktif = 'vfor'">T2.3 V-For</a>
-      <br>
+        <div class="nav-tugas">
+          <div class="item-tugas">
+            <p>Klik untuk ke tugasT2.3-W1</p>
+            <a href="#" @click.prevent="halamanAktif = 'vfor'">T2.3 V-For</a>
+          </div>
 
-      <br>
-      <p>Klik untuk ke tugas T3.1-W1</p>
-      <a href="#" @click.prevent="halamanAktif = 't31'">T3.1 Event Handling</a>
+          <div class="item-tugas">
+            <p>Klik untuk ke tugas T3.1-W1</p>
+            <a href="#" @click.prevent="halamanAktif = 't31'">T3.1 Event Handling</a>
+          </div>
 
-      <br><br>
-      <p>Klik untuk ke tugas T3.2-W1</p>
-      <a href="#" @click.prevent="halamanAktif = 't32'">T3.2 Class Dinamis</a>
+          <div class="item-tugas">
+            <p>Klik untuk ke tugas T3.2-W1</p>
+            <a href="#" @click.prevent="halamanAktif = 't32'">T3.2 Class Dinamis</a>
+          </div>
 
-      <br><br>
-      <p>Klik untuk ke tugas T3.3-W1</p>
-      <a href="#" @click.prevent="halamanAktif = 't33'">T3.3 Props Komponen</a>
+          <div class="item-tugas">
+            <p>Klik untuk ke tugas T3.3-W1</p>
+            <a href="#" @click.prevent="halamanAktif = 't33'">T3.3 Props Komponen</a>
+          </div>
+
+          <div class="item-tugas">
+            <p>Klik untuk ke tugas T4-W1</p>
+            <a href="#" @click.prevent="halamanAktif = 't4'">T4 Migrasi To-Do List</a>
+          </div>
+        </div>
       </div>
 
       <!-- Tampil pas halamanAktif 'tentang' -->
@@ -74,6 +87,8 @@
         <p>--- Putaran 3 ---</p>
         <KartuProduk :namaProduk="laptop.nama" :harga="laptop.harga" :fitur="laptop.fitur" />
       </div>
+
+      <MainTodo v-else-if="halamanAktif === 't4'" />
     </main>
 
     <!-- 3. Footer -->
@@ -95,6 +110,7 @@ import T3_2_W1 from './components/T3.2-W1.vue'
 import KartuSiswa from './components/T3.3-W1/KartuSiswa.vue'
 import InfoResto from './components/T3.3-W1/InfoResto.vue'
 import KartuProduk from './components/T3.3-W1/KartuProduk.vue'
+import MainTodo from './components/T4-W1/MainTodo.vue'
 
 // Putaran ke-2 bikin variabel reaktif halamanAktif, jumlahKlik, dan daftarNama
 const halamanAktif = ref('beranda')
@@ -145,6 +161,44 @@ const laptop = ref({
   background-color: #333;
   color: white;
   padding: 1rem 2rem;
+}
+
+/* style tombol tugas */
+/* Container utama buat nampung item-item tugas berjejer kesamping */
+.nav-tugas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Tiap item berisi teks di atas dan link di bawah */
+.item-tugas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-tugas p {
+  margin: 0 0 6px 0;
+  font-size: 0.9rem;
+}
+
+.nav-tugas a {
+  background-color: #00ffb3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-tugas a:hover {
+  background-color: #990000;
 }
 
 .menu a {
