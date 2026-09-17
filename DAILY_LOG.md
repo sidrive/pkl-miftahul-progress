@@ -1853,3 +1853,15 @@ console.log(jurusan);
 2. yang bakal terjadi kalau tanpa titik dua (nama="Ani"), Vue ngebaca isinya sebagai string biasa atau teks mentah. tapi kalau kita pakai titik dua (:nilai="80"), Vue ngebaca isinya jadi JavaScript asli, makanya 80 dibaca sebagai tipe data Number. kalau kita tulis nilai="80" tanpa titik dua, angkanya berubah jadi String "80", yang bikin operasi matematika di child bakal berantakan, misalnya kalau nilai + 10, bukannya jadi 90 tapi malah gabungin teks jadi "8010".
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-17
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T4
+- **Status:** done
+- **Capaian:** saya udah migrasi TodoList Vanilla ke Vue, state data udah pakai `ref([])` sama fitur cari task pakai `computed`. item todo nya juga udah di split jadi child component (`TodoList.vue`) terus dihubungin ke parent (`MainTodo.vue`) pakai `props` sama `$emit`. udah di import juga ke `App.vue`. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/13]
+- **Kesulitan:** awal awal bingung harus ngapain, tapi saya buat aja folder dulu di dalam folder [../components]. setelah itu yang agak bingung itu nyesuain kode Js Vanilla nya ke Vue, tapi waktu udah di ketik rupanya ga terlalu beda lah, sekarang TodoList udah bisa di jalan kan
+<!-- ENTRY END -->
