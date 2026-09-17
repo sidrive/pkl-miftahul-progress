@@ -916,7 +916,7 @@
           {
             "id": "M3.W1.T4",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Migrasi to-do list vanilla JS (Minggu 4 Bulan 2) ke Vue 3: render list pakai `v-for`+`:key`, state `daftarTodo` pakai `ref()`, toggle selesai pakai `:class` kondisional, tambah/hapus lewat `@click`/`@submit`. Boleh split minimal 1 bagian jadi child component (misal 1 item task jadi komponennya sendiri, terima data lewat `props`). **Tidak perlu `localStorage` dulu** (belum dibahas gimana gabungnya sama reactivity Vue — itu topik minggu depan), fokus ke migrasi logic & state-nya dulu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`).",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W1.T5",
