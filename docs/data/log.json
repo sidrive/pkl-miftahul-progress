@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-18",
+    "task": "M3.W1.T5",
+    "status": "done",
+    "capaian": "Demo migrasi to-do list Vue selesai, ref/v-for/:key dijelaskan, PR dibahas, modifikasi dadakan berhasil dikerjakan.",
+    "kesulitan": "selama evaluasi aman semua pada bagian kode bisa dijelaskan, dijawab dengan cukup lancar."
+  },
+  {
     "date": "2026-09-17",
     "task": "M3.W1.T4",
     "status": "done",
