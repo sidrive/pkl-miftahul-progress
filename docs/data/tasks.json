@@ -921,7 +921,7 @@
           {
             "id": "M3.W1.T5",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo migrasi to-do list Vue (`T4`) langsung jalan, jelaskan kenapa pakai `ref` untuk state, kenapa `:key` dibutuhkan di `v-for`-nya, review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 komponen kecil baru atau ubah 1 bagian jadi conditional rendering baru), jawab soal live yang menyasar kesalahpahaman umum `:key` (dianggap formalitas kosong) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },

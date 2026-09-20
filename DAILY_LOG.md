@@ -1865,3 +1865,15 @@ console.log(jurusan);
 - **Capaian:** saya udah migrasi TodoList Vanilla ke Vue, state data udah pakai `ref([])` sama fitur cari task pakai `computed`. item todo nya juga udah di split jadi child component (`TodoList.vue`) terus dihubungin ke parent (`MainTodo.vue`) pakai `props` sama `$emit`. udah di import juga ke `App.vue`. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/13]
 - **Kesulitan:** awal awal bingung harus ngapain, tapi saya buat aja folder dulu di dalam folder [../components]. setelah itu yang agak bingung itu nyesuain kode Js Vanilla nya ke Vue, tapi waktu udah di ketik rupanya ga terlalu beda lah, sekarang TodoList udah bisa di jalan kan
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-18
+
+<!-- ENTRY START -->
+
+### Task: M3.W1.T5
+- **Status:** done
+- **Capaian:** Demo migrasi to-do list Vue selesai, ref/v-for/:key dijelaskan, PR dibahas, modifikasi dadakan berhasil dikerjakan.
+- **Kesulitan:** selama evaluasi aman semua pada bagian kode bisa dijelaskan, dijawab dengan cukup lancar.
+<!-- ENTRY END -->
