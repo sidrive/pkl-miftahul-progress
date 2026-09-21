@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-09-21",
+    "task": "M3.W2.T1.4",
+    "status": "---",
+    "capaian": "jawaban =",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-21",
+    "task": "M3.W2.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "ada beberapa kali sempat bingung bedain kapan pakai salah satu, tapi saya pelajari dan pahamin jadi nya lumayan paham."
+  },
+  {
+    "date": "2026-09-21",
+    "task": "M3.W2.T1.2",
+    "status": "done",
+    "capaian": "saya coba destructuring property `nama` dari object `reactive()`. waktu `nama` diubah lewat destructuring biasa, `profil.nama` gak ikut berubah. waktu ubah lewat `profil.nama`, data di object ikut berubah. disini saya tau kalo destructuring biasa dapat membuat hubungan reactive terputus. saya juga coba `toRefs()` supaya property hasil destructuring tetap terhubung dengan object reactive. jawaban soal =",
+    "kesulitan": "awal awal waktu lihat hasil nya di devtools / inspect kaya sama aja ga ada perubahan, dan setelah saya pahamin dan cari tau juga ada perbedaan nya."
+  },
+  {
+    "date": "2026-09-21",
+    "task": "M3.W2.T1.1",
+    "status": "done",
+    "capaian": "saya perbaiki dan rapihin path folder untuk tugas bulan ke 3 ini, sekarang pada folder [../src/components/] udah ada 2 folder yaitu `Task.M3-W1` dan `Task.M3-W2`, saya buat gini biar pengerjaan mudah dan susunan folder rapi. dan saya udah buat 3 putaran reactive(). putaran 1 pakai object `profil`, putaran 2 pakai object `produk`, dan putaran 3 saya pakai array `daftarProduk` yang berisi beberapa object. saya juga udah coba ubah, nambah, dan hapus data secara langsung tanpa `.value`.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-09-18",
     "task": "M3.W1.T5",
     "status": "done",

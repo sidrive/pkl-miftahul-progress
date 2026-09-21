@@ -932,22 +932,22 @@
           {
             "id": "M3.W2.T1.1",
             "text": "`reactive()` dasar — **BARU, 3 putaran, data berbeda**: putaran 1 bikin 1 object state pakai `reactive()` (misal data profil sederhana: nama, umur, status), tampilkan & ubah propertinya langsung tanpa `.value`; putaran 2 ulangi dari nol dengan object state lain yang **beda topik**; putaran 3 pakai `reactive()` untuk sebuah **array of object** (bukan object tunggal lagi), tambah/ubah/hapus itemnya langsung tanpa `.value`",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T1.2",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari `reactive()` yang kamu buat di `T1.1`, **destructure** salah satu propertinya ke variabel biasa (misal `const { nama } = state`), lalu ubah `nama` itu langsung — amati apakah tampilan di `<template>` ikut berubah atau tidak. Jelaskan dengan kata sendiri: kenapa destructuring bisa bikin `reactive()` kehilangan reactivity-nya, sementara akses langsung lewat `state.nama` tetap reactive",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T1.3",
             "text": "**[Wajib Refleksi]** Setelah coba dua-duanya minggu ini, jelaskan dengan kata sendiri: kapan sebaiknya pakai `ref()`, kapan sebaiknya pakai `reactive()`? Kaitkan ke pengalaman nyata `T1.1`/`T1.2` — bukan cuma menyalin definisi umum",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T1.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `ref` vs `reactive` — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T2.1",
