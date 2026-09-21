@@ -1,239 +1,141 @@
 <template>
-  <div class="layout">
-    <!-- 1. Navbar -->
-    <nav class="navbar">
-      <div class="logo">M3-VueJs</div>
-      <div class="menu">
-      <!-- @click.prevent="halamanAktif = 'beranda'" ini lagi buat pas diklik, 
-      nilai halamanAktif berubah jadi "beranda" -->
-        <a href="#" @click.prevent="halamanAktif = 'beranda'">Beranda</a>
-        <a href="#" @click.prevent="halamanAktif = 'tentang'">Tentang</a>
-        <a href="#" @click.prevent="halamanAktif = 'kontak'">Kontak</a>
+  <div class="app-container">
+    <!-- Header Navigasi Atas -->
+    <header class="header-utama">
+      <h2 @click="mingguAktif = ''" style="cursor: pointer;">M3 - Progress Belajar Vue</h2>
+      
+      <!-- Cuma tampilkan tombol Menu Utama kalau lagi di dalam halaman minggu -->
+      <div v-if="mingguAktif" class="tombol-nav-header">
+        <button class="btn-home" @click="mingguAktif = ''">Menu Utama</button>
       </div>
-    </nav>
+    </header>
 
-    <main class="konten">
-      <!-- Tampil pas halamanAktif 'beranda' -->
-      <!-- v-if="halamanAktif === 'beranda'" ini buat ngecek nilai halamanAktif,
-      kalo nilainya 'beranda', maka konten beranda ditampilkan. -->
-      <div v-if="halamanAktif === 'beranda'">
-        <h1>Selamat Datang di Vue 3!</h1>
-        <p>Ini adalah halaman web sederhana pertama yang dibuat pakai Vue + Vite.</p>
+    <!-- Area Konten Utama -->
+    <main class="area-konten">
+      <!-- 1. Tampilan Awal: Pilihan Tombol Minggu di Tengah Layar -->
+      <div v-if="!mingguAktif" class="menu-tengah">
+        <h1>Pilih Minggu Tugas</h1>
+        <p>Silakan pilih minggu materi yang ingin dibuka:</p>
+        
+        <div class="card-pilihan">
+          <button class="btn-minggu" @click="mingguAktif = 'w1'">
+            <h3>Minggu 1 (M3.W1)</h3>
+            <p>Dasar Vue, Directive, Event & Migrasi To-Do List</p>
+          </button>
 
-        <br>
-        <!-- Tambah tombol klik dan jumlah klik (Putaran kedua) -->
-        <button @click="tambahKlik">Klik saya</button>
-        <p>Sudah diklik {{ jumlahKlik }} kali</p>
-        <hr>
-
-        <br>
-        <!-- Putaran ke tiga -->
-        <p>Daftar nama:</p>
-        <ul>
-          <li v-for="nama in daftarNama" :key="nama">
-            {{ nama }}
-          </li>
-        </ul>
-        <hr>
-
-        <div class="nav-tugas">
-          <div class="item-tugas">
-            <p>Klik untuk ke tugasT2.3-W1</p>
-            <a href="#" @click.prevent="halamanAktif = 'vfor'">T2.3 V-For</a>
-          </div>
-
-          <div class="item-tugas">
-            <p>Klik untuk ke tugas T3.1-W1</p>
-            <a href="#" @click.prevent="halamanAktif = 't31'">T3.1 Event Handling</a>
-          </div>
-
-          <div class="item-tugas">
-            <p>Klik untuk ke tugas T3.2-W1</p>
-            <a href="#" @click.prevent="halamanAktif = 't32'">T3.2 Class Dinamis</a>
-          </div>
-
-          <div class="item-tugas">
-            <p>Klik untuk ke tugas T3.3-W1</p>
-            <a href="#" @click.prevent="halamanAktif = 't33'">T3.3 Props Komponen</a>
-          </div>
-
-          <div class="item-tugas">
-            <p>Klik untuk ke tugas T4-W1</p>
-            <a href="#" @click.prevent="halamanAktif = 't4'">T4 Migrasi To-Do List</a>
-          </div>
+          <button class="btn-minggu" @click="mingguAktif = 'w2'">
+            <h3>Minggu 2 (M3.W2)</h3>
+            <p>Reactivity Lanjutan (reactive), Props & Emit</p>
+          </button>
         </div>
       </div>
 
-      <!-- Tampil pas halamanAktif 'tentang' -->
-      <Tentang v-else-if="halamanAktif === 'tentang'" /> <!-- // Tentang v-else-if="halamanAktif === 'tentang'" 
-      ini buat ngecek nilai halamanAktif, kalo nilainya 'tentang', maka komponen Tentang ditampilkan. -->
+      <!-- 2. Tampilan Minggu 1 -->
+      <TaskW1 v-else-if="mingguAktif === 'w1'" />
 
-      <Kontak v-else-if="halamanAktif === 'kontak'"/>
-
-      <T2_3_W1 v-else-if="halamanAktif === 'vfor'" />
-
-      <T3_1_W1 v-else-if="halamanAktif === 't31'" />
-      
-      <T3_2_W1 v-else-if="halamanAktif === 't32'" />
-
-      <div class="T3_3" v-else-if="halamanAktif === 't33'">
-        <h2>T3.3 - Props Komponen</h2>
-        <p>--- Putaran 1 ---</p>
-        <KartuSiswa v-for="siswa in daftarSiswa" :key="siswa.id" :nama="siswa.nama" :nilai="siswa.nilai" />
-        <br><br>
-        <p>--- Putaran 2 ---</p>
-        <InfoResto :namaResto="resto.nama" :menu="resto.menu"/>
-        <br><br>
-        <p>--- Putaran 3 ---</p>
-        <KartuProduk :namaProduk="laptop.nama" :harga="laptop.harga" :fitur="laptop.fitur" />
-      </div>
-
-      <MainTodo v-else-if="halamanAktif === 't4'" />
+      <!-- 3. Tampilan Minggu 2 -->
+      <TaskW2 v-else-if="mingguAktif === 'w2'" />
     </main>
-
-    <!-- 3. Footer -->
-    <footer class="footer">
-      <p>&copy; 2026 Websiteku. All rights reserved.</p>
-    </footer>
   </div>
 </template>
 
 <script setup>
-// disini kita import ref dari Vue, yang digunakan buat bikin variabel reaktif.
 import { ref } from 'vue'
-// kita ambil Tentang.vue dari folder components
-import Tentang from './components/Tentang.vue'
-import Kontak from './components/Kontak.vue'
-import T2_3_W1 from './components/T2.3-W1.vue'
-import T3_1_W1 from './components/T3.1-W1.vue'
-import T3_2_W1 from './components/T3.2-W1.vue'
-import KartuSiswa from './components/T3.3-W1/KartuSiswa.vue'
-import InfoResto from './components/T3.3-W1/InfoResto.vue'
-import KartuProduk from './components/T3.3-W1/KartuProduk.vue'
-import MainTodo from './components/T4-W1/MainTodo.vue'
+import TaskW1 from './components/Task.M3-W1/TaskW1.vue'
+import TaskW2 from './components/Task.M3-W2/TaskW2.vue'
 
-// Putaran ke-2 bikin variabel reaktif halamanAktif, jumlahKlik, dan daftarNama
-const halamanAktif = ref('beranda')
-const jumlahKlik = ref(0)
-
-function tambahKlik() {
-  jumlahKlik.value++
-}
-
-//Putaran ke-3 bikin variabel reaktif daftarNama
-const daftarNama = ref(['Jeki', 'Marko', 'Andi'])
-
-// =================== T3.3-W1 ======================
-// T3.3-W1 - Putaran 1
-const daftarSiswa = ref([
-  { id: 1, nama: 'Ani', nilai: 80 },
-  { id: 2, nama: 'Budi', nilai: 90 },
-  { id: 3, nama: 'Cici', nilai: 75 }
-])
-//T3.3-W1 - Putaran 2
-const resto = ref({
-  nama: 'Resto Mantap',
-  menu: ['Nasi Goreng', 'Mie Ayam', 'Ayam Geprek']
-})
-// T3.3-W1 - Putaran 3
-const laptop = ref({
-  nama: 'Laptop Gaming RX',
-  harga: 15000000,
-  fitur: ['RAM 16GB', 'SSD 512GB', 'RTX 3060']
-})
+const mingguAktif = ref('')
 </script>
 
 <style scoped>
-/* Reset dasar */
-.layout {
+.app-container {
+  font-family: sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  font-family: sans-serif;
-  margin: 0;
 }
 
-/* Style Navbar */
-.navbar {
+.header-utama {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 1rem 2rem;
+  border-bottom: 2px solid #333;
 }
 
-/* style tombol tugas */
-/* Container utama buat nampung item-item tugas berjejer kesamping */
-.nav-tugas {
+.header-utama h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.tombol-nav-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  gap: 8px;
 }
 
-/* Tiap item berisi teks di atas dan link di bawah */
-.item-tugas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.item-tugas p {
-  margin: 0 0 6px 0;
-  font-size: 0.9rem;
-}
-
-.nav-tugas a {
-  background-color: #00ffb3;
+.btn-home {
+  background-color: #ff4757;
   color: white;
+  border: none;
   padding: 8px 16px;
-  border-radius: 10px;
-  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
-  font-size: 0.9rem;
   transition: background-color 0.2s ease;
 }
 
-.nav-tugas a:hover {
-  background-color: #990000;
+.btn-home:hover {
+  background-color: #e84118;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-/* Style Konten Utama */
-.konten {
+.area-konten {
   flex: 1;
-  padding: 0;
+}
+
+.menu-tengah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* untuk jarak di T3.3 */
-.T3_3 { 
-  margin-top: 2rem;
+.card-pilihan {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-ul {
-  display: inline-block;
-  text-align: left;
-  padding-left: 20px;
-}
-
-li {
-  padding-left: 0;
-}
-
-/* Style Footer */
-.footer {
+.btn-minggu {
   background-color: #222;
-  color: #aaa;
+  color: white;
+  border: 2px solid #00ffb3;
+  border-radius: 12px;
+  padding: 24px;
+  width: 260px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
   text-align: center;
-  padding: 1rem;
+}
+
+.btn-minggu:hover {
+  transform: translateY(-5px);
+  background-color: #333;
+}
+
+.btn-minggu h3 {
+  margin: 0 0 10px 0;
+  color: #00ffb3;
+}
+
+.btn-minggu p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ccc;
 }
 </style>

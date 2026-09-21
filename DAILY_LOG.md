@@ -1877,3 +1877,58 @@ console.log(jurusan);
 - **Capaian:** Demo migrasi to-do list Vue selesai, ref/v-for/:key dijelaskan, PR dibahas, modifikasi dadakan berhasil dikerjakan.
 - **Kesulitan:** selama evaluasi aman semua pada bagian kode bisa dijelaskan, dijawab dengan cukup lancar.
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-21 // Minggu 2
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T1.1
+- **Status:** done
+- **Capaian:** saya perbaiki dan rapihin path folder untuk tugas bulan ke 3 ini, sekarang pada folder [../src/components/] udah ada 2 folder yaitu `Task.M3-W1` dan `Task.M3-W2`, saya buat gini biar pengerjaan mudah dan susunan folder rapi. dan saya udah buat 3 putaran reactive(). putaran 1 pakai object `profil`, putaran 2 pakai object `produk`, dan putaran 3 saya pakai array `daftarProduk` yang berisi beberapa object. saya juga udah coba ubah, nambah, dan hapus data secara langsung tanpa `.value`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T1.2
+- **Status:** done
+- **Capaian:** saya coba destructuring property `nama` dari object `reactive()`. waktu `nama` diubah lewat destructuring biasa, `profil.nama` gak ikut berubah. waktu ubah lewat `profil.nama`, data di object ikut berubah. disini saya tau kalo destructuring biasa dapat membuat hubungan reactive terputus. saya juga coba `toRefs()` supaya property hasil destructuring tetap terhubung dengan object reactive. jawaban soal =
+1. nama diubah lewat hasil destructuring biasa, yang berubah itu variabel nama, sedangkan profil.nama tetap gak berubah. watu ubah langsung lewat profil.nama, data di dalam object profil berubah dan tetap terhubung dengan reactive.
+
+2. karna waktu saat property diambil pakai destructuring biasa, yang didapat itu nilainya aja, bukan hubungan reactive dari property tersebut. jadi variabel nama jadi seperti data terpisah dari profil.nama.
+
+3. bisa pakai toRefs() pada object reactive(). dengan toRefs(), property yang di destructure tetap terhubung dengan property aslinya, jadi Waktu nilainya diubah, object profil juga ikut berubah.
+- **Kesulitan:** awal awal waktu lihat hasil nya di devtools / inspect kaya sama aja ga ada perubahan, dan setelah saya pahamin dan cari tau juga ada perbedaan nya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. saya rasa saya bakal pakai ref() kalau datanya bertipe primitif atau tunggal kayak jumlahKlik (number) atau halamanAktif (string) dari tugas Minggu kemarin.  nah kalau reactive() bakal saya pilih kalau datanya berupa satu kesatuan object atau data kompleks kayak profil (nama, umur, status) atau produk (nama, harga, stok) di Minggu ini, karna penulisannya di <script> jadi lebih ringkas ga perlu nulis .value berulang kali.
+
+2. menurut saya bisa, pakai ref() buat object atau array (kayak ref([])) itu tetap jalan normal. tapi reactive() tetap ada jadi opsi terpisah biar penulisan kodenya lebih bersih aja, jadi gak perlu ribet ngetik .value berulang kali di <script> pas lagi ngolah data object atau array.
+
+3. enggak bisa. karna soalnya reactive() emang didesain khusus cuma buat data non primitif kayak object atau array. kalau dipaksa masukin data tunggal kayak angka 18 atau string 'Gazi' langsung ke reactive(), Vue bakal error karna reactive() butuh struktur key-value buat pasang sistem reaktifnya.
+- **Kesulitan:** ada beberapa kali sempat bingung bedain kapan pakai salah satu, tapi saya pelajari dan pahamin jadi nya lumayan paham.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T1.4
+- **Status:** ---
+- **Capaian:** jawaban =
+1. kalau pakai ref(), nilai di dalam `<script>` diakses menggunakan .value, misalnya `nama.value`. sedangkan kalau pakai `reactive()`, property dari object bisa langsung diakses tanpa .value, misalnya profil.nama.
+
+2. `reactive()` ga dipakai untuk nyimpan data tunggal karna `reactive()` lebih digunakan untuk buat object atau array jadi reactive. kalau datanya cuma satu nilai kaya string atau number, lebih cocok pakai ref() karna memang ref() bisa digunakan untuk nyimpan berbagai jenis nilai, termasuk nilai tunggal.
+
+3. yang bakal terjadi itu variabel hasil destructure bisa berubah, tapi perubahan itu gak ngubah property pada object reactive() aslinya. ini terjadi karna variabel hasil destructure udah gak terhubung secara reactive dengan property.
+
+4. karna lebih pas pakai reactive([]), kita bisa langsung olah method arraynya kayak .push(), .splice(), atau ngubah properti di dalam itemnya tanpa perlu nulis .value berulang kali.
+
+5. ref() dipakai buat simpan status halaman yang lagi aktif (contoh: halamanAktif = ref('beranda') di TaskW2.vue). kalau reactive() dipake buat nampung data form profil user atau daftar produk cafe yang isinya banyak properti.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
