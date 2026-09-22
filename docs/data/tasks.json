@@ -952,12 +952,12 @@
           {
             "id": "M3.W2.T2.1",
             "text": "`emit` dengan payload — **3 putaran, kasus berbeda**: minggu lalu `emit` cuma kirim `id` (lihat `TodoList.vue`/`MainTodo.vue`). Putaran 1 ulangi pola itu tapi kirim **lebih dari sekadar id** (misal kirim seluruh object `todo` atau `{ id, teksBaru }`) dari child ke parent; putaran 2 bikin child component BARU (topik beda) yang emit data dari sebuah form kecil (misal emit isi input saat submit); putaran 3 bikin child component KETIGA yang emit **lebih dari 1 event berbeda** (misal `emit('simpan', data)` dan `emit('batal')` di komponen yang sama, kondisinya beda tombol)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T2.2",
             "text": "`props` dengan validasi tipe — **BARU, 3 putaran**: minggu lalu `defineProps(['nama', 'nilai'])` (array string biasa, tanpa validasi). Putaran 1 ganti 1 komponen dari `T3.3` minggu lalu (atau komponen baru) ke object syntax `defineProps({ nama: { type: String, required: true }, nilai: { type: Number, default: 0 } })`; putaran 2 bikin component baru dengan props tervalidasi berbeda (tipe `Boolean`/`Array` juga dicoba); putaran 3 **[Ulangi Tanpa Contek]** — dari nol, component ketiga dengan minimal 3 props tervalidasi campuran tipe, salah satu `required: true` tanpa `default`",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T2.3",

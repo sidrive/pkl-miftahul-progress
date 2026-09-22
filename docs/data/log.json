@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-22",
+    "task": "M3.W2.T2.2",
+    "status": "done",
+    "capaian": "saya buat tiga putaran validasi props pakai object syntax. di putaran pertama saya mereset komponen KartuSiswa pakai tipe String dengan required dan tipe number dengan nilai default. putaran kedua saya tambahkan props bertipe Boolean untuk status toko serta Array pakai factory function untuk daftar menu. di putaran ketiga saya buat komponen produk mandiri dari nol pakai tiga campuran tipe props tervalidasi, salah satunya required tanpa nilai default.",
+    "kesulitan": "ada sempat kena eror sintaks karna lupa menaruh tanda koma di dalam objek defineProps dan posisi komponen bagian bawah yang sempat mepet, tapi udah di fix kan dan berjalan dengan benar."
+  },
+  {
+    "date": "2026-09-22",
+    "task": "M3.W2.T2.1",
+    "status": "done",
+    "capaian": "saya udah buat payload dengan 3 putaran, putaran pertama emit object utuh ({ id, teksBaru }) dari anak ke induk. putaran ke 2 emit data dinamis dari form input saat di-submit. putaran ke 3  bikin multi-event (tombol 'simpan' pake payload & tombol 'batal' tanpa payload).",
+    "kesulitan": "ada beberapa kendala kecil seperti *typo* penamaan fungsi dan tampilan bawah yang mepet akibat `display: contents` udah diselesaikan dan di rapihkan. ada eror waktu saya mau tes kode yang udah jadi, saya selesaikan juga."
+  },
+  {
     "date": "2026-09-21",
     "task": "M3.W2.T1.4",
     "status": "---",
