@@ -17,24 +17,62 @@
 
         <div class="item-tugas">
           <p>Klik untuk ke tugas T1.1-W2</p>
-          <a href="#" @click.prevent="halamanAktif = 't11'">
-            T1.1 reactive()
-          </a>
+          <a href="#" @click.prevent="halamanAktif = 't11'">T1.1 reactive()</a>
         </div>
 
         <div class="item-tugas">
           <p>Klik untuk ke tugas T1.2-W2</p>
-          <a href="#" @click.prevent="halamanAktif = 't12'">
-            T1.2 Destructuring reactive()
-          </a>
+          <a href="#" @click.prevent="halamanAktif = 't12'">T1.2 Destructuring reactive()</a>
+        </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T2.1-W2</p>
+          <a href="#" @click.prevent="halamanAktif = 't21'">T2.1 Emit dengan payload</a>
+        </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T2.2-W2</p>
+          <a href="#" @click.prevent="halamanAktif = 't22'">T2.2 Props Tervalidasi</a>
         </div>
 
       </div>
     </div>
 
+    <!-- Halaman T1 -->
     <T1_1_W2 v-else-if="halamanAktif === 't11'" />
-
     <T1_2_W2 v-else-if="halamanAktif === 't12'" />
+
+    <!-- Halaman T2.1 -->
+    <!-- ============================================================== -->
+     <div v-else-if="halamanAktif === 't21'">
+      <h2>Task T2.1 — Emit dengan Payload</h2>
+      
+      <div>
+        <p>Data yang ditangkap dari anak (Induk):</p>
+        <pre>{{ dataDariAnak }}</pre>
+      </div>
+      <hr />
+
+      <T2_1_W2 
+        @edit="handleEditP1" 
+        @submitForm="handleSubmitP2" 
+        @simpan="handleSimpanP3" 
+        @batal="handleBatalP3" 
+      />
+    </div>
+    <!-- ============================================================ -->
+
+    <!-- Halaman T2.2 -->
+    <div v-else-if="halamanAktif === 't22'">
+      <h2>Task T2.2 — Props dengan Validasi Tipe</h2>
+
+      <T2_2_W2 nama="Gazi" :nilai="90" :isBuka="true" :menu="['Nasi Goreng', 'Ayam Kabar']" /><br>
+
+      <hr>
+      <br>
+      <!-- Memanggil Putaran 3 -->
+      <T2_2_P3 namaProduk="Sepatu Running" :harga="250000" :stokTersedia="true" />
+    </div>
   </div>
 </template>
 
@@ -43,8 +81,40 @@ import { ref } from 'vue'
 
 import T1_1_W2 from './T1.1.M3-W2.vue'
 import T1_2_W2 from './T1.2.M3-W2.vue'
+import T2_1_W2 from './T2-M3-W2/T2.1.M3-W2.vue'
+import T2_2_W2 from './T2-M3-W2/T2.2.M3-W2.vue'
+import T2_2_P3 from './T2-M3-W2/T2.2.M3-W2.P3.vue'
 
 const halamanAktif = ref('beranda')
+
+// T2.1
+// ===========================================================
+const dataDariAnak = ref('Belum ada data dari anak')
+
+// Fungsi penerima payload Putaran 1
+function handleEditP1(payload) {
+  console.log('Payload diterima di Induk:', payload)
+  dataDariAnak.value = payload
+}
+
+// Fungsi penerima payload Putaran 2 (Form Input)
+function handleSubmitP2(payload) {
+  console.log('Payload Form diterima di Induk:', payload)
+  dataDariAnak.value = payload
+}
+
+// Handler Putaran 3 (Simpan - Bawa Payload)
+function handleSimpanP3(payload) {
+  console.log('Simpan diterima:', payload)
+  dataDariAnak.value = payload
+}
+
+// Handler Putaran 3 (Batal - Tanpa Payload/Kosongan)
+function handleBatalP3() {
+  console.log('Transaksi dibatalkan')
+  dataDariAnak.value = 'Transaksi dibatalkan oleh pengguna (tanpa payload)'
+}
+// ===========================================================
 </script>
 
 <style scoped>
@@ -76,6 +146,7 @@ const halamanAktif = ref('beranda')
 
 .btn-beranda:hover {
   opacity: 0.8;
+  background-color: #eefd15;
 }
 
 .nav-tugas {

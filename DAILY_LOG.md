@@ -1932,3 +1932,23 @@ console.log(jurusan);
 5. ref() dipakai buat simpan status halaman yang lagi aktif (contoh: halamanAktif = ref('beranda') di TaskW2.vue). kalau reactive() dipake buat nampung data form profil user atau daftar produk cafe yang isinya banyak properti.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-22
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T2.1
+- **Status:** done
+- **Capaian:** saya udah buat payload dengan 3 putaran, putaran pertama emit object utuh ({ id, teksBaru }) dari anak ke induk. putaran ke 2 emit data dinamis dari form input saat di-submit. putaran ke 3  bikin multi-event (tombol 'simpan' pake payload & tombol 'batal' tanpa payload).
+- **Kesulitan:** ada beberapa kendala kecil seperti *typo* penamaan fungsi dan tampilan bawah yang mepet akibat `display: contents` udah diselesaikan dan di rapihkan. ada eror waktu saya mau tes kode yang udah jadi, saya selesaikan juga.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T2.2
+- **Status:** done
+- **Capaian:** saya buat tiga putaran validasi props pakai object syntax. di putaran pertama saya mereset komponen KartuSiswa pakai tipe String dengan required dan tipe number dengan nilai default. putaran kedua saya tambahkan props bertipe Boolean untuk status toko serta Array pakai factory function untuk daftar menu. di putaran ketiga saya buat komponen produk mandiri dari nol pakai tiga campuran tipe props tervalidasi, salah satunya required tanpa nilai default.
+- **Kesulitan:** ada sempat kena eror sintaks karna lupa menaruh tanda koma di dalam objek defineProps dan posisi komponen bagian bawah yang sempat mepet, tapi udah di fix kan dan berjalan dengan benar.
+<!-- ENTRY END -->
