@@ -962,12 +962,12 @@
           {
             "id": "M3.W2.T2.3",
             "text": "**[Wajib Refleksi]** Coba dulu: di salah satu component dari `T2.2`, sengaja **jangan kirim** 1 prop yang `required: true` dari parent, jalankan, amati apa yang muncul di console browser. Jelaskan dengan kata sendiri: kenapa `props` di Vue itu sifatnya **read-only** dari sisi child (child tidak boleh langsung mengubah prop yang diterima) — apa yang terjadi/diperingatkan Vue kalau child coba mengubah prop langsung, dan kenapa pola yang benar adalah emit ke parent (bukan ubah prop langsung)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T2.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `emit` dengan payload, `props` tervalidasi, dan kenapa props read-only — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T3",
