@@ -1952,3 +1952,61 @@ console.log(jurusan);
 - **Capaian:** saya buat tiga putaran validasi props pakai object syntax. di putaran pertama saya mereset komponen KartuSiswa pakai tipe String dengan required dan tipe number dengan nilai default. putaran kedua saya tambahkan props bertipe Boolean untuk status toko serta Array pakai factory function untuk daftar menu. di putaran ketiga saya buat komponen produk mandiri dari nol pakai tiga campuran tipe props tervalidasi, salah satunya required tanpa nilai default.
 - **Kesulitan:** ada sempat kena eror sintaks karna lupa menaruh tanda koma di dalam objek defineProps dan posisi komponen bagian bawah yang sempat mepet, tapi udah di fix kan dan berjalan dengan benar.
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-23
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T2.3
+- **Status:** done
+- **Capaian:** saya udah melakukan percobaan dan hasil nya saya gabungkan aja pada soal :
+1. untuk percobaan pertama pesan yang muncul itu 
+      [Vue warn]: Missing required prop: "namaProduk" 
+         at <T2.2.M3W2.P3 harga=250000 stokTersedia=true > 
+         at <TaskW2> 
+         at <App>
+   nah percobaan ke 2 pesan yang muncul itu ada 3 :
+      - [Vue warn] Set operation on key "namaProduk" failed: target is readonly. Proxy(Object) {namaProduk: 'Sepatu Running'}
+      - [Vue warn]: Property "harga" was accessed during render but is not defined on instance. 
+      at <T2.2.M3W2.P3 namaProduk="Sepatu Running" harga=250000 stokTersedia=true > 
+      at <TaskW2> 
+      at <App>
+      - [Vue warn]: Property "stokTersedia" was accessed during render but is not defined on instance. 
+      at <T2.2.M3W2.P3 namaProduk="Sepatu Running" harga=250000 stokTersedia=true > 
+      at <TaskW2> 
+      at <App>
+
+2. Vue anggap `props` itu read-only karna dia itu berasal dari parent dan child hanya menerima data. kalau child ngubah props secara langsung, data dari parent bisa ikut berubah dari tempat yang bukan pemilik datanya dan alur data jadi susah dikontrol. jadi Vue buat props jadi read-only dari sisi child.
+
+3. Child gak boleh ngubah props secara langsung. kalau mau minta perubahan data, child bisa gunakan emit() untuk mengirim event dan data ke parent. habis itu parent yang ngubah data aslinya, lalu mengirim data yang udah berubah kembali ke child melalui props
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T2.4
+- **Status:** done
+- **Capaian:** jawaban =
+1. bedanya kalau `defineProps([nama])` dia mendefinisikan kalau component punya prop bernama nama, tapi gak kasih tau informasi tentang tipe datanya. kalau object syntax bisa kasih validasi seperti type, required, dan default. jadi object syntax lebih lengkap untuk melakukan validasi props.
+
+2. aplikasi gak bakal langsung crash atau mati total, tapi bakal nampilin peringatan kaya warning merah/kuning di console browser ([Vue warn]: Missing required prop kaya percobaan T2.3).
+
+3. menurut saya karna props itu berasal dari parent dan child hanya menerima data tersebut. kalau child ngubah langsung, alur data jadi gak jelas karena child mengubah data yang sebenarnya dimiliki oleh parent. jadi props dibuat read-only dari sisi child.
+
+4. bisa ngirim beberapa argumen lewat emit(), atau menggabungkan beberapa data menjadi satu object, contohnya:
+===========
+```js
+emit('simpan', {
+  id: 1,
+  teksBaru: 'Belajar Vue'
+})
+`
+=========== 
+Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
+
+5. caranya dengan sisi parent, kita tinggal pasang dua event listener sekaligus pakai atribut @ di tag komponen anak tersebut. contoh: 
+`<KomponenAnak @simpan="handleSimpan" @batal="handleBatal" />`
+- **Kesulitan:** ---
+<!-- ENTRY END -->
