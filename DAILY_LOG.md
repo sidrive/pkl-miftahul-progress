@@ -2002,11 +2002,23 @@ emit('simpan', {
   id: 1,
   teksBaru: 'Belajar Vue'
 })
-`
+```
 =========== 
 Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 
 5. caranya dengan sisi parent, kita tinggal pasang dua event listener sekaligus pakai atribut @ di tag komponen anak tersebut. contoh: 
 `<KomponenAnak @simpan="handleSimpan" @batal="handleBatal" />`
 - **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-09-24
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T3
+- **Status:** ---
+- **Capaian:** oke file untuk TodoList nya udah saya gandakan dan saya pindahkan ke folder untuk minggu 2 ini. saya udah kerjain task mandiri M3.W2.T3 dengan mengimplementasikan fitur Filter Kategori di TodoList, saya pilih opsi A. awal nya saya buat branch baru `fitur/filter-kategori`, lalu fitur ini saya pisah jadi tiga komponen di folder `T3-M3-W2`. State filter saya buat pakai `reactive()` di `MainTodo.vue`, habis itu daftar kategori dan kategori yang sedang aktif dikirim ke `FilterBar.vue` lewat props yang udah divalidasi. waktu kategori dipilih, `FilterBar.vue` ngirim nama kategori ke parent lewat emit dengan payload, lalu daftar tugas disaring pakai `computed()`. pada filter kategori udah saya tambahin fitur edit nama dan kategori task, tombol reset filter, serta merapikan tampilan dan navigasi di `TaskW2.vue`. semua fitur udah coba dan berjalan sesuai yang diharapkan. pengerjaan commit rapi dan masing masing udah di commit. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/14]
+- **Kesulitan:** sempet rada pusing waktu nyesuiin style CSS nya biar list nya pas di tengah tapi tetep rata kiri, sama sempet lupa pasang listener @edit di MainTodo makanya tombol editnya sempet gak responsif. Ttpi selebihnya aman waktu siap didebug satu satu. pengerjaan bisa di bilang agak mudah karna saya ambil file kode pada minggu lalu dan saya tempel pada folder minggu ini, perubahan file lumayan agak rumit menurut saya karna harus di sesuaikan lagi, tapi saya ubah aja beberapa kode nya. dan sekarang program udah berjalan dengan normal.
 <!-- ENTRY END -->
