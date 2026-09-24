@@ -972,7 +972,7 @@
           {
             "id": "M3.W2.T3",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Tambahkan 1 fitur baru ke to-do list Vue (`M3.W1.T4`) yang **menggabungkan** `reactive()` + `props` tervalidasi + `emit` dengan payload — pilih salah satu: (a) fitur filter kategori (state filter pakai `reactive()`, komponen filter terpisah kirim pilihan lewat `emit` ber-payload ke parent), atau (b) fitur edit task lewat form terpisah (component form punya `props` tervalidasi buat data awal, `emit` data hasil edit ke parent, bukan pakai `prompt()` manual seperti sekarang). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T4`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W2.T4",
