@@ -9,10 +9,6 @@
     >
       {{ kategori }}
     </button>
-
-    <button type="button" class="btn-reset" @click="resetFilter">
-      Reset Filter
-    </button>
   </div>
 </template>
 
@@ -47,7 +43,7 @@ function resetFilter() {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 10px 10;
 }
 
 .btn-filter {
@@ -67,29 +63,10 @@ function resetFilter() {
   color: #ffffff;
 }
 
-/* Style tombol yang sedang aktif */
 .btn-filter.aktif {
   background-color: #00ffb3;
   color: #1a1a1a;
   border-color: #00ffb3;
   font-weight: bold;
-}
-
-/* Style khusus tombol Reset */
-.btn-reset {
-  background-color: transparent;
-  color: #ef4444;
-  border: 1px solid #ef4444;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-reset:hover {
-  background-color: #ef4444;
-  color: #ffffff;
 }
 </style>

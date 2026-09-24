@@ -1,19 +1,20 @@
 <template>
-<div>
+  <div class="todo-container">
     <h2>To-Do List Filter Kategori</h2>
 
-    <!-- Form Tambah Task Baru -->
+    <div class="search">
     <form @submit.prevent="tambahTodo">
-      <input type="text" v-model="inputTeks" placeholder="Ketik task baru..." required />
+      <input class="input" type="text" v-model="inputTeks" placeholder="Ketik task baru..." required /> | 
       
-      <select v-model="inputKategori">
-        <option value="Sekolah">Sekolah</option>
-        <option value="Pribadi">Pribadi</option>
-        <option value="Pekerjaan">Pekerjaan</option>
-      </select>
+        <select class="pilih-kategori" v-model="inputKategori">
+            <option value="Sekolah">Sekolah</option>
+            <option value="Pribadi">Pribadi</option>
+            <option value="Pekerjaan">Pekerjaan</option>
+        </select> |
 
-      <button type="submit">Tambah</button>
+      <button type="submit" class="btn">Tambah</button>
     </form>
+    </div>
     <br />
 
     <!-- FilterBar -->
@@ -24,19 +25,19 @@
     />
     <br />
 
-    <!-- Daftar Todo -->
-    <ul>
+    <!-- daftar Todo  -->
+    <ul class="daftar-todo">
       <TodoList
         v-for="todo in todoTersaring"
         :key="todo.id"
         :todo="todo"
         @toggle="toggleSelesai"
+        @edit="editTodo"
         @hapus="hapusTodo"
       />
     </ul>
 
-    <!-- kalau kosong -->
-    <p v-if="todoTersaring.length === 0">Tidak ada tugas pada kategori ini.</p>
+    <p v-if="todoTersaring.length === 0">gak ada tugas di kategori ini.</p>
   </div>
 </template>
 
@@ -45,7 +46,6 @@ import { ref, reactive, computed } from 'vue'
 import FilterBar from './FilterBar.vue'
 import TodoList from './TodoList.vue'
 
-// tempat ngetik teks tugas baru & pilih kategori
 const inputTeks = ref('')
 const inputKategori = ref('Sekolah')
 
@@ -57,7 +57,7 @@ const stateFilter = reactive({
 // daftar tombol filter yang tersedia
 const daftarKategori = ['Semua', 'Sekolah', 'Pribadi', 'Pekerjaan']
 
-// data awal daftar tugas kita
+// data awal daftar tugas
 const daftarTodo = ref([
   { id: 1, teks: "Belajar Vue Props & Emit", selesai: true, kategori: "Sekolah" },
   { id: 2, teks: "Kerjakan Task M3.W2.T3", selesai: false, kategori: "Sekolah" },
@@ -78,7 +78,7 @@ function tanganiUbahKategori(kategoriBaru) {
   stateFilter.kategoriAktif = kategoriBaru
 }
 
-// fungsi Tambah, Toggle Selesai, dan Hapus
+// fungsi Tambah Task
 function tambahTodo() {
   if (inputTeks.value.trim() === '') return
   daftarTodo.value.push({
@@ -90,15 +90,110 @@ function tambahTodo() {
   inputTeks.value = ''
 }
 
+// fungsi Toggle Centang Selesai
 function toggleSelesai(id) {
   const item = daftarTodo.value.find(t => t.id === id)
   if (item) item.selesai = !item.selesai
 }
 
+// fungsi Edit teks dan kategori task
+function editTodo(id) {
+  // cari data task yang mau di edit berdasarkan ID
+  const item = daftarTodo.value.find(t => t.id === id)
+  if (!item) return
+
+  // pop-up pertama: Edit teks task
+  const teksBaru = prompt('Edit nama task:', item.teks)
+  if (teksBaru === null) return
+
+  // pop-up kedua: Edit kategori task
+  const kategoriBaru = prompt(
+    'Edit kategori (Pilihan: Sekolah, Pribadi, Pekerjaan):', 
+    item.kategori
+  )
+  if (kategoriBaru === null) return
+
+  // update data jika inputan teks gak kosong
+  if (teksBaru.trim() !== '') {
+    item.teks = teksBaru.trim()
+  }
+
+  // update kategori kalau kategori valid sesuai pilihan
+  const kategoriValid = ['Sekolah', 'Pribadi', 'Pekerjaan']
+  if (kategoriValid.includes(kategoriBaru.trim())) {
+    item.kategori = kategoriBaru.trim()
+  } else {
+    alert('Kategori tidak valid! Kategori tidak diubah.')
+  }
+}
+
+// fungsi Hapus Task
 function hapusTodo(id) {
   daftarTodo.value = daftarTodo.value.filter(t => t.id !== id)
 }
 </script>
 
 <style scoped>
+.search {
+    background-color: #272933;
+    color: #a0aec0;
+    border: 1px solid #4a5568;
+    padding: 6px 7px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 17px;
+}
+.btn {
+    background-color: #2a2d3e;
+    color: #a0aec0;
+    border: 1px solid #4a5568;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #00ffb3;
+    color: #1a1a1a;
+    border-color: #00ffb3;
+    font-weight: bold;
+}
+.btn:hover {
+  border-color: #00ffb3;
+  color: #ffffff;
+}
+.input {
+    background-color: #10ff8f;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    border: 1px solid #4a5568;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+.pilih-kategori {
+    background-color: #1a1a2e;
+    color: #a0aec0;
+    border: 1px solid #4a5568;
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.daftar-todo {
+  display: inline-block;
+  text-align: left;
+  margin-top: 15px;
+  padding-left: 20px;
+}
 </style>
