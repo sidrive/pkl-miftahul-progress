@@ -35,6 +35,10 @@
           <a href="#" @click.prevent="halamanAktif = 't22'">T2.2 Props Tervalidasi</a>
         </div>
 
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T3-W2</p>
+          <a href="#" @click.prevent="halamanAktif = 't3'">T3 Skill Mandiri</a>
+        </div>
       </div>
     </div>
 
@@ -73,6 +77,11 @@
       <!-- Memanggil Putaran 3 -->
       <T2_2_P3 namaProduk="Sepatu Running" :harga="250000" :stokTersedia="true" />
     </div>
+    
+    <div v-else-if="halamanAktif === 't3'">
+      <T3 />
+    </div>
+    
   </div>
 </template>
 
@@ -84,6 +93,7 @@ import T1_2_W2 from './T1.2.M3-W2.vue'
 import T2_1_W2 from './T2-M3-W2/T2.1.M3-W2.vue'
 import T2_2_W2 from './T2-M3-W2/T2.2.M3-W2.vue'
 import T2_2_P3 from './T2-M3-W2/T2.2.M3-W2.P3.vue'
+import T3 from './T3-M3-W2/MainTodo.vue'
 
 const halamanAktif = ref('beranda')
 
