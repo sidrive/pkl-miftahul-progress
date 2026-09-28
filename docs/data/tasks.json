@@ -988,27 +988,27 @@
           {
             "id": "M3.W3.T1.1",
             "text": "`computed()` — recap + **writable computed (BARU), 3 putaran**: putaran 1 recap singkat `computed()` yang sudah kamu pakai sendiri di fitur cari task (`todoTersaring`) — jelaskan ulang kenapa itu `computed` bukan function biasa; putaran 2 bikin `computed()` BARU untuk kasus lain yang read-only (misal total/rata-rata dari sebuah list); putaran 3 bikin **writable computed** (`computed({ get() {...}, set(value) {...} })`) untuk 1 kasus baru (misal 1 field gabungan yang bisa \"dipecah\" nulis-baliknya ke beberapa state lain, contoh: nama lengkap yang saat di-set akan memecah ke `namaDepan`+`namaBelakang`, atau sebaliknya)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T1.2",
             "text": "**[Wajib Refleksi]** Coba dulu: bikin 1 function biasa yang isinya mirip logic `computed()` di `T1.1`, tapi taruh sebagai method biasa dipanggil dari template (`{{ namaFunction() }}`), tambahkan `console.log` di dalamnya. Sebabkan komponen re-render beberapa kali lewat state LAIN yang tidak berhubungan dengan dependency `computed`/function itu (misal klik tombol counter terpisah), amati di console: berapa kali `console.log` di method biasa muncul dibanding kalau logic yang sama ditaruh di `computed()`. Jelaskan dengan kata sendiri: kenapa bedanya begitu, dan kapan cache dari `computed()` justru bisa jadi masalah (bukan cuma keuntungan)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T1.3",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `computed()` biasa, writable computed, dan `computed` vs method biasa — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T2.1",
             "text": "`watch()` dasar — **BARU, 3 putaran, kasus berbeda**: putaran 1 `watch()` 1 `ref()` sederhana (misal watch perubahan input pencarian, log ke console tiap berubah); putaran 2 `watch()` sumber lain yang beda topik (misal watch perubahan halaman aktif, jalankan efek samping berbeda tiap halaman); putaran 3 `watch()` dengan **2 sumber sekaligus** (array of sources, `watch([sumber1, sumber2], (…) => {…})`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T2.2",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: bikin 1 `reactive()` object (boleh reuse dari `M3.W2.T1.1`), `watch()` object itu **tanpa** opsi `{ deep: true }`, lalu ubah salah satu **property di dalamnya** (bukan ganti seluruh objectnya) — amati apakah callback `watch` terpicu. Bandingkan setelah kamu tambahkan `{ deep: true }`. Jelaskan dengan kata sendiri: kenapa `watch()` pada `reactive()` object tidak otomatis mendeteksi perubahan property di dalamnya tanpa `deep: true` — apa yang sebenarnya di-\"watch\" secara default (reference object-nya, atau isinya)?",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T2.3",
