@@ -2022,3 +2022,83 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 - **Capaian:** oke file untuk TodoList nya udah saya gandakan dan saya pindahkan ke folder untuk minggu 2 ini. saya udah kerjain task mandiri M3.W2.T3 dengan mengimplementasikan fitur Filter Kategori di TodoList, saya pilih opsi A. awal nya saya buat branch baru `fitur/filter-kategori`, lalu fitur ini saya pisah jadi tiga komponen di folder `T3-M3-W2`. State filter saya buat pakai `reactive()` di `MainTodo.vue`, habis itu daftar kategori dan kategori yang sedang aktif dikirim ke `FilterBar.vue` lewat props yang udah divalidasi. waktu kategori dipilih, `FilterBar.vue` ngirim nama kategori ke parent lewat emit dengan payload, lalu daftar tugas disaring pakai `computed()`. pada filter kategori udah saya tambahin fitur edit nama dan kategori task, tombol reset filter, serta merapikan tampilan dan navigasi di `TaskW2.vue`. semua fitur udah coba dan berjalan sesuai yang diharapkan. pengerjaan commit rapi dan masing masing udah di commit. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/14]
 - **Kesulitan:** sempet rada pusing waktu nyesuiin style CSS nya biar list nya pas di tengah tapi tetep rata kiri, sama sempet lupa pasang listener @edit di MainTodo makanya tombol editnya sempet gak responsif. Ttpi selebihnya aman waktu siap didebug satu satu. pengerjaan bisa di bilang agak mudah karna saya ambil file kode pada minggu lalu dan saya tempel pada folder minggu ini, perubahan file lumayan agak rumit menurut saya karna harus di sesuaikan lagi, tapi saya ubah aja beberapa kode nya. dan sekarang program udah berjalan dengan normal.
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-25
+
+<!-- ENTRY START -->
+
+### Task: M3.W2.T4
+- **Status:** ---
+- **Capaian:** ---
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-09-28 // Minggu 3
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T1.1
+- **Status:** done
+- **Capaian:** saya recap lagi konsep computed() dari todoTersaring, kenapa lebih cocok pakai computed() daripada function biasa karna hasilnya bisa di-cache dan gak perlu dihitung ulang terus kalau ada data yang dipakai gak berubah. habis itu saya juga buat computed() baru untuk ngehitung total harga dari list barang (Putaran 2). terakhir saya buat writable computed pakai get dan set untuk fitur nama lengkap, jadi saat nama lengkap diubah, nilainya bisa dipecah lagi ke nama depan dan nama belakang dan state aslinya tetap reaktif (Putaran 3).
+- **Kesulitan:** awalnya saya sempat mengalamin kesalahan soal penamaan file dan struktur navigasi komponen anak di TaskW3.vue. tapi udah disesuaikan dengan struktur yang benar, akhirnya bisa jalan dan gak ada kendala lagi.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T1.2
+- **Status:** done
+- **Capaian:** nyobain eksperimen bedain method biasa sama computed pakai pemicu tombol counter terpisah di console kalau method biasa dipanggil berulang kali tiap kali komponen re-render (diklik 12x ya dipanggil 12x), kalau computed cuma dipanggil 1x karena ada fitur caching selama dependency data belanjaannya gak berubah. jadi tau kalau computed gak cocok buat data non-reaktif kaya `Date.now()` atau `Math.random()`. jawaban:
+1. bedanya itu Method biasa lebih sering dipanggil, karna setiap komponen melakukan re-render, function yang dipanggil langsung di template akan dijalankan lagi. sedangkan kalau `computed()` gak ikut dihitung ulang kalau data yang menjadi dependency nya gak berubah, jadi hasil sebelumnya bisa dipakai lagi dari cache.
+
+2. yang di lakukan nya itu `computed()` nyimpan hasil perhitungannya dan tahu data apa aja yang dipakai di dalam perhitungannya. kalau dependency nya belum berubah, Vue gak perlu ngitung ulang, kalau dependency nya berubah, baru `computed()` dihitung lagi dan cache nya diperbarui. sedangkan method biasa gak punya sistem cache kaya gitu, jadi waktu dipanggil ya langsung menjalankan logic nya lagi.
+ 
+3. Cache itu bisa jadi masalah kalau kita emang butuh nilai yang selalu dihitung ulang tiap kali function dipanggil atau setiap render. misalnya ada function yang ngambil data atau menghasilkan nilai yang emang harus selalu diperbarui setiap kali dipanggil. kalau pakai `computed()`, hasil sebelumnya bisa tetap dipakai selama dependency yang terdeteksi gak berubah, jadi gak cocok untuk kasus yang memang butuh proses baru setiap kali dijalankan.
+- **Kesulitan:** ada eror bentar karna ada kode yang terduplikat di file T1.2-W3.vue sama typo nama impor di TaskW3.vue, tapi langsung aman setelah dirapiin. dan paham lah `computed()` ini.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T1.3
+- **Status:** done
+- **Capaian:** Jabawan 5 soal:
+1. bedanya itu `computed()` biasa cuma bisa membaca atau menghasilkan nilai dari dependency. kalau writable computed punya get dan set, jadi nilainya juga bisa diubah dan perubahan itu bisa diteruskan ke state aslinya.
+
+2. kita butuh pas kita punya 1 field gabungan di UI `(contoh: input nama lengkap)` yang kalau diubah nilainya, isinya mau otomatis dipecah dan disimpan ke beberapa state terpisah (nama depan & nama belakang).
+
+3. menurut saya ga di hitung ulang. karna Vue punya fitur caching, jadi selama data yang jadi dependency nya gak berubah, Vue bakal pakai hasil cache sebelumnya tanpa ngitung ulang walau ada state lain yang bikin komponen re-render.
+
+4. kerugian nya itu `Method` bisa dipanggil ulang setiap kali komponen re-render, walaupun data yang dihitung sebenarnya gak berubah. kalau perhitungannya banyak, ini bisa bikin proses jadi lebih boros.
+
+5. sas kita butuh ngahasilkan nilai turunan baru untuk langsung ditampilkan di template, contohnya ngitung total harga belanjaan atau nyaring list task. ini lebih cocok pakai `computed()` karna kita cuma butuh hasil dari data itu, bukan menjalankan efek samping seperti console.log atau manggil API.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T2.1
+- **Status:** done
+- **Capaian:** saya udah buat watch() 3 putaran. `Putaran 1` bikin watch() buat mantau perubahan kataKunci dan nampilin perubahan nilai di console. `Putaran 2` mantau jumlahBarang, lalu otomatis ngubah statusStok kalau jumlah barang berubah jadi 0 atau lebih. `Putaran 3` nyobain watch() dengan 2 sumber sekaligus yaitu namaDepan dan namaBelakang, lalu perubahan keduanya ditampilkan lewat logMultiSource. saya tau kalau `watch()` bisa mantau lebih dari 1 sumber sekaligus dan bisa menjalankan efek samping saat data yang dipantau berubah.
+- **Kesulitan:** ada kesalahan nama state di Putaran 2, jadi statusStok gak muncul sesuai yang diharapkan, tapi waktu udah di perbaiki nama state dirapiin langsung jalan. di Putaran 3 juga sempat perlu memahami cara mengambil nilai baru dan nilai lama dari 2 sumber sekaligus, tapi setelah dicoba akhirnya paham.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T2.2
+- **Status:** done
+- **Capaian:** Hasil Percobaan"
+   Percobaan 1 — reactive() object
+      waktu menggunakan `watch(() => profil)` tanpa `deep: true`, perubahan pada property seperti profil.nama dan `profil.umur` gak memicu callback `watch()`. waktu udah ditambahkan `{ deep: true }` perubahan property di dalam profil berhasil terdeteksi dan callback muncul di DevTools.
+   Percobaan 2 — ref() berisi array of object
+      waktu `watch(daftarHobi)` digunakan tanpa `deep: true`, perubahan property `item.aktif` di dalam object array gak memicu callback. tapi waktu udah ditambahkan `{ deep: true }`, perubahan `item.aktif` berhasil terdeteksi dan callback muncul di DevTools.
+
+1. setelah saya melakukan percobaan, tanpa `deep: true`, perubahan property yang ada di dalam object atau item array gak terdeteksi oleh `watch()`. setelah ditambah `deep: true`, perubahan property di dalamnya langsung terdeteksi dan callback `watch()` muncul di DevTools.
+
+2. dari percobaan saya, saat `reactive()` dipantau lewat `getter () => profil`, tanpa `deep: true` yang diperhatikan cuma hasil reference dari object itu. jadi walaupun `profil.nama` atau `profil.umur` berubah, reference object profil masih sama dan callback gak terpanggil. `deep: true` membuat `watch()` ikut masuk dan memantau property yang ada di dalam object.
+
+3. iya perlu, dari percobaan saya perlu `deep: true` kalau mau mendeteksi perubahan property di dalam item array. contohnya waktu `item.aktif` diubah, tanpa `deep: true` callback gak terpanggil, sedangkan setelah pakai `deep: true` perubahan tersebut langsung terdeteksi.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

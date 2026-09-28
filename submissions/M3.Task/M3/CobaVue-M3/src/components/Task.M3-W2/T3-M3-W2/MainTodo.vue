@@ -59,7 +59,7 @@ const daftarKategori = ['Semua', 'Sekolah', 'Pribadi', 'Pekerjaan']
 
 // data awal daftar tugas
 const daftarTodo = ref([
-  { id: 1, teks: "Belajar Vue Props & Emit", selesai: true, kategori: "Sekolah" },
+  { id: 1, teks: "Belajar Vue Props & Emit", selesai: false, kategori: "Sekolah" },
   { id: 2, teks: "Kerjakan Task M3.W2.T3", selesai: false, kategori: "Sekolah" },
   { id: 3, teks: "Beli Kopi & Camilan", selesai: false, kategori: "Pribadi" },
   { id: 4, teks: "Slicing Tampilan UI PKL", selesai: false, kategori: "Pekerjaan" }

@@ -27,14 +27,19 @@
             <h3>Minggu 2 (M3.W2)</h3>
             <p>Reactivity Lanjutan (reactive), Props & Emit</p>
           </button>
+
+          <button class="btn-minggu" @click="mingguAktif = 'w3'">
+            <h3>Minggu 3 (M3.W3)</h3>
+            <p>Computed() Lanjutan, Watch & Lifecycle Hooks</p>
+          </button>
         </div>
       </div>
 
-      <!-- 2. Tampilan Minggu 1 -->
       <TaskW1 v-else-if="mingguAktif === 'w1'" />
 
-      <!-- 3. Tampilan Minggu 2 -->
       <TaskW2 v-else-if="mingguAktif === 'w2'" />
+
+      <TaskW3 v-else-if="mingguAktif === 'w3'"  />
     </main>
   </div>
 </template>
@@ -43,6 +48,7 @@
 import { ref } from 'vue'
 import TaskW1 from './components/Task.M3-W1/TaskW1.vue'
 import TaskW2 from './components/Task.M3-W2/TaskW2.vue'
+import TaskW3 from './components/Task.M3-W3/TaskW3.vue'
 
 const mingguAktif = ref('')
 </script>
