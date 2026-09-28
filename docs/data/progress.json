@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-24T08:37:29.533Z",
-  "totalTasks": 215,
+  "generatedAt": "2026-09-28T00:16:21.876Z",
+  "totalTasks": 227,
   "doneTasks": 179,
-  "overallPercent": 83,
+  "overallPercent": 79,
   "perMonth": [
     {
       "number": 1,
@@ -21,9 +21,9 @@
     {
       "number": 3,
       "title": "Vue 3 Fundamental (13 Sep – 12 Okt 2026)",
-      "total": 28,
+      "total": 40,
       "done": 23,
-      "percent": 82
+      "percent": 57
     },
     {
       "number": 4,
