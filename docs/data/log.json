@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-09-29",
+    "task": "M3.W3.T3.2",
+    "status": "done",
+    "capaian": "saya udah cobain dan kerjakan `onUnmounted()` dalam 3 putaran. di putaran 1 saya buat timer pakai `setInterval()` lalu dihentikan pakai `clearInterval()` waktu component di-unmount. di putaran 2 saya nyobain event listener `mousemove`, lalu listener-nya dilepas pakai `removeEventListener()` saat component di-unmount, jadi di sini saya buat detek posisi mouse saat di klik. putaran 3 saya buat child component yang ditampilkan dan disembunyikan pakai `v-if`, jadi bisa lihat langsung proses mounted dan unmounted dari console.",
+    "kesulitan": "waktu kerjain masih sedikit bingung kapan `onUnmounted()` benar benar jalan, apalagi karna component utama gak langsung dihapus. tapi waktu saya coba pakai child component dan `v-if`, jadi tau nih kalau `onUnmounted()` dipakai buat berhentiin sesuatu yang udah gak dibutuhkan setelah component dihapus. udah di debugging juga dan akhirnya DOM terbukti jalan lancar pas dipantau dari log console atau devtools."
+  },
+  {
+    "date": "2026-09-29",
+    "task": "M3.W3.T3.1",
+    "status": "done",
+    "capaian": "saya udah buat `onMounted()` 3 putaran kasus berbeda. di Putaran 1 saya coba template ref buat ngakses elemen input setelah komponen selesai tampil dan bikin input otomatis fokus. di Putaran 2 saya simulasi proses fetch data pakai `setTimeout()`, jadi habis komponen mounted data dimasukkan ke state dan ditampilkan di halaman. di Putaran 3 saya kombinasikan `onMounted()` dengan `ref()` buat bikin pola loading, awalnya daftar produk masih kosong dan tampil loading doank, lalu kalau udah 3 detik data masuk dan loading berubah jadi selesai, nah jadi daftar produk muncul. dari sini jadi tau kalau `onMounted()` dipakai buat jalanin sesuatu habis komponen udah terpasang di halaman.",
+    "kesulitan": "awalnya agak bingung bedain fungsi `onMounted()` sama `ref()`, tapi setelah coba 3 putaran jadi lebih tau lah kalau `onMounted()` dipakai buat menjalankan sesuatu setelah komponen tampil, kalau `ref()` dipakai supaya perubahan pada data terdeteksi Vue dan tampilan ikut berubah."
+  },
+  {
+    "date": "2026-09-29",
+    "task": "M3.W3.T2.5",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-29",
+    "task": "M3.W3.T2.4",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-09-29",
+    "task": "M3.W3.T2.3",
+    "status": "done",
+    "capaian": "udah coba `watchEffect()` 3 putaran kasus yang berbeda. di Putaran 1 saya lihat `watchEffect()` langsung jalan 1x di awal secara otomatis tanpa perlu sebutin nama sumbernya. di Putaran 2 saya nyobain `multi-source` otomatis pakai `cpuUsage` sama `ramUsage` buat ngubah status peringatan sistem tanpa perlu dibungkus array kaya `watch()`. dan di Putaran 3 saya coba buktiin batas tracking, di mana `stateSync` yang dibaca secara sinkron berhasil tertrack, sedangkan `stateAsync` yang dibaca di dalam `setTimeout()` gak ikut ter-track sama `watchEffect()` karna pembacaannya terjadi setelah proses tracking awal selesai.",
+    "kesulitan": "awalnya agak bingung kenapa di putaran 3 karna `stateAsync` tetap bisa menampilkan nilai terbaru di console, tapi perubahan `stateAsync` sendiri gak membuat `watchEffect()` jalan ulang. tapi diperhatikan, ternyata yang terjadi adalah `setTimeout()` baru membaca `stateAsync` setelah proses tracking `watchEffect()` selesai, jadi `stateAsync` gak masuk ke dependency yang di-track."
+  },
+  {
     "date": "2026-09-28",
     "task": "M3.W3.T2.2",
     "status": "done",

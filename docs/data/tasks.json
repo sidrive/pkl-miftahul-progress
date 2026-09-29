@@ -1013,27 +1013,27 @@
           {
             "id": "M3.W3.T2.3",
             "text": "`watchEffect()` — **BARU, 3 putaran, kasus berbeda**: putaran 1 pakai `watchEffect()` untuk 1 kasus sederhana (perhatikan: **tidak perlu** sebutkan sumber yang di-watch secara eksplisit seperti `watch()`, dan langsung jalan sekali di awal tanpa trigger perubahan dulu — amati bedanya dari `watch()` biasa); putaran 2 kasus lain yang beda topik, dengan **lebih dari 1 reactive source** yang otomatis ke-track sekaligus di dalam 1 `watchEffect()`; putaran 3 kasus ketiga, kali ini sengaja masukkan 1 reactive source yang **TIDAK ingin** kamu track (misal taruh di luar cara yang membuatnya otomatis ter-track) — amati apakah `watchEffect()` tetap bereaksi ke situ atau tidak",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T2.4",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri, berdasarkan pengalaman `T2.1`–`T2.3`: apa beda `watch()` vs `watchEffect()` vs `computed()` — masing-masing lebih cocok dipakai kapan? (petunjuk arah eksplorasi, bukan jawaban: pikirkan apakah masing-masing MENGHASILKAN nilai baru untuk dipakai di template, atau cuma MENJALANKAN efek samping)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T2.5",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `watch`/`watchEffect`/`deep` — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T3.1",
             "text": "`onMounted()` — **BARU, 3 putaran, kasus berbeda**: putaran 1 pakai `onMounted()` untuk 1 kasus sederhana (misal `console.log` sekali saat komponen pertama kali tampil, atau baca sesuatu dari DOM lewat `ref` template setelah elemen benar-benar ada); putaran 2 kasus lain yang beda topik, kali ini **simulasikan fetch data** (boleh pakai `setTimeout` sebagai pengganti API asli, atau `fetch()` ke endpoint publik gratis semacam jsonplaceholder kalau mau coba beneran) yang mengisi state kamu setelah komponen mount; putaran 3 kasus ketiga yang beda lagi, kombinasikan `onMounted()` dengan `ref()`/`reactive()` yang sudah dipelajari (state awal kosong, baru terisi setelah `onMounted` jalan — amati bedanya render sebelum vs sesudah data masuk)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T3.2",
             "text": "`onUnmounted()` — **BARU, 3 putaran, kasus berbeda**: putaran 1 pasang sesuatu yang perlu \"dibersihkan\" saat komponen hilang (misal `setInterval`/`setTimeout` yang jalan terus, atau event listener manual lewat `window.addEventListener`) di `onMounted()`, lalu bersihkan lewat `clearInterval`/`clearTimeout`/`removeEventListener` di `onUnmounted()`; putaran 2 kasus lain yang beda topik dengan jenis \"pembersihan\" yang beda; putaran 3 kombinasikan dengan `v-if` di parent (component yang punya `onMounted`/`onUnmounted` ini ditampilkan/disembunyikan lewat `v-if` di parent, supaya `onUnmounted` beneran ke-trigger nyata, bukan cuma dibaca teorinya)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T3.3",

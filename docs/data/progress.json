@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-28T09:04:10.117Z",
+  "generatedAt": "2026-09-29T09:04:36.577Z",
   "totalTasks": 227,
-  "doneTasks": 184,
-  "overallPercent": 81,
+  "doneTasks": 189,
+  "overallPercent": 83,
   "perMonth": [
     {
       "number": 1,
@@ -22,8 +22,8 @@
       "number": 3,
       "title": "Vue 3 Fundamental (13 Sep – 12 Okt 2026)",
       "total": 40,
-      "done": 28,
-      "percent": 70
+      "done": 33,
+      "percent": 83
     },
     {
       "number": 4,
@@ -61,8 +61,8 @@
       "percent": 0
     }
   ],
-  "currentStreakDays": 1,
+  "currentStreakDays": 2,
   "blockedTasks": [],
-  "totalLogEntries": 173,
-  "lastLogDate": "2026-09-28"
+  "totalLogEntries": 178,
+  "lastLogDate": "2026-09-29"
 }
