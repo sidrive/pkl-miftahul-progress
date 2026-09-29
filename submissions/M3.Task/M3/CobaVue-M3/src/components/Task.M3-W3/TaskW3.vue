@@ -32,6 +32,21 @@
           <p>Klik untuk ke tugas T2.2-W3</p>
           <a href="#" @click.prevent="halamanAktif = 't22'">T2.2 Percobaan</a>
         </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T2.3-W3</p>
+          <a href="#" @click.prevent="halamanAktif = 't23'">T2.3 Watch() Dasar Pt 2</a>
+        </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T3.1-W3</p>
+          <a href="#" @click.prevent="halamanAktif = 't31'">T3.1 onMounted()</a>
+        </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T3.2-W3</p>
+          <a href="#" @click.prevent="halamanAktif = 't32'">T3.2 onMounted() Pt 2</a>
+        </div>
       </div>
     </div>
 
@@ -51,15 +66,29 @@
       <T2_2_W3 />
     </div>
 
+    <div v-else-if="halamanAktif === 't23'">
+      <T2_3_W3 />
+    </div>
+
+    <div v-else-if="halamanAktif === 't31'">
+      <T3_1_W3 />
+    </div>
+
+    <div v-else-if="halamanAktif === 't32'">
+      <T3_2_W3 />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import T1_1_W3 from './T1.1-W3.vue'
-import T1_2_W3 from './T1.2-W3.vue';
+import T1_2_W3 from './T1.2-W3.vue'
 import T2_1_W3 from './T2.1-W3.vue'
 import T2_2_W3 from './T2.2-W3.vue'
+import T2_3_W3 from './T2.3-W3.vue'
+import T3_1_W3 from './T3.1-W3.vue'
+import T3_2_W3 from './T3.2-W3.vue'
 
 const halamanAktif = ref('beranda')
 </script>

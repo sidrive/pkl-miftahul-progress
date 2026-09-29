@@ -2,6 +2,7 @@
   <div class="box-simpel">
     <h3>Task T2.2 — Watch pada Reactive & Opsi Deep</h3>
     <p>buka devtools untuk melihat perbedaan</p>
+    <p>buka file kode ini dan lihat perbandingan pakai {deep: true} dan tidak pakai</p>
 
     <!-- Eksperimen 1: Reactive Object -->
     <div>

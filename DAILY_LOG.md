@@ -2102,3 +2102,61 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 3. iya perlu, dari percobaan saya perlu `deep: true` kalau mau mendeteksi perubahan property di dalam item array. contohnya waktu `item.aktif` diubah, tanpa `deep: true` callback gak terpanggil, sedangkan setelah pakai `deep: true` perubahan tersebut langsung terdeteksi.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-29
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T2.3
+- **Status:** done
+- **Capaian:** udah coba `watchEffect()` 3 putaran kasus yang berbeda. di Putaran 1 saya lihat `watchEffect()` langsung jalan 1x di awal secara otomatis tanpa perlu sebutin nama sumbernya. di Putaran 2 saya nyobain `multi-source` otomatis pakai `cpuUsage` sama `ramUsage` buat ngubah status peringatan sistem tanpa perlu dibungkus array kaya `watch()`. dan di Putaran 3 saya coba buktiin batas tracking, di mana `stateSync` yang dibaca secara sinkron berhasil tertrack, sedangkan `stateAsync` yang dibaca di dalam `setTimeout()` gak ikut ter-track sama `watchEffect()` karna pembacaannya terjadi setelah proses tracking awal selesai.
+- **Kesulitan:** awalnya agak bingung kenapa di putaran 3 karna `stateAsync` tetap bisa menampilkan nilai terbaru di console, tapi perubahan `stateAsync` sendiri gak membuat `watchEffect()` jalan ulang. tapi diperhatikan, ternyata yang terjadi adalah `setTimeout()` baru membaca `stateAsync` setelah proses tracking `watchEffect()` selesai, jadi `stateAsync` gak masuk ke dependency yang di-track.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T2.4
+- **Status:** done
+- **Capaian:** jawaban: 
+1. dari ketiganya yang menghasilkan nilai baru itu `Computed()` karna `computed()` ini yang dia menghasilkan nilai baru dan hasilnya bisa langsung dipakai di template, contohnya waktu kita bikin hasil filter todo dan total harga. sedangkan `watch()` dan `watchEffect()` lebih dipakai buat menjalankan efek samping waktu ada perubahan data, kaya waktu di T2.1 kita pakai `watch()` buat lihat perubahan data dan di T2.3 `watchEffect()` buat menjalankan pengecekan `cpuUsage` dan `ramUsage`.
+
+2. bedanya itu kalau `watch()`, kita harus menentukan sendiri sumber yang mau dipantau, seperti waktu T2.1 pakai `watch(kataKunci, ...)` dan `watch([namaDepan, namaBelakang], ...)`. nah sedangkan `watchEffect()`, kita gak perlu sebutin nama sumbernya sama sekali karena Vue otomatis melacak variabel reaktif apa aja yang dipanggil di dalam fungsinya, plus `watchEffect()` langsung otomatis jalan 1 kali di awal secara sinkron saat komponen dimuat.
+
+3. saya bakal pilih `computed()` kalau saya butuh buat nilai baru dari data yang udah ada dan hasilnya mau ditampilkan di template, misalnya daftar todo yang udah difilter berdasarkan kategori. kalau `watch()` saya pilih saat ada data tertentu yang mau saya pantau perubahan jumlah barang spesifik buat ngubah status stok jadi 'Stok Kosong' atau saat butuh akses nilai lama vs nilai baru dan saya ingin melakukan sesuatu ketika data itu berubah, seperti memantau kata kunci pencarian. sedangkan `watchEffect()` saya pilih waktu ada beberapa reactive data yang dipakai dalam satu proses dan saya mau Vue otomatis men-track data itu, kaya percobaan `cpuUsage` dan `ramUsage` di T2.3.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T2.5
+- **Status:** done
+- **Capaian:** jawaban: 
+1. yang terjadi itu dia ga bakal muncul di devtools untuk hasil nya dan dia gak bakal terpicu sama sekali, karna secara default Vue cuma mantau reference atau alamat memori dari objek itu, bukan isi property di dalamnya.
+
+2. bedanya `watch()` kita harus menentukan sumber yang mau di pantau, nah kalau `watchEffect` kita gak perlu nentuin sumber nya karna dia udah otomatis melacak variable reaktif yang dibaca di dalam function-nya, jadi kita gak perlu nyebutin sumbernya satu satu.
+
+3. iya dia langsung jalan sekali di awal saat pertama dibuat pada saat komponen pertamanya dibuat, tanpa harus nunggu ada perubahan data dulu.
+
+4. dipakai dalam kasus kalau butuh mantau perubahan dari 2 atau lebih sumber reaktif sekaligus dalam satu fungsi callback, contohnya kaya memantau `hargaBarang` dan `jumlahBeli` sekaligus buat ngitung total belanjaan atau kombinasi filter pencarian.
+
+5. kita pakai `computed` untuk menampilkan template, ini cocok buat menghasilkan nilai baru yang mau langsung ditampilkan di template, kalau watch() cocok buat menjalankan efek samping (side effects) kaya console.log, ngubah status state lain, atau panggil API saat data yang dipantau berubah.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T3.1
+- **Status:** done
+- **Capaian:** saya udah buat `onMounted()` 3 putaran kasus berbeda. di Putaran 1 saya coba template ref buat ngakses elemen input setelah komponen selesai tampil dan bikin input otomatis fokus. di Putaran 2 saya simulasi proses fetch data pakai `setTimeout()`, jadi habis komponen mounted data dimasukkan ke state dan ditampilkan di halaman. di Putaran 3 saya kombinasikan `onMounted()` dengan `ref()` buat bikin pola loading, awalnya daftar produk masih kosong dan tampil loading doank, lalu kalau udah 3 detik data masuk dan loading berubah jadi selesai, nah jadi daftar produk muncul. dari sini jadi tau kalau `onMounted()` dipakai buat jalanin sesuatu habis komponen udah terpasang di halaman.
+- **Kesulitan:** awalnya agak bingung bedain fungsi `onMounted()` sama `ref()`, tapi setelah coba 3 putaran jadi lebih tau lah kalau `onMounted()` dipakai buat menjalankan sesuatu setelah komponen tampil, kalau `ref()` dipakai supaya perubahan pada data terdeteksi Vue dan tampilan ikut berubah.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T3.2
+- **Status:** done
+- **Capaian:**  saya udah cobain dan kerjakan `onUnmounted()` dalam 3 putaran. di putaran 1 saya buat timer pakai `setInterval()` lalu dihentikan pakai `clearInterval()` waktu component di-unmount. di putaran 2 saya nyobain event listener `mousemove`, lalu listener-nya dilepas pakai `removeEventListener()` saat component di-unmount, jadi di sini saya buat detek posisi mouse saat di klik. putaran 3 saya buat child component yang ditampilkan dan disembunyikan pakai `v-if`, jadi bisa lihat langsung proses mounted dan unmounted dari console.
+- **Kesulitan:** waktu kerjain masih sedikit bingung kapan `onUnmounted()` benar benar jalan, apalagi karna component utama gak langsung dihapus. tapi waktu saya coba pakai child component dan `v-if`, jadi tau nih kalau `onUnmounted()` dipakai buat berhentiin sesuatu yang udah gak dibutuhkan setelah component dihapus. udah di debugging juga dan akhirnya DOM terbukti jalan lancar pas dipantau dari log console atau devtools.
+<!-- ENTRY END -->
