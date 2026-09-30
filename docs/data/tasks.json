@@ -1038,12 +1038,12 @@
           {
             "id": "M3.W3.T3.3",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari salah satu percobaan `T3.2`, **hapus dulu** pembersihan di `onUnmounted()` (sengaja bikin salah, biarkan `setInterval`/listener tetap jalan), lalu sembunyikan/hapus komponennya lewat `v-if` berkali-kali, amati di console (`console.log` di dalam interval/listener yang lupa dibersihkan) apakah dia tetap jalan terus walau komponennya sudah \"hilang\" dari tampilan. Jelaskan dengan kata sendiri: kenapa lupa cleanup di `onUnmounted()` bisa jadi masalah (kaitkan ke istilah \"memory leak\" — cari tahu sendiri istilah ini kalau belum familiar, jelaskan dengan bahasamu sendiri apa maksudnya di konteks kasus ini)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T3.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `onMounted`/`onUnmounted`/kenapa cleanup penting — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T4",
