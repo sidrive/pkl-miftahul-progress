@@ -2160,3 +2160,37 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 - **Capaian:**  saya udah cobain dan kerjakan `onUnmounted()` dalam 3 putaran. di putaran 1 saya buat timer pakai `setInterval()` lalu dihentikan pakai `clearInterval()` waktu component di-unmount. di putaran 2 saya nyobain event listener `mousemove`, lalu listener-nya dilepas pakai `removeEventListener()` saat component di-unmount, jadi di sini saya buat detek posisi mouse saat di klik. putaran 3 saya buat child component yang ditampilkan dan disembunyikan pakai `v-if`, jadi bisa lihat langsung proses mounted dan unmounted dari console.
 - **Kesulitan:** waktu kerjain masih sedikit bingung kapan `onUnmounted()` benar benar jalan, apalagi karna component utama gak langsung dihapus. tapi waktu saya coba pakai child component dan `v-if`, jadi tau nih kalau `onUnmounted()` dipakai buat berhentiin sesuatu yang udah gak dibutuhkan setelah component dihapus. udah di debugging juga dan akhirnya DOM terbukti jalan lancar pas dipantau dari log console atau devtools.
 <!-- ENTRY END -->
+
+---
+
+## 2026-09-30
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T3.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. setelah saya amati dan lihat pada DevTools interval yang gak dibersihkan ternyata gak berhenti walaupun component udah hilang dari tampilan. `setInterval()` masih tetap jalan di belakang layar dan log nya masih muncul di console. waktu component ditampilkan lagi, interval baru juga dibuat jadi jumlah timer yang jalan makin bertambah dan tetap jalan.
+
+2. saya cari tau apa itu memory leak dan saya dapatkan jawaban kalau memory leak itu kondisi dimana sebuah aplikasi atau program itu masih mempertahankan data atau elemen walaupun komponen atau data itu udah gak dibutuhin lagi. di percobaan saya, contohnya `setInterval()` masih terus jalan walaupun component yang membuatnya udah dihapus. kalau component dipasang lagi, dibuat interval baru lagi sedangkan interval lama masih jalan.
+
+3. menurut saya yang bakal muncul adalah bug dan tumpukan data yang membuat sistem bakal berat dan resource browser bisa makin banyak kepakai karna banyak proses yang sebenarnya udah gak dibutuhkan tapi masih berjalan. ini bisa buat aplikasi atau sistem bisa jadi makin berat atau lambat, dan kalau prosesnya banyak bisa bikin performa aplikasi terganggu.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T3.4
+- **Status:** done
+- **Capaian:** jawaban =
+1. `onMounted()` dijalankan waktu component selesai dipasang dan tampil di halaman/DOM. jadi kita bisa menjalankan sesuatu setelah component benar benar udah nampil.
+
+2. `onUnmounted()` dijalankan setelah component dihapus atau dilepas dari halaman/DOM, misalnya saat component disembunyikan pakai `v-if`.
+
+3. 1. `setInterval()` yang dibuat di `onMounted()` 2. event listener kaya mousemove yang dipasang ke window.
+
+4. yang terjadi `setInterval()` bisa tetap jalan walaupun component nya udah dihapus dari tampilan. kalau component dipasang lagi, interval baru bisa dibuat lagi jadi timer yang berjalan makin banyak dan bisa buat resource browser makin kepakai dan berat.
+
+5. di taruh di `onMounted()` dulu karna `onMounted()` dijalankan setelah component udah dipasang di halaman, jadi cocok buat mulai proses ambil data siap component nya siap. kalau langsung di level atas `<script setup>`, prosesnya dijalankan waktu setup component, sebelum component selesai dipasang ke DOM.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
