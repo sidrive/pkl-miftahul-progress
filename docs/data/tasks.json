@@ -1048,7 +1048,7 @@
           {
             "id": "M3.W3.T4",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Tambahkan 1 fitur baru ke to-do list Vue (`M3.W2.T3`) yang **menggabungkan** `computed()`/`watch()`/lifecycle hooks — pilih salah satu: (a) fitur pencarian dengan **debounce** (input `watch()`, tunda proses filter pakai `setTimeout` yang di-reset tiap ketikan baru, bersihkan timeout tersisa di `onUnmounted()`), atau (b) **load data awal** to-do list lewat `onMounted()` (simulasi fetch, bukan array hardcode lagi), dipadukan `watch()` untuk log otomatis tiap kali `daftarTodo` berubah. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W3.T5",
