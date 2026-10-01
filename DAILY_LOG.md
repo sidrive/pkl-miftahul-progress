@@ -2194,3 +2194,15 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 5. di taruh di `onMounted()` dulu karna `onMounted()` dijalankan setelah component udah dipasang di halaman, jadi cocok buat mulai proses ambil data siap component nya siap. kalau langsung di level atas `<script setup>`, prosesnya dijalankan waktu setup component, sebelum component selesai dipasang ke DOM.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-01
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T4
+- **Status:** done
+- **Capaian:** untuk task ini saya memilih opsi A yaitu pencarian dengan devounce di todo list (Opsi A), udah saya buat juga branch dengan nama `fitur/T4-W3-search`. di task ini saya coba gabungin `watch()`, `computed()`, dan `onUnmounted()` ke fitur pencarian. jadi input pencarian di watch pakai `watch()`, terus tiap kali kita coba ngetik, timer sebelumnya dibatalin dan dibuat timer baru pakai `setTimeout()`. kalau udah gak ngetik selama 500ms, baru kata kuncinya dipakai buat filter daftar todo lewat `computed()`. saya juga tambahin `onUnmounted()` buat ngebersihin timer yang masih jalan kalau component dilepas. udah saya buat juga untuk PR nya, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/15]
+- **Kesulitan:** waktu awal awal ngerjain sempat ada beberapa error, terutama bagian filter yang gak mau jalan dan ada tampilan error di web. sempat juga ada kesalahan pemanggilan variabel waktu ngerjain, jadi harus dicek lagi bagian mana yang salah. selain itu saya juga sempat sedikit pusing sama alur pengerjaannya harus gimana, apa yang harus di ubah dan ditambahkan kan dari yang lama, dan apalagi hubungan antara `watch()`, debounce, dan `computed()`. dan akhir nya udah saya buat masih banyak bug nya juga cuma udah di fix kan dan di debugging hasilnya udah aman.
+<!-- ENTRY END -->
