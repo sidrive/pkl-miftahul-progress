@@ -1,23 +1,31 @@
 <template>
   <div class="todo-container">
-    <h2>To-Do List Filter Kategori</h2>
+    <h2>To-Do List Filter Kategori & Pencarian</h2>
 
     <div class="search">
-    <form @submit.prevent="tambahTodo">
-      <input class="input" type="text" v-model="inputTeks" placeholder="Ketik task baru..." required /> | 
-      
+      <form @submit.prevent="tambahTodo">
+        <input class="input" type="text" v-model="inputTeks" placeholder="Ketik task baru..." required /> | 
+        
         <select class="pilih-kategori" v-model="inputKategori">
             <option value="Sekolah">Sekolah</option>
             <option value="Pribadi">Pribadi</option>
             <option value="Pekerjaan">Pekerjaan</option>
         </select> |
 
-      <button type="submit" class="btn">Tambah</button>
-    </form>
+        <button type="submit" class="btn">Tambah</button>
+      </form>
     </div>
     <br />
 
-    <!-- FilterBar -->
+    <!-- input pencarian pakai DEBOUNCE (Opsi A) -->
+    <div style="margin-bottom: 12px;">
+      <input class="input" type="text" v-model="kataKunci" placeholder="Cari tugas..." style="width: 250px;"/><br>
+      <small style="margin-left: 8px; color: #a0aec0;" v-if="sedangMencari">
+        🔍 Wait Yah Broh... (Menunggu berhenti ngetik)
+      </small>
+    </div>
+
+    <!-- FilterBar Kategori -->
     <FilterBar 
       :daftarKategori="daftarKategori"
       :kategoriAktif="stateFilter.kategoriAktif"
@@ -25,7 +33,7 @@
     />
     <br />
 
-    <!-- daftar Todo  -->
+    <!-- Daftar Todo -->
     <ul class="daftar-todo">
       <TodoList
         v-for="todo in todoTersaring"
@@ -37,48 +45,79 @@
       />
     </ul>
 
-    <p v-if="todoTersaring.length === 0">gak ada tugas di kategori ini.</p>
+    <p v-if="todoTersaring.length === 0">Gak ada tugas yang cocok.</p>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, watch, onUnmounted } from 'vue'
 import FilterBar from './FilterBar.vue'
 import TodoList from './TodoList.vue'
 
 const inputTeks = ref('')
 const inputKategori = ref('Sekolah')
 
-// State Filter pake reactive()
+// State Filter Kategori
 const stateFilter = reactive({
   kategoriAktif: 'Semua'
 })
 
-// daftar tombol filter yang tersedia
 const daftarKategori = ['Semua', 'Sekolah', 'Pribadi', 'Pekerjaan']
 
-// data awal daftar tugas
 const daftarTodo = ref([
-  { id: 1, teks: "Belajar Vue Props & Emit", selesai: false, kategori: "Sekolah" },
-  { id: 2, teks: "Kerjakan Task M3.W2.T3", selesai: false, kategori: "Sekolah" },
+  { id: 1, teks: "Selesaikan Tugas MPP", selesai: false, kategori: "Sekolah" },
+  { id: 2, teks: "Kerjakan Project Robotic", selesai: false, kategori: "Sekolah" },
   { id: 3, teks: "Beli Kopi & Camilan", selesai: false, kategori: "Pribadi" },
-  { id: 4, teks: "Slicing Tampilan UI PKL", selesai: false, kategori: "Pekerjaan" }
+  { id: 4, teks: "Buat Flowchart untuk nasi goreng", selesai: false, kategori: "Pekerjaan" }
 ])
 
-// penyaring Otomatis (Computed Property)
-const todoTersaring = computed(() => {
-  if (stateFilter.kategoriAktif === 'Semua') {
-    return daftarTodo.value
+// DEBOUNCE SEARCH - Opsi A: pakai Watcher + setTimeout
+const kataKunci = ref('')           // nempel ke input search
+const kataKunciDebounce = ref('')   // dipakai buat filter nyata siap delay
+const sedangMencari = ref(false)    // indikator UI waktu mengetik
+let timerDebounce = null
+
+// Watcher untuk reset timer tiap ada ketikan baru
+watch(kataKunci, (nilaiBaru) => {
+  sedangMencari.value = true
+
+  // reset/batalkan timeout sebelumnya biar gak eksekusi bertumpuk
+  if (timerDebounce) {
+    clearTimeout(timerDebounce)
   }
-  return daftarTodo.value.filter(todo => todo.kategori === stateFilter.kategoriAktif)
+
+  // jeda update kataKunciDebounce selama 500ms
+  timerDebounce = setTimeout(() => {
+    kataKunciDebounce.value = nilaiBaru
+    sedangMencari.value = false
+    console.log(`[DEBOUNCE] Pencarian dieksekusi: "${nilaiBaru}"`)
+  }, 500)
 })
 
-// fungsi penerima kabar dari anak (FilterBar)
+// Cleanup timeout di onUnmounted kalau komponen dihancurkan (Memory Leak)
+onUnmounted(() => {
+  if (timerDebounce) {
+    clearTimeout(timerDebounce)
+    console.log('[DEBOUNCE] Cleanup timerDebounce di onUnmounted()')
+  }
+})
+
+// nyaring Otomatis (Computed Property): gabungan Kategori + Search
+const todoTersaring = computed(() => {
+  return daftarTodo.value.filter(todo => {
+    // cek Kategori
+    const cocokKategori = stateFilter.kategoriAktif === 'Semua' || todo.kategori === stateFilter.kategoriAktif
+    // cek Teks Search (gunakan kataKunciDebounce)
+    const cocokSearch = todo.teks.toLowerCase().includes(kataKunciDebounce.value.toLowerCase())
+
+    return cocokKategori && cocokSearch
+  })
+})
+
 function tanganiUbahKategori(kategoriBaru) {
   stateFilter.kategoriAktif = kategoriBaru
 }
 
-// fungsi Tambah Task
 function tambahTodo() {
   if (inputTeks.value.trim() === '') return
   daftarTodo.value.push({
@@ -90,35 +129,28 @@ function tambahTodo() {
   inputTeks.value = ''
 }
 
-// fungsi Toggle Centang Selesai
 function toggleSelesai(id) {
   const item = daftarTodo.value.find(t => t.id === id)
   if (item) item.selesai = !item.selesai
 }
 
-// fungsi Edit teks dan kategori task
 function editTodo(id) {
-  // cari data task yang mau di edit berdasarkan ID
   const item = daftarTodo.value.find(t => t.id === id)
   if (!item) return
 
-  // pop-up pertama: Edit teks task
   const teksBaru = prompt('Edit nama task:', item.teks)
   if (teksBaru === null) return
 
-  // pop-up kedua: Edit kategori task
   const kategoriBaru = prompt(
     'Edit kategori (Pilihan: Sekolah, Pribadi, Pekerjaan):', 
     item.kategori
   )
   if (kategoriBaru === null) return
 
-  // update data jika inputan teks gak kosong
   if (teksBaru.trim() !== '') {
     item.teks = teksBaru.trim()
   }
 
-  // update kategori kalau kategori valid sesuai pilihan
   const kategoriValid = ['Sekolah', 'Pribadi', 'Pekerjaan']
   if (kategoriValid.includes(kategoriBaru.trim())) {
     item.kategori = kategoriBaru.trim()
@@ -127,7 +159,6 @@ function editTodo(id) {
   }
 }
 
-// fungsi Hapus Task
 function hapusTodo(id) {
   daftarTodo.value = daftarTodo.value.filter(t => t.id !== id)
 }
