@@ -47,6 +47,11 @@
           <p>Klik untuk ke tugas T3.2-W3</p>
           <a href="#" @click.prevent="halamanAktif = 't32'">T3.2 onMounted() Pt 2</a>
         </div>
+
+        <div class="item-tugas">
+          <p>Klik untuk ke tugas T4-W3</p>
+          <a href="#" @click.prevent="halamanAktif = 't4'">T4-W3 TodoList V3</a>
+        </div>
       </div>
     </div>
 
@@ -77,6 +82,10 @@
     <div v-else-if="halamanAktif === 't32'">
       <T3_2_W3 />
     </div>
+
+    <div v-else-if="halamanAktif === 't4'">
+      <T4_W3 />
+    </div>
   </div>
 </template>
 
@@ -89,6 +98,7 @@ import T2_2_W3 from './T2.2-W3.vue'
 import T2_3_W3 from './T2.3-W3.vue'
 import T3_1_W3 from './T3.1-W3.vue'
 import T3_2_W3 from './T3.2-W3.vue'
+import T4_W3 from './T4-W3/MainTodo.vue'
 
 const halamanAktif = ref('beranda')
 </script>
