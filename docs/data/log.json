@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-02",
+    "task": "M3.W3.T5",
+    "status": "done",
+    "capaian": "udah menunjukkan hasil dari pengerjaan task dan mentor meminta memodifikasi dadakan, pada saat sedang mengerjakan perubahan dadakan cukup lambat juga untuk mengerjakan, dan mentor ada task dadadakan juag sepertinya sehingga task ini dijadikan sebagai task biasa dan udah siap di kerjakan.",
+    "kesulitan": "waktu mentor minta perubahan pada bagian filter bar ada eror, setelah di baca ulang rupanya eror nya karna tanda `]` ini doank yang salah taruh, jadi kode eror itu seperti ini kodenya"
+  },
+  {
     "date": "2026-10-01",
     "task": "M3.W3.T4",
     "status": "done",
@@ -93,9 +100,9 @@
   {
     "date": "2026-09-25",
     "task": "M3.W2.T4",
-    "status": "---",
-    "capaian": "---",
-    "kesulitan": "---"
+    "status": "done",
+    "capaian": "udah menunjukan hasil dari task mandiri T3, dan dibahas diminggu ke 3 tanggal `2026-10-02` digabungkan dengan evaluasi minggu 3, udah menunjukkan hasil dari TodoList nya juga",
+    "kesulitan": "selama menjelaskan hasil dari T3 aman aja."
   },
   {
     "date": "2026-09-24",

@@ -977,7 +977,7 @@
           {
             "id": "M3.W2.T4",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo fitur baru dari `T3` langsung jalan, jelaskan kenapa pakai `reactive()` di bagian tertentu (bukan `ref()`), jelaskan validasi `props` yang dipakai, review PR bareng, **mentor minta modifikasi dadakan** di kode yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum destructuring `reactive()` + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
@@ -1053,7 +1053,7 @@
           {
             "id": "M3.W3.T5",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo fitur baru dari `T4` langsung jalan, jelaskan kenapa pakai `watch()`/`watchEffect()`/`computed()` di bagian masing-masing (bukan yang lain), jelaskan kenapa ada cleanup di `onUnmounted()` (atau kenapa tidak perlu kalau memang tidak ada), review PR bareng, **mentor minta modifikasi dadakan** di kode yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum `watch()` tanpa `deep` di `reactive()` object + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
