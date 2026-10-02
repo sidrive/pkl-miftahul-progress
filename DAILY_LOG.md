@@ -2030,9 +2030,9 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 <!-- ENTRY START -->
 
 ### Task: M3.W2.T4
-- **Status:** ---
-- **Capaian:** ---
-- **Kesulitan:** ---
+- **Status:** done
+- **Capaian:** udah menunjukan hasil dari task mandiri T3, dan dibahas diminggu ke 3 tanggal `2026-10-02` digabungkan dengan evaluasi minggu 3, udah menunjukkan hasil dari TodoList nya juga
+- **Kesulitan:** selama menjelaskan hasil dari T3 aman aja.
 <!-- ENTRY END -->
 
 ---
@@ -2205,4 +2205,35 @@ Jadi parent akan menerima object yang berisi lebih dari satu data tersebut.
 - **Status:** done
 - **Capaian:** untuk task ini saya memilih opsi A yaitu pencarian dengan devounce di todo list (Opsi A), udah saya buat juga branch dengan nama `fitur/T4-W3-search`. di task ini saya coba gabungin `watch()`, `computed()`, dan `onUnmounted()` ke fitur pencarian. jadi input pencarian di watch pakai `watch()`, terus tiap kali kita coba ngetik, timer sebelumnya dibatalin dan dibuat timer baru pakai `setTimeout()`. kalau udah gak ngetik selama 500ms, baru kata kuncinya dipakai buat filter daftar todo lewat `computed()`. saya juga tambahin `onUnmounted()` buat ngebersihin timer yang masih jalan kalau component dilepas. udah saya buat juga untuk PR nya, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/15]
 - **Kesulitan:** waktu awal awal ngerjain sempat ada beberapa error, terutama bagian filter yang gak mau jalan dan ada tampilan error di web. sempat juga ada kesalahan pemanggilan variabel waktu ngerjain, jadi harus dicek lagi bagian mana yang salah. selain itu saya juga sempat sedikit pusing sama alur pengerjaannya harus gimana, apa yang harus di ubah dan ditambahkan kan dari yang lama, dan apalagi hubungan antara `watch()`, debounce, dan `computed()`. dan akhir nya udah saya buat masih banyak bug nya juga cuma udah di fix kan dan di debugging hasilnya udah aman.
+<!-- ENTRY END -->
+
+---
+
+## 2026-10-02
+
+<!-- ENTRY START -->
+
+### Task: M3.W3.T5
+- **Status:** done
+- **Capaian:** udah menunjukkan hasil dari pengerjaan task dan mentor meminta memodifikasi dadakan, pada saat sedang mengerjakan perubahan dadakan cukup lambat juga untuk mengerjakan, dan mentor ada task dadadakan juag sepertinya sehingga task ini dijadikan sebagai task biasa dan udah siap di kerjakan.
+- **Kesulitan:** waktu mentor minta perubahan pada bagian filter bar ada eror, setelah di baca ulang rupanya eror nya karna tanda `]` ini doank yang salah taruh, jadi kode eror itu seperti ini kodenya
+```javascript
+const daftarKategori = computed(() => {
+  const kategoriAda = daftarTodo.value.map(todo => todo.kategori)
+  const kategoriUnik = [...new Set(kategoriAda)
+
+  return['Semua', ...kategoriUnik]
+  ]
+})
+```
+nah bisa dilihat kaya ga ada salah, tapi setelah di lihat lagi ada kesalahan, harusnya kode yang benar itu kaya gini
+```JavaScript
+const daftarKategori = computed(() => {
+  const kategoriAda = daftarTodo.value.map(todo => todo.kategori)
+  const kategoriUnik = [...new Set(kategoriAda)]
+
+  return ['Semua', ...kategoriUnik]
+})
+```
+yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...new Set(kategoriAda)]`, makanya eror, sekarang kode nya udah ga eror lagi dan berjalan sesuai kemauan.
 <!-- ENTRY END -->

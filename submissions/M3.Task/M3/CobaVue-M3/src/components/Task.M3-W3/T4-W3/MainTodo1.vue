@@ -20,12 +20,12 @@
     <br />
 
     <!-- input pencarian pakai DEBOUNCE (Opsi A) -->
-    <div>
+    <div style="margin-bottom: 12px;">
       <input class="input" type="text" v-model="kataKunci" placeholder="Cari tugas..." style="width: 250px;"/><br>
       <small style="margin-left: 8px; color: #a0aec0;" v-if="sedangMencari">
         🔍 Wait Yah Broh... (Menunggu berhenti ngetik)
       </small>
-    </div><br>
+    </div>
 
     <!-- FilterBar Kategori -->
     <FilterBar 
@@ -64,23 +64,14 @@ const stateFilter = reactive({
   kategoriAktif: 'Semua'
 })
 
+const daftarKategori = ['Semua', 'Sekolah', 'Pribadi', 'Pekerjaan']
+
 const daftarTodo = ref([
   { id: 1, teks: "Selesaikan Tugas MPP", selesai: false, kategori: "Sekolah" },
   { id: 2, teks: "Kerjakan Project Robotic", selesai: false, kategori: "Sekolah" },
   { id: 3, teks: "Beli Kopi & Camilan", selesai: false, kategori: "Pribadi" },
   { id: 4, teks: "Buat Flowchart untuk nasi goreng", selesai: false, kategori: "Pekerjaan" }
 ])
-
-// biar filterkategori dia menghilang saat task yang ada pada kategori di hapus (task sesuai kategoti 0)
-const daftarKategori = computed(() =>{
-  const kategoriAda = daftarTodo.value.map(todo => todo.kategori)
-
-  // buang duplikat pakai Set (misal 'Sekolah' ada 2, diambil 1 aja)
-  const kategoriUnik = [...new Set(kategoriAda)]
-
-  // gabungkan 'Semua' di depan
-  return ['Semua', ...kategoriUnik]
-})
 
 // DEBOUNCE SEARCH - Opsi A: pakai Watcher + setTimeout
 const kataKunci = ref('')           // nempel ke input search
@@ -172,12 +163,6 @@ function editTodo(id) {
 
 function hapusTodo(id) {
   daftarTodo.value = daftarTodo.value.filter(t => t.id !== id)
-  
-  // kalau kategori yang sedang aktif ikut habis/hilang setelah task dihapus, 
-  // otomatis kembalikan filter aktif ke 'Semua'
-  if (!daftarKategori.value.includes(stateFilter.kategoriAktif)) {
-    stateFilter.kategoriAktif = 'Semua'
-  }
 }
 </script>
 
