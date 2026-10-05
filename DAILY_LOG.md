@@ -2237,3 +2237,53 @@ const daftarKategori = computed(() => {
 ```
 yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...new Set(kategoriAda)]`, makanya eror, sekarang kode nya udah ga eror lagi dan berjalan sesuai kemauan.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-05 // Minggu 4
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T1.1
+- **Status:** done
+- **Capaian:** saya udah coba kerjakan `v-model native` dengan beberapa modifier dalam 3 putaran. di putaran 1 coba `v-model.trim` dan membandingkannya dengan yang tanpa `.trim`, jadi saya tau kalau `.trim` itu menghapus spasi di awal dan akhir. di putaran 2 checkbox dengan `v-model array` untuk nyimpan beberapa pilihan yang dicentang. dan putaran 3 saya coba `<select>` dengan dan tanpa `.number,` lalu pakai `typeof` dan penjumlahan untuk melihat perbedaan String dan Number.
+- **Kesulitan:** sempat salah dan bingung di bagian `.trim`, nah yang tanpa `.trim` dia langsung ngehitung spasi (misal "1 2 3") dia langsung menghitung 5 karakter yang ada. sedangkan yang dengan `.trim` dia tidak langsung menghitung karakter, dia misal gini "   " ini dia hitung 0 karekter, tapi kalau "   1" dia hitung jadi 1 karakter, nah lalu kita buat "1 1" dia bilang 3 karakter, jadi rupanya `.trim` itu dia bersihkan spasi di awal dan akhir.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T1.2
+- **Status:** done
+- **Capaian:** udah saya buat custom `v-model` di component sendiri dalam 3 putaran. di putaran 1 saya buat component anak yang nerima `modelValue` dan ngirim perubahan lewat `update:modelValue` untuk input String. di putaran 2 saya buat component kedua dengan tipe Boolean pakai checkbox untuk status ON/OFF. habis di putaran 3 saya coba multi `v-model` dengan `v-model:nama` dan `v-model:aktif`, jadi dalam satu component bisa mengatur 2 data sekaligus dengan prop dan emit yang berbeda.
+- **Kesulitan:** awal nya sedikit bingung gimana mau narik components anak ke parent, tapi ini udah aman dan udah ngerti kok dan udah nampil juga, jadi disini juga agak beda sama yang minggu lalu, disini `v-model` nya di components child 
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T1.3
+- **Status:** done
+- **Capaian:** jadi hasil percobaan saya nanti di tampilan web kan ada input box dan tulisan `Nilai di Parent: "Nilai Awal"`, nah kalau di input box nya saya ketik 'a' di nilai parent nya menjadi a, tapi di input box nya itu dia kosong. jawaban:
+1. yang saya amati setelah modelValue saya ubah jadi `nilaiInput` tapi emit nya itu masih `update:modelValue`, input di component anak awalnya kosong walaupun nilai di parent "Nilai Awal". tapi pas saya ketik a, nilai di parent berubah jadi "a". jadi bagian `prop` nya gak bekerja dengan benar, tapi emit-nya masih bisa mengirim perubahan ke parent.
+
+2. yang terjadi itu waktu parent nulis `v-model="namaUser" kode `v-model="teksParent"` di parent sebenarnya diterjemahkan otomatis sama Vue jadi kombinasi prop `:modelValue="teksParent"` untuk ngirim data ke anak, dan listener `@update:modelValue="teksParent = $event"` untuk nerima data dari anak.
+
+3. ini harus cocok biar dia gak bentrok dan sesuai, karna `v-model` itu konvensi bawaan Vue. kalau nama prop di anak diubah (bukan `modelValue`), komponen anak gak bakal nerima data dari parent. terus juga kalau event emit nya beda, parent gak bakal tau kalau ada perubahan data dari anak. jadi dua duanya harus pasangannya cocok biar alur data dua arahnya gak putus.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T1.4
+- **Status:** done
+- **Capaian:** jawaban:
+1. fungsi `.trim` itu untuk hapus spasi diawal dan diakhir input, `.number` itu buat ubah nilai input jadi number dan bukan string, kalua `.lazy` dipakai buat update nilai `v-model` setelah input selesai atau waktu input kehilangan fokus, bukan setiap kali ngetik.
+
+2. caranya kalau beberapa checkbox pakai `v-model` yang sama dan nilainya array, tiap checkbox yang dicentang itu dia bakal masuk ke dalam array tersebut. jadi kalau checkbox nya dicentang, value nya ditambahkan ke array, dan kalau dicentang lagi untuk batalin, value nya akan dihapus dari array.
+
+3. prop nya harus bernama `modelValue`, dan event emit nya harus bernama `update:modelValue`.
+
+4. pola penamaan nya dengan ngikutin nama argumen setelah titik dua (:). untuk `v-model:a`, prop-nya `a` dan emit nya `update:a`. Untuk `v-model:b`, prop-nya `b` dan emit nya `update:b`.
+
+5. `v-model="x"` itu sebenarnya singkatan dari `:modelValue="x"` untuk ngirim nilai dari parent ke anak, dan `@update:modelValue="x = $event"` untuk nerima perubahan nilai dari anak ke parent. jadi `v-model` itu ngebantu hubungin data parent dan anak supaya bisa saling terhubung dua arah.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

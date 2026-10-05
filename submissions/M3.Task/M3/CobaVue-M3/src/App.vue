@@ -32,6 +32,11 @@
             <h3>Minggu 3 (M3.W3)</h3>
             <p>Computed() Lanjutan, Watch & Lifecycle Hooks</p>
           </button>
+
+          <button class="btn-minggu" @click="mingguAktif = 'w4'">
+            <h3>Minggu 4 (M3.W4)</h3>
+            <p>Custom `v-model` & Vue Router 4 Dasar</p>
+          </button>
         </div>
       </div>
 
@@ -40,6 +45,8 @@
       <TaskW2 v-else-if="mingguAktif === 'w2'" />
 
       <TaskW3 v-else-if="mingguAktif === 'w3'"  />
+
+      <TaskW4 v-else-if="mingguAktif === 'w4'"  />
     </main>
   </div>
 </template>
@@ -49,6 +56,7 @@ import { ref } from 'vue'
 import TaskW1 from './components/Task.M3-W1/TaskW1.vue'
 import TaskW2 from './components/Task.M3-W2/TaskW2.vue'
 import TaskW3 from './components/Task.M3-W3/TaskW3.vue'
+import TaskW4 from './components/Task.M3-W4/TaskW4.vue'
 
 const mingguAktif = ref('')
 </script>
