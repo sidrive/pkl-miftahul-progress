@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-10-05",
+    "task": "M3.W4.T1.4",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-05",
+    "task": "M3.W4.T1.3",
+    "status": "done",
+    "capaian": "jadi hasil percobaan saya nanti di tampilan web kan ada input box dan tulisan `Nilai di Parent: \"Nilai Awal\"`, nah kalau di input box nya saya ketik 'a' di nilai parent nya menjadi a, tapi di input box nya itu dia kosong. jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-05",
+    "task": "M3.W4.T1.2",
+    "status": "done",
+    "capaian": "udah saya buat custom `v-model` di component sendiri dalam 3 putaran. di putaran 1 saya buat component anak yang nerima `modelValue` dan ngirim perubahan lewat `update:modelValue` untuk input String. di putaran 2 saya buat component kedua dengan tipe Boolean pakai checkbox untuk status ON/OFF. habis di putaran 3 saya coba multi `v-model` dengan `v-model:nama` dan `v-model:aktif`, jadi dalam satu component bisa mengatur 2 data sekaligus dengan prop dan emit yang berbeda.",
+    "kesulitan": "awal nya sedikit bingung gimana mau narik components anak ke parent, tapi ini udah aman dan udah ngerti kok dan udah nampil juga, jadi disini juga agak beda sama yang minggu lalu, disini `v-model` nya di components child"
+  },
+  {
+    "date": "2026-10-05",
+    "task": "M3.W4.T1.1",
+    "status": "done",
+    "capaian": "saya udah coba kerjakan `v-model native` dengan beberapa modifier dalam 3 putaran. di putaran 1 coba `v-model.trim` dan membandingkannya dengan yang tanpa `.trim`, jadi saya tau kalau `.trim` itu menghapus spasi di awal dan akhir. di putaran 2 checkbox dengan `v-model array` untuk nyimpan beberapa pilihan yang dicentang. dan putaran 3 saya coba `<select>` dengan dan tanpa `.number,` lalu pakai `typeof` dan penjumlahan untuk melihat perbedaan String dan Number.",
+    "kesulitan": "sempat salah dan bingung di bagian `.trim`, nah yang tanpa `.trim` dia langsung ngehitung spasi (misal \"1 2 3\") dia langsung menghitung 5 karakter yang ada. sedangkan yang dengan `.trim` dia tidak langsung menghitung karakter, dia misal gini \"   \" ini dia hitung 0 karekter, tapi kalau \"   1\" dia hitung jadi 1 karakter, nah lalu kita buat \"1 1\" dia bilang 3 karakter, jadi rupanya `.trim` itu dia bersihkan spasi di awal dan akhir."
+  },
+  {
     "date": "2026-10-02",
     "task": "M3.W3.T5",
     "status": "done",

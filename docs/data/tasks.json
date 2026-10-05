@@ -1064,22 +1064,22 @@
           {
             "id": "M3.W4.T1.1",
             "text": "`v-model` native + modifier — **recap + lebih dalam, 3 putaran kasus berbeda**: putaran 1 recap `v-model` di `<input type=\"text\">` yang sudah sering kamu pakai, tambahkan modifier `.trim` (buang spasi di awal/akhir otomatis), amati bedanya; putaran 2 `v-model` di `<input type=\"checkbox\">` — coba juga versi **array** (beberapa checkbox terhubung ke 1 `ref([])` yang sama, item tercentang masuk ke array itu); putaran 3 `v-model` di `<select>` dengan modifier `.number` (nilai yang terikat otomatis jadi angka, bukan string) — buktikan bedanya dengan/tanpa `.number` pakai `typeof`",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T1.2",
             "text": "Custom `v-model` di component buatan sendiri — **BARU, lebih sulit dari `props`/`emit` biasa, 3 putaran**: putaran 1 bikin 1 component kecil (misal `InputKustom.vue`) yang bisa dipakai parent-nya lewat `v-model=\"sesuatu\"` — component itu menerima prop `modelValue` dan `emit('update:modelValue', nilaiBaru)` (atau pakai macro `defineModel()` yang lebih ringkas kalau kamu mau coba versi modern-nya, cari tahu sendiri bedanya di dokumentasi Vue); putaran 2 bikin component KEDUA dengan tipe data `v-model` berbeda (misal boolean untuk toggle on/off, bukan string lagi); putaran 3 bikin component KETIGA yang punya **lebih dari 1 `v-model`** sekaligus (`v-model:nama`, `v-model:aktif` — 2 binding dua arah dalam 1 component, masing-masing butuh prop+emit pasangannya sendiri)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T1.3",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari salah satu component custom `v-model` di `T1.2`, **sengaja hilangkan** salah satu pasangannya — misal emit event-nya tetap ada tapi nama prop-nya kamu ubah jadi beda (tidak lagi `modelValue`, atau untuk `v-model:nama` nama prop-nya tidak `nama`) — jalankan, amati apa yang terjadi (apakah ada peringatan di console, atau cuma diam-diam tidak berfungsi). Jelaskan dengan kata sendiri: kenapa custom `v-model` butuh **pasangan yang cocok persis** antara nama prop dan nama event emit — apa yang sebenarnya terjadi di balik layar saat kamu menulis `v-model=\"sesuatu\"` di parent (diterjemahkan Vue jadi apa, dalam bentuk `props`+`@event` biasa)?",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T1.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `v-model` native+modifier dan custom `v-model` di component — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T2.1",
