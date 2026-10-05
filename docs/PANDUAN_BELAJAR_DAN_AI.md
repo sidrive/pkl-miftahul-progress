@@ -66,6 +66,39 @@ jelaskan, tulis status `in-progress` dan `Kesulitan`-nya apa, supaya mentor tahu
 bagian mana — **ini bukan soal nilai, jujur soal paham/belum jauh lebih berguna daripada checklist
 penuh tapi kosong di dalam.**
 
+## Laporan/Mini App Akhir Minggu (mulai Bulan 3 Minggu 4 dan seterusnya)
+
+Mulai minggu ini, **setiap akhir minggu** ada 1 task tambahan sebelum evaluasi: menyatukan SEMUA
+task praktik minggu itu (semua putaran, bukan cuma proyek pengembangan skill mandiri) jadi **1
+kesatuan yang saling terhubung** — bukan potongan-potongan latihan terpisah seperti biasanya
+(masing-masing cuma component/file sendiri-sendiri, dipanggil manual lewat 1 file switch).
+
+Pilih salah satu bentuk tiap minggunya:
+
+1. **Mini App** — satukan seluruh component/latihan minggu itu jadi 1 aplikasi navigasi beneran
+   (pakai konsep routing/navigasi yang relevan di minggu itu, atau cara lain yang masuk akal kalau
+   minggu itu belum belajar routing) — 1 halaman/bagian per task atau per kelompok task yang
+   berhubungan, bisa di-demo end-to-end dalam 1 aplikasi yang jalan.
+2. **Laporan tertulis** — dokumen (boleh markdown) yang menjelaskan **alur logis** keseluruhan
+   minggu: bagaimana satu konsep yang dipelajari di awal minggu dipakai lagi/berhubungan dengan
+   konsep di task-task berikutnya, bukan ringkasan terpisah per task seperti isi `DAILY_LOG.md`
+   biasa.
+
+**Kenapa ini ditambahkan:** mengerjakan task satu-satu sampai checklist penuh itu perlu, tapi belum
+tentu menunjukkan Gazi bisa melihat **gambaran besarnya** — bagaimana potongan-potongan konsep yang
+dipelajari terpisah sebenarnya saling mendukung dalam 1 alur kerja nyata. Ini juga melatih
+kebiasaan yang relevan di kerja nyata nanti: fitur jarang berdiri sendiri, biasanya saling
+berhubungan dengan fitur lain dalam 1 aplikasi.
+
+**Untuk mentor (aturan menulis task ke depan):** setiap breakdown mingguan baru (mulai Bulan 3
+Minggu 4), selalu sisipkan 1 task "Laporan/Mini App Akhir Minggu" di antara task praktik terakhir
+minggu itu dan task evaluasi — letakkan SETELAH proyek pengembangan skill mandiri (kalau ada
+minggu itu) dan SEBELUM evaluasi, supaya bisa ikut didemokan ke mentor di sesi yang sama. Sesuaikan
+pilihan bentuknya (mini app vs laporan) dengan topik minggu itu — mini app lebih masuk akal kalau
+minggu itu belajar sesuatu yang relevan untuk navigasi/komposisi (misal routing, komponen), laporan
+tertulis lebih masuk akal kalau minggu itu topiknya lebih konseptual/abstrak dan sulit disatukan
+jadi 1 app secara alami.
+
 ## Untuk mentor (review checkpoint)
 
 Saat demo/evaluasi mingguan (task `T*.Evaluasi`), jangan cuma minta Gazi menjalankan ulang

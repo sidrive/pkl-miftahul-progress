@@ -1062,13 +1062,63 @@
         "title": null,
         "tasks": [
           {
-            "id": "M3.W4.T1",
-            "text": "Latihan v-if / v-for / v-model (counter, form, list dinamis)",
+            "id": "M3.W4.T1.1",
+            "text": "`v-model` native + modifier — **recap + lebih dalam, 3 putaran kasus berbeda**: putaran 1 recap `v-model` di `<input type=\"text\">` yang sudah sering kamu pakai, tambahkan modifier `.trim` (buang spasi di awal/akhir otomatis), amati bedanya; putaran 2 `v-model` di `<input type=\"checkbox\">` — coba juga versi **array** (beberapa checkbox terhubung ke 1 `ref([])` yang sama, item tercentang masuk ke array itu); putaran 3 `v-model` di `<select>` dengan modifier `.number` (nilai yang terikat otomatis jadi angka, bukan string) — buktikan bedanya dengan/tanpa `.number` pakai `typeof`",
             "done": false
           },
           {
-            "id": "M3.W4.T2",
-            "text": "Vue Router 4 dasar: routing antar halaman",
+            "id": "M3.W4.T1.2",
+            "text": "Custom `v-model` di component buatan sendiri — **BARU, lebih sulit dari `props`/`emit` biasa, 3 putaran**: putaran 1 bikin 1 component kecil (misal `InputKustom.vue`) yang bisa dipakai parent-nya lewat `v-model=\"sesuatu\"` — component itu menerima prop `modelValue` dan `emit('update:modelValue', nilaiBaru)` (atau pakai macro `defineModel()` yang lebih ringkas kalau kamu mau coba versi modern-nya, cari tahu sendiri bedanya di dokumentasi Vue); putaran 2 bikin component KEDUA dengan tipe data `v-model` berbeda (misal boolean untuk toggle on/off, bukan string lagi); putaran 3 bikin component KETIGA yang punya **lebih dari 1 `v-model`** sekaligus (`v-model:nama`, `v-model:aktif` — 2 binding dua arah dalam 1 component, masing-masing butuh prop+emit pasangannya sendiri)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T1.3",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari salah satu component custom `v-model` di `T1.2`, **sengaja hilangkan** salah satu pasangannya — misal emit event-nya tetap ada tapi nama prop-nya kamu ubah jadi beda (tidak lagi `modelValue`, atau untuk `v-model:nama` nama prop-nya tidak `nama`) — jalankan, amati apa yang terjadi (apakah ada peringatan di console, atau cuma diam-diam tidak berfungsi). Jelaskan dengan kata sendiri: kenapa custom `v-model` butuh **pasangan yang cocok persis** antara nama prop dan nama event emit — apa yang sebenarnya terjadi di balik layar saat kamu menulis `v-model=\"sesuatu\"` di parent (diterjemahkan Vue jadi apa, dalam bentuk `props`+`@event` biasa)?",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T1.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `v-model` native+modifier dan custom `v-model` di component — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2.1",
+            "text": "Setup & routing dasar — **BARU, 3 putaran**: install `vue-router@4` (`npm install vue-router@4`), bikin minimal 2 \"halaman\" (component terpisah, BUKAN switch `v-if` seperti `M3.W1` lagi), daftarkan di `routes` array, pasang `<router-view>` di `App.vue`. Putaran 1: 2 halaman dasar (misal \"Beranda\"/\"Tentang\") navigasi pakai `<router-link to=\"...\">`; putaran 2: tambah halaman KETIGA yang beda topik; putaran 3: tambah halaman KEEMPAT, kali ini styling link aktifnya pakai class otomatis yang disediakan `<router-link>` (`router-link-active`/`router-link-exact-active` — cari tahu sendiri bedanya)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2.2",
+            "text": "Dynamic route params (`:id`) — **BARU, 3 putaran**: bikin 1 route dengan parameter dinamis (misal `/produk/:id`), baca parameternya di component tujuan lewat `useRoute()` (`const route = useRoute(); route.params.id`). Putaran 1: daftar → detail dari 1 topik data (boleh reuse data minggu-minggu lalu); putaran 2: ulangi dari nol dengan topik data BEDA; putaran 3: route dengan **lebih dari 1 parameter dinamis sekaligus** (misal `/kategori/:kategoriId/produk/:produkId`)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2.3",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari route dynamic param di `T2.2`, taruh `console.log`/`onMounted()` di component tujuannya (misal halaman detail produk), lalu **navigasi dari 1 detail ke detail LAIN** yang masih route yang SAMA cuma beda `:id` (misal dari `/produk/1` ke `/produk/2` lewat `<router-link>`, BUKAN reload halaman). Amati: apakah `onMounted()`/`console.log` itu jalan lagi, atau cuma jalan sekali di navigasi pertama saja? Kaitkan dengan apakah data yang ditampilkan ikut berubah sesuai `:id` baru, atau malah \"nyangkut\" di data lama. Jelaskan dengan kata sendiri: kenapa Vue Router **tidak otomatis membuat ulang component**-nya kalau cuma parameter URL yang berubah (route-nya tetap sama) — dan sebutkan minimal 1 cara untuk membuat component itu \"di-refresh\" datanya tiap kali parameter berubah (boleh cari tahu sendiri: ada opsi `watch` pada `route.params`, atau trik `:key` pada `<router-view>` — mirip `:key` di `v-for` minggu-minggu lalu, cuma konteksnya beda)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2.4",
+            "text": "Navigasi terprogram & query params — **BARU, 3 putaran**: putaran 1 pakai `router.push('/path')` (lewat `useRouter()`) dipicu dari sebuah function (misal setelah submit form berhasil, pindah halaman tanpa `<router-link>`) — bandingkan dengan `<router-link>` biasa, kapan masing-masing lebih cocok; putaran 2 pakai **query params** (`/cari?keyword=sepatu`, baca lewat `route.query.keyword`) untuk 1 kasus baru (misal filter/pencarian yang state-nya tersimpan di URL, bukan cuma `ref()` biasa — bisa di-share link-nya); putaran 3 kombinasikan `router.push` dengan query params sekaligus (`router.push({ path: '/cari', query: { keyword: ... } })`)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T2.5",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran routing dasar, dynamic params, component reuse, query params — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T3",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1-1.5 hari kerja — LEBIH BESAR dari minggu-minggu sebelumnya]** Migrasikan to-do list Vue (`M3.W3.T4`) jadi **multi-halaman** pakai Vue Router: minimal (a) halaman daftar to-do (seperti sekarang), (b) halaman detail 1 task lewat dynamic route param (`/todo/:id`) yang menampilkan detail lengkap + form edit (ganti `prompt()` manual yang masih dipakai sejak `M3.W1`, pakai custom `v-model` dari `T1.2` di form edit-nya), (c) navigasi antar halaman pakai `<router-link>` DAN minimal 1 `router.push()` terprogram (misal redirect otomatis ke halaman daftar setelah edit berhasil disimpan). Terapkan juga solusi dari `T2.3` (jebakan component reuse) kalau relevan di halaman detailmu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`)",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T4",
+            "text": "**[BARU — mulai berlaku minggu ini dan seterusnya setiap akhir minggu] Laporan/Mini App Akhir Minggu:** satukan SEMUA task praktik minggu ini (`T1.1`-`T1.4`, `T2.1`-`T2.5` — semua putaran, bukan cuma capstone `T3`) jadi **1 kesatuan yang saling terhubung**, bukan potongan-potongan latihan terpisah seperti biasanya. Pilih salah satu bentuk: **(a) Mini App** — pakai Vue Router yang baru dipelajari untuk menyatukan seluruh component latihan minggu ini (yang selama ini dipanggil manual lewat 1 file switch, misal `TaskW4.vue`) jadi aplikasi navigasi beneran: 1 halaman/route per task atau per kelompok task yang berhubungan, dengan menu/navigasi jelas antar halaman — jadi showcase yang bisa di-demo end-to-end ke mentor dalam 1 aplikasi yang jalan, bukan buka-tutup file satu-satu. **(b) Laporan tertulis** — dokumen (boleh markdown) yang menjelaskan **alur logis** keseluruhan minggu: bagaimana tiap konsep saling berhubungan dan dipakai lagi di konsep berikutnya (misal: custom `v-model` di `T1.2` dipakai lagi di form edit capstone `T3`; dynamic route param `T2.2` jadi dasar halaman detail di `T3`; jebakan `T2.3` disinggung lagi kalau relevan) — bukan ringkasan terpisah per task seperti isi `DAILY_LOG.md` biasa. Tujuannya supaya task-task minggu ini dilihat sebagai satu kesatuan yang saling mendukung, bukan latihan lepas-lepas yang kebetulan topiknya mirip",
+            "done": false
+          },
+          {
+            "id": "M3.W4.T5",
+            "text": "**Evaluasi Minggu ini & Penutup Bulan 3 (satu-satunya sesi bareng mentor minggu ini):** demo migrasi multi-halaman dari `T3` DAN mini app/laporan dari `T4` langsung jalan (navigasi antar halaman, buka detail task, edit lewat custom `v-model`), jelaskan kenapa butuh dynamic route param untuk halaman detail, review PR bareng, **mentor minta modifikasi dadakan** di kode yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum component reuse Vue Router (dianggap otomatis \"refresh\" tiap ganti param) + mentor tanya 2-3 variasi pertanyaan lain + refleksi capaian keseluruhan Bulan 3 (Vue 3 fundamental sampai Router) + preview singkat Bulan 4 + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
