@@ -1084,22 +1084,22 @@
           {
             "id": "M3.W4.T2.1",
             "text": "Setup & routing dasar — **BARU, 3 putaran**: install `vue-router@4` (`npm install vue-router@4`), bikin minimal 2 \"halaman\" (component terpisah, BUKAN switch `v-if` seperti `M3.W1` lagi), daftarkan di `routes` array, pasang `<router-view>` di `App.vue`. Putaran 1: 2 halaman dasar (misal \"Beranda\"/\"Tentang\") navigasi pakai `<router-link to=\"...\">`; putaran 2: tambah halaman KETIGA yang beda topik; putaran 3: tambah halaman KEEMPAT, kali ini styling link aktifnya pakai class otomatis yang disediakan `<router-link>` (`router-link-active`/`router-link-exact-active` — cari tahu sendiri bedanya)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T2.2",
             "text": "Dynamic route params (`:id`) — **BARU, 3 putaran**: bikin 1 route dengan parameter dinamis (misal `/produk/:id`), baca parameternya di component tujuan lewat `useRoute()` (`const route = useRoute(); route.params.id`). Putaran 1: daftar → detail dari 1 topik data (boleh reuse data minggu-minggu lalu); putaran 2: ulangi dari nol dengan topik data BEDA; putaran 3: route dengan **lebih dari 1 parameter dinamis sekaligus** (misal `/kategori/:kategoriId/produk/:produkId`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T2.3",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari route dynamic param di `T2.2`, taruh `console.log`/`onMounted()` di component tujuannya (misal halaman detail produk), lalu **navigasi dari 1 detail ke detail LAIN** yang masih route yang SAMA cuma beda `:id` (misal dari `/produk/1` ke `/produk/2` lewat `<router-link>`, BUKAN reload halaman). Amati: apakah `onMounted()`/`console.log` itu jalan lagi, atau cuma jalan sekali di navigasi pertama saja? Kaitkan dengan apakah data yang ditampilkan ikut berubah sesuai `:id` baru, atau malah \"nyangkut\" di data lama. Jelaskan dengan kata sendiri: kenapa Vue Router **tidak otomatis membuat ulang component**-nya kalau cuma parameter URL yang berubah (route-nya tetap sama) — dan sebutkan minimal 1 cara untuk membuat component itu \"di-refresh\" datanya tiap kali parameter berubah (boleh cari tahu sendiri: ada opsi `watch` pada `route.params`, atau trik `:key` pada `<router-view>` — mirip `:key` di `v-for` minggu-minggu lalu, cuma konteksnya beda)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T2.4",
             "text": "Navigasi terprogram & query params — **BARU, 3 putaran**: putaran 1 pakai `router.push('/path')` (lewat `useRouter()`) dipicu dari sebuah function (misal setelah submit form berhasil, pindah halaman tanpa `<router-link>`) — bandingkan dengan `<router-link>` biasa, kapan masing-masing lebih cocok; putaran 2 pakai **query params** (`/cari?keyword=sepatu`, baca lewat `route.query.keyword`) untuk 1 kasus baru (misal filter/pencarian yang state-nya tersimpan di URL, bukan cuma `ref()` biasa — bisa di-share link-nya); putaran 3 kombinasikan `router.push` dengan query params sekaligus (`router.push({ path: '/cari', query: { keyword: ... } })`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T2.5",
