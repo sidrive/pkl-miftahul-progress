@@ -2287,3 +2287,44 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 5. `v-model="x"` itu sebenarnya singkatan dari `:modelValue="x"` untuk ngirim nilai dari parent ke anak, dan `@update:modelValue="x = $event"` untuk nerima perubahan nilai dari anak ke parent. jadi `v-model` itu ngebantu hubungin data parent dan anak supaya bisa saling terhubung dua arah.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-06
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T2.1
+- **Status:** done
+- **Capaian:** saya buat 4 halaman yaitu `Beranda`, `Tentang`, `Kontak`, dan `Lainnya`, habis itu saya hubungin pakai `<router-link>` supaya bisa pindah halaman tanpa reload. saya juga coba styling link yang sedang aktif pakai `router-link-exact-active`, jadi link halaman yang sedang dibuka akan berubah warna. cuma untuk `router-link-exact-active` dan `router-link-active` saya masih sedikit bingung apa fungsinya, udah saya cari tau cuma mungkin saya aja yang sedikit bingung, cuma udah paham lah apa dia fungsinya.
+- **Kesulitan:** waktu saya awal awal mau install router ini saya sedikit bingung harus install dimana, awalnya saya mau install di folder [../Task.M3-W4/], tapi saya cari tau dan tanya ai juga jadi saya install di folder vue saya yaitu `CobaVue-M3`, nah juga ada sedikit eror waktu buat style pada file `lainnya.vue` karna salah import, cuma sejauh ini masih bisa di pahamin lah, masih mirip mirip vue pada umum nya.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T2.2
+- **Status:** done
+- **Capaian:** saya udah buat T2.2 dengan 3 putaran walau bisa di bilang cukup rumit yak. jadi saya buat Dynamic Route Params menggunakan Vue Router 4 dalam 3 putaran `Putaran 1`: saya buat routing daftar dan detail produk pakai parameter tunggal `/produk/:id`. `Putaran 2`: buat routing daftar dan detail artikel menggunakan topik data berbeda `/artikel/:id`. `Putaran 3`: buat routing multi-parameter sekaligus (`/kategori/:kategoriId/produk/:produkId`) dan baca kedua parameter itu secara bersamaan pakai `useRoute()` di komponen tujuan
+- **Kesulitan:** jadi selama pengerjaan ini saya dibuat cukup pusing dan beberapa kali blank, pada `putaran pertama` eror perkara saya salah ketik nama file dan sisahnya aman. pada `putaran ke 2` ini sama aja kaya putaran 1, cuma pada putaran 2 ini waktu dijalan kan di web tampilan nya malah mirip sama task `T2.1`, jadi jika task `T2.1` buka beranda dia malah nampilin beranda, cuma sekarang udah saya fix kan. dan terakhir untuk `putaran ke 3` ini yang menurut saya paling bikin bingung karna banyak nya path folder yang harus di import dan di sesuaikan. file file yang ada juga bisa di bilang banyak juga. ya mungkin untuk saat ini baru ini aja sih, selebih nya udah aman dan bisa dijalankan juga.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. dari yang saya amati `onMounted` cuma dipanggil sekali aja pas pertama kali halaman dibuka. pas pindah dari produk 1 ke produk 2 lewat link, `onMounted` gak dipanggil ulang. awalnya datanya ada nyangkut di produk 1, tapi pas diakalin pakai `computed`, datanya baru mau berubah otomatis mengikuti ID baru.
+
+2. `Vue Router` ga buat otomatis karna dia menghemat memori dan performa. Vue ngeliat komponennya kan sama aja `(ujiT23.vue)`, jadi daripada dibongkar terus dipasang lagi dari nol, mending komponen yang udah ada di layar dipakai ulang (reuse).
+
+3. saya cari caranya dan ketemu, caranya kita pakai `computed`. jadi pencarian data produknya dibungkus pakai `computed`. pas `ID` di URL nya berubah, `computed` bakal langsung ngerespon dan narik data baru, jadi tampilan di layar otomatis berubah sesuai produk baru tanpa komponennya harus dibikin ulang dari nol.
+- **Kesulitan:** jujur aja emang task minggu ini cukup rumit yak, jadi pada saat percobaan masih ada kesalahan, sempat bingung kenapa datanya nyangkut padahal URL udah ganti, tapi paham alur kerjanya waktu tau konsep reuse komponen.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T2.4
+- **Status:** done
+- **Capaian:** saya udah kerjain 3 putaran T2.4. di Putaran 1 udah beres simulasi simpan form yang otomatis pindah ke halaman sukses pake `router.push`. Putaran 2 sukses bikin fitur cari barang yang filter nya nempel di URL pake `query params` biar bisa di share. Putaran 3 juga udah digabungin `router.push` sama `query` sekaligus dalam 1 tombol. semuanya juga udah dirapiin pake konsep *nested routes* di `T2.4-main.vue` biar navigasi tiap putarannya dalam 1 halaman aja dan jadi lebih rapi.
+- **Kesulitan:** pada saat saya mengerjakan putaran 1 2 dan 3, ada masalah dengan component anak pada file, jadi waktu di debugging dia jalan tapi gak nampilin hasil nya dan di devtools menampilkan eror juga. dan beberapa kali error dan tampilan *blank* akibat ketidakcocokan *path* URL antara pendaftaran *nested route* di `router/index.js` (menggunakan format garis miring `/t24/p1`, `/t24/p2`) dengan pemanggilan `router.push` dan `<router-link>` di komponen yang masih menggunakan format strip (`/t24-p1`, `/t24-p2`). dan tadi waktu ngerjain juga sempat terjadi saat mengarahkan kondisi `v-else-if` di `TaskW4.vue` agar komponen `<router-view />` untuk T2.4 bisa merender halaman utama beserta anak-anak putarannya dengan benar. cukup lama juga saya memperbaiki bug atau eror nya, dan ini udah selesai dan udah di fix
+<!-- ENTRY END -->
