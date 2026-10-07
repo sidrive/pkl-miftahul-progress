@@ -1104,12 +1104,12 @@
           {
             "id": "M3.W4.T2.5",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran routing dasar, dynamic params, component reuse, query params — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T3",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1-1.5 hari kerja — LEBIH BESAR dari minggu-minggu sebelumnya]** Migrasikan to-do list Vue (`M3.W3.T4`) jadi **multi-halaman** pakai Vue Router: minimal (a) halaman daftar to-do (seperti sekarang), (b) halaman detail 1 task lewat dynamic route param (`/todo/:id`) yang menampilkan detail lengkap + form edit (ganti `prompt()` manual yang masih dipakai sejak `M3.W1`, pakai custom `v-model` dari `T1.2` di form edit-nya), (c) navigasi antar halaman pakai `<router-link>` DAN minimal 1 `router.push()` terprogram (misal redirect otomatis ke halaman daftar setelah edit berhasil disimpan). Terapkan juga solusi dari `T2.3` (jebakan component reuse) kalau relevan di halaman detailmu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T4",

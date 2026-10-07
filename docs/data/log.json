@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-07",
+    "task": "M3.W4.T3",
+    "status": "done",
+    "capaian": "jadi saya udah buat dan migrasiin Todo List minggu lalu pakai Vue Router minggu kali ini, saya udah buat folder dan beberapa file nya (`FilterBar.vue, TodoList.vue`) itu saya copas aja dari minggu lalu tapi dikasih sedikit perubahan, dan saya juga buat file `InputCustom.vue, TodoDetail.vue, TodoMain.vue, TodoStore.js` dan udah saya hubungin juga ke `index.js`, untuk `index.js` nya saya pakai dari task T1.1 yang awal awal disuruh install Vue Router, jadi saya rasa itu akan menjadi induk nya (kalau minggu depan bisa aja saya buat folder baru untuk task minggu depan biar path folder rapi sesuai bulan dan minggu nya, jadi ga masuk ke task minggu dan bulan lainnya). disini Todo List lama udah saya buat multi-halaman berbasis Vue Router 4 di folder `T3-W4`, data untuk Todonya itu ada di `todoStore.js` (*shared state*) pake `ref`. di halaman utama (`TodoMain.vue`) dipake buat nampilin daftar tugas, saya juga udah buat search pake *debounce*, dan filter kategori, nah untuk halaman detail (`TodoDetail.vue`) udah pake *dynamic route* (`/todo/:id`), form edit udah **Custom `v-model`** (`InputCustom.vue`) buat gantiin `prompt()`. pindah halaman juga udah oke karna pakai *auto-redirect* balik ke halaman utama via `router.push('/todo')`, untuk masalah *component reuse* udah pakai `watch()` pada `route.params.id` jadi waktu pindah pindah detail task datanya ikut berubah tanpa reload. udah saya PR juga. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/16]",
+    "kesulitan": "waktu awal pas daftarin route di `router/index.js` ada error *Failed to resolve import* dari Vite. masalahnya cuma di penulisan *relative path* yang kurang keluar folder, saya lupa nambahin `../../`. setelah path dari folder `T2-W4/router/` ke `T3-W4/` dibenerin, akhirnya aplikasinya bisa jalan dengan lancar. pada juga waktu buat kode nya masih bingung awal awal untuk buat kode dan penempatan kode nya, jadi waktu kerjain juga ada beberapa bug juga karna kesalahan pemanggilan fungsi dan variabel nya, cuma udah di fix juga."
+  },
+  {
+    "date": "2026-10-07",
+    "task": "M3.W4.T2.5",
+    "status": "done",
+    "capaian": "jawaban =",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-06",
     "task": "M3.W4.T2.4",
     "status": "done",
