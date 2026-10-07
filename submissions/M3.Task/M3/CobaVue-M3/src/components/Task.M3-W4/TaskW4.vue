@@ -50,6 +50,13 @@
             Navigasi & Query Params (T2.4)
           </router-link>
         </div>
+
+        <div class="item-tugas">
+          <p>Tugas T3 Migrasi TodoList</p>
+          <router-link to="/todo" class="btn-todo" @click="halamanAktif = 'todo'">
+            To-Do List (T3) Vue Router 4
+          </router-link>
+        </div>
       </div>
     </div>
 
@@ -69,7 +76,7 @@
       <T2_1_W4 />
     </div>
 
-    <div v-else-if="['t22', 't23', 't24'].includes(halamanAktif)">
+    <div v-else-if="['t22', 't23', 't24', 'todo'].includes(halamanAktif)">
       <router-view />
     </div>
   </div>
