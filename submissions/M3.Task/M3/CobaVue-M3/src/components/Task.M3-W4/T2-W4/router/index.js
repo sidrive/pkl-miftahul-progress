@@ -26,8 +26,8 @@ import Putaran3T24 from '../../T2.4-W4/pages/T2.4-putaran3.vue'
 import SuksesT24 from '../../T2.4-W4/pages/T2.4-sukses.vue'
 
 // komponen dari Task T3 untuk To-Do List
-import TodoMain from '../T3-W4/pages/TodoMain.vue'
-import TodoDetail from '../T3-W4/pages/TodoDetail.vue'
+import TodoMain from '../../T3-W4/pages/TodoMain.vue'
+import TodoDetail from '../../T3-W4/pages/TodoDetail.vue'
 
 const routes = [
   // T2.1
