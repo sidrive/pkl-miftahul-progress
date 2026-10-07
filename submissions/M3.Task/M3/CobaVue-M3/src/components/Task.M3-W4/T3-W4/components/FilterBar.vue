@@ -1,4 +1,5 @@
 <template>
+  <!-- Tempat tombol-tombol filter kategori -->
   <div class="filter-container">
     <button
       v-for="kategori in daftarKategori"
@@ -13,6 +14,7 @@
 </template>
 
 <script setup>
+// nerima daftar kategori dan kategori yang sedang aktif dari luar
 defineProps({
   daftarKategori: {
     type: Array,
@@ -25,14 +27,12 @@ defineProps({
   }
 })
 
+// daftarin sinyal perubahan kategori
 const emit = defineEmits(['ubahKategori'])
 
+// fungsi kalau tombol kategori diklik
 function pilih(kategori) {
   emit('ubahKategori', kategori)
-}
-
-function resetFilter() {
-  emit('ubahKategori', 'Semua')
 }
 </script>
 
@@ -43,7 +43,7 @@ function resetFilter() {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 10px 10;
+  margin: 10px 0;
 }
 
 .btn-filter {
