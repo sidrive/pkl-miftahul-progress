@@ -2328,3 +2328,32 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** saya udah kerjain 3 putaran T2.4. di Putaran 1 udah beres simulasi simpan form yang otomatis pindah ke halaman sukses pake `router.push`. Putaran 2 sukses bikin fitur cari barang yang filter nya nempel di URL pake `query params` biar bisa di share. Putaran 3 juga udah digabungin `router.push` sama `query` sekaligus dalam 1 tombol. semuanya juga udah dirapiin pake konsep *nested routes* di `T2.4-main.vue` biar navigasi tiap putarannya dalam 1 halaman aja dan jadi lebih rapi.
 - **Kesulitan:** pada saat saya mengerjakan putaran 1 2 dan 3, ada masalah dengan component anak pada file, jadi waktu di debugging dia jalan tapi gak nampilin hasil nya dan di devtools menampilkan eror juga. dan beberapa kali error dan tampilan *blank* akibat ketidakcocokan *path* URL antara pendaftaran *nested route* di `router/index.js` (menggunakan format garis miring `/t24/p1`, `/t24/p2`) dengan pemanggilan `router.push` dan `<router-link>` di komponen yang masih menggunakan format strip (`/t24-p1`, `/t24-p2`). dan tadi waktu ngerjain juga sempat terjadi saat mengarahkan kondisi `v-else-if` di `TaskW4.vue` agar komponen `<router-view />` untuk T2.4 bisa merender halaman utama beserta anak-anak putarannya dengan benar. cukup lama juga saya memperbaiki bug atau eror nya, dan ini udah selesai dan udah di fix
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-07
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T2.5
+- **Status:** done
+- **Capaian:** jawaban =
+1. bedanya itu kalau `<router-link>` dia itu gak akan ke reload waktu kita masuk ke halaman, dia mindahin komponen tanpa reload browser, jadinya jauh lebih cepat. kalau `<a href="...">` dia bakal reload 1 halaman atau `refresh page` lah, jadi peforma nya sedikit lambat karna dia harus refresh page dulu 
+
+2. cara bacanya itu parameter dinamis (`:id`) dari URL di dalam komponen tujuan itu dia bergantung pada framework atau library routing yang kita pakai. dan dengan manggil tool bawaan Vue Router `useRoute()`, habis itu dia ambil nilainya lewat `route.params.id`. parameter `:id` ini kaya "nomor plat/identitas" yang nempel di alamat URL (misal /produk/12), nah fungsi `useRoute()` ini yang kerjanya nangkap angka 12 itu tadi di dalam kodingan biar komponen Vue tau data mana yang harus ditampilkan ke layar.
+
+3. component nya gak dibuat ulang dari awal, karna Vue ini dia pasti pakai ulang `(reuse)` komponen yang ada. jadi `onMounted()` cuma jalan sekali pas pertama dibuka, jadi kalau pindah ke /produk/2 dia gak bakal dipanggil ulang dan harus dipantau pakai `watch()`.
+
+4. bedanya itu `Route params` itu untuk menentukan objek/halaman spesifik dan wajib (cocoknya buat halaman detail barang), kalau `query params` itu sifatnya opsional jadi cocok buat filter pencarian yang link nya bisa di share ke orang lain.
+
+5. saya bakal pakai `router.push()` kalau saya mau pindah halaman pakai logika dari kodingan/JS
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T3
+- **Status:** done
+- **Capaian:** jadi saya udah buat dan migrasiin Todo List minggu lalu pakai Vue Router minggu kali ini, saya udah buat folder dan beberapa file nya (`FilterBar.vue, TodoList.vue`) itu saya copas aja dari minggu lalu tapi dikasih sedikit perubahan, dan saya juga buat file `InputCustom.vue, TodoDetail.vue, TodoMain.vue, TodoStore.js` dan udah saya hubungin juga ke `index.js`, untuk `index.js` nya saya pakai dari task T1.1 yang awal awal disuruh install Vue Router, jadi saya rasa itu akan menjadi induk nya (kalau minggu depan bisa aja saya buat folder baru untuk task minggu depan biar path folder rapi sesuai bulan dan minggu nya, jadi ga masuk ke task minggu dan bulan lainnya). disini Todo List lama udah saya buat multi-halaman berbasis Vue Router 4 di folder `T3-W4`, data untuk Todonya itu ada di `todoStore.js` (*shared state*) pake `ref`. di halaman utama (`TodoMain.vue`) dipake buat nampilin daftar tugas, saya juga udah buat search pake *debounce*, dan filter kategori, nah untuk halaman detail (`TodoDetail.vue`) udah pake *dynamic route* (`/todo/:id`), form edit udah **Custom `v-model`** (`InputCustom.vue`) buat gantiin `prompt()`. pindah halaman juga udah oke karna pakai *auto-redirect* balik ke halaman utama via `router.push('/todo')`, untuk masalah *component reuse* udah pakai `watch()` pada `route.params.id` jadi waktu pindah pindah detail task datanya ikut berubah tanpa reload. udah saya PR juga. link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/16]
+- **Kesulitan:** waktu awal pas daftarin route di `router/index.js` ada error *Failed to resolve import* dari Vite. masalahnya cuma di penulisan *relative path* yang kurang keluar folder, saya lupa nambahin `../../`. setelah path dari folder `T2-W4/router/` ke `T3-W4/` dibenerin, akhirnya aplikasinya bisa jalan dengan lancar. pada juga waktu buat kode nya masih bingung awal awal untuk buat kode dan penempatan kode nya, jadi waktu kerjain juga ada beberapa bug juga karna kesalahan pemanggilan fungsi dan variabel nya, cuma udah di fix juga.
+<!-- ENTRY END -->
