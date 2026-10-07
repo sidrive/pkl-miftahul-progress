@@ -25,6 +25,10 @@ import Putaran2T24 from '../../T2.4-W4/pages/T2.4-putaran2.vue'
 import Putaran3T24 from '../../T2.4-W4/pages/T2.4-putaran3.vue'
 import SuksesT24 from '../../T2.4-W4/pages/T2.4-sukses.vue'
 
+// komponen dari Task T3 untuk To-Do List
+import TodoMain from '../../T3-W4/pages/TodoMain.vue'
+import TodoDetail from '../../T3-W4/pages/TodoDetail.vue'
+
 const routes = [
   // T2.1
   { path: '/', component: Beranda },
@@ -54,7 +58,11 @@ const routes = [
       { path: 'p3', component: Putaran3T24 }
   ]},
   // Route khusus halaman sukses
-  { path: '/t24-sukses', component: SuksesT24 }
+  { path: '/t24-sukses', component: SuksesT24 },
+
+  // Route Task T3 :
+  { path: '/todo', name: 'TodoMain', component: TodoMain },
+  { path: '/todo/:id', name: 'TodoDetail', component: TodoDetail }
 ]
 
 const router = createRouter({
