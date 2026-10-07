@@ -1,13 +1,13 @@
 <template>
   <li class="todo-item">
-    <!-- Checkbox status -->
+    <!-- kotak centang status selesai -->
     <input 
       type="checkbox" 
       :checked="todo.selesai" 
       @change="$emit('toggle', todo.id)" 
     />
 
-    <!-- Teks Task -->
+    <!-- Teks nama tugas -->
     <span 
       :class="{ selesai: todo.selesai }"
       @click="$emit('toggle', todo.id)"
@@ -15,18 +15,26 @@
       {{ todo.teks }}
     </span>
 
-    <!-- Kategori Label -->
+    <!-- Label kategori -->
     <small>[{{ todo.kategori }}]</small>
 
-    <!-- Tombol Aksi -->
-    <div class="button">
-    <button type="button" @click="$emit('edit', todo.id)">Edit</button> | 
-    <button type="button" @click="$emit('hapus', todo.id)">Hapus</button>
+    <!-- Tombol aksi -->
+    <div class="button-group">
+      <!-- Tombol Edit sekarang pindah halaman ke detail tugas sesuai ID-nya -->
+      <router-link :to="`/todo/${todo.id}`" class="btn-edit">
+        Edit / Detail
+      </router-link>
+      
+      <!-- Tombol Hapus -->
+      <button type="button" class="btn-hapus" @click="$emit('hapus', todo.id)">
+        Hapus
+      </button>
     </div>
   </li>
 </template>
 
 <script setup>
+// nerima data 1 todo dari halaman utama
 defineProps({
   todo: {
     type: Object,
@@ -34,40 +42,65 @@ defineProps({
   }
 })
 
-defineEmits(['toggle', 'edit', 'hapus'])
+// daftarin sinyal centang dan hapus ke halaman utama
+defineEmits(['toggle', 'hapus'])
 </script>
 
 <style scoped>
 .todo-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: 10px;
   color: #ffffff;
+  background-color: #1a1a2e;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
+
 span {
   cursor: pointer;
+  flex: 1;
 }
+
 span.selesai {
   text-decoration: line-through;
-  color: #888;
+  color: #718096;
 }
+
 small {
   color: #a0aec0;
-  margin-right: 2px;
 }
-button {
-  background-color: #3a4479;
-  color: #a0aec0;
-  border: 1px solid #4a5568;
-  padding: 2px 4px;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  font-weight: 500;
+
+.button-group {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-edit {
+  background-color: #3182ce;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.btn-edit:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-hapus {
+  background-color: #e53e3e;
+  color: #ffffff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
-button:hover {
-  background-color: #444;
+
+.btn-hapus:hover {
+  background-color: #c53030;
 }
 </style>
