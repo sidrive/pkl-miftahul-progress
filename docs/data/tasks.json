@@ -1114,7 +1114,7 @@
           {
             "id": "M3.W4.T4",
             "text": "**[BARU — mulai berlaku minggu ini dan seterusnya setiap akhir minggu] Laporan/Mini App Akhir Minggu:** satukan SEMUA task praktik minggu ini (`T1.1`-`T1.4`, `T2.1`-`T2.5` — semua putaran, bukan cuma capstone `T3`) jadi **1 kesatuan yang saling terhubung**, bukan potongan-potongan latihan terpisah seperti biasanya. Pilih salah satu bentuk: **(a) Mini App** — pakai Vue Router yang baru dipelajari untuk menyatukan seluruh component latihan minggu ini (yang selama ini dipanggil manual lewat 1 file switch, misal `TaskW4.vue`) jadi aplikasi navigasi beneran: 1 halaman/route per task atau per kelompok task yang berhubungan, dengan menu/navigasi jelas antar halaman — jadi showcase yang bisa di-demo end-to-end ke mentor dalam 1 aplikasi yang jalan, bukan buka-tutup file satu-satu. **(b) Laporan tertulis** — dokumen (boleh markdown) yang menjelaskan **alur logis** keseluruhan minggu: bagaimana tiap konsep saling berhubungan dan dipakai lagi di konsep berikutnya (misal: custom `v-model` di `T1.2` dipakai lagi di form edit capstone `T3`; dynamic route param `T2.2` jadi dasar halaman detail di `T3`; jebakan `T2.3` disinggung lagi kalau relevan) — bukan ringkasan terpisah per task seperti isi `DAILY_LOG.md` biasa. Tujuannya supaya task-task minggu ini dilihat sebagai satu kesatuan yang saling mendukung, bukan latihan lepas-lepas yang kebetulan topiknya mirip",
-            "done": false
+            "done": true
           },
           {
             "id": "M3.W4.T5",

@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-08",
+    "task": "M3.W4.T4",
+    "status": "done",
+    "capaian": "jadi saya udah kerjakan T4 ini dan saya ilih Opsi A, kenapa saya pilih opsi A? karna menurut saya ini lumayan cukup mudah (sepertinya) untuk saya, dan karna task ini seperti nya mirip mirip seperti yang saya buat sebelum sebelum nya. jadi yang saya buat ini T4 MiniApp, disini dia lokasinya ada di [../Task.M3-W4/T4-W4], didalam nya ada beberapa file untuk pengerjaan T4 MiniApp ini, jadi karna ini pertama kali nya untuk minggu ini dan seterusnya juga pasti ada, jadi saya buatlah dengan sistem dia menarik `component`. jadi ada beebrapa file `T4-Main.vue` sebagai halaman awal untuk task ini, `T1-Grup.vue` dan `T2-Grup.vue` untuk halaman penampil task task yang udah ada sebelum nya, jadi 2 file nya itu mereka menarik component yang udah ada dan di tamilkan ulang di halaman, khusus task `T2.2, T2.3` ini dia sedikit berbeda sistem nya, karna 2 task itu mereka punya routing sendiri atau punya navigasi sendiri, jadi kalau asal panggil aja dia akan bentrok dengan routing T4 ini. nah jadi di T4 ini saya buat kalau tombol di klik mereka kehalaman task yang di pilih, jujur gatau udah bener atau ngga nya. udah di PR juga dan commit rapi, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/17]",
+    "kesulitan": "pada awal awal pengerjaan saya ga ngerti apa maksudnya dengan task ini, tapi saya baca baca dan tanya ai, awal nya saya kira cuma membuat miniApp biasanya, cuma saya rasa bukan sesimpel itu, yang saya pahamin dari membaca task nya dia minta 1 aplikasi lagi untuk semua task yang ada, jadi dari `T1.1 - T3` lah anggapan nya digabungin dan di jadikan 1 halaman aja, yang dimana halaman nya itu ada tombol navigasi dan menggunakan `nested routing` biar tetap sesuai dengan task minggu ini. dan yap sekarang udah selesai (saya rasa) dan walau udah selesai masih banyak kekurangan nya dan bisa aja saya rasa jauh dari yang di minta modul, ya segini aja lah dulu, ini aja cukup sulit, task task pada minggu ini emang sulit dari pada minggu sebelum sebelum nya."
+  },
+  {
     "date": "2026-10-07",
     "task": "M3.W4.T3",
     "status": "done",
