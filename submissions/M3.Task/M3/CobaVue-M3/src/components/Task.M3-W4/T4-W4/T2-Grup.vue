@@ -10,7 +10,6 @@
       <h3>Bagian 1: Routing Dasar (T2.1)</h3>
       <T2_1_W4 />
     </section>
-
     <hr />
 
     <!-- T2.2 -->
@@ -35,7 +34,6 @@
         </router-link>
       </div>
     </section>
-
     <hr />
 
     <!-- T2.3 -->
@@ -49,7 +47,6 @@
         Buka T2.3 — Component Reuse
       </router-link>
     </section>
-
     <hr />
 
     <!-- T2.4 -->
