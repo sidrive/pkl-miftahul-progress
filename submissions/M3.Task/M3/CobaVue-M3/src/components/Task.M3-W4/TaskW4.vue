@@ -1,7 +1,8 @@
 <template>
   <div class="layout">
+    <!-- selalu muncul selama kita TIDAK ada di halaman beranda -->
     <div class="top-nav">
-      <button v-if="halamanAktif !== 'beranda'" class="btn-beranda" @click="halamanAktif = 'beranda'">
+      <button v-if="halamanAktif !== 'beranda'" class="btn-beranda" @click="kembaliKeBeranda">
         ← Beranda M3.W4
       </button>
     </div>
@@ -12,38 +13,45 @@
       <hr />
 
       <div class="nav-tugas">
+        <!-- Latihan T1.1 -->
         <div class="item-tugas">
           <p>Tugas T1.1 Disini</p>
           <a href="#" @click.prevent="halamanAktif = 't11'">`v-model` native + modifier</a>
         </div>
 
+        <!-- Latihan T1.2 -->
         <div class="item-tugas">
           <p>Tugas T1.2 Disini</p>
           <a href="#" @click.prevent="halamanAktif = 't12'">`v-model` di component sendiri</a>
         </div>
 
+        <!-- Latihan T1.3 -->
         <div class="item-tugas">
           <p>Tugas T1.3 Disini</p>
           <a href="#" @click.prevent="halamanAktif = 't13'">percobaan untuk jawab pertanyaan</a>
         </div>
 
+        <!-- Latihan T2.1 -->
         <div class="item-tugas">
           <p>Tugas T2.1 Disini</p>
           <router-link to="/" @click="halamanAktif = 't21'">routing dasar</router-link>
         </div>
 
+        <!-- Latihan T2.2 -->
         <div class="item-tugas">
           <p>Tugas T2.2 Disini</p>
           <router-link to="/produk" @click="halamanAktif = 't22'">Dynamic Route Params</router-link>
         </div>
 
+        <!-- Latihan T2.3 (Perbaikan: halamanAktif diubah jadi 't23') -->
         <div class="item-tugas">
           <p>Tugas T2.3 Disini</p>
-          <router-link to="/uji-t23/1" @click="halamanAktif = 't22'">
+          <router-link to="/uji-t23/1" @click="halamanAktif = 't23'">
             Uji Component Reuse (T2.3)
           </router-link>
         </div>
 
+        <!-- Latihan T2.4 -->
         <div class="item-tugas">
           <p>Tugas T2.4 Disini</p>
           <router-link to="/t24" @click="halamanAktif = 't24'">
@@ -51,15 +59,25 @@
           </router-link>
         </div>
 
+        <!-- Latihan T3 (To-Do List) -->
         <div class="item-tugas">
           <p>Tugas T3 Migrasi TodoList</p>
           <router-link to="/todo" class="btn-todo" @click="halamanAktif = 'todo'">
             To-Do List (T3) Vue Router 4
           </router-link>
         </div>
+
+        <!-- Tugas T4 Mini App Akhir Minggu -->
+        <div class="item-tugas" style="grid-column: 1 / -1; margin-top: 10px;">
+          <p style="font-weight: bold; color: #00ffb3;">Tugas M3.W4.T4 (Mini App Showcase)</p>
+          <router-link to="/t4" class="btn-t4" @click="halamanAktif = 't4'">
+            🚀 Buka Mini App T4 (Nested Routes)
+          </router-link>
+        </div>
       </div>
     </div>
 
+    <!-- Tampilan Komponen T1 -->
     <div v-else-if="halamanAktif === 't11'">
       <T1_1_W4 />
     </div>
@@ -76,7 +94,8 @@
       <T2_1_W4 />
     </div>
 
-    <div v-else-if="['t22', 't23', 't24', 'todo'].includes(halamanAktif)">
+    <!-- Tampilan Komponen Router (T2.2, T2.3, T2.4, dan T3) -->
+    <div v-else-if="['t22', 't23', 't24', 'todo', 't4'].includes(halamanAktif)">
       <router-view />
     </div>
   </div>
@@ -84,12 +103,22 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+// Import Komponen T1 dan T2.1
 import T1_1_W4 from './T1-W4/T1.1-W4.vue'
 import T1_2_W4 from './T1-W4/T1.2-W4.vue'
 import T1_3_W4 from './T1-W4/T1.3-W4.vue'
 import T2_1_W4 from './T2-W4/T2.1-W4.vue'
 
+const router = useRouter()
 const halamanAktif = ref('beranda')
+
+// fungsi buat balik ke Beranda Utama + reset URL router ke awal
+const kembaliKeBeranda = () => {
+  halamanAktif.value = 'beranda'
+  router.push('/')
+}
 </script>
 
 <style scoped>

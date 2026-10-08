@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import Beranda from '../pages/beranda.vue'
 import Tentang from '../pages/tentang.vue'
 import Kontak from '../pages/kontak.vue'
@@ -29,6 +30,11 @@ import SuksesT24 from '../../T2.4-W4/pages/T2.4-sukses.vue'
 import TodoMain from '../../T3-W4/pages/TodoMain.vue'
 import TodoDetail from '../../T3-W4/pages/TodoDetail.vue'
 
+// Import komponen T4 Mini App
+import T4Main from '../../T4-W4/T4-Main.vue'
+import T1Grup from '../../T4-W4/T1-Grup.vue'
+import T2Grup from '../../T4-W4/T2-Grup.vue'
+
 const routes = [
   // T2.1
   { path: '/', component: Beranda },
@@ -51,7 +57,7 @@ const routes = [
   { path: '/uji-t23/:id', component: ujiT23 },
 
   // T2.4 3 putaran
- { path: '/t24', component: T24Main, children: [
+  { path: '/t24', component: T24Main, children: [
       { path: '', redirect: '/t24/p1' }, // otomatis buka putaran 1 pas pertama klik
       { path: 'p1', component: Putaran1T24 },
       { path: 'p2', component: Putaran2T24 },
@@ -62,7 +68,14 @@ const routes = [
 
   // Route Task T3 :
   { path: '/todo', name: 'TodoMain', component: TodoMain },
-  { path: '/todo/:id', name: 'TodoDetail', component: TodoDetail }
+  { path: '/todo/:id', name: 'TodoDetail', component: TodoDetail },
+
+  { path: '/t4', component: T4Main, children: [
+      { path: '', redirect: '/t4/todo' }, // otomatis buka todo pas pertama masuk
+      { path: 't1', component: T1Grup },
+      { path: 't2', component: T2Grup },
+      { path: 'todo', component: TodoMain }
+  ]}
 ]
 
 const router = createRouter({

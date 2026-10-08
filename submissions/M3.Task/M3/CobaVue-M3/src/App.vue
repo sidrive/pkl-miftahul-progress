@@ -2,11 +2,11 @@
   <div class="app-container">
     <!-- Header Navigasi Atas -->
     <header class="header-utama">
-      <h2 @click="mingguAktif = ''" style="cursor: pointer;">M3 - Progress Belajar Vue</h2>
+      <h2 @click="kembaliKeMenuUtama" style="cursor: pointer;">M3 - Progress Belajar Vue</h2>
       
       <!-- Cuma tampilkan tombol Menu Utama kalau lagi di dalam halaman minggu -->
       <div v-if="mingguAktif" class="tombol-nav-header">
-        <button class="btn-home" @click="mingguAktif = ''">Menu Utama</button>
+        <button class="btn-home" @click="kembaliKeMenuUtama">Menu Utama</button>
       </div>
     </header>
 
@@ -18,22 +18,22 @@
         <p>Silakan pilih minggu materi yang ingin dibuka:</p>
         
         <div class="card-pilihan">
-          <button class="btn-minggu" @click="mingguAktif = 'w1'">
+          <button class="btn-minggu" @click="pilihMinggu('w1')">
             <h3>Minggu 1 (M3.W1)</h3>
             <p>Dasar Vue, Directive, Event & Migrasi To-Do List</p>
           </button>
 
-          <button class="btn-minggu" @click="mingguAktif = 'w2'">
+          <button class="btn-minggu" @click="pilihMinggu('w2')">
             <h3>Minggu 2 (M3.W2)</h3>
             <p>Reactivity Lanjutan (reactive), Props & Emit</p>
           </button>
 
-          <button class="btn-minggu" @click="mingguAktif = 'w3'">
+          <button class="btn-minggu" @click="pilihMinggu('w3')">
             <h3>Minggu 3 (M3.W3)</h3>
             <p>Computed() Lanjutan, Watch & Lifecycle Hooks</p>
           </button>
 
-          <button class="btn-minggu" @click="mingguAktif = 'w4'">
+          <button class="btn-minggu" @click="pilihMinggu('w4')">
             <h3>Minggu 4 (M3.W4)</h3>
             <p>Custom `v-model` & Vue Router 4 Dasar</p>
           </button>
@@ -44,21 +44,34 @@
 
       <TaskW2 v-else-if="mingguAktif === 'w2'" />
 
-      <TaskW3 v-else-if="mingguAktif === 'w3'"  />
+      <TaskW3 v-else-if="mingguAktif === 'w3'" />
 
-      <TaskW4 v-else-if="mingguAktif === 'w4'"  />
+      <TaskW4 v-else-if="mingguAktif === 'w4'" />
     </main>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
 import TaskW1 from './components/Task.M3-W1/TaskW1.vue'
 import TaskW2 from './components/Task.M3-W2/TaskW2.vue'
 import TaskW3 from './components/Task.M3-W3/TaskW3.vue'
 import TaskW4 from './components/Task.M3-W4/TaskW4.vue'
 
+const router = useRouter()
 const mingguAktif = ref('')
+
+const pilihMinggu = (kodeMinggu) => {
+  mingguAktif.value = kodeMinggu
+}
+
+// fungsi buat balik ke Menu Utama paling luar + maksa URL bersih balik ke "/"
+const kembaliKeMenuUtama = () => {
+  mingguAktif.value = ''
+  router.push('/')
+}
 </script>
 
 <style scoped>
