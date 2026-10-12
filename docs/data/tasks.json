@@ -1134,13 +1134,43 @@
         "title": null,
         "tasks": [
           {
-            "id": "M4.W1.T1",
-            "text": "Pinia dasar: state, getters, actions",
+            "id": "M4.W1.T1.1",
+            "text": "Setup & `state` dasar — **BARU, 3 putaran, data berbeda**: install (`npm install pinia`), daftarkan (`createPinia()` + `app.use(pinia)` di `main.js`), bikin store pertama pakai `defineStore('namaStore', () => { ... })` (Composition API style, konsisten dengan `<script setup>` yang sudah kamu pakai) atau Options API style (`defineStore('namaStore', { state: () => ({...}) })`) — pilih salah satu gaya, tapi bisa jelaskan kenapa. Putaran 1: store sederhana 1 data (misal counter, boleh reuse konsep lama); putaran 2: store BARU topik beda dengan >1 data di `state`; putaran 3: store ketiga yang isinya array/object kompleks (mirip `reactive()` yang kamu pakai Bulan 3)",
             "done": false
           },
           {
-            "id": "M4.W1.T2",
-            "text": "Refactor mini project bulan 3 pakai Pinia",
+            "id": "M4.W1.T2.1",
+            "text": "`getters` — **BARU, 3 putaran**: `getters` itu nilai turunan dari `state` store (mirip `computed()`, tapi levelnya di store, bisa dipakai banyak component). Putaran 1: 1 getter sederhana dari state `T1.1` (misal total/jumlah item); putaran 2: getter BARU yang gabungkan >1 properti `state` sekaligus; putaran 3: getter yang memanggil getter LAIN di dalamnya (getter saling bergantung)",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T2.2",
+            "text": "`actions` — **BARU, 3 putaran**: `actions` itu function di dalam store yang mengubah `state` (boleh juga async, misal simulasi fetch). Putaran 1: 1 action sederhana (tambah/ubah 1 data `state`); putaran 2: action BARU yang mengubah >1 properti `state` sekaligus dalam 1 pemanggilan; putaran 3: action **async** (pakai `setTimeout` simulasi atau `fetch` beneran) yang mengisi `state` setelah \"delay\", dipanggil dari `onMounted()` component",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T2.3",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari salah satu store `T1.1`/`T2.1`, panggil dari component dengan **destructuring langsung** (`const { namaProperti } = useNamaStore()`), tampilkan `namaProperti` itu di template, lalu ubah nilai aslinya lewat action/langsung — amati apakah tampilan ikut berubah. Bandingkan dengan akses **tanpa destructuring** (`const store = useNamaStore()`, pakai `store.namaProperti` di template). Jelaskan dengan kata sendiri: kenapa destructuring langsung dari Pinia store memutus reactivity — kaitkan ke pengalamanmu di `M3.W2.T1.2` (destructuring `reactive()`) — apakah ini masalah yang sama persis atau beda? Lalu cari tahu sendiri: fungsi `storeToRefs()` dari Pinia dipakai untuk apa, coba terapkan, buktikan itu memperbaiki masalahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T2.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `state`/`getters`/`actions`/jebakan destructuring store — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T3",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Refactor `todoStore.js` manual dari capstone Bulan 3 (`M3.W4.T3`) jadi Pinia store beneran: pindahkan `daftarTodo` jadi `state`, pindahkan logic filter/search (yang sekarang di `computed()` component) jadi `getters` store, pindahkan `tambahTodo`/`toggleSelesai`/`editTodo`/`hapusTodo` jadi `actions` store. Pastikan semua halaman (daftar, detail, filter) tetap jalan seperti sebelumnya setelah refactor — ini LATIHAN REFACTOR, bukan fitur baru, jadi perilaku aplikasinya harus identik, cuma caranya nyimpan state yang berubah. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T4`)",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T4",
+            "text": "**Laporan/Mini App Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md`): karena topik minggu ini (state management) lebih konseptual/arsitektural dibanding navigasi/UI, **laporan tertulis** kemungkinan lebih masuk akal dibanding mini app baru — tapi tetap bebas pilih mini app kalau kamu punya ide yang pas. Laporan: jelaskan alur logis `state`→`getters`→`actions` di store hasil refactor `T3`-mu, dan bandingkan eksplisit \"sebelum\" (pakai `ref()`/`reactive()` manual di `todoStore.js`) vs \"sesudah\" (Pinia) — apa yang sebenarnya berubah, apa yang TIDAK berubah dari sisi component yang memakainya",
+            "done": false
+          },
+          {
+            "id": "M4.W1.T5",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo refactor Pinia dari `T3` + laporan/mini app dari `T4` langsung jalan, jelaskan kenapa data dipindah ke `getters`/`actions` (bukan tetap di component), review PR bareng, **mentor minta modifikasi dadakan** di store yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum destructuring Pinia store + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
