@@ -8,9 +8,11 @@
 > latihan maupun soal refleksi/kuis — jalankan sendiri, amati sendiri, catat hasil aslinya di log.
 > Contoh entry log di bawah cuma menunjukkan **format**, bukan isi jawabannya.
 >
-> **🗓️ 3 hari kerja** (Selasa 13 – Kamis 15 Oktober 2026) — minggu pendek, Senin 12 Oktober dipakai
-> untuk evaluasi penutup Bulan 3 (`M3.W4.T5`). Cakupan minggu ini sengaja lebih ringkas dari
-> minggu-minggu Bulan 3.
+> **🗓️ 4 hari kerja** (Selasa 13 – Jumat 16 Oktober 2026). Jadwal berubah dari rencana awal: Senin
+> 12 Oktober batal (izin kegiatan sekolah) — evaluasi penutup Bulan 3 (`M3.W4.T5`) dipadatkan ke
+> **Selasa pagi**, baru dilanjut `T1.1` minggu ini di hari yang sama. Cakupan minggu ini tetap
+> ringkas (dasarnya sudah dirancang untuk 3 hari efektif) — 1 hari tambahan ini jadi buffer kalau
+> `T5`/`T1.1` di hari Selasa molor, bukan alasan menambah beban task baru.
 >
 > ## Modal awal dari Bulan 3
 >

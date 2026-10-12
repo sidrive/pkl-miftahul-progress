@@ -1118,7 +1118,7 @@
           },
           {
             "id": "M3.W4.T5",
-            "text": "**Evaluasi Minggu ini & Penutup Bulan 3 (satu-satunya sesi bareng mentor minggu ini):** demo migrasi multi-halaman dari `T3` DAN mini app/laporan dari `T4` langsung jalan (navigasi antar halaman, buka detail task, edit lewat custom `v-model`), jelaskan kenapa butuh dynamic route param untuk halaman detail, review PR bareng, **mentor minta modifikasi dadakan** di kode yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum component reuse Vue Router (dianggap otomatis \"refresh\" tiap ganti param) + mentor tanya 2-3 variasi pertanyaan lain + refleksi capaian keseluruhan Bulan 3 (Vue 3 fundamental sampai Router) + preview singkat Bulan 4 + isi refleksi capaian/kesulitan di modul",
+            "text": "**Evaluasi Minggu ini & Penutup Bulan 3 (satu-satunya sesi bareng mentor minggu ini):** ⚠️ **dijadwalkan ulang ke Selasa 13 Oktober pagi** (dipadatkan bareng hari pertama `M4.W1` — awalnya Senin 12 Oktober, Gazi izin ada kegiatan sekolah) — demo migrasi multi-halaman dari `T3` DAN mini app/laporan dari `T4` langsung jalan (navigasi antar halaman, buka detail task, edit lewat custom `v-model`), jelaskan kenapa butuh dynamic route param untuk halaman detail, review PR bareng, **mentor minta modifikasi dadakan** di kode yang sedang jalan, jawab soal live yang menyasar kesalahpahaman umum component reuse Vue Router (dianggap otomatis \"refresh\" tiap ganti param) + mentor tanya 2-3 variasi pertanyaan lain + refleksi capaian keseluruhan Bulan 3 (Vue 3 fundamental sampai Router) + preview singkat Bulan 4 + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
