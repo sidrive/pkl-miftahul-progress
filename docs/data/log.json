@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-10-13",
+    "task": "M4.W1.T2.2",
+    "status": "done",
+    "capaian": "udah saya kerjakan untuk T2.2 ini, diputaran 1 saya membuat action sederhana `tambah()` pada `counterStore.js` untuk menambah angka state. Putaran 2 membuat action `gantiProfil()` pada `userStore.js` yang ngubah lebih dari satu properti state (nama dan peran) sekaligus dalam satu pemanggilan. Putaran 3 membuat action async `muatDataDariServer()` pada `produkStore.js` menggunakan `setTimeout` untuk mensimulasikan proses memuat data dari server selama 2 detik beserta status loading, yang kemudian dipanggil secara otomatis melalui lifecycle hook `onMounted()`.",
+    "kesulitan": "waktu mau kerjain task ini ada bingung dikit soalnya kayak mana konsep `async/await` dan `setTimeout` bisa diintegrasikan ke dalam Pinia action dan pemanggilannya dari `onMounted()`, saya tanya ai dan minta bantukan dikit, jadi sekarang udah sedikit paham dan tau bagaimana cara panggil dan integresikan nya."
+  },
+  {
+    "date": "2026-10-13",
+    "task": "M4.W1.T2.1",
+    "status": "done",
+    "capaian": "saya udah buat 3 getters dengan pakai data js untuk T1.1 yang udah du update dan disesuaikan dengan pengerjaan task T2.1. nah jadi saya buat `3 putaran getters` (computed di dalam store Pinia). pada putaran 1 saya buat getter sederhana `totalJenisProduk` di `produkStore.js` untuk hitung panjang array produk. di putaran 2 buat getter `profilLengkap` di `userStore.js` yang menggabungin beberapa properti state `(nama, peran, statusAktif)` jadi satu kalimat aja. dan di putaran 3 getter `ringkasanToko` yang manggil getter lain `(totalJenisProduk dan totalStokBarang)` untuk nyusun ringkasan data toko. udah saya coba dan berhasil nampil.",
+    "kesulitan": "sempat bingung logika cara kerja getters yang dipanggil di Vue component tanpa tanda kurung, serta bagaimana satu getter bisa mengambil hasil dari getter lainnya. saya coba per putaran dan dibuatkan tab navigasi per task, jadi paham lah soal getters ini."
+  },
+  {
+    "date": "2026-10-13",
+    "task": "M4.W1.T1.1",
+    "status": "done",
+    "capaian": "saya udah install Pinia dan udah saya daftarin ke main.js. saya buat 3 putaran store pakai Composition API style (`defineStore` dengan `ref`) karna syntax nya konsisten dan intuitif kaya script setup Vue 3. di putaran 1 saya itu buat counterStore.js (1 data angka), putaran 2 buat userStore.js (>1 data properti user), dan putaran 3 saya buat produkStore.js (data kompleks array of objects). seluruh storenya udah dipanggil di komponen T1.1-W1.vue dan ditampilkan lewat navigasi App.vue yang udah dirapikan.",
+    "kesulitan": "pada awal awal saya mau kerjakan task minggu ini, saya sedikit bingung soal penataan lokasi foldernya, saya cari tau dan saya buat aja folder baru dengan nama `Task.M4-W1` di dalam folder components, jadi folder sejajar dengan folder minggu sebelum nya. waktu saya mau kerjain dari putaran 1 saya bingung ini gimana, tapi udah saya daftarin juga, saya buat stores untuk mendaftarin task yang disuruh tiap putaran. masih sedikit bingung tapi menurut saya wajar karna ini baru awal awal pengerjaan task minggu ini."
+  },
+  {
+    "date": "2026-10-09",
+    "task": "M3.W4.T5",
+    "status": "---",
+    "capaian": "---",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-08",
     "task": "M3.W4.T4",
     "status": "done",
