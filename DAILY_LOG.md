@@ -2369,3 +2369,45 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** jadi saya udah kerjakan T4 ini dan saya ilih Opsi A, kenapa saya pilih opsi A? karna menurut saya ini lumayan cukup mudah (sepertinya) untuk saya, dan karna task ini seperti nya mirip mirip seperti yang saya buat sebelum sebelum nya. jadi yang saya buat ini T4 MiniApp, disini dia lokasinya ada di [../Task.M3-W4/T4-W4], didalam nya ada beberapa file untuk pengerjaan T4 MiniApp ini, jadi karna ini pertama kali nya untuk minggu ini dan seterusnya juga pasti ada, jadi saya buatlah dengan sistem dia menarik `component`. jadi ada beebrapa file `T4-Main.vue` sebagai halaman awal untuk task ini, `T1-Grup.vue` dan `T2-Grup.vue` untuk halaman penampil task task yang udah ada sebelum nya, jadi 2 file nya itu mereka menarik component yang udah ada dan di tamilkan ulang di halaman, khusus task `T2.2, T2.3` ini dia sedikit berbeda sistem nya, karna 2 task itu mereka punya routing sendiri atau punya navigasi sendiri, jadi kalau asal panggil aja dia akan bentrok dengan routing T4 ini. nah jadi di T4 ini saya buat kalau tombol di klik mereka kehalaman task yang di pilih, jujur gatau udah bener atau ngga nya. udah di PR juga dan commit rapi, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/17]
 - **Kesulitan:** pada awal awal pengerjaan saya ga ngerti apa maksudnya dengan task ini, tapi saya baca baca dan tanya ai, awal nya saya kira cuma membuat miniApp biasanya, cuma saya rasa bukan sesimpel itu, yang saya pahamin dari membaca task nya dia minta 1 aplikasi lagi untuk semua task yang ada, jadi dari `T1.1 - T3` lah anggapan nya digabungin dan di jadikan 1 halaman aja, yang dimana halaman nya itu ada tombol navigasi dan menggunakan `nested routing` biar tetap sesuai dengan task minggu ini. dan yap sekarang udah selesai (saya rasa) dan walau udah selesai masih banyak kekurangan nya dan bisa aja saya rasa jauh dari yang di minta modul, ya segini aja lah dulu, ini aja cukup sulit, task task pada minggu ini emang sulit dari pada minggu sebelum sebelum nya.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-09
+
+<!-- ENTRY START -->
+
+### Task: M3.W4.T5
+- **Status:** ---
+- **Capaian:** ---
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+# Bulan 4
+
+## 2026-10-13 // Bulan 4 - Minggu 1
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T1.1
+- **Status:** done
+- **Capaian:** saya udah install Pinia dan udah saya daftarin ke main.js. saya buat 3 putaran store pakai Composition API style (`defineStore` dengan `ref`) karna syntax nya konsisten dan intuitif kaya script setup Vue 3. di putaran 1 saya itu buat counterStore.js (1 data angka), putaran 2 buat userStore.js (>1 data properti user), dan putaran 3 saya buat produkStore.js (data kompleks array of objects). seluruh storenya udah dipanggil di komponen T1.1-W1.vue dan ditampilkan lewat navigasi App.vue yang udah dirapikan.
+- **Kesulitan:** pada awal awal saya mau kerjakan task minggu ini, saya sedikit bingung soal penataan lokasi foldernya, saya cari tau dan saya buat aja folder baru dengan nama `Task.M4-W1` di dalam folder components, jadi folder sejajar dengan folder minggu sebelum nya. waktu saya mau kerjain dari putaran 1 saya bingung ini gimana, tapi udah saya daftarin juga, saya buat stores untuk mendaftarin task yang disuruh tiap putaran. masih sedikit bingung tapi menurut saya wajar karna ini baru awal awal pengerjaan task minggu ini.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T2.1
+- **Status:** done
+- **Capaian:** saya udah buat 3 getters dengan pakai data js untuk T1.1 yang udah du update dan disesuaikan dengan pengerjaan task T2.1. nah jadi saya buat `3 putaran getters` (computed di dalam store Pinia). pada putaran 1 saya buat getter sederhana `totalJenisProduk` di `produkStore.js` untuk hitung panjang array produk. di putaran 2 buat getter `profilLengkap` di `userStore.js` yang menggabungin beberapa properti state `(nama, peran, statusAktif)` jadi satu kalimat aja. dan di putaran 3 getter `ringkasanToko` yang manggil getter lain `(totalJenisProduk dan totalStokBarang)` untuk nyusun ringkasan data toko. udah saya coba dan berhasil nampil.
+- **Kesulitan:** sempat bingung logika cara kerja getters yang dipanggil di Vue component tanpa tanda kurung, serta bagaimana satu getter bisa mengambil hasil dari getter lainnya. saya coba per putaran dan dibuatkan tab navigasi per task, jadi paham lah soal getters ini.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T2.2
+- **Status:** done
+- **Capaian:** udah saya kerjakan untuk T2.2 ini, diputaran 1 saya membuat action sederhana `tambah()` pada `counterStore.js` untuk menambah angka state. Putaran 2 membuat action `gantiProfil()` pada `userStore.js` yang ngubah lebih dari satu properti state (nama dan peran) sekaligus dalam satu pemanggilan. Putaran 3 membuat action async `muatDataDariServer()` pada `produkStore.js` menggunakan `setTimeout` untuk mensimulasikan proses memuat data dari server selama 2 detik beserta status loading, yang kemudian dipanggil secara otomatis melalui lifecycle hook `onMounted()`.
+- **Kesulitan:** waktu mau kerjain task ini ada bingung dikit soalnya kayak mana konsep `async/await` dan `setTimeout` bisa diintegrasikan ke dalam Pinia action dan pemanggilannya dari `onMounted()`, saya tanya ai dan minta bantukan dikit, jadi sekarang udah sedikit paham dan tau bagaimana cara panggil dan integresikan nya.
+<!-- ENTRY END -->
