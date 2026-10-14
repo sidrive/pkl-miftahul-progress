@@ -2411,3 +2411,47 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah saya kerjakan untuk T2.2 ini, diputaran 1 saya membuat action sederhana `tambah()` pada `counterStore.js` untuk menambah angka state. Putaran 2 membuat action `gantiProfil()` pada `userStore.js` yang ngubah lebih dari satu properti state (nama dan peran) sekaligus dalam satu pemanggilan. Putaran 3 membuat action async `muatDataDariServer()` pada `produkStore.js` menggunakan `setTimeout` untuk mensimulasikan proses memuat data dari server selama 2 detik beserta status loading, yang kemudian dipanggil secara otomatis melalui lifecycle hook `onMounted()`.
 - **Kesulitan:** waktu mau kerjain task ini ada bingung dikit soalnya kayak mana konsep `async/await` dan `setTimeout` bisa diintegrasikan ke dalam Pinia action dan pemanggilannya dari `onMounted()`, saya tanya ai dan minta bantukan dikit, jadi sekarang udah sedikit paham dan tau bagaimana cara panggil dan integresikan nya.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-14
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. bedanya hasil akses lewat `destructuring` biasa `(const { jumlah } = store)`, dia cuma ngambil nilai angkanya doang waktu pertama kali dipanggil, tapi sambungan otomatisnya `(reactivity)` langsung putus. buktinya itu pas tombol 1 dipencet, di DevTools console nilai asli store udah naik ke 3 atau 5, tapi tampilan di layar tetep stak di angka 0. tapi kalau kita panggil langsung `store.namaProperti`, koneksinya tetep terhubung, jadi pas nilainya berubah, tampilan di layar otomatis langsung nambah.
+
+2. hasil dari pengamatan saya itu masalahnya bisa dibilang sama persis dan alirannya gak ada bedanya. soalnya `reactive()` di M3 maupun `store Pinia` itu dia sama sama dibungkus pakai `Proxy object` sama Vue. kalau kita cabut variabelnya pakai destructuring biasa, variabelnya jadi keluar dari objek pembungkus Proxy nya, Vue jadinya gak bisa lagi mantau (track) kalau ada perubahan nilai.
+
+3. saya cari tau dan saya dapatkan jawaban kalua fungsi dari `storeToRefs()` Pinia itu untuk jadi alat penolong resmi dari Pinia buat ngebungkus ulang properti state atau getters jadi ref terpisah waktu di destructure. waktu dicoba di Kotak 3 `(const { jumlah } = storeToRefs(counterStore))`, ini memperbaiki masalahnya. nilai angkanya langsung ikut nambah dan sinkron sama Uji coba 2 di layar pas tombolnya dipencet.
+
+4. menurut saya `actions` ga perlu di bungkus sama `storeToRefs()` itu karna action itu isi nya fungsi, bukan data nilai angka/teks yang bisa diubah ubah `(reactive state)`. kode fungsikan sifatnya tetep dan gak perlu dipantau perubahannya sama Vue. pas dicoba destructure fungsi tambah langsung dari store `(const { tambah } = counterStore)`, fungsinya tetep bisa dipanggil normal dan bisa nambahin angka dan gaada masalah.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T2.4
+- **Status:** done
+- **Capaian:** jawaban:
+1. perbedaan antara ke 3 itu, kalau `state` itu tempat menyimpan data reaktif utama. kalau `getters` itu dia itu mesin hitung otomatisnya yang ngolah data mentah tadi (mirip kalkulator). dan `action` itu tombol atau fungsi untuk mengubah atau ngolah `state`(buat nambah, ngurangin, atau ngambil data baru dari luar.)
+
+2. dia disebut mirip `computed()` karna dia punya cara kerja yang sama kaya `computed()`
+
+3. yang terjadi pasti akan kehilangan sifat reaktivitasnya `(reactivity)`. dia akan berubah jadi variabel `JavaScript` biasa.
+
+4. karna `action` itu cuma berisi fungsi bukan berisi data atau objek state yang bisa berubah ubah
+
+5. keuntungannya terstruktur dan gampang diakses dari komponen mana aja secara terpusat tanpa ribet. Pinia udah terintegrasi penuh sama Vue DevTools, jadi kita bisa langsung pantau perubahan data, getters, dan log actionsnya secara real-time.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T3
+- **Status:** done
+- **Capaian:** saya udah buat refactor total TodoList dari store JS manual `ref()` lama di M3 ke Pinia store resmi di M4. saya pindahin `daftarTodo` jadi state utama, logic filter kategori, pencarian, dan pencarian ID jadi getters (`todoTersaring`, `daftarKategoriComputed`, `getTodoById`), damn semua fungsi CRUD (`tambahTodo`, `toggleSelesai`, `updateTodo`, `hapusTodo`) jadi actions Pinia. habis itu juga udah mendaftarin route terpisah `/todo-m4` dan `/todo-m4/:id` di `router/index.js` dan gak ada mengganggu ToDo List lama, saya juga menambhakan tombol reset url pada TodoList minggu ini biar di address bar nya menjadi bersih lagi `(localhost:5173)`, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/18].
+- **Kesulitan:** Waktu saya kerjain, ya seperti biasanya pasti awal awal bingung untuk membuat file dan path nya. dan pada saat saya mengerjakan ada eror build di Vite karna salah relative path saat import file M4 di `index.js` yang kurang mundur folder (`../../../`), dan sempat bingung kenapa tombol Edit/Detail gak mau berfungsi dan berpindah tampilan saat dites di dalam tab `TaskM4W1` karna route ID belum di watch dan belum dipanggil komponen `TodoDetail` nya secara kondisional. 
+<!-- ENTRY END -->
