@@ -35,6 +35,10 @@ import T4Main from '../../T4-W4/T4-Main.vue'
 import T1Grup from '../../T4-W4/T1-Grup.vue'
 import T2Grup from '../../T4-W4/T2-Grup.vue'
 
+// T3 Bulan 4 minggu 1
+import TodoMainM4 from '../../../Task.M4-W1/T3-W1/pages/todoMain.vue'
+import TodoDetailM4 from '../../../Task.M4-W1/T3-W1/pages/todoDetail.vue'
+
 const routes = [
   // T2.1
   { path: '/', component: Beranda },
@@ -71,11 +75,15 @@ const routes = [
   { path: '/todo/:id', name: 'TodoDetail', component: TodoDetail },
 
   { path: '/t4', component: T4Main, children: [
-      { path: '', redirect: '/t4/todo' }, // otomatis buka todo pas pertama masuk
+      { path: '', redirect: '/t4/todo' },
       { path: 't1', component: T1Grup },
       { path: 't2', component: T2Grup },
       { path: 'todo', component: TodoMain }
-  ]}
+  ]},
+
+  // T3 bulan 4 minggu 1
+  { path: '/todo-m4', name: 'TodoMainM4', component: TodoMainM4 },
+  { path: '/todo-m4/:id', name: 'TodoDetailM4', component: TodoDetailM4 }
 ]
 
 const router = createRouter({
