@@ -1151,17 +1151,17 @@
           {
             "id": "M4.W1.T2.3",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: dari salah satu store `T1.1`/`T2.1`, panggil dari component dengan **destructuring langsung** (`const { namaProperti } = useNamaStore()`), tampilkan `namaProperti` itu di template, lalu ubah nilai aslinya lewat action/langsung — amati apakah tampilan ikut berubah. Bandingkan dengan akses **tanpa destructuring** (`const store = useNamaStore()`, pakai `store.namaProperti` di template). Jelaskan dengan kata sendiri: kenapa destructuring langsung dari Pinia store memutus reactivity — kaitkan ke pengalamanmu di `M3.W2.T1.2` (destructuring `reactive()`) — apakah ini masalah yang sama persis atau beda? Lalu cari tahu sendiri: fungsi `storeToRefs()` dari Pinia dipakai untuk apa, coba terapkan, buktikan itu memperbaiki masalahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W1.T2.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal campuran `state`/`getters`/`actions`/jebakan destructuring store — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W1.T3",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Refactor `todoStore.js` manual dari capstone Bulan 3 (`M3.W4.T3`) jadi Pinia store beneran: pindahkan `daftarTodo` jadi `state`, pindahkan logic filter/search (yang sekarang di `computed()` component) jadi `getters` store, pindahkan `tambahTodo`/`toggleSelesai`/`editTodo`/`hapusTodo` jadi `actions` store. Pastikan semua halaman (daftar, detail, filter) tetap jalan seperti sebelumnya setelah refactor — ini LATIHAN REFACTOR, bukan fitur baru, jadi perilaku aplikasinya harus identik, cuma caranya nyimpan state yang berubah. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T4`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W1.T4",

@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-14",
+    "task": "M4.W1.T3",
+    "status": "done",
+    "capaian": "saya udah buat refactor total TodoList dari store JS manual `ref()` lama di M3 ke Pinia store resmi di M4. saya pindahin `daftarTodo` jadi state utama, logic filter kategori, pencarian, dan pencarian ID jadi getters (`todoTersaring`, `daftarKategoriComputed`, `getTodoById`), damn semua fungsi CRUD (`tambahTodo`, `toggleSelesai`, `updateTodo`, `hapusTodo`) jadi actions Pinia. habis itu juga udah mendaftarin route terpisah `/todo-m4` dan `/todo-m4/:id` di `router/index.js` dan gak ada mengganggu ToDo List lama, saya juga menambhakan tombol reset url pada TodoList minggu ini biar di address bar nya menjadi bersih lagi `(localhost:5173)`, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/18].",
+    "kesulitan": "Waktu saya kerjain, ya seperti biasanya pasti awal awal bingung untuk membuat file dan path nya. dan pada saat saya mengerjakan ada eror build di Vite karna salah relative path saat import file M4 di `index.js` yang kurang mundur folder (`../../../`), dan sempat bingung kenapa tombol Edit/Detail gak mau berfungsi dan berpindah tampilan saat dites di dalam tab `TaskM4W1` karna route ID belum di watch dan belum dipanggil komponen `TodoDetail` nya secara kondisional."
+  },
+  {
+    "date": "2026-10-14",
+    "task": "M4.W1.T2.4",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-14",
+    "task": "M4.W1.T2.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-13",
     "task": "M4.W1.T2.2",
     "status": "done",
