@@ -1,6 +1,5 @@
 <template>
   <li class="todo-item">
-    <!-- kotak centang status selesai -->
     <input 
       type="checkbox" 
       :checked="todo.selesai" 
@@ -20,9 +19,8 @@
 
     <!-- Tombol aksi -->
     <div class="button-group">
-      <!-- Tombol Edit sekarang pindah halaman ke detail tugas sesuai ID-nya -->
-      <router-link :to="`/todo/${todo.id}`" class="btn-edit">
-        Edit / Detail
+      <router-link :to="`/todo-m4/${todo.id}`" class="btn-edit">
+       Edit / Detail
       </router-link>
       
       <!-- Tombol Hapus -->
