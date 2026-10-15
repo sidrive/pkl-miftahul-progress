@@ -1166,7 +1166,7 @@
           {
             "id": "M4.W1.T4",
             "text": "**Laporan/Mini App Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md`): karena topik minggu ini (state management) lebih konseptual/arsitektural dibanding navigasi/UI, **laporan tertulis** kemungkinan lebih masuk akal dibanding mini app baru — tapi tetap bebas pilih mini app kalau kamu punya ide yang pas. Laporan: jelaskan alur logis `state`→`getters`→`actions` di store hasil refactor `T3`-mu, dan bandingkan eksplisit \"sebelum\" (pakai `ref()`/`reactive()` manual di `todoStore.js`) vs \"sesudah\" (Pinia) — apa yang sebenarnya berubah, apa yang TIDAK berubah dari sisi component yang memakainya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W1.T5",
