@@ -33,11 +33,16 @@
         @click="pilihTab('t3')">
         Task T3 Migrasi TodoList ke Pinia
       </button>
+
+      <button 
+        :class="{ aktif: taskAktif === 't4' }" 
+        @click="pilihTab('t4')">
+        Task T4 MiniApp Kasir Sederhana
+      </button>
     </div>
 
     <hr class="pemisah" />
 
-    <!-- Area Konten yang Tampil Sesuai Tombol yang Dipilih -->
     <div class="konten-task">
       <T1_1_W1 v-if="taskAktif === 't11'" />
       <T2_1_W1 v-else-if="taskAktif === 't21'" />
@@ -45,6 +50,7 @@
       <T2_3_W1 v-else-if="taskAktif === 't23'" />
       <TodoDetail v-else-if="taskAktif === 't3' && route.params.id" />
       <TodoMain v-else-if="taskAktif === 't3'" />
+      <KasirApp v-else-if="taskAktif === 't4'" />
     </div>
   </div>
 </template>
@@ -58,7 +64,7 @@ import T2_2_W1 from './T2.2-W1.vue'
 import T2_3_W1 from './T2.3-W1.vue'
 import TodoMain from './T3-W1/pages/todoMain.vue'
 import TodoDetail from './T3-W1/pages/todoDetail.vue'
-
+import KasirApp from './T4-W1/pages/kasirApp.vue'
 
 const route = useRoute()
 const router = useRouter()
