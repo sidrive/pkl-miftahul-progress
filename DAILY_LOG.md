@@ -2455,3 +2455,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** saya udah buat refactor total TodoList dari store JS manual `ref()` lama di M3 ke Pinia store resmi di M4. saya pindahin `daftarTodo` jadi state utama, logic filter kategori, pencarian, dan pencarian ID jadi getters (`todoTersaring`, `daftarKategoriComputed`, `getTodoById`), damn semua fungsi CRUD (`tambahTodo`, `toggleSelesai`, `updateTodo`, `hapusTodo`) jadi actions Pinia. habis itu juga udah mendaftarin route terpisah `/todo-m4` dan `/todo-m4/:id` di `router/index.js` dan gak ada mengganggu ToDo List lama, saya juga menambhakan tombol reset url pada TodoList minggu ini biar di address bar nya menjadi bersih lagi `(localhost:5173)`, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/18].
 - **Kesulitan:** Waktu saya kerjain, ya seperti biasanya pasti awal awal bingung untuk membuat file dan path nya. dan pada saat saya mengerjakan ada eror build di Vite karna salah relative path saat import file M4 di `index.js` yang kurang mundur folder (`../../../`), dan sempat bingung kenapa tombol Edit/Detail gak mau berfungsi dan berpindah tampilan saat dites di dalam tab `TaskM4W1` karna route ID belum di watch dan belum dipanggil komponen `TodoDetail` nya secara kondisional. 
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-15
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T4
+- **Status:** done
+- **Capaian:** saya pilih untuk coba buat Mini App Kasir Sederhana pakai Pinia store (`kasirStore.js`) di folder `T4-W1` untuk mendemokan langsung penerapan State (`daftarBarang` dan `keranjang`), Getters (`totalHarga` dan `totalItem`), serta Actions (`tambahKeKeranjang` dan `resetKeranjang`). saya milih bentuk Mini App ini agar konsep state management Pinia bisa diuji secara visual dan interaktif dalam satu halaman UI kasir toko sederhana. dan menurut saya ini lebih gampang untuk di jelasin, saya juga buat sebenarnya untuk laporan nya, cuma saya rasa kurang sesusai atau tidak cocok lah, jadi saya pilih untuk buat miniApp aja jadinya. link [https://github.com/sidrive/pkl-miftahul-progress/pull/19]
+- **Kesulitan:** sejauh ini waktu membuat miniApp nya masih aman aja dan ga ada kendala.
+<!-- ENTRY END -->
