@@ -2,20 +2,46 @@
   <div class="kasir-box">
     <h2 class="judul">🛒 Mini App Kasir Sederhana (Pinia)</h2>
 
+    <!-- FORM TAMBAH BARANG BARU -->
+    <div class="panel-fitur">
+      <h3>➕ Tambah Barang Baru</h3>
+      <form @submit.prevent="handleTambahBarang" class="form-tambah">
+        <input v-model="namaInput" type="text" placeholder="Nama Barang" required />
+        <input v-model.number="hargaInput" type="number" placeholder="Harga (Rp)" required min="500" />
+        <input v-model.number="stokInput" type="number" placeholder="Stok" required min="1" />
+        <button type="submit" class="btn-tambah">+ Simpan</button>
+      </form>
+    </div>
+
+    <!-- PENCARIAN BARANG -->
+    <div class="panel-fitur">
+      <input 
+        v-model="kasirStore.kataKunci" 
+        type="text" 
+        placeholder="🔍 Cari nama barang..." 
+        class="input-cari"
+      />
+    </div>
+
     <div class="kasir-grid">
+      <!-- PANEL ELASTASE BARANG -->
       <div class="panel">
-        <h3>📦 Barang</h3>
-        <div v-for="b in kasirStore.daftarBarang" :key="b.id" class="item">
-          <div>
-            <strong>{{ b.nama }}</strong><br>
-            <small>Rp {{ b.harga.toLocaleString('id-ID') }} | Stok: {{ b.stok }}</small>
+        <h3>📦 Barang ({{ kasirStore.barangTersaring.length }})</h3>
+        <div v-if="kasirStore.barangTersaring.length > 0">
+          <div v-for="b in kasirStore.barangTersaring" :key="b.id" class="item">
+            <div>
+              <strong>{{ b.nama }}</strong><br>
+              <small>Rp {{ b.harga.toLocaleString('id-ID') }} | Stok: {{ b.stok }}</small>
+            </div>
+            <button :disabled="b.stok === 0" @click="kasirStore.tambahKeKeranjang(b)">
+              + Beli
+            </button>
           </div>
-          <button :disabled="b.stok === 0" @click="kasirStore.tambahKeKeranjang(b)">
-            + Beli
-          </button>
         </div>
+        <p v-else style="color: #888;">Barang tidak ditemukan.</p>
       </div>
 
+      <!-- PANEL KERANJANG -->
       <div class="panel">
         <h3>🛍️ Keranjang</h3>
         <div v-if="kasirStore.keranjang.length > 0">
@@ -36,8 +62,30 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useKasirStore } from '../stores/kasirStore.js'
+
 const kasirStore = useKasirStore()
+
+// State lokal untuk form input barang baru
+const namaInput = ref('')
+const hargaInput = ref('')
+const stokInput = ref('')
+
+function handleTambahBarang() {
+  if (!namaInput.value || !hargaInput.value || !stokInput.value) return
+
+  kasirStore.tambahBarangBaru(
+    namaInput.value,
+    hargaInput.value,
+    stokInput.value
+  )
+
+  // Reset form setelah simpan
+  namaInput.value = ''
+  hargaInput.value = ''
+  stokInput.value = ''
+}
 </script>
 
 <style scoped>
@@ -59,6 +107,40 @@ const kasirStore = useKasirStore()
     padding: 15px; 
     border-radius: 8px; 
     border: 1px solid #444; 
+}
+.panel-fitur {
+    background: #1e1e2e;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    margin-bottom: 12px;
+}
+.panel-fitur h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.form-tambah {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.form-tambah input, .input-cari {
+    background: #2a2a3d;
+    border: 1px solid #555;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 120px;
+}
+.input-cari {
+    width: 100%;
+    box-sizing: border-box;
+}
+.btn-tambah {
+    background: #00d2d3;
+    color: #111;
 }
 .item { 
     display: flex; 
