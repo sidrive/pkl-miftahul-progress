@@ -2377,9 +2377,9 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 <!-- ENTRY START -->
 
 ### Task: M3.W4.T5
-- **Status:** ---
-- **Capaian:** ---
-- **Kesulitan:** ---
+- **Status:** done
+- **Capaian:** [ceritakan demo multi-halaman + mini app/laporan, penjelasan dynamic route param, hasil modifikasi dadakan, refleksi Bulan 3]
+- **Kesulitan:** [jujur aja]
 <!-- ENTRY END -->
 
 ---
@@ -2466,4 +2466,16 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Status:** done
 - **Capaian:** saya pilih untuk coba buat Mini App Kasir Sederhana pakai Pinia store (`kasirStore.js`) di folder `T4-W1` untuk mendemokan langsung penerapan State (`daftarBarang` dan `keranjang`), Getters (`totalHarga` dan `totalItem`), serta Actions (`tambahKeKeranjang` dan `resetKeranjang`). saya milih bentuk Mini App ini agar konsep state management Pinia bisa diuji secara visual dan interaktif dalam satu halaman UI kasir toko sederhana. dan menurut saya ini lebih gampang untuk di jelasin, saya juga buat sebenarnya untuk laporan nya, cuma saya rasa kurang sesusai atau tidak cocok lah, jadi saya pilih untuk buat miniApp aja jadinya. link [https://github.com/sidrive/pkl-miftahul-progress/pull/19]
 - **Kesulitan:** sejauh ini waktu membuat miniApp nya masih aman aja dan ga ada kendala.
+<!-- ENTRY END -->
+
+---
+
+## 2026-10-16
+
+<!-- ENTRY START -->
+
+### Task: M4.W1.T5
+- **Status:** done
+- **Capaian:** udah melakukan demo kepada mentor dan menunjukkan hasilnya, bisa menjelaskan getters, state, dan action kepada mentor sambil menunjukkan hasilnya di web. udah update miniApp kasir nya juga, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/20]
+- **Kesulitan:** evaluasi mingguan berjalan dengan baik.
 <!-- ENTRY END -->
