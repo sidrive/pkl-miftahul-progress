@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-16",
+    "task": "M4.W1.T5",
+    "status": "done",
+    "capaian": "udah melakukan demo kepada mentor dan menunjukkan hasilnya, bisa menjelaskan getters, state, dan action kepada mentor sambil menunjukkan hasilnya di web. udah update miniApp kasir nya juga, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/20]",
+    "kesulitan": "evaluasi mingguan berjalan dengan baik."
+  },
+  {
     "date": "2026-10-15",
     "task": "M4.W1.T4",
     "status": "done",
@@ -51,9 +58,9 @@
   {
     "date": "2026-10-09",
     "task": "M3.W4.T5",
-    "status": "---",
-    "capaian": "---",
-    "kesulitan": "---"
+    "status": "done",
+    "capaian": "[ceritakan demo multi-halaman + mini app/laporan, penjelasan dynamic route param, hasil modifikasi dadakan, refleksi Bulan 3]",
+    "kesulitan": "[jujur aja]"
   },
   {
     "date": "2026-10-08",
