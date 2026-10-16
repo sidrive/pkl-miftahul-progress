@@ -10,6 +10,7 @@ export const useKasirStore = defineStore('kasir', () => {
   ])
 
   const keranjang = ref([])
+  const kataKunci = ref('') // State untuk pencarian barang
 
   // 2. GETTERS (Kalkulator Hitung Otomatis)
   // Menghitung total harga belanjaan
@@ -20,6 +21,13 @@ export const useKasirStore = defineStore('kasir', () => {
   // Menghitung total barang di keranjang
   const totalItem = computed(() => {
     return keranjang.value.reduce((total, item) => total + item.jumlah, 0)
+  })
+
+  // Getter menyaring daftar barang berdasarkan kata kunci pencarian
+  const barangTersaring = computed(() => {
+    return daftarBarang.value.filter(b => 
+      b.nama.toLowerCase().includes(kataKunci.value.toLowerCase())
+    )
   })
 
   // 3. ACTIONS (Tugas Si Kasir)
@@ -57,12 +65,25 @@ export const useKasirStore = defineStore('kasir', () => {
     keranjang.value = []
   }
 
+  // Action Tambah Barang Baru ke Gudang/Etalase
+  function tambahBarangBaru(nama, harga, stok) {
+    daftarBarang.value.push({
+      id: Date.now(),
+      nama,
+      harga: Number(harga),
+      stok: Number(stok)
+    })
+  }
+
   return {
     daftarBarang,
     keranjang,
+    kataKunci,
+    barangTersaring,
     totalHarga,
     totalItem,
     tambahKeKeranjang,
-    resetKeranjang
+    resetKeranjang,
+    tambahBarangBaru
   }
 })
