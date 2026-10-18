@@ -1180,13 +1180,68 @@
         "title": null,
         "tasks": [
           {
-            "id": "M4.W2.T1",
-            "text": "Instalasi & pemakaian Olsera Design System (`@olsera/tokens`, `DsButton`, dll)",
+            "id": "M4.W2.T1.1",
+            "text": "Bikin file token CSS sendiri — **BARU, 3 putaran**: bikin `tokens.css` berisi CSS custom properties (`:root { --nama-token: nilai; }`), ikuti pola penamaan nyata Olsera DS (`--color-grey-0`, `--color-grey-100`, `--color-navy-50`, dst — skala angka, bukan nama sembarang kaya `--warna-biru`). Putaran 1: token warna (minimal skala `grey` dan 1 warna aksen, masing-masing beberapa level/shade); putaran 2: token spacing (`--spacing-xs`, `--spacing-sm`, dst, dipakai gantiin angka px hardcode); putaran 3: token typography (`--font-size-sm`, `--font-weight-bold`, dst)",
             "done": false
           },
           {
-            "id": "M4.W2.T2",
-            "text": "Styling dengan design token & dark mode dasar",
+            "id": "M4.W2.T1.2",
+            "text": "**[Wajib Refleksi]** Ambil 1 component lama (bebas, dari Bulan 3/4 manapun) yang masih pakai warna/spacing hardcode (`color: #333`, `padding: 16px`), ganti SEMUA nilai hardcode itu jadi `var(--nama-token)` dari `T1.1`. Jelaskan dengan kata sendiri: apa untungnya pakai token dibanding langsung tulis nilai di tiap component — bayangkan skenario \"ganti 1 warna brand di SELURUH aplikasi\", bandingkan effort-nya dengan vs tanpa token",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T1.3",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar design token/CSS custom properties — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T2.1",
+            "text": "Toggle dark mode pakai `data-theme` — **BARU, 3 putaran**: definisikan 2 set nilai token (light & dark) untuk token warna dari `T1.1`, pakai selector `:root[data-theme=\"dark\"] { --color-grey-0: ...; }` (bukan class `.dark-mode` biasa — ini pola asli Olsera DS: `document.documentElement.setAttribute('data-theme', 'dark')` / `removeAttribute('data-theme')`). Putaran 1: toggle dark mode untuk 1 halaman/component sederhana; putaran 2: toggle untuk halaman/component KEDUA yang beda topik; putaran 3: tombol toggle 1 kali yang mempengaruhi SELURUH aplikasi sekaligus (taruh di component paling atas/`App.vue`, simpan preferensi di `localStorage` biar tidak reset tiap reload)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T2.2",
+            "text": "**[Wajib Refleksi — PENTING]** Sengaja buat 1 component BARU yang SEBAGIAN pakai `var(--color-...)` dan SEBAGIAN LAGI pakai warna hardcode langsung (`color: #222`) — toggle dark mode, amati: bagian mana yang ikut berubah, bagian mana yang \"nyangkut\" di warna lama walau tema sudah diganti. Jelaskan dengan kata sendiri: kenapa dark mode BUKAN sekadar \"nambah 1 saklar\", tapi butuh DISIPLIN — SEMUA warna di SELURUH aplikasi harus konsisten lewat token, kalau ada 1 saja yang lolos hardcode, situ yang jadi bug visual (kelihatan sepele, tapi gampang kelewat kalau project makin besar)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T2.3",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar dark mode/`data-theme`/jebakan warna hardcode — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T3.1",
+            "text": "`DsButton.vue` tiruan — **BARU, 3 putaran**: bikin component button reusable yang menerima `props` untuk variant (`primary`/`secondary`/`danger`, pakai token warna dari `T1.1`) dan ukuran (`small`/`medium`/`large`, pakai token spacing). Putaran 1: varian warna; putaran 2: varian ukuran; putaran 3: kombinasi varian+ukuran+state `disabled` sekaligus dalam 1 component (gabungkan `props` yang sudah kamu kuasai sejak Bulan 3)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T3.2",
+            "text": "Component `Ds*` KEDUA tiruan — **BARU, 3 putaran**: pilih 1 (`DsCard`/`DsBadge`/`DsInput` — bebas), bikin reusable pakai token dari `T1.1`/`T1.2`. Putaran 1: versi dasar; putaran 2: tambah 1 varian/opsi baru; putaran 3: kalau pilih `DsInput`, coba buat dia mendukung **custom `v-model`** (ingat `M3.W4.T1.2`) supaya bisa dipakai `v-model=\"sesuatu\"` dari parent seperti input native",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T3.3",
+            "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa component `Ds*` seperti ini dibuat terpisah & reusable (bukan styling inline di tiap tempat yang butuh tombol/card) — kaitkan ke pengalaman nyatamu sejauh ini (misal berapa banyak tempat yang sebenarnya butuh \"tombol\" di project-project Bulan 3/4-mu, kalau semua itu pakai `DsButton` yang sama, apa untungnya dibanding masing-masing nulis style sendiri)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T3.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar component library reusable & `props` untuk variant — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T4",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Pilih 1 mini app yang sudah ada (Mini App Kasir `M4.W1.T4` ATAU TodoList Pinia `M4.W1.T3`), **restyle total** pakai token (`T1.1`) + component `Ds*` buatanmu sendiri (`T3.1`/`T3.2`, ganti SEMUA tombol/card/input manual jadi `DsButton`/dll) + toggle dark mode (`T2.1`) yang beneran berfungsi di app itu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T6`)",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T5",
+            "text": "**Laporan/Mini App Akhir Minggu:** bikin 1 halaman \"mini storybook\" (terinspirasi Storybook asli Olsera DS) yang menampilkan SEMUA component `Ds*` buatanmu minggu ini sekaligus (semua varian dari `T3.1`/`T3.2`) dalam 1 halaman showcase, lengkap dengan tombol toggle dark mode supaya bisa dilihat kedua temanya langsung di halaman yang sama — ini bentuk **Mini App** sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md`, cocok untuk minggu ini karena hasilnya visual",
+            "done": false
+          },
+          {
+            "id": "M4.W2.T6",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo restyle dari `T4` DAN mini storybook dari `T5` langsung jalan (toggle dark mode harus kelihatan konsisten di semua komponen), jelaskan kenapa token dipisah dari component (bukan warna hardcode di tiap component), review PR bareng, **mentor minta modifikasi dadakan** (misal ubah 1 token warna brand, lihat apakah SEMUA component ikut berubah otomatis), jawab soal live yang menyasar kesalahpahaman umum dark mode (dianggap cukup toggle 1 saklar tanpa disiplin token) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
