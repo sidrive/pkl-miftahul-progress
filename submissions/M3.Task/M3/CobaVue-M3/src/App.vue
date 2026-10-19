@@ -4,9 +4,21 @@
     <header class="header-utama">
       <h2 @click="kembaliKeMenuUtama" style="cursor: pointer;">M3 & M4 - Progress Belajar Vue</h2>
       
-      <!-- Cuma tampilkan tombol Menu Utama kalau lagi di dalam halaman minggu -->
+      <!-- tampilkan tombol Menu Utama kalau lagi di dalam halaman minggu -->
       <div v-if="mingguAktif" class="tombol-nav-header">
+        <!-- TOMBOL SAKLAR GLOBAL (PUTARAN 3) -->
+        <button class="btn-saklar-global" @click="toggleThemeGlobal">
+          Mode: {{ isDark ? 'Dark' : 'Light' }}
+        </button>
+
         <button class="btn-home" @click="kembaliKeMenuUtama">Menu Utama</button>
+      </div>
+
+      <!-- Tampilkan tombol saklar juga saat di halaman Menu Utama luar -->
+      <div v-else class="tombol-nav-header">
+        <button class="btn-saklar-global" @click="toggleThemeGlobal">
+          Mode: {{ isDark ? 'Dark' : 'Light' }}
+        </button>
       </div>
     </header>
 
@@ -51,6 +63,11 @@
               <h3>Bulan 4 Minggu 1 (M4.W1)</h3>
               <p>Pinia Dasar: State, Getters, Actions</p>
             </button>
+
+            <button class="btn-minggu btn-bulan4" @click="pilihMinggu('m4w2')">
+              <h3>Bulan 4 Minggu 2 (M4.W2)</h3>
+              <p>Design System Tokens & Dark Mode</p>
+            </button>
           </div>
         </div>
       </div>
@@ -66,12 +83,14 @@
 
       <!-- Bulan 4 -->
       <TaskM4W1 v-else-if="mingguAktif === 'm4w1'" />
+
+      <TaskM4W2 v-else-if="mingguAktif === 'm4w2'" />
     </main>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 import TaskW1 from './components/Task.M3-W1/TaskW1.vue'
@@ -79,6 +98,7 @@ import TaskW2 from './components/Task.M3-W2/TaskW2.vue'
 import TaskW3 from './components/Task.M3-W3/TaskW3.vue'
 import TaskW4 from './components/Task.M3-W4/TaskW4.vue'
 import TaskM4W1 from './components/Task.M4-W1/TaskM4W1.vue'
+import TaskM4W2 from './components/Task.M4-W2/TaskM4W2.vue'
 
 const router = useRouter()
 const mingguAktif = ref('')
@@ -87,29 +107,61 @@ const pilihMinggu = (kodeMinggu) => {
   mingguAktif.value = kodeMinggu
 }
 
-// fungsi buat balik ke Menu Utama paling luar + maksa URL bersih balik ke "/"
 const kembaliKeMenuUtama = () => {
   mingguAktif.value = ''
   router.push('/')
 }
+
+// Putaran 3 M4-W2.T2.1
+const isDark = ref(false)
+
+function toggleThemeGlobal() {
+  const sudahDark = document.documentElement.getAttribute('data-theme') === 'dark'
+  
+  if (sudahDark) {
+    document.documentElement.removeAttribute('data-theme')
+    localStorage.setItem('theme', 'light')
+    isDark.value = false
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem('theme', 'dark')
+    isDark.value = true
+  }
+}
+
+onMounted(() => {
+  const temaTersimpan = localStorage.getItem('theme')
+  
+  if (temaTersimpan === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    isDark.value = true
+  } else {
+    document.documentElement.removeAttribute('data-theme')
+    isDark.value = false
+  }
+})
 </script>
 
 <style scoped>
+/* Pilihan Global Saklar: Mengubah warna background seluruh App */
 .app-container {
   font-family: sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .header-utama {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--color-surface);
+  color: var(--color-text);
   padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .header-utama h2 {
@@ -120,6 +172,22 @@ const kembaliKeMenuUtama = () => {
 .tombol-nav-header {
   display: flex;
   gap: 8px;
+}
+
+.btn-saklar-global {
+  background-color: var(--color-navy-500);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-saklar-global:hover {
+  background-color: var(--color-navy-700);
 }
 
 .btn-home {
@@ -157,7 +225,7 @@ const kembaliKeMenuUtama = () => {
 }
 
 .judul-seksi {
-  color: #888;
+  color: var(--color-grey-500);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -168,7 +236,7 @@ const kembaliKeMenuUtama = () => {
   width: 80%;
   max-width: 900px;
   border: 0;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--color-border);
   margin: 35px 0;
 }
 
@@ -180,8 +248,8 @@ const kembaliKeMenuUtama = () => {
 }
 
 .btn-minggu {
-  background-color: #222;
-  color: white;
+  background-color: var(--color-surface);
+  color: var(--color-text);
   border: 2px solid #00ffb3;
   border-radius: 12px;
   padding: 24px;
@@ -193,7 +261,7 @@ const kembaliKeMenuUtama = () => {
 
 .btn-minggu:hover {
   transform: translateY(-5px);
-  background-color: #333;
+  opacity: 0.9;
 }
 
 .btn-minggu h3 {
@@ -204,10 +272,9 @@ const kembaliKeMenuUtama = () => {
 .btn-minggu p {
   margin: 0;
   font-size: 0.85rem;
-  color: #ccc;
+  color: var(--color-text);
 }
 
-/* Warna aksen khusus untuk tombol Bulan 4 */
 .btn-bulan4 {
   border-color: #00d2d3;
 }

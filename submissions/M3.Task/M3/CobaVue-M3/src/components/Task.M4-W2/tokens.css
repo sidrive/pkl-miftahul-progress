@@ -1,0 +1,50 @@
+:root {
+  /* Skala Warna Grey */
+  --color-grey-0: #ffffff;
+  --color-grey-50: #f8f9fa;
+  --color-grey-100: #e9ecef;
+  --color-grey-500: #6c757d;
+  --color-grey-900: #212529;
+
+  /* Skala Warna Aksen (Navy) */
+  --color-navy-50: #e8f0fe;
+  --color-navy-100: #d2e3fc;
+  --color-navy-500: #1a73e8;
+  --color-navy-700: #1557b0;
+  --color-navy-900: #0d47a1;
+
+  /* --- TOKEN TAMBAHAN UNTUK T1.2: Surface & Border --- */
+  --color-bg-surface: var(--color-grey-0);
+  --color-border-card: var(--color-grey-100);
+
+  /* Token Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Token Typography */
+  --font-size-sm: 12px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* T2.1 — LIGHT MODE (DEFAULT UNTUK KARTU) */
+  --color-bg: var(--color-grey-0);
+  --color-text: var(--color-grey-900);
+  --color-surface: var(--color-grey-0);
+  --color-border: var(--color-grey-100);
+}
+
+/* T2.1 — DARK MODE (UNTUK KARTU) */
+:root[data-theme="dark"] {
+  --color-bg: var(--color-grey-900);
+  --color-text: var(--color-grey-0);
+  --color-surface: #2b3035;
+  --color-border: var(--color-grey-500);
+}

@@ -2479,3 +2479,67 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah melakukan demo kepada mentor dan menunjukkan hasilnya, bisa menjelaskan getters, state, dan action kepada mentor sambil menunjukkan hasilnya di web. udah update miniApp kasir nya juga, link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/20]
 - **Kesulitan:** evaluasi mingguan berjalan dengan baik.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-19 // Minggu 2
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T1.1
+- **Status:** done
+- **Capaian:** saya udah buat token warna, spacing, dan typography di `tokens.css`. token warna dipakai untuk mengatur warna teks, background, dan tombol. token spacingnya saya pakai untuk ngatur padding, margin, dan border radius. Token typography dipakai untuk mengatur ukuran dan ketebalan font di komponen `Task.T1.1.vue`.
+- **Kesulitan:** waktu awal awal masih perlu menyesuaikan nama token font-weight supaya sesuai dengan ketentuan task. udah diperbaiki, penggunaan token di komponen sudah sesuai. dan waktu awal awal ga tau soal (`xs`, `sm`, `md`, `lg`, `xl`), cuma rupanya ini sama aja kaya ukurn baju.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T1.2
+- **Status:** done
+- **Capaian:** jawaban:
+1. secara tampilan hamper tidak ada perubahaan setelah saya refactor ini, tapi ada sedikit perubahan pada tampilan tentang, dan kontak.
+
+2. pasti beda jauh banget effort nya. kalua kita pakai token, ganti warna brand di 50 tempat tinggal ubah 1 baris kode `--color-navy-500` di tokens.css dan kelar langsung berubah. tapi kalau tanpa token (masih hardcode), harus nyari dan ngedit manual satu per satu di 50 file berbeda yang makan waktu lama dan rawan ada yang kelewatan.
+
+3. keuntungan lain nya yaitu buat kode lebih rapi dan konsisten, karna warna, spacing, dan ukuran font disimpan di satu tempat. jadi kalau ada perubahan desain, kita lebih mudah mengaturnya dan gak perlu ngubah banyak bagian kode secara manual.
+- **Kesulitan:** pada saat saya mau ubah dari hardcode menjadi tokens ada beberapa masalah dan bug tampilan yang tidak sesuai seperti ukuran berubah, warna beda, tampilan rusak dll nya. sedikit membingungkan juga soalnya ini baru pertama coba pakai tokens. ada kesulitan juga waktu menyesuaikan warna panel lama biar pas sama skala warna token grey, tapi udah diatur pake `--color-grey-500` tampilannya langsung pas dan rapi.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. `CSS custom property itu` design token itu variabel terpusat di CSS buat nyimpan nilai desain kayak warna, spacing, atau font dll nya, cara mendeklarasiin nya itu dimasukkan tanda `--` di dalam `:root`, contohnya `--color-grey-500: #6c757d;`
+
+2. di namai kaya gitu untuk penamaannya netral dan fleksibel, di mana angka kecil melambangkan warna terang dan angka besar buat warna yang pekat/gelap.
+
+3. kita harus manggil dan dengan cara menggunakan `var()`, contohnya `color: var(--color-grey-500);`. jadi warna teks akan ngikutin nilai yang udah disimpan di token.
+
+4. Spacing atau jarak, contohnya `--spacing-md: 16px;`, supaya jarak antar elemen bisa digunakan secara konsisten.
+
+5. dia gak bakal bikin program error/crash, tapi browser bakal ngabaiin baris CSS itu dan diam diam balik (fallback) ke nilai default browser atau nilai warisan dari elemen induknya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T2.1
+- **Status:** done
+- **Capaian:** di Putaran 1 saya udah buat fungsi toggle dark mode pada komponen sederhana pakai pemetaan token `:root[data-theme="dark"]` di `tokens.css` dan manipulasi atribut `data-theme` pada root element `<html>`.di Putaran 2: saya saya buat box baru, tapi untuk tampilan nya masih mengambil dari putaran 1. di Putaran 3:saya udah buat saklar utama ke komponen tingkat atas (`App.vue`) untuk mengontrol tema seluruh aplikasi secara global, serta menambahkan integrasi `localStorage` agar preferensi tema pengguna tetap tersimpan dan tidak ter reset saat halaman di reload.
+- **Kesulitan:** waktu awal awal pengerjaan putaran 3 kan kita harus mengubah tampilan App.vue, nah saya mengalami kendala pembagian scope saklar antara tombol di komponen anak dan saklar global di `App.vue` yang buat status `data-theme` bertabrakan. jadi di halaman Task T2.1 itu kan ada tombol untuk putaran 1 dan 2, nah tombol itu bocor dan bisa mengatur seluruh tampilan halaman, dan sekarang udah di fix dan berjalan normal, `disclaimer`: karna in tahap awal untuk bikin white/dark mode pada seluruh halaman (global), jadi masih ada beberapa komponen yang ikut putih juga, cuma gapapa ini tahapan awal.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T2.2
+- **Status:** done
+- **Capaian:** jawaban:
+**Isi log dengan menjawab (kata sendiri):**
+1. yang saya amati area yang pakai token CSS `(var(--color-surface)` dan `var(--color-text))` berubah warna secara responsif pas dark mode diaktifkan. nah tapi area yang warnanya ditulis hardcode `(#ffffff & #222222)` malah nyangkut dan tetap berwarna putih silau, bikin tampilan layoutnya jadi bocor dan merusak kontras visual.
+
+2. karna tombol saklar itu ngubah nilai atribut/variabel di tingkat root (<html>). kaau misalnya ada 1 aja komponen yang style warnanya ditulis manual (hardcode), warna itu bakal cuek dan mengabaikan instruksi dari root, jadi bikin tampilan aplikasi jadi belang dan gagal dark mode secara menyeluruh.
+
+3. yang bisa dilakukan itu manfaatin fitur pencarian global (Ctrl + Shift + F) di VS Code buat menyisir kode warna hex seperti #fff atau #222 di seluruh file project. atau bisa juga pakai aturan pengecekan otomatis (linter) di editor kode biar pas ada yang nulis warna manual/hardcode, kodenya langsung ditandai merah atau kena tegur sebelum di-commit.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
