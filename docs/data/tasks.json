@@ -1182,27 +1182,27 @@
           {
             "id": "M4.W2.T1.1",
             "text": "Bikin file token CSS sendiri — **BARU, 3 putaran**: bikin `tokens.css` berisi CSS custom properties (`:root { --nama-token: nilai; }`), ikuti pola penamaan nyata Olsera DS (`--color-grey-0`, `--color-grey-100`, `--color-navy-50`, dst — skala angka, bukan nama sembarang kaya `--warna-biru`). Putaran 1: token warna (minimal skala `grey` dan 1 warna aksen, masing-masing beberapa level/shade); putaran 2: token spacing (`--spacing-xs`, `--spacing-sm`, dst, dipakai gantiin angka px hardcode); putaran 3: token typography (`--font-size-sm`, `--font-weight-bold`, dst)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T1.2",
             "text": "**[Wajib Refleksi]** Ambil 1 component lama (bebas, dari Bulan 3/4 manapun) yang masih pakai warna/spacing hardcode (`color: #333`, `padding: 16px`), ganti SEMUA nilai hardcode itu jadi `var(--nama-token)` dari `T1.1`. Jelaskan dengan kata sendiri: apa untungnya pakai token dibanding langsung tulis nilai di tiap component — bayangkan skenario \"ganti 1 warna brand di SELURUH aplikasi\", bandingkan effort-nya dengan vs tanpa token",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T1.3",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar design token/CSS custom properties — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T2.1",
             "text": "Toggle dark mode pakai `data-theme` — **BARU, 3 putaran**: definisikan 2 set nilai token (light & dark) untuk token warna dari `T1.1`, pakai selector `:root[data-theme=\"dark\"] { --color-grey-0: ...; }` (bukan class `.dark-mode` biasa — ini pola asli Olsera DS: `document.documentElement.setAttribute('data-theme', 'dark')` / `removeAttribute('data-theme')`). Putaran 1: toggle dark mode untuk 1 halaman/component sederhana; putaran 2: toggle untuk halaman/component KEDUA yang beda topik; putaran 3: tombol toggle 1 kali yang mempengaruhi SELURUH aplikasi sekaligus (taruh di component paling atas/`App.vue`, simpan preferensi di `localStorage` biar tidak reset tiap reload)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T2.2",
             "text": "**[Wajib Refleksi — PENTING]** Sengaja buat 1 component BARU yang SEBAGIAN pakai `var(--color-...)` dan SEBAGIAN LAGI pakai warna hardcode langsung (`color: #222`) — toggle dark mode, amati: bagian mana yang ikut berubah, bagian mana yang \"nyangkut\" di warna lama walau tema sudah diganti. Jelaskan dengan kata sendiri: kenapa dark mode BUKAN sekadar \"nambah 1 saklar\", tapi butuh DISIPLIN — SEMUA warna di SELURUH aplikasi harus konsisten lewat token, kalau ada 1 saja yang lolos hardcode, situ yang jadi bug visual (kelihatan sepele, tapi gampang kelewat kalau project makin besar)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T2.3",

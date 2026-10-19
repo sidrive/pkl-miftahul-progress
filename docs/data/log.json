@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-10-19",
+    "task": "M4.W2.T2.2",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-19",
+    "task": "M4.W2.T2.1",
+    "status": "done",
+    "capaian": "di Putaran 1 saya udah buat fungsi toggle dark mode pada komponen sederhana pakai pemetaan token `:root[data-theme=\"dark\"]` di `tokens.css` dan manipulasi atribut `data-theme` pada root element `<html>`.di Putaran 2: saya saya buat box baru, tapi untuk tampilan nya masih mengambil dari putaran 1. di Putaran 3:saya udah buat saklar utama ke komponen tingkat atas (`App.vue`) untuk mengontrol tema seluruh aplikasi secara global, serta menambahkan integrasi `localStorage` agar preferensi tema pengguna tetap tersimpan dan tidak ter reset saat halaman di reload.",
+    "kesulitan": "waktu awal awal pengerjaan putaran 3 kan kita harus mengubah tampilan App.vue, nah saya mengalami kendala pembagian scope saklar antara tombol di komponen anak dan saklar global di `App.vue` yang buat status `data-theme` bertabrakan. jadi di halaman Task T2.1 itu kan ada tombol untuk putaran 1 dan 2, nah tombol itu bocor dan bisa mengatur seluruh tampilan halaman, dan sekarang udah di fix dan berjalan normal, `disclaimer`: karna in tahap awal untuk bikin white/dark mode pada seluruh halaman (global), jadi masih ada beberapa komponen yang ikut putih juga, cuma gapapa ini tahapan awal."
+  },
+  {
+    "date": "2026-10-19",
+    "task": "M4.W2.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-19",
+    "task": "M4.W2.T1.2",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "pada saat saya mau ubah dari hardcode menjadi tokens ada beberapa masalah dan bug tampilan yang tidak sesuai seperti ukuran berubah, warna beda, tampilan rusak dll nya. sedikit membingungkan juga soalnya ini baru pertama coba pakai tokens. ada kesulitan juga waktu menyesuaikan warna panel lama biar pas sama skala warna token grey, tapi udah diatur pake `--color-grey-500` tampilannya langsung pas dan rapi."
+  },
+  {
+    "date": "2026-10-19",
+    "task": "M4.W2.T1.1",
+    "status": "done",
+    "capaian": "saya udah buat token warna, spacing, dan typography di `tokens.css`. token warna dipakai untuk mengatur warna teks, background, dan tombol. token spacingnya saya pakai untuk ngatur padding, margin, dan border radius. Token typography dipakai untuk mengatur ukuran dan ketebalan font di komponen `Task.T1.1.vue`.",
+    "kesulitan": "waktu awal awal masih perlu menyesuaikan nama token font-weight supaya sesuai dengan ketentuan task. udah diperbaiki, penggunaan token di komponen sudah sesuai. dan waktu awal awal ga tau soal (`xs`, `sm`, `md`, `lg`, `xl`), cuma rupanya ini sama aja kaya ukurn baju."
+  },
+  {
     "date": "2026-10-16",
     "task": "M4.W1.T5",
     "status": "done",
