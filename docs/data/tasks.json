@@ -1207,22 +1207,22 @@
           {
             "id": "M4.W2.T2.3",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar dark mode/`data-theme`/jebakan warna hardcode — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T3.1",
             "text": "`DsButton.vue` tiruan — **BARU, 3 putaran**: bikin component button reusable yang menerima `props` untuk variant (`primary`/`secondary`/`danger`, pakai token warna dari `T1.1`) dan ukuran (`small`/`medium`/`large`, pakai token spacing). Putaran 1: varian warna; putaran 2: varian ukuran; putaran 3: kombinasi varian+ukuran+state `disabled` sekaligus dalam 1 component (gabungkan `props` yang sudah kamu kuasai sejak Bulan 3)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T3.2",
             "text": "Component `Ds*` KEDUA tiruan — **BARU, 3 putaran**: pilih 1 (`DsCard`/`DsBadge`/`DsInput` — bebas), bikin reusable pakai token dari `T1.1`/`T1.2`. Putaran 1: versi dasar; putaran 2: tambah 1 varian/opsi baru; putaran 3: kalau pilih `DsInput`, coba buat dia mendukung **custom `v-model`** (ingat `M3.W4.T1.2`) supaya bisa dipakai `v-model=\"sesuatu\"` dari parent seperti input native",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T3.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa component `Ds*` seperti ini dibuat terpisah & reusable (bukan styling inline di tiap tempat yang butuh tombol/card) — kaitkan ke pengalaman nyatamu sejauh ini (misal berapa banyak tempat yang sebenarnya butuh \"tombol\" di project-project Bulan 3/4-mu, kalau semua itu pakai `DsButton` yang sama, apa untungnya dibanding masing-masing nulis style sendiri)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T3.4",

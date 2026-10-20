@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-10-20",
+    "task": "M4.W2.T3.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-20",
+    "task": "M4.W2.T3.2",
+    "status": "done",
+    "capaian": "saya pilih komponen DsCard, di putaran pertama saya bikin struktur dasar kartunya dulu yang udah terhubung ke token warna (`--color-surface`, `--color-border`) dan spacing. lanjut di putaran kedua, saya nambahin prop `variant` biar kartunya punya 2 pilihan gaya, `outlined` (pakai border tegas) sama `elevated` (pakai efek box-shadow biar kelihatan melayang). terakhir putaran ketiga, saya melengkapi kartunya dengan prop `hoverable` supaya pas kursor mouse diarahin ke atas kartu ada respons visual interaktif kayak kartunya terangkat dan bordernya berubah ke warna aksen.",
+    "kesulitan": "ada sedikit bingung karna lebar kartunya besar sebelah pas di putaran ketiga, tapi ternyata cuma masalah Flexbox bawaan karena panjang teksnya beda."
+  },
+  {
+    "date": "2026-10-20",
+    "task": "M4.W2.T3.1",
+    "status": "done",
+    "capaian": "jadi saya udah kerjakan task ini dan membuat 3 putaran, jadi yang saya buat itu nikin komponen `DsButton.vue` reusable pakai prop `variant` dengan 3 varian warna (`primary`, `secondary`, `danger`) berbasis token warna. di putaran ke 2 saya nambahin prop `size` untuk 3 varian ukuran (`small`, `medium`, `large`) pakai token spacing dan typography biar nilainya nggak di hardcode. dan terakhir saya menggabungkan semua prop sekaligus (`variant`, `size`, dan `disabled`) buat ngunci aksi tombol pas kondisi mati, terus diuji di halaman `Task.T3.1.vue`.",
+    "kesulitan": "ada eror pada bagian 3 yang dimana posisi tombolnya sangat besar, dan rupanya masalahnya ada di style nya yang typo."
+  },
+  {
+    "date": "2026-10-20",
+    "task": "M4.W2.T2.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-19",
     "task": "M4.W2.T2.2",
     "status": "done",
