@@ -2535,11 +2535,60 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 ### Task: M4.W2.T2.2
 - **Status:** done
 - **Capaian:** jawaban:
-**Isi log dengan menjawab (kata sendiri):**
 1. yang saya amati area yang pakai token CSS `(var(--color-surface)` dan `var(--color-text))` berubah warna secara responsif pas dark mode diaktifkan. nah tapi area yang warnanya ditulis hardcode `(#ffffff & #222222)` malah nyangkut dan tetap berwarna putih silau, bikin tampilan layoutnya jadi bocor dan merusak kontras visual.
 
 2. karna tombol saklar itu ngubah nilai atribut/variabel di tingkat root (<html>). kaau misalnya ada 1 aja komponen yang style warnanya ditulis manual (hardcode), warna itu bakal cuek dan mengabaikan instruksi dari root, jadi bikin tampilan aplikasi jadi belang dan gagal dark mode secara menyeluruh.
 
 3. yang bisa dilakukan itu manfaatin fitur pencarian global (Ctrl + Shift + F) di VS Code buat menyisir kode warna hex seperti #fff atau #222 di seluruh file project. atau bisa juga pakai aturan pengecekan otomatis (linter) di editor kode biar pas ada yang nulis warna manual/hardcode, kodenya langsung ditandai merah atau kena tegur sebelum di-commit.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-10-20
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. kita bisa pakai JavaScript untuk mengubah atribut nya, kita pakai `document.documentElement.setAttribute('data-theme', 'dark')`, dan kalua mau ngebalikin kita mau menonaktifkan/balik ke light mode, tinggal hapus atributnya pakai `document.documentElement.removeAttribute('data-theme')`
+
+2. kita pakai CSS variable (custom properties) lebih mudah karna komponen cuma perlu panggil variabel CSS yang sama (misal var(--color-bg)), jadi kodenya nggak perlu ditulis ulang dua kali. 
+
+3. yang bakal terjadi komponen bakal nyangkut dan tetap pakai warna lama (misal tetap putih terang), karna warna hardcode mengabaikan instruksi perubahan variabel dari root <html>. tampilannya bisa jadi bocor dan merusak kontras visual.
+
+4. biar kalau kita refresh halaman web dia tetap di mode yang udah kita setting (tetap di dark mode), dan gak balik ke awal.
+
+5. caranya dengan kita pakai fitur pencarian global (Ctrl + Shift + F) di VS Code buat nyari/nyisir kode warna manual/hex seperti `#fff` atau `#222`, atau kita bisa langsung toggle dark mode di browser terus liat secara visual apakah ada bagian komponen yang nyangkut tetap terang di tengah mode gelap.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T3.1
+- **Status:** done
+- **Capaian:** jadi saya udah kerjakan task ini dan membuat 3 putaran, jadi yang saya buat itu nikin komponen `DsButton.vue` reusable pakai prop `variant` dengan 3 varian warna (`primary`, `secondary`, `danger`) berbasis token warna. di putaran ke 2 saya nambahin prop `size` untuk 3 varian ukuran (`small`, `medium`, `large`) pakai token spacing dan typography biar nilainya nggak di hardcode. dan terakhir saya menggabungkan semua prop sekaligus (`variant`, `size`, dan `disabled`) buat ngunci aksi tombol pas kondisi mati, terus diuji di halaman `Task.T3.1.vue`.
+- **Kesulitan:** ada eror pada bagian 3 yang dimana posisi tombolnya sangat besar, dan rupanya masalahnya ada di style nya yang typo.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T3.2
+- **Status:** done
+- **Capaian:** saya pilih komponen DsCard, di putaran pertama saya bikin struktur dasar kartunya dulu yang udah terhubung ke token warna (`--color-surface`, `--color-border`) dan spacing. lanjut di putaran kedua, saya nambahin prop `variant` biar kartunya punya 2 pilihan gaya, `outlined` (pakai border tegas) sama `elevated` (pakai efek box-shadow biar kelihatan melayang). terakhir putaran ketiga, saya melengkapi kartunya dengan prop `hoverable` supaya pas kursor mouse diarahin ke atas kartu ada respons visual interaktif kayak kartunya terangkat dan bordernya berubah ke warna aksen.
+- **Kesulitan:** ada sedikit bingung karna lebar kartunya besar sebelah pas di putaran ketiga, tapi ternyata cuma masalah Flexbox bawaan karena panjang teksnya beda.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T3.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. setelah saya hitung tombol yanga da jumlah nya itu sekitar 100 lebih (jika semua tombol di task ini di hitung), nah kalau semuanya pakai `DsButton` yang sama, untungnya kode CSS jadi jauh lebih bersih dan gak berulang ulang. selain itu tampilan semua tombol di seluruh aplikasi jadi konsisten secara otomatis tanpa perlu ngetik ulang style dari nol di tiap file.
+
+2. kalau saya perlu ubah semua tombol, pakai DsButton `terpusat`, effortnya kecil karna kita cuma perlu ubah 1 baris kode di file `DsButton.vue` (atau di token CSS nya), semua tombol di seluruh aplikasi langsung berubah ikut style baru. beda kali kalau nulis style manual di tiap tempat, kita harus buka dan ganti kodenya satu per satu di puluhan file berbeda, yang makan waktu lama dan rawan ada tombol yang kelewatan/bocor.
+
+3. kenapa itu pendekan lebih baik, karna struktur dasar `HTML` dan logika tombol itu sebenarnya sama persis, yang beda cuma warna atau ukurannya aja. mending pakai props biar cukup 1 file aja `(DsButton.vue)`. kalau kita bikin file terpisah per varian (ada `DsButtonPrimary.vue`, `DsButtonSecondary.vue`, `DsButtonDanger.vue`), nanti filenya jadi kebanyakan dan kodenya cuma mengulang doang. waktu pas mau ngubah sesuatu, malah ribet sendiri karena harus buka dan ngedit banyak file satu per satu.
 - **Kesulitan:** ---
 <!-- ENTRY END -->

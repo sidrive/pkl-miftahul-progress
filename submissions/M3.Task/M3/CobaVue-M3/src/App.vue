@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- Header Navigasi Atas -->
     <header class="header-utama">
-      <h2 @click="kembaliKeMenuUtama" style="cursor: pointer;">M3 & M4 - Progress Belajar Vue</h2>
+      <h2 @click="kembaliKeMenuUtama" style="cursor: pointer;">M3 & M4 - Vue Js, Pinia, Ds Design</h2>
       
       <!-- tampilkan tombol Menu Utama kalau lagi di dalam halaman minggu -->
       <div v-if="mingguAktif" class="tombol-nav-header">
