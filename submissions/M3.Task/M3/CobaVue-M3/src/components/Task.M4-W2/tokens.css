@@ -39,6 +39,11 @@
   --color-text: var(--color-grey-900);
   --color-surface: var(--color-grey-0);
   --color-border: var(--color-grey-100);
+
+  /* Token Warna khusus Kasir T4 minggu 2 */
+  --color-teal-500: #00d2d3;
+  --color-teal-600: #00b8b9;
+  --color-mint-500: #00ffb3;
 }
 
 /* T2.1 — DARK MODE (UNTUK KARTU) */
@@ -47,4 +52,9 @@
   --color-text: var(--color-grey-0);
   --color-surface: #2b3035;
   --color-border: var(--color-grey-500);
+
+  /* T4 W2, Token Latar Khusus Warna Kasir Ungu Gelap */
+  --color-surface-kasir: #1e1e2e;
+  --color-input-kasir: #2a2a3d;
+  --color-border-kasir: #444444;
 }
