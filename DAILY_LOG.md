@@ -2592,3 +2592,32 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 3. kenapa itu pendekan lebih baik, karna struktur dasar `HTML` dan logika tombol itu sebenarnya sama persis, yang beda cuma warna atau ukurannya aja. mending pakai props biar cukup 1 file aja `(DsButton.vue)`. kalau kita bikin file terpisah per varian (ada `DsButtonPrimary.vue`, `DsButtonSecondary.vue`, `DsButtonDanger.vue`), nanti filenya jadi kebanyakan dan kodenya cuma mengulang doang. waktu pas mau ngubah sesuatu, malah ribet sendiri karena harus buka dan ngedit banyak file satu per satu.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-21
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T3.4
+- **Status:** done
+- **Capaian:** jawaban:
+1. karna struktur dasar tombolnya sama persis. kalua kita bikin file terpisah per varian, nanti kodenya cuma copas doang dan bikin file di project jadi kebanyakan. pakai props bikin kode jauh lebih efisien karna cukup 1 file terpusat (`DsButton.vue`) yang tampilannya dinamis ngikutin nilai props yang dikirim dari parent.
+
+2. keuntungannya yaitu pertama bikin tampilan aplikasi jadi sama dan konsisten di semua halaman tanpa ada yang beda sendiri. yang kedua bikin kodingan jauh lebih gampang di maintain, jadi pas ada perubahan desain kita tinggal edit di 1 file komponennya aja tanpa perlu ngedit manual satu per satu di tiap file.
+
+3. cara nya kita pakai fitur `<slot />` di Vue. nah tag `<slot />` ini bertindak jadi lubang atau wadah kosong di dalam komponen yang bakal diisi sama teks atau elemen apa pun yang dikirim dari komponen parent.
+
+4. pasangannya itu `prop modelValue` buat nampung nilai inputan yang dikirim dari parent, sama `emit update:modelValue` buat ngirim balik nilai terbarunya ke parent pas ada perubahan.
+
+5. hubungannya antara design token dengan component `Ds*` itu ibarat variabel pusat penampung warna dan ukuran, nah kalau komponen `Ds*` itu cetakan bentuknya. pomponen wajib pakai token biar pas ada perubahan tema kayak fitur `Dark Mode` atau ganti warna utama, kita tinggal ganti nilai di file tokennya aja dan semua komponen Ds* otomatis ikut berubah tanpa perlu kita bongkar CSS komponennya lagi.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T4
+- **Status:** done
+- **Capaian:** saya pilih kasiApp mini untuk di redesign, jadi saya disini mengganti semua struktur wadah panel dan tombol manual pakai komponen reusable `DsCard` dan `DsButton` (dengan varian `success` baru). nah semua nilai warna dan spacing hardcode yang lama udah saya dibersihkan dan saya hubungkan ke `tokens.css`, termasuk penambahan token warna khusus kasir (`--color-surface-kasir`, `--color-input-kasir`, `--color-mint-500`) biar warnanya presisi sama versi awal dan responsif pas toggle Dark Mode aktif. saya buat di branch `M4-W2/T4`, dan udah di commit juga dengan cukup rapi. Link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/21].
+- **Kesulitan:** ada kendala error pas nulis sintaks `@click` di tombol Beli dan sempat beda tone warna latar sama versi minggu 1 tapi udah di benerin. warna pada kasirApp ini awalnya beda dengan minggu lalu, bagian tombol nya juga beda, tapi udah di sesuaiin biar sama kaya minggu sebelum nya.
+<!-- ENTRY END -->
