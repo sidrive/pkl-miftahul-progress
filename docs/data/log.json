@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-21",
+    "task": "M4.W2.T4",
+    "status": "done",
+    "capaian": "saya pilih kasiApp mini untuk di redesign, jadi saya disini mengganti semua struktur wadah panel dan tombol manual pakai komponen reusable `DsCard` dan `DsButton` (dengan varian `success` baru). nah semua nilai warna dan spacing hardcode yang lama udah saya dibersihkan dan saya hubungkan ke `tokens.css`, termasuk penambahan token warna khusus kasir (`--color-surface-kasir`, `--color-input-kasir`, `--color-mint-500`) biar warnanya presisi sama versi awal dan responsif pas toggle Dark Mode aktif. saya buat di branch `M4-W2/T4`, dan udah di commit juga dengan cukup rapi. Link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/21].",
+    "kesulitan": "ada kendala error pas nulis sintaks `@click` di tombol Beli dan sempat beda tone warna latar sama versi minggu 1 tapi udah di benerin. warna pada kasirApp ini awalnya beda dengan minggu lalu, bagian tombol nya juga beda, tapi udah di sesuaiin biar sama kaya minggu sebelum nya."
+  },
+  {
+    "date": "2026-10-21",
+    "task": "M4.W2.T3.4",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-20",
     "task": "M4.W2.T3.3",
     "status": "done",

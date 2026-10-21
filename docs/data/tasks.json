@@ -1227,12 +1227,12 @@
           {
             "id": "M4.W2.T3.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar component library reusable & `props` untuk variant — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T4",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1 hari kerja]** Pilih 1 mini app yang sudah ada (Mini App Kasir `M4.W1.T4` ATAU TodoList Pinia `M4.W1.T3`), **restyle total** pakai token (`T1.1`) + component `Ds*` buatanmu sendiri (`T3.1`/`T3.2`, ganti SEMUA tombol/card/input manual jadi `DsButton`/dll) + toggle dark mode (`T2.1`) yang beneran berfungsi di app itu. Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T6`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T5",
