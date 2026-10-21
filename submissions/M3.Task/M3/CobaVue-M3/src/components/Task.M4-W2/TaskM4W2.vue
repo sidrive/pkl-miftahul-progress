@@ -1,13 +1,55 @@
 <template>
   <div>
     <h2>Bulan 4 Minggu 2 — Design System Tokens & Dark Mode</h2>
-    <nav>
-      <button @click="subTask = 't11'">Task T1.1 (Token Dasar)</button> |
-      <button @click="subTask = 't12'">Task T1.2 (Refleksi Token)</button> |
-      <button @click="subTask = 't21'">Task T2.1 (Dark Mode)</button> |
-      <button @click="subTask = 't22'">Task T2.2 Uji coba</button> |
-      <button @click="subTask = 't31'">Task T3.1 (DsButton)</button> |
-      <button @click="subTask = 't32'">Task T3.2 (DsCard)</button>
+    <nav class="nav-container">
+      <DsButton 
+        :variant="subTask === 't11' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't11'">
+        Task T1.1 (Token Dasar)
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't12' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't12'">
+        Task T1.2 (Refleksi Token)
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't21' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't21'">
+        Task T2.1 (Dark Mode)
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't22' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't22'">
+        Task T2.2 Uji coba
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't31' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't31'">
+        Task T3.1 (DsButton)
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't32' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't32'">
+        Task T3.2 (DsCard)
+      </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't4' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't4'">
+        Task T4 Redesign kasirApp
+      </DsButton>
     </nav>
     <hr />
 
@@ -29,6 +71,9 @@
     <div v-else-if="subTask === 't32'">
       <TaskT32 />
     </div>
+    <div v-else-if="subTask === 't4'">
+      <TaskT4 />
+    </div>
   </div>
 </template>
 
@@ -40,6 +85,18 @@ import TaskT21 from './Task.T2.1.vue'
 import TaskT22 from './Task.T2.2.vue'
 import TaskT31 from './Task.T3.1.vue'
 import TaskT32 from './Task.T3.2.vue'
+import TaskT4 from './T4-W2/kasirApp.vue'
+import DsButton from './DsButton.vue'
 
 const subTask = ref('t11')
 </script>
+
+<style scoped>
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs, 8px);
+  margin-bottom: var(--spacing-sm, 12px);
+}
+</style>

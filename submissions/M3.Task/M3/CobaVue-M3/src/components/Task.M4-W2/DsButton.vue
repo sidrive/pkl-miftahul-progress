@@ -80,4 +80,15 @@ defineProps({
   cursor: not-allowed;
   pointer-events: none; /* Mencegah aksi klik sama sekali */
 }
+
+/* T4 minggu 2 bulan 4 */
+/* Varian baru khusus warna hijau/toska kasir */
+.ds-button--success {
+  background-color: var(--color-mint-500);
+  color: #111111;
+}
+
+.ds-button--success:hover:not(:disabled) {
+  background-color: var(--color-teal-500);
+}
 </style>
