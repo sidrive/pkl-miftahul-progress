@@ -1237,7 +1237,7 @@
           {
             "id": "M4.W2.T5",
             "text": "**Laporan/Mini App Akhir Minggu:** bikin 1 halaman \"mini storybook\" (terinspirasi Storybook asli Olsera DS) yang menampilkan SEMUA component `Ds*` buatanmu minggu ini sekaligus (semua varian dari `T3.1`/`T3.2`) dalam 1 halaman showcase, lengkap dengan tombol toggle dark mode supaya bisa dilihat kedua temanya langsung di halaman yang sama — ini bentuk **Mini App** sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md`, cocok untuk minggu ini karena hasilnya visual",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W2.T6",
