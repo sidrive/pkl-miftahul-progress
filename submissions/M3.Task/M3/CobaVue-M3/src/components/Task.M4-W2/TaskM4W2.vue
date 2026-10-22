@@ -50,6 +50,13 @@
         @click="subTask = 't4'">
         Task T4 Redesign kasirApp
       </DsButton>
+
+      <DsButton 
+        :variant="subTask === 't5' ? 'primary' : 'secondary'" 
+        size="small" 
+        @click="subTask = 't5'">
+        Task T5 StoryBook
+      </DsButton>
     </nav>
     <hr />
 
@@ -74,6 +81,9 @@
     <div v-else-if="subTask === 't4'">
       <TaskT4 />
     </div>
+    <div v-else-if="subTask === 't5'">
+      <TaskT5 />
+    </div>
   </div>
 </template>
 
@@ -86,6 +96,7 @@ import TaskT22 from './Task.T2.2.vue'
 import TaskT31 from './Task.T3.1.vue'
 import TaskT32 from './Task.T3.2.vue'
 import TaskT4 from './T4-W2/kasirApp.vue'
+import TaskT5 from './Task.T5.vue'
 import DsButton from './DsButton.vue'
 
 const subTask = ref('t11')
