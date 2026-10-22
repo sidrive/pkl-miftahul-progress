@@ -91,31 +91,106 @@ function toggleDarkMode() {
   transition: all 0.3s ease;
 }
 
-/* KONDISI LOKAL T5 LIGHT MODE */
+/* =========================================
+   KONDISI LOKAL T5: LIGHT MODE
+   ========================================= */
 .storybook-container[data-theme="light"] {
   background-color: var(--color-grey-0);
   color: var(--color-grey-900);
   border: 1px solid var(--color-grey-100);
 }
 
-.storybook-container[data-theme="light"] .deskripsi,
 .storybook-container[data-theme="light"] h2,
 .storybook-container[data-theme="light"] h3,
-.storybook-container[data-theme="light"] h4 {
-  color: var(--color-grey-900);
+.storybook-container[data-theme="light"] h4,
+.storybook-container[data-theme="light"] p,
+.storybook-container[data-theme="light"] .deskripsi,
+.storybook-container[data-theme="light"] .sub-judul {
+  color: var(--color-grey-900) !important;
 }
 
-/* KONDISI LOKAL T5 DARK MODE */
+/* Paksa DsCard lokal T5 berubah jadi Light Mode */
+.storybook-container[data-theme="light"] :deep(.ds-card) {
+  background-color: var(--color-grey-0) !important;
+  border-color: var(--color-grey-100) !important;
+  color: var(--color-grey-900) !important;
+}
+
+/* =========================================
+   KONDISI LOKAL T5: DARK MODE
+   ========================================= */
 .storybook-container[data-theme="dark"] {
   background-color: var(--color-grey-900);
   color: var(--color-grey-0);
   border: 1px solid var(--color-grey-500);
 }
 
-.storybook-container[data-theme="dark"] .deskripsi,
 .storybook-container[data-theme="dark"] h2,
 .storybook-container[data-theme="dark"] h3,
-.storybook-container[data-theme="dark"] h4 {
-  color: var(--color-grey-0);
+.storybook-container[data-theme="dark"] h4,
+.storybook-container[data-theme="dark"] p,
+.storybook-container[data-theme="dark"] .deskripsi,
+.storybook-container[data-theme="dark"] .sub-judul {
+  color: var(--color-grey-0) !important;
+}
+
+/* Paksa DsCard lokal T5 berubah jadi Dark Mode */
+.storybook-container[data-theme="dark"] :deep(.ds-card) {
+  background-color: #2b3035 !important;
+  border-color: var(--color-grey-500) !important;
+  color: var(--color-grey-0) !important;
+}
+
+/* =========================================
+   LAYOUT & UTILITY
+   ========================================= */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.pembatas {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: var(--spacing-md) 0;
+}
+
+.storybook-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.group-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.teks-isi {
+  margin: 0;
+  line-height: 1.5;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: var(--spacing-xs);
+  font-family: monospace;
 }
 </style>
