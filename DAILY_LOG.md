@@ -2621,3 +2621,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** saya pilih kasiApp mini untuk di redesign, jadi saya disini mengganti semua struktur wadah panel dan tombol manual pakai komponen reusable `DsCard` dan `DsButton` (dengan varian `success` baru). nah semua nilai warna dan spacing hardcode yang lama udah saya dibersihkan dan saya hubungkan ke `tokens.css`, termasuk penambahan token warna khusus kasir (`--color-surface-kasir`, `--color-input-kasir`, `--color-mint-500`) biar warnanya presisi sama versi awal dan responsif pas toggle Dark Mode aktif. saya buat di branch `M4-W2/T4`, dan udah di commit juga dengan cukup rapi. Link PR [https://github.com/sidrive/pkl-miftahul-progress/pull/21].
 - **Kesulitan:** ada kendala error pas nulis sintaks `@click` di tombol Beli dan sempat beda tone warna latar sama versi minggu 1 tapi udah di benerin. warna pada kasirApp ini awalnya beda dengan minggu lalu, bagian tombol nya juga beda, tapi udah di sesuaiin biar sama kaya minggu sebelum nya.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-22
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T5
+- **Status:** done
+- **Capaian:** saya udah buat halaman "Mini Storybook" (`Task.T5.vue`) sebagai showcase terpusat seluruh komponen Design System `Ds*` (`DsButton` dan `DsCard`). dihalana ini menampilkan varian warna (`primary`, `secondary`, `danger`, `success`), ukuran (`small`, `medium`, `large`), state `disabled`, varian kartu `outlined`, serta varian kartu `interactive` dengan animasi hover terangkat. juga ada toggle switch Dark/Light Mode lokal di halaman T5. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/22]
+- **Kesulitan:** saat pengerjaan ada masalah pas toggle mode karna temanya rubah seluruh aplikasi (`document.documentElement`), lalu waktu dibuat lokal sempat komponen `DsCard` dan teks di dalamnya gak mau ikut berubah warna Light Mode. udah di beresi siap scoping atribut `data-theme` secara lokal di kontainer T5 dan pakai CSS `:deep()` untuk override style `DsCard` serta animasi hovernya.
+<!-- ENTRY END -->
