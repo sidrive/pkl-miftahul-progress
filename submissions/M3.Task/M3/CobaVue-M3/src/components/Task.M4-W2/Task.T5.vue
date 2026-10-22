@@ -1,10 +1,11 @@
 <template>
-  <div class="storybook-container">
+  <!-- Atribut data-theme dipasang lokal di sini -->
+  <div class="storybook-container" :data-theme="isDark ? 'dark' : 'light'">
     <div class="header-section">
       <h2>🎨 Mini Storybook Component Showcase</h2>
       <p class="deskripsi">Showcase semua komponen Design System Ds* (M4.W2)</p>
       
-      <!-- TOGGLE DARK MODE -->
+      <!-- TOGGLE DARK MODE LOKAL -->
       <DsButton variant="secondary" size="medium" @click="toggleDarkMode">
         {{ isDark ? '☀️ Switch to Light Mode' : '🌙 Switch to Dark Mode' }}
       </DsButton>
@@ -73,12 +74,10 @@ import DsButton from './DsButton.vue'
 import DsCard from './DsCard.vue'
 
 // State lokal untuk Dark Mode
-const isDark = ref(document.documentElement.getAttribute('data-theme') === 'dark')
+const isDark = ref(true)
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
-  const newTheme = isDark.value ? 'dark' : 'light'
-  document.documentElement.setAttribute('data-theme', newTheme)
 }
 </script>
 
@@ -87,76 +86,36 @@ function toggleDarkMode() {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  padding: var(--spacing-sm);
-  color: var(--color-text);
+  padding: var(--spacing-md);
+  border-radius: var(--spacing-sm);
+  transition: all 0.3s ease;
 }
 
-.header-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  align-items: flex-start;
-  margin-bottom: var(--spacing-sm);
+/* KONDISI LOKAL T5 LIGHT MODE */
+.storybook-container[data-theme="light"] {
+  background-color: var(--color-grey-0);
+  color: var(--color-grey-900);
+  border: 1px solid var(--color-grey-100);
 }
 
-.deskripsi {
-  color: var(--color-text);
-  opacity: 0.8;
-  margin: 0;
+.storybook-container[data-theme="light"] .deskripsi,
+.storybook-container[data-theme="light"] h2,
+.storybook-container[data-theme="light"] h3,
+.storybook-container[data-theme="light"] h4 {
+  color: var(--color-grey-900);
 }
 
-.pembatas {
-  border: 0;
-  border-top: 1px solid var(--color-border);
-  margin: var(--spacing-md) 0;
+/* KONDISI LOKAL T5 DARK MODE */
+.storybook-container[data-theme="dark"] {
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-0);
+  border: 1px solid var(--color-grey-500);
 }
 
-.storybook-section {
-  margin-bottom: var(--spacing-lg);
-}
-
-.storybook-section h3 {
-  color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
-}
-
-.sub-judul {
-  margin-top: 0;
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
-}
-
-.mb-md {
-  margin-bottom: var(--spacing-md);
-}
-
-.group-demo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.items-center {
-  align-items: center;
-}
-
-.grid-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-md);
-}
-
-.teks-isi {
-  color: var(--color-text);
-  margin: 0;
-  line-height: 1.5;
-}
-
-code {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 2px 6px;
-  border-radius: var(--spacing-xs);
-  font-family: monospace;
+.storybook-container[data-theme="dark"] .deskripsi,
+.storybook-container[data-theme="dark"] h2,
+.storybook-container[data-theme="dark"] h3,
+.storybook-container[data-theme="dark"] h4 {
+  color: var(--color-grey-0);
 }
 </style>
