@@ -49,7 +49,9 @@
     <section class="storybook-section">
       <h3>2. Component: DsCard</h3>
       
-      <div class="grid-card">
+      <!-- A. Outlined Biasa -->
+      <h4 class="sub-judul">A. Varian Outlined (Biasa)</h4>
+      <div class="grid-card mb-md">
         <DsCard variant="outlined">
           <h4 class="sub-judul">Kartu Demo Outlined 1</h4>
           <p class="teks-isi">
@@ -61,6 +63,24 @@
           <h4 class="sub-judul">Kartu Demo Outlined 2</h4>
           <p class="teks-isi">
             Komponen ini menjaga kerapian layout dan konsistensi warna antar halaman tanpa hardcode warna manual.
+          </p>
+        </DsCard>
+      </div>
+
+      <!-- B. Interactive Hover (DITAMBAH CLASS MANUAL) -->
+      <h4 class="sub-judul">B. Varian Interactive (Efek Hover / Animation)</h4>
+      <div class="grid-card">
+        <DsCard variant="outlined" class="ds-card--interactive">
+          <h4 class="sub-judul">Kartu Hover Interactive 1 🚀</h4>
+          <p class="teks-isi">
+            Coba arahkan kursor ke sini! Kartu ini bakal terangkat ke atas dengan bayangan halus pas di-hover.
+          </p>
+        </DsCard>
+
+        <DsCard variant="outlined" class="ds-card--interactive">
+          <h4 class="sub-judul">Kartu Hover Interactive 2 ✨</h4>
+          <p class="teks-isi">
+            Cocok dipakai buat elemen yang bisa diklik seperti item produk kasir atau menu pilihan.
           </p>
         </DsCard>
       </div>
@@ -109,11 +129,23 @@ function toggleDarkMode() {
   color: var(--color-grey-900) !important;
 }
 
-/* Paksa DsCard lokal T5 berubah jadi Light Mode */
+/* DsCard lokal T5 berubah jadi Light Mode */
 .storybook-container[data-theme="light"] :deep(.ds-card) {
   background-color: var(--color-grey-0) !important;
   border-color: var(--color-grey-100) !important;
   color: var(--color-grey-900) !important;
+}
+
+/* Efek Hover Light Mode */
+.storybook-container[data-theme="light"] :deep(.ds-card--interactive) {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.storybook-container[data-theme="light"] :deep(.ds-card--interactive:hover) {
+  transform: translateY(-6px) !important;
+  border-color: var(--color-navy-500) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
 /* =========================================
@@ -134,11 +166,23 @@ function toggleDarkMode() {
   color: var(--color-grey-0) !important;
 }
 
-/* Paksa DsCard lokal T5 berubah jadi Dark Mode */
+/* DsCard lokal T5 berubah jadi Dark Mode */
 .storybook-container[data-theme="dark"] :deep(.ds-card) {
   background-color: #2b3035 !important;
   border-color: var(--color-grey-500) !important;
   color: var(--color-grey-0) !important;
+}
+
+/* Efek Hover Dark Mode */
+.storybook-container[data-theme="dark"] :deep(.ds-card--interactive) {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.storybook-container[data-theme="dark"] :deep(.ds-card--interactive:hover) {
+  transform: translateY(-6px) !important;
+  border-color: var(--color-mint-500, #00ffb3) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* =========================================
