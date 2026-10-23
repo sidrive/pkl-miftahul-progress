@@ -54,7 +54,12 @@ defineProps({
 }
 
 .ds-button--danger {
-  background-color: #ff4757;
+  background-color: var(--color-danger-500);
+  color: var(--color-grey-0);
+}
+
+.ds-button--warning {
+  background-color: var(--color-warning-500);
   color: var(--color-grey-0);
 }
 

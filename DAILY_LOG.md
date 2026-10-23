@@ -2633,3 +2633,7 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** saya udah buat halaman "Mini Storybook" (`Task.T5.vue`) sebagai showcase terpusat seluruh komponen Design System `Ds*` (`DsButton` dan `DsCard`). dihalana ini menampilkan varian warna (`primary`, `secondary`, `danger`, `success`), ukuran (`small`, `medium`, `large`), state `disabled`, varian kartu `outlined`, serta varian kartu `interactive` dengan animasi hover terangkat. juga ada toggle switch Dark/Light Mode lokal di halaman T5. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/22]
 - **Kesulitan:** saat pengerjaan ada masalah pas toggle mode karna temanya rubah seluruh aplikasi (`document.documentElement`), lalu waktu dibuat lokal sempat komponen `DsCard` dan teks di dalamnya gak mau ikut berubah warna Light Mode. udah di beresi siap scoping atribut `data-theme` secara lokal di kontainer T5 dan pakai CSS `:deep()` untuk override style `DsCard` serta animasi hovernya.
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-23

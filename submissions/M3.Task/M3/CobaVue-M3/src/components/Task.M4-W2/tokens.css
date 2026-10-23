@@ -13,6 +13,9 @@
   --color-navy-700: #1557b0;
   --color-navy-900: #0d47a1;
 
+  --color-danger-500: #fd0505;
+  --color-warning-500: #eeff00;
+
   /* --- TOKEN TAMBAHAN UNTUK T1.2: Surface & Border --- */
   --color-bg-surface: var(--color-grey-0);
   --color-border-card: var(--color-grey-100);

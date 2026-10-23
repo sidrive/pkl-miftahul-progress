@@ -1,6 +1,14 @@
 <template>
-  <div class="kasir-box">
-    <h2 class="judul">🛒 Mini App Kasir Sederhana (Restyle T4)</h2>
+  <!-- Atribut data-theme dipasang lokal di kontainer kasir -->
+  <div class="kasir-box" :data-theme="isDarkKasir ? 'dark' : 'light'">
+    <div class="header-kasir">
+      <h2 class="judul">🛒 Mini App Kasir Sederhana (Restyle T4)</h2>
+      
+      <!-- TOMBOL TOGGLE DARK MODE KHUSUS KASIR -->
+      <DsButton variant="secondary" size="small" @click="toggleThemeKasir">
+        {{ isDarkKasir ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+      </DsButton>
+    </div>
 
     <!-- FORM TAMBAH BARANG BARU (Menggunakan DsCard & DsButton) -->
     <DsCard variant="outlined" class="mb-sm">
@@ -55,8 +63,8 @@
             </li>
           </ul>
           <hr class="pembatas" />
-          <p>Total Item: <strong>{{ kasirStore.totalItem }}</strong></p>
-          <p>Total Bayar: <strong>Rp {{ kasirStore.totalHarga.toLocaleString('id-ID') }}</strong></p>
+          <p class="teks-total">Total Item: <strong>{{ kasirStore.totalItem }}</strong></p>
+          <p class="teks-total">Total Bayar: <strong>Rp {{ kasirStore.totalHarga.toLocaleString('id-ID') }}</strong></p>
           
           <DsButton 
             variant="danger" 
@@ -85,6 +93,13 @@ const namaInput = ref('')
 const hargaInput = ref('')
 const stokInput = ref('')
 
+// State lokal khusus tema Kasir
+const isDarkKasir = ref(true)
+
+function toggleThemeKasir() {
+  isDarkKasir.value = !isDarkKasir.value
+}
+
 function handleTambahBarang() {
   if (!namaInput.value || !hargaInput.value || !stokInput.value) return
 
@@ -106,17 +121,27 @@ function handleTambahBarang() {
   max-width: 700px; 
   margin: 0 auto; 
   text-align: left; 
+  padding: var(--spacing-md);
+  border-radius: var(--spacing-sm);
+  transition: all 0.3s ease;
+}
+
+.header-kasir {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }
 
 .judul {
-  color: var(--color-text);
-  margin-bottom: var(--spacing-md);
+  margin: 0;
 }
 
 .sub-judul {
   margin-top: 0;
   margin-bottom: var(--spacing-xs);
-  color: var(--color-text);
 }
 
 .mb-sm {
@@ -128,16 +153,6 @@ function handleTambahBarang() {
   gap: var(--spacing-xs);
   flex-wrap: wrap;
   align-items: center;
-}
-
-.input-desain {
-  background-color: var(--color-input-kasir, #2a2a3d);
-  border: 1px solid var(--color-border-kasir, #555555);
-  color: var(--color-text);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--spacing-xs);
-  flex: 1;
-  min-width: 120px;
 }
 
 .input-cari {
@@ -162,25 +177,12 @@ function handleTambahBarang() {
   align-items: center; 
   margin-bottom: var(--spacing-xs); 
   padding: var(--spacing-xs); 
-  border: 1px solid var(--color-border-kasir, #444444);
   border-radius: var(--spacing-xs); 
-  background-color: var(--color-input-kasir, #2a2a3d);
-}
-
-.teks-keterangan {
-  color: var(--color-text-secondary, var(--color-grey-500));
 }
 
 .daftar-keranjang { 
   padding-left: var(--spacing-md); 
   margin: var(--spacing-xs) 0; 
-  color: var(--color-text);
-}
-
-.pembatas {
-  border: 0;
-  border-top: 1px solid var(--color-border);
-  margin: var(--spacing-sm) 0;
 }
 
 .btn-full {
@@ -188,13 +190,114 @@ function handleTambahBarang() {
   margin-top: var(--spacing-xs);
 }
 
-.teks-kosong {
-  color: var(--color-grey-500);
+/* ===================================================
+   TEMA LOKAL KASIR: DARK MODE (default)
+   =================================================== */
+.kasir-box[data-theme="dark"] {
+  background-color: #121318;
+  color: #ffffff;
 }
 
-/* Menimpa warna surface khusus kartu di halaman kasir */
-:deep(.ds-card) {
-  background-color: var(--color-surface-kasir, #1e1e2e);
-  border-color: var(--color-border-kasir, #444444);
+.kasir-box[data-theme="dark"] .judul,
+.kasir-box[data-theme="dark"] .sub-judul,
+.kasir-box[data-theme="dark"] .daftar-keranjang,
+.kasir-box[data-theme="dark"] .teks-total {
+  color: #ffffff !important;
+}
+
+.kasir-box[data-theme="dark"] :deep(.ds-card) {
+  background-color: #1e1e2e !important;
+  border-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+.kasir-box[data-theme="dark"] .input-desain {
+  background-color: #2a2a3d;
+  border: 1px solid #555555;
+  color: #ffffff !important;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--spacing-xs);
+  flex: 1;
+  min-width: 120px;
+}
+
+.kasir-box[data-theme="dark"] .input-desain::placeholder {
+  color: #a0a0a0 !important;
+}
+
+.kasir-box[data-theme="dark"] .item {
+  background-color: #2a2a3d;
+  border: 1px solid #444444;
+  color: #ffffff !important;
+}
+
+.kasir-box[data-theme="dark"] .teks-keterangan {
+  color: #aaaaaa !important;
+}
+
+.kasir-box[data-theme="dark"] .teks-kosong {
+  color: #888888;
+}
+
+.kasir-box[data-theme="dark"] .pembatas {
+  border: 0;
+  border-top: 1px solid #444444;
+  margin: var(--spacing-sm) 0;
+}
+
+/* ===================================================
+   TEMA LOKAL KASIR: LIGHT MODE
+   =================================================== */
+.kasir-box[data-theme="light"] {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #dee2e6;
+}
+
+.kasir-box[data-theme="light"] .judul,
+.kasir-box[data-theme="light"] .sub-judul,
+.kasir-box[data-theme="light"] .daftar-keranjang,
+.kasir-box[data-theme="light"] .teks-total {
+  color: #212529 !important;
+}
+
+.kasir-box[data-theme="light"] :deep(.ds-card) {
+  background-color: #ffffff !important;
+  border-color: #e0e0e0 !important;
+  color: #212529 !important;
+}
+
+.kasir-box[data-theme="light"] .input-desain {
+  background-color: #f1f3f5;
+  border: 1px solid #ced4da;
+  color: #212529 !important;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--spacing-xs);
+  flex: 1;
+  min-width: 120px;
+}
+
+.kasir-box[data-theme="light"] .input-desain::placeholder {
+  color: #6c757d !important;
+}
+
+.kasir-box[data-theme="light"] .item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #212529 !important;
+}
+
+.kasir-box[data-theme="light"] .teks-keterangan {
+  color: #6c757d !important;
+}
+
+.kasir-box[data-theme="light"] .teks-kosong {
+  color: #6c757d;
+}
+
+.kasir-box[data-theme="light"] .pembatas {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: var(--spacing-sm) 0;
 }
 </style>

@@ -13,6 +13,9 @@
 
         <!-- Varian Danger -->
         <DsButton variant="danger">Tombol Danger</DsButton>
+
+        <!-- Tombol Waning -->
+        <DsButton variant="warning">Tombol Warning</DsButton>
       </div>
     </section>
     <hr  />
