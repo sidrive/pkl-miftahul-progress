@@ -1242,7 +1242,7 @@
           {
             "id": "M4.W2.T6",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo restyle dari `T4` DAN mini storybook dari `T5` langsung jalan (toggle dark mode harus kelihatan konsisten di semua komponen), jelaskan kenapa token dipisah dari component (bukan warna hardcode di tiap component), review PR bareng, **mentor minta modifikasi dadakan** (misal ubah 1 token warna brand, lihat apakah SEMUA component ikut berubah otomatis), jawab soal live yang menyasar kesalahpahaman umum dark mode (dianggap cukup toggle 1 saklar tanpa disiplin token) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
