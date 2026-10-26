@@ -1251,8 +1251,58 @@
         "title": null,
         "tasks": [
           {
-            "id": "M4.W3.T1",
-            "text": "Prototipe UI kecil (halaman list + form) pakai Olsera DS",
+            "id": "M4.W3.T1.1",
+            "text": "`DsInput` tervalidasi — **BARU, 3 putaran**: bikin component input reusable dengan custom `v-model` (ingat `M3.W4.T1.2`), `props` untuk `label`, `error` (pesan error ditampilkan di bawah input kalau ada isinya), dan `required`. Putaran 1: tipe `text` dengan validasi wajib diisi; putaran 2: tipe `number` dengan validasi batas min/max; putaran 3: tipe `textarea` ATAU `password` (bebas pilih) dengan 1 validasi tambahan yang relevan",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T1.2",
+            "text": "`DsSelect`/Dropdown tiruan — **BARU, 3 putaran**: bikin component dropdown reusable (boleh bungkus `<select>` native atau bikin dari `<div>`+daftar opsi custom, bebas), custom `v-model`, `props` untuk daftar opsi (`options`, array of object `{ value, label }`). Putaran 1: dropdown sederhana 1 instance; putaran 2: dropdown KEDUA dengan daftar opsi berbeda topik; putaran 3: dropdown dengan opsi default/placeholder (\"Pilih salah satu...\") yang tidak valid untuk disubmit sampai user benar-benar memilih",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T1.3",
+            "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: pola validasi form yang kamu terapkan di `DsInput`/`DsSelect` — bagaimana cara sebuah field \"tahu\" dirinya invalid (kapan `error` jadi terisi), dan bagaimana pesan error itu ditampilkan ke user. Kaitkan ke pengalaman nyata: coba submit form kosong tanpa isi field wajib, screenshot/ceritakan apa yang terjadi",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T1.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar `DsInput`/`DsSelect`/validasi form — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T2.1",
+            "text": "`DsBadge`/Tag status — **BARU, 3 putaran**: component kecil buat nampilin status (misal \"Aktif\"/\"Nonaktif\", \"Stok Habis\", dll) dengan warna beda per status, pakai token warna yang sudah ada (`M4.W2.T1.1`). Putaran 1: 2 status sederhana; putaran 2: topik status BEDA dari putaran 1; putaran 3: status dengan 3+ varian warna sekaligus dalam 1 component (`props` + object mapping status→warna, bukan `v-if`/`v-else-if` berantai)",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T2.2",
+            "text": "Loading & Empty State — **BARU, 3 putaran**: bikin pola tampilan untuk 2 kondisi: (a) data MASIH dimuat (loading — boleh spinner sederhana atau teks \"Memuat...\"), (b) data SUDAH dimuat tapi KOSONG (empty state — pesan + ilustrasi/icon sederhana, BUKAN cuma list kosong tanpa penjelasan). Putaran 1: terapkan di 1 list sederhana (boleh simulasi `setTimeout`, ingat `onMounted` async `M3.W3.T3.1`); putaran 2: list KEDUA topik beda; putaran 3: tambahkan state KETIGA — error (gagal memuat data, beda pesan dari kosong)",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T2.3",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu: bikin 1 form/modal yang dipakai ULANG untuk 2 tujuan — \"Tambah Data Baru\" DAN \"Edit Data\" (component yang sama, bukan 2 component terpisah). Isi form untuk edit 1 data (misal nama \"Budi\"), JANGAN disimpan, tutup form itu, lalu buka LAGI form yang sama tapi untuk MODE TAMBAH (bukan edit). Amati: apakah field form-nya kembali kosong, atau masih menampilkan \"Budi\" dari sesi edit sebelumnya? Kalau ada validasi error yang sempat muncul, amati juga apakah error itu ikut \"nyangkut\". Jelaskan dengan kata sendiri: kenapa component yang di-reuse TIDAK otomatis me-reset state internalnya sendiri, dan cari tahu sendiri minimal 1 cara mengatasinya (boleh pakai `watch` pada props yang menentukan mode, atau trik `:key` untuk paksa component dibuat ulang — ingat `M3.W1.T2.4`/`M3.W4.T2.3`, pola `:key` ternyata relevan lagi di konteks yang beda)",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T2.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar `DsBadge`/loading-empty state/jebakan state nyangkut saat reuse component — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T3",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1.5-2 hari kerja — paling besar sejauh ini]** Bikin **Prototipe UI: Halaman Daftar + Form** (topik bebas — misal daftar produk, daftar karyawan, daftar pesanan) yang menggabungkan SEMUA component `Ds*`-mu (dari minggu ini DAN minggu lalu): `DsButton`, `DsCard`, `DsInput`, `DsSelect`, `DsBadge`, loading/empty state, dark mode konsisten. Form tambah/edit WAJIB pakai 1 component yang sama untuk keduanya (terapkan solusi `T2.3` supaya state tidak nyangkut saat ganti mode). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`)",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T4",
+            "text": "**Laporan Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — minggu ini bentuknya **laporan tertulis**, bukan mini app terpisah, karena `T3` sendiri SUDAH menjadi mini app yang menyatukan semua task minggu ini): jelaskan alur logis bagaimana tiap component kecil (`DsInput`/`DsSelect`/`DsBadge`/loading-empty state) akhirnya dipakai di prototipe `T3` — sertakan juga bagaimana solusi jebakan `T2.3` diterapkan nyata di form tambah/edit prototipe tersebut",
+            "done": false
+          },
+          {
+            "id": "M4.W3.T5",
+            "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo Prototipe UI dari `T3` langsung jalan (tambah data baru, edit data yang sudah ada, ganti antar mode berkali-kali untuk buktikan state tidak nyangkut), jelaskan pola validasi `DsInput`/`DsSelect`, review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 field baru ke form, atau 1 status baru ke `DsBadge`), jawab soal live yang menyasar kesalahpahaman umum reuse component (state otomatis ter-reset padahal tidak) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]
