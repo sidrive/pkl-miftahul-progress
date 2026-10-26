@@ -68,23 +68,25 @@
               <h3>Bulan 4 Minggu 2 (M4.W2)</h3>
               <p>Design System Tokens & Dark Mode</p>
             </button>
+
+            <button class="btn-minggu btn-bulan4" @click="pilihMinggu('m4w3')">
+              <h3>Bulan 4 Minggu 3 (M4.W3)</h3>
+              <p>Prototipe UI: Form Elements & List Pattern</p>
+            </button>
           </div>
         </div>
       </div>
       
       <!-- Bulan 3 -->
       <TaskW1 v-else-if="mingguAktif === 'w1'" />
-
       <TaskW2 v-else-if="mingguAktif === 'w2'" />
-
       <TaskW3 v-else-if="mingguAktif === 'w3'" />
-
       <TaskW4 v-else-if="mingguAktif === 'w4'" />
 
       <!-- Bulan 4 -->
       <TaskM4W1 v-else-if="mingguAktif === 'm4w1'" />
-
       <TaskM4W2 v-else-if="mingguAktif === 'm4w2'" />
+      <TaskM4W3 v-else-if="mingguAktif === 'm4w3'" /> 
     </main>
   </div>
 </template>
@@ -99,6 +101,7 @@ import TaskW3 from './components/Task.M3-W3/TaskW3.vue'
 import TaskW4 from './components/Task.M3-W4/TaskW4.vue'
 import TaskM4W1 from './components/Task.M4-W1/TaskM4W1.vue'
 import TaskM4W2 from './components/Task.M4-W2/TaskM4W2.vue'
+import TaskM4W3 from './components/Task.M4-W3/TaskM4W3.vue'
 
 const router = useRouter()
 const mingguAktif = ref('')

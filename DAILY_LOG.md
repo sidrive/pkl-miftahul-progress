@@ -2637,3 +2637,61 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 ---
 
 ## 2026-10-23
+
+<!-- ENTRY START -->
+
+### Task: M4.W2.T6
+- **Status:** done
+- **Capaian:** udah melakukan evaluasi mingguan dan melakukan demo storybook, udah melakukan modifikasi dadakan juga dengan mentor
+- **Kesulitan:** selama proses evaluasi berjalan dengan lancar.
+<!-- ENTRY END -->
+
+---
+
+## 2026-10-26 // Minggu 3
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T1.1
+- **Status:** done
+- **Capaian:** saya udah buat komponen reusable `DsInput.vue` yang fleksibel dengan custom `v-model` serta pemisahan logika validasi di parent component. di putaran 1 (tipe `text` dengan validasi wajib diisi), putaran 2 (tipe `number` dengan validasi rentang min 0 dan max 10.000.000), dan putaran 3 (tipe `password` dengan validasi minimal 6 karakter dan wajib kombinasi huruf dan angka).
+- **Kesulitan:** tampilan halaman Task T1.1 waktu white mode dia malah tidak kelihatan tulisan dan kolom nya, cuma dah saya perbaiki dan udah nampil sesuai mode yang di setting.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T1.2
+- **Status:** done
+- **Capaian:** saya udah bikin komponen reusable `DsSelect.vue` yang fleksibel pakai custom `v-model` dan prop `options` berformat array of object. udah saya buat dalam 3 putaran. di Putaran 1 (dropdown Kategori Produk sederhana), Putaran 2 (dropdown kedua dengan topik beda saya pakai Metode Pembayaran), dan Putaran 3 (dropdown dengan placeholder `"Pilih salah satu..."` yang diset disabled & invalid, lengkap pakai validasi error kalau belum dipilih).
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. jadi alurnya itu sebenarnya `DsInput` atau `DsSelect` itu gak tahu sendiri kalau dirinya invalid. nah yang menentukan isinya valid atau ngga dan apa teks pesan errornya itu parent component. `Field DsInput/DsSelect` cuma bertugas buat nampilin pesan error tersebut waktu `props.error` diisi oleh parent ketika fungsi validasi di parent dijalankan.
+
+2. kalau ukita submit form kosong fungsi submit di parent ngecek datanya dan nemuin kalau isinya kosong. parent langsung ngisi variabel error. nanti hasilnya muncul teks error warna merah di bawah kolom input, garis border input berubah jadi merah, dan proses submit terhenti (form "nyangkut" alias batal tersubmit sampai datanya diisi dengan benar).
+
+3. kerugiannya itu komponen `DsInput` jadi kaku dan gak reusable lagi. misalnya di Form A input nama itu wajib diisi, tapi di Form B input nama itu cuma opsional. kalau logikanya ditaruh di dalam `DsInput`, kita bakal kerepotan bikin `v-if` atau lempar lempar prop aturan yang makin banyak dan bikin kodingan di dalam DsInput jadi semrawut.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T1.4
+- **Status:** done
+- **Capaian:** jawaban:
+1. `DsInput` perlu `v-model` karna props di Vue itu sifatnya one-way data flow (cuma bisa dibaca dari parent ke child). kalua kita cuma pakai props biasa, ketikan dari user di DsInput gak bakal bisa ngubah variabel state di parent. makanya butuh custom `v-model` (gabungan :value dan $emit('update:modelValue')) biar datanya bisa sinkron dua arah.
+
+2. yang menentukan itu parent dan bukan component itu sendiri.
+
+3. beda diantara kedua nya yaitu `DsSelect` udah kita bungkus jadi komponen reusable yang udah lengkap ada label, penampung pesan error, styling token (Light/Dark mode), dan integrasi `v-model` otomatis. kalau <select> native biasa, kita harus ngerakit styling dan pesan error-nya dari nol lagi tiap kali mau pakai di form lain
+
+4. karna opsi placeholder itu cuma petunjuk visual buat user, bukan data/pilihan asli yang sah. kalau dianggap valid, sistem bakal ngirim string kosong/default yang bikin data di database jadi kacau.
+
+5. keuntungannya adalah komponen input jadi sangat fleksibel dan reusable di berbagai form,
+- **Kesulitan:** ---
+<!-- ENTRY END -->
