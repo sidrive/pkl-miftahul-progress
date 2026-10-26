@@ -1253,22 +1253,22 @@
           {
             "id": "M4.W3.T1.1",
             "text": "`DsInput` tervalidasi — **BARU, 3 putaran**: bikin component input reusable dengan custom `v-model` (ingat `M3.W4.T1.2`), `props` untuk `label`, `error` (pesan error ditampilkan di bawah input kalau ada isinya), dan `required`. Putaran 1: tipe `text` dengan validasi wajib diisi; putaran 2: tipe `number` dengan validasi batas min/max; putaran 3: tipe `textarea` ATAU `password` (bebas pilih) dengan 1 validasi tambahan yang relevan",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T1.2",
             "text": "`DsSelect`/Dropdown tiruan — **BARU, 3 putaran**: bikin component dropdown reusable (boleh bungkus `<select>` native atau bikin dari `<div>`+daftar opsi custom, bebas), custom `v-model`, `props` untuk daftar opsi (`options`, array of object `{ value, label }`). Putaran 1: dropdown sederhana 1 instance; putaran 2: dropdown KEDUA dengan daftar opsi berbeda topik; putaran 3: dropdown dengan opsi default/placeholder (\"Pilih salah satu...\") yang tidak valid untuk disubmit sampai user benar-benar memilih",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T1.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: pola validasi form yang kamu terapkan di `DsInput`/`DsSelect` — bagaimana cara sebuah field \"tahu\" dirinya invalid (kapan `error` jadi terisi), dan bagaimana pesan error itu ditampilkan ke user. Kaitkan ke pengalaman nyata: coba submit form kosong tanpa isi field wajib, screenshot/ceritakan apa yang terjadi",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T1.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar `DsInput`/`DsSelect`/validasi form — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T2.1",

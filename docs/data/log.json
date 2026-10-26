@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-10-26",
+    "task": "M4.W3.T1.4",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-26",
+    "task": "M4.W3.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-26",
+    "task": "M4.W3.T1.2",
+    "status": "done",
+    "capaian": "saya udah bikin komponen reusable `DsSelect.vue` yang fleksibel pakai custom `v-model` dan prop `options` berformat array of object. udah saya buat dalam 3 putaran. di Putaran 1 (dropdown Kategori Produk sederhana), Putaran 2 (dropdown kedua dengan topik beda saya pakai Metode Pembayaran), dan Putaran 3 (dropdown dengan placeholder `\"Pilih salah satu...\"` yang diset disabled & invalid, lengkap pakai validasi error kalau belum dipilih).",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-26",
+    "task": "M4.W3.T1.1",
+    "status": "done",
+    "capaian": "saya udah buat komponen reusable `DsInput.vue` yang fleksibel dengan custom `v-model` serta pemisahan logika validasi di parent component. di putaran 1 (tipe `text` dengan validasi wajib diisi), putaran 2 (tipe `number` dengan validasi rentang min 0 dan max 10.000.000), dan putaran 3 (tipe `password` dengan validasi minimal 6 karakter dan wajib kombinasi huruf dan angka).",
+    "kesulitan": "tampilan halaman Task T1.1 waktu white mode dia malah tidak kelihatan tulisan dan kolom nya, cuma dah saya perbaiki dan udah nampil sesuai mode yang di setting."
+  },
+  {
+    "date": "2026-10-23",
+    "task": "M4.W2.T6",
+    "status": "done",
+    "capaian": "udah melakukan evaluasi mingguan dan melakukan demo storybook, udah melakukan modifikasi dadakan juga dengan mentor",
+    "kesulitan": "selama proses evaluasi berjalan dengan lancar."
+  },
+  {
     "date": "2026-10-22",
     "task": "M4.W2.T5",
     "status": "done",
