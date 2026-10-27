@@ -2695,3 +2695,36 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 5. keuntungannya adalah komponen input jadi sangat fleksibel dan reusable di berbagai form,
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-27
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T2.1
+- **Status:** done
+- **Capaian:** udah saya buat komponen reusable `DsBadge.vue` untuk nampilin tag status warna secara dinamis pakai teknik Object Mapping (`warnaPerStatus[status]`) dan ga perlu `v-if/v-else-if` berantai. udah saya buat dalam 3 putaran pengujian. Putaran 1 (2 status akun: aktif dan nonaktif), Putaran 2 (status pesanan topik beda: diproses, selesai, dibatalkan), dan Putaran 3 (4 varian status stok barang sekaligus: melimpah, menipis, habis, dan indent).
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T2.2
+- **Status:** done
+- **Capaian:** udah saya kerjakan task T2.2, jadi disini saya menerapkan pola penanganan state asynchronous (Loading, Empty, dan Error State) pakai kondisional `v-if`, `v-else-if`, dan `v-else` pada Vue.js. saya buat di 3 putaran, `Putaran 1` (simulasi delay fetch 1.5 detik untuk daftar kategori produk), `Putaran 2` (simulasi delay fetch riwayat transaksi yang mengembalikan data kosong untuk menguji tampilan empty state), dan `Putaran 3` (menambahkan state error terpisah dengan pesan kesalahan yang jelas saat simulasi fetch gagal/reject, lengkap dengan tombol toggle pengetesan).
+- **Kesulitan:** waktu pengerjaan ada eror pada putaran ke 3, dimana tampilan tidak nampil dihalaman web, udah diperbaiki dan muncul lagi eror dimana loading nya tidak muncul. tapi udah saya perbaiki dan berjalan dengan aman.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. dari yang saya amati state for -nya ternyata nyangkut, jadi dari mode edit sebelumnya (seperti nama "Budi Perkasa") dan teks error merah validasinya masih nempel dan muncul lagi pas kita buka modal dalam mode tambah data baru.
+
+2. karna di balik layar Vue itu gak tau maksud berubah dari edit ke tambah. Vue cuma ngeliat komponen yang terpasang di Virtual DOM itu masih komponen yang sama `(FormProdukModal)`, jadi Vue milih untuk menggunakan kembali (reuse) instance komponen yang udah ada demi efisiensi performa tanpa me recreate atau mereset state `ref()` di dalamnya dari nol.
+
+3. cara mengatasinya yang paling simpel adalah pakai trik `:key` dinamis pada komponen modalnya. dengan kita masang `:key="modeModal + (dataAwalEdit?.nama || '')"`, tiap kali mode atau dataAwal berubah, Vue bakal nganggap itu sebagai komponen baru, menghancurkan instance lama, dan membuat ulang (remount) komponen dari nol. hasilnya seluruh state `ref()` otomatis reset bersih tanpa perlu ngoding reset manual satu per satu pakai watch.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

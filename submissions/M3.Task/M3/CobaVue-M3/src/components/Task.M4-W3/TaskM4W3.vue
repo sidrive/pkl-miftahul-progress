@@ -11,6 +11,18 @@
       <button  :class="{ active: tabAktif === 'T1.2' }"  @click="tabAktif = 'T1.2'" >
         Task T1.2 (DsSelect)
       </button>
+
+      <button  :class="{ active: tabAktif === 'T2.1' }"  @click="tabAktif = 'T2.1'" >
+        Task T2.1 (DsBadge/Tag status)
+      </button>
+
+      <button  :class="{ active: tabAktif === 'T2.2' }"  @click="tabAktif = 'T2.2'" >
+        Task T2.2 (Loading & Empty State)
+      </button>
+
+      <button  :class="{ active: tabAktif === 'T2.3' }"  @click="tabAktif = 'T2.3'" >
+        Task T2.3 (uji coba quiz)
+      </button>
     </div>
     <hr class="pembatas" />
 
@@ -22,6 +34,18 @@
     <div class="content-area">
       <TaskT1_2 v-if="tabAktif === 'T1.2'" />
     </div>
+
+    <div class="content-area">
+      <TaskT2_1 v-if="tabAktif === 'T2.1'" />
+    </div>
+
+    <div class="content-area">
+      <TaskT2_2 v-if="tabAktif === 'T2.2'" />
+    </div>
+
+    <div class="content-area">
+      <TaskT2_3 v-if="tabAktif === 'T2.3'" />
+    </div>
   </div>
 </template>
 
@@ -29,6 +53,9 @@
 import { ref } from 'vue'
 import TaskT1_1 from './Task.T1.1.vue'
 import TaskT1_2 from './Task.T1.2.vue'
+import TaskT2_1 from './Task.T2.1.vue'
+import TaskT2_2 from './Task.T2.2.vue'
+import TaskT2_3 from './Task.T2.3.vue'
 
 const tabAktif = ref('T1.1')
 </script>
