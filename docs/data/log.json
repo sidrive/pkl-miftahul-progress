@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-27",
+    "task": "M4.W3.T2.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-27",
+    "task": "M4.W3.T2.2",
+    "status": "done",
+    "capaian": "udah saya kerjakan task T2.2, jadi disini saya menerapkan pola penanganan state asynchronous (Loading, Empty, dan Error State) pakai kondisional `v-if`, `v-else-if`, dan `v-else` pada Vue.js. saya buat di 3 putaran, `Putaran 1` (simulasi delay fetch 1.5 detik untuk daftar kategori produk), `Putaran 2` (simulasi delay fetch riwayat transaksi yang mengembalikan data kosong untuk menguji tampilan empty state), dan `Putaran 3` (menambahkan state error terpisah dengan pesan kesalahan yang jelas saat simulasi fetch gagal/reject, lengkap dengan tombol toggle pengetesan).",
+    "kesulitan": "waktu pengerjaan ada eror pada putaran ke 3, dimana tampilan tidak nampil dihalaman web, udah diperbaiki dan muncul lagi eror dimana loading nya tidak muncul. tapi udah saya perbaiki dan berjalan dengan aman."
+  },
+  {
+    "date": "2026-10-27",
+    "task": "M4.W3.T2.1",
+    "status": "done",
+    "capaian": "udah saya buat komponen reusable `DsBadge.vue` untuk nampilin tag status warna secara dinamis pakai teknik Object Mapping (`warnaPerStatus[status]`) dan ga perlu `v-if/v-else-if` berantai. udah saya buat dalam 3 putaran pengujian. Putaran 1 (2 status akun: aktif dan nonaktif), Putaran 2 (status pesanan topik beda: diproses, selesai, dibatalkan), dan Putaran 3 (4 varian status stok barang sekaligus: melimpah, menipis, habis, dan indent).",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-10-26",
     "task": "M4.W3.T1.4",
     "status": "done",
