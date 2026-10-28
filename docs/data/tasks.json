@@ -1288,12 +1288,12 @@
           {
             "id": "M4.W3.T2.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar `DsBadge`/loading-empty state/jebakan state nyangkut saat reuse component — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T3",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1.5-2 hari kerja — paling besar sejauh ini]** Bikin **Prototipe UI: Halaman Daftar + Form** (topik bebas — misal daftar produk, daftar karyawan, daftar pesanan) yang menggabungkan SEMUA component `Ds*`-mu (dari minggu ini DAN minggu lalu): `DsButton`, `DsCard`, `DsInput`, `DsSelect`, `DsBadge`, loading/empty state, dark mode konsisten. Form tambah/edit WAJIB pakai 1 component yang sama untuk keduanya (terapkan solusi `T2.3` supaya state tidak nyangkut saat ganti mode). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T5`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T4",
