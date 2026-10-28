@@ -2728,3 +2728,32 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 3. cara mengatasinya yang paling simpel adalah pakai trik `:key` dinamis pada komponen modalnya. dengan kita masang `:key="modeModal + (dataAwalEdit?.nama || '')"`, tiap kali mode atau dataAwal berubah, Vue bakal nganggap itu sebagai komponen baru, menghancurkan instance lama, dan membuat ulang (remount) komponen dari nol. hasilnya seluruh state `ref()` otomatis reset bersih tanpa perlu ngoding reset manual satu per satu pakai watch.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-28
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T2.4
+- **Status:** done
+- **Capaian:** jawaban:
+1. dia pakai object mapping biar kodenya lebih ringkas, rapi, dan modular. kalau pilihan statusnya nambah banyak, kita tinggal nambah key baru di dalam objek tanpa perlu ngotak ngatik elemen HTML di templatenya.
+
+2. `empty state` berarti sistem bekerja dengan normal tapi gak ada konten untuk ditampilkan, sedangkan `error state` berarti sistem mengalami gangguan atau kegagalan teknis.
+
+3. yang bakal terjadi ke user nya itu `state pollution` (state nyangkut), jadi isi ketikan dan pesan error dari sesi edit sebelumnya bakal ikut terbawa pas user mau nambah data baru. ini bisa bikin user malah nyimpan data lama dan bukan data baru
+
+4. cara pertama kita pakai atribut `:key`, dan cara kedua kita pakai `watch` pada props untuk mereset state internal secara manual.
+
+5. `:key` yang berbeda bisa memaksa Vue untuk membuat ulang component dari nol karena Vue menggunakan nilai key sebagai identitas unik untuk melacak komponen di dalam Virtual DOM.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T23
+- **Status:** done
+- **Capaian:** jadi disini saya buat prototipe UI capstone, yaitu "Sistem Antrean & Status Pesanan Restoran / Kafe". saya gabungkan seluruh komponen UI Design System (`DsButton`, `DsCard`, `DsBadge`, `DsInput`, dan `DsSelect`). mengimplementasikan simulasi async fetch data pesanan dengan penanganan Loading State (delay 1.2 detik), Empty State, dan Error State (beserta tombol simulasi error). disini juga ada fitur filter status pesanan serta mengintegrasikan modal reusable `FormPesananModal.vue` untuk mode Tambah & Edit data. saya udah menerapkan trik `:key="keyModal"` (menggunakan `Date.now()`) jadi komponen modal ter remount dari awal dan masalah state nyangkut (state pollution) teratasi sepenuhnya. tampilan antarmuka juga sudah konsisten mendukung Light/Dark Mode menggunakan CSS variables token. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/23]
+- **Kesulitan:** sempat mengalami kesalahan path import pada komponen `FormPesananModal.vue` dan peringatan unused import `DsInput` pada `Task.T3.vue`, tetapi berhasil dipahami arsitektur pemanggilannya. pada pengerjaan style masih ada beberapa yang eror awal nya, tampilan white mode masih menimpa teks pada halaman. tampilan card pada halaman tidak sesuai dan tidak senada.
+<!-- ENTRY END -->
