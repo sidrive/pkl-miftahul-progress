@@ -41,9 +41,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import DsInput from '../DsInput.vue'
-import DsSelect from '../DsSelect.vue'
-import DsButton from '../DsButton.vue'
+import DsInput from './DsInput.vue'
+import DsSelect from './DsSelect.vue'
+import DsButton from '../Task.M4-W2/DsButton.vue'
 
 const props = defineProps({
   show: Boolean,
