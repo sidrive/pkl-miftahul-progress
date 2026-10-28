@@ -23,6 +23,10 @@
       <button  :class="{ active: tabAktif === 'T2.3' }"  @click="tabAktif = 'T2.3'" >
         Task T2.3 (uji coba quiz)
       </button>
+
+      <button  :class="{ active: tabAktif === 'T3' }"  @click="tabAktif = 'T3'" >
+        Task T3 (Skill Mandiri Mini App)
+      </button>
     </div>
     <hr class="pembatas" />
 
@@ -46,6 +50,10 @@
     <div class="content-area">
       <TaskT2_3 v-if="tabAktif === 'T2.3'" />
     </div>
+
+    <div class="content-area">
+      <TaskT3 v-if="tabAktif === 'T3'" />
+    </div>
   </div>
 </template>
 
@@ -56,6 +64,7 @@ import TaskT1_2 from './Task.T1.2.vue'
 import TaskT2_1 from './Task.T2.1.vue'
 import TaskT2_2 from './Task.T2.2.vue'
 import TaskT2_3 from './Task.T2.3.vue'
+import TaskT3 from './Task.T3.vue'
 
 const tabAktif = ref('T1.1')
 </script>
