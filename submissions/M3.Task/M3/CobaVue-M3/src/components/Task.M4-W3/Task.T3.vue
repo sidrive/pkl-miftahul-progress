@@ -1,8 +1,11 @@
 <template>
+    <div class="judul">
+        <h3>Task T3 - MiniApp Kasir Refactor</h3>
+    </div>
   <div class="container-t3">
     <header class="header-section">
       <div>
-        <h2>📋 Antrean Pesanan Restoran</h2>
+        <h2>📋 Antrean Pesanan</h2>
         <p class="subtitle">Prototipe UI Order & Status Kasir</p>
       </div>
       <div class="header-actions">
@@ -88,3 +91,102 @@
       @submit="handleSimpanPesanan"/>
   </div>
 </template>
+
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import DsBadge from './DsBadge.vue'
+import DsInput from './DsInput.vue'
+import DsSelect from './DsSelect.vue'
+import FormPesananModal from './FormPesananModal.vue'
+import DsButton from '../Task.M4-W2/DsButton.vue'
+import DsCard from '../Task.M4-W2/DsCard.vue'
+
+// State Data Pesanan & Async (T2.2)
+const sedangMemuat = ref(true)
+const pesanError = ref('')
+const daftarPesanan = ref([])
+
+// State Filter Status
+const filterStatus = ref('')
+const opsiFilter = [
+  { value: '', label: 'Semua Status' },
+  { value: 'diproses', label: 'Diproses' },
+  { value: 'selesai', label: 'Selesai' },
+  { value: 'dibatalkan', label: 'Dibatalkan' }
+]
+
+// State Modal & Solution Key (T2.3)
+const showModal = ref(false)
+const modeModal = ref('tambah') // 'tambah' | 'edit'
+const pesananYangEdited = ref(null)
+const keyModal = ref(0) // Untuk me-remount modal
+
+// Simulasi Fetch Data Pesanan dari Server (T2.2)
+function muatDataPesanan(simulasiGagal = false) {
+  sedangMemuat.value = true
+  pesanError.value = ''
+  daftarPesanan.value = []
+
+  setTimeout(() => {
+    if (simulasiGagal) {
+      pesanError.value = 'Gagal memuat data antrean pesanan dari server!'
+    } else {
+      daftarPesanan.value = [
+        { id: 101, namaPemesan: 'Budi Santoso', noMeja: 'Meja 03', status: 'diproses' },
+        { id: 102, namaPemesan: 'Siti Rahma', noMeja: 'Meja 07', status: 'selesai' },
+        { id: 103, namaPemesan: 'Andi Pratama', noMeja: 'Meja 01', status: 'dibatalkan' }
+      ]
+    }
+    sedangMemuat.value = false
+  }, 1200)
+}
+
+// Data Computed berdasarkan Filter Status
+const daftarPesananFiltered = computed(() => {
+  if (!filterStatus.value) return daftarPesanan.value
+  return daftarPesanan.value.filter(item => item.status === filterStatus.value)
+})
+
+// Fungsi Buka Modal Mode TAMBAH
+function bukaModalTambah() {
+  modeModal.value = 'tambah'
+  pesananYangEdited.value = null
+  keyModal.value = Date.now() // Trigger remount modal baru (T2.3)
+  showModal.value = true
+}
+
+// Fungsi Buka Modal Mode EDIT
+function bukaModalEdit(item) {
+  modeModal.value = 'edit'
+  pesananYangEdited.value = { ...item }
+  keyModal.value = Date.now() // Trigger remount modal baru (T2.3)
+  showModal.value = true
+}
+
+// Fungsi Simpan (Tambah / Update)
+function handleSimpanPesanan(dataForm) {
+  if (modeModal.value === 'tambah') {
+    daftarPesanan.value.unshift({
+      id: Date.now(),
+      ...dataForm
+    })
+  } else {
+    const index = daftarPesanan.value.findIndex(item => item.id === pesananYangEdited.value.id)
+    if (index !== -1) {
+      daftarPesanan.value[index] = { ...daftarPesanan.value[index], ...dataForm }
+    }
+  }
+  showModal.value = false
+}
+
+// Fungsi Hapus Pesanan
+function hapusPesanan(id) {
+  if (confirm('Yakin ingin menghapus pesanan ini?')) {
+    daftarPesanan.value = daftarPesanan.value.filter(item => item.id !== id)
+  }
+}
+
+onMounted(() => {
+  muatDataPesanan(false)
+})
+</script>
