@@ -1298,7 +1298,7 @@
           {
             "id": "M4.W3.T4",
             "text": "**Laporan Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — minggu ini bentuknya **laporan tertulis**, bukan mini app terpisah, karena `T3` sendiri SUDAH menjadi mini app yang menyatukan semua task minggu ini): jelaskan alur logis bagaimana tiap component kecil (`DsInput`/`DsSelect`/`DsBadge`/loading-empty state) akhirnya dipakai di prototipe `T3` — sertakan juga bagaimana solusi jebakan `T2.3` diterapkan nyata di form tambah/edit prototipe tersebut",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W3.T5",
