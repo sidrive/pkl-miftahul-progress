@@ -2752,8 +2752,20 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 
 <!-- ENTRY START -->
 
-### Task: M4.W3.T23
+### Task: M4.W3.T3
 - **Status:** done
 - **Capaian:** jadi disini saya buat prototipe UI capstone, yaitu "Sistem Antrean & Status Pesanan Restoran / Kafe". saya gabungkan seluruh komponen UI Design System (`DsButton`, `DsCard`, `DsBadge`, `DsInput`, dan `DsSelect`). mengimplementasikan simulasi async fetch data pesanan dengan penanganan Loading State (delay 1.2 detik), Empty State, dan Error State (beserta tombol simulasi error). disini juga ada fitur filter status pesanan serta mengintegrasikan modal reusable `FormPesananModal.vue` untuk mode Tambah & Edit data. saya udah menerapkan trik `:key="keyModal"` (menggunakan `Date.now()`) jadi komponen modal ter remount dari awal dan masalah state nyangkut (state pollution) teratasi sepenuhnya. tampilan antarmuka juga sudah konsisten mendukung Light/Dark Mode menggunakan CSS variables token. Link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/23]
 - **Kesulitan:** sempat mengalami kesalahan path import pada komponen `FormPesananModal.vue` dan peringatan unused import `DsInput` pada `Task.T3.vue`, tetapi berhasil dipahami arsitektur pemanggilannya. pada pengerjaan style masih ada beberapa yang eror awal nya, tampilan white mode masih menimpa teks pada halaman. tampilan card pada halaman tidak sesuai dan tidak senada.
+<!-- ENTRY END -->
+
+---
+
+## 2026-10-29
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T4
+- **Status:** done
+- **Capaian:** udah saya buat laporan tertulis `M4.W3.T4 (T4-W3.md)` yang menjelaskan pemetaan komponen UI (`DsButton`, `DsCard`, `DsBadge`, `DsInput`, `DsSelect`) serta penanganan async state (Loading, Empty, Error) pada prototipe T3. dan juga menjelaskan implementasi nyata solusi trik `:key` dinamis `(Date.now())` pada `FormPesananModal.vue` untuk mencegah bug state pollution saat berganti antara mode tambah dan edit data.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
