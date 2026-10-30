@@ -7,7 +7,7 @@
       <DsSelect
         label="Pilih Kategori Produk"
         v-model="kategoriTerpilih"
-        :options="opsiKategori"/>
+        :options="opsiPembayaran"/>
 
       <button type="submit">Submit Putaran 1</button>
     </form>

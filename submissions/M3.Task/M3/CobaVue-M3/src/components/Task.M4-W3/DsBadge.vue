@@ -19,17 +19,20 @@ const warnaPerStatus = {
   // Putaran 1: Status Akun
   aktif: 'var(--color-navy-500, #007bff)',
   nonaktif: 'var(--color-grey-500, #6c757d)',
+  hilang: 'var(--color-red-500, #f8aa00)',
 
   // Putaran 2: Status Pesanan
   diproses: '#e67e22',
   selesai: '#2ed573',
   dibatalkan: '#ff4757',
+  retur: '#0428f5',
 
   // Putaran 3: Status Stok Barang (4 Varian Sekaligus)
   melimpah: '#2ed573',
   menipis: '#ffa502',
   habis: '#ff4757',
-  indent: '#a55eea'
+  indent: '#a55eea',
+  kosong: '#0428f5'
 }
 </script>
 

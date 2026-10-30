@@ -1,12 +1,12 @@
 <template>
     <div class="judul">
-        <h3>Task T3 - MiniApp Kasir Refactor</h3>
+        <h3>Task T3 - MiniApp Aplikasi Antrian Refactor</h3>
     </div>
   <div class="container-t3">
     <header class="header-section">
       <div>
         <h2>📋 Antrean Pesanan</h2>
-        <p class="subtitle">Prototipe UI Order & Status Kasir</p>
+        <p class="subtitle">Prototipe UI Order & Status Antrian</p>
       </div>
       <div class="header-actions">
         <!-- Tombol Tambah Pesanan Baru -->

@@ -2769,3 +2769,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah saya buat laporan tertulis `M4.W3.T4 (T4-W3.md)` yang menjelaskan pemetaan komponen UI (`DsButton`, `DsCard`, `DsBadge`, `DsInput`, `DsSelect`) serta penanganan async state (Loading, Empty, Error) pada prototipe T3. dan juga menjelaskan implementasi nyata solusi trik `:key` dinamis `(Date.now())` pada `FormPesananModal.vue` untuk mencegah bug state pollution saat berganti antara mode tambah dan edit data.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-10-30
+
+<!-- ENTRY START -->
+
+### Task: M4.W3.T5
+- **Status:** done
+- **Capaian:** udah melakukan demo dan evaluasi minggu ini, mentor memberikan pertanyan dan bisa dijawab, dimita merubah tampilan juga bisa, evaluasi berjalan dengan lancar.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

@@ -13,6 +13,10 @@
           <span>Status Akun 2:</span>
           <DsBadge status="nonaktif" />
         </div>
+        <div class="badge-item">
+          <span>Status Akun 3:</span>
+          <DsBadge status="hilang" />
+        </div>
       </div>
     </section>
     <br>
@@ -32,6 +36,10 @@
         <div class="badge-item">
           <span>Pesanan #1003:</span>
           <DsBadge status="dibatalkan" />
+        </div>
+        <div class="badge-item">
+          <span>Pesanan #1004:</span>
+          <DsBadge status="retur" />
         </div>
       </div>
     </section>
@@ -56,6 +64,10 @@
         <div class="badge-item">
           <span>Bijik Kopi Impor:</span>
           <DsBadge status="indent" />
+        </div>
+        <div class="badge-item">
+          <span>Mailo:</span>
+          <DsBadge status="kosong" />
         </div>
       </div>
     </section>
