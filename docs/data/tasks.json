@@ -1303,7 +1303,7 @@
           {
             "id": "M4.W3.T5",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo Prototipe UI dari `T3` langsung jalan (tambah data baru, edit data yang sudah ada, ganti antar mode berkali-kali untuk buktikan state tidak nyangkut), jelaskan pola validasi `DsInput`/`DsSelect`, review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 field baru ke form, atau 1 status baru ke `DsBadge`), jawab soal live yang menyasar kesalahpahaman umum reuse component (state otomatis ter-reset padahal tidak) + mentor tanya 2-3 variasi pertanyaan lain + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
