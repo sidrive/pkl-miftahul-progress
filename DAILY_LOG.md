@@ -2784,7 +2784,7 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 
 ---
 
-## 2 – 6 November 2026
+## 2 – 6 November 2026 // Minggu 4
 
 <!-- ENTRY START -->
 
@@ -2793,4 +2793,54 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Status:** absen
 - **Capaian:** Gazi tidak masuk sepanjang minggu ini (2–6 November 2026). Tidak ada task yang dikerjakan pada rentang tanggal ini — dicatat di sini supaya jelas ini bukan task yang terlewat/kelupaan, tapi memang tidak ada sesi kerja. Breakdown `M4.W4` (awalnya dijadwalkan mulai minggu ini sesuai roadmap) digeser ke minggu berikutnya (9–13 November 2026).
 - **Kesulitan:** -
+<!-- ENTRY END -->
+
+# Bulan 5
+
+## 2026-11-9 // Bulan 5 - Minggu 1
+
+<!-- disini pengerjaan task minggu 4 bulan 4 karna izin TKA, dialihan kesini -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T1.1
+- **Status:** done
+- **Capaian:** jadi saya udah kerjakan Task T1.1 dalam 3 putaran (`useToggle` & `useCounter`). di putaran 1 saya membuktikan kalau `useToggle` menghasilkan state terpisah (isolated) di 2 komponen berbeda. putaran 2 saya buat buat `useCounter` fleksibel dengan parameter nilai awal dan step. putaran 3 gabungkan 2 composable sekaligus dalam 1 komponen (`useToggle` dan `useCounter` dengan fitur tambah, kurang, dan reset poin) tanpa bentrok.
+- **Kesulitan:** ada terkendala error path import file karena beda letak folder komponen dengan file composable nya, cuma udah aman
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T1.2
+- **Status:** done
+- **Capaian:** udah kerjakan 3 putaran pembuatan composable `useFetch` untuk ngurus status `loading`, `error`, dan data secara otomatis. di putaran 1 saya buat fetching data produk kasir. putaran 2 membuktikan reusability composable `useFetch` yang sama untuk fetching data kategori tanpa nulis ulang logic loading/error. putaran 3 saya menambahkan parameter dinamis (URL string) untuk manggil data promo voucher secara fleksibel.
+- **Kesulitan:** waktu pengerjaan putaran 3, saya mengubah kode `useFetch.js` nya dan mengalami error `[object Object]` di Putaran 1 dan 2 jadi saya tambahkan parameter URL untuk Putaran 3, tapi udah aman karna saya nambahin pengecekan tipe data (`typeof sumberData === 'string'`) pada file `useFetch.js` biar bisa menangani data array maupun string URL secara fleksibel.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. menurut saya cukup banyak ya, apa lagi harus cari satu satu. kalau semuanya ditulis manual satu satu di tiap komponen, masalah utamanya itu kodenya jadi `redundant` (banyak copas), file komponen jadi makin panjang/berantakan, dan kalau ada perubahan cara penanganan `loading` atau `error`, kita harus edit satu per satu file komponen yang ada
+
+2. `persamaan` nya itu sama sama dibuat untuk mengejar `reusability` dan konsistensi biar gak perlu nulis hal yang sama berulang kali, nah untuk `bedanya` itu Komponen `Ds*` yang diekstrak itu tampilan UI / visual (kaya bentuk tombol, input, badge status), sedangkan `Composable` yang diekstrak itu logic / alur reaktifnya (kaya cara ngurus status loading, error, state counter, atau toggle) tanpa terikat pada tampilan HTML tertentu
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. `composale` itu adalah fungsi JavaScript biasa yang di dalamnya pakai fitur reaktif Vue buat misahin logic reaktif biar bisa dipakai berulang kali. diawali dengan `use` karna udah jadi standar di Vue untuk menandai kalau fungsi itu `composable`
+
+2. karna `useToggle()` bikin ref baru tiap kali dipanggil di komponen (isolated state). nah kalau `useKasirStore()` di Pinia cuma bikin 1 toko pusat yang dipakai bareng-bareng oleh semua komponen (shared state).
+
+3. isi nya itu objek yang isinya state reaktif dan fungsi fungsi penangan `(actions)` buat merubah nilai state tersebut.
+
+4. dia menerima parameter dengan fungsi JavaScript biasa.  contohnya `useCounter(nilaiAwal, step)` atau `useFetch(sumberData)`, jadi pas komponen manggil fungsinya, kita bisa mengoper nilai awal atau URL yang beda beda sesuai kebutuhan komponen itu.
+
+5. logic penanganan validasi form (misalnya mengecek input kosong, email valid, atau hitung error validasi) yang kemarin sempat ditulis di Prototipe Antrean Pesanan `M4.W3`.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
