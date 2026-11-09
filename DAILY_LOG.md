@@ -2781,3 +2781,16 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah melakukan demo dan evaluasi minggu ini, mentor memberikan pertanyan dan bisa dijawab, dimita merubah tampilan juga bisa, evaluasi berjalan dengan lancar.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2 – 6 November 2026
+
+<!-- ENTRY START -->
+
+### Catatan: Tidak Masuk (Izin)
+
+- **Status:** absen
+- **Capaian:** Gazi tidak masuk sepanjang minggu ini (2–6 November 2026). Tidak ada task yang dikerjakan pada rentang tanggal ini — dicatat di sini supaya jelas ini bukan task yang terlewat/kelupaan, tapi memang tidak ada sesi kerja. Breakdown `M4.W4` (awalnya dijadwalkan mulai minggu ini sesuai roadmap) digeser ke minggu berikutnya (9–13 November 2026).
+- **Kesulitan:** -
+<!-- ENTRY END -->

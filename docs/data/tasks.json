@@ -1312,13 +1312,58 @@
         "title": null,
         "tasks": [
           {
-            "id": "M4.W4.T1",
-            "text": "Sesi membaca struktur modul nyata di `frontend-olseraV2`/`frontend-zenwell` (bareng mentor, observasi saja)",
+            "id": "M4.W4.T1.1",
+            "text": "Composable paling sederhana — **BARU, 3 putaran**: ekstrak logic reaktif yang sering berulang (misal toggle on/off, counter) jadi function terpisah `useToggle()`/`useCounter()` yang mengembalikan `{ state, actions }` (bukan ditaruh di dalam tiap component satu-satu). Putaran 1: `useToggle()` dipakai di 2 component berbeda sekaligus (buktikan tiap pemakaian dapat STATE TERPISAH, bukan shared — ini composable \"instance per pemanggilan\", beda dari Pinia store yang shared); putaran 2: `useCounter()` dengan opsi step/nilai awal lewat parameter function; putaran 3: gabungkan 2 composable sekaligus dalam 1 component (`useToggle()` DAN `useCounter()` dipakai bareng)",
             "done": false
           },
           {
-            "id": "M4.W4.T2",
-            "text": "Tulis catatan observasi: apa yang dipahami, apa yang masih bingung",
+            "id": "M4.W4.T1.2",
+            "text": "`useFetch()` — **BARU, 3 putaran**: composable untuk simulasi fetch data yang mengembalikan `{ data, loading, error }` (generalisasi dari pola `onMounted`+loading/empty/error yang sudah kamu tulis manual di `M3.W3`/`M4.W3`, sekarang jadi 1 function reusable). Putaran 1: simulasi fetch 1 sumber data; putaran 2: composable yang SAMA dipakai untuk sumber data KEDUA yang beda topik (buktikan reusability-nya — tidak perlu nulis ulang logic loading/error); putaran 3: tambahkan parameter supaya composable bisa terima URL/sumber data berbeda tiap dipanggil",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T1.3",
+            "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa logic `loading`/`error`/`data` yang berulang di banyak component sebaiknya diekstrak jadi composable, dibanding di-copy-paste ke tiap component yang butuh (kaitkan ke alasan yang sama dengan kenapa `Ds*` component dibuat reusable di `M4.W2.T3.3` — bedanya sekarang yang di-reuse LOGIC, bukan tampilan UI)",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T1.4",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar composable dasar/`useFetch` — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T2.1",
+            "text": "`useDebounce()` ATAU `useLocalStorage()` (bebas pilih) — **BARU, 3 putaran**: composable lanjutan yang menggabungkan `watch`/`onMounted`/`onUnmounted` (ingat `M3.W3`) ke dalam 1 function reusable. Putaran 1: pakai di 1 kasus (misal input pencarian didebounce, atau 1 data disimpan ke `localStorage` otomatis); putaran 2: pakai composable yang SAMA di kasus KEDUA yang beda topik; putaran 3: kombinasikan dengan composable dari `T1.1`/`T1.2` dalam 1 component (misal `useFetch()` + `useDebounce()` sekaligus untuk search-as-you-type yang fetch data)",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T2.2",
+            "text": "**[Wajib Refleksi — PENTING]** Coba dulu: bikin 1 composable yang SENGAJA mengembalikan nilai biasa (BUKAN `ref`), contoh: `function useHitungSesuatu() { const nilai = ref(0); function tambah() { nilai.value++ }; return { nilai: nilai.value, tambah } }` — perhatikan `nilai: nilai.value` (sudah di-unwrap manual, bukan `nilai` saja). Pakai composable ini di component, tampilkan `nilai` di template, panggil `tambah()` — amati apakah tampilannya ikut update. Jelaskan dengan kata sendiri: kenapa composable HARUS `return` reactive reference (`ref`/`reactive`/`computed`) APA ADANYA (bukan nilai yang sudah di-unwrap manual), dan kaitkan eksplisit ke pengalamanmu di `M3.W2.T1.2` (destructuring `reactive()`) dan `M4.W1.T2.3` (destructuring Pinia store) — ini masalah YANG SAMA, cuma muncul lagi di tempat baru",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T2.3",
+            "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar composable lanjutan dan jebakan return value vs ref — baru cek jawaban setelahnya",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T3",
+            "text": "**[Proyek Pengembangan Skill Mandiri, target ±1-1.5 hari kerja]** Pilih 1 mini app yang sudah ada (Mini App Kasir `M4.W1`/`M4.W2`, ATAU Prototipe Antrean Pesanan `M4.W3`), **refactor** dengan mengekstrak logic yang berulang/kompleks jadi composable (misal `useKeranjang()` untuk logic keranjang belanja, atau `useFormValidasi()` untuk logic validasi form yang dipakai di beberapa field). Pastikan perilaku aplikasi tetap identik setelah refactor (ini latihan refactor, bukan fitur baru — sama seperti `M4.W1.T3`). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T6`)",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T4",
+            "text": "**Observasi Singkat Codebase Nyata (±10% waktu minggu ini, 1 sesi bareng mentor, dipadatkan)**: bareng mentor, amati SECUKUPNYA (tidak perlu mendalam) struktur `frontend-olseraV2`/`frontend-zenwell` — 1 component `.vue` (Options API: `data()`/`methods`/`computed`/`mounted()`) dan 1 modul Vuex (`state`/`mutations`/`actions`). Fokus ke 1 pertanyaan inti: apa bedanya `mutations`+`actions` (Vuex) dengan cuma `actions` (Pinia yang kamu pakai)? Project Bulan 5 nanti tetap Vue 3 + Pinia — ini murni eksposur konteks kerja nyata, bukan pindah stack",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T5",
+            "text": "**Mini App Akhir Minggu: Composables Playground** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — minggu ini tetap bentuk **coding**, bukan laporan tertulis murni): bikin 1 halaman demo/showcase yang menampilkan SEMUA composable yang dibuat minggu ini (`useToggle`/`useCounter` dari `T1.1`, `useFetch` dari `T1.2`, `useDebounce`/`useLocalStorage` dari `T2.1`) hidup berdampingan dalam 1 halaman — tiap composable punya bagian demo interaktifnya sendiri yang bisa dicoba langsung (mirip semangat \"mini storybook\" `M4.W2.T5`, cuma showcase-nya untuk LOGIC, bukan component UI). Lengkapi dengan catatan singkat tertulis (boleh komentar di kode atau README kecil) yang menjelaskan composable apa dipakai di refactor `T3`, dan ringkasan 2-3 kalimat hasil observasi `T4`",
+            "done": false
+          },
+          {
+            "id": "M4.W4.T6",
+            "text": "**Evaluasi & Penutup Bulan 4 (satu-satunya sesi bareng mentor minggu ini):** demo hasil refactor composable dari `T3` DAN Composables Playground dari `T5`, jelaskan kenapa logic tertentu diekstrak jadi composable (bukan tetap di component), review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 composable baru dadakan, atau buktikan live composable yang salah return value), jawab soal live yang menyasar kesalahpahaman umum composable (return value vs `ref`) + mentor tanya 2-3 variasi pertanyaan lain + refleksi capaian keseluruhan Bulan 4 (Pinia, Design Token/Dark Mode, Prototipe UI, Composables) + singgung singkat hasil observasi `T4` + preview Bulan 5 + isi refleksi capaian/kesulitan di modul",
             "done": false
           }
         ]

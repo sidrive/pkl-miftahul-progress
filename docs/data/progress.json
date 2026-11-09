@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-30T07:58:01.745Z",
-  "totalTasks": 264,
+  "generatedAt": "2026-11-09T00:51:03.906Z",
+  "totalTasks": 273,
   "doneTasks": 238,
-  "overallPercent": 90,
+  "overallPercent": 87,
   "perMonth": [
     {
       "number": 1,
@@ -28,9 +28,9 @@
     {
       "number": 4,
       "title": "Pinia, Olsera Design System & Code Reading (13 Okt – 12 Nov 2026)",
-      "total": 34,
+      "total": 43,
       "done": 32,
-      "percent": 94
+      "percent": 74
     },
     {
       "number": 5,
