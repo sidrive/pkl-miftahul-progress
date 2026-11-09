@@ -1314,22 +1314,22 @@
           {
             "id": "M4.W4.T1.1",
             "text": "Composable paling sederhana — **BARU, 3 putaran**: ekstrak logic reaktif yang sering berulang (misal toggle on/off, counter) jadi function terpisah `useToggle()`/`useCounter()` yang mengembalikan `{ state, actions }` (bukan ditaruh di dalam tiap component satu-satu). Putaran 1: `useToggle()` dipakai di 2 component berbeda sekaligus (buktikan tiap pemakaian dapat STATE TERPISAH, bukan shared — ini composable \"instance per pemanggilan\", beda dari Pinia store yang shared); putaran 2: `useCounter()` dengan opsi step/nilai awal lewat parameter function; putaran 3: gabungkan 2 composable sekaligus dalam 1 component (`useToggle()` DAN `useCounter()` dipakai bareng)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T1.2",
             "text": "`useFetch()` — **BARU, 3 putaran**: composable untuk simulasi fetch data yang mengembalikan `{ data, loading, error }` (generalisasi dari pola `onMounted`+loading/empty/error yang sudah kamu tulis manual di `M3.W3`/`M4.W3`, sekarang jadi 1 function reusable). Putaran 1: simulasi fetch 1 sumber data; putaran 2: composable yang SAMA dipakai untuk sumber data KEDUA yang beda topik (buktikan reusability-nya — tidak perlu nulis ulang logic loading/error); putaran 3: tambahkan parameter supaya composable bisa terima URL/sumber data berbeda tiap dipanggil",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T1.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: kenapa logic `loading`/`error`/`data` yang berulang di banyak component sebaiknya diekstrak jadi composable, dibanding di-copy-paste ke tiap component yang butuh (kaitkan ke alasan yang sama dengan kenapa `Ds*` component dibuat reusable di `M4.W2.T3.3` — bedanya sekarang yang di-reuse LOGIC, bukan tampilan UI)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T1.4",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar composable dasar/`useFetch` — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T2.1",

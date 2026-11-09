@@ -1,6 +1,34 @@
 [
   {
     "date": "2026-10-30",
+    "task": "M4.W4.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-30",
+    "task": "M4.W4.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-10-30",
+    "task": "M4.W4.T1.2",
+    "status": "done",
+    "capaian": "udah kerjakan 3 putaran pembuatan composable `useFetch` untuk ngurus status `loading`, `error`, dan data secara otomatis. di putaran 1 saya buat fetching data produk kasir. putaran 2 membuktikan reusability composable `useFetch` yang sama untuk fetching data kategori tanpa nulis ulang logic loading/error. putaran 3 saya menambahkan parameter dinamis (URL string) untuk manggil data promo voucher secara fleksibel.",
+    "kesulitan": "waktu pengerjaan putaran 3, saya mengubah kode `useFetch.js` nya dan mengalami error `[object Object]` di Putaran 1 dan 2 jadi saya tambahkan parameter URL untuk Putaran 3, tapi udah aman karna saya nambahin pengecekan tipe data (`typeof sumberData === 'string'`) pada file `useFetch.js` biar bisa menangani data array maupun string URL secara fleksibel."
+  },
+  {
+    "date": "2026-10-30",
+    "task": "M4.W4.T1.1",
+    "status": "done",
+    "capaian": "jadi saya udah kerjakan Task T1.1 dalam 3 putaran (`useToggle` & `useCounter`). di putaran 1 saya membuktikan kalau `useToggle` menghasilkan state terpisah (isolated) di 2 komponen berbeda. putaran 2 saya buat buat `useCounter` fleksibel dengan parameter nilai awal dan step. putaran 3 gabungkan 2 composable sekaligus dalam 1 komponen (`useToggle` dan `useCounter` dengan fitur tambah, kurang, dan reset poin) tanpa bentrok.",
+    "kesulitan": "ada terkendala error path import file karena beda letak folder komponen dengan file composable nya, cuma udah aman"
+  },
+  {
+    "date": "2026-10-30",
     "task": "M4.W3.T5",
     "status": "done",
     "capaian": "udah melakukan demo dan evaluasi minggu ini, mentor memberikan pertanyan dan bisa dijawab, dimita merubah tampilan juga bisa, evaluasi berjalan dengan lancar.",
