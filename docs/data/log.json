@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-10",
+    "task": "M4.W4.T2.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-10",
+    "task": "M4.W4.T2.2",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-10",
+    "task": "M4.W4.T2.1",
+    "status": "done",
+    "capaian": "jadi untuk pengerjaan task ini saya pilih composable `useDebounce()` yang saya kerjakan dalam 3 putaran, nah jadi di Putaran 1 saya menerapkan `useDebounce()` dengan durasi delay (500ms) pada input pencarian nama produk kasir, di Putaran 2 saya pakai ulang composable `useDebounce()` yang sama untuk topik berbeda, yaitu filter maksimum harga, nah terakhir Putaran 3 saya gabungkan `useDebounce()` dan `useFetch()` dalam 1 komponen untuk membuat fitur `search-as-you-type` produk kasir yang otomatis fetching data dan gak memberatkan server.",
+    "kesulitan": "pada waktu pengerjaan putaran ke 3 waktu dibuka di web tampilan nya tidak nampil karena ada nya kesalahan waktu buat logic untuk sistem, cuma udah aman sekarang."
+  },
+  {
     "date": "2026-10-30",
     "task": "M4.W4.T1.3",
     "status": "done",

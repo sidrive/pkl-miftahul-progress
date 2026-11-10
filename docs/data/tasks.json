@@ -1334,17 +1334,17 @@
           {
             "id": "M4.W4.T2.1",
             "text": "`useDebounce()` ATAU `useLocalStorage()` (bebas pilih) — **BARU, 3 putaran**: composable lanjutan yang menggabungkan `watch`/`onMounted`/`onUnmounted` (ingat `M3.W3`) ke dalam 1 function reusable. Putaran 1: pakai di 1 kasus (misal input pencarian didebounce, atau 1 data disimpan ke `localStorage` otomatis); putaran 2: pakai composable yang SAMA di kasus KEDUA yang beda topik; putaran 3: kombinasikan dengan composable dari `T1.1`/`T1.2` dalam 1 component (misal `useFetch()` + `useDebounce()` sekaligus untuk search-as-you-type yang fetch data)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T2.2",
             "text": "**[Wajib Refleksi — PENTING]** Coba dulu: bikin 1 composable yang SENGAJA mengembalikan nilai biasa (BUKAN `ref`), contoh: `function useHitungSesuatu() { const nilai = ref(0); function tambah() { nilai.value++ }; return { nilai: nilai.value, tambah } }` — perhatikan `nilai: nilai.value` (sudah di-unwrap manual, bukan `nilai` saja). Pakai composable ini di component, tampilkan `nilai` di template, panggil `tambah()` — amati apakah tampilannya ikut update. Jelaskan dengan kata sendiri: kenapa composable HARUS `return` reactive reference (`ref`/`reactive`/`computed`) APA ADANYA (bukan nilai yang sudah di-unwrap manual), dan kaitkan eksplisit ke pengalamanmu di `M3.W2.T1.2` (destructuring `reactive()`) dan `M4.W1.T2.3` (destructuring Pinia store) — ini masalah YANG SAMA, cuma muncul lagi di tempat baru",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T2.3",
             "text": "[Wajib Refleksi] Kuis mandiri TANPA modul/AI/catatan: 5 soal seputar composable lanjutan dan jebakan return value vs ref — baru cek jawaban setelahnya",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T3",
