@@ -2844,3 +2844,47 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 5. logic penanganan validasi form (misalnya mengecek input kosong, email valid, atau hitung error validasi) yang kemarin sempat ditulis di Prototipe Antrean Pesanan `M4.W3`.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-10
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T2.1
+- **Status:** done
+- **Capaian:** jadi untuk pengerjaan task ini saya pilih composable `useDebounce()` yang saya kerjakan dalam 3 putaran, nah jadi di Putaran 1 saya menerapkan `useDebounce()` dengan durasi delay (500ms) pada input pencarian nama produk kasir, di Putaran 2 saya pakai ulang composable `useDebounce()` yang sama untuk topik berbeda, yaitu filter maksimum harga, nah terakhir Putaran 3 saya gabungkan `useDebounce()` dan `useFetch()` dalam 1 komponen untuk membuat fitur `search-as-you-type` produk kasir yang otomatis fetching data dan gak memberatkan server.
+- **Kesulitan:** pada waktu pengerjaan putaran ke 3 waktu dibuka di web tampilan nya tidak nampil karena ada nya kesalahan waktu buat logic untuk sistem, cuma udah aman sekarang.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T2.2
+- **Status:** done
+- **Capaian:** jawaban:
+1. tampilan di web dia diam aja, tapi DevTools (F12) nilainya bertambah ngasih tau kalau fungsi `tambah()` berjalan, tapi tampilan HTML gak ngerespons perubahannya.
+
+2. dia harus return gitu karna kalau kita return `nilai.value`, yang terkirim cuma angka biasa dan pembungkus reaktif `Vue` nya lepas. jadinya ikatan reaktifnya putus, jadi `Vue` gak tau kalau kodenya berubah dan tampilannya gak bakal berubah.
+
+3. menurut saya ini kayanya sama deh, jadi pas di `reactive()` dan `Pinia store`, kalau kita asal destructure tanpa `storeToRefs`, nilai reaktifnya bakal lepas dan berubah jadi variabel biasa. bedanya cuma di lokasinya aja pas di `Pinia/reactive()` lepasnya pas kita buka/terima objek di komponen, sedangkan di composable ini lepasnya pas kita return nilainya dari dalam composable.
+
+4. cara perbaiki nya itu kita tinggal buang `.value` di bagian return pada file `useHitungSesuatu.js`, diubah dari return `{ nilai: nilai.value, tambah }` jadi return `{ nilai, tambah }`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. dia butuh `watch()` karna `watch()` bertugas mantau perubahan inputan secara reaktif. kalau ada huruf baru yang diketik, `watch()` bakal langsung ngereset timer lama (clearTimeout) dan bikin timer hitung mundur baru `(setTimeout)`, jadi prosesnya nunggu kita selesai ngetik dulu.
+
+2. yang bakal terjadi adalah yang terkirim cuma nilai biasa (primitif), bukan objek reaktif Vue. jadi akibatnya ikatan reaktifnya putus total, jadi pas nilainya berubah, tampilan di layar gak bakal ikut update (tetap diam).
+
+3. hubungannya yaitu konsep dasarnya sama persis, yaitu bikin ikatan `reaktif Vue` jadi lepas dan berubah jadi variabel biasa. bedanya cuma di lokasi pas di `Pinia/reactive()` lepasnya pas kita destructure di komponen (makanya butuh storeToRefs), sedangkan di composable lepasnya pas kita return nilainya pake `.value` dari dalam composable.
+
+4. jalan pas komponen yang memanggilnya di `mount` / di `unmount`, bukan pas composable nya didefinisikan. jadi lifecycle nya nempel ke komponen yang ngefetch/manggil composable itu.
+
+5. contohnya yaitu fitur search-as-you-type di `Task T2.1 Putaran 3`, ngebuka fitur pencarian pakai kombinasi `useDebounce()` dan `useFetch()`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

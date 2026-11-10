@@ -11,6 +11,14 @@
       <button :class="{ active: tabAktif === 'T1.2' }" @click="tabAktif = 'T1.2'">
         Task T1.2 (useFetch)
       </button>
+
+      <button :class="{ active: tabAktif === 'T2.1' }" @click="tabAktif = 'T2.1'">
+        Task 2.1 (useDebounce)
+      </button>
+
+      <button :class="{ active: tabAktif === 'T2.2' }" @click="tabAktif = 'T2.2'">
+        Task 2.2 (useHitungSesuatu)
+      </button>
     </div>
     <hr class="pembatas" />
 
@@ -18,6 +26,8 @@
     <div class="content-area">
       <TaskT11 v-if="tabAktif === 'T1.1'" />
       <TaskT12 v-if="tabAktif === 'T1.2'" />
+      <TaskT21 v-if="tabAktif === 'T2.1'" />
+      <TaskT22 v-if="tabAktif === 'T2.2'" />
     </div>
   </div>
 </template>
@@ -26,8 +36,10 @@
 import { ref } from 'vue'
 import TaskT11 from './Task.T1.1/Task.T1.1.vue'
 import TaskT12 from './Task.T1.2/Task.T1.2.vue'
+import TaskT21 from './Task.T2.1/Task.T2.1.vue'
+import TaskT22 from './Task.T2.2.vue'
 
-const tabAktif = ref('T1.2')
+const tabAktif = ref('T1.1')
 </script>
 
 <style scoped>
