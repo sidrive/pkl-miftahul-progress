@@ -19,6 +19,10 @@
       <button :class="{ active: tabAktif === 'T2.2' }" @click="tabAktif = 'T2.2'">
         Task 2.2 (useHitungSesuatu)
       </button>
+
+      <button :class="{ active: tabAktif === 'T3' }" @click="tabAktif = 'T3'">
+        Task 3 MiniApp Antrean Kasir Refactor (useForm)
+      </button>
     </div>
     <hr class="pembatas" />
 
@@ -28,6 +32,7 @@
       <TaskT12 v-if="tabAktif === 'T1.2'" />
       <TaskT21 v-if="tabAktif === 'T2.1'" />
       <TaskT22 v-if="tabAktif === 'T2.2'" />
+      <TaskT3 v-if="tabAktif === 'T3'" />
     </div>
   </div>
 </template>
@@ -38,6 +43,7 @@ import TaskT11 from './Task.T1.1/Task.T1.1.vue'
 import TaskT12 from './Task.T1.2/Task.T1.2.vue'
 import TaskT21 from './Task.T2.1/Task.T2.1.vue'
 import TaskT22 from './Task.T2.2.vue'
+import TaskT3 from './Task.T3/Task.T3.vue'
 
 const tabAktif = ref('T1.1')
 </script>
