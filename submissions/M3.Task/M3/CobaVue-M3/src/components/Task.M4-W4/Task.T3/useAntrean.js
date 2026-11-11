@@ -63,10 +63,34 @@ export function useAntrean() {
     showModal.value = true
   }
 
+  // Fungsi Simpan (Tambah / Update)
+  function handleSimpanPesanan(dataForm) {
+    if (modeModal.value === 'tambah') {
+      daftarPesanan.value.unshift({
+        id: Date.now(),
+        ...dataForm
+      })
+    } else {
+      const index = daftarPesanan.value.findIndex(item => item.id === pesananYangEdited.value.id)
+      if (index !== -1) {
+        daftarPesanan.value[index] = { ...daftarPesanan.value[index], ...dataForm }
+      }
+    }
+    showModal.value = false
+  }
+
+  // Fungsi Hapus Pesanan
+  function hapusPesanan(id) {
+    if (confirm('Yakin ingin menghapus pesanan ini?')) {
+      daftarPesanan.value = daftarPesanan.value.filter(item => item.id !== id)
+    }
+  }
+
   onMounted(() => {
     muatDataPesanan(false)
   })
 
+  // Return SEMUA ref, computed, & function
   return {
     sedangMemuat,
     pesanError,
@@ -80,6 +104,8 @@ export function useAntrean() {
     daftarPesananFiltered,
     muatDataPesanan,
     bukaModalTambah,
-    bukaModalEdit
+    bukaModalEdit,
+    handleSimpanPesanan,
+    hapusPesanan
   }
 }
