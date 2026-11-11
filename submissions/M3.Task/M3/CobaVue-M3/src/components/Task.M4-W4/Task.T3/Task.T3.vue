@@ -3,7 +3,56 @@
     <h3>Task T3 - MiniApp Aplikasi Antrian Refactor</h3>
   </div>
   <div class="container-t3">
-    <!-- UI Elements will be added in the next commit -->
+    <header class="header-section">
+      <div>
+        <h2>📋 Antrean Pesanan</h2>
+        <p class="subtitle">Prototipe UI Order & Status Antrian</p>
+      </div>
+      <div class="header-actions">
+        <DsButton variant="primary" @click="bukaModalTambah">
+          + Tambah Pesanan
+        </DsButton>
+      </div>
+    </header>
+
+    <!-- Toolbar Filter & Simulasi Error -->
+    <div class="toolbar-section">
+      <div class="filter-box">
+        <DsSelect
+          v-model="filterStatus"
+          :options="opsiFilter"
+          placeholder="Filter Status"
+        />
+      </div>
+      <div class="simulation-box">
+        <DsButton variant="secondary" size="small" :disabled="sedangMemuat" @click="muatDataPesanan(false)">
+          🔄 Reload Data
+        </DsButton>
+
+        <DsButton variant="danger" size="small" :disabled="sedangMemuat" @click="muatDataPesanan(true)">
+          ⚠️ Simulasi Error
+        </DsButton>
+      </div>
+    </div>
+
+    <!-- Area Konten (Loading / Error / Empty) -->
+    <div class="content-section">
+      <!-- State Loading -->
+      <div v-if="sedangMemuat" class="state-box loading">
+        <p>⏳ Sedang memuat antrean pesanan...</p>
+      </div>
+
+      <!-- State Error -->
+      <div v-else-if="pesanError" class="state-box error">
+        <p>⚠️ {{ pesanError }}</p>
+        <DsButton variant="secondary" size="small" @click="muatDataPesanan(false)">Coba Lagi</DsButton>
+      </div>
+
+      <!-- State Empty (Kosong) -->
+      <div v-else-if="daftarPesananFiltered.length === 0" class="state-box empty">
+        <p>📭 Tidak ada pesanan untuk ditampilkan.</p>
+      </div>
+    </div>
   </div>
 </template>
 
