@@ -2888,3 +2888,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 5. contohnya yaitu fitur search-as-you-type di `Task T2.1 Putaran 3`, ngebuka fitur pencarian pakai kombinasi `useDebounce()` dan `useFetch()`.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-11
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T3
+- **Status:** done
+- **Capaian:** jadi di task ini saya udah lakuin refactoring miniApp Antrean Pesanan (`M4.W3`) dengan mengekstrak seluruh logika (CRUD pesanan, state filter status, simulasi async fetch data, sampai penanganan modal) ke dalam composable `useAntrean.js`. untuk pengerjaannya saya buat di branch `M4-W4/T3` dan udah di commit rapi bertahap. tampilannya tetap mirip dengan yang minggu lalu `M4.W3` pakai komponen Design System (`DsBadge`, `DsSelect`, `FormPesananModal`, `DsButton`, `DsCard`). link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/24]
+- **Kesulitan:** ada sempat masalah terkendala error import path dari Vite gara gara salah menentukan posisi folder komponen UI punya minggu sebelumnya. dan ada beberapa eror waktu lagi buat logic kodenya karena ini gabungan juga, tapi udah di selesaikan.
+<!-- ENTRY END -->
