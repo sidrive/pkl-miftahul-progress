@@ -1349,7 +1349,7 @@
           {
             "id": "M4.W4.T3",
             "text": "**[Proyek Pengembangan Skill Mandiri, target ±1-1.5 hari kerja]** Pilih 1 mini app yang sudah ada (Mini App Kasir `M4.W1`/`M4.W2`, ATAU Prototipe Antrean Pesanan `M4.W3`), **refactor** dengan mengekstrak logic yang berulang/kompleks jadi composable (misal `useKeranjang()` untuk logic keranjang belanja, atau `useFormValidasi()` untuk logic validasi form yang dipakai di beberapa field). Pastikan perilaku aplikasi tetap identik setelah refactor (ini latihan refactor, bukan fitur baru — sama seperti `M4.W1.T3`). Lewat alur branch→commit rapi→PR (dibahas bareng mentor saat evaluasi `T6`)",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T4",
