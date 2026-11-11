@@ -47,7 +47,22 @@ export function useAntrean() {
     return daftarPesanan.value.filter(item => item.status === filterStatus.value)
   })
 
-  // Auto-fetch saat composable pertama kali di-mount di komponen
+  // Fungsi Buka Modal Mode TAMBAH
+  function bukaModalTambah() {
+    modeModal.value = 'tambah'
+    pesananYangEdited.value = null
+    keyModal.value = Date.now()
+    showModal.value = true
+  }
+
+  // Fungsi Buka Modal Mode EDIT
+  function bukaModalEdit(item) {
+    modeModal.value = 'edit'
+    pesananYangEdited.value = { ...item }
+    keyModal.value = Date.now()
+    showModal.value = true
+  }
+
   onMounted(() => {
     muatDataPesanan(false)
   })
@@ -63,6 +78,8 @@ export function useAntrean() {
     pesananYangEdited,
     keyModal,
     daftarPesananFiltered,
-    muatDataPesanan
+    muatDataPesanan,
+    bukaModalTambah,
+    bukaModalEdit
   }
 }
