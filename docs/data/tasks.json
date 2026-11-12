@@ -1359,7 +1359,7 @@
           {
             "id": "M4.W4.T5",
             "text": "**Mini App Akhir Minggu: Composables Playground** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — minggu ini tetap bentuk **coding**, bukan laporan tertulis murni): bikin 1 halaman demo/showcase yang menampilkan SEMUA composable yang dibuat minggu ini (`useToggle`/`useCounter` dari `T1.1`, `useFetch` dari `T1.2`, `useDebounce`/`useLocalStorage` dari `T2.1`) hidup berdampingan dalam 1 halaman — tiap composable punya bagian demo interaktifnya sendiri yang bisa dicoba langsung (mirip semangat \"mini storybook\" `M4.W2.T5`, cuma showcase-nya untuk LOGIC, bukan component UI). Lengkapi dengan catatan singkat tertulis (boleh komentar di kode atau README kecil) yang menjelaskan composable apa dipakai di refactor `T3`, dan ringkasan 2-3 kalimat hasil observasi `T4`",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T6",
