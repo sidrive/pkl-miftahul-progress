@@ -65,6 +65,23 @@
         </div>
       </section>
     </div>
+
+    <!-- Section Catatan Tertulis (T3 & T4 Summary) -->
+    <section class="card-note">
+      <h3>📌 Catatan Observasi & Refactor Minggu 4</h3>
+      <div class="note-item">
+        <h4>1. Composable Refactor T3 (Antrean Pesanan):</h4>
+        <p>
+          Pada task T3, seluruh logika reaktif manajemen antrean diekstrak ke dalam <code>useAntrean.js</code>. Composable ini mengelola state data antrean, filter status, pencarian/filter via <code>computed</code>, simulasi async fetch data, hingga fungsi CRUD (tambah, edit, hapus) dan pengontrolan modal secara mandiri tanpa mencampuri urusan visual tampilan komponen Vue.
+        </p>
+      </div>
+      <div class="note-item">
+        <h4>2. Ringkasan Observasi T4 (Vue 2 Options API vs Vue 3 & Vuex vs Pinia):</h4>
+        <p>
+          Melalui observasi codebase legacy Olsera/Zenwell, terlihat bahwa Vue 2 Options API memisahkan data dan metode ke dalam opsi terstruktur (<code>data()</code>, <code>methods</code>, <code>computed</code>), berdedikasi beda dengan Composition API Vue 3 yang lebih fleksibel. Pada manajemen state, Vuex menerapkan 3 lapis di mana <code>mutations</code> harus bersifat synchronous via <code>commit()</code> dan <code>actions</code> mengurus async operation, sedangkan Pinia menyederhanakannya menjadi 1 lapis di mana seluruh operasi sync/async ditangani langsung dalam <code>actions</code>.
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
