@@ -112,4 +112,181 @@ const catatansaya = useLocalStorage('catatan_playground_t5', 'Catatan ini otomat
 </script>
 
 <style scoped>
+.playground-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  color: var(--color-text, #212529);
+}
+
+.header-playground {
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--color-border, #e9ecef);
+  padding-bottom: 12px;
+}
+
+.header-playground h2 {
+  margin: 0;
+  color: var(--color-text, #1a252f);
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: var(--color-grey-500, #6c757d);
+  font-size: 0.95rem;
+}
+
+.grid-playground {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card-demo {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: #212529;
+}
+
+.card-demo h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #0d6efd;
+  border-bottom: 1px dashed #ced4da;
+  padding-bottom: 8px;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.demo-box {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff !important;
+  color: #212529 !important;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+input[type='text']::placeholder,
+textarea::placeholder {
+  color: #adb5bd !important;
+}
+
+.info-text {
+  font-size: 0.82rem;
+  color: #6c757d;
+  margin: 4px 0 0 0;
+}
+
+.state-text {
+  font-size: 0.9rem;
+  color: #0d6efd;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.state-text.error {
+  color: #dc3545;
+}
+
+.list-data {
+  padding-left: 20px;
+  margin: 8px 0 0 0;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #e9ecef;
+  margin: 16px 0;
+}
+
+.card-note {
+  background: #f8f9fa;
+  border: 1px solid #cff4fc;
+  border-left: 5px solid #0dcaf0;
+  border-radius: 8px;
+  padding: 20px;
+  color: #212529;
+}
+
+.card-note h3 {
+  margin-top: 0;
+  color: #055160;
+}
+
+.note-item {
+  margin-top: 12px;
+}
+
+.note-item h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.95rem;
+  color: #0b5ed7;
+}
+
+.note-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #495057;
+}
+
+code {
+  background: #e9ecef;
+  color: #d63384;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
 </style>
