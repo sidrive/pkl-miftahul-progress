@@ -1354,7 +1354,7 @@
           {
             "id": "M4.W4.T4",
             "text": "**Observasi Singkat Codebase Nyata (±10% waktu minggu ini, 1 sesi bareng mentor, dipadatkan)**: bareng mentor, amati SECUKUPNYA (tidak perlu mendalam) struktur `frontend-olseraV2`/`frontend-zenwell` — 1 component `.vue` (Options API: `data()`/`methods`/`computed`/`mounted()`) dan 1 modul Vuex (`state`/`mutations`/`actions`). Fokus ke 1 pertanyaan inti: apa bedanya `mutations`+`actions` (Vuex) dengan cuma `actions` (Pinia yang kamu pakai)? Project Bulan 5 nanti tetap Vue 3 + Pinia — ini murni eksposur konteks kerja nyata, bukan pindah stack",
-            "done": false
+            "done": true
           },
           {
             "id": "M4.W4.T5",
@@ -1364,7 +1364,7 @@
           {
             "id": "M4.W4.T6",
             "text": "**Evaluasi & Penutup Bulan 4 (satu-satunya sesi bareng mentor minggu ini):** demo hasil refactor composable dari `T3` DAN Composables Playground dari `T5`, jelaskan kenapa logic tertentu diekstrak jadi composable (bukan tetap di component), review PR bareng, **mentor minta modifikasi dadakan** (misal tambah 1 composable baru dadakan, atau buktikan live composable yang salah return value), jawab soal live yang menyasar kesalahpahaman umum composable (return value vs `ref`) + mentor tanya 2-3 variasi pertanyaan lain + refleksi capaian keseluruhan Bulan 4 (Pinia, Design Token/Dark Mode, Prototipe UI, Composables) + singgung singkat hasil observasi `T4` + preview Bulan 5 + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       }

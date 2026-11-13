@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-11-13",
+    "task": "M4.W4.T6",
+    "status": "done",
+    "capaian": "udah melakuin demo composable dan menunjukkan hasil kerja minggu ini, waktu siap demo mentor menyuruh untuk merubah sedikit logic atau apa itu tapi bisa di kerjakan dengan aman.",
+    "kesulitan": "aman tanpa adanya kendala."
+  },
+  {
     "date": "2026-11-12",
     "task": "M4.W4.T5",
     "status": "done",
@@ -9,7 +16,7 @@
   {
     "date": "2026-11-12",
     "task": "M4.W4.T4",
-    "status": "---",
+    "status": "done",
     "capaian": "---",
     "kesulitan": "---"
   },
