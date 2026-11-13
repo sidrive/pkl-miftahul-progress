@@ -2908,7 +2908,7 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 <!-- ENTRY START -->
 
 ### Task: M4.W4.T4
-- **Status:** ---
+- **Status:** done
 - **Capaian:** ---
 - **Kesulitan:** ---
 <!-- ENTRY END -->
@@ -2919,4 +2919,16 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Status:** done
 - **Capaian:** jadi pada task kali ini saya buat halaman showcase/demo interaktif (`Task.T5.vue`) yang menggabungin seluruh composable logic dari Minggu ini (`useToggle()`, `useCounter()`, `useFetch()`, `useDebounce()`, dan `useLocalStorage()`) dalam satu playground. halaman ini juga dilengkapin pakai section interaktif yang bisa langsung dicoba (saklar toggle, counter, fetch data promo, search bar debounce, dan textarea auto-save local storage) dan dilengkapi dengan section catatan tertulis ringkasan refactor composable `useAntrean.js` (T3) dan hasil observasi Vue 2 Options API vs Vue 3 & Vuex vs Pinia (T4). saya buat ini di branch `M4-W4/T5` dan di-commit rapi bertahap per fitur hingga perbaikan kontras UI. link PR: [https://github.com/sidrive/pkl-miftahul-progress/pull/25]
 - **Kesulitan:** ada masalah visual di mana teks pada tombol, input box, dan beberapa tulisan gak nampak/samar karna warna teks bawaan bentrok dengan background dark mode/light mode browser. dan ada kesalahan juga waktu mau panggil `useFetch.js` karna logic dari T5 yang sempat salah, cuma udah aman.
+<!-- ENTRY END -->
+
+---
+
+## 2026-11-13
+
+<!-- ENTRY START -->
+
+### Task: M4.W4.T6
+- **Status:** done
+- **Capaian:** udah melakuin demo composable dan menunjukkan hasil kerja minggu ini, waktu siap demo mentor menyuruh untuk merubah sedikit logic atau apa itu tapi bisa di kerjakan dengan aman.
+- **Kesulitan:** aman tanpa adanya kendala.
 <!-- ENTRY END -->
