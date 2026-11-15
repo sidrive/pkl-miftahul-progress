@@ -470,10 +470,31 @@
 
 ## Bulan 5 — Mulai Project Aplikasi Internal (13 Nov – 12 Des 2026)
 
-### Minggu 1
+### Minggu 1 (16 – 20 November 2026)
 
-- [ ] <!-- id: M5.W1.T1 --> Breakdown requirement & wireframe project internal
-- [ ] <!-- id: M5.W1.T2 --> Setup repo project internal (Vue 3 + Vite + Pinia + Olsera DS)
+> 📘 Modul pembelajaran untuk seluruh task minggu ini: [`docs/modules/Modul-M5/M5-W1-setup-project-internal.md`](../docs/modules/Modul-M5/M5-W1-setup-project-internal.md)
+> 🧭 **Wajib baca dulu:** [`docs/PANDUAN_BELAJAR_DAN_AI.md`](../docs/PANDUAN_BELAJAR_DAN_AI.md) — **termasuk bagian baru "Standar Kualitas Project Mandiri (mulai Bulan 5)"**, berlaku mulai minggu ini.
+> 🗓️ **5 hari kerja penuh** (Senin 16 – Jumat 20 November 2026). **Transisi besar** — mulai project nyata pertama, bukan lagi latihan kecil `CobaVue-M3`.
+>
+> **Project: SIMASET — Sistem Informasi Manajemen Aset Kantor Sederhana.** Aplikasi internal untuk melacak inventaris kantor (laptop, printer, meja, dll): status tersedia/dipinjam/maintenance, siapa yang meminjam, riwayat peminjaman-pengembalian. Project ini akan dikembangkan bertahap sepanjang Bulan 5-6, menyatukan SEMUA skill Bulan 3-4 (Vue Router multi-halaman, Pinia, component `Ds*`, composables) jadi 1 aplikasi nyata, bukan lagi prototipe kecil terpisah-pisah.
+>
+> ⚠️ **Standar naik mulai minggu ini:** frontend itu soal UI/UX, bukan cuma logic yang jalan. Mulai SIMASET, "selesai" BUKAN LAGI cuma "fitur jalan" — tiap fitur baru (mulai `M5.W2`) harus menangani edge case, punya loading/empty/error state, dicek di lebar HP, dan memenuhi checklist UI/UX (hierarki visual, konsistensi, feedback interaksi, affordance, form usability yang jelas, aksesibilitas dasar) — baca detail lengkapnya di panduan. Review mentor juga TIDAK LAGI rubber-stamp — akan ada minimal 1 revisi diminta tiap sesi, dan PR baru di-approve setelah direvisi.
+> ⚠️ **Masih simulasi Olsera DS** (alasan sama seperti `M4.W2`/`M4.W3`: tidak ada akses registry privat, Vue 3 compat `@olsera/vue-components` belum dikonfirmasi) — pasang ulang component `Ds*`/`tokens.css` yang SUDAH kamu buat di `M4.W2`/`M4.W3`, jangan bikin dari nol lagi.
+>
+> **Lokasi project:** folder baru di repo yang sama (`submissions/M5.Project/simaset/`), BUKAN repo GitHub terpisah — konsisten dengan pola kerja selama ini.
+>
+> ⚠️ **Minggu ini BEDA FORMAT lagi**: ini minggu PERENCANAAN & SETUP, bukan latihan coding 3 putaran — wajar kalau sebagian besar waktunya habis untuk requirement/wireframe/konfigurasi, bukan menulis banyak logic.
+
+- Requirement & Wireframe (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M5.W1.T1.1 --> Tulis requirement sederhana untuk SIMASET: siapa penggunanya (misal: Admin IT yang kelola data aset, Staff yang mengajukan peminjaman), daftar fitur utama (minimal: lihat daftar aset, lihat detail aset, ajukan/catat peminjaman, tandai pengembalian, lihat riwayat), dan 1-2 aturan bisnis sederhana (misal: aset yang statusnya "dipinjam" tidak bisa dipinjam lagi sampai dikembalikan)
+  - [ ] <!-- id: M5.W1.T1.2 --> **Wireframe kasar tiap halaman utama — WAJIB pakai aplikasi mockup/desain** (Figma, atau alternatif lain seperti Penpot/Excalidraw — bukan lagi bebas teks/sketsa tangan, ini sekalian melatih skill tools mockup yang relevan untuk kerja nyata): Dashboard ringkasan, Daftar Aset (list+filter+search), Detail Aset, Form Tambah/Edit Aset, Halaman Peminjaman/Riwayat. Mulai pikirkan juga (belum perlu final, ini masih wireframe kasar) poin-poin "Standar Kualitas Project Mandiri" di `docs/PANDUAN_BELAJAR_DAN_AI.md`: elemen aksi utama vs sekunder mana yang HARUS lebih menonjol di tiap halaman, dan bagaimana rencana loading/empty/error state-nya (tidak perlu detail penuh sekarang, cukup disinggung). Simpan link file mockup-nya (share link Figma, atau export gambar) di `DAILY_LOG.md`
+  - [ ] <!-- id: M5.W1.T1.3 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: alur pengguna (user flow) utama dari requirement `T1.1` ke wireframe `T1.2` — kenapa halaman-halaman itu disusun dengan urutan/navigasi seperti itu, dan apa yang terjadi kalau 1 aturan bisnis (misal aset yang sedang dipinjam) dilanggar di alur UI-nya
+- Setup Repo Project Internal (dipecah jadi 3 sub-task):
+  - [ ] <!-- id: M5.W1.T2.1 --> Setup project baru: `npm create vite@latest` di folder `submissions/M5.Project/simaset/`, pasang `vue-router`, `pinia` — struktur dasar project Vue 3 + Vite yang sudah berkali-kali kamu buat sejak Bulan 3, sekarang untuk project yang akan dikembangkan jangka panjang (bukan sekali pakai)
+  - [ ] <!-- id: M5.W1.T2.2 --> Pasang ulang component `Ds*` (`DsButton`/`DsCard`/`DsInput`/`DsSelect`/`DsBadge`) dan `tokens.css` dari `M4.W2`/`M4.W3` ke project baru ini — SALIN & SESUAIKAN (bukan tulis dari nol), buktikan component yang kamu buat untuk latihan benar-benar reusable lintas project
+  - [ ] <!-- id: M5.W1.T2.3 --> **[Wajib Refleksi]** Jelaskan dengan kata sendiri: apa saja yang kamu PINDAHKAN apa adanya dari project latihan ke project baru ini, dan apa yang perlu DISESUAIKAN (kalau ada) — kaitkan ke alasan kenapa component/token itu didesain reusable sejak awal (`M4.W2.T3.3`)
+  - [ ] <!-- id: M5.W1.T3 --> **Laporan Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — bentuknya laporan tertulis, pas untuk minggu perencanaan seperti ini): satukan requirement (`T1.1`), wireframe (`T1.2`), dan hasil setup (`T2.1`-`T2.2`) jadi 1 cerita utuh — jelaskan bagaimana wireframe memetakan ke struktur folder/halaman yang sudah di-setup, dan fitur mana dari requirement yang akan dikerjakan duluan di `M5.W2` dan kenapa
+  - [ ] <!-- id: M5.W1.T4 --> **Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** presentasikan requirement & wireframe dari `T1`, demo project SIMASET yang baru di-setup (jalan di browser meski masih kosong/skeleton), tunjukkan component `Ds*` sudah terpasang ulang dengan benar, review bareng mentor APAKAH scope requirement-nya realistis untuk dikerjakan 1 bulan ke depan (persempit/perluas kalau perlu), **mentor tegaskan standar kualitas baru** (lihat "Standar Kualitas Project Mandiri" di `docs/PANDUAN_BELAJAR_DAN_AI.md`) akan mulai berlaku penuh di `M5.W2` — jelaskan ke Gazi kenapa standarnya naik (frontend = UI/UX, bukan cuma logic jalan), **mentor tanya 2-3 pertanyaan** soal keputusan desain wireframe/struktur folder, **+ 1 pertanyaan retrospektif wajib**: "kalau dikasih 1 hari lagi untuk requirement/wireframe ini, apa yang akan kamu perbaiki?" + isi refleksi capaian/kesulitan di modul
 
 ### Minggu 2
 

@@ -99,6 +99,80 @@ minggu itu belajar sesuatu yang relevan untuk navigasi/komposisi (misal routing,
 tertulis lebih masuk akal kalau minggu itu topiknya lebih konseptual/abstrak dan sulit disatukan
 jadi 1 app secara alami.
 
+## Standar Kualitas Project Mandiri: "Do More, Untuk Hasil Better" (mulai Bulan 5)
+
+Dari pengamatan sepanjang Bulan 1-4: Gazi konsisten mengejar "selesai" (fitur jalan), tapi belum
+terbiasa dengan pola kerja "selesai jalan" ≠ "selesai berkualitas". Ini wajar untuk tahap latihan
+konsep (tujuannya memang paham konsep, bukan produksi), TAPI mulai **project mandiri (Bulan 5 —
+SIMASET dan seterusnya)**, standarnya dinaikkan — mendekati ekspektasi kerja nyata: **frontend itu
+soal UI/UX, bukan cuma logic yang jalan.** Tidak asal jadi, tidak asal jalan, tidak asal rapi —
+UI/UX-nya harus benar-benar berkualitas.
+
+### 1. Definisi "Selesai" diperketat untuk project mandiri
+
+Mulai Bulan 5, 1 fitur BARU boleh ditandai `done` kalau SEMUA ini terpenuhi (bukan cuma "jalan di
+skenario normal"):
+- **Edge case ditangani**: input kosong, input terlalu panjang/pendek, karakter aneh/spesial,
+  angka negatif/nol (kalau relevan) — bukan cuma kasus "pengguna mengisi dengan benar".
+- **Setiap operasi data punya 3 state**: loading, kosong (empty), dan error — bukan cuma kondisi
+  "data berhasil tampil".
+- **Dicek di lebar layar HP** (~400px), bukan cuma di layar laptop tempat dia ngoding.
+- **Daftar skenario yang diuji ditulis eksplisit** di `DAILY_LOG.md`/`Capaian` — termasuk skenario
+  GAGAL/ANEH yang sengaja dicoba, bukan cuma kalimat umum "sudah dicoba dan jalan".
+
+### 2. Standar UI/UX — bukan cuma "rapi", tapi BERKUALITAS
+
+Setiap halaman/fitur baru di project mandiri wajib memenuhi checklist ini sebelum `done`:
+
+- **Hierarki visual jelas**: elemen penting (misal tombol aksi utama) harus terlihat LEBIH MENONJOL
+  dari elemen sekunder (misal tombol batal) — lewat warna/ukuran/posisi, bukan semua elemen
+  "berbobot sama" di layar.
+- **Konsistensi lintas halaman**: spacing, warna, ukuran font HARUS konsisten di semua halaman
+  (manfaatkan token/`Ds*` yang sudah dibangun — kalau 1 halaman "beda sendiri", itu bukan variasi,
+  itu inkonsistensi).
+- **Feedback interaksi jelas**: SETIAP aksi pengguna (klik tombol, submit form, hover, loading,
+  error, sukses) harus ada respons VISUAL yang jelas — jangan ada aksi yang "diam saja" tanpa
+  tanda apa pun ke pengguna bahwa sesuatu terjadi.
+- **Affordance**: elemen yang bisa diklik harus TERLIHAT bisa diklik (`cursor: pointer`, warna/
+  state hover berbeda) — jangan ada tombol/link yang kelihatan seperti teks biasa.
+- **Form usability**: label jelas (bukan cuma placeholder sebagai pengganti label), pesan error
+  SPESIFIK (misal "Nomor telepon harus 10-13 digit", bukan sekadar "Input tidak valid").
+- **Empty/error state informatif**: bukan cuma "Tidak ada data", tapi beri konteks/aksi lanjutan
+  (misal "Belum ada aset terdaftar — tambah aset pertama" + tombol tambah).
+- **Aksesibilitas dasar**: kontras warna teks vs background cukup terbaca (bukan abu-abu tipis di
+  atas putih), setiap `<input>` punya `<label>` yang terhubung.
+
+### 3. "Polish Pass" wajib setelah tiap fitur utama
+
+Mulai `M5.W2` dan seterusnya, pola kerja per fitur BUKAN lagi "implementasi → langsung fitur
+berikutnya", tapi: **implementasi (happy path) → task TERPISAH khusus "polish" fitur itu** (terapkan
+checklist di atas: edge case, loading/empty/error state, UI/UX, cek responsive) → baru lanjut fitur
+berikutnya. Mentor akan menyisipkan task "Polish: [nama fitur]" di breakdown mingguan sebagai
+pengingat eksplisit, bukan berharap ini terjadi otomatis.
+
+### 4. Review mentor jadi review sungguhan, bukan rubber-stamp
+
+Untuk project mandiri, evaluasi mingguan TIDAK cukup "demo jalan, selesai". Mentor WAJIB:
+- Sengaja mencoba minimal 1 skenario aneh/edge case saat demo (input kosong, resize ke lebar HP,
+  klik cepat berulang, dll) — kalau rusak, itu bahan revisi, PR BELUM di-approve.
+- Minta minimal 1 perbaikan nyata tiap sesi review (soal UI/UX, struktur kode, atau penanganan
+  error) — simulasi kondisi kerja nyata yang jarang approve di percobaan pertama.
+- Catat di refleksi evaluasi: apa yang diminta revisi, dan apakah Gazi menemukan sendiri bagian
+  yang lemah SEBELUM ditunjukkan mentor (sinyal makin dia berkembang, makin jarang perlu
+  ditunjukkan).
+
+### 5. Retrospektif tiap milestone
+
+Di setiap evaluasi mingguan project mandiri, tambahkan 1 pertanyaan wajib: **"Kalau dikasih 1 hari
+lagi untuk fitur ini, apa yang akan kamu perbaiki?"** — melatih dia melihat celah dari sudut
+pandangnya sendiri, bukan menunggu mentor yang menemukan.
+
+**Catatan penting:** aturan ini KHUSUS project mandiri (Bulan 5 — SIMASET dan seterusnya), BUKAN
+untuk task latihan konsep kecil (Bulan 1-4 polanya tetap sama seperti sebelumnya, fokus ke
+pemahaman konsep). Alasannya: di tahap latihan, kecepatan memahami konsep baru lebih penting;
+begitu masuk project mandiri yang mensimulasikan kerja nyata, kecepatan TIDAK LAGI jadi ukuran
+utama — kualitas yang jadi ukuran utama.
+
 ## Untuk mentor (review checkpoint)
 
 Saat demo/evaluasi mingguan (task `T*.Evaluasi`), jangan cuma minta Gazi menjalankan ulang
