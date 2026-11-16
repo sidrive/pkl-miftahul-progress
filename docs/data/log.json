@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-16",
+    "task": "M5.W1.T1.3",
+    "status": "done",
+    "capaian": "jawaban:",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-16",
+    "task": "M5.W1.T1.2",
+    "status": "done",
+    "capaian": "nah jadi disini saya udah buat wireframe kasar untuk 5 halaman utama aplikasi `SIMASET` pakai Figma. jadi halaman yang saya buat itu: `(1)` Dashboard Ringkasan dengan 4 kartu statistik dan tombol utama +Tambah, `(2)` Daftar Aset lengkap dengan kolom pencarian, dropdown filter status, dan tabel aset, `(3)` Detail Aset yang menampilkan informasi spesifikasi, riwayat peminjaman aset tersebut, serta hierarki tombol aksi utama (Pinjam) dan sekunder (Edit), `(4)` Form Tambah/Edit Aset dengan input field data aset dan tombol Simpan/Batal, `(5)` Halaman Riwayat Peminjaman untuk log transaksi. Di setiap frame juga sudah ditambahkan catatan awal untuk kondisi loading, empty, dan error state. link Figma: [https://www.figma.com/design/OaffvnKjMyHzaNRp11rPDZ/Untitled?node-id=0-1&t=WRXlbvGz7FeZkYdW-1].",
+    "kesulitan": "karna ini pertama kali nya saya pakai figma jadi awal awal bingung gimana cara pakai dan buatnya, tapi setelah saya pelajari ini sebenarnya sama aja / hampirt kaya microsoft paint cuma lebih kompleks. nah di awal sempat bingung cara kerja pembuatan wireframe di Figma karena baru pertama kali menyusun 5 halaman sekaligus, tapi saya pekajari pelan pelan dan liat tutorialnya, nah jadi saya udah pahamlah cara pakai figma penggunaan Frame, Rectangle, Text, serta trik duplicate frame (Ctrl+D) untuk menjaga konsistensi navbar, proses pengerjaannya jadi jauh lebih cepat dan terarah."
+  },
+  {
+    "date": "2026-11-16",
+    "task": "M5.W1.T1.1",
+    "status": "done",
+    "capaian": "saya udah menyusun dokumen requirement awal untuk aplikasi SIMASET di file `submissions/M5.Project/simaset/REQUIREMENT.md` pada branch `M5-W1/T1.1`. di dalamnya udah ditentukan 2 peran pengguna utama (Admin IT untuk kelola master aset & pantau riwayat, serta Staff untuk pinjam/kembalikan aset), 6 fitur utama (Dashboard ringkasan, Daftar Aset dengan filter & search, Detail Aset, Kelola Data Aset, Peminjaman & Pengembalian, dan Riwayat Peminjaman), serta 2 aturan bisnis utama (aset berstatus dipinjam/maintenance tidak bisa dipinjam, dan aset yang sedang dipinjam tidak bisa dihapus)",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-11-13",
     "task": "M4.W4.T6",
     "status": "done",

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-15T19:11:20.417Z",
+  "generatedAt": "2026-11-16T08:34:06.418Z",
   "totalTasks": 279,
-  "doneTasks": 249,
-  "overallPercent": 89,
+  "doneTasks": 252,
+  "overallPercent": 90,
   "perMonth": [
     {
       "number": 1,
@@ -36,8 +36,8 @@
       "number": 5,
       "title": "Mulai Project Aplikasi Internal (13 Nov – 12 Des 2026)",
       "total": 14,
-      "done": 0,
-      "percent": 0
+      "done": 3,
+      "percent": 21
     },
     {
       "number": 6,
@@ -61,8 +61,8 @@
       "percent": 0
     }
   ],
-  "currentStreakDays": 4,
+  "currentStreakDays": 1,
   "blockedTasks": [],
-  "totalLogEntries": 237,
-  "lastLogDate": "2026-11-13"
+  "totalLogEntries": 240,
+  "lastLogDate": "2026-11-16"
 }

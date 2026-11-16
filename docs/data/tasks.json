@@ -1381,17 +1381,17 @@
           {
             "id": "M5.W1.T1.1",
             "text": "Tulis requirement sederhana untuk SIMASET: siapa penggunanya (misal: Admin IT yang kelola data aset, Staff yang mengajukan peminjaman), daftar fitur utama (minimal: lihat daftar aset, lihat detail aset, ajukan/catat peminjaman, tandai pengembalian, lihat riwayat), dan 1-2 aturan bisnis sederhana (misal: aset yang statusnya \"dipinjam\" tidak bisa dipinjam lagi sampai dikembalikan)",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T1.2",
             "text": "**Wireframe kasar tiap halaman utama — WAJIB pakai aplikasi mockup/desain** (Figma, atau alternatif lain seperti Penpot/Excalidraw — bukan lagi bebas teks/sketsa tangan, ini sekalian melatih skill tools mockup yang relevan untuk kerja nyata): Dashboard ringkasan, Daftar Aset (list+filter+search), Detail Aset, Form Tambah/Edit Aset, Halaman Peminjaman/Riwayat. Mulai pikirkan juga (belum perlu final, ini masih wireframe kasar) poin-poin \"Standar Kualitas Project Mandiri\" di `docs/PANDUAN_BELAJAR_DAN_AI.md`: elemen aksi utama vs sekunder mana yang HARUS lebih menonjol di tiap halaman, dan bagaimana rencana loading/empty/error state-nya (tidak perlu detail penuh sekarang, cukup disinggung). Simpan link file mockup-nya (share link Figma, atau export gambar) di `DAILY_LOG.md`",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T1.3",
             "text": "**[Wajib Refleksi]** Jelaskan dengan kata sendiri: alur pengguna (user flow) utama dari requirement `T1.1` ke wireframe `T1.2` — kenapa halaman-halaman itu disusun dengan urutan/navigasi seperti itu, dan apa yang terjadi kalau 1 aturan bisnis (misal aset yang sedang dipinjam) dilanggar di alur UI-nya",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T2.1",
