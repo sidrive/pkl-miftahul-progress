@@ -2932,3 +2932,36 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah melakuin demo composable dan menunjukkan hasil kerja minggu ini, waktu siap demo mentor menyuruh untuk merubah sedikit logic atau apa itu tapi bisa di kerjakan dengan aman.
 - **Kesulitan:** aman tanpa adanya kendala.
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-16 // Minggu 2
+
+<!-- disini pengerjaan task minggu 1 bulan 5 dialihan kesini -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T1.1
+- **Status:** done
+- **Capaian:** saya udah menyusun dokumen requirement awal untuk aplikasi SIMASET di file `submissions/M5.Project/simaset/REQUIREMENT.md` pada branch `M5-W1/T1.1`. di dalamnya udah ditentukan 2 peran pengguna utama (Admin IT untuk kelola master aset & pantau riwayat, serta Staff untuk pinjam/kembalikan aset), 6 fitur utama (Dashboard ringkasan, Daftar Aset dengan filter & search, Detail Aset, Kelola Data Aset, Peminjaman & Pengembalian, dan Riwayat Peminjaman), serta 2 aturan bisnis utama (aset berstatus dipinjam/maintenance tidak bisa dipinjam, dan aset yang sedang dipinjam tidak bisa dihapus)
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T1.2
+- **Status:** done
+- **Capaian:** nah jadi disini saya udah buat wireframe kasar untuk 5 halaman utama aplikasi `SIMASET` pakai Figma. jadi halaman yang saya buat itu: `(1)` Dashboard Ringkasan dengan 4 kartu statistik dan tombol utama +Tambah, `(2)` Daftar Aset lengkap dengan kolom pencarian, dropdown filter status, dan tabel aset, `(3)` Detail Aset yang menampilkan informasi spesifikasi, riwayat peminjaman aset tersebut, serta hierarki tombol aksi utama (Pinjam) dan sekunder (Edit), `(4)` Form Tambah/Edit Aset dengan input field data aset dan tombol Simpan/Batal, `(5)` Halaman Riwayat Peminjaman untuk log transaksi. Di setiap frame juga sudah ditambahkan catatan awal untuk kondisi loading, empty, dan error state. link Figma: [https://www.figma.com/design/OaffvnKjMyHzaNRp11rPDZ/Untitled?node-id=0-1&t=WRXlbvGz7FeZkYdW-1].
+- **Kesulitan:** karna ini pertama kali nya saya pakai figma jadi awal awal bingung gimana cara pakai dan buatnya, tapi setelah saya pelajari ini sebenarnya sama aja / hampirt kaya microsoft paint cuma lebih kompleks. nah di awal sempat bingung cara kerja pembuatan wireframe di Figma karena baru pertama kali menyusun 5 halaman sekaligus, tapi saya pekajari pelan pelan dan liat tutorialnya, nah jadi saya udah pahamlah cara pakai figma penggunaan Frame, Rectangle, Text, serta trik duplicate frame (Ctrl+D) untuk menjaga konsistensi navbar, proses pengerjaannya jadi jauh lebih cepat dan terarah.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T1.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. jadi alurnya, pengguna mulai dari Dashboard untuk cek ringkasan jumlah aset, lalu masuk ke Daftar Aset untuk mencari dan memfilter barang yang statusnya Tersedia. nah setelah ketemu, klik Detail untuk ngecek kondisi barang di Detail Aset, lalu klik tombol utama Pinjam sampai transaksi tercatat di Riwayat Peminjaman. Urutan ini dibuat dari gambaran umum ke hal spesifik supaya pengguna bisa cek kondisi barang dulu sebelum melakukan peminjaman.
+
+2. untuk aturan "aset yang sedang dipinjam tidak bisa dipinjam lagi", di wireframe halaman Detail Aset kalau status aset udah `[Dipinjam]`, tombol utama Pinjam dibuat `disabled` (abu-abu mati dan gak bisa diklik) atau berubah jadi tombol Tandai Dikembalikan. Jadi pelanggaran langsung dicegah dari tampilan UI sebelum pengguna sempat menekan tombol.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
