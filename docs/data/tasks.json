@@ -1396,12 +1396,12 @@
           {
             "id": "M5.W1.T2.1",
             "text": "Setup project baru: `npm create vite@latest` di folder `submissions/M5.Project/simaset/`, pasang `vue-router`, `pinia` — struktur dasar project Vue 3 + Vite yang sudah berkali-kali kamu buat sejak Bulan 3, sekarang untuk project yang akan dikembangkan jangka panjang (bukan sekali pakai)",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T2.2",
             "text": "Pasang ulang component `Ds*` (`DsButton`/`DsCard`/`DsInput`/`DsSelect`/`DsBadge`) dan `tokens.css` dari `M4.W2`/`M4.W3` ke project baru ini — SALIN & SESUAIKAN (bukan tulis dari nol), buktikan component yang kamu buat untuk latihan benar-benar reusable lintas project",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T2.3",
