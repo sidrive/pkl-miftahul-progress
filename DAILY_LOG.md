@@ -2965,3 +2965,23 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 2. untuk aturan "aset yang sedang dipinjam tidak bisa dipinjam lagi", di wireframe halaman Detail Aset kalau status aset udah `[Dipinjam]`, tombol utama Pinjam dibuat `disabled` (abu-abu mati dan gak bisa diklik) atau berubah jadi tombol Tandai Dikembalikan. Jadi pelanggaran langsung dicegah dari tampilan UI sebelum pengguna sempat menekan tombol.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-17
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T2.1
+- **Status:** done
+- **Capaian:** saya udah buat setup awal project Vue 3 + Vite untuk aplikasi SIMASET di dalam `submissions/M5.Project/simaset`, menginstal `vue-router` dan `pinia`, serta mengonfigurasi file dasar `src/router/index.js` dan mendaftarkannya bersama Pinia di `src/main.js`.
+- **Kesulitan:** untuk task ini belum ada kesulitan yang terlalu apa kali, tapi tadi waktu menjalankan `npm create vite@latest`, muncul peringatan bahwa folder `simaset` gak kosong karna udah berisi file dokumentasi dari T1 sebelumnya, tapi udah saya amanin dan udah aman.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T2.2
+- **Status:** done
+- **Capaian:** jadi disii saya udah berhasil nyalin dan masang ulang 5 komponen UI reusable (`DsButton.vue`, `DsCard.vue`, `DsInput.vue`, `DsSelect.vue`, dan `DsBadge.vue`) dari folder latihan minggu sebelumnya (`CobaVue-M3/src/components/Task.M4-W2` dan `Task.M4-W3`) ke dalam folder `src/components/Ds/` di project `simaset`. nah selain itu, file `tokens.css` udah saya dipindahin juga ke `src/assets/tokens.css`, didaftarkan secara global di `src/main.js`, dan diuji rendernya di `App.vue` dan hasilnya semua styling warna dan spacing langsung berfungsi tanpa menulis ulang dari nol.
+- **Kesulitan:** ada masalah pada path folder, jadi tadi sedikit bentrok karena path folder nya, dan perlu mengecek ulang letak file komponen karena terpisah di dua folder tugas yang berbeda (`Task.M4-W2` dan `Task.M4-W3`), sekarang udah aman dan bisa di run.
+<!-- ENTRY END -->
