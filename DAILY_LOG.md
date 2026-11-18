@@ -2985,3 +2985,20 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** jadi disii saya udah berhasil nyalin dan masang ulang 5 komponen UI reusable (`DsButton.vue`, `DsCard.vue`, `DsInput.vue`, `DsSelect.vue`, dan `DsBadge.vue`) dari folder latihan minggu sebelumnya (`CobaVue-M3/src/components/Task.M4-W2` dan `Task.M4-W3`) ke dalam folder `src/components/Ds/` di project `simaset`. nah selain itu, file `tokens.css` udah saya dipindahin juga ke `src/assets/tokens.css`, didaftarkan secara global di `src/main.js`, dan diuji rendernya di `App.vue` dan hasilnya semua styling warna dan spacing langsung berfungsi tanpa menulis ulang dari nol.
 - **Kesulitan:** ada masalah pada path folder, jadi tadi sedikit bentrok karena path folder nya, dan perlu mengecek ulang letak file komponen karena terpisah di dua folder tugas yang berbeda (`Task.M4-W2` dan `Task.M4-W3`), sekarang udah aman dan bisa di run.
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-18
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T2.3
+- **Status:** done
+- **Capaian:** jawaban:
+1. jadi yang saya pindahkan itu file komponen UI (`DsButton.vue`, `DsCard.vue`, `DsInput.vue`, `DsSelect.vue`, `DsBadge.vue`) dan file `tokens.css` bisa langsung di-copy-paste apa adanya ga perlu ngubah kode logika maupun styling di dalamnya.
+
+2. kalau ada yang di sesuaikan itu cuma lokasi penempatan file dan path import nya aja. file `tokens.css` harus diimport secara global di src/`main.js`. file src/`style.css` bawaan Vite perlu dibersihkan/direset supaya gaya gelap bawaan template Vite gak bentrok dan bikin warna teks jadi putih samar di atas kartu.
+
+3. jadi component/token itu di design reusable biar biar bisa flexible dipakai dimana aja, ini ngebuktiin kalau bikin komponen dan token secara reusable sejak awal itu emang kepake di dunia nyata. kita jadi hemat waktu karna gak perlu bikin ulang tombol, kartu, input, atau nentuin warna dari nol lagi.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

@@ -5,7 +5,9 @@
       <DsInput label="Kode Aset" placeholder="Contoh: AST-001" />
       <DsSelect
         label="Kategori"
+        modelValue=""
         :options="[
+          { value: '', label: 'Pilih Kategori', disabled: true },
           { value: 'elektronik', label: 'Elektronik' },
           { value: 'furnitur', label: 'Furnitur' }
         ]"
