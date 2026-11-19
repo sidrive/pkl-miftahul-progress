@@ -1411,7 +1411,7 @@
           {
             "id": "M5.W1.T3",
             "text": "**Laporan Akhir Minggu** (sesuai aturan baku `docs/PANDUAN_BELAJAR_DAN_AI.md` — bentuknya laporan tertulis, pas untuk minggu perencanaan seperti ini): satukan requirement (`T1.1`), wireframe (`T1.2`), dan hasil setup (`T2.1`-`T2.2`) jadi 1 cerita utuh — jelaskan bagaimana wireframe memetakan ke struktur folder/halaman yang sudah di-setup, dan fitur mana dari requirement yang akan dikerjakan duluan di `M5.W2` dan kenapa",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W1.T4",
