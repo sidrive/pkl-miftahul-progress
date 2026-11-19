@@ -3002,3 +3002,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 3. jadi component/token itu di design reusable biar biar bisa flexible dipakai dimana aja, ini ngebuktiin kalau bikin komponen dan token secara reusable sejak awal itu emang kepake di dunia nyata. kita jadi hemat waktu karna gak perlu bikin ulang tombol, kartu, input, atau nentuin warna dari nol lagi.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-19
+
+<!-- ENTRY START -->
+
+### Task: M5.W1.T3
+- **Status:** done
+- **Capaian:** saya udahh nyusun laporan akhir `Minggu 1` yang menyambungkan alur dari requirement (`T1.1`), wireframe (`T1.2`), sampai hasil setup project (`T2.1`–`T2.2`) ke dalam satu file terpisah (`src/components/T3-W1.md`). Intinya, 5 layar wireframe di Figma dipetakan ke folder `src/views/` lewat `vue-router`, komponen UI berulangnya masuk ke `src/components/Ds/` pakai `tokens.css`, dan datanya nanti diatur di `Pinia`. nah untuk Minggu 2 (`M5.W2`), saya ngerjain kerangka navigasi dan fitur data master aset (Daftar Aset + Form Tambah/Edit Aset) duluan karna fitur lain kayak ringkasan Dashboard, filter, sama riwayat perawatan butuh data aset yang udah jalan dulu sebagai fondasinya.
+- **Kesulitan:** ---
+<!-- ENTRY END -->

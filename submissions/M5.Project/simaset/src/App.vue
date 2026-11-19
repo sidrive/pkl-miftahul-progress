@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 24px; max-width: 500px;">
     <DsCard variant="outlined">
-      <h2>Tes Komponen SIMASET</h2>
+      <h2 style="color: black;">Tes Komponen SIMASET</h2>
       <DsInput label="Kode Aset" placeholder="Contoh: AST-001" />
       <DsSelect
         label="Kategori"
