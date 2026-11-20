@@ -1416,7 +1416,7 @@
           {
             "id": "M5.W1.T4",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** presentasikan requirement & wireframe dari `T1`, demo project SIMASET yang baru di-setup (jalan di browser meski masih kosong/skeleton), tunjukkan component `Ds*` sudah terpasang ulang dengan benar, review bareng mentor APAKAH scope requirement-nya realistis untuk dikerjakan 1 bulan ke depan (persempit/perluas kalau perlu), **mentor tegaskan standar kualitas baru** (lihat \"Standar Kualitas Project Mandiri\" di `docs/PANDUAN_BELAJAR_DAN_AI.md`) akan mulai berlaku penuh di `M5.W2` — jelaskan ke Gazi kenapa standarnya naik (frontend = UI/UX, bukan cuma logic jalan), **mentor tanya 2-3 pertanyaan** soal keputusan desain wireframe/struktur folder, **+ 1 pertanyaan retrospektif wajib**: \"kalau dikasih 1 hari lagi untuk requirement/wireframe ini, apa yang akan kamu perbaiki?\" + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
