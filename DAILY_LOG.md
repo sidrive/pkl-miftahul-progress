@@ -3026,3 +3026,15 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 - **Capaian:** udah melakukan evaluasi mingguian, berjalan lancar dan menunjukkan hasil project minggu ini.
 - **Kesulitan:** untuk bagian design tampilan aplikasi nya lebih di perbagus dan dibuat propesional, bisa cari dari referensi olsera app / yang lainnya.
 <!-- ENTRY END -->
+
+## 2026-11-23 // Minggu 3
+
+<!-- Hari ini fokus perbaiki tamilan ui/ux figma -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W3.T?
+- **Status:** ---
+- **Capaian:** buat tampilan aplikasi menjadi lebih profesional. link [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=s0IyZe56DwTpAYFN-0]
+- **Kesulitan:** masih sedikit bingung dan kadang ada koponen yang tidak simetris, cuma udah dibuat simetris dan posisinya udah disesuaikan.
+<!-- ENTRY END -->
