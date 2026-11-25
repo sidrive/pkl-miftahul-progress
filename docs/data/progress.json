@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-23T09:13:22.871Z",
-  "totalTasks": 279,
+  "generatedAt": "2026-11-25T00:54:27.514Z",
+  "totalTasks": 284,
   "doneTasks": 257,
-  "overallPercent": 92,
+  "overallPercent": 90,
   "perMonth": [
     {
       "number": 1,
@@ -35,9 +35,9 @@
     {
       "number": 5,
       "title": "Mulai Project Aplikasi Internal (13 Nov – 12 Des 2026)",
-      "total": 14,
+      "total": 19,
       "done": 8,
-      "percent": 57
+      "percent": 42
     },
     {
       "number": 6,
