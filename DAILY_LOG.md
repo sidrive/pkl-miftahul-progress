@@ -3033,8 +3033,29 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 
 <!-- ENTRY START -->
 
-### Task: M5.W3.T?
-- **Status:** ---
+### Task: M5.W3
 - **Capaian:** buat tampilan aplikasi menjadi lebih profesional. link [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=s0IyZe56DwTpAYFN-0]
 - **Kesulitan:** masih sedikit bingung dan kadang ada koponen yang tidak simetris, cuma udah dibuat simetris dan posisinya udah disesuaikan.
+<!-- ENTRY END -->
+
+---
+
+## 2026-11-24
+
+<!-- ENTRY START -->
+
+### Task: M5.W3
+- **Capaian:** melanjutkan membuat design aplikasi `SIMASET`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-11-23
+
+<!-- ENTRY START -->
+
+### Task: M5.W3
+- **Capaian:** membuat sedikit fitur prototype di figma, `SIMASET`.
+- **Kesulitan:** ---
 <!-- ENTRY END -->
