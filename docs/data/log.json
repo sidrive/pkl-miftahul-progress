@@ -1,8 +1,22 @@
 [
   {
+    "date": "2026-11-24",
+    "task": "M5.W3",
+    "status": "unknown",
+    "capaian": "melanjutkan membuat design aplikasi `SIMASET`.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-11-23",
-    "task": "M5.W3.T",
-    "status": "---",
+    "task": "M5.W3",
+    "status": "unknown",
+    "capaian": "membuat sedikit fitur prototype di figma, `SIMASET`.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-23",
+    "task": "M5.W3",
+    "status": "unknown",
     "capaian": "buat tampilan aplikasi menjadi lebih profesional. link [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=s0IyZe56DwTpAYFN-0]",
     "kesulitan": "masih sedikit bingung dan kadang ada koponen yang tidak simetris, cuma udah dibuat simetris dan posisinya udah disesuaikan."
   },
