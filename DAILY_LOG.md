@@ -3051,11 +3051,69 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 
 ---
 
-## 2026-11-23
+## 2026-11-25
 
 <!-- ENTRY START -->
 
 ### Task: M5.W3
 - **Capaian:** membuat sedikit fitur prototype di figma, `SIMASET`.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T1
+- **Status:** done
+- **Capaian:** jadi saya udah merubah sedikti banyak nya tamplan aplikasi simaset ini, yang awalnya tampilan nya bisa dibilang tidak bagus, sekarang udah saya sesuaikan dan saya perbagus tampilan nya. link final figma [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=jVs4Qe0EqDbx3maf-0]
+- **Kesulitan:** masih perlu penyesuaian untuk memakai figma ini, waktu buat ada beberapa design yang tidak simetris, tapi udah di simetriskan.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T1.1
+- **Status:** done
+- **Capaian:** beberapa perubahannya (saya sebutkan 3)
+   1. Tombol utama vs sekunder lebih jelas - tombol seperti `+ Tambah Aset` dan `Simpan` dibuat biru solid (`#2563EB`), sedangkan tombol `Batal` dibuat putih polos dengan border tipis (memperbaiki **hierarki visual**).
+   2. Warna dan layout seragam di semua halaman — sidebar gelap, topbar, ukuran kotak input, dan badge status (`Tersedia`, `Dipinjam`, `Maintenance`) disamakan di semua layar, termasuk latar modal peminjaman yang disesuaikan ke halaman Riwayat Peminjaman (memperbaiki **konsistensi**).
+   3. Jarak kolom tabel dan form modal lebih simetris — posisi antar kolom tabel dan input di dalam modal diluruskan biar sejajar rapi dan nggak mepet (memperbaiki **kerapihan tata letak / spacing**).
+- **Kesulitan:** menyesuaikan koordinat antar kolom supaya lurus sejajar dan nggak terlihat miring atau mepet.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T2.1
+- **Status:** done
+- **Capaian:** jadi saya udah buat 5 file di dalam folder `src/views/` di dalam project `simaset` dan bikin 5 file halaman skeleton kosong sesuai wireframe (`DashboardView.vue`, `DaftarAsetView.vue`, `DetailAsetView.vue`, `FormAsetView.vue`, dan `RiwayatPeminjamanView.vue`).
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+---
+
+## 2026-11-26
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T2.2
+- **Status:** done
+- **Capaian:** jadi saya udah buat file layout utama `AppLayout.vue` di `src/layouts/` yang berisi sidebar gelap (`SIMASET` + menu navigasi `Dashboard`, `Daftar Aset`, `Riwayat Peminjaman`), topbar, dan area konten `<router-view />`. ii dalamnya juga udah dipasang komponen `DsBadge` untuk status aktif user dan `DsButton` untuk tombol `+ Tambah Aset`, habis itu dibuat responsif supaya konsisten dipakai di semua 5 halaman.
+- **Kesulitan:** ---
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T3.1
+- **Status:** done
+- **Capaian:** nah saya udah mendaftarin 5 route nyata di `src/router/index.js` (`/`, `/aset`, `/aset/tambah`, `/aset/:id`, dan `/riwayat`) untuk menggantikan placeholder lama yang masih ke `App.vue`, dan menghubunginnya pakai `<router-link>` di `AppLayout.vue` jadi semua halaman skeleton udah bisa diklik dan berpindah halaman secara langsung.
+- **Kesulitan:** cuma perlu memastiin urutan route `/aset/tambah` diletakkan sebelum `/aset/:id` supaya gak bentrok waktu URL diakses.
+<!-- ENTRY END -->
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T3.2
+- **Status:** done
+- **Capaian:** jadi saya udah melakukan percobaan dan hasilnya gini :
+1. iya dia tetap tercegah, dan memang gak bisa dipakai masuk, dan waktu saya coba ketik langsung alamat `/aset/tambah` secara manual di address bar browser juga tetap cegah dan langsung dilempar balik ke halaman Dashboard.
+
+2. ini lebih aman karna kalau cuma menyembunyiin tombol atau link menu, user dengan role `staff` masih bisa ngetik URL `/aset/tambah` secara manual di address bar dan bisa masuk ke halaman. dengan pakai `router.beforeEach`, pengecekan role dilakukan langsung di jalur routing sebelum halaman dibuka, jadi tetap aman dan terblokir dari mana pun aksesnya dicoba.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
