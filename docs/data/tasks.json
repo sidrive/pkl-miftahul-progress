@@ -1427,32 +1427,32 @@
           {
             "id": "M5.W2.T1",
             "text": "**Revisi desain UI/UX di Figma** (sudah dikerjakan Senin-Selasa, formalisasi task): buat tampilan lebih profesional sesuai feedback evaluasi `M5.W1.T4` (referensi Olsera app atau sejenis) — pastikan hierarki visual, konsistensi spacing/warna antar halaman, dan elemen simetris sudah benar di SEMUA 5 halaman wireframe (bukan cuma yang terasa \"janggal\" saja). Update link Figma final di `DAILY_LOG.md`",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T1.1",
             "text": "**[Wajib Refleksi]** Bandingkan dengan kata sendiri: desain versi 1 (`M5.W1.T1.2`) vs versi revisi ini — sebutkan MINIMAL 3 perubahan KONKRET yang dibuat, dan untuk masing-masing, kaitkan ke 1 poin checklist UI/UX di \"Standar Kualitas Project Mandiri\" (`docs/PANDUAN_BELAJAR_DAN_AI.md`) yang coba diperbaiki",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T2.1",
             "text": "Bikin struktur folder `src/views/` sesuai 5 halaman di wireframe final: `DashboardView.vue`, `DaftarAsetView.vue`, `DetailAsetView.vue`, `FormAsetView.vue`, `RiwayatPeminjamanView.vue` — isi dulu SKELETON KOSONG (judul halaman + placeholder teks), belum perlu UI/data lengkap",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T2.2",
             "text": "Bikin 1 layout utama (`AppLayout.vue` atau sejenis: sidebar/navbar + area konten) pakai component `Ds*` yang sudah dipasang — pastikan KONSISTEN dipakai di semua 5 halaman skeleton (sesuai checklist \"konsistensi lintas halaman\" di Standar Kualitas)",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T3.1",
             "text": "Daftarkan SEMUA route nyata ke `router/index.js` (ganti placeholder lama yang masih arah ke `App.vue`), hubungkan ke 5 `*View.vue` dari `T2.1`, pasang navigasi (sidebar/navbar) supaya bisa pindah antar halaman beneran lewat `<router-link>`",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T3.2",
             "text": "**[Wajib Refleksi — PENTING]** Ingat kembali jawabanmu di kuis evaluasi `M5.W1.T4` (soal keamanan Staff vs Admin — UI disembunyikan saja TIDAK CUKUP). Terapkan NYATA sekarang: tambahkan `meta: { role: 'admin' }` pada route \"Kelola Data Aset\"/`FormAsetView`, dan pasang **navigation guard dasar** (`router.beforeEach`) yang menolak akses kalau role pengguna (boleh simulasi lewat `ref`/Pinia sementara, belum perlu login sungguhan) bukan `admin`. Jelaskan dengan kata sendiri: kenapa ini LEBIH AMAN dibanding cuma menyembunyikan menu di tampilan — dan buktikan dengan coba akses URL route itu langsung (ketik manual di address bar) sebagai role `staff`, amati apakah tetap tercegah",
-            "done": false
+            "done": true
           },
           {
             "id": "M5.W2.T4",

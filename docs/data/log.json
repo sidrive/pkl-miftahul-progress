@@ -1,16 +1,58 @@
 [
   {
+    "date": "2026-11-26",
+    "task": "M5.W2.T3.2",
+    "status": "done",
+    "capaian": "jadi saya udah melakukan percobaan dan hasilnya gini :",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-26",
+    "task": "M5.W2.T3.1",
+    "status": "done",
+    "capaian": "nah saya udah mendaftarin 5 route nyata di `src/router/index.js` (`/`, `/aset`, `/aset/tambah`, `/aset/:id`, dan `/riwayat`) untuk menggantikan placeholder lama yang masih ke `App.vue`, dan menghubunginnya pakai `<router-link>` di `AppLayout.vue` jadi semua halaman skeleton udah bisa diklik dan berpindah halaman secara langsung.",
+    "kesulitan": "cuma perlu memastiin urutan route `/aset/tambah` diletakkan sebelum `/aset/:id` supaya gak bentrok waktu URL diakses."
+  },
+  {
+    "date": "2026-11-26",
+    "task": "M5.W2.T2.2",
+    "status": "done",
+    "capaian": "jadi saya udah buat file layout utama `AppLayout.vue` di `src/layouts/` yang berisi sidebar gelap (`SIMASET` + menu navigasi `Dashboard`, `Daftar Aset`, `Riwayat Peminjaman`), topbar, dan area konten `<router-view />`. ii dalamnya juga udah dipasang komponen `DsBadge` untuk status aktif user dan `DsButton` untuk tombol `+ Tambah Aset`, habis itu dibuat responsif supaya konsisten dipakai di semua 5 halaman.",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-25",
+    "task": "M5.W2.T2.1",
+    "status": "done",
+    "capaian": "jadi saya udah buat 5 file di dalam folder `src/views/` di dalam project `simaset` dan bikin 5 file halaman skeleton kosong sesuai wireframe (`DashboardView.vue`, `DaftarAsetView.vue`, `DetailAsetView.vue`, `FormAsetView.vue`, dan `RiwayatPeminjamanView.vue`).",
+    "kesulitan": "---"
+  },
+  {
+    "date": "2026-11-25",
+    "task": "M5.W2.T1.1",
+    "status": "done",
+    "capaian": "beberapa perubahannya (saya sebutkan 3)",
+    "kesulitan": "menyesuaikan koordinat antar kolom supaya lurus sejajar dan nggak terlihat miring atau mepet."
+  },
+  {
+    "date": "2026-11-25",
+    "task": "M5.W2.T1",
+    "status": "done",
+    "capaian": "jadi saya udah merubah sedikti banyak nya tamplan aplikasi simaset ini, yang awalnya tampilan nya bisa dibilang tidak bagus, sekarang udah saya sesuaikan dan saya perbagus tampilan nya. link final figma [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=jVs4Qe0EqDbx3maf-0]",
+    "kesulitan": "masih perlu penyesuaian untuk memakai figma ini, waktu buat ada beberapa design yang tidak simetris, tapi udah di simetriskan."
+  },
+  {
+    "date": "2026-11-25",
+    "task": "M5.W3",
+    "status": "unknown",
+    "capaian": "membuat sedikit fitur prototype di figma, `SIMASET`.",
+    "kesulitan": "---"
+  },
+  {
     "date": "2026-11-24",
     "task": "M5.W3",
     "status": "unknown",
     "capaian": "melanjutkan membuat design aplikasi `SIMASET`.",
-    "kesulitan": "---"
-  },
-  {
-    "date": "2026-11-23",
-    "task": "M5.W3",
-    "status": "unknown",
-    "capaian": "membuat sedikit fitur prototype di figma, `SIMASET`.",
     "kesulitan": "---"
   },
   {
