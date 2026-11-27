@@ -1457,7 +1457,7 @@
           {
             "id": "M5.W2.T4",
             "text": "**Evaluasi Minggu ini (satu-satunya sesi bareng mentor minggu ini):** demo desain Figma revisi + skeleton 5 halaman yang sudah bisa dinavigasi lewat routing nyata, demo route guard `T3.2` (coba akses halaman Admin sebagai role Staff, harus tercegah), **mentor terapkan standar kualitas PENUH** (cek edge case, cek lebar HP, cek konsistensi — ini minggu pertama standar baru benar-benar diuji ke kode sungguhan, bukan cuma teori), **mentor minta minimal 1 revisi nyata** sebelum PR di-approve (sesuai aturan baku), **+ retrospektif wajib**: \"kalau dikasih 1 hari lagi untuk skeleton+routing minggu ini, apa yang akan diperbaiki?\" + isi refleksi capaian/kesulitan di modul",
-            "done": false
+            "done": true
           }
         ]
       },
