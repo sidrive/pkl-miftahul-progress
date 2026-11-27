@@ -36,10 +36,9 @@ const router = createRouter({
 
 // Navigation Guard (Satpam Pengecek Role)
 router.beforeEach((to, from) => {
-
   // Simulasi role user saat ini (ubah antara 'staff' dan 'admin' untuk mengetes)
-  const roleSaatIni = "staff"; 
-  // Ganti dengan 'staff' untuk mengetes akses terbatas 
+  const roleSaatIni = "admin";
+  // Ganti dengan 'staff' untuk mengetes akses terbatas
   // Ganti dengan 'admin' untuk mengetes akses penuh
 
   if (to.meta.role && to.meta.role !== roleSaatIni) {

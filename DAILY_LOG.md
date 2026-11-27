@@ -3117,3 +3117,21 @@ yang salah itu letak `]` ini yang salah, harusnya dia terletak disamping `[...ne
 2. ini lebih aman karna kalau cuma menyembunyiin tombol atau link menu, user dengan role `staff` masih bisa ngetik URL `/aset/tambah` secara manual di address bar dan bisa masuk ke halaman. dengan pakai `router.beforeEach`, pengecekan role dilakukan langsung di jalur routing sebelum halaman dibuka, jadi tetap aman dan terblokir dari mana pun aksesnya dicoba.
 - **Kesulitan:** ---
 <!-- ENTRY END -->
+
+---
+
+## 2026-11-27
+
+<!-- ENTRY START -->
+
+### Task: M5.W2.T4
+- **Status:** done
+- **Capaian:** udah melakukan evaluasi dengan mentor, dan udah menampilkan design figma dan aplikasinya di web (aplikasi masih tahapan awal). revisi yang ditambahkan ada beberapa, yaitu:
+1. menamnabahkan form login role
+2. halaman modul karyawan divisi dll (nama, kode, alamat). menampilkan data karyawan
+3. form karyawan. halaman / menu popup
+4. status dikembalikan / detail (modul). perbaiki tampilan dan sistem nya kira kira untuk status pengembalian barang (popup atau bebas)
+5. admin - administrasi karyawan (superadmin, admin). superadmin bisa akses ke semuanya, admin tidak seleluasa superadmin, staff terbatas.
+link figma update [https://www.figma.com/design/9PuC213x6611Kjzpwc9fEx/Untitled?node-id=0-1&p=f&t=jVs4Qe0EqDbx3maf-0]
+- **Kesulitan:** ---
+<!-- ENTRY END -->
